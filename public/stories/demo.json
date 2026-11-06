@@ -1,0 +1,201 @@
+{
+  "format": 1,
+  "id": "le-phare-des-heures",
+  "version": 1,
+  "title": "Le phare des heures",
+  "subtitle": "Une nouvelle à chemins ouverts",
+  "author": "Un récit de démonstration",
+  "variables": {
+    "cle": false,
+    "confiance": false
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": 1,
+      "title": "Ce que la mer rapporte",
+      "start": "arrivee"
+    }
+  ],
+  "scenes": {
+    "arrivee": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "À cette heure, la mer avait la couleur de l’étain. Depuis la fenêtre du car, Camille regardait défiler les maisons basses, leurs jardins clos de murs et les draps oubliés sur les fils. Rien n’avait vraiment changé. Même la pluie semblait tomber avec cette patience particulière qu’elle ne connaissait qu’ici.",
+        "Elle descendit au terminus. Le chauffeur lui tendit sa valise sans poser de question et repartit dans un soupir de moteur. Sur la place, l’horloge de la mairie marquait six heures douze. Elle s’était arrêtée le jour où son père avait quitté le village, quinze ans plus tôt. Personne, apparemment, n’avait jugé utile de la remettre en marche.",
+        "Dans sa poche, la lettre de Jeanne s’était ramollie à force d’être dépliée. Il n’y avait que trois lignes, écrites d’une main plus lente qu’autrefois : Le phare sera vendu lundi. J’ai trouvé quelque chose pour toi. Viens avant que les hommes emportent les meubles.",
+        "Camille traversa la place. Une lumière brillait derrière la vitre du café, mais elle n’avait pas envie d’expliquer son retour. Elle longea plutôt le mur du vieux jardin, jusqu’à l’endroit où le chemin se divisait. La route montait vers le phare ; un escalier descendait vers le port. En bas, la silhouette de Jeanne se découpait sous l’abri des pêcheurs."
+      ],
+      "choice": {
+        "prompt": "Elle s’arrêta à la croisée des chemins.",
+        "options": [
+          {
+            "id": "port",
+            "label": "Rejoindre Jeanne au port",
+            "passage": "Camille descendit les marches vers le port. Pour une fois, le phare pouvait attendre.",
+            "set": {
+              "confiance": true
+            },
+            "next": "jeanne"
+          },
+          {
+            "id": "jardin",
+            "label": "Passer par le jardin du phare",
+            "passage": "Elle prit le sentier du jardin, celui qu’elle empruntait enfant lorsqu’elle voulait rentrer sans être vue.",
+            "set": {
+              "cle": true
+            },
+            "next": "jardin"
+          }
+        ]
+      }
+    },
+    "jeanne": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Jeanne ne manifesta aucune surprise. Elle déplaça simplement son panier pour faire une place à Camille sur le banc. À leurs pieds, l’eau venait lécher le quai, puis se retirait en entraînant de petits fragments de bois.",
+        "« Je pensais que tu arriverais demain », dit-elle. Camille répondit qu’elle avait pris le premier car. Elles restèrent un moment à regarder un homme attacher son bateau. Il recommençait sans cesse le même nœud, avec un soin qui rendait le silence moins difficile.",
+        "Jeanne sortit de son panier une photographie. On y voyait le père de Camille devant le phare, un carnet sous le bras. Au dos, une date et ces mots : Pour les jours où je ne saurai plus raconter. « Il ne savait pas comment te parler, dit Jeanne. Cela ne veut pas dire qu’il n’avait rien à dire. »",
+        "Camille glissa la photographie dans sa lettre. Quand elles se levèrent, Jeanne lui proposa de l’accompagner jusqu’à la porte. Cette présence tranquille lui sembla, pour la première fois depuis son départ, une chose qu’elle pouvait accepter."
+      ],
+      "next": "seuil"
+    },
+    "jardin": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Le jardin avait poussé par-dessus ses souvenirs. Les allées disparaissaient sous le lierre, et le figuier penchait désormais contre le mur. Camille dut écarter les branches pour retrouver la petite porte verte. Sa peinture se détachait en écailles sèches sur ses doigts.",
+        "Près de la marche, un pot retourné abritait toujours le même secret. Elle le souleva sans y croire tout à fait. Une clé reposait dans la terre, enveloppée d’un morceau de toile cirée. Son père avait eu tant de manies qu’elle détestait ; elle découvrait combien il était étrange de pouvoir encore compter sur l’une d’elles.",
+        "Elle resta longtemps avec la clé dans la main. De l’autre côté du mur, quelqu’un riait. Ce rire ordinaire, dans un lieu qu’elle avait laissé se figer, lui fit plus d’effet que toutes les pensées préparées pendant le voyage.",
+        "Le sentier déboucha devant le phare. Jeanne arrivait par la route, un panier au bras. Elle aperçut la clé mais ne posa aucune question. Ensemble, elles gravirent les trois marches du perron."
+      ],
+      "next": "seuil"
+    },
+    "seuil": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "À l’intérieur, l’odeur du bois humide était restée intacte. Les meubles avaient été rapprochés au centre de la pièce et recouverts de draps. Le rectangle plus clair d’un tableau manquant se dessinait sur le mur. Camille posa sa valise à l’endroit exact où elle déposait jadis son cartable.",
+        "Sur la table, Jeanne avait laissé une boîte de lettres. À côté se trouvait un carnet à la couverture usée, fermé par un élastique. Du haut de l’escalier descendait un courant d’air salé. La porte de la chambre de veille battait doucement, comme si quelqu’un venait de la quitter.",
+        "Camille sentit la fatigue du trajet retomber sur ses épaules. Elle n’avait pas besoin de tout comprendre ce soir. Pourtant, il lui semblait que choisir par quoi commencer donnerait une forme à ce retour."
+      ],
+      "choice": {
+        "prompt": "Deux manières de retrouver ce lieu s’offraient à elle.",
+        "options": [
+          {
+            "id": "lettres",
+            "label": "Ouvrir la boîte de lettres",
+            "passage": "Camille tira une chaise et rapprocha la boîte. Elle allait commencer par les mots que personne n’avait envoyés.",
+            "next": "lettres"
+          },
+          {
+            "id": "veille",
+            "label": "Monter dans la chambre de veille",
+            "passage": "Elle posa la main sur la rampe et monta lentement vers la lumière grise de la chambre de veille.",
+            "next": "veille"
+          }
+        ]
+      }
+    },
+    "lettres": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Les enveloppes étaient classées par année. Aucune ne portait de timbre. Camille reconnut d’abord les banalités qu’on adresse à une enfant : le temps, les oiseaux, une panne de la vieille voiture. Puis les phrases s’allongèrent, se firent moins certaines. Son père racontait ses journées comme on laisse des cailloux le long d’un chemin.",
+        "Elle lut une lettre entière, puis une autre. Il n’y avait pas d’explication capable d’effacer les années. Il y avait un homme qui avait remis au lendemain une conversation devenue, à force d’attendre, presque impossible. Cette découverte ne la consolait pas. Elle rendait seulement sa colère moins simple.",
+        "Au fond de la boîte, une enveloppe vide contenait du sable. Camille la retourna sur la table et regarda les grains former une petite île. Jeanne apporta deux tasses de thé. Elle ne demanda pas ce que Camille avait lu."
+      ],
+      "next": "table"
+    },
+    "veille": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "L’escalier semblait plus étroit. À chaque palier, Camille retrouvait un détail oublié : une fissure dans l’enduit, le rond laissé par un seau, la fenêtre dont la poignée fermait mal. Le lieu ne lui revenait pas d’un seul coup. Il se recomposait à mesure qu’elle avançait.",
+        "La chambre de veille était presque vide. Une chaise faisait face à la mer, et un carnet de relevés reposait sur le rebord. Entre deux pages, une feuille dessinée représentait le jardin au printemps. Son père avait donné des noms aux carrés de légumes ; l’un d’eux s’appelait encore le royaume de Camille.",
+        "Elle s’assit dans la chaise. Au large, un cargo franchissait la ligne de l’horizon. Rien ne lui fut révélé. Mais elle parvint à rester là, sans chercher une raison de partir, jusqu’à ce que Jeanne l’appelle pour le thé."
+      ],
+      "next": "table"
+    },
+    "table": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "La nuit était tombée sans qu’elles s’en aperçoivent. Jeanne alluma la petite lampe de la cuisine. Dans son cercle de lumière, les tasses, la boîte de lettres et le carnet prenaient l’importance des objets qu’on décide de garder.",
+        "« Les hommes viendront lundi à neuf heures », rappela Jeanne. Camille acquiesça. Il restait une journée entière, peut-être davantage si elle le demandait. Dehors, la pluie avait cessé. On entendait distinctement la mer derrière les murs."
+      ],
+      "routes": [
+        {
+          "when": {
+            "cle": true
+          },
+          "next": "armoire"
+        },
+        {
+          "next": "invitation"
+        }
+      ]
+    },
+    "armoire": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "La clé retrouvée dans le jardin pesait contre sa cuisse. Camille la posa sur la table et Jeanne désigna la petite armoire du couloir. « Je crois qu’elle ouvre ça. Je n’ai jamais réussi à retrouver le double. »",
+        "La serrure céda au premier tour. À l’intérieur, sous des cartes marines, dormait un album de photographies. Camille le rapporta dans la cuisine. Il lui restait à décider si elle voulait ouvrir cette dernière porte seule."
+      ],
+      "choice": {
+        "prompt": "Elle garda un instant la main sur la couverture.",
+        "options": [
+          {
+            "id": "ensemble",
+            "label": "Proposer à Jeanne de rester",
+            "passage": "Camille rapprocha la seconde chaise. « Raconte-moi celles dont tu te souviens », dit-elle en ouvrant l’album.",
+            "next": "fin-partage"
+          },
+          {
+            "id": "seule",
+            "label": "Garder cet instant pour elle",
+            "passage": "Elle remercia Jeanne et lui promit de passer le lendemain. Certaines pages demandaient encore un peu de solitude.",
+            "next": "fin-calme"
+          }
+        ]
+      }
+    },
+    "invitation": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Jeanne ramassa son panier, puis hésita sur le seuil. Avant de partir, elle désigna l’album posé sur une étagère. « Il y a des visages que tu ne reconnaîtras pas. Je peux te dire qui ils sont. » Camille entendit, derrière cette proposition, une invitation à ne plus porter seule toute l’histoire."
+      ],
+      "choice": {
+        "prompt": "La soirée pouvait encore se prolonger.",
+        "options": [
+          {
+            "id": "ensemble",
+            "label": "Lui demander de raconter",
+            "passage": "Camille sortit l’album et remit de l’eau à chauffer. Cette fois, elle avait le temps d’écouter.",
+            "when": {
+              "confiance": true
+            },
+            "next": "fin-partage"
+          },
+          {
+            "id": "seule",
+            "label": "Reprendre demain, au calme",
+            "passage": "Elle embrassa Jeanne sur le seuil. Demain serait assez tôt pour poser les premières questions.",
+            "next": "fin-calme"
+          }
+        ]
+      }
+    },
+    "fin-partage": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Elles parlèrent jusqu’à ce que le thé soit froid. Jeanne confondait parfois les dates, revenait en arrière, riait d’un détail que Camille n’avait jamais remarqué. Le passé cessait peu à peu d’être un bloc fermé. Il redevenait un ensemble de journées, de maladresses et de visages.",
+        "Camille ne savait pas encore ce qu’elle ferait du phare. Pour cette nuit, il lui suffisait que la maison contienne de nouveau une conversation. Quand elle ouvrit la fenêtre, le faisceau d’une bouée tournait au loin. La mer n’avait rien rendu d’entier. Elle avait pourtant rapporté assez pour commencer."
+      ],
+      "ending": "Une lumière partagée"
+    },
+    "fin-calme": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Après le départ de Jeanne, Camille fit le tour de la maison pour fermer les volets. Elle laissa celui de la cuisine entrouvert. Le bruit de la mer arrivait par cette fente, régulier et vivant, sans rien demander en retour.",
+        "Elle posa l’album près de son lit. Elle ne l’ouvrit pas encore. Pour la première fois depuis longtemps, remettre quelque chose au lendemain ne ressemblait pas à une fuite. C’était une manière de se donner du temps. Dans le noir, le phare gardait autour d’elle la forme d’un abri."
+      ],
+      "ending": "Le temps de revenir"
+    }
+  }
+}
