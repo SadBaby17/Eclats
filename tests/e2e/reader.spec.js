@@ -213,7 +213,10 @@ test("an update waits for explicit activation, then preserves the reading save",
       page.getByRole("button", { name: "Mettre à jour" }),
     ).toBeVisible();
     await expect(page.locator("#scene-jardin")).toHaveCount(1);
-    await page.getByRole("button", { name: "Mettre à jour" }).click();
+    await Promise.all([
+      page.waitForEvent("load"),
+      page.getByRole("button", { name: "Mettre à jour" }).click(),
+    ]);
     await expect(page.locator("#scene-jardin")).toHaveCount(1);
     await expect
       .poll(() => page.evaluate(() => caches.keys()))
@@ -279,4 +282,59 @@ test("dismissing installation consumes its single-use prompt cleanly", async ({
   ).toHaveCount(0);
   await decision(page, "Rejoindre Jeanne au port");
   await expect(page.locator("#scene-jeanne")).toHaveCount(1);
+});
+
+test("main menu opens four sections and preserves reading across destinations", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await decision(page, "Rejoindre Jeanne au port");
+  await page.locator("#jeanne-p1").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(250);
+  const before = await page.evaluate(() => scrollY);
+  const decisions = await page.evaluate(
+    () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
+  );
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  const nav = page.getByRole("navigation", { name: "Navigation principale" });
+  await expect(nav.getByRole("button")).toHaveCount(4);
+  await nav.getByRole("button", { name: /Bibliothèque/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "Bibliothèque", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("#debut")).toBeHidden();
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page.getByRole("button", { name: /Journal de personnage/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "Une page encore blanche" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Paramètres/ })
+    .click();
+  await expect(
+    page.getByRole("dialog", { name: "À votre rythme" }),
+  ).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Lectures/ })
+    .click();
+  await expect(page.locator("#scene-jeanne")).toBeVisible();
+  expect(Math.abs((await page.evaluate(() => scrollY)) - before)).toBeLessThan(
+    50,
+  );
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
+    ),
+  ).toEqual(decisions);
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page.screenshot({ path: "test-results/menu-mobile.png" });
+  await page.keyboard.press("Escape");
+  await expect(
+    page.getByRole("button", { name: "Ouvrir le menu" }),
+  ).toHaveAttribute("aria-expanded", "false");
 });

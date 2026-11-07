@@ -462,3 +462,197 @@ dialog p {
     padding-top: 70px;
   }
 }
+
+[hidden] {
+  display: none !important;
+}
+.app-menu {
+  padding: 30px;
+  max-width: 440px;
+}
+.app-menu h2 {
+  margin-bottom: 8px;
+}
+.menu-intro {
+  margin: 0 0 25px;
+  font:
+    italic 16px/1.6 Georgia,
+    serif;
+}
+.menu-entry {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  padding: 21px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: none;
+}
+.menu-entry[aria-current] .menu-label {
+  color: var(--gold);
+}
+.menu-symbol {
+  width: 25px;
+  color: var(--gold);
+  font-size: 25px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.menu-label {
+  display: block;
+  font:
+    21px/1.3 Georgia,
+    serif;
+}
+.menu-entry small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+.menu-arrow {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 22px;
+}
+.menu-signature {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+.destination {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 60px 28px;
+}
+.destination h1 {
+  font:
+    normal 38px/1.2 Georgia,
+    serif;
+  margin: 18px 0;
+}
+.destination-intro {
+  color: var(--muted);
+  font:
+    italic 18px/1.6 Georgia,
+    serif;
+  margin-bottom: 36px;
+}
+.book-card {
+  border: 1px solid var(--line);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--panel);
+  border-radius: 4px;
+}
+.book-cover {
+  background: #303d3c;
+  color: #e8d5ae;
+  width: 150px;
+  min-height: 215px;
+  flex-shrink: 0;
+  padding: 23px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px double #7b806b;
+  box-shadow: 4px 4px 0 var(--line);
+}
+.book-cover strong {
+  white-space: pre-line;
+  font:
+    normal 27px/1.3 Georgia,
+    serif;
+}
+.book-cover span {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+.book-cover span:last-child {
+  font-size: 23px;
+}
+.book-details h2 {
+  font:
+    normal 26px/1.3 Georgia,
+    serif;
+  margin: 15px 0;
+}
+.book-details p,
+.journal-placeholder p {
+  color: var(--muted);
+  font:
+    17px/1.7 Georgia,
+    serif;
+}
+.book-details .primary {
+  margin-top: 10px;
+}
+.journal-placeholder {
+  text-align: center;
+  border: 1px solid var(--line);
+  padding: 50px 25px;
+  margin-top: 35px;
+  border-radius: 4px;
+}
+.journal-symbol {
+  color: var(--gold);
+  font-size: 40px;
+}
+.journal-placeholder h2 {
+  font:
+    normal 25px Georgia,
+    serif;
+  margin-top: 25px;
+}
+.journal-placeholder p {
+  max-width: 360px;
+  margin: 20px auto 0;
+}
+@media (max-width: 480px) {
+  .app-menu {
+    padding: 24px;
+  }
+  .menu-label {
+    font-size: 19px;
+  }
+  .book-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+  .book-cover {
+    align-self: center;
+    margin-bottom: 12px;
+  }
+  .destination {
+    padding: 40px 24px;
+  }
+  .destination h1 {
+    font-size: 32px;
+  }
+  .top-actions {
+    gap: 5px;
+  }
+  .topbar {
+    gap: 8px;
+  }
+  .top-actions .icon-button {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background: var(--paper);
+}

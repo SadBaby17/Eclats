@@ -81,7 +81,11 @@ function action(label, symbol, handler) {
   button.onclick = handler;
   return button;
 }
+const menuButton = action("Ouvrir le menu", "☰", openMenu);
+menuButton.setAttribute("aria-haspopup", "dialog");
+menuButton.setAttribute("aria-expanded", "false");
 actions.append(
+  menuButton,
   action("Mes décisions", "↶", openHistory),
   action("Paramètres de lecture", "Aa", openSettings),
 );
@@ -109,7 +113,147 @@ const saveState = el(
   "Sauvegarde locale automatique",
 );
 footer.append(progress, progressText, saveState);
-app.replaceChildren(top, notice, live, book, footer);
+const destination = el("main", { class: "destination", hidden: "" });
+let activeView = "lectures",
+  readingPosition;
+app.replaceChildren(top, notice, live, book, destination, footer);
+function openMenu() {
+  const dialog = modal("Votre espace");
+  dialog.classList.add("app-menu");
+  menuButton.setAttribute("aria-expanded", "true");
+  dialog.addEventListener("close", () =>
+    menuButton.setAttribute("aria-expanded", "false"),
+  );
+  dialog.append(
+    el("p", { class: "menu-intro" }, "Un livre, un chemin, un moment à soi."),
+  );
+  const navigation = el("nav", { "aria-label": "Navigation principale" });
+  for (const [id, label, description, symbol] of [
+    ["bibliotheque", "Bibliothèque", "Les histoires à découvrir", "▤"],
+    ["lectures", "Lectures", "Retrouver le fil de votre récit", "▥"],
+    [
+      "journal",
+      "Journal de personnage",
+      "Une place pour vos futurs personnages",
+      "◇",
+    ],
+    ["parametres", "Paramètres", "Votre confort de lecture", "☼"],
+  ]) {
+    const button = el("button", {
+      class: "menu-entry",
+      ...(activeView === id ? { "aria-current": "page" } : {}),
+    });
+    const copy = el("span");
+    copy.append(
+      el("span", { class: "menu-label" }, label),
+      el("small", {}, description),
+    );
+    button.append(
+      el("span", { class: "menu-symbol", "aria-hidden": "true" }, symbol),
+      copy,
+      el("span", { class: "menu-arrow", "aria-hidden": "true" }, "›"),
+    );
+    button.onclick = () => {
+      dialog.close();
+      // Let the native dialog restore focus before opening the destination.
+      setTimeout(
+        () => (id === "parametres" ? openSettings() : showDestination(id)),
+        0,
+      );
+    };
+    navigation.append(button);
+  }
+  dialog.append(
+    navigation,
+    el(
+      "div",
+      { class: "menu-signature" },
+      "ÉCLATS · DES HISTOIRES, VOS CHEMINS",
+    ),
+  );
+  dialog.showModal();
+}
+brand.onclick = (event) => {
+  event.preventDefault();
+  showDestination("lectures");
+  window.scrollTo({ top: 0, behavior: "instant" });
+};
+function showDestination(id) {
+  if (id === activeView) return;
+  if (activeView === "lectures") {
+    readingPosition = position();
+    save();
+  }
+  activeView = id;
+  book.hidden = id !== "lectures";
+  footer.hidden = book.hidden;
+  destination.hidden = !book.hidden;
+  if (id === "lectures") {
+    restorePosition(readingPosition);
+    updateProgress();
+    book.tabIndex = -1;
+    book.focus({ preventScroll: true });
+    return;
+  }
+  destination.replaceChildren(
+    el("div", { class: "eyebrow" }, "Votre espace Éclats"),
+  );
+  const title = el(
+    "h1",
+    { tabindex: "-1" },
+    id === "bibliotheque" ? "Bibliothèque" : "Journal de personnage",
+  );
+  destination.append(title);
+  if (id === "bibliotheque") {
+    destination.append(
+      el(
+        "p",
+        { class: "destination-intro" },
+        "Des histoires à habiter, à votre rythme.",
+      ),
+    );
+    const card = el("article", { class: "book-card" });
+    const cover = el("div", { class: "book-cover", "aria-hidden": "true" });
+    cover.append(
+      el("span", {}, "É C L A T S"),
+      el("strong", {}, "Le phare\ndes heures"),
+      el("span", {}, "✧"),
+    );
+    const details = el("div", { class: "book-details" });
+    const resume = el(
+      "button",
+      { class: "primary" },
+      state?.decisions.length ? "Reprendre ma lecture" : "Ouvrir le livre",
+    );
+    resume.onclick = () => showDestination("lectures");
+    details.append(
+      el("div", { class: "eyebrow" }, "Nouvelle · Démonstration"),
+      el("h2", {}, story?.title || "Le phare des heures"),
+      el(
+        "p",
+        {},
+        "Un retour au village, un phare et les chemins que l’on choisit de retrouver.",
+      ),
+      resume,
+    );
+    card.append(cover, details);
+    destination.append(card);
+  } else {
+    const empty = el("section", { class: "journal-placeholder" });
+    empty.append(
+      el("span", { class: "journal-symbol", "aria-hidden": "true" }, "◇"),
+      el("h2", {}, "Une page encore blanche"),
+      el(
+        "p",
+        {},
+        "Votre journal de personnage prendra place ici. Cette rubrique sera enrichie dans une prochaine étape.",
+      ),
+    );
+    destination.append(empty);
+  }
+  window.scrollTo({ top: 0, behavior: "instant" });
+  title.focus({ preventScroll: true });
+}
 function storageError() {
   notice.textContent =
     "La sauvegarde locale est indisponible. Vous pouvez continuer à lire, mais votre progression risque de ne pas être conservée après fermeture.";
@@ -117,6 +261,7 @@ function storageError() {
 }
 if (!storage) storageError();
 function position() {
+  if (book.hidden && readingPosition) return readingPosition;
   const paragraphs = [...book.querySelectorAll("[data-anchor]")];
   const current =
     paragraphs.find((p) => p.getBoundingClientRect().bottom > 8) ||
@@ -131,7 +276,7 @@ function position() {
   };
 }
 function save() {
-  if (!canSave || !story) return;
+  if (!canSave || !story || book.hidden) return;
   if (!storage) {
     storageError();
     return;
@@ -145,7 +290,7 @@ function save() {
   }
 }
 function restorePosition(p) {
-  if (!p?.anchor) return;
+  if (!p?.anchor || book.hidden) return;
   const node = document.getElementById(p.anchor);
   if (node)
     window.scrollTo({
@@ -157,6 +302,7 @@ function restorePosition(p) {
     });
 }
 function updateProgress() {
+  if (book.hidden) return;
   const max = document.documentElement.scrollHeight - innerHeight;
   const amount =
     max <= 0
@@ -367,6 +513,7 @@ function modal(title) {
 }
 function openHistory() {
   if (!state) return;
+  if (activeView !== "lectures") showDestination("lectures");
   const dialog = modal("Vos chemins");
   dialog.append(
     el(
