@@ -43,7 +43,7 @@ async function details(page) {
   await page
     .getByRole("button", { name: `Voir les chapitres : ${title}`, exact: true })
     .click();
-  await expect(page.locator(".chapter-link")).toHaveCount(13);
+  await expect(page.locator(".chapter-link")).toHaveCount(33);
 }
 async function ready(page) {
   await page.evaluate(async () => {
@@ -97,10 +97,10 @@ test("library opens chapter details, locks future chapters and contains no demo"
     page.getByText("Le phare des heures", { exact: true }),
   ).toHaveCount(0);
   await page.getByRole("link", { name: title, exact: true }).click();
-  await expect(page.locator(".chapter-link")).toHaveCount(13);
+  await expect(page.locator(".chapter-link")).toHaveCount(33);
   await expect(page.locator("#debut")).toBeHidden();
   await expect(page.locator("[data-chapter-id=c1]")).toBeEnabled();
-  for (let n = 2; n <= 13; n++) {
+  for (let n = 2; n <= 33; n++) {
     const chapter = page.locator(`[data-chapter-id=c${n}]`);
     await expect(chapter).toBeDisabled();
     await expect(chapter).toContainText("Inaccessible");
@@ -357,7 +357,7 @@ test("home and chapter list fit narrow phones, desktop and night theme", async (
         exact: true,
       })
       .click();
-    await expect(page.locator(".chapter-link")).toHaveCount(13);
+    await expect(page.locator(".chapter-link")).toHaveCount(33);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -499,26 +499,26 @@ test("repair reports offline failures and preserves reading data", async ({
   expect(await saveValue(page)).toEqual(before);
 });
 
-test("all thirteen chapters can be read and revisited after completion", async ({
+test("all thirty-three chapters can be read and revisited after completion", async ({
   page,
 }) => {
-  test.setTimeout(60_000);
+  test.setTimeout(180_000);
   await openReader(page);
-  for (let i = 0; i < 65; i++) {
+  for (let i = 0; i < 165; i++) {
     if (i >= 15) await expect(page.locator(".choice input")).toHaveCount(5);
-    await decision(page, i >= 15 && i !== 59 ? i % 5 : 0);
+    await decision(page, i >= 15 && i !== 59 && i !== 149 ? i % 5 : 0);
   }
-  await expect(page.locator(".chapter-heading")).toHaveCount(13);
+  await expect(page.locator(".chapter-heading")).toHaveCount(33);
   await expect(
     page.getByRole("heading", {
-      name: "Les portes qui restent ouvertes",
+      name: "Une porte pour la nuit",
       exact: true,
     }),
   ).toBeVisible();
   const history = (await saveValue(page)).decisions;
-  expect(history).toHaveLength(65);
+  expect(history).toHaveLength(165);
   await details(page);
-  await expect(page.locator(".chapter-link:enabled")).toHaveCount(13);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(33);
   await page.locator("[data-chapter-id=c4]").click();
   await expect(page.locator("#scene-c4-1 .chapter-heading")).toBeInViewport();
   expect((await saveValue(page)).decisions).toEqual(history);
@@ -603,4 +603,29 @@ test("scene explanations start at chapter five, work on mobile and preserve deci
   await guide.locator("summary").click();
   await decision(page);
   expect((await saveValue(page)).decisions.length).toBe(21);
+});
+
+test("a completed first-cycle save resumes at chapter fourteen and preserves its conclusion", async ({ page }) => {
+  await seed(page, 65);
+  await openReader(page);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(14);
+  await expect(page.locator("[data-chapter-id=c15]")).toBeDisabled();
+  await page.locator("[data-chapter-id=c14]").click();
+  await expect(page.locator("#scene-c14-1 .choice input")).toHaveCount(5);
+  await expect(page.locator(".cycle-ending")).toHaveCount(1);
+  const before = (await saveValue(page)).decisions;
+  await decision(page, 2);
+  await page.reload();
+  await enterReader(page);
+  const saved = (await saveValue(page)).decisions;
+  expect(saved).toHaveLength(66);
+  expect(saved.slice(0, 65)).toEqual(before);
+  await page.locator("#scene-c14-1 .decision-mark button").click();
+  const dialog = page.getByRole("dialog");
+  await dialog.locator("input[type=radio]").first().check();
+  await dialog.getByRole("button", { name: /Remplacer/ }).click();
+  expect((await saveValue(page)).decisions).toHaveLength(66);
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c15]")).toBeDisabled();
 });

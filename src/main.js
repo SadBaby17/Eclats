@@ -727,6 +727,14 @@ function render(animate = false) {
         prose.append(paragraph(text, `${block.id}-p${i}`, animate, i)),
       );
       section.append(prose);
+      if (block.scene.cycleEnding) {
+        const milestone = el("div", { class: "cycle-ending" });
+        milestone.append(
+          el("p", { class: "eyebrow" }, "Fin du premier cycle"),
+          el("h3", {}, block.scene.cycleEnding),
+        );
+        section.append(milestone);
+      }
       const guide = story.readingGuides?.[block.id];
       if (guide) {
         const details = el("details", { class: "reading-guide" });

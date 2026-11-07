@@ -1138,3 +1138,6 @@ dialog p {
   border-radius: .3rem;
 }
 .guide-diagram li::marker { color: var(--gold); font-weight: 600; }
+
+.cycle-ending { margin: 3rem 0; padding: 1.5rem 0; text-align: center; border-block: 1px solid var(--line); }
+.cycle-ending h3 { font-family: Georgia, serif; font-weight: normal; color: var(--ink); }

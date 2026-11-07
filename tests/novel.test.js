@@ -16,17 +16,17 @@ const fixtureStory = JSON.parse(
 test("all reachable narrative states have valid continuations and chapter lengths", () => {
   validateStory(novel);
   const result = audit(novel);
-  assert.equal(result.paths, 2n ** 15n * 5n ** 50n);
+  assert.equal(result.paths, 2n ** 15n * 5n ** 150n);
   assert.equal(result.reached.size, Object.keys(novel.scenes).length);
   novel.chapters.forEach((c, i) => {
     assert.equal(result.minChoices[i], 5);
     assert.equal(result.maxChoices[i], 5);
     assert.ok(
-      result.minWords[i] >= 3300,
+      result.minWords[i] >= (i < 13 ? 3300 : 1000),
       `chapter ${i + 1}: minimum ${result.minWords[i]}`,
     );
     assert.ok(
-      result.maxWords[i] <= 4400,
+      result.maxWords[i] <= (i < 13 ? 4400 : 1500),
       `chapter ${i + 1}: maximum ${result.maxWords[i]}`,
     );
     console.log(
@@ -114,7 +114,7 @@ test("each new interaction has five distinct valid answers", () => {
     }
 });
 
-test("sampled complete histories replay all sixty-five decisions and preserve five-way answers", () => {
+test("sampled complete histories replay all one hundred sixty-five decisions and preserve five-way answers", () => {
   let seed = 7193;
   for (let sample = 0; sample < 128; sample++) {
     let r = replay(novel);
@@ -123,8 +123,8 @@ test("sampled complete histories replay all sixty-five decisions and preserve fi
       const o = r.pending.options[seed % r.pending.options.length];
       r = choose(novel, r.decisions, r.pending.scene, o.id);
     }
-    assert.equal(r.decisions.length, 65);
-    assert.equal(r.blocks.at(-1).scene.chapter, "c13");
+    assert.equal(r.decisions.length, 165);
+    assert.equal(r.blocks.at(-1).scene.chapter, "c33");
     assert.deepEqual(replay(novel, r.decisions).decisions, r.decisions);
   }
 });
@@ -170,10 +170,10 @@ test("other stored data remains intact when saving the novel", () => {
   assert.deepEqual(readSave(storage, novel).decisions, decisions);
 });
 
-test("the complete thirteen-chapter novel has three reachable conclusions", () => {
-  assert.equal(novel.chapters.length, 13);
+test("the complete thirty-three-chapter novel has three reachable conclusions", () => {
+  assert.equal(novel.chapters.length, 33);
   assert.equal(novel.publication.status, "complete");
-  assert.equal(novel.publication.availableChapters, 13);
+  assert.equal(novel.publication.availableChapters, 33);
   const content = Object.values(novel.scenes)
     .flatMap((s) => s.paragraphs)
     .join(" ");
@@ -236,9 +236,9 @@ test("the final configuration produces three complete endings and can be revised
     let r = choose(novel, prefix, "c12-5", option.id);
     while (r.pending)
       r = choose(novel, r.decisions, r.pending.scene, r.pending.options[0].id);
-    endings.add(r.ending);
-    assert.equal(r.decisions.length, 65);
-    assert.equal(r.blocks.at(-1).scene.chapter, "c13");
+    endings.add(r.blocks.find((b) => b.scene.cycleEnding)?.scene.cycleEnding);
+    assert.equal(r.decisions.length, 165);
+    assert.equal(r.blocks.at(-1).scene.chapter, "c33");
     const rewritten = choose(
       novel,
       prefix,
@@ -262,7 +262,7 @@ test("combat options expose concrete powers and preserve their distinct conseque
 });
 
 test("reading guides only explain unlocked scenes from chapter five onward without altering the novel", () => {
-  assert.equal(Object.keys(novel.readingGuides).length, 19);
+  assert.equal(Object.keys(novel.readingGuides).length, 29);
   const covered = new Set();
   for (const [id, guide] of Object.entries(novel.readingGuides)) {
     const scene = novel.scenes[id];
@@ -274,11 +274,53 @@ test("reading guides only explain unlocked scenes from chapter five onward witho
     assert.ok(guide.paragraphs.every((p) => typeof p === "string" && p.length > 40));
     if (guide.steps) assert.ok(guide.steps.length >= 3);
   }
-  assert.equal(covered.size, 9);
+  assert.equal(covered.size, 19);
   const withoutGuides = structuredClone(novel);
   delete withoutGuides.readingGuides;
   let current = replay(novel);
   while (current.pending)
     current = choose(novel, current.decisions, current.pending.scene, current.pending.options[0].id);
   assert.deepEqual(replay(withoutGuides, current.decisions), current);
+});
+
+
+test("all thirteen original chapters and their decisions are preserved across the cycle transition", () => {
+  const baseline = JSON.parse(readFileSync(new URL("./fixtures/novel-thirteen-chapters.json", import.meta.url)));
+  const canonical = (x) => JSON.stringify(x, (_, v) => v && typeof v === "object" && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => a.localeCompare(b))) : v);
+  assert.equal(novel.version, baseline.version);
+  assert.deepEqual(novel.chapters.slice(0, 13), baseline.chapters);
+  for (const [id, hash] of Object.entries(baseline.scenes)) {
+    const node = structuredClone(novel.scenes[id]);
+    if (baseline.cycleEndings[id]) {
+      assert.equal(node.cycleEnding, baseline.cycleEndings[id]);
+      assert.match(node.next, /^c14-pont-/u);
+      node.ending = node.cycleEnding;
+      delete node.cycleEnding;
+      delete node.next;
+    }
+    assert.equal(createHash("sha256").update(canonical(node)).digest("hex"), hash, id);
+  }
+  let r = replay(novel);
+  while (r.decisions.length < 65) r = choose(novel, r.decisions, r.pending.scene, r.pending.options[0].id);
+  assert.equal(r.pending.scene, "c14-1");
+  assert.equal(r.decisions.length, 65);
+  assert.equal(r.blocks.filter((b) => b.scene.cycleEnding).length, 1);
+});
+
+test("the second cycle has twenty chapters, one hundred decisions and three distinct conclusions", () => {
+  assert.equal(novel.chapters.slice(13).length, 20);
+  let before = replay(novel);
+  while (before.pending.scene !== "c30-5") before = choose(novel, before.decisions, before.pending.scene, before.pending.options[0].id);
+  const endings = new Set();
+  for (const option of before.pending.options) {
+    let r = choose(novel, before.decisions, before.pending.scene, option.id);
+    while (r.pending) r = choose(novel, r.decisions, r.pending.scene, r.pending.options[0].id);
+    endings.add(r.ending);
+    assert.equal(r.decisions.length, 165);
+    assert.equal(r.variables.strategie_finale, before.variables.strategie_finale);
+  }
+  assert.equal(endings.size, 3);
+  const revised = choose(novel, before.decisions, before.pending.scene, before.pending.options[2].id);
+  assert.equal(revised.pending.scene, "c31-1");
+  assert.equal(revised.variables.projet_routes, "c");
 });
