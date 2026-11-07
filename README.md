@@ -27,7 +27,7 @@ Les tests navigateur lancent leur propre serveur sur le port 4173. Les captures 
 
 ## Utilisation
 
-Le bouton **☰** ouvre le menu principal : **Bibliothèque** présente le livre de démonstration, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réserve un espace pour une prochaine étape, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
+L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, même lorsqu’une lecture est en cours. Toucher le logo **Éclats** ramène à cet accueil. Le bouton **☰**, disponible dans les autres écrans, ouvre le menu principal : **Bibliothèque** présente le livre de démonstration, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réserve un espace pour une prochaine étape, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
 
 - Faire défiler le roman. Cocher un chemin ne le valide pas : appuyer ensuite sur **Confirmer ce chemin**.
 - La réponse devient un paragraphe du livre. Les nouvelles scènes sont ajoutées en dessous ; le texte déjà présent est conservé.

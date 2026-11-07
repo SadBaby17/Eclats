@@ -60,7 +60,7 @@ systemTheme.addEventListener("change", applySettings);
 const top = el("header", { class: "topbar" });
 const brand = el(
   "a",
-  { class: "brand", href: "#debut", "aria-label": "Éclats, début du livre" },
+  { class: "brand", href: "#debut", "aria-label": "Éclats, accueil" },
   "éclats",
 );
 brand.append(el("span", {}, " ✧"));
@@ -114,7 +114,9 @@ const saveState = el(
 );
 footer.append(progress, progressText, saveState);
 const destination = el("main", { class: "destination", hidden: "" });
-let activeView = "lectures",
+book.hidden = true;
+footer.hidden = true;
+let activeView = null,
   readingPosition;
 app.replaceChildren(top, notice, live, book, destination, footer);
 function openMenu() {
@@ -127,6 +129,17 @@ function openMenu() {
   dialog.append(
     el("p", { class: "menu-intro" }, "Un livre, un chemin, un moment à soi."),
   );
+  dialog.append(mainNavigation(() => dialog.close()));
+  dialog.append(
+    el(
+      "div",
+      { class: "menu-signature" },
+      "ÉCLATS · DES HISTOIRES, VOS CHEMINS",
+    ),
+  );
+  dialog.showModal();
+}
+function mainNavigation(close = () => {}) {
   const navigation = el("nav", { "aria-label": "Navigation principale" });
   for (const [id, label, description, symbol] of [
     ["bibliotheque", "Bibliothèque", "Les histoires à découvrir", "▤"],
@@ -154,7 +167,7 @@ function openMenu() {
       el("span", { class: "menu-arrow", "aria-hidden": "true" }, "›"),
     );
     button.onclick = () => {
-      dialog.close();
+      close();
       // Let the native dialog restore focus before opening the destination.
       setTimeout(
         () => (id === "parametres" ? openSettings() : showDestination(id)),
@@ -163,19 +176,11 @@ function openMenu() {
     };
     navigation.append(button);
   }
-  dialog.append(
-    navigation,
-    el(
-      "div",
-      { class: "menu-signature" },
-      "ÉCLATS · DES HISTOIRES, VOS CHEMINS",
-    ),
-  );
-  dialog.showModal();
+  return navigation;
 }
 brand.onclick = (event) => {
   event.preventDefault();
-  showDestination("lectures");
+  showDestination("accueil");
   window.scrollTo({ top: 0, behavior: "instant" });
 };
 function showDestination(id) {
@@ -185,26 +190,46 @@ function showDestination(id) {
     save();
   }
   activeView = id;
+  menuButton.hidden = id === "accueil";
   book.hidden = id !== "lectures";
   footer.hidden = book.hidden;
   destination.hidden = !book.hidden;
+  actions.querySelector('[aria-label="Mes décisions"]').hidden = book.hidden;
+  actions.querySelector('[aria-label="Paramètres de lecture"]').hidden =
+    book.hidden;
   if (id === "lectures") {
     restorePosition(readingPosition);
     updateProgress();
+    save();
     book.tabIndex = -1;
     book.focus({ preventScroll: true });
     return;
   }
+  destination.classList.remove("home-screen");
   destination.replaceChildren(
     el("div", { class: "eyebrow" }, "Votre espace Éclats"),
   );
   const title = el(
     "h1",
     { tabindex: "-1" },
-    id === "bibliotheque" ? "Bibliothèque" : "Journal de personnage",
+    id === "accueil"
+      ? "Bienvenue dans Éclats"
+      : id === "bibliotheque"
+        ? "Bibliothèque"
+        : "Journal de personnage",
   );
   destination.append(title);
-  if (id === "bibliotheque") {
+  if (id === "accueil") {
+    destination.classList.add("home-screen");
+    destination.append(
+      el(
+        "p",
+        { class: "destination-intro" },
+        "Des histoires à découvrir. Des chemins à choisir.",
+      ),
+      mainNavigation(),
+    );
+  } else if (id === "bibliotheque") {
     destination.append(
       el(
         "p",
@@ -674,6 +699,7 @@ async function start() {
         "La sauvegarde est incompatible ou endommagée. Une nouvelle lecture a été ouverte.";
     }
     state = replay(story, restore?.decisions || []);
+    readingPosition = restore;
     if (restore && state.decisions.length !== restore.decisions.length)
       notice.textContent =
         "Les décisions incompatibles ont été retirées. Votre dernière progression valide a été conservée.";
@@ -765,4 +791,5 @@ window.addEventListener("beforeinstallprompt", (event) => {
   });
   actions.append(button);
 });
+showDestination("accueil");
 start();

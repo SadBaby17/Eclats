@@ -1,5 +1,19 @@
 import { test, expect } from "@playwright/test";
 import { readFile, writeFile } from "node:fs/promises";
+async function enterReader(page) {
+  await expect(
+    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+  ).toBeVisible();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Lectures/ })
+    .click();
+  await expect(page.locator("#scene-arrivee")).toBeVisible();
+}
+async function openReader(page) {
+  await page.goto("./");
+  await enterReader(page);
+}
 async function decision(page, label) {
   await page.getByLabel(label, { exact: true }).check();
   await page.getByRole("button", { name: "Confirmer ce chemin" }).click();
@@ -7,7 +21,7 @@ async function decision(page, label) {
 test("mobile reading, explicit confirmation, branching, settings, restore and rewind", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await expect(
     page.getByRole("heading", { name: "Le phare des heures" }),
   ).toBeVisible();
@@ -48,6 +62,7 @@ test("mobile reading, explicit confirmation, branching, settings, restore and re
   await page.waitForTimeout(300);
   const y = await page.evaluate(() => scrollY);
   await page.reload();
+  await enterReader(page);
   await expect(page.locator("#scene-fin-partage")).toBeVisible();
   await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(y - 40);
   expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(50);
@@ -94,7 +109,7 @@ test("storage denied keeps the story usable and displays an honest warning", asy
       },
     });
   });
-  await page.goto("./");
+  await openReader(page);
   await expect(
     page
       .getByRole("status")
@@ -110,7 +125,7 @@ test("corrupt saves recover and reduced motion suppresses reveal animations", as
     localStorage.setItem("eclats.reading.v1", "{broken"),
   );
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("./");
+  await openReader(page);
   await expect(
     page.getByText(/sauvegarde est incompatible ou endommagée/),
   ).toBeVisible();
@@ -125,7 +140,7 @@ test("PWA installs a scoped cache and reopens offline including saved decisions"
   page,
   context,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
     if (!navigator.serviceWorker.controller)
@@ -142,6 +157,7 @@ test("PWA installs a scoped cache and reopens offline including saved decisions"
   await decision(page, "Rejoindre Jeanne au port");
   await context.setOffline(true);
   await page.reload();
+  await enterReader(page);
   await expect(page.locator("#scene-jeanne")).toHaveCount(1);
   await decision(page, "Ouvrir la boîte de lettres");
   await expect(page.locator("#scene-lettres")).toHaveCount(1);
@@ -150,9 +166,10 @@ test("PWA installs a scoped cache and reopens offline including saved decisions"
 test("opening-page bookmark survives reload without skipping the title", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await expect(page.locator("#scene-arrivee")).toHaveCount(1);
   await page.reload();
+  await enterReader(page);
   await expect(
     page.getByRole("heading", { name: "Le phare des heures" }),
   ).toBeVisible();
@@ -163,7 +180,7 @@ test("layouts fit small phones and desktop; dialogs support keyboard dismissal",
 }) => {
   for (const width of [320, 768, 1280]) {
     await page.setViewportSize({ width, height: 800 });
-    await page.goto("./");
+    await openReader(page);
     await expect(
       page.getByRole("heading", { name: "Le phare des heures" }),
     ).toBeVisible();
@@ -184,7 +201,7 @@ test("layouts fit small phones and desktop; dialogs support keyboard dismissal",
 test("an update waits for explicit activation, then preserves the reading save", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
     if (!navigator.serviceWorker.controller)
@@ -217,6 +234,7 @@ test("an update waits for explicit activation, then preserves the reading save",
       page.waitForEvent("load"),
       page.getByRole("button", { name: "Mettre à jour" }).click(),
     ]);
+    await enterReader(page);
     await expect(page.locator("#scene-jardin")).toHaveCount(1);
     await expect
       .poll(() => page.evaluate(() => caches.keys()))
@@ -234,12 +252,13 @@ test("an update waits for explicit activation, then preserves the reading save",
 test("damaged preferences do not discard an intact reading save", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await decision(page, "Passer par le jardin du phare");
   await page.evaluate(() =>
     localStorage.setItem("eclats.settings.v1", "{broken"),
   );
   await page.reload();
+  await enterReader(page);
   await expect(page.locator("#scene-jardin")).toHaveCount(1);
   expect(
     await page.evaluate(
@@ -257,7 +276,7 @@ test("a write quota failure warns without blocking decisions", async ({
       throw new DOMException("Quota exceeded", "QuotaExceededError");
     };
   });
-  await page.goto("./");
+  await openReader(page);
   await expect(
     page.getByText("Progression non enregistrée", { exact: true }),
   ).toBeVisible();
@@ -268,7 +287,7 @@ test("a write quota failure warns without blocking decisions", async ({
 test("dismissing installation consumes its single-use prompt cleanly", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await expect(page.locator("#scene-arrivee")).toHaveCount(1);
   await page.evaluate(() => {
     const event = new Event("beforeinstallprompt", { cancelable: true });
@@ -287,7 +306,7 @@ test("dismissing installation consumes its single-use prompt cleanly", async ({
 test("main menu opens four sections and preserves reading across destinations", async ({
   page,
 }) => {
-  await page.goto("./");
+  await openReader(page);
   await decision(page, "Rejoindre Jeanne au port");
   await page.locator("#jeanne-p1").scrollIntoViewIfNeeded();
   await page.waitForTimeout(250);
@@ -337,4 +356,30 @@ test("main menu opens four sections and preserves reading across destinations", 
   await expect(
     page.getByRole("button", { name: "Ouvrir le menu" }),
   ).toHaveAttribute("aria-expanded", "false");
+});
+
+test("the application opens on its home menu, even with a reading in progress", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await expect(
+    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+  ).toBeVisible();
+  await expect(page.locator("#debut")).toBeHidden();
+  await expect(
+    page
+      .getByRole("navigation", { name: "Navigation principale" })
+      .getByRole("button"),
+  ).toHaveCount(4);
+  await page.screenshot({ path: "test-results/home-mobile.png" });
+  await enterReader(page);
+  await decision(page, "Rejoindre Jeanne au port");
+  await page.getByRole("link", { name: "Éclats, accueil" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(page.locator("#debut")).toBeHidden();
+  await enterReader(page);
+  await expect(page.locator("#scene-jeanne")).toBeVisible();
 });

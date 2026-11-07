@@ -656,3 +656,25 @@ dialog p {
   z-index: 4;
   background: var(--paper);
 }
+
+.home-screen {
+  max-width: 610px;
+  padding-top: 65px;
+}
+.home-screen h1 {
+  font-size: clamp(32px, 7vw, 45px);
+}
+.home-screen .destination-intro {
+  margin-bottom: 45px;
+}
+.home-screen .menu-entry {
+  padding: 25px 0;
+}
+@media (max-width: 480px) {
+  .home-screen {
+    padding-top: 40px;
+  }
+  .home-screen .menu-entry {
+    padding: 22px 0;
+  }
+}
