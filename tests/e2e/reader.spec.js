@@ -724,6 +724,8 @@ test("expanded chapters keep old paragraph anchors and restore bookmarks inside 
   await expect(added).toHaveText(text);
   expect((await saveValue(page)).decisions).toEqual(before.decisions);
   expect((await saveValue(page)).chapter).toBe("c14");
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(80);
+  // Restoration completes after fonts/layout and an animation frame. The heading
+  // already exists before that frame, especially on the faster CI runner.
+  await expect.poll(async () => Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(80);
   await expect(page.locator(".chapter-heading")).toHaveCount(1);
 });
