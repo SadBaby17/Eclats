@@ -1,0 +1,199 @@
+{
+  "format": 1,
+  "id": "branching-fixture",
+  "version": 1,
+  "title": "Graphe de validation",
+  "subtitle": "Données synthétiques pour les tests",
+  "author": "Tests",
+  "variables": {
+    "cle": false,
+    "confiance": false
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": 1,
+      "title": "Chapitre de validation",
+      "start": "arrivee"
+    }
+  ],
+  "scenes": {
+    "arrivee": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de arrivee.",
+        "Paragraphe synthétique 2 de arrivee.",
+        "Paragraphe synthétique 3 de arrivee.",
+        "Paragraphe synthétique 4 de arrivee."
+      ],
+      "choice": {
+        "prompt": "Choix de arrivee",
+        "options": [
+          {
+            "id": "port",
+            "label": "Option port",
+            "passage": "Passage synthétique de port.",
+            "set": {
+              "confiance": true
+            },
+            "next": "jeanne"
+          },
+          {
+            "id": "jardin",
+            "label": "Option jardin",
+            "passage": "Passage synthétique de jardin.",
+            "set": {
+              "cle": true
+            },
+            "next": "jardin"
+          }
+        ]
+      }
+    },
+    "jeanne": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de jeanne.",
+        "Paragraphe synthétique 2 de jeanne.",
+        "Paragraphe synthétique 3 de jeanne.",
+        "Paragraphe synthétique 4 de jeanne."
+      ],
+      "next": "seuil"
+    },
+    "jardin": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de jardin.",
+        "Paragraphe synthétique 2 de jardin.",
+        "Paragraphe synthétique 3 de jardin.",
+        "Paragraphe synthétique 4 de jardin."
+      ],
+      "next": "seuil"
+    },
+    "seuil": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de seuil.",
+        "Paragraphe synthétique 2 de seuil.",
+        "Paragraphe synthétique 3 de seuil."
+      ],
+      "choice": {
+        "prompt": "Choix de seuil",
+        "options": [
+          {
+            "id": "lettres",
+            "label": "Option lettres",
+            "passage": "Passage synthétique de lettres.",
+            "next": "lettres"
+          },
+          {
+            "id": "veille",
+            "label": "Option veille",
+            "passage": "Passage synthétique de veille.",
+            "next": "veille"
+          }
+        ]
+      }
+    },
+    "lettres": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de lettres.",
+        "Paragraphe synthétique 2 de lettres.",
+        "Paragraphe synthétique 3 de lettres."
+      ],
+      "next": "table"
+    },
+    "veille": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de veille.",
+        "Paragraphe synthétique 2 de veille.",
+        "Paragraphe synthétique 3 de veille."
+      ],
+      "next": "table"
+    },
+    "table": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de table.",
+        "Paragraphe synthétique 2 de table."
+      ],
+      "routes": [
+        {
+          "when": {
+            "cle": true
+          },
+          "next": "armoire"
+        },
+        {
+          "next": "invitation"
+        }
+      ]
+    },
+    "armoire": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de armoire.",
+        "Paragraphe synthétique 2 de armoire."
+      ],
+      "choice": {
+        "prompt": "Choix de armoire",
+        "options": [
+          {
+            "id": "ensemble",
+            "label": "Option ensemble",
+            "passage": "Passage synthétique de ensemble.",
+            "next": "fin-partage"
+          },
+          {
+            "id": "seule",
+            "label": "Option seule",
+            "passage": "Passage synthétique de seule.",
+            "next": "fin-calme"
+          }
+        ]
+      }
+    },
+    "invitation": {
+      "chapter": "ch1",
+      "paragraphs": ["Paragraphe synthétique 1 de invitation."],
+      "choice": {
+        "prompt": "Choix de invitation",
+        "options": [
+          {
+            "id": "ensemble",
+            "label": "Option ensemble",
+            "passage": "Passage synthétique de ensemble.",
+            "when": {
+              "confiance": true
+            },
+            "next": "fin-partage"
+          },
+          {
+            "id": "seule",
+            "label": "Option seule",
+            "passage": "Passage synthétique de seule.",
+            "next": "fin-calme"
+          }
+        ]
+      }
+    },
+    "fin-partage": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de fin-partage.",
+        "Paragraphe synthétique 2 de fin-partage."
+      ],
+      "ending": "Conclusion fin-partage"
+    },
+    "fin-calme": {
+      "chapter": "ch1",
+      "paragraphs": [
+        "Paragraphe synthétique 1 de fin-calme.",
+        "Paragraphe synthétique 2 de fin-calme."
+      ],
+      "ending": "Conclusion fin-calme"
+    }
+  }
+}

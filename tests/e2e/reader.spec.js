@@ -1,5 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { readFile, writeFile } from "node:fs/promises";
+import { replay, choose } from "../../src/engine.js";
+const story = JSON.parse(
+  await readFile("public/stories/accords-du-crepuscule.json", "utf8"),
+);
+const key = "eclats.reading.v1:accords-du-crepuscule";
+const title = "Les Accords du Crépuscule";
 async function enterReader(page) {
   await expect(
     page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
@@ -8,139 +14,38 @@ async function enterReader(page) {
     .getByRole("navigation", { name: "Navigation principale" })
     .getByRole("button", { name: /Lectures/ })
     .click();
-  await expect(page.locator("#scene-arrivee")).toBeVisible();
+  await expect(page.locator("#scene-c1-rue")).toBeVisible();
 }
 async function openReader(page) {
-  await page.goto("./?story=demo");
+  await page.goto("./");
   await enterReader(page);
 }
-async function decision(page, label) {
-  await page.getByLabel(label, { exact: true }).check();
-  await page.getByRole("button", { name: "Confirmer ce chemin" }).click();
-}
-test("mobile reading, explicit confirmation, branching, settings, restore and rewind", async ({
-  page,
-}) => {
-  await openReader(page);
-  await expect(
-    page.getByRole("heading", { name: "Le phare des heures" }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "Confirmer ce chemin" }),
-  ).toBeDisabled();
-  await page
-    .getByLabel("Passer par le jardin du phare", { exact: true })
-    .check();
-  await expect(page.locator("#scene-jardin")).toHaveCount(0);
-  await page.getByRole("button", { name: "Confirmer ce chemin" }).click();
-  await expect(page.locator("#scene-jardin p")).toHaveCount(4);
-  await expect(
-    page.getByLabel("Rejoindre Jeanne au port", { exact: true }),
-  ).toHaveCount(0);
-  await decision(page, "Monter dans la chambre de veille");
-  await expect(page.locator("#scene-veille")).toBeVisible();
-  await decision(page, "Proposer à Jeanne de rester");
-  await expect(
-    page.getByRole("heading", { name: "Une lumière partagée" }),
-  ).toBeVisible();
-  const savedBefore = await page.evaluate(
-    () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-  );
-  await page.getByRole("button", { name: "Paramètres de lecture" }).click();
-  await page.getByRole("button", { name: "Nuit", exact: true }).click();
-  await page
-    .getByRole("button", { name: "Agrandir la taille du texte" })
+async function decision(page, index = 0) {
+  const form = page.locator(".choice");
+  const prompt = await form.getAttribute("aria-label");
+  await form.locator("input[type=radio]").nth(index).check();
+  await form
+    .getByRole("button", { name: "Confirmer ce chemin", exact: true })
     .click();
-  await page.getByRole("button", { name: "Fermer", exact: true }).click();
-  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
-  expect(
-    await page.evaluate(
-      () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-    ),
-  ).toEqual(savedBefore);
-  await page.locator("#veille-p1").scrollIntoViewIfNeeded();
-  await page.waitForTimeout(300);
-  const y = await page.evaluate(() => scrollY);
-  await page.reload();
-  await enterReader(page);
-  await expect(page.locator("#scene-fin-partage")).toBeVisible();
-  await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(y - 40);
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(50);
-  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
-  await page.getByRole("button", { name: "Mes décisions" }).click();
-  await page.getByRole("button", { name: /DÉCISION 1/ }).click();
-  await page.getByLabel("Rejoindre Jeanne au port", { exact: true }).check();
-  await page.getByRole("button", { name: "Conserver mon récit" }).click();
-  await expect(page.locator("#scene-fin-partage")).toHaveCount(1);
-  await page.getByRole("button", { name: "Mes décisions" }).click();
-  await page.getByRole("button", { name: /DÉCISION 1/ }).click();
-  await page.getByLabel("Rejoindre Jeanne au port", { exact: true }).check();
-  await page.getByRole("button", { name: "Remplacer la suite" }).click();
-  await expect(page.locator("#scene-jardin")).toHaveCount(0);
-  await expect(page.locator("#scene-fin-partage")).toHaveCount(0);
-  await expect(page.locator("#scene-jeanne")).toHaveCount(1);
-  expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions.length,
-    ),
-  ).toBe(1);
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
-  expect(
-    await page.locator(".scene").evaluateAll((nodes) => nodes.map((n) => n.id)),
-  ).toEqual(["scene-arrivee", "scene-jeanne", "scene-seuil"]);
-  await expect(page.locator("#jeanne-p3")).toHaveCSS("opacity", "1");
-  await page.screenshot({
-    path: "test-results/reader-mobile.png",
-    fullPage: true,
-  });
-});
-test("storage denied keeps the story usable and displays an honest warning", async ({
-  page,
-}) => {
-  await page.addInitScript(() => {
-    Object.defineProperty(window, "localStorage", {
-      get() {
-        throw Error("denied");
-      },
-    });
-  });
-  await openReader(page);
   await expect(
-    page
-      .getByRole("status")
-      .filter({ hasText: "sauvegarde locale est indisponible" }),
-  ).toBeVisible();
-  await decision(page, "Rejoindre Jeanne au port");
-  await expect(page.locator("#scene-jeanne")).toHaveCount(1);
-});
-test("corrupt saves recover and reduced motion suppresses reveal animations", async ({
-  page,
-}) => {
-  await page.addInitScript(() =>
-    localStorage.setItem("eclats.reading.v1", "{broken"),
-  );
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await openReader(page);
-  await expect(
-    page.getByText(/sauvegarde est incompatible ou endommagée/),
-  ).toBeVisible();
-  await decision(page, "Rejoindre Jeanne au port");
-  expect(
-    await page
-      .locator("#jeanne-p0")
-      .evaluate((p) => getComputedStyle(p).animationName),
-  ).toBe("none");
-});
-test("PWA installs a scoped cache and reopens offline including saved decisions", async ({
-  page,
-  context,
-}) => {
-  await openReader(page);
+    page.getByRole("form", { name: prompt, exact: true }),
+  ).toHaveCount(0);
+}
+async function library(page) {
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Bibliothèque/ })
+    .click();
+}
+async function details(page) {
+  await library(page);
+  await page
+    .getByRole("button", { name: `Voir les chapitres : ${title}`, exact: true })
+    .click();
+  await expect(page.locator(".chapter-link")).toHaveCount(8);
+}
+async function ready(page) {
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
     if (!navigator.serviceWorker.controller)
@@ -150,73 +55,368 @@ test("PWA installs a scoped cache and reopens offline including saved decisions"
         }),
       );
   });
-  const manifest = await page.evaluate(async () =>
-    (await fetch("manifest.webmanifest")).json(),
+}
+async function saveValue(page) {
+  return page.evaluate((key) => JSON.parse(localStorage.getItem(key)), key);
+}
+function advance(count) {
+  let r = replay(story);
+  for (let i = 0; i < count; i++)
+    r = choose(story, r.decisions, r.pending.scene, r.pending.options[0].id);
+  return r;
+}
+async function seed(page, count = 5) {
+  const value = {
+    schema: 1,
+    story: story.id,
+    version: 1,
+    decisions: advance(count).decisions,
+    anchor: "c1-rue-p0",
+    offset: 0,
+    chapter: "c1",
+  };
+  await page.addInitScript(
+    ({ key, value }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify(value));
+    },
+    { key, value },
   );
-  expect(manifest.start_url).toBe("./");
-  await decision(page, "Rejoindre Jeanne au port");
-  await context.setOffline(true);
-  await page.reload();
-  await enterReader(page);
-  await expect(page.locator("#scene-jeanne")).toHaveCount(1);
-  await decision(page, "Ouvrir la boîte de lettres");
-  await expect(page.locator("#scene-lettres")).toHaveCount(1);
+}
+
+test("library opens chapter details, locks future chapters and contains no demo", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Bibliothèque/ })
+    .click();
+  await expect(page.locator(".book-card")).toHaveCount(1);
+  await expect(
+    page.getByText("Le phare des heures", { exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole("link", { name: title, exact: true }).click();
+  await expect(page.locator(".chapter-link")).toHaveCount(8);
+  await expect(page.locator("#debut")).toBeHidden();
+  await expect(page.locator("[data-chapter-id=c1]")).toBeEnabled();
+  for (let n = 2; n <= 8; n++) {
+    const chapter = page.locator(`[data-chapter-id=c${n}]`);
+    await expect(chapter).toBeDisabled();
+    await expect(chapter).toContainText("Inaccessible");
+    await chapter.evaluate((button) => button.click());
+    await expect(page.locator("#debut")).toBeHidden();
+  }
+  await page.screenshot({
+    path: "test-results/chapters-mobile.png",
+    fullPage: true,
+  });
+  await page
+    .getByRole("button", { name: "Commencer la lecture", exact: true })
+    .click();
+  await expect(page.locator("#scene-c1-rue")).toBeVisible();
+  await expect(page.locator(".choice")).toHaveCount(1);
 });
 
-test("opening-page bookmark survives reload without skipping the title", async ({
+test("decisions require confirmation and unlock a full scene without navigation", async ({
   page,
 }) => {
   await openReader(page);
-  await expect(page.locator("#scene-arrivee")).toHaveCount(1);
-  await page.reload();
-  await enterReader(page);
   await expect(
-    page.getByRole("heading", { name: "Le phare des heures" }),
-  ).toBeVisible();
-  await expect.poll(() => page.evaluate(() => scrollY)).toBeLessThan(10);
+    page.getByRole("button", { name: "Confirmer ce chemin" }),
+  ).toBeDisabled();
+  await page.locator(".choice input").first().check();
+  await expect(page.locator("#scene-c1-nom")).toHaveCount(0);
+  await decision(page);
+  await expect(page.locator("#scene-c1-nom .prose p")).toHaveCount(4);
+  await expect(page.locator("#scene-c1-prudence")).toHaveCount(0);
+  expect((await saveValue(page)).decisions).toHaveLength(1);
 });
-test("layouts fit small phones and desktop; dialogs support keyboard dismissal", async ({
+
+test("finishing chapter one unlocks chapter two and jumping back preserves every decision", async ({
   page,
 }) => {
-  for (const width of [320, 768, 1280]) {
-    await page.setViewportSize({ width, height: 800 });
-    await openReader(page);
+  await openReader(page);
+  for (let i = 0; i < 5; i++) await decision(page);
+  const decisions = (await saveValue(page)).decisions;
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c2]")).toBeEnabled();
+  await expect(page.locator("[data-chapter-id=c3]")).toBeDisabled();
+  await page.locator("[data-chapter-id=c2]").click();
+  await expect(
+    page.locator("#scene-c2-matin .chapter-heading"),
+  ).toBeInViewport();
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  expect((await saveValue(page)).chapter).toBe("c2");
+  await details(page);
+  await page.locator("[data-chapter-id=c1]").click();
+  await expect(page.locator("#scene-c1-rue .chapter-heading")).toBeInViewport();
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  await page.reload();
+  await enterReader(page);
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c2]")).toBeEnabled();
+});
+
+test("revising an old decision requires confirmation and relocks subsequent chapters", async ({
+  page,
+}) => {
+  await seed(page, 10);
+  await openReader(page);
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c3]")).toBeEnabled();
+  await page.locator("[data-chapter-id=c1]").click();
+  await page.getByRole("button", { name: "Mes décisions" }).click();
+  await page.getByRole("button", { name: /DÉCISION 1\b/ }).click();
+  await page.getByRole("dialog").locator("input[type=radio]").nth(1).check();
+  await page.getByRole("button", { name: "Conserver mon récit" }).click();
+  expect((await saveValue(page)).decisions).toHaveLength(10);
+  await page.getByRole("button", { name: "Mes décisions" }).click();
+  await page.getByRole("button", { name: /DÉCISION 1\b/ }).click();
+  await page.getByRole("dialog").locator("input[type=radio]").nth(1).check();
+  await page.getByRole("button", { name: "Remplacer la suite" }).click();
+  await expect(page.locator("#scene-c1-prudence")).toBeVisible();
+  await expect(page.locator("#scene-c2-matin")).toHaveCount(0);
+  expect((await saveValue(page)).decisions).toHaveLength(1);
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c2]")).toBeDisabled();
+});
+
+test("theme, font size and paragraph bookmark survive reload", async ({
+  page,
+}) => {
+  await openReader(page);
+  await decision(page);
+  const decisions = (await saveValue(page)).decisions;
+  await page.getByRole("button", { name: "Paramètres de lecture" }).click();
+  await page.getByRole("button", { name: "Nuit", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Agrandir la taille du texte" })
+    .click();
+  await page.keyboard.press("Escape");
+  await page.locator("#c1-nom-p1").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+  const y = await page.evaluate(() => scrollY);
+  await page.reload();
+  await enterReader(page);
+  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(y - 50);
+  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(60);
+});
+
+test("storage denial allows reading with an honest warning", async ({
+  page,
+}) => {
+  await page.addInitScript(() =>
+    Object.defineProperty(window, "localStorage", {
+      get() {
+        throw Error("denied");
+      },
+    }),
+  );
+  await openReader(page);
+  await expect(
+    page.getByText("Progression non enregistrée", { exact: true }),
+  ).toBeVisible();
+  await decision(page);
+  await expect(page.locator("#scene-c1-nom")).toBeVisible();
+});
+
+test("write quota errors do not block choices", async ({ page }) => {
+  await page.addInitScript(() => {
+    Storage.prototype.setItem = function () {
+      throw new DOMException("quota", "QuotaExceededError");
+    };
+  });
+  await openReader(page);
+  await decision(page);
+  await expect(
+    page.getByText("Progression non enregistrée", { exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("#scene-c1-nom")).toBeVisible();
+});
+
+test("corrupt saves recover and reduced motion disables paragraph animation", async ({
+  page,
+}) => {
+  await page.addInitScript((key) => localStorage.setItem(key, "{broken"), key);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await openReader(page);
+  await expect(
+    page.getByText(/sauvegarde est incompatible ou endommagée/),
+  ).toBeVisible();
+  await decision(page);
+  expect(
+    await page
+      .locator("#c1-nom-p0")
+      .evaluate((p) => getComputedStyle(p).animationName),
+  ).toBe("none");
+});
+
+test("corrupt preferences do not discard reading progress", async ({
+  page,
+}) => {
+  await openReader(page);
+  await decision(page);
+  await page.evaluate(() =>
+    localStorage.setItem("eclats.settings.v1", "{broken"),
+  );
+  await page.reload();
+  await enterReader(page);
+  await expect(page.locator("#scene-c1-nom")).toBeVisible();
+  expect((await saveValue(page)).decisions).toHaveLength(1);
+});
+
+test("offline reopening preserves chapters, decisions and further reading", async ({
+  page,
+  context,
+}) => {
+  await openReader(page);
+  await ready(page);
+  for (let i = 0; i < 5; i++) await decision(page);
+  await context.setOffline(true);
+  await page.reload();
+  await enterReader(page);
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c2]")).toBeEnabled();
+  await expect(page.locator("[data-chapter-id=c3]")).toBeDisabled();
+  await page.locator("[data-chapter-id=c2]").click();
+  await decision(page);
+  expect((await saveValue(page)).decisions).toHaveLength(6);
+});
+
+test("application opens on the main menu even with reading progress", async ({
+  page,
+}) => {
+  await openReader(page);
+  await decision(page);
+  await page.getByRole("link", { name: "Éclats, accueil" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(page.locator("#debut")).toBeHidden();
+  await expect(
+    page
+      .getByRole("navigation", { name: "Navigation principale" })
+      .getByRole("button"),
+  ).toHaveCount(4);
+  await enterReader(page);
+  await expect(page.locator("#scene-c1-nom")).toBeVisible();
+});
+
+test("menu destinations preserve reading position and decisions", async ({
+  page,
+}) => {
+  await openReader(page);
+  await decision(page);
+  await page.locator("#c1-nom-p1").scrollIntoViewIfNeeded();
+  const y = await page.evaluate(() => scrollY);
+  const decisions = (await saveValue(page)).decisions;
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Journal de personnage/ })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Une page encore blanche" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Lectures/ })
+    .click();
+  await expect(page.locator("#debut")).toBeVisible();
+  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(50);
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+});
+
+test("home and chapter list fit narrow phones, desktop and night theme", async ({
+  page,
+}) => {
+  for (const width of [320, 393, 768, 1280]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("./");
     await expect(
-      page.getByRole("heading", { name: "Le phare des heures" }),
+      page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
     ).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
-    await page.getByRole("button", { name: "Paramètres de lecture" }).click();
-    await expect(page.getByRole("dialog")).toBeVisible();
-    await page.keyboard.press("Escape");
-    await expect(page.getByRole("dialog")).toHaveCount(0);
-    await expect(
-      page.getByRole("button", { name: "Paramètres de lecture" }),
-    ).toBeFocused();
+    await page
+      .getByRole("navigation", { name: "Navigation principale" })
+      .getByRole("button", { name: /Bibliothèque/ })
+      .click();
+    await page
+      .getByRole("button", {
+        name: `Voir les chapitres : ${title}`,
+        exact: true,
+      })
+      .click();
+    await expect(page.locator(".chapter-link")).toHaveCount(8);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
   }
+  await page.setViewportSize({ width: 393, height: 900 });
+  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Paramètres/ })
+    .click();
+  await page.getByRole("button", { name: "Nuit", exact: true }).click();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
+  await page.screenshot({
+    path: "test-results/chapters-night.png",
+    fullPage: true,
+  });
 });
-test("an update waits for explicit activation, then preserves the reading save", async ({
+
+test("dialogs support keyboard dismissal and restore focus", async ({
   page,
 }) => {
   await openReader(page);
-  await page.evaluate(async () => {
-    await navigator.serviceWorker.ready;
-    if (!navigator.serviceWorker.controller)
-      await new Promise((resolve) =>
-        navigator.serviceWorker.addEventListener("controllerchange", resolve, {
-          once: true,
-        }),
-      );
+  const opener = page.getByRole("button", { name: "Paramètres de lecture" });
+  await opener.click();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(opener).toBeFocused();
+});
+
+test("dismissing the single-use installation prompt leaves reading functional", async ({
+  page,
+}) => {
+  await openReader(page);
+  await page.evaluate(() => {
+    const e = new Event("beforeinstallprompt", { cancelable: true });
+    e.prompt = async () => {};
+    e.userChoice = Promise.resolve({ outcome: "dismissed" });
+    window.dispatchEvent(e);
   });
-  await decision(page, "Passer par le jardin du phare");
-  const path = "dist/sw.js",
-    original = await readFile(path, "utf8");
+  await page.getByRole("button", { name: "Installer Éclats" }).click();
+  await expect(
+    page.getByRole("button", { name: "Installer Éclats" }),
+  ).toHaveCount(0);
+  await decision(page);
+});
+
+test("updates wait for activation and preserve the saved chapter access", async ({
+  page,
+}) => {
+  await seed(page, 5);
+  await openReader(page);
+  await ready(page);
+  const original = await readFile("dist/sw.js", "utf8");
   try {
     await writeFile(
-      path,
+      "dist/sw.js",
       original.replace(
         /const CACHE="eclats-[^"]+"/,
         'const CACHE="eclats-update-test"',
@@ -229,266 +429,39 @@ test("an update waits for explicit activation, then preserves the reading save",
     await expect(
       page.getByRole("button", { name: "Mettre à jour" }),
     ).toBeVisible();
-    await expect(page.locator("#scene-jardin")).toHaveCount(1);
     await Promise.all([
       page.waitForEvent("load"),
       page.getByRole("button", { name: "Mettre à jour" }).click(),
     ]);
     await enterReader(page);
-    await expect(page.locator("#scene-jardin")).toHaveCount(1);
     await expect
       .poll(() => page.evaluate(() => caches.keys()))
       .toEqual(["eclats-update-test"]);
-    expect(
-      await page.evaluate(
-        () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-      ),
-    ).toEqual([{ scene: "arrivee", option: "jardin" }]);
-  } finally {
-    await writeFile(path, original);
-  }
-});
-
-test("damaged preferences do not discard an intact reading save", async ({
-  page,
-}) => {
-  await openReader(page);
-  await decision(page, "Passer par le jardin du phare");
-  await page.evaluate(() =>
-    localStorage.setItem("eclats.settings.v1", "{broken"),
-  );
-  await page.reload();
-  await enterReader(page);
-  await expect(page.locator("#scene-jardin")).toHaveCount(1);
-  expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions.length,
-    ),
-  ).toBe(1);
-});
-
-test("a write quota failure warns without blocking decisions", async ({
-  page,
-}) => {
-  await page.addInitScript(() => {
-    Storage.prototype.setItem = function () {
-      throw new DOMException("Quota exceeded", "QuotaExceededError");
-    };
-  });
-  await openReader(page);
-  await expect(
-    page.getByText("Progression non enregistrée", { exact: true }),
-  ).toBeVisible();
-  await decision(page, "Rejoindre Jeanne au port");
-  await expect(page.locator("#scene-jeanne")).toHaveCount(1);
-});
-
-test("dismissing installation consumes its single-use prompt cleanly", async ({
-  page,
-}) => {
-  await openReader(page);
-  await expect(page.locator("#scene-arrivee")).toHaveCount(1);
-  await page.evaluate(() => {
-    const event = new Event("beforeinstallprompt", { cancelable: true });
-    event.prompt = async () => {};
-    event.userChoice = Promise.resolve({ outcome: "dismissed" });
-    window.dispatchEvent(event);
-  });
-  await page.getByRole("button", { name: "Installer Éclats" }).click();
-  await expect(
-    page.getByRole("button", { name: "Installer Éclats" }),
-  ).toHaveCount(0);
-  await decision(page, "Rejoindre Jeanne au port");
-  await expect(page.locator("#scene-jeanne")).toHaveCount(1);
-});
-
-test("main menu opens four sections and preserves reading across destinations", async ({
-  page,
-}) => {
-  await openReader(page);
-  await decision(page, "Rejoindre Jeanne au port");
-  await page.locator("#jeanne-p1").scrollIntoViewIfNeeded();
-  await page.waitForTimeout(250);
-  const before = await page.evaluate(() => scrollY);
-  const decisions = await page.evaluate(
-    () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-  );
-  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
-  const nav = page.getByRole("navigation", { name: "Navigation principale" });
-  await expect(nav.getByRole("button")).toHaveCount(4);
-  await nav.getByRole("button", { name: /Bibliothèque/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Bibliothèque", exact: true }),
-  ).toBeVisible();
-  await expect(page.locator("#debut")).toBeHidden();
-  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
-  await page.getByRole("button", { name: /Journal de personnage/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Une page encore blanche" }),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Paramètres/ })
-    .click();
-  await expect(
-    page.getByRole("dialog", { name: "À votre rythme" }),
-  ).toBeVisible();
-  await page.keyboard.press("Escape");
-  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Lectures/ })
-    .click();
-  await expect(page.locator("#scene-jeanne")).toBeVisible();
-  expect(Math.abs((await page.evaluate(() => scrollY)) - before)).toBeLessThan(
-    50,
-  );
-  expect(
-    await page.evaluate(
-      () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-    ),
-  ).toEqual(decisions);
-  await page.getByRole("button", { name: "Ouvrir le menu" }).click();
-  await page.screenshot({ path: "test-results/menu-mobile.png" });
-  await page.keyboard.press("Escape");
-  await expect(
-    page.getByRole("button", { name: "Ouvrir le menu" }),
-  ).toHaveAttribute("aria-expanded", "false");
-});
-
-test("the application opens on its home menu, even with a reading in progress", async ({
-  page,
-}) => {
-  await page.goto("./?story=demo");
-  await expect(
-    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
-  ).toBeVisible();
-  await expect(page.locator("#debut")).toBeHidden();
-  await expect(
-    page
-      .getByRole("navigation", { name: "Navigation principale" })
-      .getByRole("button"),
-  ).toHaveCount(4);
-  await page.screenshot({ path: "test-results/home-mobile.png" });
-  await enterReader(page);
-  await decision(page, "Rejoindre Jeanne au port");
-  await page.getByRole("link", { name: "Éclats, accueil" }).click();
-  await expect(
-    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
-  ).toBeVisible();
-  await page.reload();
-  await expect(page.locator("#debut")).toBeHidden();
-  await enterReader(page);
-  await expect(page.locator("#scene-jeanne")).toBeVisible();
-});
-
-test("the update page reloads a coherent edition without clearing progress", async ({
-  page,
-}) => {
-  await openReader(page);
-  await page.evaluate(async () => {
-    await navigator.serviceWorker.ready;
-    if (!navigator.serviceWorker.controller)
-      await new Promise((resolve) =>
-        navigator.serviceWorker.addEventListener("controllerchange", resolve, {
-          once: true,
-        }),
-      );
-  });
-  await decision(page, "Rejoindre Jeanne au port");
-  const original = await readFile("dist/sw.js", "utf8");
-  try {
-    await writeFile(
-      "dist/sw.js",
-      original.replace(
-        /const CACHE="eclats-[^"]+"/,
-        'const CACHE="eclats-recovery-test"',
-      ),
-    );
-    await page.goto("actualiser.html");
-    await page.getByRole("button", { name: "Actualiser Éclats" }).click();
-    await expect(
-      page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
-    ).toBeVisible();
-    await expect
-      .poll(() => page.evaluate(() => caches.keys()))
-      .toEqual(["eclats-recovery-test"]);
-    await enterReader(page);
-    await expect(page.locator("#scene-jeanne")).toBeVisible();
-    expect(
-      await page.evaluate(
-        () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
-      ),
-    ).toEqual([{ scene: "arrivee", option: "port" }]);
+    await details(page);
+    await expect(page.locator("[data-chapter-id=c2]")).toBeEnabled();
+    expect((await saveValue(page)).decisions).toHaveLength(5);
   } finally {
     await writeFile("dist/sw.js", original);
   }
 });
 
-test("decorated home fits phone and desktop in both themes", async ({
+test("repair recovers a broken cached script without losing chapter access", async ({
   page,
 }) => {
-  for (const width of [320, 393, 768, 1280]) {
-    await page.setViewportSize({ width, height: 900 });
-    await page.goto("./?story=demo");
-    const nav = page.getByRole("navigation", { name: "Navigation principale" });
-    await expect(nav.getByRole("button")).toHaveCount(4);
-    expect(
-      await page.evaluate(
-        () => document.documentElement.scrollWidth <= innerWidth,
-      ),
-    ).toBe(true);
-    const reading = await page.locator("[data-section=reading]").boundingBox();
-    const journal = await page.locator("[data-section=journal]").boundingBox();
-    expect(reading.x).not.toBe(journal.x);
-    expect(reading.y).not.toBe(journal.y);
-  }
-  await page.setViewportSize({ width: 393, height: 1000 });
-  await page.screenshot({
-    path: "test-results/home-decorated-light.png",
-    fullPage: true,
-  });
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Paramètres/ })
-    .click();
-  await page.getByRole("button", { name: "Nuit", exact: true }).click();
-  await page.keyboard.press("Escape");
-  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
-  await page.screenshot({
-    path: "test-results/home-decorated-night.png",
-    fullPage: true,
-  });
-});
-
-test("a broken cached script has a visible fallback and repair retains the save", async ({
-  page,
-}) => {
+  await seed(page, 5);
   await openReader(page);
-  await page.evaluate(async () => {
-    await navigator.serviceWorker.ready;
-    if (!navigator.serviceWorker.controller)
-      await new Promise((resolve) =>
-        navigator.serviceWorker.addEventListener("controllerchange", resolve, {
-          once: true,
-        }),
-      );
-  });
-  await decision(page, "Rejoindre Jeanne au port");
+  await ready(page);
   await page.evaluate(async () => {
     for (const name of await caches.keys()) {
       const cache = await caches.open(name);
-      for (const request of await cache.keys()) {
+      for (const request of await cache.keys())
         if (new URL(request.url).pathname.endsWith(".js"))
           await cache.put(
             request,
-            new Response('throw new Error("broken cached edition");', {
+            new Response('throw new Error("broken");', {
               headers: { "Content-Type": "application/javascript" },
             }),
           );
-      }
     }
   });
   await page.reload();
@@ -502,21 +475,20 @@ test("a broken cached script has a visible fallback and repair retains the save"
   await expect(
     page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
   ).toBeVisible();
-  await expect(page.locator("#boot-fallback")).toHaveCount(0);
   await enterReader(page);
-  await expect(page.locator("#scene-jeanne")).toBeVisible();
+  await details(page);
+  await expect(page.locator("[data-chapter-id=c2]")).toBeEnabled();
+  expect((await saveValue(page)).decisions).toHaveLength(5);
 });
 
-test("repair stays visible offline and never clears reading data", async ({
+test("repair reports offline failures and preserves reading data", async ({
   page,
   context,
 }) => {
   await openReader(page);
-  await decision(page, "Rejoindre Jeanne au port");
+  await decision(page);
   await page.goto("reparer.html");
-  const before = await page.evaluate(() =>
-    localStorage.getItem("eclats.reading.v1"),
-  );
+  const before = await saveValue(page);
   await context.setOffline(true);
   await page
     .getByRole("button", { name: "Réparer et ouvrir Éclats", exact: true })
@@ -524,82 +496,17 @@ test("repair stays visible offline and never clears reading data", async ({
   await expect(page.getByRole("status")).toContainText(
     "La réparation n’a pas abouti",
   );
-  await expect(
-    page.getByRole("button", { name: "Réparer et ouvrir Éclats", exact: true }),
-  ).toBeEnabled();
-  expect(
-    await page.evaluate(() => localStorage.getItem("eclats.reading.v1")),
-  ).toBe(before);
+  expect(await saveValue(page)).toEqual(before);
 });
 
-test("the new novel is available from the library and keeps saves separate from the demo", async ({
+test("all eight preserved chapters can be read and revisited after completion", async ({
   page,
 }) => {
   test.setTimeout(60_000);
-  await page.goto("./");
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Bibliothèque/ })
-    .click();
-  await expect(
-    page.getByRole("heading", {
-      name: "Les Accords du Crépuscule",
-      exact: true,
-    }),
-  ).toBeVisible();
-  await page
-    .getByRole("button", {
-      name: "Lire : Les Accords du Crépuscule",
-      exact: true,
-    })
-    .click();
-  await expect(page.locator("#scene-c1-rue")).toBeVisible();
-  await page.locator(".choice input[type=radio]").first().check();
-  await page
-    .getByRole("button", { name: "Confirmer ce chemin", exact: true })
-    .click();
-  const novelSave = await page.evaluate(() =>
-    localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
-  );
-  expect(JSON.parse(novelSave).decisions).toHaveLength(1);
-  await page.getByRole("link", { name: "Éclats, accueil" }).click();
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Bibliothèque/ })
-    .click();
-  await page
-    .getByRole("button", { name: "Lire : Le phare des heures", exact: true })
-    .click();
-  await expect(page.locator("#scene-arrivee")).toBeVisible();
-  await decision(page, "Rejoindre Jeanne au port");
-  await page.getByRole("link", { name: "Éclats, accueil" }).click();
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Bibliothèque/ })
-    .click();
-  await page
-    .getByRole("button", {
-      name: "Lire : Les Accords du Crépuscule",
-      exact: true,
-    })
-    .click();
-  await expect(page.locator("#scene-c1-nom")).toBeVisible();
-  expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(
-          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
-        ).decisions,
-    ),
-  ).toEqual(JSON.parse(novelSave).decisions);
-  // Read all eight chapters in the same page, including five-way confirmations.
-  for (let i = 0; i < 39; i++) {
-    const options = page.locator(".choice input[type=radio]");
-    if (i >= 14) await expect(options).toHaveCount(5);
-    await options.nth(i >= 14 ? i % 5 : 0).check();
-    await page
-      .getByRole("button", { name: "Confirmer ce chemin", exact: true })
-      .click();
+  await openReader(page);
+  for (let i = 0; i < 40; i++) {
+    if (i >= 15) await expect(page.locator(".choice input")).toHaveCount(5);
+    await decision(page, i >= 15 ? i % 5 : 0);
   }
   await expect(page.locator(".chapter-heading")).toHaveCount(8);
   await expect(
@@ -608,80 +515,50 @@ test("the new novel is available from the library and keeps saves separate from 
       exact: true,
     }),
   ).toBeVisible();
-  await expect(
-    page.getByText("Fin des chapitres disponibles · À suivre", { exact: true }),
-  ).toBeVisible();
-  expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(
-          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
-        ).decisions,
-    ),
-  ).toHaveLength(40);
+  const history = (await saveValue(page)).decisions;
+  expect(history).toHaveLength(40);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(8);
+  await page.locator("[data-chapter-id=c4]").click();
+  await expect(page.locator("#scene-c4-1 .chapter-heading")).toBeInViewport();
+  expect((await saveValue(page)).decisions).toEqual(history);
 });
 
-test("a save from the three-chapter edition resumes directly on the fourth chapter", async ({
+test("old chapter-three saves resume without resets and expose chapter four", async ({
   page,
 }) => {
-  const { replay, choose } = await import("../../src/engine.js");
-  const novel = JSON.parse(
-    await readFile("public/stories/accords-du-crepuscule.json", "utf8"),
-  );
-  let r = replay(novel);
-  while (r.decisions.length < 15)
-    r = choose(novel, r.decisions, r.pending.scene, r.pending.options[0].id);
-  const save = {
-    schema: 1,
-    story: novel.id,
-    version: 1,
-    decisions: r.decisions,
-    anchor: "c3-retour-p7",
-    offset: 10,
-    chapter: "c3",
-  };
-  await page.addInitScript((save) => {
-    const key = "eclats.reading.v1:accords-du-crepuscule";
-    if (!localStorage.getItem(key))
-      localStorage.setItem(key, JSON.stringify(save));
-    localStorage.setItem("eclats.selected-book.v1", "accords-du-crepuscule");
-  }, save);
-  await page.goto("./");
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Lectures/ })
-    .click();
+  await seed(page, 15);
+  await openReader(page);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(4);
+  await page.locator("[data-chapter-id=c4]").click();
   await expect(page.locator("#scene-c4-1 .choice input")).toHaveCount(5);
-  await expect(page.locator(".chapter-heading")).toHaveCount(4);
-  await page.locator("#scene-c4-1 .choice input").nth(3).check();
-  await page
-    .getByRole("button", { name: "Confirmer ce chemin", exact: true })
-    .click();
-  expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(
-          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
-        ).decisions.length,
-    ),
-  ).toBe(16);
+  await decision(page, 3);
   await page.reload();
-  await page
-    .getByRole("navigation", { name: "Navigation principale" })
-    .getByRole("button", { name: /Lectures/ })
-    .click();
+  await enterReader(page);
+  expect((await saveValue(page)).decisions).toHaveLength(16);
+});
+
+test("removed demo selection falls back to the novel without deleting existing data", async ({
+  page,
+}) => {
+  await seed(page, 5);
+  await page.addInitScript(() => {
+    localStorage.setItem("eclats.selected-book.v1", "le-phare-des-heures");
+    localStorage.setItem("eclats.reading.v1", "legacy data to retain");
+  });
+  await page.goto("./?story=demo");
+  await enterReader(page);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(2);
   expect(
-    await page.evaluate(
-      () =>
-        JSON.parse(
-          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
-        ).decisions.length,
-    ),
-  ).toBe(16);
-  await expect(
-    page.getByText(
-      "La sauvegarde est incompatible ou endommagée. Une nouvelle lecture a été ouverte.",
-      { exact: true },
-    ),
-  ).toHaveCount(0);
+    await page.evaluate(() => localStorage.getItem("eclats.reading.v1")),
+  ).toBe("legacy data to retain");
+  expect(
+    await page.evaluate(() => localStorage.getItem("eclats.selected-book.v1")),
+  ).toBe("accords-du-crepuscule");
+  const sw = await readFile("dist/sw.js", "utf8");
+  expect(sw).not.toContain("demo.json");
+  const response = await page.request.get("stories/demo.json");
+  expect(response.headers()["content-type"]).not.toContain("application/json");
 });

@@ -1,4 +1,5 @@
 import "./style.css";
+import { chapterProgress, chapterScene } from "./chapters.js";
 import { BOOKS, SELECTED_BOOK_KEY, findBook } from "./catalog.js";
 import { validateStory, replay, choose } from "./engine.js";
 import { readSave, writeSave, SETTINGS_KEY } from "./storage.js";
@@ -17,7 +18,8 @@ let story,
   restore,
   canSave = false,
   saveTimer,
-  settings = { theme: "system", size: 20 };
+  settings = { theme: "system", size: 20 },
+  loadFailed = false;
 const systemTheme = matchMedia("(prefers-color-scheme: dark)");
 history.scrollRestoration = "manual";
 try {
@@ -208,7 +210,12 @@ function showDestination(id) {
   actions.querySelector('[aria-label="Paramètres de lecture"]').hidden =
     book.hidden;
   if (id === "lectures") {
-    restorePosition(readingPosition);
+    if (
+      readingPosition?.anchor &&
+      document.getElementById(readingPosition.anchor)
+    )
+      restorePosition(readingPosition);
+    else window.scrollTo({ top: 0, behavior: "instant" });
     updateProgress();
     save();
     book.tabIndex = -1;
@@ -226,7 +233,9 @@ function showDestination(id) {
       ? "Bienvenue dans Éclats"
       : id === "bibliotheque"
         ? "Bibliothèque"
-        : "Journal de personnage",
+        : id === "histoire"
+          ? selectedBook.title
+          : "Journal de personnage",
   );
   destination.append(title);
   if (id === "accueil") {
@@ -395,31 +404,37 @@ function showDestination(id) {
         el("span", {}, "✧"),
       );
       const details = el("div", { class: "book-details" });
-      const isCurrent = entry.id === selectedBook.id;
       const resume = el(
         "button",
-        { class: "primary", "aria-label": `Lire : ${entry.title}` },
-        isCurrent && state?.decisions.length
-          ? "Reprendre ma lecture"
-          : "Ouvrir le livre",
+        {
+          class: "primary",
+          "aria-label": `Voir les chapitres : ${entry.title}`,
+        },
+        "Voir les chapitres",
       );
-      resume.onclick = () => {
-        if (isCurrent) {
-          showDestination("lectures");
-          return;
-        }
-        save();
-        location.assign(`${import.meta.env.BASE_URL}?story=${entry.id}&read=1`);
+      resume.onclick = () => showDestination("histoire");
+      const titleLink = el(
+        "a",
+        { href: "#chapitres", class: "book-title-link" },
+        entry.title,
+      );
+      titleLink.onclick = (event) => {
+        event.preventDefault();
+        showDestination("histoire");
       };
+      const bookTitle = el("h2");
+      bookTitle.append(titleLink);
       details.append(
         el("div", { class: "eyebrow" }, entry.label),
-        el("h2", {}, entry.title),
+        bookTitle,
         el("p", {}, entry.description),
         resume,
       );
       card.append(cover, details);
       destination.append(card);
     }
+  } else if (id === "histoire") {
+    renderChapterList();
   } else {
     const empty = el("section", { class: "journal-placeholder" });
     empty.append(
@@ -436,6 +451,156 @@ function showDestination(id) {
   window.scrollTo({ top: 0, behavior: "instant" });
   title.focus({ preventScroll: true });
 }
+function renderChapterList() {
+  const back = el("button", { class: "text-button" }, "← Bibliothèque");
+  back.onclick = () => showDestination("bibliotheque");
+  destination.append(back);
+  if (!story || !state) {
+    destination.append(
+      el(
+        "p",
+        { role: "status" },
+        loadFailed
+          ? "Le livre n’a pas pu être chargé. Vérifiez votre connexion."
+          : "Chargement des chapitres…",
+      ),
+    );
+    if (loadFailed) {
+      const retry = el("button", { class: "primary" }, "Réessayer");
+      retry.onclick = () => location.reload();
+      destination.append(retry);
+    }
+    return;
+  }
+  const chapters = chapterProgress(story, state);
+  const candidate =
+    readingPosition?.chapter || restore?.chapter || chapters[0].id;
+  const current = chapters.some((c) => c.id === candidate && c.unlocked)
+    ? candidate
+    : chapters.filter((c) => c.unlocked).at(-1)?.id;
+  const introduction = el("div", { class: "story-summary" });
+  introduction.append(
+    el(
+      "span",
+      { class: "eyebrow" },
+      `${chapters.length} chapitres · ${chapters.filter((c) => c.unlocked).length} accessible${chapters.filter((c) => c.unlocked).length > 1 ? "s" : ""}`,
+    ),
+    el("p", {}, selectedBook.description),
+  );
+  const resume = el(
+    "button",
+    { class: "primary" },
+    restore || readingPosition || state.decisions.length
+      ? "Reprendre ma lecture"
+      : "Commencer la lecture",
+  );
+  resume.onclick = () => showDestination("lectures");
+  introduction.append(resume);
+  destination.append(
+    introduction,
+    el("h2", { class: "contents-title", id: "chapitres" }, "Les chapitres"),
+    el(
+      "p",
+      { class: "contents-note" },
+      "Les chapitres se débloquent au fil du récit. Vous pouvez revenir à un chapitre accessible sans modifier vos décisions.",
+    ),
+  );
+  const list = el("ol", {
+    class: "chapter-list",
+    "aria-labelledby": "chapitres",
+  });
+  for (const chapter of chapters) {
+    const row = el("li");
+    const status = chapter.unlocked
+      ? chapter.id === current
+        ? "En cours"
+        : "Accessible"
+      : "Inaccessible";
+    const button = el("button", {
+      class: "chapter-link",
+      "data-chapter-id": chapter.id,
+      ...(chapter.unlocked
+        ? {
+            "aria-label": `Lire le chapitre ${chapter.number} : ${chapter.title}`,
+          }
+        : {
+            disabled: "",
+            "aria-label": `Chapitre ${chapter.number} : ${chapter.title} — Inaccessible`,
+          }),
+    });
+    const copy = el("span", { class: "chapter-copy" });
+    copy.append(
+      el("span", { class: "chapter-name" }, chapter.title),
+      el("span", { class: "chapter-status" }, status),
+    );
+    const indicator = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg",
+    );
+    for (const [name, value] of Object.entries({
+      viewBox: "0 0 24 24",
+      width: "22",
+      height: "22",
+      class: "chapter-indicator",
+      "aria-hidden": "true",
+      focusable: "false",
+      fill: "none",
+      stroke: "currentColor",
+      "stroke-width": "1.5",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+    }))
+      indicator.setAttribute(name, value);
+    const iconPath = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "path",
+    );
+    iconPath.setAttribute(
+      "d",
+      chapter.unlocked
+        ? "M7 17 17 7M7 7h10v10"
+        : "M7 10V7a5 5 0 0 1 10 0v3M5 10h14v11H5z",
+    );
+    indicator.append(iconPath);
+    button.append(
+      el(
+        "span",
+        { class: "chapter-number", "aria-hidden": "true" },
+        String(chapter.number).padStart(2, "0"),
+      ),
+      copy,
+      indicator,
+    );
+    button.onclick = () => openChapter(chapter.id);
+    row.append(button);
+    list.append(row);
+  }
+  destination.append(list);
+}
+function openChapter(id) {
+  if (!story || !state) return;
+  const sceneId = chapterScene(story, state, id);
+  if (!sceneId) return;
+  showDestination("lectures");
+  const heading = document
+    .getElementById(`scene-${sceneId}`)
+    ?.querySelector(".chapter-heading");
+  if (!heading) return;
+  window.scrollTo({
+    top: scrollY + heading.getBoundingClientRect().top - top.offsetHeight - 20,
+    behavior: "instant",
+  });
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+  readingPosition = position();
+  save();
+  updateProgress();
+}
+function refreshChapterList() {
+  if (activeView !== "histoire") return;
+  activeView = null;
+  showDestination("histoire");
+}
 function storageError() {
   notice.textContent =
     "La sauvegarde locale est indisponible. Vous pouvez continuer à lire, mais votre progression risque de ne pas être conservée après fermeture.";
@@ -446,8 +611,11 @@ function position() {
   if (book.hidden && readingPosition) return readingPosition;
   const paragraphs = [...book.querySelectorAll("[data-anchor]")];
   const current =
-    paragraphs.find((p) => p.getBoundingClientRect().bottom > 8) ||
-    paragraphs.at(-1);
+    paragraphs.find(
+      (p) =>
+        p.getBoundingClientRect().bottom >
+        top.getBoundingClientRect().bottom + 8,
+    ) || paragraphs.at(-1);
   return {
     anchor: current?.id || null,
     offset: current ? -current.getBoundingClientRect().top : 0,
@@ -863,6 +1031,7 @@ async function start() {
     }
     state = replay(story, restore?.decisions || []);
     readingPosition = restore;
+    refreshChapterList();
     if (restore && state.decisions.length !== restore.decisions.length)
       notice.textContent =
         "Les décisions incompatibles ont été retirées. Votre dernière progression valide a été conservée.";
@@ -885,6 +1054,8 @@ async function start() {
     });
     if (import.meta.env.PROD && "serviceWorker" in navigator) setupOffline();
   } catch (error) {
+    loadFailed = true;
+    refreshChapterList();
     book.replaceChildren(
       el("h1", {}, "Le livre n’a pas pu être ouvert"),
       el(

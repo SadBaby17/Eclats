@@ -10,8 +10,8 @@ const novel = JSON.parse(
     new URL("../public/stories/accords-du-crepuscule.json", import.meta.url),
   ),
 );
-const demo = JSON.parse(
-  readFileSync(new URL("../public/stories/demo.json", import.meta.url)),
+const fixtureStory = JSON.parse(
+  readFileSync(new URL("./fixtures/branching-story.json", import.meta.url)),
 );
 test("all reachable narrative states have valid continuations and chapter lengths", () => {
   validateStory(novel);
@@ -123,7 +123,7 @@ test("rewinding the new novel discards every later consequence", () => {
   assert.ok(!revised.blocks.some((b) => b.scene.chapter === "c3"));
 });
 
-test("demo and novel saves remain independent, with the legacy demo key preserved", () => {
+test("other stored data remains intact when saving the novel", () => {
   const map = new Map();
   const storage = {
     getItem: (k) => map.get(k) ?? null,
@@ -138,16 +138,16 @@ test("demo and novel saves remain independent, with the legacy demo key preserve
   ).decisions;
   writeSave(
     storage,
-    demo,
+    fixtureStory,
     [{ scene: "arrivee", option: "port" }],
     "jeanne-p2",
     30,
     "ch1",
   );
   writeSave(storage, novel, decisions, "c1-rue-p1", 15, "c1");
-  assert.equal(saveKey(demo), SAVE_KEY);
+  assert.equal(saveKey(novel), `${SAVE_KEY}:${novel.id}`);
   assert.notEqual(saveKey(novel), SAVE_KEY);
-  assert.equal(readSave(storage, demo).anchor, "jeanne-p2");
+  assert.equal(readSave(storage, fixtureStory).anchor, "jeanne-p2");
   assert.deepEqual(readSave(storage, novel).decisions, decisions);
 });
 

@@ -2,9 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { validateStory, replay, choose } from "../src/engine.js";
-import { readSave, writeSave, SAVE_KEY } from "../src/storage.js";
+import { readSave, writeSave, saveKey } from "../src/storage.js";
 const story = JSON.parse(
-  readFileSync(new URL("../public/stories/demo.json", import.meta.url)),
+  readFileSync(new URL("./fixtures/branching-story.json", import.meta.url)),
 );
 test("all reachable paths terminate, both branch pairs rejoin, and both endings are reachable", () => {
   validateStory(story);
@@ -103,7 +103,7 @@ test("save round trip retains decisions, chapter, anchor, and offset", () => {
 });
 test("corrupt and incompatible saves are detected; unavailable storage errors propagate", () => {
   const storage = memory();
-  storage.setItem(SAVE_KEY, "{");
+  storage.setItem(saveKey(story), "{");
   assert.throws(() => readSave(storage, story));
   writeSave(storage, { ...story, version: 99 }, [], null, 0, "ch1");
   assert.throws(() => readSave(storage, story));

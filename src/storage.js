@@ -1,9 +1,7 @@
 export const SAVE_KEY = "eclats.reading.v1",
   SETTINGS_KEY = "eclats.settings.v1";
 export function saveKey(story) {
-  return story.id === "le-phare-des-heures"
-    ? SAVE_KEY
-    : `${SAVE_KEY}:${story.id}`;
+  return `${SAVE_KEY}:${story.id}`;
 }
 export function readSave(storage, story) {
   const raw = storage.getItem(saveKey(story));

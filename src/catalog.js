@@ -8,19 +8,8 @@ export const BOOKS = [
     description:
       "À Noctarion, Evan, jeune musicien hybride, cherche une place pour lui et ses deux compagnons. Un roman dans l’univers d’Elyrion.",
   },
-  {
-    id: "le-phare-des-heures",
-    file: "demo.json",
-    title: "Le phare des heures",
-    cover: "Le phare\ndes heures",
-    label: "Nouvelle · Démonstration",
-    description:
-      "Un retour au village, un phare et les chemins que l’on choisit de retrouver.",
-  },
 ];
 export const SELECTED_BOOK_KEY = "eclats.selected-book.v1";
 export function findBook(id) {
-  return BOOKS.find(
-    (book) => book.id === id || (id === "demo" && book.file === "demo.json"),
-  );
+  return BOOKS.find((book) => book.id === id);
 }
