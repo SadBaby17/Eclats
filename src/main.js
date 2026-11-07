@@ -884,6 +884,7 @@ function render(animate = false) {
           // Keep the reserved space and readable alternative if an asset fails.
           picture.addEventListener("error", () => figure.classList.add("image-unavailable"));
           figure.append(picture);
+          if (illustration.caption) figure.append(el("figcaption", {}, illustration.caption));
           prose.append(figure);
         }
       });

@@ -705,6 +705,40 @@ test("chapter six illustrations follow the unlocked prose and remain available o
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
+for (const { chapter, initially, choices, count } of [
+  { chapter: 7, initially: 0, choices: 3, count: 2 },
+  { chapter: 8, initially: 1, choices: 1, count: 2 },
+  { chapter: 9, initially: 1, choices: 0, count: 1 },
+]) {
+  test(`chapter ${chapter} illustrations respect progression, fit mobile and survive offline reload`, async ({ page, context }) => {
+    await seed(page, (chapter - 1) * 5);
+    await openReader(page);
+    await details(page);
+    await page.locator(`[data-chapter-id=c${chapter}]`).click();
+    await expect(page.locator(".story-illustration")).toHaveCount(initially);
+    for (let i = 0; i < choices; i++) await decision(page);
+    await expect(page.locator(".story-illustration")).toHaveCount(count);
+    const before = (await saveValue(page)).decisions;
+    for (const img of await page.locator(".story-illustration img").all()) {
+      await img.scrollIntoViewIfNeeded();
+      await expect.poll(() => img.evaluate((node) => node.complete && node.naturalWidth === 1536)).toBe(true);
+      expect(await img.evaluate((node) => node.getBoundingClientRect().right <= innerWidth)).toBe(true);
+    }
+    if (chapter === 9) await expect(page.locator(".story-illustration figcaption")).toContainText("lors de sa découverte");
+    await ready(page);
+    await context.setOffline(true);
+    await page.reload();
+    await enterReader(page);
+    await expect(page.locator(".story-illustration")).toHaveCount(count);
+    for (const img of await page.locator(".story-illustration img").all()) {
+      await img.scrollIntoViewIfNeeded();
+      await expect.poll(() => img.evaluate((node) => node.complete && node.naturalWidth === 1536)).toBe(true);
+    }
+    expect((await saveValue(page)).decisions).toEqual(before);
+    expect((await saveValue(page)).chapter).toBe(`c${chapter}`);
+  });
+}
+
 test("expanded chapters keep old paragraph anchors and restore bookmarks inside the added prose", async ({ page }) => {
   await seed(page, 65);
   await openReader(page);

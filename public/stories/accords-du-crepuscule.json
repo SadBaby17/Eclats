@@ -18676,6 +18676,52 @@
         "width": 1536,
         "height": 1024
       }
+    ],
+    "c7-3": [
+      {
+        "after": 1,
+        "src": "illustrations/chapter-07/cour-refuge.webp",
+        "alt": "La cour modeste du refuge : un banc, une porte éclairée et deux jeunes pousses entre les pierres.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c7-4": [
+      {
+        "after": 3,
+        "src": "illustrations/chapter-07/atelier-reliure.webp",
+        "alt": "Sur la table de reliure d’Adèle, un poids de pierre maintient les pages d’un livre en réparation.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c8-1": [
+      {
+        "after": 3,
+        "src": "illustrations/chapter-08/jardins.webp",
+        "alt": "Les bassins et jardins en terrasses de Zerathiel sous des piliers de verre opalin et un soleil clair.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c8-2": [
+      {
+        "after": 4,
+        "src": "illustrations/chapter-08/disques-ceramique.webp",
+        "alt": "Des disques de céramique de tailles différentes sont reliés à une corde : leur tintement sert à communiquer.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c9-1": [
+      {
+        "after": 9,
+        "src": "illustrations/chapter-06/lamelles.webp",
+        "alt": "Le dispositif à lamelles de Keryth, dont les relevés servent à comparer les observations des trois mondes.",
+        "width": 1536,
+        "height": 1024,
+        "caption": "Le dispositif de Keryth, lors de sa découverte."
+      }
     ]
   }
 }

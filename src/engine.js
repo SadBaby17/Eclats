@@ -80,6 +80,7 @@ export function validateStory(story) {
         || picture.src.includes("..") || typeof picture.alt !== "string" || !picture.alt.trim()
         || !Number.isInteger(picture.width) || picture.width <= 0
         || !Number.isInteger(picture.height) || picture.height <= 0
+        || (picture.caption !== undefined && (typeof picture.caption !== "string" || !picture.caption.trim()))
       )) throw Error(`Illustration invalide : ${id}`);
     }
   }

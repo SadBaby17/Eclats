@@ -165,7 +165,12 @@ a {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 6px;
-  aspect-ratio: 3 / 2;
+}
+.story-illustration figcaption {
+  padding: .7em 1em;
+  font: italic 14px/1.5 Georgia, serif;
+  color: var(--muted);
+  background: var(--paper);
 }
 .story-illustration img {
   display: block;
