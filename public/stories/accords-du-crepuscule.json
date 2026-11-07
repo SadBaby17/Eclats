@@ -14711,19 +14711,6 @@
         "Les Veilleurs doivent libérer les personnes et organiser leur trajet. Ouvrir une grille ne suffit pas si les routes, les soins et les voitures manquent."
       ]
     },
-    "c19-3": {
-      "title": "Le trajet sous Verreval",
-      "paragraphs": [
-        "La voie de fret passe sous la colline. Une galerie d’entretien permet d’en sortir vers les bâtiments du barrage.",
-        "L’équipe cherche les voyageurs dans les salles proches des vannes. La gare sert de point de soins et de retour, avec une autre équipe."
-      ],
-      "steps": [
-        "Gare : soins et renforts",
-        "Galerie : trajet de l’équipe",
-        "Réfectoire vide : dernière halte connue",
-        "Couloir des vannes : direction à vérifier"
-      ]
-    },
     "c20-5": {
       "title": "Trois étages à Verreval",
       "paragraphs": [
@@ -14769,6 +14756,19 @@
       "paragraphs": [
         "Le premier programme de la Maison des chemins dépend de l’engagement choisi au chapitre 30 : accueil, apprentissage ou routes.",
         "Les décisions du premier cycle restent valables. Le Soleil Noir et les dangers d’Elyrion n’ont pas disparu ; ce cycle porte sur les voyageurs, leurs droits et les chemins proches de Noctarion."
+      ]
+    },
+    "c19-5": {
+      "title": "Le trajet sous Verreval",
+      "paragraphs": [
+        "La voie de fret passe sous la colline. Une galerie d’entretien permet d’en sortir vers les bâtiments du barrage.",
+        "L’équipe cherche les voyageurs dans les salles proches des vannes. La gare sert de point de soins et de retour, avec une autre équipe."
+      ],
+      "steps": [
+        "Gare : soins et renforts",
+        "Galerie : trajet de l’équipe",
+        "Réfectoire vide : dernière halte connue",
+        "Couloir des vannes : direction à vérifier"
       ]
     }
   },
