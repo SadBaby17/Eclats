@@ -535,6 +535,7 @@ test("repair stays visible offline and never clears reading data", async ({
 test("the new novel is available from the library and keeps saves separate from the demo", async ({
   page,
 }) => {
+  test.setTimeout(60_000);
   await page.goto("./");
   await page
     .getByRole("navigation", { name: "Navigation principale" })
@@ -591,17 +592,19 @@ test("the new novel is available from the library and keeps saves separate from 
         ).decisions,
     ),
   ).toEqual(JSON.parse(novelSave).decisions);
-  // Read all three chapters in the same page, including real choice confirmations.
-  for (let i = 0; i < 14; i++) {
-    await page.locator(".choice input[type=radio]").first().check();
+  // Read all eight chapters in the same page, including five-way confirmations.
+  for (let i = 0; i < 39; i++) {
+    const options = page.locator(".choice input[type=radio]");
+    if (i >= 14) await expect(options).toHaveCount(5);
+    await options.nth(i >= 14 ? i % 5 : 0).check();
     await page
       .getByRole("button", { name: "Confirmer ce chemin", exact: true })
       .click();
   }
-  await expect(page.locator(".chapter-heading")).toHaveCount(3);
+  await expect(page.locator(".chapter-heading")).toHaveCount(8);
   await expect(
     page.getByRole("heading", {
-      name: "Fin du troisième chapitre",
+      name: "Fin du huitième chapitre",
       exact: true,
     }),
   ).toBeVisible();
@@ -615,5 +618,70 @@ test("the new novel is available from the library and keeps saves separate from 
           localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
         ).decisions,
     ),
-  ).toHaveLength(15);
+  ).toHaveLength(40);
+});
+
+test("a save from the three-chapter edition resumes directly on the fourth chapter", async ({
+  page,
+}) => {
+  const { replay, choose } = await import("../../src/engine.js");
+  const novel = JSON.parse(
+    await readFile("public/stories/accords-du-crepuscule.json", "utf8"),
+  );
+  let r = replay(novel);
+  while (r.decisions.length < 15)
+    r = choose(novel, r.decisions, r.pending.scene, r.pending.options[0].id);
+  const save = {
+    schema: 1,
+    story: novel.id,
+    version: 1,
+    decisions: r.decisions,
+    anchor: "c3-retour-p7",
+    offset: 10,
+    chapter: "c3",
+  };
+  await page.addInitScript((save) => {
+    const key = "eclats.reading.v1:accords-du-crepuscule";
+    if (!localStorage.getItem(key))
+      localStorage.setItem(key, JSON.stringify(save));
+    localStorage.setItem("eclats.selected-book.v1", "accords-du-crepuscule");
+  }, save);
+  await page.goto("./");
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Lectures/ })
+    .click();
+  await expect(page.locator("#scene-c4-1 .choice input")).toHaveCount(5);
+  await expect(page.locator(".chapter-heading")).toHaveCount(4);
+  await page.locator("#scene-c4-1 .choice input").nth(3).check();
+  await page
+    .getByRole("button", { name: "Confirmer ce chemin", exact: true })
+    .click();
+  expect(
+    await page.evaluate(
+      () =>
+        JSON.parse(
+          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
+        ).decisions.length,
+    ),
+  ).toBe(16);
+  await page.reload();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Lectures/ })
+    .click();
+  expect(
+    await page.evaluate(
+      () =>
+        JSON.parse(
+          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
+        ).decisions.length,
+    ),
+  ).toBe(16);
+  await expect(
+    page.getByText(
+      "La sauvegarde est incompatible ou endommagée. Une nouvelle lecture a été ouverte.",
+      { exact: true },
+    ),
+  ).toHaveCount(0);
 });

@@ -4,7 +4,7 @@ export const BOOKS = [
     file: "accords-du-crepuscule.json",
     title: "Les Accords du Crépuscule",
     cover: "Les Accords\ndu Crépuscule",
-    label: "Roman · Chapitres 1 à 3",
+    label: "Roman · Chapitres 1 à 8",
     description:
       "À Noctarion, Evan, jeune musicien hybride, cherche une place pour lui et ses deux compagnons. Un roman dans l’univers d’Elyrion.",
   },
