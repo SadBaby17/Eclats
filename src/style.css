@@ -992,3 +992,7 @@ dialog p {
     min-height: 335px;
   }
 }
+
+.book-card + .book-card {
+  margin-top: 24px;
+}

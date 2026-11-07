@@ -27,13 +27,13 @@ Les tests navigateur lancent leur propre serveur sur le port 4173. Les captures 
 
 ## Utilisation
 
-L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, même lorsqu’une lecture est en cours. Toucher le logo **Éclats** ramène à cet accueil. Le bouton **☰**, disponible dans les autres écrans, ouvre le menu principal : **Bibliothèque** présente le livre de démonstration, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réserve un espace pour une prochaine étape, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
+L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, même lorsqu’une lecture est en cours. Toucher le logo **Éclats** ramène à cet accueil. Le bouton **☰**, disponible dans les autres écrans, ouvre le menu principal : **Bibliothèque** présente les récits disponibles, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réserve un espace pour une prochaine étape, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
 
 - Faire défiler le roman. Cocher un chemin ne le valide pas : appuyer ensuite sur **Confirmer ce chemin**.
 - La réponse devient un paragraphe du livre. Les nouvelles scènes sont ajoutées en dessous ; le texte déjà présent est conservé.
 - **Aa** règle la taille de 16 à 28 px et le thème jour, nuit ou système. Le texte reste aligné à gauche pour préserver les espaces sur les écrans étroits.
 - **↶** liste les décisions. Le lien après chaque passage choisi permet aussi d’y revenir. Sélectionner un autre chemin puis confirmer le remplacement. Annuler ou fermer la fenêtre conserve tout le récit. Confirmer supprime toutes les décisions suivantes, même lorsqu’un embranchement rejoint plus loin la même scène.
-- La sauvegarde locale contient les décisions, le chapitre et un repère de paragraphe avec un décalage de lecture. Elle est enregistrée après chaque décision, lors du défilement et à la fermeture. Les préférences sont enregistrées séparément.
+- La sauvegarde locale contient les décisions, le chapitre et un repère de paragraphe avec un décalage de lecture. Elle est enregistrée après chaque décision, lors du défilement et à la fermeture. Les préférences sont enregistrées séparément. Chaque livre conserve sa propre progression ; la sauvegarde historique de la démonstration reste compatible.
 - Une sauvegarde endommagée ou d’une autre version du récit est signalée puis remplacée par une lecture neuve. Une erreur de stockage est signalée sans bloquer la lecture.
 
 ## Architecture
@@ -42,8 +42,10 @@ Pas de framework d’interface ni de backend. Vite sert et construit les modules
 
 - `src/engine.js` : validation structurelle, conditions et relecture déterministe des décisions. Indépendant du DOM et du stockage.
 - `src/main.js` : interface accessible, confirmations, fenêtres natives, position de lecture, installation et mises à jour.
-- `src/storage.js` : contrat des sauvegardes versionnées.
+- `src/storage.js` : contrat des sauvegardes versionnées, isolées par livre.
+- `src/catalog.js` : catalogue local, livre sélectionné et métadonnées de bibliothèque.
 - `src/style.css` : mise en page mobile, thèmes et respect de `prefers-reduced-motion`.
+- `public/stories/accords-du-crepuscule.json` : les trois premiers chapitres du roman, cinq interactions par chapitre et environ 15 à 20 minutes de lecture chacun (hors réflexion, sur la base de 220 mots/minute). La suite n’est pas encore publiée. Le test narratif parcourt les 32 768 combinaisons de décisions, sans révéler leur contenu.
 - `public/stories/demo.json` : chapitre de démonstration entièrement écrit à l’avance. Deux bifurcations rejoignent des scènes communes ; les variables conditionnent une scène ultérieure et ses options ; deux conclusions, huit parcours complets.
 - `scripts/build-sw.js` : génère le cache hors connexion à partir de **tous** les fichiers réellement construits et de leur empreinte.
 
@@ -51,7 +53,7 @@ Le DOM des scènes déjà lues est conservé quand une suite est ajoutée. Les p
 
 ## Format des récits JSON (v1)
 
-Pour préparer un autre récit, utiliser le même format que `public/stories/demo.json` puis appeler `validateStory` avant `replay`. Le chargement de la démo est centralisé dans `start()` ; il peut être remplacé ultérieurement par un import ou un catalogue. Il n’y a pas encore de bibliothèque ni de bouton d’import dans cette V1.
+Pour préparer un autre récit, utiliser le même format que `public/stories/demo.json` puis appeler `validateStory` avant `replay`. Le chargement est centralisé dans `start()` à partir du catalogue `src/catalog.js`. Ajouter un récit JSON puis son entrée au catalogue le rend disponible dans la bibliothèque. Le paramètre `?story=<id>` sélectionne un livre ; le livre sélectionné est mémorisé localement. Il n’y a pas encore de bouton d’import de fichiers externes.
 
 ```json
 {
@@ -130,4 +132,4 @@ Aucune publication n’est effectuée par les commandes locales. Pour un héberg
 
 ## Limites de cette V1
 
-Une seule nouvelle de démonstration, pas de compte ni synchronisation. Effacer les données du navigateur supprime la progression ; le mode privé peut ne pas la conserver. Pas de fusion de modifications simultanées dans plusieurs onglets (la dernière sauvegarde gagne). Le repère de lecture résiste aux réglages usuels, mais un changement important d’écran peut modifier légèrement la position visuelle. Pas de retour automatique à une ancienne progression après confirmation d’un remplacement. Aucune bibliothèque, création de personnage, mécanique JDR ni génération de texte.
+Un roman disponible jusqu’au chapitre 3 et une nouvelle de démonstration, pas de compte ni synchronisation. Effacer les données du navigateur supprime la progression ; le mode privé peut ne pas la conserver. Pas de fusion de modifications simultanées dans plusieurs onglets (la dernière sauvegarde gagne). Le repère de lecture résiste aux réglages usuels, mais un changement important d’écran peut modifier légèrement la position visuelle. Pas de retour automatique à une ancienne progression après confirmation d’un remplacement. Pas de création de personnage, mécanique JDR ni génération de texte. Le tableau de bord d’auteur et les plans des chapitres futurs restent en dehors des fichiers publics et du dépôt.

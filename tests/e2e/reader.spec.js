@@ -11,7 +11,7 @@ async function enterReader(page) {
   await expect(page.locator("#scene-arrivee")).toBeVisible();
 }
 async function openReader(page) {
-  await page.goto("./");
+  await page.goto("./?story=demo");
   await enterReader(page);
 }
 async function decision(page, label) {
@@ -361,7 +361,7 @@ test("main menu opens four sections and preserves reading across destinations", 
 test("the application opens on its home menu, even with a reading in progress", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./?story=demo");
   await expect(
     page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
   ).toBeVisible();
@@ -432,7 +432,7 @@ test("decorated home fits phone and desktop in both themes", async ({
 }) => {
   for (const width of [320, 393, 768, 1280]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto("./");
+    await page.goto("./?story=demo");
     const nav = page.getByRole("navigation", { name: "Navigation principale" });
     await expect(nav.getByRole("button")).toHaveCount(4);
     expect(
@@ -530,4 +530,90 @@ test("repair stays visible offline and never clears reading data", async ({
   expect(
     await page.evaluate(() => localStorage.getItem("eclats.reading.v1")),
   ).toBe(before);
+});
+
+test("the new novel is available from the library and keeps saves separate from the demo", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Bibliothèque/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Les Accords du Crépuscule",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", {
+      name: "Lire : Les Accords du Crépuscule",
+      exact: true,
+    })
+    .click();
+  await expect(page.locator("#scene-c1-rue")).toBeVisible();
+  await page.locator(".choice input[type=radio]").first().check();
+  await page
+    .getByRole("button", { name: "Confirmer ce chemin", exact: true })
+    .click();
+  const novelSave = await page.evaluate(() =>
+    localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
+  );
+  expect(JSON.parse(novelSave).decisions).toHaveLength(1);
+  await page.getByRole("link", { name: "Éclats, accueil" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Bibliothèque/ })
+    .click();
+  await page
+    .getByRole("button", { name: "Lire : Le phare des heures", exact: true })
+    .click();
+  await expect(page.locator("#scene-arrivee")).toBeVisible();
+  await decision(page, "Rejoindre Jeanne au port");
+  await page.getByRole("link", { name: "Éclats, accueil" }).click();
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Bibliothèque/ })
+    .click();
+  await page
+    .getByRole("button", {
+      name: "Lire : Les Accords du Crépuscule",
+      exact: true,
+    })
+    .click();
+  await expect(page.locator("#scene-c1-nom")).toBeVisible();
+  expect(
+    await page.evaluate(
+      () =>
+        JSON.parse(
+          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
+        ).decisions,
+    ),
+  ).toEqual(JSON.parse(novelSave).decisions);
+  // Read all three chapters in the same page, including real choice confirmations.
+  for (let i = 0; i < 14; i++) {
+    await page.locator(".choice input[type=radio]").first().check();
+    await page
+      .getByRole("button", { name: "Confirmer ce chemin", exact: true })
+      .click();
+  }
+  await expect(page.locator(".chapter-heading")).toHaveCount(3);
+  await expect(
+    page.getByRole("heading", {
+      name: "Fin du troisième chapitre",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Fin des chapitres disponibles · À suivre", { exact: true }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(
+      () =>
+        JSON.parse(
+          localStorage.getItem("eclats.reading.v1:accords-du-crepuscule"),
+        ).decisions,
+    ),
+  ).toHaveLength(15);
 });

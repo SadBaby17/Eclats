@@ -1,7 +1,12 @@
 export const SAVE_KEY = "eclats.reading.v1",
   SETTINGS_KEY = "eclats.settings.v1";
+export function saveKey(story) {
+  return story.id === "le-phare-des-heures"
+    ? SAVE_KEY
+    : `${SAVE_KEY}:${story.id}`;
+}
 export function readSave(storage, story) {
-  const raw = storage.getItem(SAVE_KEY);
+  const raw = storage.getItem(saveKey(story));
   if (!raw) return null;
   const s = JSON.parse(raw);
   if (
@@ -20,7 +25,7 @@ export function readSave(storage, story) {
 }
 export function writeSave(storage, story, decisions, anchor, offset, chapter) {
   storage.setItem(
-    SAVE_KEY,
+    saveKey(story),
     JSON.stringify({
       schema: 1,
       story: story.id,

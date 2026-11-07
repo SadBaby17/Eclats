@@ -1,4 +1,5 @@
 import "./style.css";
+import { BOOKS, SELECTED_BOOK_KEY, findBook } from "./catalog.js";
 import { validateStory, replay, choose } from "./engine.js";
 import { readSave, writeSave, SETTINGS_KEY } from "./storage.js";
 
@@ -40,6 +41,15 @@ try {
     };
 } catch {
   storage = null;
+}
+const query = new URLSearchParams(location.search);
+let selectedBook = findBook(query.get("story"));
+try {
+  selectedBook ||= findBook(storage?.getItem(SELECTED_BOOK_KEY));
+  selectedBook ||= BOOKS[0];
+  storage?.setItem(SELECTED_BOOK_KEY, selectedBook.id);
+} catch {
+  selectedBook ||= BOOKS[0];
 }
 function applySettings() {
   document.body.dataset.theme =
@@ -376,32 +386,40 @@ function showDestination(id) {
         "Des histoires à habiter, à votre rythme.",
       ),
     );
-    const card = el("article", { class: "book-card" });
-    const cover = el("div", { class: "book-cover", "aria-hidden": "true" });
-    cover.append(
-      el("span", {}, "É C L A T S"),
-      el("strong", {}, "Le phare\ndes heures"),
-      el("span", {}, "✧"),
-    );
-    const details = el("div", { class: "book-details" });
-    const resume = el(
-      "button",
-      { class: "primary" },
-      state?.decisions.length ? "Reprendre ma lecture" : "Ouvrir le livre",
-    );
-    resume.onclick = () => showDestination("lectures");
-    details.append(
-      el("div", { class: "eyebrow" }, "Nouvelle · Démonstration"),
-      el("h2", {}, story?.title || "Le phare des heures"),
-      el(
-        "p",
-        {},
-        "Un retour au village, un phare et les chemins que l’on choisit de retrouver.",
-      ),
-      resume,
-    );
-    card.append(cover, details);
-    destination.append(card);
+    for (const entry of BOOKS) {
+      const card = el("article", { class: "book-card" });
+      const cover = el("div", { class: "book-cover", "aria-hidden": "true" });
+      cover.append(
+        el("span", {}, "É C L A T S"),
+        el("strong", {}, entry.cover),
+        el("span", {}, "✧"),
+      );
+      const details = el("div", { class: "book-details" });
+      const isCurrent = entry.id === selectedBook.id;
+      const resume = el(
+        "button",
+        { class: "primary", "aria-label": `Lire : ${entry.title}` },
+        isCurrent && state?.decisions.length
+          ? "Reprendre ma lecture"
+          : "Ouvrir le livre",
+      );
+      resume.onclick = () => {
+        if (isCurrent) {
+          showDestination("lectures");
+          return;
+        }
+        save();
+        location.assign(`${import.meta.env.BASE_URL}?story=${entry.id}&read=1`);
+      };
+      details.append(
+        el("div", { class: "eyebrow" }, entry.label),
+        el("h2", {}, entry.title),
+        el("p", {}, entry.description),
+        resume,
+      );
+      card.append(cover, details);
+      destination.append(card);
+    }
   } else {
     const empty = el("section", { class: "journal-placeholder" });
     empty.append(
@@ -579,7 +597,13 @@ function render(animate = false) {
   if (state.ending) {
     const ending = el("section", { class: "ending" });
     ending.append(
-      el("div", { class: "eyebrow" }, "Fin du chapitre de démonstration"),
+      el(
+        "div",
+        { class: "eyebrow" },
+        story.publication?.status === "ongoing"
+          ? "Fin des chapitres disponibles · À suivre"
+          : "Fin du récit",
+      ),
       el("h2", {}, state.ending),
       el(
         "p",
@@ -827,7 +851,7 @@ function persistSettings() {
 async function start() {
   try {
     const response = await fetch(
-      `${import.meta.env.BASE_URL}stories/demo.json`,
+      `${import.meta.env.BASE_URL}stories/${selectedBook.file}`,
     );
     if (!response.ok) throw Error("Le livre est indisponible.");
     story = validateStory(await response.json());
@@ -844,7 +868,7 @@ async function start() {
         "Les décisions incompatibles ont été retirées. Votre dernière progression valide a été conservée.";
     const heading = el("header", { class: "book-heading" });
     heading.append(
-      el("div", { class: "eyebrow" }, "Les récits d’Éclats · Nouvelle 01"),
+      el("div", { class: "eyebrow" }, selectedBook.label),
       el("h1", {}, story.title),
       el("p", { class: "subtitle" }, story.subtitle),
       el("div", { class: "ornament", "aria-hidden": "true" }, "✧"),
@@ -853,6 +877,7 @@ async function start() {
     render();
     await document.fonts.ready;
     requestAnimationFrame(() => {
+      if (query.get("read") === "1") showDestination("lectures");
       restorePosition(restore);
       canSave = true;
       updateProgress();

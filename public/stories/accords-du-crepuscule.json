@@ -1,0 +1,1030 @@
+{
+  "format": 1,
+  "id": "accords-du-crepuscule",
+  "version": 1,
+  "title": "Les Accords du Crépuscule",
+  "subtitle": "Un roman d’Elyrion",
+  "author": "Éclats · Univers original fourni par le créateur",
+  "publication": {
+    "status": "ongoing",
+    "availableChapters": 3
+  },
+  "variables": {
+    "partage_pain": false,
+    "methode_initiale": "",
+    "appui": "",
+    "confidence_nuit": false,
+    "secours": "",
+    "manoeuvre": "",
+    "signalement": false,
+    "trace": "",
+    "rapport": "",
+    "conversation": "",
+    "controle": "",
+    "temoignage": "",
+    "premier_contact": "",
+    "parole_initiale": "",
+    "soir_repos": ""
+  },
+  "chapters": [
+    {
+      "id": "c1",
+      "number": 1,
+      "title": "La part du pain",
+      "start": "c1-rue"
+    },
+    {
+      "id": "c2",
+      "number": 2,
+      "title": "Ce qui répond dans les murs",
+      "start": "c2-matin"
+    },
+    {
+      "id": "c3",
+      "number": 3,
+      "title": "La quatrième mesure",
+      "start": "c3-depart"
+    }
+  ],
+  "scenes": {
+    "c1-rue": {
+      "chapter": "c1",
+      "paragraphs": [
+        "La première chose qu’Evan sentit en se réveillant fut une patte sur son nez. La deuxième fut la faim. Il aurait volontiers inversé l’ordre, mais Tam-Tam n’avait jamais montré beaucoup d’intérêt pour les questions d’organisation.",
+        "L’ourson était assis sur sa poitrine, rond et blanc dans la pénombre de l’auvent. De la neige fondait dans les creux de sa fourrure. Il avait dû rêver. Evan repoussa doucement son museau et tira sur la couverture pour vérifier que son violon n’avait pas pris l’humidité. La boîte s’ouvrit avec un claquement familier. Quatre cordes. Une cheville qui tenait mal. Le bois sombre, rayé près du chevalet. Tout était encore là.",
+        "Au-dessus d’eux, Diva dormait enroulée autour d’une poutre. Les membranes mauves de ses ailes avaient la transparence des pétales quand une faible lueur les traversait. Une de ses griffes restait accrochée à la sangle du sac d’Evan. Même endormie, elle trouvait le moyen de surveiller leurs affaires.",
+        "« On n’a rien volé cette nuit », lui adressa-t-il par la pensée.",
+        "Une impression de pluie froide et de portes mal fermées lui revint. Diva ne répondit pas avec des mots. Elle n’en avait pas besoin pour indiquer ce qu’elle pensait du mot rien. Evan lui envoya l’image du sac intact ; en retour, il reçut celle de son propre pied qui dépassait de la couverture. Il le rentra.",
+        "L’auvent appartenait à une ancienne boutique de serrures. Il y avait encore, sur le mur, les silhouettes claires des clés qu’on avait décrochées avant de partir. Evan en connaissait chaque contour. C’était leur quatrième matin à cet endroit, ce qui commençait à ressembler dangereusement à une adresse.",
+        "Il enfila ses gants. La griffe de l’index droit sortit avant les autres ; il dut appuyer deux fois pour la rentrer. Puis il fixa le masque à tête de loup et attendit que les deux petits conduits de ses joues rendent un souffle égal. Sous le cuir noir, des filaments violets reprirent une faible lumière. Le cristal d’alimentation serait bientôt vide. Il coupa aussitôt la diffusion sonore. Pour gagner de quoi manger, le violon suffirait."
+      ],
+      "choice": {
+        "prompt": "Avant de gagner la place, Evan passa devant le gardien des ateliers, qui distribuait les petites courses du matin.",
+        "options": [
+          {
+            "id": "nom",
+            "label": "Retirer le masque et demander du travail en donnant son nom",
+            "passage": "Evan remonta son masque. « Je m’appelle Evan. Vous avez besoin de quelqu’un pour porter un message ? » Il avait préparé la phrase assez longtemps pour la dire trop vite.",
+            "next": "c1-nom",
+            "set": {
+              "premier_contact": "nom"
+            }
+          },
+          {
+            "id": "prudence",
+            "label": "Garder le masque et demander quelles courses sont proposées",
+            "passage": "Il resta à un pas du comptoir. « Est-ce qu’il y a une course… pas trop loin ? » Derrière le masque, sa voix lui sembla plus petite encore.",
+            "next": "c1-prudence",
+            "set": {
+              "premier_contact": "prudence"
+            }
+          }
+        ]
+      }
+    },
+    "c1-pain-donne": {
+      "chapter": "c1",
+      "paragraphs": [
+        "La diacre leva les yeux. Elle portait une robe claire dont les poignets avaient été recousus avec un fil brun. À son cou, un soleil d’étain frottait contre un bouton. Evan s’était attendu à de l’or. Il ne savait pas pourquoi.",
+        "« Tu es avec quelqu’un ? » demanda-t-elle.",
+        "Il montra Tam-Tam, puis Diva. La diacre regarda l’ourson, le dragon et enfin le garçon. Elle eut cette brève hésitation des adultes qui ne savent pas encore quelle question poser en premier. « Je m’appelle Maëlle. Attends deux minutes, je vais te trouver un bol. »",
+        "Evan recula aussitôt. Il n’avait pas offert le pain pour ça. Ou peut-être que si, un peu, sans vouloir se l’avouer. La honte lui chauffa les oreilles, sous les articulations du masque. « Je dois jouer. Sur la place. »",
+        "La petite fille avait repris sa cuillère. « Moi, c’est Lise », dit-elle avec une application qui lui fit baisser la tête. Il lui donna son prénom, très bas. Quand il s’éloigna, Diva effleura son épaule avec son museau. La faim n’avait pas diminué. Elle paraissait seulement moins solitaire."
+      ],
+      "next": "c1-place"
+    },
+    "c1-pain-garde": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Il alla s’asseoir derrière une borne, à l’abri des roues. Tam-Tam reçut sa part et s’installa sur une chaussure pour la manger. Diva prit la sienne du bout des dents, avec une délicatesse exagérée. Elle aurait pu casser le pavé sous eux ; elle veillait à ne pas arracher le morceau de toile.",
+        "Le pain était sec au milieu et presque mou contre la croûte. Evan mâcha lentement. De l’autre côté de la rue, la diacre ramassait la cuillère. Elle ne regarda ni le pain ni le garçon. Il lui en fut reconnaissant, ce qui lui donna aussitôt envie de disparaître. La diacre appela la petite fille Lise en lui tendant un nouveau linge.",
+        "Il garda un petit morceau pour plus tard. Tam-Tam le suivit des yeux jusqu’à la poche fermée, puis leva vers lui un museau plein de miettes. « Non. Plus tard, c’est aussi un moment qui existe », lui envoya Evan.",
+        "Une chaleur ronde lui répondit, accompagnée d’une image très précise de pain supplémentaire. Evan faillit rire. Il se retint lorsque la porte du dispensaire s’ouvrit sur un brancard. Il pouvait nourrir ses compagnons aujourd’hui. Cela ne rendait pas le reste de la rue moins difficile à regarder."
+      ],
+      "next": "c1-place"
+    },
+    "c1-place": {
+      "chapter": "c1",
+      "paragraphs": [
+        "La place des Trois Marches possédait deux avantages : un toit de verre dépoli qui retenait la pluie, et une citerne dont le rebord permettait de poser l’étui du violon. Son principal défaut était le fontainier, qui estimait que la musique n’améliorait pas la pression dans les conduites. Evan attendit qu’il eût le dos tourné pour s’installer.",
+        "Il défit les attaches de son masque et le remonta sur son front. Jouer couvert rapportait moins. Il détestait savoir cela. Ses oreilles de loup, blanches comme ses cheveux, se rabattirent malgré lui lorsqu’une marchande s’arrêta pour regarder Diva.",
+        "La première note sortit mince. Il reprit son souffle, rajusta le poignet, recommença. Il choisit une mélodie sans nom, celle dont il se souvenait les jours où il parvenait à penser à son village sans revoir tout le reste. Il y avait une montée de trois notes, puis un espace où sa mère aurait pu fredonner. Il laissa cet espace intact.",
+        "Ses épaules se délièrent. Le froid cessa d’être une chose contre laquelle il devait se défendre. Il sentit les pas ralentir près de lui, une conversation qui descendait d’un ton, le petit étonnement d’un homme qui venait de se souvenir qu’il n’était pas encore en retard. La magie cherchait déjà à suivre la musique.",
+        "Evan la retint. Gagner une pièce parce qu’on aimait son morceau était une chose. Rendre les passants assez heureux pour qu’ils ouvrissent leur bourse en était une autre. Il ne savait pas toujours où se trouvait la limite. Ce matin-là, il concentra la chaleur autour de Tam-Tam et de ses propres doigts. L’ourson bâilla et posa sa tête sur l’étui.",
+        "Une première pièce tomba. Puis une deuxième. Le fontainier tourna la tête, leva un doigt en direction de la citerne et finit par le baisser. Evan décida de prendre cela pour un encouragement.",
+        "Au troisième morceau, l’eau frappa le cuivre sous ses pieds.",
+        "Trois coups. Une pause. Le quatrième n’arriva pas.",
+        "Evan s’interrompit. La note qu’il venait de quitter subsistait pourtant dans le rebord de la citerne, beaucoup trop longtemps. Diva releva brusquement la tête. Dans sa pensée, Evan sentit une racine qui se rétractait loin sous les dalles. Pas de peur précise. Un recul.",
+        "Un cri éclata au pied du réservoir. Une apprentie tentait de fermer une vanne. Le volant lui tournait entre les mains. L’eau monta dans le tube de contrôle, dépassa le trait rouge et disparut derrière une buée laiteuse. Le fontainier se précipita vers elle. « Personne ne touche à la conduite d’alimentation ! »",
+        "Il était déjà trop tard pour qu’on l’écoutât tous. Un homme attrapa un enfant par le col. Une charrette bascula contre un étal. La peur traversa la place comme une bourrasque et heurta Evan en plein ventre. Sans son violon, elle l’aurait emporté avec les autres.",
+        "Il pensa un instant à son village. Au bruit des bêtes qu’il n’avait pas entendues arriver. Ses doigts se crispèrent sur l’archet.",
+        "Une femme en manteau gris grimpa sur le bord de la citerne. Elle portait l’insigne des Veilleurs et une entaille blanche au menton. « Vers la rue couverte ! Sans courir ! Toi, au violon, éloigne-toi du réservoir. » Sa voix était calme. Le reste de la place ne l’était pas.",
+        "Evan recula d’un pas. Il pouvait partir. On le lui demandait, même. Mais près de la vanne, l’apprentie tremblait si fort qu’elle n’arrivait plus à saisir la poignée. Il sentait sa peur mêlée à celle des autres, et dessous, quelque chose qui revenait par vagues régulières, comme un poing frappant de très loin."
+      ],
+      "choice": {
+        "prompt": "Il releva l’archet, sans quitter la femme des yeux.",
+        "options": [
+          {
+            "id": "ecoute",
+            "label": "Soutenir le calme des personnes qui acceptent son aide",
+            "passage": "« Je peux vous aider à respirer », dit Evan. La Veilleuse chercha son regard, puis acquiesça. Il commença par une note basse, assez douce pour laisser chacun s’en éloigner.",
+            "next": "c1-calme",
+            "set": {
+              "methode_initiale": "ecoute"
+            }
+          },
+          {
+            "id": "rythme",
+            "label": "Donner un rythme commun à l’évacuation",
+            "passage": "Evan frappa deux fois la paume de son gant contre le bord de l’étui. Un battement net courut sous les cris. Il recommença, laissant un temps pour chaque pas.",
+            "next": "c1-pas",
+            "set": {
+              "methode_initiale": "rythme"
+            }
+          }
+        ]
+      }
+    },
+    "c1-calme": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Il ne chercha pas à rendre les gens heureux. La peur avait une raison d’être ; la supprimer leur ferait croire qu’ils pouvaient rester près de la citerne. Il essaya seulement d’en desserrer le nœud, comme on dégage une corde prise sous une porte.",
+        "La femme au manteau gris inspira plus profondément. Elle répéta sa consigne et, cette fois, plusieurs têtes se tournèrent vers elle. Evan sentit ceux qui suivaient la note et ceux qui s’en détournaient. Il laissa partir ces derniers. Il n’aurait pas eu la force de les retenir, et cela ne lui appartenait pas.",
+        "Près de la vanne, l’apprentie retrouva assez de précision pour passer une tige dans le volant. Le fontainier s’y accrocha avec elle. Evan les vit peser ensemble, les dents serrées. Il voulut leur donner un peu de vigueur. La note monta trop haut ; ses jambes plièrent aussitôt. Il abandonna ce second effort et revint au premier.",
+        "Diva se plaça derrière lui. Ses ailes formèrent un abri contre les éclaboussures brûlantes. Tam-Tam s’était glissé entre les pieds d’un vieillard tombé sur les genoux ; il lui offrait une fourrure solide à laquelle s’agripper. Aucun des deux n’avait attendu qu’Evan trouvât les mots justes.",
+        "La Veilleuse revint chercher les derniers retardataires. Quand elle passa près de lui, elle ne dit pas bravo. « Encore trois respirations, puis tu viens avec moi. » Evan s’accrocha à ce nombre. Il pouvait tenir trois respirations. Peut-être quatre. Il n’essaya pas de savoir jusqu’où allait peut-être."
+      ],
+      "next": "c1-incident"
+    },
+    "c1-pas": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Le battement ne ressemblait pas à une chanson. Il donnait simplement un endroit où poser les pieds. La femme en gris le comprit avant qu’Evan eût besoin de l’expliquer. Elle cala ses ordres entre deux frappes, puis désigna les rangées d’étals, une après l’autre.",
+        "Evan décrocha une de ses balises. La petite plaque de résonance reposait dans une monture de laiton cabossée. Il en tourna la bague jusqu’à sentir son gant lui répondre par une vibration. Pas assez d’énergie pour les trois. Une seule ferait l’affaire. Il la fit glisser jusqu’à une marche dégagée, afin que le rythme vînt aussi de la sortie.",
+        "Deux hommes relevèrent la charrette en même temps. Evan les accompagna d’une poussée de force brève, presque aussitôt retirée. Il eut l’impression qu’on lui avait vidé les bras. Il continua à frapper de la paume gauche tandis que la droite tremblait contre son genou.",
+        "Diva déroula une racine entre l’étal et la marche pour immobiliser une roue. Elle ne fit pas pousser une forêt. Le sol était trop dur, l’eau trop chaude ; Evan sentit l’effort dans le lien qui les unissait. Il lui envoya un remerciement précis, celui d’un espace dégagé où ils pourraient enfin reculer.",
+        "Quand le dernier enfant passa sous la verrière, Evan récupéra sa balise. Le fontainier et l’apprentie avaient cessé de lutter contre la vanne et s’écartaient à leur tour. La Veilleuse posa une main ferme entre les omoplates du garçon. « Maintenant, c’est ton tour de suivre le rythme. » Il obéit avant de perdre le compte."
+      ],
+      "next": "c1-incident"
+    },
+    "c1-incident": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Ils atteignirent la rue couverte au moment où une soupape céda. Le jet frappa le verre. Un morceau du toit tomba dans l’eau avec un bruit de vaisselle. Les battements, eux, s’étaient arrêtés.",
+        "Le silence fit plus peur à Evan que l’explosion. Il attendait encore le coup manquant lorsqu’il sentit ses dents s’entrechoquer. La femme en gris lui prit le violon avec précaution, le posa dans son étui et l’assit sur une borne. « Je m’appelle Iseult Vale. Veilleuse confirmée. Tu peux me regarder ? »",
+        "Il essaya. Elle attendit, sans lui toucher le visage. Son insigne était rayé sur une branche. Il concentra son attention sur cette petite irrégularité plutôt que sur les gens qui recommençaient à parler autour d’eux.",
+        "« Evan », réussit-il à dire. Puis, comme on lui demandait depuis toujours davantage qu’un prénom : « Kamikony. »",
+        "Iseult le répéta pour le fontainier qui venait de les rejoindre. Celui-ci s’appelait Borren et sa barbe avait pris une forme étrange là où la vapeur l’avait couchée. Son apprentie serrait sa main contre son ventre. Elle avait une brûlure nette au poignet.",
+        "Evan tendit les doigts. Une lumière pâle apparut, vacilla, puis se réduisit à un point. Il n’avait plus de musique et presque plus de force. « Je peux… » Iseult secoua doucement la tête. « Elle sera soignée. Toi aussi, tu dois t’arrêter. » Ce n’était pas une réprimande. Il eut pourtant envie de s’excuser.",
+        "Un homme arriva du réservoir avec une plaque de cuivre dans un linge. Une marque noire traversait la pièce, semblable à une portée dont on aurait effacé une ligne. Borren écarta le tissu du bout du doigt. « Ça vient du clapet. Cette chose n’était pas là hier. »",
+        "L’apprentie leva la tête. Elle avait des oreilles fines et un petit anneau d’argent près de la tempe. Evan remarqua qu’elle fixait la marque avant même que le linge fût complètement ouvert. « Vous l’avez entendue aussi ? » lui demanda-t-elle.",
+        "Borren la regarda. « Entendu quoi ? »",
+        "Elle ramena aussitôt sa main blessée sous sa manche. La question resta entre eux. Iseult replia le linge, fit noter le nom des personnes présentes et demanda qu’on ne démontât rien d’autre avant l’arrivée d’un inspecteur. Puis elle confia l’étui à Evan, comme si elle lui rendait quelque chose d’infiniment plus lourd qu’un instrument."
+      ],
+      "choice": {
+        "prompt": "Avant de quitter la rue, Iseult lui demanda ce qu’il voulait qu’elle sache en premier.",
+        "options": [
+          {
+            "id": "fatigue",
+            "label": "Avouer qu’il a eu peur de perdre le contrôle",
+            "passage": "« Quand ils ont eu peur, j’ai eu peur aussi. Je ne savais plus toujours ce qui venait de moi. » Evan baissa les yeux, certain d’avoir retiré à son aide la seule chose qui la rendait acceptable.",
+            "next": "c1-aveu",
+            "set": {
+              "parole_initiale": "fatigue"
+            }
+          },
+          {
+            "id": "question",
+            "label": "Lui demander comment on apprend à protéger sans aggraver les choses",
+            "passage": "« Comment vous savez quand il faut arrêter d’aider ? » demanda Evan. Il n’était pas certain qu’une question aussi étrange pût recevoir une réponse sérieuse.",
+            "next": "c1-question",
+            "set": {
+              "parole_initiale": "question"
+            }
+          }
+        ]
+      }
+    },
+    "c1-refuge-partage": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Maëlle les attendait sur le seuil du dispensaire. « C’est donc ça, jouer sur la place », dit-elle en voyant l’état de ses bottes. Elle ne souriait pas tout à fait. Lise, derrière elle, avait terminé sa moitié de pain et dormait sur une chaise trop grande.",
+        "La diacre apporta un bol de bouillon. Cette fois, Evan n’eut pas l’énergie de refuser. Il ôta ses gants et tint la chaleur entre ses deux mains. Ses griffes naturelles accrochaient le bord ébréché. Maëlle détourna les yeux le temps qu’il bût, une attention minuscule dont il eut presque honte d’avoir besoin.",
+        "« La petite ne lâche plus ton prénom », lui dit-elle ensuite. « Ce sera pratique si je dois t’appeler pour la vaisselle. » Evan baissa la tête pour cacher un sourire. La possibilité d’avoir quelque chose à faire ici lui paraissait soudain moins effrayante que celle de n’avoir aucune raison d’y rester."
+      ],
+      "next": "c1-nuit"
+    },
+    "c1-refuge-reserve": {
+      "chapter": "c1",
+      "paragraphs": [
+        "La diacre se présenta : Maëlle. Elle les reçut sans demander ce qu’Evan avait fait de son pain. Elle posa un bol de bouillon devant lui, un autre par terre pour Tam-Tam, puis regarda Diva. « Pour elle, il faudra que tu me dises. Je n’ai pas encore de consigne pour les dragons. »",
+        "Evan sortit le morceau conservé dans sa poche et le partagea entre les deux bords du bol. Il n’avait pas l’impression d’avoir gagné quoi que ce fût en le gardant. Il était pourtant heureux de pouvoir mâcher avant que ses mains cessassent de trembler.",
+        "« Je peux payer un peu », proposa-t-il. Maëlle désigna les bassines au fond de la pièce. « Tu pourras m’aider demain si tu en as envie. Ce soir, tu finis ton repas. » Elle parlait comme si les deux choses n’avaient pas besoin d’être liées. Evan n’était pas sûr de comprendre, mais la chaleur lui permit de remettre cette difficulté à plus tard."
+      ],
+      "next": "c1-nuit"
+    },
+    "c1-nuit": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Le refuge des Trois Marches occupait les étages au-dessus du dispensaire. Maëlle y trouva une ancienne lingerie, trop étroite pour les lits des salles communes, mais qui donnait sur une petite cour. Diva put s’y installer sous un escalier. Evan vérifia trois fois que la fenêtre fermait sans couper le lien entre eux.",
+        "Iseult revint avant le repas du soir. Elle ne portait plus son manteau, seulement une veste dont une manche était encore humide. Elle posa trois pièces sur le coin de la couverture. « Pour l’aide à l’évacuation. Pas une prime de chasse. »",
+        "Evan ne toucha pas l’argent. « Je ne suis pas inscrit chez les Veilleurs. »",
+        "« J’avais remarqué. » Elle tira une chaise et s’assit à hauteur de ses yeux. « Tu n’es pas obligé de recommencer ce que tu as fait aujourd’hui. Et tu ne retournes pas près de la citerne seul. Si tu veux raconter ce que tu as entendu, Borren et moi serons en bas demain. Seulement raconter. »",
+        "Il hocha la tête. Puis, parce qu’elle attendait sans le presser, il demanda si elle avait trouvé une créature dans le réservoir. Iseult répondit non. Elle avait l’air d’apprécier aussi peu cette absence que lui. À la porte, elle s’arrêta. « Treize ans, c’est bien ça ? » Il acquiesça de nouveau. « Alors on commencera par te trouver une paire de gants à ta taille. »",
+        "Maëlle passa ensuite demander si la couverture suffisait. Elle avait sous le bras une pile de torchons et l’air de compter les choses qui lui restaient à faire. Evan aurait pu la laisser repartir. Il n’avait pas sommeil, seulement la fatigue étrange qui empêche de trouver une place à ses mains."
+      ],
+      "choice": {
+        "prompt": "Il regarda les torchons, puis l’étui posé au pied du lit.",
+        "options": [
+          {
+            "id": "vaisselle",
+            "label": "Proposer un coup de main tranquille à la cuisine",
+            "passage": "« Je peux essuyer, si vous avez besoin. » Evan se leva avant d’avoir terminé sa phrase, puis attendit que Maëlle lui confirmât qu’elle n’allait pas l’envoyer porter une bassine.",
+            "next": "c1-vaisselle",
+            "set": {
+              "soir_repos": "vaisselle"
+            }
+          },
+          {
+            "id": "musique",
+            "label": "Proposer de jouer un morceau, sans employer sa magie",
+            "passage": "« Je peux jouer un peu. Juste de la musique. » Il hésita sur le mot juste, comme s’il diminuait la seule chose qu’il avait toujours su faire.",
+            "next": "c1-musique",
+            "set": {
+              "soir_repos": "musique"
+            }
+          }
+        ]
+      }
+    },
+    "c2-matin": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Evan ne dormit plus après la réponse du mur. Il passa le reste de la nuit à distinguer les bruits du refuge : les semelles de Maëlle dans l’escalier, une bassine déplacée, la toux d’un homme derrière une cloison. Plusieurs fois, il crut reconnaître les trois coups. Chaque fois, Tam-Tam remua dans son sommeil et le bruit redevint celui d’une maison.",
+        "À l’heure où les cuisines s’éclairèrent, il descendit avec son violon sous le bras. Il avait préparé une phrase pour demander la permission de rester jusqu’au soir. Maëlle lui mit une serviette propre entre les mains avant qu’il eût trouvé le courage de la prononcer. « Tu peux essuyer les bols, si tes doigts vont mieux. »",
+        "Il en essuya douze, puis six autres. L’eau tiède lui fit du bien aux articulations. Un garçon de son âge apportait la vaisselle sans lui poser de questions ; ils finirent par s’accorder sur un rythme, deux bols posés, deux bols repris. Evan se surprit à attendre le suivant. Il avait oublié qu’on pouvait faire la même chose que quelqu’un sans devoir d’abord lui raconter sa vie.",
+        "Les habitants arrivaient par petits groupes. Une vieille elfe avait enveloppé ses mains dans de longues bandes à cause d’une mauvaise exposition lunaire. Deux carriers portaient encore la poussière sur leurs cils. Aucun ne demanda à Evan de prouver qu’il méritait sa place à la table. Cela ne l’empêcha pas de surveiller son sac du coin de l’œil.",
+        "Diva observait la cuisine depuis la cour. Des enfants avaient tenté de lui apporter une chaise ; elle les avait laissés réfléchir à ce problème jusqu’à ce que Maëlle intervînt. Tam-Tam, lui, avait obtenu une place sous le banc et, apparemment, une nouvelle conception de la propriété des miettes.",
+        "Iseult arriva avec Borren et une sacoche plate. Ils ne déployèrent pas tout de suite leurs papiers. La Veilleuse commença par demander comment Evan avait dormi. Il hésita. Il pouvait parler des coups dans la cloison. Il pouvait aussi montrer ses mains sans tremblement et éviter qu’on décidât de l’envoyer se coucher au moment où quelque chose, enfin, semblait l’attendre."
+      ],
+      "choice": {
+        "prompt": "Iseult tira une chaise sans ouvrir sa sacoche.",
+        "options": [
+          {
+            "id": "dire",
+            "label": "Lui raconter ce qu’il a entendu pendant la nuit",
+            "passage": "Evan posa la serviette à plat. « Il y a eu le même bruit. Ici. Dans le mur. » Sa voix était plus basse qu’il ne l’aurait voulu, mais il ne retira pas ses mots.",
+            "next": "c2-sommeil-franc",
+            "set": {
+              "signalement": true
+            }
+          },
+          {
+            "id": "attendre",
+            "label": "Commencer par demander si le refuge est en sécurité",
+            "passage": "« Les gens peuvent rester ici ? » demanda Evan. Il regarda les bols alignés pour ne pas donner l’impression de supplier.",
+            "next": "c2-sommeil-prudent",
+            "set": {
+              "signalement": false
+            }
+          }
+        ]
+      }
+    },
+    "c2-sommeil-franc": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Iseult ne le contredit pas. Elle demanda à quelle heure, de quel côté du lit, si le bruit avait précédé un mouvement de Diva. Evan répondit dans l’ordre, heureux de se voir poser des questions auxquelles il pouvait réellement répondre.",
+        "Borren demanda la permission de monter dans la lingerie. Il revint après quelques minutes avec de la poussière dans la barbe. « Une ancienne conduite de retour passe là. Elle est vide depuis des années. Vide d’eau, je veux dire. » Il avait l’air de regretter la précision aussitôt ajoutée.",
+        "Maëlle ferma la porte de la cuisine avant que les autres entendissent le reste. Elle exigea qu’on vérifiât la conduite avant le coucher. Evan comprit que dire la vérité pouvait créer du travail à quelqu’un sans que ce fût, pour autant, une faute."
+      ],
+      "next": "c2-table"
+    },
+    "c2-sommeil-prudent": {
+      "chapter": "c2",
+      "paragraphs": [
+        "« À cette heure, rien ne nous indique le contraire », répondit Iseult. Elle ne promit pas davantage. Evan lui en voulut une seconde, puis se rendit compte qu’il aurait eu peur d’une réponse trop facile.",
+        "Borren déroula un plan de la place. Evan reconnut la citerne, le dispensaire et la rue couverte. Une ligne fine traversait le refuge avant de rejoindre le dessin d’une conduite enterrée. Il la suivit du doigt. « Ça passe aussi dans les chambres ? »",
+        "Iseult attendit. Il finit par raconter le bruit de la nuit. Elle ne lui demanda pas pourquoi il n’avait pas commencé par là. Borren partit examiner le mur, et Maëlle obtint qu’on vérifiât la conduite avant le soir. Le soulagement d’Evan ne chassa pas tout à fait la gêne d’avoir dû être deviné."
+      ],
+      "next": "c2-table"
+    },
+    "c2-table": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Dans la sacoche, Iseult avait apporté la pièce de cuivre récupérée sur la citerne. La marque noire n’avait pas grandi. Borren la posa près d’un bol vide et d’un simple tuyau de verre. Il expliqua qu’une installation astrale ne se contentait pas de recevoir de la force. Elle devait aussi laisser repartir ce qu’elle ne pouvait pas employer.",
+        "Evan regarda le bol. « Comme quand on joue trop près d’un mur ? »",
+        "Le nain fronça les sourcils. « Pas exactement. Mais garde l’idée du mur. » Il lui montra un petit disque de céramique encastré dans le clapet. Celui-ci s’était fendu sur une seule ligne. La marque noire ne venait pas d’une brûlure : le cuivre s’était épaissi d’un côté et aminci de l’autre, comme si on l’avait pressé avec des doigts invisibles.",
+        "Une porte claqua. L’apprentie de la veille apparut dans la cuisine avec un pansement au poignet. Son nom était Neris. Elle plaça sur la table un étui contenant deux tiges de mesure et s’excusa d’être en retard. Borren commença à lui reprocher d’être venue ; elle répondit qu’il aurait passé une heure à chercher la bonne tige sans elle. Le fontainier ouvrit la bouche, la referma, puis lui avança une chaise.",
+        "Iseult posa les conditions de l’inspection. Ils chercheraient le chemin d’un phénomène, pas un ennemi. Les conduites seraient coupées avant qu’Evan approchât. Il n’aurait ni à relancer le bruit ni à employer sa magie sur quelqu’un. Elle avait besoin de savoir s’il reconnaissait ce qu’il avait entendu, rien de plus.",
+        "« Et s’il ne le reconnaît pas ? » demanda Maëlle.",
+        "« Alors nous aurons perdu une matinée. Ça arrive aux adultes aussi. »",
+        "Evan sentit ses oreilles se redresser malgré lui. Il avait surtout entendu la possibilité de se tromper sans devoir rembourser un repas. Pourtant, quand Neris lui sourit de l’autre côté de la table, il regarda immédiatement le manche de son violon.",
+        "Avant de partir, ils disposaient d’une heure : les ouvriers devaient vider le bassin et poser les obturateurs. Maëlle pouvait leur montrer les anciennes archives de réparation du refuge ; Borren proposait de passer à l’atelier pour comparer la pièce abîmée à une pièce saine. Evan ne pouvait pas être aux deux endroits. Pour une fois, personne ne lui demandait de courir assez vite pour faire semblant."
+      ],
+      "choice": {
+        "prompt": "Il essuya ses paumes sur son pantalon avant de répondre.",
+        "options": [
+          {
+            "id": "refuge",
+            "label": "Rester avec Maëlle et consulter les archives du refuge",
+            "passage": "« Je peux vous aider à chercher les papiers », dit Evan à Maëlle. Il n’ajouta pas qu’il avait envie de comprendre la maison où il venait de dormir.",
+            "next": "c2-archives",
+            "set": {
+              "appui": "refuge"
+            }
+          },
+          {
+            "id": "atelier",
+            "label": "Suivre Borren pour comprendre la pièce endommagée",
+            "passage": "Evan désigna le clapet. « Je voudrais voir à quoi il ressemble quand tout va bien. » Borren acquiesça comme si c’était la meilleure question qu’on lui eût posée depuis longtemps.",
+            "next": "c2-atelier",
+            "set": {
+              "appui": "atelier"
+            }
+          }
+        ]
+      }
+    },
+    "c2-archives": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Les archives tenaient dans une armoire dont Maëlle devait soulever la porte pour l’ouvrir. Il y avait des listes de draps, des factures de farine et des noms d’habitants écrits sous plusieurs orthographes. Un refuge ne conservait pas seulement la trace de ce qu’il possédait. Il gardait surtout celle de ce qui avait manqué.",
+        "Evan lut à voix basse. Il était plus lent sur les mots techniques ; Maëlle les reprenait sans terminer les phrases à sa place. Un devis mentionnait la condamnation du retour nord, quarante et un ans auparavant. Le tuyau n’avait pas été retiré parce qu’il traversait le mur porteur. Quelqu’un avait écrit en marge : conserver la bouche de contrôle accessible.",
+        "Ils la trouvèrent derrière une étagère à couvertures. La plaque portait trois vis modernes et une tête de clou beaucoup plus ancienne. Evan remarqua les anneaux gravés autour. Maëlle les dégagea avec une brosse : le même dessin figurait sur le plan de Borren, au point où la conduite quittait la cité.",
+        "« Vous n’aimez pas la magie », dit Evan avant de pouvoir se retenir.",
+        "Maëlle resta accroupie. « Je n’aime pas qu’on prétende comprendre une chose parce qu’on sait s’en servir. Ce n’est pas exactement pareil. » Elle jeta un regard à son masque, puis à la lampe astrale de l’armoire. « Et je n’ai pas encore trouvé comment nourrir tout le monde à la lumière d’une bonne intention. »",
+        "Elle lui confia une copie du devis et garda l’original. Evan apprécia cette façon de partager la responsabilité : il pouvait emporter quelque chose d’utile sans devenir celui qui aurait perdu le seul papier important."
+      ],
+      "next": "c2-rue"
+    },
+    "c2-atelier": {
+      "chapter": "c2",
+      "paragraphs": [
+        "L’atelier de Borren était rangé selon une logique inaccessible à tous ceux qui n’avaient pas grandi dans sa tête. Des bagues de cuivre pendaient au-dessus des pinces, les pinces au-dessus d’un tiroir à fleurs séchées, et le tiroir contenait des rondelles. « Les fleurs attirent l’humidité », expliqua le nain, comme si Evan avait posé une question.",
+        "Il installa deux clapets sur une planche. Dans la pièce saine, le disque de céramique vibrait doucement quand on appliquait une tige chargée d’Astralys. Le clapet endommagé restait muet, puis répondait d’un seul coup, avec un retard assez long pour faire croire à une erreur de la main.",
+        "Evan demanda à essayer. Borren lui fit porter des gants secs et tenir la tige au bout d’un manche isolant. « On ne met jamais ses doigts à l’endroit où l’on espère que ça ne passera pas. » Il attendit la réponse, ne la reçut pas, éloigna la tige. Le cuivre vibra alors sous la planche.",
+        "Ce n’était pas une note. C’était ce qui restait lorsqu’on avait joué dans une autre pièce et fermé la porte. Evan le décrivit ainsi. Borren ne sourit pas. Il traça deux cercles sur un papier, puis un trait allant de l’un à l’autre. « Nous allons avoir besoin de quelqu’un qui sait écouter sans décider trop vite ce qu’il entend. »",
+        "Avant de repartir, il glissa à Evan une bague de cuivre fendue. Inutilisable pour une machine, suffisante pour faire vibrer le bois d’un instrument. « Tu me la rendras si tu n’en as plus besoin. » Evan la rangea dans la poche où il gardait les choses qui ne devaient pas se perdre."
+      ],
+      "next": "c2-rue"
+    },
+    "c2-rue": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Ils retrouvèrent Neris devant le bassin vidé. Le toit avait été bâché et les marchands avaient repoussé leurs étals jusqu’aux limites de la place. Evan reconnut la femme qui lui avait donné sa première pièce. Elle discutait durement avec un fonctionnaire de la compensation des dégâts. Aucun des deux n’avait l’air monstrueux. Ils n’en paraissaient pas moins capables de se blesser longtemps.",
+        "Iseult vérifia le passage vers la galerie, puis laissa Borren examiner les obturateurs. Elle s’accroupit devant Tam-Tam pour lui montrer sa paume. L’ourson renifla le cuir et éternua une petite étincelle. « D’accord », dit-elle. « Lui aussi a des conditions. » Evan sentit un rire lui chatouiller la gorge. Il le ravala trop tard.",
+        "Neris le regarda, surprise, puis rit à son tour. C’était la première fois qu’il l’entendait autrement qu’à travers des questions de conduites et de pression. Elle devait avoir quelques années de plus que lui. Une mèche sombre s’était collée contre son pansement.",
+        "« Tu peux rester ici si tu préfères », lui dit-il en regardant son poignet.",
+        "« Je peux aussi apprendre à ne pas recommencer. » Elle leva sa main valide. « Ça, je le tiens de moi. Pas de Borren. »",
+        "Au bord de l’escalier, elle déplia un petit carnet. Trois coups, un intervalle, puis une ligne pointillée. Des dates étaient inscrites dessous. Certaines précédaient l’accident. Evan sentit son souffle se raccourcir. « Pourquoi tu ne leur as pas montré ? »",
+        "Neris referma le carnet à moitié. « Parce que je l’ai commencé dans un cercle d’étude des Enfants de la Nuit. Et parce que, parfois, le nom écrit sur une porte décide de ce que les gens acceptent d’entendre. » Elle ne lui demanda pas de mentir. Cela aurait été plus simple s’il avait pu répondre non à une demande précise.",
+        "Diva s’était rapprochée. Evan sentit dans leur lien la même prudence que lorsqu’elle flairait une passerelle trop mince. Il regarda Iseult, quelques marches plus bas. La Veilleuse n’avait rien entendu ; elle examinait le verrou d’un garde-corps. Il avait l’impression que le carnet pesait désormais dans sa propre main."
+      ],
+      "choice": {
+        "prompt": "Neris attendait, les doigts arrêtés sur la couverture.",
+        "options": [
+          {
+            "id": "discretion",
+            "label": "Lui laisser le temps de présenter elle-même son carnet",
+            "passage": "« Je vais t’aider à expliquer les notes », répondit Evan. « Mais il faudra qu’ils les voient avant qu’on touche à quelque chose. » Neris rouvrit le carnet.",
+            "next": "c2-discretion",
+            "set": {
+              "confidence_nuit": true
+            }
+          },
+          {
+            "id": "transparence",
+            "label": "Proposer de montrer le carnet ensemble à Iseult",
+            "passage": "Evan appela Iseult sans s’éloigner de Neris. « Il y a des notes qui peuvent nous aider. On peut vous les montrer ensemble ? »",
+            "next": "c2-transparence",
+            "set": {
+              "confidence_nuit": false
+            }
+          }
+        ]
+      }
+    },
+    "c2-discretion": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Neris passa quelques instants à choisir les pages qu’elle allait montrer. Evan faillit lui demander de tout ouvrir, puis comprit qu’elle cherchait une façon de commencer, pas une façon d’effacer. Elle finit par descendre elle-même les marches.",
+        "Elle dit d’où venait le carnet. Iseult lui demanda s’il contenait des essais menés sur l’installation. « Des écoutes, répondit Neris. Pas d’injection. Pas de prélèvement sur quelqu’un. » Borren exigea des dates et le nom des témoins. Il avait la même voix qu’en demandant le registre des joints de rechange.",
+        "Lorsque l’inspection reprit, Neris toucha brièvement la manche d’Evan. « Merci de ne pas avoir parlé à ma place. » Il n’eut pas l’impression d’avoir été très courageux. Il avait seulement réussi à ne pas confondre la confiance et le silence."
+      ],
+      "next": "c2-galerie"
+    },
+    "c2-transparence": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Iseult remonta. Evan eut peur qu’elle prît le carnet et qu’il ne restât plus à Neris qu’à expliquer pourquoi elle l’avait caché. Elle tendit simplement la main vers une page, attendit l’autorisation, puis demanda à l’apprentie de lire les dates.",
+        "Le nom des Enfants de la Nuit fit lever les sourcils de Borren. « Et tu pensais me laisser casser trois tiges de mesure avant de montrer ça ? » Sa colère avait quelque chose de familier et de presque rassurant. Neris baissa les yeux. Elle promit de tenir un registre de travail commun.",
+        "Elle ne regarda pas Evan tout de suite. Il supporta difficilement ces quelques minutes. Puis elle lui tendit la page du premier relevé. « Tiens-le pendant que je descends. Je n’ai qu’une bonne main. » Il prit le carnet avec trop de précaution. Le poids qui lui serrait la poitrine ne disparut pas, mais il changea un peu de place."
+      ],
+      "next": "c2-galerie"
+    },
+    "c2-galerie": {
+      "chapter": "c2",
+      "paragraphs": [
+        "La galerie était assez haute pour qu’un adulte y marchât courbé. Iseult obligea tout le monde à s’arrêter sur le premier palier. Elle inspecta les supports, attacha une corde au garde-corps et demanda à Borren de confirmer que l’eau avait été détournée. Evan s’impatientait, puis se rappelait qu’il avait peur. Les deux sentiments lui semblaient difficiles à séparer.",
+        "Diva resta au débouché de l’escalier, trop large pour le dernier coude. Il lui envoya l’image de la cour, du refuge, du retour. Elle lui répondit par celle de sa botte fermement retenue entre deux racines. Il sourit malgré lui et promit de ne pas dépasser la corde d’Iseult.",
+        "Sous la citerne, les conduites s’alignaient comme les côtes d’un animal immense. L’une portait une série d’anneaux gravés, semblables à ceux du mur du refuge. Elle ne brillait pas. Evan s’en approcha de côté, en gardant ses mains près de son ventre.",
+        "Il entendit d’abord de l’eau, quelque part plus bas. Puis un frottement. Puis plus rien du tout. À force d’attendre le bruit, il finissait par lui donner n’importe quelle forme. Il ferma les yeux, les rouvrit aussitôt. L’obscurité derrière ses paupières avait réveillé une image qu’il n’avait pas appelée.",
+        "« Tu n’es pas obligé de reconnaître quelque chose », dit Iseult.",
+        "Evan hocha la tête sans savoir si elle le voyait. Il posa l’étui sur la marche sèche. Tam-Tam s’assit contre sa cheville. Le contact lui rendit la sensation de ses pieds.",
+        "Neris lut les heures de son carnet. Les premières irrégularités avaient précédé plusieurs petits incidents dans le quartier : une lampe qui s’éteignait toujours après le troisième souffle, une porte de serre dont le verrou se chargeait sans ordre, le disque de chauffage d’une blanchisseuse devenu trop chaud. Rien qui eût justifié, seul, d’alarmer toute la cité.",
+        "Borren posa une tige contre la conduite. Elle ne bougea pas. Il la retira. Trois vibrations coururent dans le verre, puis un intervalle plus long. Evan sentit le quatrième temps comme on sent la marche manquante d’un escalier.",
+        "Le nain éloigna la tige, la plaça derrière une plaque de feutre, recommença. Les mêmes vibrations apparurent. « Ça ne vient donc pas seulement du son », dit-il.",
+        "Evan aurait préféré que ce fût une mauvaise nouvelle moins intéressante. Son premier réflexe avait été de chercher une mélodie capable de répondre. Il voyait maintenant qu’une réponse pouvait servir à autre chose qu’à montrer qu’on avait compris.",
+        "Iseult leur fit reculer d’un pas. Il n’y avait ni grondement ni fissure qui s’ouvrait. Le danger avait cette politesse très désagréable de ne pas leur donner une raison évidente de fuir.",
+        "« On ne va pas la faire parler plus fort, décida-t-elle. On cherche où elle commence. » Borren pouvait isoler la liaison au moyen d’un collier, sans l’alimenter. Evan pouvait également placer sa balise au contact du métal pour comparer la vibration reçue avec celle de son violon, sans jouer. Deux manières d’obtenir un repère, avec du matériel différent et les mêmes limites."
+      ],
+      "choice": {
+        "prompt": "Le couloir resta silencieux pendant qu’ils choisissaient leur essai.",
+        "options": [
+          {
+            "id": "collier",
+            "label": "Privilégier l’isolement mécanique de la conduite",
+            "passage": "Evan laissa sa balise dans sa poche. « On coupe le chemin d’abord. Après, on écoute ce qui reste. » Borren chercha un collier à double mors.",
+            "next": "c2-collier",
+            "set": {
+              "trace": "collier"
+            }
+          },
+          {
+            "id": "balise",
+            "label": "Employer une balise comme témoin passif",
+            "passage": "Il posa la balise éteinte dans la main de Borren. « Elle peut garder une empreinte sans la renvoyer. Mais pas longtemps, le cristal est presque vide. »",
+            "next": "c2-balise",
+            "set": {
+              "trace": "balise"
+            }
+          }
+        ]
+      }
+    },
+    "c2-collier": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Borren installa le collier entre deux anneaux. Il serra les mors tour à tour, vérifiant à chaque mouvement le niveau des petites tiges de verre. Evan comptait dans sa tête pour ne pas lui demander sans cesse si cela fonctionnait.",
+        "La vibration disparut du côté de la citerne. Elle subsista de l’autre côté du collier. Neris traça un trait sur son plan, puis un second lorsque le même résultat se reproduisit plus loin. Ils ne possédaient pas un message. Ils avaient une direction.",
+        "Au moment de desserrer, Borren sentit le cuivre résister. Le métal s’était déformé sous le mors, très légèrement, mais assez pour qu’il décidât de laisser le collier en place. Evan regarda l’espace fermé entre les deux pièces. La chose qui circulait ne s’était pas arrêtée parce qu’on la comprenait mieux.",
+        "Neris copia les mesures en deux exemplaires. Iseult les fit signer par Borren avant de ranger le premier. Le second resta dans les mains de l’apprentie. Evan comprit qu’une preuve pouvait être très petite et demander pourtant autant de monde pour ne pas se perdre."
+      ],
+      "next": "c2-retour"
+    },
+    "c2-balise": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Borren posa la balise sur un carré de liège, puis la maintint contre le cuivre. Evan désengagea le volet de diffusion. Le dispositif ne pouvait plus reproduire un son ; il conservait seulement la manière dont son cristal avait vibré.",
+        "Trois petites impulsions traversèrent la bague. La quatrième se fit attendre assez longtemps pour qu’Evan retirât presque sa main. Puis un vide froid lui remonta dans les doigts. Pas une émotion. Il aurait pu jurer le contraire la veille ; ici, devant le cristal, il sentait clairement la différence.",
+        "Neris compara l’empreinte à ses relevés. Le décalage augmentait lorsqu’on déplaçait la balise vers la citerne. Il diminuait du côté de la sortie nord. « Nous ne savons pas ce que c’est, dit-elle, mais nous savons de quel côté regarder. » Elle parlait moins vite qu’auparavant.",
+        "Le cristal acheva de se ternir avant la fin de l’essai. Evan passa son pouce sur la bague désormais muette. Il lui restait deux balises, mais il aurait préféré ne pas penser à elles comme à deux objets qu’il pouvait encore perdre. Borren enveloppa celle-ci dans une pochette numérotée. « On te la rendra. On note qu’elle est à toi. »"
+      ],
+      "next": "c2-retour"
+    },
+    "c2-retour": {
+      "chapter": "c2",
+      "paragraphs": [
+        "À la remontée, Diva colla son front contre celui d’Evan avec une brusquerie qui lui fit mal au nez. Il lui envoya tout ce qu’il pouvait rassembler d’images rassurantes. Elle écarta les moins convaincantes et garda celle de ses deux pieds sur la marche du haut.",
+        "La place avait repris une partie de ses bruits. Un marteau remettait un montant d’étal d’aplomb. La marchande discutait toujours avec le fonctionnaire, mais ils partageaient maintenant un morceau de papier. Cela paraissait un progrès raisonnable.",
+        "Iseult mena le groupe dans le petit bureau des Veilleurs installé contre la halle. Un lieutenant les reçut debout, lut les premiers relevés et cessa très vite de regarder l’heure. Il demanda trois fois si quelqu’un avait injecté de l’Astralys dans la conduite. Trois fois, Borren répondit non.",
+        "Sur une carte plus vaste, la ligne du retour nord passait sous les derniers ateliers, quittait les remparts et rejoignait un ancien poste de distribution, à la Lisière. Au-delà, un cercle rouge indiquait une structure découverte deux ans plus tôt. Il n’y avait pas de nom. Seulement un numéro, un périmètre et le mot portail.",
+        "Evan sentit sa gorge se refermer. Il avait entendu des récits de départs. Des convois fêtés sur les marches du Conseil, des noms qu’on attendait de revoir sur les listes de retour. Il n’avait encore jamais entendu quelqu’un dire qu’une expédition avait retraversé un de ces passages.",
+        "Le lieutenant posa sa règle sur la carte pour cacher le cercle, trop tard. « Personne ne part de l’autre côté sur la base d’un incident de plomberie. » Borren lui adressa un regard offensé. Evan fut presque heureux qu’il existât encore, dans la pièce, des choses assez petites pour vexer quelqu’un.",
+        "Une équipe irait au poste dès le lendemain pour vérifier la bouche extérieure, à distance du portail. Des adultes, des protections, un itinéraire déjà surveillé. Iseult n’avait pas proposé qu’Evan vînt. Il regarda la carte jusqu’à ce que les lignes cessassent de se ressembler.",
+        "« Je pourrais reconnaître… » commença-t-il.",
+        "« Peut-être », répondit-elle. Elle n’avait pas dit oui. « Mais ce sera à toi de décider quand tu sauras ce qu’on te demande. Et quelqu’un restera responsable de te ramener. Ce n’est pas un détail que nous réglerons sur place. »",
+        "Avant cela, il fallait transmettre le rapport. Borren voulait une description technique exacte. Maëlle, qu’on avait fait venir à cause de la conduite du refuge, souhaitait que les habitants fussent informés des précautions prises. Elle ne demandait pas de crier qu’un portail se trouvait sous leurs pieds ; elle voulait pouvoir expliquer pourquoi certaines chambres seraient déplacées.",
+        "Evan comprenait les deux demandes. Il se rappelait les gens sur la place et la peur qui avait changé chaque visage. Il se rappelait aussi combien une peur grandissait lorsqu’on la laissait remplir les choses qu’on ne vous disait pas."
+      ],
+      "choice": {
+        "prompt": "Iseult lui tendit une feuille pour les quelques lignes qu’il souhaitait ajouter.",
+        "options": [
+          {
+            "id": "habitants",
+            "label": "Demander une explication claire pour les habitants du refuge",
+            "passage": "Evan écrivit lentement : Dire ce qui a été coupé. Dire où dormir. Dire à qui poser des questions. Il ne savait pas rédiger un rapport, mais il savait ce qu’il aurait eu besoin de lire la veille.",
+            "next": "c2-info",
+            "set": {
+              "rapport": "habitants"
+            }
+          },
+          {
+            "id": "verification",
+            "label": "Demander que les mesures soient recoupées avant d’expliquer la cause",
+            "passage": "Evan écrivit : Nous avons entendu la même chose. Nous ne savons pas encore d’où elle vient. Il souligna le deuxième nous, puis regretta de ne pas avoir pris une feuille sans tache.",
+            "next": "c2-mesures",
+            "set": {
+              "rapport": "verification"
+            }
+          }
+        ]
+      }
+    },
+    "c2-info": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Maëlle lut la feuille sans parler. Elle demanda ensuite au lieutenant les mots qu’elle pouvait employer sans transformer une hypothèse en certitude. Ils s’accordèrent sur une consigne simple : la conduite était isolée, deux pièces resteraient inoccupées, personne ne devait tenter de rouvrir les plaques.",
+        "Dans le couloir, un homme s’énerva malgré tout. Il voulait savoir depuis combien de temps on leur cachait un danger. Evan s’apprêta à s’excuser. Maëlle lui toucha l’épaule, puis alla répondre elle-même. Expliquer une précaution ne garantissait pas qu’elle serait bien reçue. Cela ne rendait pas l’explication inutile.",
+        "Le soir, les questions étaient encore nombreuses. Mais les familles savaient où poser leurs couvertures. Evan aida à déplacer une caisse et reconnut, dans l’espace ainsi dégagé, une chose qu’il avait demandée et qu’on avait réellement faite."
+      ],
+      "next": "c2-soir"
+    },
+    "c2-mesures": {
+      "chapter": "c2",
+      "paragraphs": [
+        "Borren joignit la feuille au relevé des tiges. Il demanda à un autre fontainier de refaire les mesures sans lui montrer les siennes. Evan trouva l’idée un peu blessante jusqu’à ce qu’il comprît qu’on ne cherchait pas à le prendre en défaut, mais à éviter d’avoir tous commis la même erreur.",
+        "Maëlle obtint tout de même le déplacement des lits proches de la conduite. « Je peux annoncer une précaution sans inventer une cause », dit-elle. Evan l’aida à porter les couvertures. Dans le couloir, un homme lui demanda ce qui se passait. Il répondit qu’une vérification était en cours et désigna la diacre pour les questions auxquelles il ne savait pas répondre.",
+        "Il avait du mal à supporter de ne pas donner une réponse complète. Plus tard, il découvrit que les mesures indépendantes concordaient. Cela ne résolvait pas le mystère. Au moins, ils ne s’étaient pas contentés d’être d’accord entre eux."
+      ],
+      "next": "c2-soir"
+    },
+    "c2-soir": {
+      "chapter": "c2",
+      "paragraphs": [
+        "On installa Evan dans une petite chambre au-dessus de la cour, loin du retour condamné. Il regrettait presque la lingerie. Il y avait passé trop peu de temps pour s’y sentir chez lui, mais assez pour savoir exactement où poser son étui.",
+        "Maëlle avait trouvé une bassine de linge à proximité de la fenêtre. « Pas pour te faire travailler. Pour Diva. Elle regardait l’autre comme si elle voulait la couver. » La dragonne inspecta le nouveau seuil, puis la marche, puis la bassine. Sa prudence finit par ressembler à une approbation.",
+        "Neris passa avant la fermeture du refuge. Elle lui apporta une copie de ses premières notes. Elle hésita un moment sur le seuil, puis resta jusqu’à ce qu’il eût compris la légende des signes. Elle ne lui demanda pas de rejoindre un cercle. Il ne lui demanda pas si elle avait déjà transformé quelqu’un. Tous deux semblèrent reconnaissants des questions qu’ils n’avaient pas eu à repousser.",
+        "Evan lui montra son bracelet-clavier. Une lamelle répondait mal. Neris la fit glisser dans son logement et remarqua le fil qui la retenait. « Ce n’est pas une réparation, ça. C’est une négociation. » Il se mit à rire, d’abord doucement, puis trop fort. Tam-Tam se réveilla, indigné d’avoir manqué le début.",
+        "Quand Neris partit, Evan se surprit à lui proposer de revenir entendre le violon un soir. Les mots lui firent peur seulement après être sortis. Elle répondit qu’elle viendrait si on la prévenait avant qu’il eût terminé. Ce n’était pas une promesse immense. Il en eut chaud longtemps.",
+        "Plus tard, Iseult déposa l’itinéraire du lendemain. La route jusqu’au poste était ouverte aux convois ; la zone du portail ne l’était pas. Evan pourrait accompagner la vérification en restant à la borne de repli, ou rester au refuge sans perdre la chambre, les repas ou les pièces gagnées. Elle lui laissa le temps de lire.",
+        "Il passa un doigt sur la ligne de la route. Dans la cour, Diva se leva avant qu’il l’eût appelée. Il ne savait pas s’il désirait comprendre le bruit ou s’assurer qu’il ne reviendrait plus cogner derrière un lit. Pour l’instant, les deux raisons suffisaient à l’empêcher de détourner les yeux.",
+        "Au bas de la feuille, Iseult avait écrit : départ après le premier convoi, retour avant la fermeture des portes. Evan relut surtout le mot retour."
+      ],
+      "next": "c3-depart"
+    },
+    "c3-depart": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Evan se leva avant qu’on frappât. Il avait préparé son sac, puis l’avait vidé deux fois. À la troisième, il comprit qu’il n’ajouterait pas une ration en changeant l’ordre des objets et s’assit sur le lit pour attendre.",
+        "Il avait accepté l’inspection. Dire oui la veille lui avait paru plus facile que de descendre l’escalier le matin. Il gardait la feuille d’Iseult dans sa poche, pliée de manière à protéger le mot retour.",
+        "Maëlle lui tendit une écharpe. « Tu me la rendras lavée. » Elle n’ajouta pas de recommandation sur le courage. Cela lui permit de la prendre sans faire semblant d’être quelqu’un d’autre. Il la noua sous son masque, puis remonta les attaches pour que ses oreilles ne frottassent pas contre les bords.",
+        "Diva l’attendait dans la cour, les ailes étirées une à une. Tam-Tam essayait de rattraper la buée qui sortait de son propre museau. Evan s’accroupit entre eux. Il leur envoya la route, le poste, la borne où ils devaient rester. Pour le reste, il ne put offrir qu’un désir de revenir ensemble. Diva le reçut sans lui renvoyer d’assurance facile.",
+        "Le convoi comptait deux chariots, six Veilleurs et un conducteur qui saluait chaque pierre du passage comme une vieille connaissance. Borren montait à l’avant avec une caisse d’outils. Neris accompagnait la vérification en qualité d’apprentie ; son pansement avait été changé et elle s’était promis de ne pas soulever ce qu’on pouvait pousser.",
+        "Les bagages du refuge comprenaient un paquet de galettes au miel et une trousse de linge propre. Maëlle proposa de lui confier l’un des deux pour la route. Les Veilleurs avaient leurs propres réserves ; Evan ne choisirait pas ce qui déciderait de la survie d’une équipe. Seulement ce qu’il souhaitait avoir sous la main si quelqu’un en avait besoin.",
+        "Il regarda ses poches, ses sangles, les trois emplacements de balises. Rien n’avait l’air neuf. Sous les filaments violets, un point de couture blanc dépassait près de son coude. Il le rentra du bout de l’ongle avant de choisir."
+      ],
+      "choice": {
+        "prompt": "Maëlle gardait les deux paquets posés sur le comptoir.",
+        "options": [
+          {
+            "id": "vivres",
+            "label": "Emporter les galettes pour partager une halte",
+            "passage": "Evan prit le paquet de galettes et l’enveloppa une seconde fois. Tam-Tam le suivit du regard avec une attention qui annonçait déjà les difficultés du trajet.",
+            "next": "c3-vivres",
+            "set": {
+              "secours": "vivres"
+            }
+          },
+          {
+            "id": "soins",
+            "label": "Emporter la petite trousse de soins",
+            "passage": "Il choisit la trousse et vérifia que les bandages restaient accessibles sans défaire tout son sac. Maëlle lui fit refaire le nœud, moins serré.",
+            "next": "c3-soins",
+            "set": {
+              "secours": "soins"
+            }
+          }
+        ]
+      }
+    },
+    "c3-vivres": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Le conducteur aperçut l’ourson qui tentait de monter dans le sac. « S’il mange les comptes de livraison, tu le gardes. » Evan ne sut pas immédiatement s’il plaisantait. Lorsque l’homme lui montra un registre où plusieurs pages avaient déjà été grignotées, il sourit malgré lui.",
+        "À la première halte, il distribua une galette à Neris et en garda une dans sa main. Elle n’avait pas demandé à partager, mais elle accepta sans faire de cérémonie. Il apprécia cela. Il donnait trop souvent avec l’angoisse de recevoir une dette en retour.",
+        "Tam-Tam obtint une miette, puis une autre, jusqu’à ce que Diva lui adressât une image très nette d’un sac refermé. L’ourson s’assit avec la dignité offensée de ceux qui ont toujours eu tort sans jamais en être convaincus."
+      ],
+      "next": "c3-route"
+    },
+    "c3-soins": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Iseult vérifia que la trousse ne contenait rien qu’Evan ne sût employer. « Un linge propre peut faire beaucoup. Une mauvaise idée aussi, mais pas dans le même sens. » Elle lui montra comment maintenir une compresse sans serrer la circulation, puis lui fit répéter le geste sur son propre poignet.",
+        "Un peu plus tard, le conducteur s’écorcha contre une boucle. Evan lui tendit un carré de tissu avant même d’y réfléchir. L’homme le remercia, enveloppa son doigt et reprit les rênes. Il n’y eut ni lumière ni miracle. Evan trouva presque étrange de se sentir utile aussi simplement.",
+        "Neris l’aida à remettre la trousse en place. Avec une seule bonne main, elle défit le mauvais nœud plus vite qu’il n’aurait su le refaire. Il finit par lui demander de lui montrer. Elle recommença sans rire."
+      ],
+      "next": "c3-route"
+    },
+    "c3-route": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Les portes de Noctarion restèrent visibles longtemps après qu’ils les eurent franchies. Evan se retourna tant de fois qu’Iseult lui proposa de marcher de l’autre côté du chariot. Il comprit qu’elle avait remarqué, et cela l’humilia jusqu’à ce qu’il découvrît qu’il pouvait effectivement regarder la ville sans avoir l’air de vérifier si elle existait encore.",
+        "Le chemin suivait la Bande du Crépuscule. Sur la gauche, des haies basses protégeaient les champs d’une lumière trop blanche qui s’accumulait sur l’horizon. À droite, les bois perdaient leur relief à mesure qu’ils s’enfonçaient vers les terres obscures. La route passait entre les deux avec la prudence d’une couture retenant un vêtement usé.",
+        "Des bornes, espacées de cent pas, portaient les signes des Veilleurs. Certaines étaient entourées de fleurs déposées dans des boîtes. Evan évitait de les compter. Il reconnaissait ce genre d’endroit avant de savoir à qui il appartenait.",
+        "Diva marchait près du talus. De temps à autre, une tige se redressait derrière elle, puis retombait lorsque ses pattes quittaient la terre. Tam-Tam suivait les traces de roues. Il trouvait de l’intérêt à chaque flaque, ce qui obligeait Evan à imaginer régulièrement la chaleur de la cuisine pour le rappeler près de lui.",
+        "Un messager les croisa sans s’arrêter. Un ruban d’argent entourait sa sacoche ; Borren cessa de parler pendant qu’il s’éloignait vers la cité. Evan demanda si le Conseil savait pour la conduite. « Maintenant, oui », répondit Iseult.",
+        "Il pensa aux cinq Arcanistes qui dirigeaient Noctarion. Il avait vu leurs portraits sur des affiches et, une fois, à travers une foule, une silhouette claire devant laquelle les gens reculaient sans qu’on le leur demandât. Séraphine Argentum. Certains prononçaient son nom avec une reconnaissance si profonde qu’elle ressemblait à une prière. D’autres baissaient simplement la voix.",
+        "Evan ne savait pas ce qu’une femme capable de manier les astres pouvait trouver d’intéressant à un tuyau fendu. Il avait tout aussi peu envie de le découvrir de trop près.",
+        "Iseult lui proposa de monter un moment dans la voiture. Il préféra marcher. Le roulement des roues avait pris le même rythme que ses pas et, tant qu’il avançait, les souvenirs arrivaient moins vite. Mais un village abandonné apparut au détour de la route, à peine quelques murs derrière un fossé. Il s’arrêta sans l’avoir décidé.",
+        "Ce n’était pas le sien. Il le sut immédiatement. Cela n’empêcha pas son corps de commettre l’erreur. L’air se rétrécit dans son masque, et ses doigts cherchèrent un archet qu’il n’avait pas sorti.",
+        "Iseult ralentit à sa hauteur. Elle ne lui demanda pas ce qu’il voyait. « On peut s’arrêter ici. Ou tu peux me parler d’autre chose pendant qu’on passe. » Evan regarda les murs, puis les roues, puis la main de la Veilleuse qui restait bien visible à côté d’elle."
+      ],
+      "choice": {
+        "prompt": "Il chercha une phrase qui lui laisserait assez d’air pour marcher.",
+        "options": [
+          {
+            "id": "souvenir",
+            "label": "Dire ce que ces ruines lui rappellent",
+            "passage": "« Mon village n’est pas celui-là », dit Evan. Il lui fallut quelques pas pour ajouter : « Mais je ne sais pas l’empêcher de revenir. »",
+            "next": "c3-souvenir",
+            "set": {
+              "conversation": "souvenir"
+            }
+          },
+          {
+            "id": "metier",
+            "label": "Lui demander comment elle a appris à être Veilleuse",
+            "passage": "« Votre première sortie… elle s’est bien passée ? » demanda-t-il. La question avait l’air déplacée. Iseult ne la traita pas comme telle.",
+            "next": "c3-metier",
+            "set": {
+              "conversation": "metier"
+            }
+          }
+        ]
+      }
+    },
+    "c3-souvenir": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Iseult fit signe au conducteur de ralentir. Elle ne demanda ni le nombre de morts ni la façon dont Evan avait survécu. Il s’était préparé à ces questions depuis si longtemps qu’il resta un instant sans savoir quoi faire de leur absence.",
+        "« Il y avait un petit mur derrière notre maison, dit-il enfin. Je croyais qu’il me cachait. » Il fixa la pierre la plus proche. « Je n’ai pas couru aider. »",
+        "La Veilleuse ne répondit pas tout de suite. « Tu avais quel âge ? » Il lui dit un nombre qu’il n’aimait pas prononcer. Elle acquiesça lentement. « Un enfant caché derrière un mur n’est pas une unité de secours. Ce qui t’est arrivé ne te donne pas une dette envers chaque danger que tu croises. »",
+        "Il n’était pas prêt à la croire. Elle ne lui demanda pas de le faire. Ils reprirent leur marche ; Diva glissa sa tête sous sa main, et cette présence lui sembla, pour le moment, une réponse qu’il pouvait porter."
+      ],
+      "next": "c3-poste"
+    },
+    "c3-metier": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Iseult regarda le fossé. « On m’a demandé de compter des sacs. J’en ai compté vingt-deux. Il y en avait vingt et un. »",
+        "Evan tourna la tête malgré lui. Elle expliqua qu’elle avait compté deux fois le même sac après le déplacement d’un chariot, puis défendu son résultat avec une assurance admirable. Il se demanda si elle inventait. « Le problème, ajouta-t-elle, c’est que j’avais dix-sept ans et une idée très précise de ce que je ne devais pas avoir l’air de craindre. »",
+        "Elle ne raconta pas sa première créature. Elle décrivit une nuit à chercher une borne sous la pluie, la honte de demander qu’on vérifiât sa carte, le soulagement d’apprendre que tout le monde avait eu la même honte avant elle.",
+        "Evan finit par lui avouer qu’il avait déjà prétendu connaître un chemin pour qu’on ne lui retirât pas une mission. « Tu peux commencer à faire autrement aujourd’hui », dit-elle. Les ruines passèrent derrière eux sans qu’il eût besoin de leur donner un nom."
+      ],
+      "next": "c3-poste"
+    },
+    "c3-poste": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Le poste de la Lisière n’avait rien d’une forteresse. Trois bâtiments entouraient un bassin sec, derrière une double palissade de pierre et de métal. On y avait ajouté une tour si étroite qu’Evan se demanda comment deux personnes pouvaient s’y croiser. « Elles ne se croisent pas », dit le conducteur en suivant son regard.",
+        "Au loin, au-delà d’un champ de bornes, une arche sombre penchait entre deux reliefs. Ses proportions ne semblaient pas tenir dans le paysage : Evan en distinguait les montants sans parvenir à dire si elle était proche ou très grande. Il détourna les yeux lorsqu’il sentit ses tempes se serrer.",
+        "Le capitaine du poste accueillit Iseult près du bassin. Elle lut l’autorisation d’inspection et vérifia l’âge d’Evan sur le registre. L’arche resterait en dehors de l’itinéraire, les instruments ne dépasseraient pas la troisième borne et les civils rejoindraient la voiture au premier signal. Sa façon de parler faisait de chaque limite une chose qu’on pouvait montrer du doigt.",
+        "Neris déplia la carte du retour nord. La conduite entrait sous le mur, passait dans une chambre de décantation et rejoignait une installation plus ancienne que le poste. Borren ne connaissait pas les marques gravées sur sa bride extérieure. Le mot portail ne fut prononcé par personne pendant quelques minutes, comme si le silence pouvait laisser une autre hypothèse trouver sa place.",
+        "Evan resta à la borne indiquée. Il sortit son violon, non pour jouer, mais pour éprouver le bois sous son pouce. C’était une chose qu’il savait encore reconnaître sans carte.",
+        "Iseult rappela la procédure : isoler, mesurer, déplacer l’instrument, mesurer encore. Ils n’allaient pas ouvrir l’arche ni essayer de lui répondre. Le capitaine avait fait éloigner les gardes de la chambre de décantation ; deux Veilleurs surveillaient la lisière tandis qu’un troisième gardait le chemin vers la voiture.",
+        "Neris et Borren ne parvenaient pas à s’accorder sur la façon de tenir la première série de relevés. Elle souhaitait comparer les intervalles au moyen d’un disque gradué. Il voulait un contrôle mécanique indépendant, plus lent mais qu’une fluctuation d’Astralys ne pourrait pas tromper de la même façon. Ils avaient le matériel pour les deux, pas le temps de les mener ensemble avant la relève de la patrouille.",
+        "Evan comprenait le disque. Les intervalles lui parlaient comme des mesures musicales. Il comprenait aussi ce que Borren appelait la commodité de se tromper à plusieurs. Pour une fois, les deux adultes le regardaient sans attendre qu’il devinât lequel voulait être choisi."
+      ],
+      "choice": {
+        "prompt": "Iseult lui demanda quelle mesure il se sentait capable de suivre sans se forcer.",
+        "options": [
+          {
+            "id": "disque",
+            "label": "Suivre les intervalles avec Neris",
+            "passage": "Evan désigna le disque. « Je peux compter les silences. Si je ne sais plus, je vous le dis. » Neris plaça une feuille vierge sous la bague graduée.",
+            "next": "c3-disque",
+            "set": {
+              "controle": "disque"
+            }
+          },
+          {
+            "id": "mecanique",
+            "label": "Commencer par le contrôle indépendant de Borren",
+            "passage": "« Faisons d’abord celui qui n’a pas besoin de moi », proposa Evan. Borren approuva sans transformer la phrase en compliment.",
+            "next": "c3-mecanique",
+            "set": {
+              "controle": "mecanique"
+            }
+          }
+        ]
+      }
+    },
+    "c3-disque": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Ils établirent la durée du premier intervalle avec un balancier ordinaire. Evan en suivait le mouvement tandis que Neris notait les décalages. À trois reprises, la quatrième mesure ne fut pas seulement plus longue : les marques du disque cessèrent brièvement de s’aligner avec son bord.",
+        "Neris voulut rapprocher l’instrument. Evan secoua la tête. L’impulsion était assez nette. Il avait eu envie de se rendre utile en restant, pas en donnant au phénomène une occasion de devenir plus clair à leurs dépens.",
+        "Ils répétèrent la série une seule fois. Les résultats correspondaient. Iseult fit reporter chaque heure sur son propre registre. Neris leva les yeux vers Evan, un sourire prêt à venir, puis le retint en voyant son visage. Ils avaient trouvé quelque chose. Cela ne l’obligeait pas à en être heureux."
+      ],
+      "next": "c3-rupture"
+    },
+    "c3-mecanique": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Borren fixa un fil plombé au-dessus d’une plaque quadrillée. Le dispositif n’avait ni cristal ni pièce chargée : il se contentait de montrer où se trouvait une masse pendue. Evan s’attendait à ne rien voir.",
+        "Au troisième retour de la vibration, le plomb se déplaça sans que le fil changeât d’inclinaison. Pas beaucoup. L’espace d’un trait, peut-être. Borren arrêta immédiatement la série et demanda à Neris de vérifier les fixations. Elles n’avaient pas bougé.",
+        "Ils recommencèrent depuis une seconde dalle. Même résultat. Evan suivit du regard la distance entre le fil et sa propre ombre. Il avait passé la matinée à essayer d’entendre correctement. Il découvrait que voir une chose ne la rendait pas nécessairement plus facile à croire.",
+        "Neris nota la différence entre les deux supports et la fit relire à Borren. Personne ne chercha à décider lequel des deux avait eu la meilleure idée. Evan en éprouva un soulagement disproportionné."
+      ],
+      "next": "c3-rupture"
+    },
+    "c3-rupture": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Le capitaine ordonna d’arrêter. Iseult demanda aux civils de rejoindre la voiture et fit replier le premier instrument. Evan remit son violon dans l’étui. Il eut le temps de vérifier une attache avant que le sol lui donnât l’impression de manquer sous son pied gauche.",
+        "Le bruit ne venait plus de la conduite. Il montait de toute la cour, non pas plus fort mais plus proche, comme si ce qui frappait avait déplacé le mur au lieu d’augmenter sa force. La borne de repli se fendit de haut en bas.",
+        "Evan se retrouva à genoux. Tam-Tam avait changé de taille avant qu’il eût compris pourquoi. L’ourson dressait maintenant une masse d’épaules blanches entre lui et le fossé. Sa fourrure se hérissa d’étincelles. Evan lui envoya le souvenir du banc, de la cuisine, de ses deux mains ouvertes. Pas pour lui ordonner de rapetisser. Pour qu’il continuât à le reconnaître.",
+        "Un Veilleur cria depuis la tour. À l’ouest, quelque chose venait de traverser le treillis. La créature avançait sur des membres trop nombreux, ses plaques sombres frottant la pierre avec un bruit de couteaux. Elle ne cherchait ni nourriture ni fuite. Elle frappait tout ce qui se dressait devant elle, y compris ses propres membres lorsqu’ils se gênaient.",
+        "Evan tendit la pensée et la retira comme on retire la main d’une eau brûlante. Il n’y avait pas une colère à apaiser derrière cette agitation. Rien qui cherchât à être compris. Seulement un mouvement qui détruisait en se répétant. Son don ne faisait pas de tous les monstres des animaux effrayés.",
+        "Les Veilleurs prirent position. Iseult attrapa Evan par la sangle du sac et le tira derrière un socle. Le conducteur essayait d’éloigner les chariots, mais une roue s’était engagée dans une fissure. Borren, tombé près de la chambre de décantation, ne pouvait pas se relever sans appui.",
+        "« Tu restes derrière la pierre ! » ordonna Iseult.",
+        "Evan y resta. Ses mains trouvèrent le violon avec une précision qui lui manquait pour toutes les autres choses. Il joua une note, puis une seconde. L’effroi ne disparut pas. Il devint assez petit pour tenir dans la mesure.",
+        "Diva tendit ses racines sous le chariot. La terre sèche les cassait une à une ; elle en fit pousser d’autres sans les transformer en rempart impossible. Tam-Tam grandit encore, jusqu’à dépasser la toiture basse du poste. De la neige jaillit sous ses pattes et couvrit les fissures. Il bloqua l’élan de la créature d’un coup d’épaule qui fit trembler l’étui vide.",
+        "Evan sentit le choc à travers leur lien et faillit perdre l’archet. Il ne donna pas plus de force à l’ours. Il l’aida à maintenir la sienne, à ne pas laisser l’effroi choisir chaque mouvement. Une veine froide remonta le long de son bras. Il relâcha aussitôt une partie de la magie.",
+        "Iseult rejoignit Borren. À deux, avec Neris, ils le tirèrent vers le socle. Il avait du sang au-dessus du sourcil, mais il parlait encore, ce qui permit à Evan de respirer. Les autres Veilleurs tenaient la créature à distance de la voiture ; Tam-Tam n’était pas seul à se battre.",
+        "Le danger le plus proche n’était pourtant plus dehors. La conduite sous la chambre de décantation se chargeait par à-coups. Une lumière blanche apparaissait entre les pierres, puis se résorbait en laissant un bord plus noir. Le bassin de secours recevait déjà trop d’eau. Si la bride cédait, la galerie qui menait à la voiture serait coupée.",
+        "Deux manœuvres restaient accessibles depuis leur abri. Borren pouvait ouvrir le drainage de sécurité ; Diva devrait guider l’eau entre les blocs pour qu’elle n’emportât pas les hommes. Ou les gardes pouvaient maintenir l’écran du poste pendant qu’Evan donnait un rythme aux équipes pour retirer le cylindre de liaison et refermer les vannes par étapes. Dans les deux cas, ils reculaient. Dans les deux cas, il faudrait abandonner une partie du matériel.",
+        "Iseult donna son accord aux deux procédures, puis demanda à Evan de choisir l’appui qu’il pouvait réellement fournir. Elle ne lui demandait pas de sauver le poste. Elle lui demandait ce qu’il pouvait faire sans mentir sur les forces qui lui restaient."
+      ],
+      "choice": {
+        "prompt": "Evan regarda Diva, puis les mains des hommes qui tenaient encore les barres.",
+        "options": [
+          {
+            "id": "drain",
+            "label": "Aider Diva à guider l’eau vers le drainage",
+            "passage": "Evan abaissa la mélodie vers la respiration de Diva. Il lui envoya le plan du fossé et la place des personnes à protéger. Borren saisit le levier de décharge.",
+            "next": "c3-drain",
+            "set": {
+              "manoeuvre": "drain"
+            }
+          },
+          {
+            "id": "ecran",
+            "label": "Soutenir le rythme des équipes derrière l’écran",
+            "passage": "Il installa une balise sur le socle et frappa un premier battement de la paume. « Pas plus vite que ça », dit-il à Iseult. Elle le répéta aux porteurs.",
+            "next": "c3-ecran",
+            "set": {
+              "manoeuvre": "ecran"
+            }
+          }
+        ]
+      }
+    },
+    "c3-drain": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Le levier ne céda pas immédiatement. Iseult prit la place de la main blessée de Neris, et Borren pesa de tout son corps. Evan conserva la même mesure. Accélérer parce qu’ils avaient peur n’aurait pas donné à Diva une racine de plus.",
+        "L’eau jaillit sous le mur avec une violence qui leur coupa la voix. Diva tressaillit. Les premières racines se rompirent ; les suivantes s’accrochèrent aux pierres descellées et firent dévier le courant. Evan vit leur trajet comme elle le sentait : des creux, des résistances, la présence précieuse de chaque obstacle qu’on pouvait utiliser sans l’arracher.",
+        "Le bassin se vida assez vite pour dégager les dalles devant eux. Une caisse d’instruments disparut dans le fossé. Borren eut un mouvement pour la retenir, puis serra les dents et ne bougea plus. Neris garda contre elle le cylindre témoin que le capitaine avait réussi à déposer derrière le socle.",
+        "Diva referma ses ailes, une membrane déchirée sur le bord. Evan sentit la douleur, nette et limitée. Il eut envie d’y envoyer toute la chaleur dont il disposait. Il n’en fit rien. Leur ligne de retrait n’était pas encore ouverte ; ils avaient besoin de cette musique pour traverser.",
+        "Iseult posa la main sur son épaule à chaque changement de position. Le contact l’aida à maintenir le lien sans perdre le sol sous ses propres pieds. Ils reculèrent ensemble, laissant le courant emporter ce qu’on pourrait regretter plus tard."
+      ],
+      "next": "c3-astre"
+    },
+    "c3-ecran": {
+      "chapter": "c3",
+      "paragraphs": [
+        "La balise donna au battement un second emplacement. Ce n’était pas une seconde réserve de magie. Evan sentit sa fatigue se partager entre les deux sons et réduisit aussitôt la portée du masque. Il ne cherchait plus à atteindre toute la cour. Seulement ceux qui devaient avancer ensemble.",
+        "Les porteurs se déplacèrent d’une dalle à la suivante. Iseult annonçait les gestes ; Borren indiquait les vannes dans l’ordre. Neris maintenait les attaches du cylindre témoin sans employer sa main blessée. Quand une secousse les fit hésiter, Evan recommença la mesure au lieu de la presser.",
+        "Diva étaya un montant de l’écran avec une tresse de racines. Une membrane de son aile accrocha une arête et se fendit sur le bord. Evan sentit la douleur remonter le long de son bras, si familière qu’il voulut immédiatement la soigner. Il conserva le rythme. Guérir un peu maintenant leur ferait peut-être perdre l’abri avant qu’elle pût replier l’aile.",
+        "Au dernier passage, une barre se tordit et le pied de la balise fut écrasé. Le son disparut de ce côté. Evan continua à frapper directement sa paume contre le socle. Iseult le regardait assez souvent pour reprendre son battement ; les autres suivirent sa voix.",
+        "Ils laissèrent derrière eux le support et la caisse d’instruments. Evan ne put détacher ses yeux du petit disque brisé jusqu’à ce que Diva lui envoyât l’image très précise de son pied, encore à déplacer. Il le déplaça."
+      ],
+      "next": "c3-astre"
+    },
+    "c3-astre": {
+      "chapter": "c3",
+      "paragraphs": [
+        "La lumière se plia au-dessus du bassin.",
+        "Evan pensa d’abord qu’il allait tomber. Les gouttes suspendues devant lui décrivaient des arcs trop lents ; les éclats de pierre semblaient avoir oublié où se trouvait le sol. Une femme marchait entre eux dans une robe claire que la poussière n’atteignait pas.",
+        "Séraphine Argentum ne regarda pas le garçon. Elle observa la bride extérieure, leva deux doigts, et une étoile pas plus grande qu’un pépin s’alluma dans le creux de sa main. La cour prit une profondeur nouvelle, chaque ombre tirée vers un endroit qui n’existait pas une seconde auparavant.",
+        "La créature tenta encore d’avancer. L’espace devant elle se creusa en une sphère noire bordée d’un trait d’or. Son élan se replia sur lui-même. Séraphine referma la main ; la sphère, la poussière et ce qu’elle avait contenu se réduisirent à un point dont Evan ne put soutenir la vue. Le silence qui suivit n’avait rien de paisible.",
+        "« Si quelqu’un touche à cette bride, dit-elle, je le considérerai comme une contribution volontaire à mon irritation. »",
+        "Personne ne la toucha.",
+        "Le capitaine ouvrit la bouche pour rendre compte. Séraphine lui demanda le nombre de personnes encore dans le poste, pas celui des caisses. Elle attendit la réponse complète, puis déplaça deux pans de mur à une distance qu’Evan vit changer sans comprendre le mouvement. Le passage vers les chariots s’ouvrit.",
+        "Tam-Tam recula en grondant. Evan joua deux notes presque sans son pour lui montrer où il se trouvait. La fourrure blanche perdit peu à peu sa hauteur, laissant dans la neige les traces beaucoup trop grandes d’un ours qui redevenait petit. Diva rejoignit le garçon en boitant légèrement d’une patte.",
+        "Séraphine maintenait autour de la chambre un cercle d’astres minuscules. Elle aurait pu faire croire, à la voir immobile, que rien ne lui coûtait. Pourtant, elle ordonna qu’on cessât toute alimentation depuis le poste. « Ce tuyau ne finit pas ici. Le briser sans savoir ce qu’il relie serait une manière très coûteuse de nettoyer une cour. »",
+        "Borren lui transmit ses mesures. Elle les parcourut, posa une question sur les instruments employés et une autre sur les intervalles. Ses yeux se tournèrent alors vers Evan. Il eut le réflexe absurde de rentrer ses griffes, déjà rétractées.",
+        "« C’est lui qui les a distingués ? »",
+        "Iseult confirma. « Il a aussi demandé qu’on s’arrête quand il ne pouvait plus tenir. »",
+        "« Une aptitude qui se fait rare », répondit Séraphine. Evan ne sut pas si elle venait de lui adresser un compliment. Elle regardait déjà le cylindre dans les bras de Neris. Elle pouvait soulever un mur comme on tourne une page ; elle demandait néanmoins qu’on lui décrivît exactement la manière dont les mesures avaient été prises. Cette contradiction occupa Evan presque autant que sa peur.",
+        "Ils quittèrent le poste avant qu’elle eût terminé de refermer la chambre. Derrière eux, l’arche lointaine n’avait pas été franchie. Rien n’en était revenu. Les seules choses qu’ils emportaient avaient été prélevées de leur côté du monde, et Evan s’accrocha à cette certitude comme à une poignée dans un chariot trop rapide."
+      ],
+      "routes": [
+        {
+          "when": {
+            "secours": "soins"
+          },
+          "next": "c3-panser"
+        },
+        {
+          "next": "c3-partager"
+        }
+      ]
+    },
+    "c3-panser": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Dans la voiture, Evan retrouva sa trousse au premier geste. Il nettoya la petite coupure de Borren pendant qu’Iseult vérifiait qu’il n’avait ni vertige ni douleur aux côtes. Le nain voulut reprendre le linge pour se débrouiller seul. « Il fait ça correctement », dit la Veilleuse. Cela suffit à l’immobiliser un instant.",
+        "Evan s’occupa ensuite de l’aile de Diva. La blessure était mince, le bord encore chaud. Il joua sur sa flûte une phrase très simple et y plaça juste assez de magie pour arrêter le saignement. La déchirure ne disparut pas. Il la protégea avec une compresse, et Diva accepta le bandage avec la patience tendue de ceux qui savent qu’on essaie de les aider.",
+        "Quand il rangea la trousse, ses mains tremblaient de nouveau. Cette fois, il les montra à Iseult sans attendre qu’elle le remarquât. Elle lui donna de l’eau et le laissa tenir le gobelet à deux mains."
+      ],
+      "next": "c3-temoigner"
+    },
+    "c3-partager": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Iseult avait une trousse à sa ceinture. Elle nettoya la coupure de Borren, puis montra à Evan comment protéger le bord déchiré de l’aile de Diva. Il joua sur sa flûte une phrase assez courte pour ne pas faire semblant d’avoir encore beaucoup de force. Le saignement cessa ; la membrane resta ouverte sous le linge.",
+        "Evan retrouva le paquet de galettes. Certaines s’étaient brisées, mais elles n’avaient pas pris l’eau. Il en partagea les morceaux entre ceux qui pouvaient manger. Neris lui en rendit un avant qu’il eût oublié de se servir.",
+        "Tam-Tam dormait roulé contre sa cuisse. Une petite étincelle s’éteignait parfois sur son museau. Evan garda pour lui la dernière miette et lui promit de la lui donner au réveil. Pour la première fois depuis le poste, il parvint à penser à un moment qui n’était pas encore arrivé sans y mettre immédiatement un danger."
+      ],
+      "next": "c3-temoigner"
+    },
+    "c3-temoigner": {
+      "chapter": "c3",
+      "paragraphs": [
+        "La ville ne paraissait pas plus grande au retour. Elle paraissait simplement moins immobile. Les remparts, les tours, les bras des porteurs qui venaient à la rencontre des chariots : tout demandait un travail qu’Evan n’avait pas vu la veille.",
+        "Le cylindre fut placé dans un coffret à deux serrures. Un officier du Conseil prit l’une des clés, le capitaine du poste conserva l’autre. Neris exigea que le numéro du prélèvement et le nom de ceux qui l’avaient manipulé figurassent sur les deux registres. Séraphine, revenue avant le convoi par un trajet qu’elle n’avait pas cru nécessaire d’expliquer, lut le formulaire avant de le signer.",
+        "Un secrétaire s’approcha pour recueillir son témoignage. Iseult resta près du banc. « Tu peux garder ton masque, précisa-t-elle. Il nous faut des faits, pas ton visage sur une affiche. »",
+        "Evan avait chaud sous les attaches. Il avait aussi, pour la première fois, quelque chose à dire que plusieurs adultes avaient besoin d’entendre. Il pensa à la place, aux regards sur Diva, à la façon dont une personne pouvait devenir un sujet de conversation avant de savoir ce qu’elle acceptait de montrer.",
+        "Le secrétaire attendait avec un crayon ordinaire. Ce détail finit par rendre la décision supportable."
+      ],
+      "choice": {
+        "prompt": "Evan posa son étui sur ses genoux avant de commencer.",
+        "options": [
+          {
+            "id": "visage",
+            "label": "Retirer le masque pour faire son récit à visage découvert",
+            "passage": "Il défit les attaches et posa le masque contre sa cuisse. Ses oreilles se rabattirent, mais il regarda le secrétaire en donnant son nom.",
+            "next": "c3-visage",
+            "set": {
+              "temoignage": "visage"
+            }
+          },
+          {
+            "id": "masque",
+            "label": "Garder le masque et demander un témoignage discret",
+            "passage": "« Je veux bien raconter. Mais je ne veux pas qu’on me présente aux gens. » Evan tint l’étui un peu moins fort lorsque le secrétaire nota cette demande avant tout le reste.",
+            "next": "c3-masque",
+            "set": {
+              "temoignage": "masque"
+            }
+          }
+        ]
+      }
+    },
+    "c3-visage": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Les premiers mots sortirent difficilement. Evan raconta le plomb, les battements, l’endroit où son pied avait manqué le sol. Le secrétaire lui fit distinguer ce qu’il avait vu de ce que Neris lui avait expliqué ensuite. Il ne corrigeait pas son souvenir. Il l’aidait à ne pas lui faire porter davantage qu’il ne contenait.",
+        "À la fin, le garçon demanda qu’on notât aussi le travail de Diva et de Tam-Tam. Pas seulement leurs espèces. Le secrétaire leva les yeux vers Iseult, puis écrivit les deux noms en toutes lettres.",
+        "Neris les rejoignit lorsque la feuille fut signée. Elle ne fit aucune remarque sur le visage découvert. Elle lui demanda simplement s’il pouvait lui montrer, un autre jour, la différence entre compter un silence et attendre un bruit. Evan répondit oui avant de se rappeler qu’il avait le droit d’y réfléchir."
+      ],
+      "next": "c3-retour"
+    },
+    "c3-masque": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Il raconta ce qu’il avait vu, sans retirer le masque. Le secrétaire devait parfois lui demander de répéter ; Evan se concentra sur les faits pour ne pas entendre dans chaque question un reproche. Iseult ne parla qu’une fois, afin de préciser l’emplacement du chariot.",
+        "Il demanda qu’on inscrivît Diva et Tam-Tam dans le rapport. Pas comme des pièces de matériel. Le secrétaire ajouta leurs noms sous le sien et traça un trait autour de la liste des personnes à ne pas présenter publiquement sans autorisation.",
+        "Neris les rejoignit à la sortie. Elle marcha à côté de lui sans essayer de voir sous les attaches. Après un moment, elle lui demanda comment on apprenait à compter les silences. Evan lui répondit qu’il lui montrerait un jour où il n’aurait pas encore du bruit jusque dans les genoux. Elle sourit. Il ne se sentit pas obligé d’en faire davantage."
+      ],
+      "next": "c3-retour"
+    },
+    "c3-retour": {
+      "chapter": "c3",
+      "paragraphs": [
+        "Maëlle avait gardé la chambre. Evan le sut avant de monter : son écharpe était accrochée au même clou, une bassine d’eau attendait près de la fenêtre, et personne ne lui demanda combien le poste avait rapporté.",
+        "Il avait reçu une indemnité de déplacement. Iseult en avait écrit le montant sur une feuille et précisé qu’il ne s’agissait pas d’un engagement à rejoindre une unité. Borren avait ajouté une promesse de réparation pour le matériel confié à l’inspection. Evan rangea les deux papiers dans l’étui, sous le tissu qui protégeait le violon. Il était plus facile de croire à une chose lorsqu’elle pouvait se plier sans disparaître.",
+        "Diva dormit dans la cour, l’aile maintenue au repos. Tam-Tam ne voulut pas quitter le lit. Evan s’assit entre eux, près de la fenêtre ouverte, et prit son instrument sans y appeler de magie.",
+        "Il joua lentement. Des notes qu’il connaissait avant de savoir les nommer. Ses doigts commirent deux erreurs et il les laissa passer. En bas, une conversation s’interrompit, reprit à voix plus douce. Personne ne frappa pour lui demander d’être utile.",
+        "À la fin du morceau, il sentit Diva lui répondre par l’image d’une petite pousse protégée entre des pierres. Tam-Tam ne répondit pas ; il ronflait. Evan resta un moment avec cette différence. Aimer quelqu’un n’exigeait pas qu’il fût toujours en train de vous rejoindre.",
+        "Sur la table, Iseult avait laissé la copie de son témoignage. Le cylindre témoin serait étudié. Les conduites isolées resteraient sous surveillance. Le refuge aurait de l’eau par un autre circuit. Rien de tout cela n’expliquait les trois coups, ni l’espace qui suivait. Mais chacun de ces petits faits avait une place, un nom et quelqu’un chargé de revenir le vérifier.",
+        "Evan compta les pièces une dernière fois. Il pouvait acheter des cordes. Il pouvait rendre l’écharpe propre. Et, demain matin, il savait où il prendrait son petit déjeuner.",
+        "Il posa le violon dans son étui. Avant de fermer, il ajouta sur un bout de papier trois traits, puis un espace. Il ne dessina pas le quatrième. Pas encore.",
+        "Cette nuit-là, le mur ne répondit pas. Evan l’écouta quelque temps, puis il s’endormit."
+      ],
+      "ending": "Fin du troisième chapitre"
+    },
+    "c1-nom": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Le gardien baissa les yeux vers lui, puis vers Diva, restée près de la porte. Il ne demanda pas si elle mordait. Evan lui en fut reconnaissant avant de découvrir la raison de son silence : l’homme tenait un registre de courses et cherchait une ligne qu’il pourrait réellement lui confier.",
+        "« Pas ce matin. Tout ce qui reste sort du quartier. » Il montra les deux dernières fiches. Une livraison de pièces au poste nord ; une collecte près des serres exposées. Evan avait déjà envie de répondre qu’il savait se débrouiller. Le gardien referma le registre avant qu’il eût à choisir entre mentir et se taire.",
+        "« Reviens après la relève. Les ateliers ont parfois besoin de mains dans les cours. Pas de quelqu’un qui traverse les lisières pour moins cher. »",
+        "Evan sentit ses oreilles chauffer. Il aurait préféré une pièce, même une petite. Mais l’homme inscrivit son prénom sur une ardoise réservée aux visites de l’après-midi, en lui demandant de confirmer l’orthographe. Evan la donna avec une application excessive. Il ne gagnait rien pour le moment. Quelqu’un saurait néanmoins qui il cherchait s’il revenait."
+      ],
+      "next": "c1-rue-suite"
+    },
+    "c1-prudence": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Le gardien regarda le masque et demanda si Evan pouvait répéter sans le petit écho qui suivait les mots. Le garçon défit le clapet du conduit sonore. Ce n’était pas de la magie, seulement une lamelle mal replacée qui faisait vibrer sa propre voix.",
+        "Ils lurent ensemble les deux courses encore affichées. Les deux quittaient le quartier. Evan reconnaissait les noms des destinations ; il n’aimait aucune des routes qui y menaient. Le gardien décrocha les fiches pour une équipe plus âgée et lui proposa de revenir après la relève.",
+        "« Je ne réserve pas une sortie à quelqu’un dont je ne connais ni les forces ni le nom », précisa-t-il. Evan se raidit. L’homme écarta la main. « Une course dans une cour, c’est autre chose. On peut apprendre. »",
+        "Il lui montra le banc où attendre, sans exiger qu’il découvrît son visage. Evan n’y resta pas. Il avait besoin de manger avant de pouvoir perdre une matinée à espérer. En s’éloignant, il mémorisa pourtant l’heure de la relève. Il n’avait aucune raison de considérer une porte comme fermée simplement parce qu’il n’avait pas réussi à la franchir du premier coup."
+      ],
+      "next": "c1-rue-suite"
+    },
+    "c1-rue-suite": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Dans les rues de Noctarion, les premiers chariots roulaient déjà. Une femme naine lavait le seuil d’une échoppe en grondant un seau qui gelait par le fond. Sur les murs, une affiche annonçait la cent trente-septième commémoration du Voile. Le dessinateur avait représenté l’ancien Soleil comme une immense pièce d’or. Evan n’avait jamais su si sa couleur était fidèle. Les gens assez vieux pour en avoir vu des images trouvaient toujours le moyen de se contredire.",
+        "Il leva les yeux. Le Soleil Noir occupait sa place au-dessus des toits, bordé de son halo pâle. Des bâches protégeaient les verrières tournées vers la Lune ; leurs cordes frottaient les corniches. Entre ces deux lumières, la ville s’éveillait avec le bruit obstiné des choses qu’il fallait réparer.",
+        "Tam-Tam trottait contre sa botte. Diva les suivait au sol, les ailes serrées, assez grande pour que les passants lui cèdent spontanément un peu de place. Evan évitait de regarder les visages trop longtemps. Quand les gens reconnaissaient un dragon, leur curiosité devenait vite une manière de vous entourer.",
+        "Au bout de la rue des Cuves, le boulanger vendait les pains de la veille. Evan posa ses trois dernières pièces sur le comptoir. Le boulanger les compta sans commentaire, puis en repoussa une du bout de son ongle. « Celui-là s’est fendu. » Evan hocha la tête, incapable de trouver une réponse qui ne trahît pas sa reconnaissance.",
+        "Il n’avait pas encore rompu la croûte qu’un bruit sec le fit se retourner. Sur la marche du dispensaire voisin, une petite fille venait de laisser tomber sa cuillère. Elle la regardait sans se pencher. Une diacre était accroupie devant elle, les mains pleines de linges. Derrière la porte, quelqu’un appelait pour de l’eau chaude.",
+        "Le ventre d’Evan se serra. Dans sa paume, le pain gardait juste assez de tiédeur pour faire croire qu’il sortait du four. Il calcula ce qu’il pourrait en garder, ce qu’il faudrait à Tam-Tam, ce que Diva accepterait de prétendre ne pas vouloir. Sa seule pièce sembla soudain peser beaucoup plus lourd que les trois précédentes."
+      ],
+      "choice": {
+        "prompt": "Il resta près de la marche, le pain entre ses mains.",
+        "options": [
+          {
+            "id": "partager",
+            "label": "Partager le pain avec la petite fille",
+            "passage": "Evan cassa le pain avant d’avoir le temps de refaire ses comptes. Il posa la moitié la moins dure à côté de la petite fille.",
+            "next": "c1-pain-donne",
+            "set": {
+              "partage_pain": true
+            }
+          },
+          {
+            "id": "garder",
+            "label": "Garder de quoi nourrir ses compagnons",
+            "passage": "Evan referma le morceau de toile autour du pain. Il en avait assez pour eux trois, à condition de ne rien perdre.",
+            "next": "c1-pain-garde",
+            "set": {
+              "partage_pain": false
+            }
+          }
+        ]
+      }
+    },
+    "c1-aveu": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Iseult ne lui demanda pas de recommencer pour lui montrer. Elle s’assit sur le bord de la borne. « Tu t’es arrêté quand tu n’avais plus la force. Et tu as accepté qu’on soigne quelqu’un à ta place. C’est une partie du travail que beaucoup apprennent trop tard. »",
+        "Evan suivit du doigt une couture de son gant. « Je pourrais aussi faire peur aux gens sans le vouloir. » Il avait dit cela si bas que la Veilleuse dut se pencher.",
+        "« Alors on cherchera comment tu peux nous prévenir. Pas aujourd’hui. Et pas en te demandant d’attendre le moment où tu n’y arrives plus. »",
+        "Il releva la tête. Elle ne venait pas de lui promettre que son don ne ferait jamais de mal. Elle ne l’avait pas non plus regardé comme quelque chose dont on devait se débarrasser. Cela laissait entre les deux une place difficile, mais assez grande pour qu’il pût encore y respirer."
+      ],
+      "next": "c1-route-refuge"
+    },
+    "c1-question": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Iseult regarda la place évacuée. « Parfois, quelqu’un qui voit mieux que toi te le dit. Il faut encore être capable de l’écouter. »",
+        "Evan songea aux ordres qu’elle avait répétés, au dernier battement qu’il aurait voulu prolonger. Il aurait aimé une règle plus précise. Un nombre de notes, une distance, quelque chose qu’on pût apprendre avant de se retrouver devant un réservoir prêt à éclater.",
+        "« Et quand la personne se trompe ? » demanda-t-il.",
+        "La Veilleuse réfléchit assez longtemps pour qu’il craignît de l’avoir vexée. « Alors nous devons être capables de le dire après. Sinon, la prochaine fois sera la même. » Elle lui tendit son étui, qu’il avait laissé glisser entre ses genoux. Evan le reprit à deux mains. Il n’était pas certain de pouvoir lui faire confiance pour tout. Il lui faisait déjà un peu confiance pour admettre qu’elle ne savait pas tout."
+      ],
+      "next": "c1-route-refuge"
+    },
+    "c1-route-refuge": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Iseult l’accompagna jusqu’au dispensaire, sans le presser de raconter davantage. Les cris de la place avaient laissé dans ses oreilles un bourdonnement qui ressemblait encore à une foule. À chaque pas, Diva veillait à ce que son aile restât entre le garçon et les chariots."
+      ],
+      "routes": [
+        {
+          "when": {
+            "partage_pain": true
+          },
+          "next": "c1-refuge-partage"
+        },
+        {
+          "next": "c1-refuge-reserve"
+        }
+      ]
+    },
+    "c1-vaisselle": {
+      "chapter": "c1",
+      "paragraphs": [
+        "La cuisine sentait les oignons et le bois rincé. Maëlle lui installa une chaise près de la table. Il essuya les bols pendant qu’elle les lui passait, un par un, en s’arrêtant assez souvent pour lui laisser regarder ce qui se passait autour de lui.",
+        "Un garçon vint réclamer une cuillère qui, apparemment, lui appartenait parce qu’elle était tordue dans le bon sens. Maëlle protesta, puis fouilla tout de même le fond d’une caisse jusqu’à la retrouver. Evan se surprit à sourire derrière son bol. Il aimait qu’ici les choses eussent des raisons trop petites pour figurer sur un registre.",
+        "Quand le dernier torchon fut humide, il demanda où se trouvaient les propres. Maëlle lui montra l’étagère, puis s’arrêta. « Demain. Ça suffit pour aujourd’hui. » Il resta un moment avec ses mains vides. La pièce continuait à fonctionner sans elles ; personne n’en profitait pour lui dire qu’il n’y avait plus sa place."
+      ],
+      "next": "c1-fin-soir"
+    },
+    "c1-musique": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Il descendit avec le violon et choisit une chaise près de la porte. Pas de balise, pas de masque pour porter le son. Il vérifia ses cordes une à une sous les regards des premiers curieux, puis recommença le morceau qu’il n’avait pas pu terminer sur la place.",
+        "Cette fois, il n’essaya de faire circuler aucune chaleur. Les gens pouvaient s’ennuyer. L’un d’eux s’endormit. Un enfant posa trois questions au milieu d’une phrase musicale ; Evan s’interrompit pour répondre à la deuxième, ayant déjà oublié la première.",
+        "Lise battait la mesure contre sa cuillère. Il ralentit pour elle sans changer ce qu’elle ressentait. La différence était mince et importante. Lorsqu’il termina, les quelques personnes qui avaient écouté applaudirent doucement pour ne pas réveiller l’homme endormi. Evan eut les oreilles si chaudes qu’il remit son masque sur son front en prétendant vérifier une attache."
+      ],
+      "next": "c1-fin-soir"
+    },
+    "c1-fin-soir": {
+      "chapter": "c1",
+      "paragraphs": [
+        "En remontant, il s’arrêta devant une fenêtre du palier. La cour avait été nettoyée. Un filet d’eau suivait le bord des dalles et s’arrêtait dans un carré de terre où quelqu’un essayait de faire pousser des herbes. Diva avait laissé deux fleurs violettes au bout des tiges. Evan se promit de lui demander demain si elle avait eu la permission.",
+        "Dans le couloir, une porte portait encore la trace d’un nom effacé. Il se demanda combien de personnes avaient dormi ici avant lui. Certaines étaient parties parce qu’elles avaient trouvé mieux. Il préféra s’arrêter à cette possibilité.",
+        "Il compta les marches en rejoignant sa chambre. Un jour, il pourrait cesser de mémoriser les sorties au point d’oublier le reste des pièces. Il ne voulait pas s’en faire une promesse ce soir. Il lui suffisait de remarquer la couleur d’un carreau, l’odeur du savon, le bruit ordinaire d’une maison où l’on pouvait demander de l’eau sans donner une pièce."
+      ],
+      "next": "c1-dernieres-notes"
+    },
+    "c1-dernieres-notes": {
+      "chapter": "c1",
+      "paragraphs": [
+        "Une fois seul, Evan compta les pièces. Il pouvait acheter de la nourriture. Peut-être faire réparer sa cheville de violon. Il pouvait même garder une pièce sans lui avoir déjà trouvé un usage. Cette dernière possibilité le désarma plus que le reste.",
+        "Tam-Tam s’endormit contre son ventre. Dans la cour, Diva remua les racines d’une herbe poussée entre deux pavés, puis lui envoya une sensation de porte fermée et de pluie tenue à distance. Cette fois, cela voulait dire bien.",
+        "Evan posa l’archet sur la couverture. Par la fenêtre, il voyait un morceau de ciel entre deux murs. Il pensa aux trois coups, à la longue attente qui suivait. Sans jouer, du bout de l’ongle, il les compta sur le bois du lit.",
+        "Dans le mur derrière sa tête, quelque chose répondit."
+      ],
+      "next": "c2-matin"
+    }
+  }
+}
