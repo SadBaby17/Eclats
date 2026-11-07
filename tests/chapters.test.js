@@ -15,10 +15,10 @@ function advance(count) {
     r = choose(story, r.decisions, r.pending.scene, r.pending.options[0].id);
   return r;
 }
-test("only reached chapters are accessible; all eight are listed from the start", () => {
+test("only reached chapters are accessible; all thirteen are listed from the start", () => {
   const fresh = replay(story),
     chapters = chapterProgress(story, fresh);
-  assert.equal(chapters.length, 8);
+  assert.equal(chapters.length, 13);
   assert.deepEqual(
     chapters.filter((c) => c.unlocked).map((c) => c.number),
     [1],
@@ -46,7 +46,7 @@ test("old three-chapter saves unlock the fourth; replacing an early decision rel
     chapterProgress(story, advance(15)).filter((c) => c.unlocked).length,
     4,
   );
-  const full = advance(40);
+  const full = advance(65);
   assert.ok(chapterProgress(story, full).every((c) => c.unlocked));
   const pending = replay(story).pending;
   const revised = choose(story, [], pending.scene, pending.options[1].id);
@@ -58,10 +58,10 @@ test("old three-chapter saves unlock the fourth; replacing an early decision rel
   );
   assert.equal(chapterScene(story, revised, "c8"), null);
 });
-test("the catalogue exposes only the preserved eight-chapter novel", () => {
+test("the catalogue exposes only the preserved thirteen-chapter novel", () => {
   assert.equal(BOOKS.length, 1);
   assert.equal(BOOKS[0].id, story.id);
   assert.equal(findBook("demo"), undefined);
   assert.equal(findBook("le-phare-des-heures"), undefined);
-  assert.equal(story.chapters.length, 8);
+  assert.equal(story.chapters.length, 13);
 });

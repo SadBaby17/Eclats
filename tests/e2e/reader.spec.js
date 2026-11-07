@@ -43,7 +43,7 @@ async function details(page) {
   await page
     .getByRole("button", { name: `Voir les chapitres : ${title}`, exact: true })
     .click();
-  await expect(page.locator(".chapter-link")).toHaveCount(8);
+  await expect(page.locator(".chapter-link")).toHaveCount(13);
 }
 async function ready(page) {
   await page.evaluate(async () => {
@@ -97,10 +97,10 @@ test("library opens chapter details, locks future chapters and contains no demo"
     page.getByText("Le phare des heures", { exact: true }),
   ).toHaveCount(0);
   await page.getByRole("link", { name: title, exact: true }).click();
-  await expect(page.locator(".chapter-link")).toHaveCount(8);
+  await expect(page.locator(".chapter-link")).toHaveCount(13);
   await expect(page.locator("#debut")).toBeHidden();
   await expect(page.locator("[data-chapter-id=c1]")).toBeEnabled();
-  for (let n = 2; n <= 8; n++) {
+  for (let n = 2; n <= 13; n++) {
     const chapter = page.locator(`[data-chapter-id=c${n}]`);
     await expect(chapter).toBeDisabled();
     await expect(chapter).toContainText("Inaccessible");
@@ -357,7 +357,7 @@ test("home and chapter list fit narrow phones, desktop and night theme", async (
         exact: true,
       })
       .click();
-    await expect(page.locator(".chapter-link")).toHaveCount(8);
+    await expect(page.locator(".chapter-link")).toHaveCount(13);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -499,26 +499,26 @@ test("repair reports offline failures and preserves reading data", async ({
   expect(await saveValue(page)).toEqual(before);
 });
 
-test("all eight preserved chapters can be read and revisited after completion", async ({
+test("all thirteen chapters can be read and revisited after completion", async ({
   page,
 }) => {
   test.setTimeout(60_000);
   await openReader(page);
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 65; i++) {
     if (i >= 15) await expect(page.locator(".choice input")).toHaveCount(5);
-    await decision(page, i >= 15 ? i % 5 : 0);
+    await decision(page, i >= 15 && i !== 59 ? i % 5 : 0);
   }
-  await expect(page.locator(".chapter-heading")).toHaveCount(8);
+  await expect(page.locator(".chapter-heading")).toHaveCount(13);
   await expect(
     page.getByRole("heading", {
-      name: "Fin du huitième chapitre",
+      name: "Les portes qui restent ouvertes",
       exact: true,
     }),
   ).toBeVisible();
   const history = (await saveValue(page)).decisions;
-  expect(history).toHaveLength(40);
+  expect(history).toHaveLength(65);
   await details(page);
-  await expect(page.locator(".chapter-link:enabled")).toHaveCount(8);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(13);
   await page.locator("[data-chapter-id=c4]").click();
   await expect(page.locator("#scene-c4-1 .chapter-heading")).toBeInViewport();
   expect((await saveValue(page)).decisions).toEqual(history);
@@ -561,4 +561,22 @@ test("removed demo selection falls back to the novel without deleting existing d
   expect(sw).not.toContain("demo.json");
   const response = await page.request.get("stories/demo.json");
   expect(response.headers()["content-type"]).not.toContain("application/json");
+});
+
+test("an existing chapter-eight save unlocks chapter nine without clearing decisions", async ({
+  page,
+}) => {
+  await seed(page, 40);
+  await openReader(page);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(9);
+  await expect(page.locator("[data-chapter-id=c10]")).toBeDisabled();
+  await page.locator("[data-chapter-id=c9]").click();
+  await expect(page.locator("#scene-c9-1 .choice input")).toHaveCount(5);
+  await decision(page, 3);
+  await page.reload();
+  await enterReader(page);
+  expect((await saveValue(page)).decisions).toHaveLength(41);
+  await details(page);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(9);
 });

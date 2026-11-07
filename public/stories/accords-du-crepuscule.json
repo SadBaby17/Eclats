@@ -6,8 +6,8 @@
   "subtitle": "Un roman d’Elyrion",
   "author": "Éclats · Univers original fourni par le créateur",
   "publication": {
-    "status": "ongoing",
-    "availableChapters": 8
+    "status": "complete",
+    "availableChapters": 13
   },
   "variables": {
     "partage_pain": false,
@@ -49,7 +49,32 @@
     "premiere_alerte": "",
     "observation_zerathiel": "",
     "assemblee_zerathiel": "",
-    "lien_zerathiel": ""
+    "lien_zerathiel": "",
+    "temoin_ciel": "",
+    "combat_lisiere": "",
+    "rapport_lisiere": "",
+    "question_aelyr": "",
+    "preparer_conseil": "",
+    "voix_conseil": "",
+    "garde_fou": "",
+    "atelier_commun": "",
+    "notice_quartiers": "",
+    "tache_hors_magie": "",
+    "apprentissage_relais": "",
+    "retour_ansel": "",
+    "chez_adele": "",
+    "essai_commun": "",
+    "objet_decisif": "",
+    "place_accord": "",
+    "combat_relais": "",
+    "soutien_critique": "",
+    "signal_accord": "",
+    "strategie_finale": "",
+    "premiere_phrase": "",
+    "reponse_enfant": "",
+    "trace_memorial": "",
+    "avenir_evan": "",
+    "derniere_musique": ""
   },
   "chapters": [
     {
@@ -99,6 +124,36 @@
       "number": 8,
       "title": "Le ciel qui attend",
       "start": "c8-1"
+    },
+    {
+      "id": "c9",
+      "number": 9,
+      "title": "Ce que le ciel retient",
+      "start": "c9-1"
+    },
+    {
+      "id": "c10",
+      "number": 10,
+      "title": "Les cinq voix",
+      "start": "c10-1"
+    },
+    {
+      "id": "c11",
+      "number": 11,
+      "title": "Ce que l’on confie au passage",
+      "start": "c11-1"
+    },
+    {
+      "id": "c12",
+      "number": 12,
+      "title": "Une place dans l’accord",
+      "start": "c12-1"
+    },
+    {
+      "id": "c13",
+      "number": 13,
+      "title": "Ce que l’aube ne promet pas",
+      "start": "c13-1"
     }
   ],
   "scenes": {
@@ -3166,7 +3221,7 @@
         "Le soir, au refuge, le garçon ouvrit son cahier à une page neuve. Il n’y dessina pas le Soleil Noir. Il copia d’abord la petite faute qu’il avait faite sur la flûte, puis la correction reçue d’un enfant dont il connaissait encore mal le nom.",
         "Sous la portée, il écrivit la date du prochain échange. La place laissée après les notes ne lui parut pas vide. Pour la première fois depuis les coups dans le mur, il pouvait y attendre autre chose qu’une menace."
       ],
-      "ending": "Fin du huitième chapitre"
+      "next": "c9-1"
     },
     "c4-1c": {
       "chapter": "c4",
@@ -3847,6 +3902,1951 @@
         "Ils avaient appris à ne pas laisser un nom décider de la valeur d’une mesure. Ici, ils devaient encore apprendre les noms. La difficulté aurait pu les rendre impatients ; elle leur donna surtout une raison de ne pas traiter trop vite les usages des autres comme des explications déjà acquises."
       ],
       "next": "c8-2"
+    },
+    "c9-1": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Le jour où le fragment de bol se fendit, Evan crut d’abord l’avoir cassé. Il le tenait entre deux doigts, près de la fenêtre, pour en recopier la marque. Une ligne mince courut dans la matière claire et s’arrêta avant le bord. Il cessa de respirer, puis vit la même ligne dans l’eau du gobelet posé à côté. Elle disparut lorsqu’il déplaça le bol. Le fragment, lui, était intact.",
+        "Il appela Maëlle sans toucher au violon. La diacre regarda les deux objets, éloigna les enfants de la chambre et fit prévenir Iseult. Elle ne lui demanda pas pourquoi il avait encore manipulé une chose inconnue ; elle lui demanda de retrouver l’heure précise. Evan consulta la pendule du palier. Il n’aurait pas su expliquer le soulagement qu’il éprouva à recevoir une question assez petite pour avoir une réponse.",
+        "Avant de partir pour l’atelier, Evan dut récupérer Tam-Tam sous un banc. L’ourson avait décidé de garder le fragment de bol, probablement parce qu’on le manipulait avec assez d’attention pour qu’il méritât une garde particulière. Il avait poussé l’objet au fond d’un panier où quelqu’un rangeait les chiffons propres. Evan s’accroupit et tenta de lui expliquer qu’une chose pouvait être importante sans qu’on la cachât à ceux qui en avaient besoin.",
+        "Le lien lui renvoya une image parfaitement convaincue de sécurité, suivie de la faim. Il se mit à rire, puis resta un instant immobile, surpris d’avoir pu le faire après les premières nouvelles. Maëlle lui tendit un linge pour envelopper le fragment et demanda si la haute surveillance du panier prendrait aussi en charge les miettes sous la table. Tam-Tam se redressa aussitôt. Diva suivait la scène depuis la fenêtre avec une patience qui contenait un peu trop d’amusement pour être entièrement innocente.",
+        "Evan récupéra le bol sans avoir vaincu une grande difficulté. Il avait négocié avec un ourson, gardé un objet entier et entendu une plaisanterie. Ces faits lui firent du bien avant d’entrer dans une pièce où l’on allait changer la taille de ce qu’il croyait savoir. Il les conserva dans son esprit sans en faire des preuves que le monde serait forcément clément avec lui le reste de la journée.",
+        "Au même moment, un messager arrivait de Zerathiel. Sael avait fait transmettre des relevés sans attendre le rendez-vous suivant. Les dernières mesures de l’observatoire ne montraient plus une simple variation d’éclat : plusieurs points avaient changé de relation avec une même région du ciel. La lumière reçue restait presque normale. Le mouvement qui la traversait ne l’était plus.",
+        "Séraphine réunit les spécialistes dans l’atelier du Conseil. Les deux autres Arcanistes qu’Evan n’avait pas encore rencontrés apportèrent des séries anciennes et des cartes dont la précision lui fit peur avant qu’il sût les lire. Une cinquième voix, celle d’une femme aux doigts tachés d’encre, demanda qu’on affichât d’abord les incertitudes. Evan apprécia de ne pas être le seul à avoir besoin de voir ce qui manquait.",
+        "Veyr plaça trois ensembles de relevés côte à côte : Elyrion, Keryth, Zerathiel. Les mêmes décalages apparaissaient à des moments différents. Le cuivre de la citerne et le fragment avaient seulement reçu une variation qui venait de beaucoup plus loin. Ce n’était pas une voix essayant de parler à Evan. C’était une secousse dont il avait reconnu le rythme parce que la musique lui avait appris à ne pas ignorer les silences.",
+        "« Voilà qui vous évite une vocation très ennuyeuse de prophète », observa Séraphine. Le garçon leva la tête. Elle ne souriait pas, mais sa façon de détourner l’attention de lui lui rendit un peu d’air. Les autres regardaient maintenant les cartes et non ses oreilles, ses compagnons ou l’étui posé à ses pieds.",
+        "Les schémas de Keryth comportaient une couche qu’ils n’avaient pas pu lire sur place. En comparant les positions copiées à Zerathiel, Odrane parvint à faire correspondre plusieurs signes à des changements d’échelle. Le contour immense représenté autour des points n’était pas un empire ni un réseau. Il avait une limite qui se déplaçait comme celle d’un corps, sans garder la forme d’une planète.",
+        "Pour savoir si leur rapprochement tenait, il fallait revenir au relais de la Lisière avec les témoins des deux mondes. Cette fois, Evan n’y allait pas pour découvrir qu’un bruit existait. Il devait aider à comparer ce qui se produisait au même instant en des lieux différents. Il sentit la différence entre une mission qu’il comprenait et une mission dont il pouvait prétendre connaître tous les dangers.",
+        "Iseult lui laissa choisir le témoin qu’il suivrait de près. Les autres seraient contrôlés indépendamment. Evan demanda où chacun était fixé, combien de temps durerait une série et à quel signal ils reculeraient. Les questions sortirent sans qu’il les eût répétées dans sa chambre. Sa timidité n’avait pas disparu ; elle devait simplement partager la place avec quelque chose de plus urgent."
+      ],
+      "choice": {
+        "prompt": "Il posa sa main à plat près des trois relevés, sans les recouvrir.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Suivre les intervalles du témoin sonore",
+            "passage": "Evan choisit le témoin dont il distinguait les retards. Il demanda un balancier indépendant à côté : ses oreilles lui seraient utiles, mais il ne voulait pas qu’elles eussent le dernier mot.",
+            "set": {
+              "temoin_ciel": "son"
+            },
+            "next": "c9-2"
+          },
+          {
+            "id": "b",
+            "label": "Observer les variations dans le bassin de mesure",
+            "passage": "Il désigna les traits apparus dans son gobelet. « Je voudrais comparer ce que l’eau montre avant de décider ce que j’entends. » Borren lui confia les marques de niveau.",
+            "set": {
+              "temoin_ciel": "eau"
+            },
+            "next": "c9-2"
+          },
+          {
+            "id": "c",
+            "label": "Comparer les positions des trois séries de cartes",
+            "passage": "Evan se plaça près d’Odrane. Les cartes lui demandaient plus d’effort que les notes, mais elles l’aideraient à séparer une même secousse des façons différentes dont chaque monde la recevait.",
+            "set": {
+              "temoin_ciel": "carte"
+            },
+            "next": "c9-2"
+          },
+          {
+            "id": "d",
+            "label": "Rester attentif aux réactions de Diva et du sol",
+            "passage": "Il choisit de décrire ce que sa compagne sentait, sans lui demander de provoquer une réponse des plantes. Neris réserverait ces observations à une colonne distincte, avec leur heure et leurs limites.",
+            "set": {
+              "temoin_ciel": "diva"
+            },
+            "next": "c9-2"
+          },
+          {
+            "id": "e",
+            "label": "Tenir le registre commun des départs et des écarts",
+            "passage": "Evan prit le cahier destiné aux comparaisons. Il relirait chaque valeur à celui qui la donnait. Il ne pouvait pas voir toutes les choses à la fois ; il pouvait éviter qu’elles fussent réunies trop vite.",
+            "set": {
+              "temoin_ciel": "registre"
+            },
+            "next": "c9-2"
+          }
+        ]
+      }
+    },
+    "c9-2": {
+      "chapter": "c9",
+      "paragraphs": [
+        "La Lisière avait perdu l’odeur de l’eau renversée. Une partie du mur restait bâchée, et le bassin portait une bande plus claire à l’endroit où le courant avait arraché les dépôts. Evan passa la main sur le socle derrière lequel ils s’étaient abrités. Il s’attendait à ressentir immédiatement la peur de ce jour-là. Il ne trouva d’abord qu’une pierre froide, puis la colère de s’être préparé à avoir peur.",
+        "Le capitaine avait fait dégager un périmètre autour du relais. Personne ne toucherait au portail pendant la série. Séraphine supervisait les correspondances depuis une plateforme où les instruments demeuraient visibles de tous les observateurs. Elle avait refusé de déformer l’espace pour leur donner un résultat plus facile à lire. Ils devaient mesurer ce que le monde faisait sans son aide avant de savoir ce qu’il lui faudrait maintenir.",
+        "Neris remit à Evan une copie du relevé de Zerathiel. Sael avait ajouté des marques différentes de celles du premier échange : des mesures répétées, des hésitations corrigées, un emplacement laissé vide parce que l’observation n’avait pas pu être achevée. Le garçon regarda longtemps ce dernier signe. Quelqu’un, de l’autre côté, avait choisi de ne pas remplir le manque avec ce qu’il aurait aimé leur apprendre.",
+        "Les premiers essais concordèrent. À la même phase, la liaison de Keryth perdait une partie de sa continuité, celle d’Elyrion recevait une surcharge et celle de Zerathiel montrait une arrivée encore faible. La différence pouvait se représenter par trois niveaux d’un même mouvement. Evan suivit l’explication jusqu’au moment où Veyr lui demanda ce qu’un réservoir faisait lorsqu’il n’avait plus de sortie.",
+        "Il pensa à la citerne. Mais l’image ne suffisait pas. Les archives montraient une présence capable d’accumuler de la magie à une échelle dont une ville ne constituait même pas une petite mesure. Quand cette accumulation menaçait de se défaire, la présence rejoignait une source d’énergie assez puissante pour la stabiliser. Une étoile. L’équilibre trouvé mêlait ensuite son propre rayonnement à celui de l’astre.",
+        "Séraphine fit apparaître un modèle au-dessus du support, sans lui donner le pouvoir de ce qu’il représentait. Un point chaud entra dans une masse presque transparente. Les contours cessèrent de trembler, puis des filaments se répandirent autour. « Ce n’est encore qu’une relation vérifiée entre des mesures, dit-elle. Pas l’autorisation de raconter ce que cet être pense. »",
+        "Evan regarda le point au centre. Sur Elyrion, il avait un nom assez simple pour tenir dans la bouche d’un enfant : le Soleil. Le Voile n’était pas seulement la disparition d’une lumière. Quelque chose avait trouvé un moyen de ne pas se détruire en prenant cette énergie, et le monde entier en recevait les conséquences.",
+        "Une dalle vibra sous la table. Le capitaine fit arrêter la série. Evan recula avec les autres, puis entendit le treillis ouest céder. La perturbation avait ramené des créatures vers le relais. Elles ne venaient pas chercher un savant, un témoin ou une réponse. Elles frappaient les supports vivants et les obstacles avec la même indifférence. Une longue forme sombre se glissa entre deux blocs avant que les gardes pussent refermer le passage.",
+        "Iseult plaça Evan derrière le mur bas qui longeait l’aire de mesure. De là, il voyait le couloir d’évacuation et le fossé, mais pas les hommes au-delà de la palissade. Il n’avait pas à inventer ce que faisait le reste du combat. Il devait choisir une aide dont il pouvait voir les limites, puis la tenir assez longtemps pour que les gardes pussent déplacer les blessés."
+      ],
+      "choice": {
+        "prompt": "La première créature atteignait les dalles extérieures.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Demander à Diva d’immobiliser les pattes par les racines",
+            "passage": "Evan envoya à Diva les positions des gardes et du fossé. Des racines se fermèrent sur les membres de la créature, sans chercher une pensée à apaiser. Il soutint leur tension par une mesure régulière ; la dragonne gagna du temps, mais la terre se déchirait déjà autour des prises.",
+            "set": {
+              "combat_lisiere": "racines"
+            },
+            "next": "c9-suite-2"
+          },
+          {
+            "id": "b",
+            "label": "Faire dresser à Tam-Tam un rempart de neige compacte",
+            "passage": "La flûte donna à Tam-Tam un rythme de recul plutôt qu’un appel à charger. L’ours grandit derrière le fossé et tassa une masse de neige entre les civils et l’ouverture. Les griffes ennemies y creusèrent des sillons ; Evan maintint la cohésion de son compagnon sans prétendre rendre le rempart indestructible.",
+            "set": {
+              "combat_lisiere": "neige"
+            },
+            "next": "c9-suite-2"
+          },
+          {
+            "id": "c",
+            "label": "Guider la foudre de Tam-Tam vers le couloir dégagé",
+            "passage": "Evan attendit le signal d’Iseult avant d’envoyer à Tam-Tam l’image de la bande vide. La décharge frappa la pierre humide devant la créature, interrompant son élan. Les gardes avaient été écartés ; le garçon conserva la même limite au second coup, malgré l’envie d’atteindre plus loin.",
+            "set": {
+              "combat_lisiere": "foudre"
+            },
+            "next": "c9-suite-2"
+          },
+          {
+            "id": "d",
+            "label": "Renforcer brièvement la vitesse des Veilleurs en repli",
+            "passage": "Evan lança une phrase courte vers les deux gardes qui portaient un blessé. Leur mouvement gagna en précision et en vitesse, pas en invulnérabilité. Il retira le soutien dès le passage du mur, laissant aux combattants de tête la place de refermer le couloir.",
+            "set": {
+              "combat_lisiere": "vitesse"
+            },
+            "next": "c9-suite-2"
+          },
+          {
+            "id": "e",
+            "label": "Créer un repère lumineux pour guider les civils à couvert",
+            "passage": "Une lumière pâle suivit les notes et se fixa au-dessus de la borne sûre. Evan ne chercha pas à aveugler une bête dont il ignorait la vue. Il rendit visible le trajet des personnes qui pouvaient encore choisir de s’y diriger, puis réduisit l’éclat pour garder assez de souffle.",
+            "set": {
+              "combat_lisiere": "lumiere"
+            },
+            "next": "c9-suite-2"
+          }
+        ]
+      }
+    },
+    "c9-3": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Le passage ne fut pas fermé par un grand fracas. Les Veilleurs firent reculer la première créature contre le treillis intérieur et un projectile de Séraphine traversa l’intervalle laissé par les gardes. L’étoile miniature brûla un instant sans éclairer le reste du ciel. Evan détourna les yeux avant de savoir ce qu’il aurait pu y voir.",
+        "Le combat avait duré quelques minutes. Dans son corps, il occupait pourtant le même espace qu’une longue journée. Il maintint l’archet au-dessus des cordes jusqu’à ce qu’Iseult lui demandât de le baisser. À ce moment seulement, il sentit la douleur de ses doigts. Diva le rejoignit au bord du mur, Tam-Tam derrière elle, retrouvant juste assez d’assurance pour renifler les sangles.",
+        "Une Veilleuse avait reçu un coup à la cuisse. Evan s’agenouilla près d’elle pendant qu’Ysane préparait le bandage. Il pouvait aider à ralentir le saignement et soutenir le calme de la blessée si elle le souhaitait. Il ne pouvait pas retirer une fracture par le simple désir de ne pas la regarder souffrir. Il le dit avant qu’on lui eût demandé un miracle.",
+        "La femme hocha la tête et lui donna son prénom. Il joua pour elle une phrase assez simple pour qu’elle pût y accrocher sa respiration. Ysane fit le reste. Evan sentit la peur diminuer sans disparaître. Elle demeurait dans le corps blessé avec ses raisons, et il n’avait pas à la remplacer par la sérénité dont les autres auraient trouvé le spectacle plus supportable.",
+        "Derrière eux, les instruments avaient conservé la dernière variation. La surcharge avait précédé le mouvement des créatures. Veyr le fit vérifier par les deux lignes de mesure, puis demanda qu’on cessât d’alimenter le relais tant que les gardes n’auraient pas consolidé la clôture. Le phénomène pouvait déplacer leurs dangers les plus ordinaires sans avoir besoin de les commander.",
+        "Evan entendit sa propre question sortir avant d’en avoir choisi les mots. « Si elle ne leur dit rien… pourquoi tout ça vient vers nous ? » Il ne parlait plus seulement des bêtes. Il regardait le point solaire figé dans le modèle.",
+        "Séraphine posa les mains à plat sur la table. Des variations d’Astralys pouvaient troubler les organismes, déplacer les milieux et nourrir les formes qui détruisaient sans intention. Cela ne prouvait pas que la présence autour de l’étoile percevait ces effets. Rien, dans les relevés, ne montrait une action dirigée contre Elyrion. L’indifférence d’un mécanisme n’était pas plus douce pour ceux qui la recevaient.",
+        "Le garçon pensa à Tam-Tam lorsqu’il grandissait trop vite pour voir un objet sous sa patte. La comparaison était minuscule, insuffisante, presque offensante pour l’échelle du ciel. Elle lui permit néanmoins de séparer une force qui voulait lui faire mal d’une force qui pouvait le faire sans même avoir remarqué sa place.",
+        "Ils allaient devoir transmettre cette distinction. Evan craignait déjà la façon dont elle pourrait servir à nier les blessures. Une catastrophe qui n’avait pas été voulue ne cessait pas d’être une catastrophe. Il essuya l’archet et choisit le premier fait qu’il voulait voir inscrit avant que les grands mots ne recouvrissent de nouveau les personnes couchées près du mur."
+      ],
+      "choice": {
+        "prompt": "Il parla au secrétaire qui préparait le relevé de l’incident.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Faire inscrire d’abord les blessés et les besoins de soins",
+            "passage": "Evan donna les prénoms qu’il connaissait et fit préciser les autres. Comprendre le phénomène ne devait pas effacer ceux que cette matinée avait déjà atteints.",
+            "set": {
+              "rapport_lisiere": "blesses"
+            },
+            "next": "c9-4"
+          },
+          {
+            "id": "b",
+            "label": "Noter l’ordre exact entre la variation et l’arrivée des créatures",
+            "passage": "Il demanda deux heures distinctes, puis leur contrôle par les témoins. Un lien possible ne devait pas devenir une certitude simplement parce qu’il aurait rendu le récit plus facile.",
+            "set": {
+              "rapport_lisiere": "ordre"
+            },
+            "next": "c9-4"
+          },
+          {
+            "id": "c",
+            "label": "Décrire les pouvoirs employés et leurs limites",
+            "passage": "Il dicta ce qu’il avait réellement soutenu et ce qu’il avait laissé aux autres. Il voulait que le prochain groupe sût où son aide s’était arrêtée, pas seulement où elle avait réussi.",
+            "set": {
+              "rapport_lisiere": "aides"
+            },
+            "next": "c9-4"
+          },
+          {
+            "id": "d",
+            "label": "Signaler ce qui avait empêché l’évacuation de devenir une panique",
+            "passage": "Evan désigna le mur, le couloir et les réserves accessibles. Il n’avait pas envie qu’une victoire attribuée uniquement à la magie leur fît oublier les choses qu’on pouvait préparer sans lui.",
+            "set": {
+              "rapport_lisiere": "materiel"
+            },
+            "next": "c9-4"
+          },
+          {
+            "id": "e",
+            "label": "Garder une place pour les questions auxquelles personne n’avait répondu",
+            "passage": "Il fit écrire que les créatures n’avaient pas montré de comportement coordonné, puis demanda qu’on conservât les observations contraires si quelqu’un en possédait. Le registre devait pouvoir recevoir une correction.",
+            "set": {
+              "rapport_lisiere": "questions"
+            },
+            "next": "c9-4"
+          }
+        ]
+      }
+    },
+    "c9-4": {
+      "chapter": "c9",
+      "paragraphs": [
+        "La lecture suivante eut lieu à Noctarion, dans une salle isolée des alimentations urbaines. Les témoins de Keryth avaient été transportés sans les brancher à aucune conduite. Evan arriva avec le cahier, une fatigue qui revenait par vagues et le souhait assez enfantin que le modèle de l’étoile eût été mal construit.",
+        "Odrane avait travaillé avec les copies de Zerathiel sur la suite de signes qui accompagnait le contour. Certaines correspondances étaient assez solides pour distinguer un nom d’une quantité. La transcription qu’ils retinrent demeurait imparfaite ; elle permettait au moins d’arrêter de dire la chose chaque fois qu’on devait la désigner. Aelyr. Evan répéta le mot très bas, puis regretta de lui avoir donné une présence aussi proche de sa bouche.",
+        "Le nom appartenait à la série correspondant à leur étoile. Les archives de Keryth montraient un autre contour, identifié par des signes différents et la même organisation de mesures. Ce n’était pas le trajet d’un seul être d’un monde à l’autre. Une même forme d’existence pouvait trouver plusieurs étoiles, ailleurs, selon une nécessité qu’ils commençaient seulement à comprendre.",
+        "Le registre de Zerathiel signalait l’approche d’une présence semblable, pas encore la disparition de son soleil. Le délai n’était pas une garantie. C’était l’espace dans lequel les habitants pouvaient prendre des mesures avant de recevoir à leur tour une lumière mêlée de magie et de défaire leurs habitudes pour essayer d’y survivre.",
+        "Séraphine fit comparer le rayonnement direct et celui renvoyé par la Lune d’Elyrion. Leurs formes différaient assez pour produire des effets différents sur le vivant, mais elles portaient une signature commune. La Lune ne constituait pas un second ennemi. Elle réfléchissait une partie de l’énergie déjà mêlée à celle de l’étoile. Les Terres Blanches et les Terres Noires n’étaient pas deux guerres indépendantes que l’on pourrait gagner séparément.",
+        "Evan suivit les explications aussi longtemps qu’il le put. Quand les signes cessèrent d’avoir un sens, il le dit. Neris reprit avec un bol, un tissu et une lampe. Une même lumière traversait ou revenait, transformée par le chemin. Elle ne prétendait pas que le modèle reproduisait les maladies ou les mutations. Il lui permettait de ne plus imaginer deux volontés qui auraient décidé de déchirer le monde en tirant chacune de son côté.",
+        "« Est-ce qu’elle sait qu’on est là ? » demanda-t-il enfin.",
+        "Personne ne répondit oui pour lui offrir une rencontre, ni non pour lui donner une excuse. Les archives et les variations ne montraient aucun signe qu’Aelyr percevait les populations dont elle altérait l’existence. Sa stabilisation paraissait répondre à une nécessité interne : absorber l’énergie d’une étoile assez puissante pour retenir une magie qui, sans cela, menaçait de se défaire en elle.",
+        "Evan aurait voulu envoyer une pensée. C’était le réflexe le plus simple de son don, et celui dont il devait le plus se méfier ici. Il n’avait devant lui ni un animal perdu ni un monstre à immobiliser. Il avait des traces, des mesures, la présence lointaine d’un être immense dont rien ne lui promettait qu’il possédât une pensée à la taille des siennes."
+      ],
+      "choice": {
+        "prompt": "Il choisit la question qu’il pouvait poser sans prétendre déjà connaître l’interlocuteur.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Peut-on changer les effets sans détruire la créature ?",
+            "passage": "Evan montra les filaments qui traversaient le modèle. « Si on lui enlève ce qui la tient, ça ne résout peut-être rien. » Veyr fit noter la question avant de répondre.",
+            "set": {
+              "question_aelyr": "sans_mort"
+            },
+            "next": "c9-5"
+          },
+          {
+            "id": "b",
+            "label": "Comment protéger Zerathiel avant que son soleil ne change ?",
+            "passage": "Il désigna les dates des deux mondes. Il ne voulait pas confondre le mal déjà fait ici avec celui qu’on pouvait encore éviter ailleurs.",
+            "set": {
+              "question_aelyr": "empecher"
+            },
+            "next": "c9-5"
+          },
+          {
+            "id": "c",
+            "label": "Les portails peuvent-ils répartir cette énergie au lieu de la recevoir ?",
+            "passage": "Evan rapprocha les dessins de liaison. Il ne proposait pas un plan complet ; il demandait si leur façon de revenir pouvait aussi apprendre quelque chose sur les différences à maintenir.",
+            "set": {
+              "question_aelyr": "portails"
+            },
+            "next": "c9-5"
+          },
+          {
+            "id": "d",
+            "label": "Quelle partie de l’explication peut-on réellement affirmer ?",
+            "passage": "Il demanda à Odrane de distinguer les correspondances établies des hypothèses sur l’être lui-même. Donner un nom à Aelyr ne leur avait pas donné le droit de lui inventer une histoire entière.",
+            "set": {
+              "question_aelyr": "savoir"
+            },
+            "next": "c9-5"
+          },
+          {
+            "id": "e",
+            "label": "Est-il possible de tenter un contact sans prendre sa survie pour une réponse ?",
+            "passage": "Evan garda sa flûte sur ses genoux. S’il existait un moyen de communiquer, il ne voulait pas que la nécessité d’Aelyr de rester stable fût interprétée comme un accord à ce qu’on lui ferait.",
+            "set": {
+              "question_aelyr": "parler"
+            },
+            "next": "c9-5"
+          }
+        ]
+      }
+    },
+    "c9-5": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Ils ne décidèrent pas de parler au ciel le soir même. Evan fut soulagé et déçu avec une violence presque égale. Une partie de lui avait espéré que comprendre la cause donnerait aussitôt une chose précise à faire, comme retirer une épine. À la place, l’explication agrandissait tout ce qu’il ne pouvait pas atteindre.",
+        "Maëlle le trouva dans l’escalier, encore assis avec son manteau. Elle ne lui demanda pas de résumer une créature galactique avant de lui proposer un repas. Il mangea plusieurs cuillerées sans goût, puis sentit enfin la soupe, les oignons, quelque chose de poivré qui le fit tousser. L’ourson releva la tête, inquiet d’avoir manqué une nourriture nouvelle.",
+        "« Elle ne voulait peut-être pas nous faire de mal », dit Evan.",
+        "La diacre resta un moment silencieuse. « Cela ne rendra pas ton village à ceux qui l’habitaient. » Elle ne cherchait pas à condamner la créature. Elle empêchait seulement le garçon de transformer sa compréhension en un devoir d’être déjà apaisé.",
+        "Il sentit sa gorge se refermer. Depuis les premières mesures, il s’efforçait de ne pas confondre le danger et une volonté mauvaise. Il avait oublié qu’il pouvait comprendre cette différence sans abandonner sa colère. Il avait encore le droit d’en vouloir au monde pour ce qui s’était produit, même s’il n’existait pas une personne assez simple pour recevoir tout ce reproche.",
+        "Diva glissa sa tête contre la fenêtre ouverte. Evan posa la paume sur son museau et lui montra l’image du modèle, trop grande et trop abstraite pour devenir une sensation exacte. La dragonne lui renvoya autre chose : le bord d’un lit, une couverture, la présence des compagnons rassemblés. Elle ne résolvait pas l’échelle du ciel. Elle lui rappelait celle à laquelle il pouvait encore rejoindre quelqu’un.",
+        "Les factions recevraient l’explication le lendemain. Déjà, des mots circulaient : parasite, dévoreur, châtiment, nécessité. Chacun paraissait assez juste pour une partie du phénomène et assez faux pour prendre la place du reste. Evan craignait de jouer dans une salle où l’on voudrait une émotion plus facile que les faits.",
+        "Il pouvait préparer son témoignage avec Maëlle, le reprendre avec Neris ou le coucher d’abord dans son cahier. Il pouvait aussi décider de ne pas parler devant tout le monde et faire porter ses mesures par Iseult. On n’avait pas besoin d’en faire le visage d’une découverte pour que son travail continuât d’y compter.",
+        "Il regarda l’assiette presque vide. Il avait survécu au combat, entendu un nom qu’il n’oublierait plus et retrouvé une cuisine où personne ne lui demandait de gagner le droit de finir sa soupe. Il n’était pas obligé de choisir une seule émotion pour raconter tout cela."
+      ],
+      "choice": {
+        "prompt": "Avant de se lever, il décida de la forme qu’aurait sa voix le lendemain.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Préparer des mots simples avec Maëlle",
+            "passage": "Il lui demanda de l’arrêter dès qu’une phrase laisserait croire qu’il avait tout compris. Ils gardèrent les gestes ordinaires dans le récit, assez près des noms immenses pour ne pas les laisser tout recouvrir.",
+            "set": {
+              "preparer_conseil": "maelle"
+            },
+            "next": "c9-fin"
+          },
+          {
+            "id": "b",
+            "label": "Faire vérifier les limites techniques par Neris",
+            "passage": "Evan lui porta les questions qu’il n’avait pas réussi à formuler dans l’atelier. Elle raya deux affirmations trop larges et garda les hésitations qu’un spécialiste pressé aurait peut-être voulu supprimer.",
+            "set": {
+              "preparer_conseil": "neris"
+            },
+            "next": "c9-fin"
+          },
+          {
+            "id": "c",
+            "label": "Demander à Iseult de présenter ses relevés",
+            "passage": "Il lui confia les mesures, mais conserva les pages personnelles. Il pourrait répondre à une question précise sans devoir soutenir seul les regards de toutes les personnes auxquelles cette vérité ferait peur.",
+            "set": {
+              "preparer_conseil": "iseult"
+            },
+            "next": "c9-fin"
+          },
+          {
+            "id": "d",
+            "label": "Écrire seul avant de décider ce qu’il dira",
+            "passage": "Il ouvrit le cahier au mot revenir. Les phrases s’allongèrent, puis se séparèrent en faits, questions et souvenirs. Il ne montra pas la dernière partie, et ce retrait ne rendit pas les deux autres moins honnêtes.",
+            "set": {
+              "preparer_conseil": "cahier"
+            },
+            "next": "c9-fin"
+          },
+          {
+            "id": "e",
+            "label": "Dormir avant de préparer la réunion",
+            "passage": "Evan posa l’étui au pied du lit et demanda qu’on lui laissât la matinée pour reprendre les documents. Il n’avait rien oublié de l’urgence ; il avait seulement cessé de croire que sa fatigue en réduisait la réalité.",
+            "set": {
+              "preparer_conseil": "repos"
+            },
+            "next": "c9-fin"
+          }
+        ]
+      }
+    },
+    "c9-fin": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Dans sa chambre, Evan attendit longtemps le bruit de la conduite. Elle était isolée depuis des jours, et le mur ne lui rendit que le travail de la maison. Une bassine déplacée. Une porte qui cherchait son logement. Le pas lourd d’un homme montant trop vite l’escalier.",
+        "Il sortit le fragment de bol. Les marques de Zerathiel demeuraient lisibles ; la fissure qu’il avait cru y voir n’y était pas. Quelque chose avait changé assez loin pour atteindre l’eau de son gobelet. Cela ne signifiait pas que le garçon avait été choisi pour le recevoir. Il avait été là, attentif, et d’autres personnes avaient accepté de regarder avec lui.",
+        "Il essaya un accord sur le violon. Pas celui du phénomène. Celui dont Lise se souvenait de travers et qu’elle lui demandait de rejouer avec beaucoup de sérieux. Il le termina sans magie. Tam-Tam remua une patte en dormant, Diva souffla doucement dans la cour et Evan put enfin laisser à une note le droit de ne rien expliquer.",
+        "Le lendemain, on parlerait d’Aelyr devant des gens capables de décider du travail de milliers d’autres. Il n’avait pas la force de mesurer cette responsabilité en restant éveillé. Il posa le cahier, vérifia la fenêtre et se coucha.",
+        "Pour la première fois, le Soleil Noir avait dans son esprit autre chose que la forme d’une catastrophe sans cause. Ce qu’il y avait gagné n’était pas du repos. C’était la possibilité de chercher où une différence pouvait encore être faite."
+      ],
+      "next": "c10-1"
+    },
+    "c10-1": {
+      "chapter": "c10",
+      "paragraphs": [
+        "Le Conseil ne ressemblait pas aux affiches. Les cinq Arcanistes n’étaient pas assis à des hauteurs différentes, et la table portait davantage de taches d’encre que d’ornements. Evan reconnut Veyr, la femme aux doigts tachés qui se nommait Séliane, puis les deux autres : Orven, chargé des réserves et des ateliers, et Naëra, qui suivait les quartiers habités et leurs cultures. Séraphine occupait la place d’où l’on voyait toutes les portes. Personne n’avait laissé croire que cela fût un hasard.",
+        "Le Commandant des Veilleurs se tenait près d’une carte. Evan avait attendu un homme impressionnant et trouva une femme à la voix basse, dont le manteau avait été repris au même endroit que ceux de ses soldats. Elle s’appelait Darsen. Elle lut les effectifs disponibles sans donner à ses chiffres l’apparence d’une promesse. Une route défendue ici laissait nécessairement moins de monde ailleurs.",
+        "Avant que la séance ne commençât, Darsen lui demanda de l’aider à déplacer trois petits poids sur la carte. Evan crut d’abord à une démonstration pour qu’il se sentît admis. Elle lui fit réellement compter les trajets : la même équipe ne pouvait pas escorter un convoi, tenir le poste et revenir avec la relève avant le repas. Lorsqu’il l’eut vu, elle changea la couleur d’un trajet et lui demanda de recommencer.",
+        "Il trouva une solution, puis découvrit qu’elle laissait un village attendre une nuit de plus. La Commandante ne rejeta pas son choix ; elle lui montra qui devait en être prévenu et ce qu’il faudrait prévoir sur place. Evan avait longtemps pensé que les décisions des grands consistaient à connaître une réponse que les autres n’avaient pas. Celle-ci ressemblait à la nécessité de regarder la personne absente de la meilleure solution.",
+        "Il resta silencieux pendant qu’elle rangeait les poids. Elle lui demanda ce qu’il en retenait. Il répondit que la carte avait besoin de plus de noms. Darsen eut un sourire très bref. « Et de quelques personnes capables de les lire quand on leur dit de ne regarder que les lignes. » Elle n’en fit pas une mission confiée au garçon pour toujours. Elle lui avait seulement montré pourquoi les effectifs qu’elle allait annoncer n’étaient pas un refus de se montrer courageuse.",
+        "L’Église avait envoyé un Cardinal et Ysane, que Maëlle salua sans se lever de sa chaise. Les Enfants de la Nuit étaient représentés par une femme nommée Helle, dont une main portait des tissus végétaux visibles sous la peau. Evan eut le réflexe de fixer les nervures, puis se reprit. Helle le remarqua et déplaça sa main pour qu’il vît mieux, sans lui proposer de la toucher.",
+        "Sael n’était pas présente. Ses copies et la marque du bol occupaient pourtant une place à la table, avec la personne chargée de rendre compte aux habitants de Zerathiel. Séraphine avait refusé qu’on désignât leur monde comme une réserve disponible. « Ceux qui nous ouvrent une porte ne nous ont pas donné les clés de toutes les autres. »",
+        "La première heure fut consacrée à ce qui pouvait être affirmé. Aelyr trouvait dans l’énergie solaire une stabilité dont son propre corps magique avait besoin. Le rayonnement mêlé chargeait Elyrion d’Astralys ; la réflexion lunaire modifiait l’exposition sans en créer une seconde origine. Keryth montrait l’issue possible d’une relation devenue insoutenable. Zerathiel offrait encore un délai, pas une preuve que le danger s’arrêterait en attendant qu’on eût terminé les phrases.",
+        "Le Cardinal ne parla pas de châtiment. Il demanda combien de réseaux urbains pourraient être isolés sans laisser les dispensaires, les réserves alimentaires et les serres sans ressource. Helle demanda quels tissus transformés on accepterait de considérer comme des moyens de mesure plutôt que comme des accidents dont il faudrait immédiatement se débarrasser. Darsen demanda qui garderait les postes pendant les essais.",
+        "Evan suivait la réunion avec l’impression de porter un sac qu’on remplissait dès qu’il avait trouvé comment le soulever. Aucun de ces problèmes ne contredisait l’autre. Ils devenaient seulement plus lourds lorsqu’on cessait de les présenter séparément. Naëra lui demanda ce qu’il voudrait voir conservé dans le premier choix de travail, puisqu’il avait été au contact des trois séries de relevés.",
+        "Il ne s’agissait pas de lui donner le gouvernement de la cité. La décision appartenait aux cinq Arcanistes. On lui demandait où son expérience risquait d’être perdue si les adultes se précipitaient sur ce qu’ils savaient déjà compter. Evan regarda les cartes, puis les mains posées autour. Il avait le droit d’y mettre une chose simple."
+      ],
+      "choice": {
+        "prompt": "Il choisit ce qu’il fallait, selon lui, garder visible au centre de la discussion.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Demander que les lieux de vie figurent sur les plans d’essai",
+            "passage": "Evan désigna les rues sans marques techniques. « Il y a des gens entre les conduites. Il faut aussi savoir ce qu’on leur demande de traverser. » Naëra rapprocha la carte des refuges.",
+            "set": {
+              "voix_conseil": "habitants"
+            },
+            "next": "c10-2"
+          },
+          {
+            "id": "b",
+            "label": "Rappeler que Zerathiel ne doit pas attendre notre urgence",
+            "passage": "Il posa le fragment de bol près des dates. Les habitants de ce monde n’avaient pas à recevoir leur première alerte après que Noctarion aurait décidé comment protéger ses propres murs.",
+            "set": {
+              "voix_conseil": "futur"
+            },
+            "next": "c10-2"
+          },
+          {
+            "id": "c",
+            "label": "Faire inscrire ce que la puissance de Séraphine ne mesure pas",
+            "passage": "Evan chercha ses mots, puis demanda qu’on distinguât ce qu’elle pouvait maintenir de ce qu’ils avaient vérifié sans elle. Séraphine eut l’air satisfaite qu’on cessât de lui attribuer un résultat à venir.",
+            "set": {
+              "voix_conseil": "limites"
+            },
+            "next": "c10-2"
+          },
+          {
+            "id": "d",
+            "label": "Demander qu’un essai de retour précède chaque transfert",
+            "passage": "Il montra la copie d’Ansel. « On connaît déjà le prix d’une sortie qu’on ne sait pas refaire dans l’autre sens. » Darsen fit noter les critères d’arrêt à côté des effectifs.",
+            "set": {
+              "voix_conseil": "retours"
+            },
+            "next": "c10-2"
+          },
+          {
+            "id": "e",
+            "label": "Demander comment la cité sera informée des désaccords",
+            "passage": "Evan ne réclama pas une retranscription de chaque dispute. Il voulait que les habitants pussent distinguer une question encore discutée d’une réponse qu’on aurait décidé de leur cacher.",
+            "set": {
+              "voix_conseil": "verite"
+            },
+            "next": "c10-2"
+          }
+        ]
+      }
+    },
+    "c10-2": {
+      "chapter": "c10",
+      "paragraphs": [
+        "Le projet le plus simple consistait à briser ce qui reliait Aelyr au Soleil. Il fut aussi le plus vite abandonné. Personne ne pouvait montrer que l’énergie ainsi libérée se dissiperait sans traverser Elyrion, ni que la créature survivrait à la perte brutale de ce qui la stabilisait. Séraphine n’accepta pas qu’on employât le mot simple pour une explosion dont on ne savait même pas estimer la limite.",
+        "Séliane proposa une autre représentation. Ils ne chercheraient pas à vider Aelyr comme une réserve, mais à modifier la circulation qui accumulait la magie dans les milieux habités. Un relais devait préserver les différences, absorber les variations et rendre l’énergie disponible à un rythme supportable. Les portails possédaient déjà une partie de cette fonction : ils reliaient des états qui ne pouvaient pas être confondus sans détruire leur propre continuité.",
+        "Keryth ne servirait pas de poubelle. Le fait qu’ils n’y eussent rencontré personne ne transformait pas un univers en lieu où l’on pouvait jeter une instabilité sans en suivre les conséquences. Ses structures anciennes fourniraient des comparaisons et certains ancrages déjà inertes, pas un vivant qu’on sacrifierait pour préserver le leur.",
+        "Helle posa sur la table une capsule contenant des filaments. Ils se répartissaient spontanément autour d’un apport d’Astralys, sans conserver la surcharge de la même manière que le cuivre. Ses cercles avaient travaillé sur ce phénomène longtemps avant les expéditions. Le Cardinal demanda si les filaments provenaient d’une personne. La réponse fut non : des végétaux cultivés, capables de cesser de croître sans souffrance connue, isolés de toute connexion nerveuse animale.",
+        "La question resta légitime malgré la réponse. Des membres des Enfants de la Nuit souhaitaient aller plus loin, employer leur propre corps pour obtenir une adaptation impossible à construire autrement. Helle reconnut leur existence sans prétendre parler pour eux tous. L’Église refusa que des personnes fragiles pussent être poussées à se transformer sous la pression d’un besoin collectif.",
+        "Evan regarda la capsule, puis la main d’Helle. Il avait envie que quelqu’un eût définitivement raison. La femme n’avait pas demandé qu’on obligeât qui que ce fût à lui ressembler. Le Cardinal, lui, parlait aussi des gens dont les revenus ne permettraient jamais de refuser un travail risqué. Le garçon connaissait assez bien cette dernière forme de choix pour ne pas la traiter comme une simple peur de l’inconnu.",
+        "Orven ramena la discussion vers un premier montage qui ne dépendrait d’aucun organisme humain. Les tissus végétaux seraient comparés aux amortisseurs mécaniques de Borren. Les deux solutions auraient des limites différentes. Les dépasser devait produire un signal d’arrêt, pas la demande de donner davantage de soi.",
+        "Evan pouvait proposer une manière de comparer ces approches. Il pensa au jour où il avait voulu rendre son aide assez forte pour ne plus sentir ses propres genoux. Ici, le même désir pouvait prendre la taille d’une institution. Il ne suffirait pas de dire qu’on saurait s’arrêter."
+      ],
+      "choice": {
+        "prompt": "Il choisit le contrôle dont l’absence lui paraissait la plus difficile à réparer ensuite.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Comparer les deux dispositifs sans les mélanger au premier essai",
+            "passage": "Evan demanda deux lignes distinctes. Si un montage fonctionnait, il voulait pouvoir dire lequel avait tenu et non remercier un ensemble dont personne ne saurait reconnaître la faiblesse.",
+            "set": {
+              "garde_fou": "double"
+            },
+            "next": "c10-3"
+          },
+          {
+            "id": "b",
+            "label": "Confier la mesure d’arrêt à une équipe extérieure à la recherche",
+            "passage": "Il proposa que les personnes chargées de suspendre l’essai ne fussent pas celles qui espéraient obtenir le résultat. Darsen répondit qu’un ordre de retrait devait aussi pouvoir venir d’un garde qui n’avait pas écrit le projet.",
+            "set": {
+              "garde_fou": "independant"
+            },
+            "next": "c10-3"
+          },
+          {
+            "id": "c",
+            "label": "Commencer à une échelle assez petite pour pouvoir réellement échouer",
+            "passage": "Le garçon désigna la capsule. Une première réussite n’avait pas besoin d’alimenter une rue entière. Il préférait une panne qu’on pût décrire à une victoire trop grande pour oser l’interrompre.",
+            "set": {
+              "garde_fou": "petit"
+            },
+            "next": "c10-3"
+          },
+          {
+            "id": "d",
+            "label": "Rendre les relevés accessibles aux trois groupes de contrôle",
+            "passage": "Evan demanda une copie pour les ateliers, une pour les soigneurs et une pour le Conseil. Il ne voulait pas que la même absence de papier pût de nouveau prendre des noms différents selon la porte où l’on frappait.",
+            "set": {
+              "garde_fou": "preuves"
+            },
+            "next": "c10-3"
+          },
+          {
+            "id": "e",
+            "label": "Construire le démontage avant de construire l’extension",
+            "passage": "Il demanda ce qu’on ferait des éléments après un arrêt. Borren releva la tête : la manière de sortir d’un dispositif devait appartenir au plan initial, pas au courage de ceux qui s’y trouveraient coincés.",
+            "set": {
+              "garde_fou": "reversible"
+            },
+            "next": "c10-3"
+          }
+        ]
+      }
+    },
+    "c10-3": {
+      "chapter": "c10",
+      "paragraphs": [
+        "Ils ne sortirent pas de la salle avec un accord complet. Les cinq Arcanistes autorisèrent un atelier commun, plusieurs mesures préparatoires et aucune connexion au réseau des quartiers. Pour la suite, il faudrait une seconde décision. Evan avait imaginé qu’une réunion au sommet produisait des ordres assez solides pour qu’on cessât d’en parler. Il découvrit qu’elle pouvait aussi donner une liste précise de choses qu’on n’avait pas encore le droit de prétendre résolues.",
+        "Dans l’escalier, il retrouva Neris et Helle. La femme des Enfants de la Nuit examinait un bord de sa main où les nervures avaient pâli. Neris lui proposa de rentrer à leur cercle. Elle répondit qu’elle resterait jusqu’à ce qu’on lui eût rendu la capsule, même si la réunion était terminée. Sa confiance avait, elle aussi, besoin d’un inventaire.",
+        "Ysane passa avec Maëlle. Leurs salutations demeurèrent raides, mais personne ne détourna les yeux. Evan se sentit obligé de dire quelque chose avant que les quatre adultes ne fissent de leur silence une nouvelle frontière. Il ne trouva d’abord qu’une phrase sur le froid dans le couloir, si insignifiante qu’il la garda pour lui.",
+        "Diva entra dans la cour en déplaçant son aile assez près d’un pot pour qu’une longue tige se redressât. Helle s’écarta pour ne pas gêner la plante ; Ysane avança la main au même moment pour empêcher le pot de basculer. Elles restèrent une seconde dans la même posture, chacune gênée d’avoir été surprise à accomplir un geste qui ne demandait aucune doctrine.",
+        "Evan rit. Un petit rire impossible à retenir. Il crut immédiatement avoir tout aggravé, mais Maëlle posa la main sur le bord du pot et demanda s’il fallait vraiment laisser cette chose à un endroit où tout le monde lui marchait presque dessus. La discussion trouva enfin un objet de taille raisonnable.",
+        "Il fallut décider où installer les premiers travaux. Le refuge possédait des pièces libres près de l’ancienne conduite isolée. L’atelier de Borren offrait des supports plus sûrs, mais peu de place. Le Conseil pouvait fournir une salle éloignée des réseaux urbains, au prix d’un contrôle qui inquiéterait ceux dont les données y entreraient. Les Veilleurs proposaient un hangar technique avec des chemins d’évacuation vérifiés.",
+        "Aucun lieu ne contenait à lui seul toutes les personnes dont ils avaient besoin. Evan le comprit en voyant Neris mesurer l’espace de la cour du regard tandis que Maëlle pensait déjà aux habitants qu’il faudrait déplacer. Il ne pouvait pas résoudre ce problème avec une note assez douce pour rendre tout le monde accommodant. Il pouvait proposer où commencer, en disant clairement ce qu’on devrait y apporter d’ailleurs.",
+        "Sa réponse ne remplacerait pas la vérification des lieux. Elle orienterait la première visite commune. C’était une petite décision, assez réelle pour qu’il eût envie de la prendre et assez limitée pour qu’il ne se sentît pas obligé de devenir quelqu’un qui savait déjà gouverner."
+      ],
+      "choice": {
+        "prompt": "Il désigna le lieu qu’il voudrait leur voir examiner ensemble.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Commencer à l’atelier de Borren",
+            "passage": "Evan choisit les supports qu’ils connaissaient. Il faudrait ajouter de la place et rendre les relevés accessibles aux autres groupes, mais le premier essai ne dépendrait pas d’un bâtiment dont ils n’avaient pas encore appris les défauts.",
+            "set": {
+              "atelier_commun": "borren"
+            },
+            "next": "c10-4"
+          },
+          {
+            "id": "b",
+            "label": "Visiter d’abord les pièces isolées du refuge",
+            "passage": "Il proposa la pièce dont la conduite avait été condamnée, à condition que Maëlle pût refuser de déplacer des habitants. Commencer près des soins ne donnait pas le droit de transformer un lieu d’accueil en atelier par habitude.",
+            "set": {
+              "atelier_commun": "refuge"
+            },
+            "next": "c10-4"
+          },
+          {
+            "id": "c",
+            "label": "Examiner le hangar des Veilleurs",
+            "passage": "Evan préféra le chemin de retrait déjà dégagé et demanda qu’on y installât de vrais sièges, pas seulement des caisses. Il avait appris combien un endroit où l’on pouvait s’asseoir faisait partie du travail.",
+            "set": {
+              "atelier_commun": "hangar"
+            },
+            "next": "c10-4"
+          },
+          {
+            "id": "d",
+            "label": "Demander une salle du Conseil avec des clés partagées",
+            "passage": "Il choisit l’isolement des réseaux, puis demanda que les copies pussent sortir avec leurs auteurs. Une porte fermée pendant un essai n’avait pas à devenir une manière de garder les personnes et leurs résultats.",
+            "set": {
+              "atelier_commun": "conseil"
+            },
+            "next": "c10-4"
+          },
+          {
+            "id": "e",
+            "label": "Séparer la préparation des éléments et leur premier assemblage",
+            "passage": "Evan proposa qu’on préparât les pièces là où chacun travaillait déjà, puis qu’on les réunît dans le lieu le plus facile à vider. Il acceptait un trajet de plus pour ne pas faire de chaque difficulté la propriété d’une seule faction.",
+            "set": {
+              "atelier_commun": "deux_lieux"
+            },
+            "next": "c10-4"
+          }
+        ]
+      }
+    },
+    "c10-4": {
+      "chapter": "c10",
+      "paragraphs": [
+        "La visite dura plus longtemps que la réunion ne l’avait laissé croire. Evan passa une matinée à entendre pourquoi un sol plat ne l’était pas assez, une porte large ne permettait pas le passage d’un support et une pièce éloignée du réseau recevait encore une conduite oubliée. Il se demanda plusieurs fois s’il était possible de construire quelque chose sans découvrir d’abord que tout ce qui existait allait se trouver au mauvais endroit.",
+        "Borren finit par lui tendre un morceau de craie. « Montre-moi où tu passerais si tu devais tenir le violon et soutenir quelqu’un en même temps. » Evan dessina le chemin, s’arrêta devant une table et dut recommencer. Une difficulté qu’il avait jugée fatigante devenait immédiatement plus simple à respecter lorsqu’elle lui avait presque pris le coude.",
+        "Les représentants acceptèrent finalement une préparation répartie, avec un assemblage dans une travée isolée du hangar. Le premier lieu visité avait fourni une partie de la méthode, même lorsqu’on n’y garderait pas tout le travail. Personne ne fut contraint de déclarer qu’il avait eu tort de le proposer. Cette absence de vainqueur rendit l’accord moins bruyant, mais plus facile à utiliser le lendemain.",
+        "L’Église tiendrait les réserves de soins et les critères concernant les êtres vivants. Les Enfants de la Nuit apporteraient leurs cultures et leurs observations sous leur propre nom, sans exiger qu’on adoptât leurs convictions. Les ateliers assureraient les parties démontables. Les Veilleurs prépareraient les trajets et les arrêts. Le Conseil fournirait les ressources, les protections et les décisions dont les autres ne pouvaient pas porter seuls la responsabilité.",
+        "Il restait les quartiers. Des conduites devraient être modifiées, certains équipements fonctionneraient moins longtemps et des logements proches du futur relais seraient déplacés provisoirement. Evan pensa aux marches du dispensaire. On pouvait déclarer un sacrifice petit depuis une salle où il ne faudrait ni dormir ni manger avec ce qui manquait.",
+        "Naëra fit établir des visites avant toute installation. Les habitants recevraient les explications, les durées estimées et les moyens de poser des questions sans devoir entrer au Conseil. Soren proposa plusieurs versions d’une même notice : une courte pour les portes, une détaillée pour les personnes qui devaient organiser leur travail, une autre illustrée pour celles qui ne lisaient pas assez facilement les mots techniques.",
+        "Evan aida à les relire. Il corrigea un dessin qui montrait une tente trop loin des latrines et une phrase où provisoire n’avait aucune date associée. Ce n’était pas l’endroit du projet où l’on ferait apparaître des étoiles dans une salle. Il s’y sentit utile d’une manière moins fragile que pendant la réunion.",
+        "À la fin, Soren lui demanda quelle question elle devait placer en haut de la feuille réservée aux habitants. Les réponses techniques seraient fournies par les spécialistes. Evan pouvait choisir l’entrée qui l’aurait aidé, lui, le jour où sa seule chambre avait été un auvent."
+      ],
+      "choice": {
+        "prompt": "Il retourna la première page pour la regarder comme une porte et non comme un rapport.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Où pourra-t-on dormir pendant les travaux ?",
+            "passage": "Evan plaça la carte des hébergements avant le schéma du relais. La première nécessité ne devenait pas moins urgente parce qu’elle n’expliquait pas le ciel.",
+            "set": {
+              "notice_quartiers": "dormir"
+            },
+            "next": "c10-5"
+          },
+          {
+            "id": "b",
+            "label": "Combien de temps cela doit-il durer, et qui préviendra d’un retard ?",
+            "passage": "Il demanda une date vérifiable et le nom d’un interlocuteur. Une durée incertaine pouvait être honnête ; une durée sans personne chargée d’y revenir devenait seulement une attente imposée.",
+            "set": {
+              "notice_quartiers": "duree"
+            },
+            "next": "c10-5"
+          },
+          {
+            "id": "c",
+            "label": "Comment signaler qu’une solution proposée est impraticable ?",
+            "passage": "Evan fit ajouter des horaires où l’on pourrait parler sans manquer une journée de travail. Il ne suffisait pas d’autoriser une objection si seuls ceux qui avaient du temps pouvaient la formuler.",
+            "set": {
+              "notice_quartiers": "refus"
+            },
+            "next": "c10-5"
+          },
+          {
+            "id": "d",
+            "label": "Comment les soins, l’eau et les repas seront-ils maintenus ?",
+            "passage": "Il désigna les réserves et les chemins alternatifs. Les habitants n’avaient pas à deviner que les petites lignes d’alimentation constituaient parfois la différence entière entre un projet et une vie possible.",
+            "set": {
+              "notice_quartiers": "soins"
+            },
+            "next": "c10-5"
+          },
+          {
+            "id": "e",
+            "label": "Que se passera-t-il si l’essai ne fonctionne pas ?",
+            "passage": "Evan demanda qu’on décrivît l’arrêt avec la même précision que la réussite attendue. Personne n’aurait dû découvrir en dernier que la promesse d’un chantier reposait aussi sur la manière d’en sortir.",
+            "set": {
+              "notice_quartiers": "erreur"
+            },
+            "next": "c10-5"
+          }
+        ]
+      }
+    },
+    "c10-5": {
+      "chapter": "c10",
+      "paragraphs": [
+        "La décision suivante fut prise à cinq voix. Evan n’assista pas au dernier débat. Il attendait dans une petite salle avec Neris et Tam-Tam, en essayant de ne pas mesurer la durée au nombre de fois où l’ourson changeait de place. Diva avait trouvé un passage ensoleillé dans la cour, et cette occupation lui semblait d’une sagesse inaccessible aux autres personnes présentes.",
+        "Neris lui demanda s’il avait déjà imaginé à quoi ressemblerait une journée sans urgence. Il répondit qu’il aimerait pouvoir jouer assez longtemps pour choisir lui-même le morceau qu’il recommencerait. Elle trouva cela terriblement peu ambitieux. Il lui demanda ce qu’elle ferait. Elle réfléchit, puis avoua qu’elle voudrait réparer quelque chose dont elle aurait le temps de comprendre aussi la panne suivante.",
+        "Dans la petite salle, une jardinière contenait des plantes dont Evan ignorait le nom. Il approcha la main pour demander à Diva si elle les reconnaissait, puis se rappela qu’elle restait dans la cour. Il pouvait la rejoindre en pensée, mais elle n’avait pas vu ce qu’il regardait. Il lui envoya une image. La réponse fut un intérêt patient, accompagné de l’impression qu’une feuille dessinée dans une tête ne remplaçait pas tout à fait une plante entière.",
+        "Neris s’assit près de lui et lui montra une petite tache au dos d’une feuille. Elle aurait pu venir d’un manque d’eau, d’une exposition ou d’un insecte. Elles se ressemblaient assez pour qu’une personne pressée trouvât immédiatement celle qu’elle avait appris à craindre. Ils examinèrent les autres feuilles sans toucher à la culture. La plupart portaient les mêmes marques, mais pas au même endroit.",
+        "Ils ne résolurent pas le problème avant la fin de l’attente. Evan s’aperçut que cette ignorance-là ne lui faisait pas honte. Ils pourraient demander au jardinier et revenir voir le résultat. Il existait encore des questions dont on pouvait chercher la réponse sans redouter que chaque heure eût déjà coûté une vie. Il se promit de ne pas laisser l’urgence générale lui faire traiter ces petites attentes comme une perte.",
+        "Ils se mirent à inventer des objets parfaitement inutiles à sauver le monde : une cuillère qui ne refroidissait pas trop vite, une attache de botte impossible à fermer de travers, une lampe qui annonçait poliment qu’elle allait manquer de charge. Evan suggéra un Tam-Tam capable de ne pas manger la réserve destinée à Tam-Tam. L’ourson ouvrit un œil, reçut l’image et le referma avec une offense très consciente d’elle-même.",
+        "La porte s’ouvrit au milieu de leur rire. Iseult eut un sourire qu’elle ne conserva pas assez longtemps pour transformer l’annonce en victoire. Le montage d’essai était autorisé. La circulation serait testée à une échelle limitée avant d’alimenter quoi que ce fût. Aucune personne ne deviendrait un élément permanent du système. Zerathiel recevrait les résultats et garderait le droit de ne pas les employer.",
+        "Les cinq Arcanistes avaient signé. Séraphine sortit derrière la Veilleuse, l’air suffisamment contrariée pour que le garçon crût une seconde à un désaccord. « Quatre heures pour écrire qu’il faut vérifier avant de raccorder. Je devrais leur prêter une étoile comme sablier. » Elle lut néanmoins la décision une nouvelle fois avant de la confier au secrétaire.",
+        "Le travail de la cité changeait de taille. Evan savait déjà qu’on lui demanderait d’aider à distinguer les intervalles pendant les essais. Il pouvait aussi réserver une part de ses journées à une tâche qui ne dépendrait pas de son don. Iseult y tenait : s’il cessait d’entendre, il devait encore savoir où était sa place.",
+        "Il regarda les objets qu’ils venaient d’inventer avec Neris et la liste autrement réelle qu’on déposait devant lui. Il avait envie de tout choisir pour montrer qu’il ne serait pas inutile au premier silence. Il reconnut cette envie et la laissa passer. Un engagement qu’il pourrait tenir valait mieux qu’une façon élégante de promettre sa fatigue."
+      ],
+      "choice": {
+        "prompt": "Il demanda une tâche à laquelle il reviendrait entre deux séries d’essais.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Aider Odrane à tenir les cartes des trajets",
+            "passage": "Evan choisit les chemins et les repères. Il voulait comprendre comment les personnes passeraient réellement entre les lieux, même lorsque les instruments feraient croire que deux points étaient devenus voisins.",
+            "set": {
+              "tache_hors_magie": "cartes"
+            },
+            "next": "c10-fin"
+          },
+          {
+            "id": "b",
+            "label": "Aider Maëlle à préparer les réserves du refuge",
+            "passage": "Il prit la liste des linges et des repas. Il la garderait assez près de ses mesures pour se rappeler que le résultat du projet se reconnaîtrait aussi à ce qui continuerait d’arriver dans une cuisine.",
+            "set": {
+              "tache_hors_magie": "soins"
+            },
+            "next": "c10-fin"
+          },
+          {
+            "id": "c",
+            "label": "Travailler aux copies avec Soren et Adèle",
+            "passage": "Evan proposa de recopier les demandes et les réponses en laissant leurs auteurs les relire. Il connaissait désormais quelques-unes des choses qu’une belle phrase pouvait perdre en voulant tenir trop facilement sur une page.",
+            "set": {
+              "tache_hors_magie": "copies"
+            },
+            "next": "c10-fin"
+          },
+          {
+            "id": "d",
+            "label": "Apprendre les gestes de maintenance avec Borren",
+            "passage": "Il choisit des pièces qu’on pouvait assembler, vérifier et reprendre sans demander à la magie de cacher l’erreur. Borren lui promit surtout beaucoup de rondelles à trier, puis une vraie explication sur leur différence.",
+            "set": {
+              "tache_hors_magie": "atelier"
+            },
+            "next": "c10-fin"
+          },
+          {
+            "id": "e",
+            "label": "Suivre les plantes témoins avec Neris et Helle",
+            "passage": "Evan demanda une place dans les observations qui ne consisterait pas à forcer une pousse. Il voulait apprendre à reconnaître une variation du vivant sans lui attribuer immédiatement ce qu’il espérait découvrir.",
+            "set": {
+              "tache_hors_magie": "vivant"
+            },
+            "next": "c10-fin"
+          }
+        ]
+      }
+    },
+    "c10-fin": {
+      "chapter": "c10",
+      "paragraphs": [
+        "L’atelier commun ouvrit avec un retard de deux jours. Un support avait dû être refait et les premiers habitants déplacés avaient obtenu qu’on changeât l’horaire de la livraison d’eau. Evan entendit quelqu’un déplorer ces complications. Il pensa qu’elles montraient au moins des personnes assez présentes pour ne pas disparaître dans la facilité du plan.",
+        "Le premier matin, les représentants posèrent leurs outils sur des tables séparées. Ils les rapprochèrent à mesure que les mesures exigeaient de comparer, et les éloignèrent lorsque les charges risquaient de se confondre. La pièce n’avait pas la beauté d’une institution qui se serait enfin accordée pour toujours. Elle avait celle, plus discrète, d’un lieu où l’on pouvait travailler sans prétendre avoir fini de se contredire.",
+        "Maëlle leur apporta le premier repas de l’atelier dans des récipients qui ne serviraient pas ensuite aux essais. Borren protesta qu’il aurait évidemment distingué une assiette d’un témoin. Elle lui demanda à quoi servait, dans ce cas, le bol de soupe couvert de marques de niveau posé près de son coude. Le nain le regarda, chercha une défense et finit par manger sans en trouver une.",
+        "Helle s’assit avec Ysane au bout de la table, là où l’air circulait assez pour la culture qu’elle portait. Elles ne discutèrent pas tout de suite d’Astralys. L’une trouvait le pain trop dur, l’autre assurait qu’on ne pouvait pas lui reprocher à la fois de coûter peu et de tenir trois jours. Evan les écouta sans essayer de placer cet accord minuscule dans une théorie des factions.",
+        "Quand il se leva pour rapporter les bols, il se surprit à leur en vouloir un peu : elles pouvaient donc être simplement des personnes et ne le lui avaient pas montré au moment où il aurait voulu n’avoir peur d’aucune des deux. La pensée était injuste et lui fit sourire. Il pouvait la laisser passer sans en faire la nouvelle vérité sur elles.",
+        "Evan installa l’étui sous sa chaise et vérifia les coussinets de ses balises. Il y avait, sur le mur, une copie des critères d’arrêt, assez basse pour qu’il pût la lire sans demander à quelqu’un de se déplacer. À côté, Odrane avait fixé un dessin du trajet jusqu’à la sortie.",
+        "Il resta un instant à regarder ces deux feuilles. Rien ne lui promettait que l’essai réussirait. Pourtant, il reconnaissait dans cette préparation plusieurs petites questions qu’il avait réellement posées, devenues des objets que d’autres personnes pouvaient désormais utiliser sans lui.",
+        "Lorsque Borren l’appela, Evan se leva. La première table attendait un bol, un anneau et une erreur assez petite pour qu’on eût le temps d’apprendre d’elle."
+      ],
+      "next": "c11-1"
+    },
+    "c11-1": {
+      "chapter": "c11",
+      "paragraphs": [
+        "Le premier montage cassa un bol. Ce fut la seule chose qu’il cassa, et personne ne sut immédiatement s’il fallait s’en réjouir. L’eau avait monté d’un côté sans mouvement visible de la table ; la céramique avait cédé avant que la soupape prévue pour la protéger eût reçu le signal.",
+        "Borren nettoya les morceaux en silence. Evan attendait qu’il accusât une mauvaise pièce ou une erreur de geste. Le nain posa au contraire la soupape sur une feuille et écrivit : ne reçoit pas assez tôt ce qu’elle doit arrêter. Il avait l’air plus contrarié par cette phrase que par le bol perdu.",
+        "Les exercices à l’aveugle ne demandaient pas seulement de cacher les charges. Il fallut aussi renoncer aux petits indices qui trahissaient l’attente des adultes. Borren se penchait quand il espérait un résultat. Neris cessait de bouger son crayon une seconde trop tôt. Evan découvrit qu’il cherchait leurs visages davantage qu’il n’écoutait l’instrument, puis se sentit honteux comme s’il avait voulu tricher.",
+        "Séliane lui expliqua que reconnaître une attente n’était pas la même chose que fabriquer une réponse par mauvaise volonté. Elle fit placer un écran entre la table et les observateurs, en laissant le balancier et les signaux de sécurité visibles. La mesure ne deviendrait pas parfaite parce qu’on aurait demandé au garçon d’être moralement plus fort que tous les gestes qui l’entouraient.",
+        "La série suivante contenait davantage d’erreurs clairement repérées et moins de certitudes impossibles à vérifier. Evan aurait aimé un résultat qui ressemblât plus immédiatement à un progrès. Il nota pourtant ce qui venait de changer : ils savaient désormais distinguer certains de ses échecs de ceux du montage. La nuance lui rendait la possibilité d’apprendre sans porter à lui seul tout ce qui ne fonctionnait pas.",
+        "Les cultures d’Helle réagissaient avant la déformation mécanique. Elles ne portaient pas la charge principale ; elles en signalaient la distribution par un changement de croissance. En les associant au témoin sans leur demander d’absorber davantage, Neris obtint un délai suffisant pour fermer l’arrivée. La seconde série ne cassa rien. Elle ne prouva pas que l’ensemble tiendrait une fois agrandi.",
+        "Evan passa plusieurs jours à comparer des attentes. Les trois intervalles lui étaient désormais assez familiers pour qu’il craignît de les entendre même lorsqu’ils n’y étaient pas. Il fit marquer les séries dont il ignorait le contenu et demanda à Borren de lui présenter aussi des essais sans variation. Il se trompa deux fois. Ils gardèrent les erreurs dans le registre.",
+        "La différence stable du quatrième intervalle pouvait servir de point de régulation. Le monde de Keryth conservait certaines structures assez peu chargées pour offrir un repère indépendant, à condition de ne pas les traiter comme un trou où l’on déverserait une surcharge. Zerathiel possédait des mesures et des matériaux capables de recevoir les faibles variations qui précédaient sa propre exposition. Elyrion, lui, devait conserver assez de circulation pour vivre tout en cessant de la laisser s’accumuler sans contrôle dans les quartiers.",
+        "Séraphine parla de trois choses à ne pas confondre : une source, un rythme et une issue. Evan lui demanda si la musique aidait seulement parce qu’elle permettait de se représenter la durée. « Pour le moment, c’est déjà beaucoup, répondit-elle. N’ajoutons pas un destin personnel à chaque instrument qui fonctionne. »",
+        "Le montage avait besoin de relais ajustés séparément. Les premières interventions ne porteraient pas sur le ciel ni sur Aelyr, mais sur la manière dont les trois ancrages recevraient une variation. Evan pouvait choisir où suivre sa prochaine série de travail. Chaque équipe recevrait les autres résultats. Il n’allait pas être envoyé d’un monde à l’autre comme une cheville qu’on essayait dans tous les trous.",
+        "Neris lui montra le planning. Il y avait une place où l’on avait écrit son nom et, à côté, une heure après laquelle la colonne restait vide. Evan passa un doigt sur cet espace. On n’y avait pas oublié une tâche. Quelqu’un avait réellement prévu qu’il finît la journée avant que le travail fût terminé."
+      ],
+      "choice": {
+        "prompt": "Il choisit la première partie du montage qu’il voulait apprendre à reconnaître sans aide.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Suivre le relais mécanique avec Borren",
+            "passage": "Evan choisit les jeux, les joints et les retards visibles. Il voulait pouvoir reconnaître une pièce défaillante sans demander chaque fois à la musique de lui donner une réponse.",
+            "set": {
+              "apprentissage_relais": "cuivre"
+            },
+            "next": "c11-2"
+          },
+          {
+            "id": "b",
+            "label": "Comparer les cultures témoins avec Neris et Helle",
+            "passage": "Il demanda qu’on lui montrât aussi les pousses qui ne réagissaient pas. Une plante immobile pouvait lui apprendre une limite ; elle n’avait pas besoin de devenir un mauvais résultat qu’on cachait.",
+            "set": {
+              "apprentissage_relais": "plantes"
+            },
+            "next": "c11-2"
+          },
+          {
+            "id": "c",
+            "label": "Observer l’ancrage spatial avec Odrane",
+            "passage": "Evan choisit les différences de position et les repères indépendants. Odrane commença par lui faire dessiner l’endroit où son propre pied se trouvait, avant de parler de celui d’un autre monde.",
+            "set": {
+              "apprentissage_relais": "passage"
+            },
+            "next": "c11-2"
+          },
+          {
+            "id": "d",
+            "label": "Étudier ce que les variations font ressentir aux équipes",
+            "passage": "Il accompagna Ysane dans les contrôles de fatigue et d’exposition. Son don ne remplacerait aucun examen. Il pouvait aider à noter ce que les gens décrivaient avant qu’un chiffre eût changé.",
+            "set": {
+              "apprentissage_relais": "soins"
+            },
+            "next": "c11-2"
+          },
+          {
+            "id": "e",
+            "label": "Tenir un registre comparatif sans se spécialiser tout de suite",
+            "passage": "Evan demanda une série de chaque atelier, espacée pour ne pas les mélanger. Il préférait reconnaître les questions qu’il devrait poser plutôt que prendre trop vite l’assurance de savoir déjà à qui répondre.",
+            "set": {
+              "apprentissage_relais": "ensemble"
+            },
+            "next": "c11-2"
+          }
+        ]
+      }
+    },
+    "c11-2": {
+      "chapter": "c11",
+      "paragraphs": [
+        "La nouvelle visite à Keryth ne ressembla pas à la première expédition. Ils connaissaient le seuil, les distances à contrôler et les endroits où le monde commençait à se refuser. Cela ne rendait pas le trajet facile. Cela donnait simplement à leur peur davantage de détails exacts.",
+        "Evan resta au camp du passage avec Neris. Odrane et une équipe de Veilleurs allèrent vérifier un logement de repère qui figurait sur une copie d’Ansel, près d’une annexe qu’ils n’avaient pas pu atteindre lors du repli. Le garçon suivait leurs signaux sur une corde doublée d’un témoin. Il n’avait pas besoin d’être présent devant chaque porte pour contribuer à ce qui se passait derrière.",
+        "Pendant l’attente, il observa un grain de poussière grise pris dans la couture de sa manche. Il l’avait peut-être ramené la première fois. Il le recueillit sur une plaque et se surprit à demander si ce fragment avait appartenu à un mur, à une plante ou à quelque chose qu’ils n’avaient même plus les moyens d’imaginer. Neris le conserva sans inventer de nom.",
+        "La liaison changea au bout d’une heure. Un appel indiqua que l’équipe avait trouvé une ancienne réserve d’expédition. Les caisses portaient des marques de Noctarion. L’un des tissus avait conservé l’emblème des Veilleurs, passé et presque poudreux. Evan sentit son cœur accélérer avant même de penser à Ansel.",
+        "Iseult revint seule jusqu’au premier repère. Elle lui demanda de s’asseoir avant de parler. Ils avaient trouvé plusieurs membres de l’équipe disparue, morts, à proximité des réserves épuisées. Les noms sur les effets et les carnets permettaient une identification solide pour certains, dont Ansel Rive. Rien n’indiquait un retour tenté avec succès ni un autre passage ouvert depuis cet endroit.",
+        "Evan reçut la nouvelle avec une précision qui ne lui laissa pas immédiatement de place pour pleurer. Il demanda si on allait les ramener. Iseult répondit que les spécialistes préparaient le transfert des dépouilles et que ce travail serait séparé du prélèvement technique. Les morts ne deviendraient pas le poids qu’on abandonnait pour garder une pièce plus intéressante.",
+        "Un carnet destiné à Adèle avait été retrouvé dans une enveloppe de toile. Iseult ne l’ouvrit pas devant lui. Les relevés techniques, séparés, seraient copiés selon les mêmes règles que ceux déjà confiés aux chercheurs. Evan pensa au poids de reliure revenu trop tard dans l’atelier. Cette fois, quelque chose rentrerait avec la certitude dont personne n’avait eu envie.",
+        "Le logement de repère était accessible. L’équipe devait y laisser un élément qui maintiendrait une différence sans demander à Keryth une énergie qu’il ne possédait presque plus. Evan pouvait continuer la comparaison depuis le seuil, aider à préparer le transfert ou demander un moment avant de reprendre. La mission ne cesserait pas parce qu’il pleurait. Elle n’exigeait pas davantage qu’il cessât de pleurer pour lui donner une place."
+      ],
+      "choice": {
+        "prompt": "Iseult attendit une réponse sans lui mettre l’enveloppe dans les mains.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Reprendre le suivi des mesures depuis le seuil",
+            "passage": "Evan resta près du témoin et fit confirmer chaque valeur. Le travail lui donnait un fil assez mince pour ne pas tomber entièrement dans ce qu’il venait d’apprendre ; il ne s’en servit pas pour prétendre aller bien.",
+            "set": {
+              "retour_ansel": "releves"
+            },
+            "next": "c11-3"
+          },
+          {
+            "id": "b",
+            "label": "Aider à préparer les effets qui accompagneront les disparus",
+            "passage": "Il choisit des sacs distincts, des étiquettes et les gestes qu’on pouvait accomplir avec respect sans connaître les personnes. Iseult vérifia les noms avec lui, lentement, avant chaque fermeture.",
+            "set": {
+              "retour_ansel": "transfert"
+            },
+            "next": "c11-3"
+          },
+          {
+            "id": "c",
+            "label": "Demander quelques minutes auprès de ses compagnons",
+            "passage": "Evan posa le cahier et rejoignit Diva et Tam-Tam. Le lien lui rendit une chaleur simple, pas une explication. Quand il revint à la table, Neris lui montra où elle avait continué sans lui.",
+            "set": {
+              "retour_ansel": "pause"
+            },
+            "next": "c11-3"
+          },
+          {
+            "id": "d",
+            "label": "Faire noter que les lettres personnelles ne sont pas des pièces d’étude",
+            "passage": "Il demanda une mention distincte sur l’inventaire. Le carnet technique pouvait aider le relais ; l’enveloppe adressée à Adèle devait d’abord parvenir à Adèle, même si quelqu’un espérait y trouver une phrase utile.",
+            "set": {
+              "retour_ansel": "famille"
+            },
+            "next": "c11-3"
+          },
+          {
+            "id": "e",
+            "label": "Recopier les identifications avec une seconde personne",
+            "passage": "Evan fit relire les marques et les références par Iseult avant de les copier. Il ne voulait pas que l’urgence de ramener une réponse rendît celle-ci moins sûre que l’attente qui l’avait précédée.",
+            "set": {
+              "retour_ansel": "temoins"
+            },
+            "next": "c11-3"
+          }
+        ]
+      }
+    },
+    "c11-3": {
+      "chapter": "c11",
+      "paragraphs": [
+        "Adèle n’ouvrit pas la lettre tout de suite. Elle reçut l’enveloppe, la retourna entre ses mains et demanda qu’on lui laissât la pièce. Evan sortit avec Iseult. Il ne savait pas s’il aurait voulu qu’elle l’arrêtât pour lui dire quelque chose ou qu’elle l’oubliât assez longtemps pour pouvoir lire sans prendre soin de lui en plus du reste.",
+        "Ils attendirent dans la cour de la relieuse. Diva se coucha sous un mur en gardant ses racines près d’elle. Tam-Tam dormait dans le sac ouvert, la tête sur un tissu qu’Evan ne voulait plus employer pour autre chose. Des bruits ordinaires montaient de la rue : une dispute sur une livraison, un enfant qui réclamait une pomme trop chère, le claquement d’une semelle qu’on essayait devant un cordonnier.",
+        "Le garçon se mit à pleurer parce que ces bruits existaient encore. Il lui sembla absurde d’avoir besoin de cela maintenant, après avoir su la nouvelle depuis le seuil. Iseult resta assise à côté de lui. Elle ne lui expliqua pas comment il aurait dû recevoir une mort pour que sa tristesse suivît le trajet le plus raisonnable.",
+        "Adèle revint au bout d’un long moment. Elle n’avait pas le visage de quelqu’un soulagé. Elle posa sur la table un feuillet qu’elle acceptait de partager : un dessin, une petite réparation, quelques mots destinés aux lecteurs de la partie technique. Le reste demeurait dans l’enveloppe. Ansel avait conservé jusqu’au bout l’habitude de séparer les plans de ce qu’il voulait dire à sa sœur.",
+        "La mission avait échoué faute d’une différence d’origine maintenue. Les réserves avaient permis de survivre et de chercher un raccord, pas de rétablir un retour dont le premier repère avait été abandonné trop tôt. Son dernier schéma montrait comment comparer un circuit mécanique à un témoin passif sans les contraindre à donner le même résultat. Ils avaient emporté assez de connaissances pour laisser cela ; ils n’avaient plus eu les moyens de le mettre en œuvre.",
+        "« Ne faites pas de lui un homme qui serait parti pour vous sauver », dit Adèle. Evan releva la tête. « Il voulait revenir. Il voulait revenir ici, terminer un travail, se plaindre de ma façon de ranger les fils. C’est aussi vrai que les notes. »",
+        "Le garçon acquiesça sans trouver de phrase assez bonne pour répondre. Une partie de lui avait cherché une grandeur qui rendît l’histoire moins insupportable. Adèle ne la lui interdisait pas entièrement. Elle refusait seulement qu’elle prît la place de la vie perdue.",
+        "Le dessin pouvait rejoindre les relevés. Adèle demandait une copie claire du résultat final, qu’il réussît ou non. Elle posa sa main sur l’enveloppe et Evan comprit qu’il ne devrait pas insister pour savoir ce qui s’y trouvait. Il restait pourtant un geste qu’il pouvait proposer avant de partir, sans faire de la pièce entière le lieu où son impuissance devait être consolée."
+      ],
+      "choice": {
+        "prompt": "Il regarda la table, puis Adèle, et choisit de rester à cette taille-là.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Rester en silence si elle souhaite une présence",
+            "passage": "Evan demanda seulement s’il devait partir. Adèle secoua la tête. Ils restèrent près du dessin, sans transformer chaque minute silencieuse en une question à laquelle quelqu’un devait trouver le courage de répondre.",
+            "set": {
+              "chez_adele": "silence"
+            },
+            "next": "c11-4"
+          },
+          {
+            "id": "b",
+            "label": "L’aider à fermer l’atelier pour la journée",
+            "passage": "Il rapprocha les feuilles en cours et attendit qu’elle lui indiquât les poids à laisser. Une porte fermée ce soir-là n’avait pas besoin d’une explication qui rendît le travail moins important.",
+            "set": {
+              "chez_adele": "travail"
+            },
+            "next": "c11-4"
+          },
+          {
+            "id": "c",
+            "label": "Proposer un morceau sans magie, qu’elle pourra refuser",
+            "passage": "Evan montra l’étui sans l’ouvrir. Adèle demanda l’air le plus simple qu’il connaissait. Il joua pour que la pièce contînt autre chose que des phrases, sans prétendre choisir la force de sa peine.",
+            "set": {
+              "chez_adele": "musique"
+            },
+            "next": "c11-4"
+          },
+          {
+            "id": "d",
+            "label": "Préparer avec elle la copie qu’elle autorise à transmettre",
+            "passage": "Il prit le temps de distinguer les mots techniques des notes personnelles. Adèle confirma chaque limite. Le dernier feuillet placé dans la pochette ne contenait rien qu’elle eût cédé parce qu’elle était trop fatiguée pour protester.",
+            "set": {
+              "chez_adele": "copie"
+            },
+            "next": "c11-4"
+          },
+          {
+            "id": "e",
+            "label": "Lui proposer de venir manger au refuge plus tard",
+            "passage": "Evan ne lui demanda pas de les suivre immédiatement. Il lui indiqua simplement une heure et une place qui resteraient possibles même si elle n’avait rien à raconter. Adèle garda l’adresse à portée de sa main.",
+            "set": {
+              "chez_adele": "refuge"
+            },
+            "next": "c11-4"
+          }
+        ]
+      }
+    },
+    "c11-4": {
+      "chapter": "c11",
+      "paragraphs": [
+        "Le montage suivant utilisa l’une des comparaisons laissées par Ansel. Ce ne fut ni un déclic miraculeux ni une voix revenue à travers les instruments. Neris dut modifier deux supports, Borren en refaire un troisième et Helle renoncer à une culture qui répondait trop lentement. Le dessin avait retiré une erreur de leur chemin. Il n’avait pas fait le reste du travail à leur place.",
+        "Evan compara les intervalles au rythme d’une lampe qu’on faisait volontairement varier. Cette fois, le dispositif cessait de recevoir avant que le bol se déformât. Il recommença depuis une position différente, sans regarder le premier résultat. Lorsque les séries concordèrent, il ressentit une joie brève, puis la fatigue et la honte de trouver encore une raison de se réjouir si près de la lettre.",
+        "Entre deux essais, Adèle vint voir le montage sans l’enveloppe de son frère. Elle avait choisi ce qu’elle souhaitait apporter et demanda à repartir avec une copie des explications qu’elle comprendrait elle-même. Borren passa plus de temps qu’il ne l’aurait prévu à lui montrer pourquoi deux anneaux presque identiques ne remplissaient pas la même fonction. Elle lui fit ensuite remarquer que son schéma les représentait de la même façon.",
+        "Le nain gronda, changea le dessin et demanda à Evan de vérifier qu’il distinguait les nouveaux signes sans entendre l’explication. Le garçon échoua au premier passage et réussit au second, lorsque Neris eut écarté deux traits. Adèle n’avait pas construit une machine. Elle venait pourtant de changer une chose qui aurait pu coûter de longues minutes à une personne cherchant le bon raccord sous une alarme.",
+        "En repartant, elle ne dit pas qu’elle allait mieux parce qu’on lui avait montré une utilité. Elle demanda à Evan si sa corde la plus aiguë tenait enfin l’accord. Il répondit oui, grâce à la réparation. Cette question lui fit comprendre qu’elle pouvait encore penser à sa musique au milieu d’une journée dont la perte d’Ansel occupait une si grande partie. Il cessa un moment de se demander ce qu’il devrait faire pour mériter cette attention.",
+        "Neris l’observa sans lui demander de choisir entre les deux sentiments. Elle lui montra la copie qu’ils transmettraient à Adèle. Le nom de son frère y figurait avec la fonction précise de son apport, non comme une dédicace qui aurait permis d’oublier le dessin. Evan suivit le trait du doigt, puis remit le cahier à sa place.",
+        "Le relais pouvait désormais maintenir une circulation limitée sans accroître la charge dans le réseau d’eau. Le passage de Keryth fournissait un repère indépendant ; Zerathiel devait encore tester le sien avant tout raccord mutuel. La phase suivante exigeait une présence simultanée des trois équipes et le pouvoir de Séraphine pour retenir les positions pendant qu’on vérifiait l’accord, pas pour faire croire que celui-ci existait avant l’essai.",
+        "Sael reçut les copies et renvoya plusieurs objections. Un matériau employé ici altérait chez elle la réponse des cultures. L’ordre d’une manœuvre se traduisait mal dans les signaux locaux. Une heure convenable pour Noctarion correspondait à un déplacement des équipes de l’observatoire qui les laisserait sans relève. Evan lut ces difficultés avec une impatience qu’il reconnut aussitôt comme celle des gens qui auraient voulu que les autres rendissent leur urgence plus simple.",
+        "Odrane fit refaire le calendrier. Les techniciens de Zerathiel ne devaient pas devenir une extension commode de l’atelier. Ils travailleraient avec leurs propres supports et garderaient le moyen de fermer leur côté. Le fragment de bol prit place sur la table de planification, pas au-dessus d’elle comme un symbole auquel on aurait laissé le droit d’excuser tous les désaccords.",
+        "Il fallait choisir la première vérification commune. Les équipes savaient que toutes auraient lieu. Commencer par l’une permettrait néanmoins de décider plus tôt si le reste méritait encore d’être essayé. Evan pensa aux personnes qui ne traverseraient jamais un portail et qui recevraient pourtant dans leur eau et leurs murs le résultat de cette décision."
+      ],
+      "choice": {
+        "prompt": "Il indiqua le contrôle dont il ne voulait pas apprendre trop tard la faiblesse.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Vérifier d’abord que chaque équipe peut fermer et revenir",
+            "passage": "Evan choisit une répétition où l’on renoncerait volontairement à l’accord. Si les équipes ne pouvaient pas sortir d’un essai interrompu, aucune courbe satisfaisante ne justifierait de l’agrandir.",
+            "set": {
+              "essai_commun": "retour"
+            },
+            "next": "c11-5"
+          },
+          {
+            "id": "b",
+            "label": "Comparer les effets sur les cultures et les animaux témoins",
+            "passage": "Il demanda qu’aucun effet favorable sur une machine ne suffît à ignorer un changement persistant du vivant. Diva resterait observatrice ; elle ne serait pas poussée à supporter une exposition pour rendre le relevé plus lisible.",
+            "set": {
+              "essai_commun": "vivant"
+            },
+            "next": "c11-5"
+          },
+          {
+            "id": "c",
+            "label": "Mesurer ce qui atteint les alimentations urbaines",
+            "passage": "Evan désigna le schéma du refuge. Le relais pouvait paraître stable à sa propre table et déplacer pourtant le problème vers une conduite qu’on avait cessé de regarder.",
+            "set": {
+              "essai_commun": "reseaux"
+            },
+            "next": "c11-5"
+          },
+          {
+            "id": "d",
+            "label": "Faire répéter les signaux d’arrêt par les trois groupes",
+            "passage": "Il demanda un essai sans danger où les équipes emploieraient des consignes volontairement incomplètes. Ils devaient savoir reconnaître le manque avant de lui confier une distance qu’une voix ne pourrait plus traverser.",
+            "set": {
+              "essai_commun": "signaux"
+            },
+            "next": "c11-5"
+          },
+          {
+            "id": "e",
+            "label": "Vérifier la durée réelle des réserves en cas de panne",
+            "passage": "Evan choisit l’épreuve où la charge nouvelle s’interrompait. Il voulait savoir combien de temps on conserverait de l’eau, des soins et un retour avant que le mot secours ne redevînt une simple manière de demander davantage aux personnes.",
+            "set": {
+              "essai_commun": "reserves"
+            },
+            "next": "c11-5"
+          }
+        ]
+      }
+    },
+    "c11-5": {
+      "chapter": "c11",
+      "paragraphs": [
+        "L’essai commun réussit assez pour révéler le problème suivant. Pendant plusieurs heures, les variations se répartirent sans s’accumuler dans les conduites de Noctarion. Les cultures de Zerathiel conservèrent leurs limites et les repères de Keryth ne montrèrent pas de perte nouvelle. Puis l’arrivée changea d’échelle avant la fin de la période prévue.",
+        "Séraphine retint la position du relais et demanda aux équipes de fermer dans l’ordre répété. Le temps sembla ralentir près de ses mains. Evan vit une goutte de sueur demeurer au bord de sa tempe pendant qu’un technicien terminait un geste qui aurait dû être trop lent. Lorsqu’elle relâcha la distorsion, rien ne s’effondra. Elle n’avait pas arrêté le phénomène dans le ciel ; elle leur avait donné assez de secondes pour ne pas transformer l’essai en catastrophe.",
+        "Le délai de Zerathiel diminuait. Les signes précurseurs progressaient plus vite que lors des premiers relevés. La méthode pouvait protéger une circulation locale ; il fallait maintenant décider comment elle recevrait une variation plus grande, sans prendre aux autres mondes la stabilité qu’elle promettait au leur.",
+        "Les cinq Arcanistes se réunirent de nouveau, cette fois avec les réponses des équipes étrangères. Aucun choix ne rendait Elyrion à son passé. Un réseau de plusieurs ancrages pourrait répartir la charge sous contrôle commun. Une stabilisation plus limitée protégerait d’abord les zones habitées de la Bande du Crépuscule en laissant le reste sous surveillance. Si aucun maintien suffisant n’était possible, un corridor organisé permettrait de déplacer des personnes vers des lieux acceptés par leurs hôtes, sans feindre qu’un exil fût une guérison du monde.",
+        "Evan écouta sans voter pour une fin qu’il n’aurait pas à vivre. Il demanda quelles observations lui permettraient de distinguer ces possibilités sur le terrain. On les écrivit près des signaux de repli. La décision physique ne serait pas confiée à son intuition ; sa perception constituerait l’un des contrôles, avec un droit de dire qu’il ne reconnaissait plus rien.",
+        "Il rentra préparer les instruments. Les trois balises étaient réparées et accordées. Le clavier de son bracelet répondait à chaque lamelle, la flûte tenait dans sa fixation et les griffes du gant droit n’accrochaient plus. Evan les essaya, puis s’arrêta devant l’image du masque. Ses yeux violets semblaient plus sûrs que les siens. Il ne leur demanda plus de résoudre cette différence à sa place.",
+        "Diva et Tam-Tam l’attendaient dans la cour. Il leur transmit l’emplacement des équipes, les lumières et l’envie qu’il avait de rentrer. Il ne leur promit pas que tout serait pareil après. Leurs réponses ne contenaient pas cette exigence.",
+        "Avant de fermer son sac, il lui restait à choisir ce qu’il garderait près de lui lorsque les premières mesures cesseraient d’être un simple travail d’atelier. Ce n’était pas son arme la plus puissante. C’était le rappel qui l’aiderait à ne pas confondre l’urgence avec le droit de tout demander."
+      ],
+      "choice": {
+        "prompt": "Il regarda les objets rangés sur la couverture.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Emporter le fragment confié par Sael",
+            "passage": "Evan l’enveloppa sans cacher la marque de retrait. L’accord appartenait encore à ceux qui pourraient décider d’en sortir ; il ne voulait pas l’oublier au moment où les tenir ensemble deviendrait le plus difficile.",
+            "set": {
+              "objet_decisif": "bol"
+            },
+            "next": "c11-fin"
+          },
+          {
+            "id": "b",
+            "label": "Garder son cahier accessible",
+            "passage": "Il glissa le cahier au-dessus des réserves. Les premières pages lui rendaient la différence entre un prénom, une question et une mesure. Il aurait besoin des trois sans laisser l’un effacer les autres.",
+            "set": {
+              "objet_decisif": "cahier"
+            },
+            "next": "c11-fin"
+          },
+          {
+            "id": "c",
+            "label": "Prendre la copie technique autorisée par Adèle",
+            "passage": "Evan rangea le dessin d’Ansel dans une pochette distincte. Ce travail avait une origine, une limite et une personne qui devait recevoir le résultat. Il ne serait pas seulement une ressource qu’on emportait vers l’essai suivant.",
+            "set": {
+              "objet_decisif": "adele"
+            },
+            "next": "c11-fin"
+          },
+          {
+            "id": "d",
+            "label": "Porter l’écharpe du refuge sous le masque",
+            "passage": "Maëlle avait fait reprendre une couture. Evan la noua assez lâche pour respirer et se rappela qu’un retour pouvait être un lieu très ordinaire, pas une récompense qu’il faudrait mériter par la souffrance.",
+            "set": {
+              "objet_decisif": "echarpe"
+            },
+            "next": "c11-fin"
+          },
+          {
+            "id": "e",
+            "label": "Emporter la phrase musicale commencée avec l’enfant",
+            "passage": "Il conserva la note corrigée, celle qu’il aurait joué de travers sans être repris. L’autre monde n’existait pas seulement pour leur donner un délai : quelqu’un y attendait aussi qu’ils pussent se tromper ensemble sur une musique.",
+            "set": {
+              "objet_decisif": "partition"
+            },
+            "next": "c11-fin"
+          }
+        ]
+      }
+    },
+    "c11-fin": {
+      "chapter": "c11",
+      "paragraphs": [
+        "Le dernier soir avant l’essai, Evan n’arriva pas à dormir. Il ne descendit pas tout de suite chercher du travail. Il resta assis sur le lit, Tam-Tam contre sa cuisse et Diva dans l’ouverture de la cour. La maison avait appris à contenir leurs bruits sans que chaque mouvement devînt une inquiétude.",
+        "Il pensa au village. Pas seulement au dernier jour, ni à la faute qu’il avait cru devoir porter. Il retrouva une porte qui grinçait, une main posée trop haut sur son archet et l’odeur d’un repas dont il n’avait jamais su le nom. Ces choses n’avaient pas besoin que le Soleil revînt pour avoir existé réellement. Elles n’avaient pas non plus besoin qu’il cessât de les pleurer pour qu’il pût protéger autre chose.",
+        "Il avait eu une petite dispute avec Neris au sujet d’une page du cahier. Elle avait corrigé une notation en pensant l’aider et ajouté son explication dans un espace où il voulait garder une question personnelle. La correction était juste. Cela n’avait pas empêché Evan de refermer le carnet trop vite, avec une colère qui l’avait effrayé davantage que la faute elle-même.",
+        "Il était revenu la voir après le repas. Il n’avait pas besoin de retirer tout ce qu’il avait ressenti pour lui expliquer qu’il ne voulait pas qu’elle écrivît là sans demander. Neris s’était excusée, puis lui avait demandé de marquer les pages destinées au travail commun. Ils avaient trouvé ensemble un signe assez simple pour qu’il n’eût pas à vérifier chaque fois qu’on ouvrait le cahier.",
+        "Ce désaccord ne ressemblait pas à la fin d’une confiance. Evan y pensa en regardant la fenêtre. Il avait cru longtemps qu’une amitié devait être protégée de toute colère, faute de quoi on risquait d’en être immédiatement chassé. Il découvrait qu’on pouvait garder une relation en y laissant une place précise à ce qui vous avait blessé, au lieu de demander à la musique de rendre cette blessure inaudible.",
+        "Iseult passa vérifier les horaires. Evan lui demanda de rester une minute. Ils ne parlèrent pas immédiatement du lendemain. Elle lui raconta qu’elle avait reçu une nouvelle paire de gants et qu’elle détestait la façon dont le cuir neuf lui faisait sentir chaque articulation. Il lui montra le gant réparé par Borren. Pendant quelques instants, ils purent comparer des défauts assez petits pour ne pas demander un plan.",
+        "Lorsqu’elle partit, Evan se coucha. Il n’avait pas cessé d’avoir peur. Il avait seulement retrouvé des personnes à qui cette peur pouvait être dite sans qu’on lui retirât aussitôt tout ce qu’il avait appris à faire.",
+        "Dans la cour, Diva déplaça une patte. Le lien lui rendit une image de matin, de terre humide et de trois compagnons qui avanceraient encore à la même hauteur. Evan s’y arrêta assez longtemps pour finir par dormir."
+      ],
+      "next": "c12-1"
+    },
+    "c12-1": {
+      "chapter": "c12",
+      "paragraphs": [
+        "La première alerte vint de Zerathiel avant le lever des équipes de Noctarion. Le message contenait peu de mots traduits et beaucoup de mesures. Odrane les lut trois fois, puis posa près d’elles les résultats de Keryth. Evan vit les différences sans pouvoir encore les comprendre : l’approche prenait la forme d’une arrivée, et le délai qu’ils comptaient employer à vérifier n’existait plus à la même taille.",
+        "Les préparatifs ne furent pas abandonnés pour gagner du temps. Ils devinrent ce qui permettait de ne pas en perdre à chaque ordre. Les réserves partirent vers les postes, les habitants des logements concernés reçurent les consignes prévues, les soigneurs ouvrirent les pièces gardées pour cette éventualité. Evan regarda une caisse de linge traverser la cour et reconnut le nœud qu’il avait appris à desserrer sans bloquer le sac.",
+        "Le conducteur du premier convoi leur fit signe au passage. Il avait conservé la même casserole et les mêmes rênes, mais un des chariots portait des marques de charge nouvelles. Il demanda à Evan de vérifier la liste des objets placés dans la caisse du dessus. Le garçon lut trois noms d’instruments avant de voir, tout en bas, un paquet de galettes destiné aux retours.",
+        "« Ça ne compte pas comme un appareil », remarqua-t-il. Le conducteur répondit que cela dépendait de l’état de ceux qui revenaient. Evan sourit, puis vérifia quand même que le paquet ne masquait pas les attaches. Il se souvenait du pain gardé et du pain partagé, de tous les jours où il aurait volontiers trouvé cette réserve dérisoire trop précieuse pour la laisser dans une caisse.",
+        "Il la remit à sa place. Il ne pouvait pas garantir qui mangerait ces galettes ni à quelle heure. Il pouvait vérifier qu’elles attendraient au bon endroit. Le conducteur reprit ses rênes en lui disant de ne pas laisser les savants employer l’eau chaude comme unité de mesure. Evan promit de transmettre. Cette plaisanterie l’accompagna jusqu’au relais, assez légère pour lui rappeler que la gravité d’un jour n’obligeait pas chaque parole à lui ressembler.",
+        "Le relais principal occupait une enceinte proche de la Lisière, assez loin des premières habitations pour que la charge ne traversât pas d’abord des vies en essayant de trouver ses limites. Les trois ancrages y étaient représentés par des supports distincts. Les équipes étrangères gardaient la main sur les fermetures de leur côté. Ce qui les liait n’effaçait pas les distances dont leurs procédures avaient besoin pour rester honnêtes.",
+        "Séraphine examina les positions et fit déplacer un groupe de gardes avant de commencer. Elle n’expliqua pas tout de suite pourquoi. Une seconde plus tard, un éclat de pierre apparut à l’endroit qu’ils venaient de quitter, arraché au bord d’un décalage qu’Evan n’avait pas vu se former. L’Arcaniste le retint dans une mince boucle de temps jusqu’à ce qu’on eût fini de dégager l’allée.",
+        "Le garçon sentit l’envie de ne plus rien regarder en dehors d’elle. Ce serait plus facile : croire qu’une personne assez puissante s’occuperait de tout ce qu’il n’avait pas les moyens de prévoir. Puis il vit le nombre de supports qu’elle suivait simultanément, les ordres qu’elle devait recevoir des autres et la main d’Iseult posée sur la liste de retour. Le pouvoir de Séraphine n’avait pas donné aux personnes le droit d’être absentes de leurs propres tâches.",
+        "Diva attendait près d’un carré de terre laissé libre. Tam-Tam avançait d’un groupe à l’autre avec une agitation qui ne ressemblait plus à de la curiosité. Evan leur transmit les limites du terrain et la position des soigneurs. Il les sentit s’orienter vers lui sans cesser d’observer ce qui les entourait. Ils n’étaient pas plus des outils que lui.",
+        "Les premières variations approchaient de l’enceinte. Avant de soutenir un effort précis, Evan choisit la place depuis laquelle il resterait utile même si le son se troublait. Les cinq emplacements avaient été vérifiés ; chacun permettait de voir une partie différente du travail et demandait aux autres de prendre ce qu’il ne pouvait pas voir."
+      ],
+      "choice": {
+        "prompt": "Il s’arrêta avant de laisser l’impatience décider où poser ses pieds.",
+        "options": [
+          {
+            "id": "a",
+            "label": "S’installer près des marqueurs de retour",
+            "passage": "Evan choisit la ligne où il pourrait comparer les signaux des trois côtés. Il garderait un espace pour les personnes qui devraient revenir sans pouvoir attendre qu’on eût terminé de compter.",
+            "set": {
+              "place_accord": "retour"
+            },
+            "next": "c12-suite-1"
+          },
+          {
+            "id": "b",
+            "label": "Rester à portée de la zone de soins",
+            "passage": "Il posa l’étui là où le son n’empêcherait pas d’entendre une consigne. Soutenir les porteurs et les blessés ne lui permettrait pas de suivre tout le dispositif ; il prévint Neris de cette limite.",
+            "set": {
+              "place_accord": "soigneurs"
+            },
+            "next": "c12-suite-1"
+          },
+          {
+            "id": "c",
+            "label": "Prendre le poste proche de Diva et des défenses végétales",
+            "passage": "Evan voulut sentir directement la fatigue de sa compagne plutôt que la deviner depuis l’autre extrémité de l’enceinte. Les racines étaient un appui, pas une muraille qu’on pourrait oublier jusqu’à sa rupture.",
+            "set": {
+              "place_accord": "diva"
+            },
+            "next": "c12-suite-1"
+          },
+          {
+            "id": "d",
+            "label": "Rejoindre Neris au contrôle des intervalles",
+            "passage": "Il choisit les témoins et le balancier. La musique resterait disponible si elle devenait utile, mais sa première tâche serait de dire quand les observations cesseraient de correspondre.",
+            "set": {
+              "place_accord": "instruments"
+            },
+            "next": "c12-suite-1"
+          },
+          {
+            "id": "e",
+            "label": "Garder un point de passage entre les équipes",
+            "passage": "Evan fixa une balise près de l’allée centrale et conserva la possibilité de se déplacer dans le périmètre protégé. Il demanda à chacun de ne pas le suivre du regard comme une pièce qui manquerait à sa table.",
+            "set": {
+              "place_accord": "mobile"
+            },
+            "next": "c12-suite-1"
+          }
+        ]
+      }
+    },
+    "c12-2": {
+      "chapter": "c12",
+      "paragraphs": [
+        "La charge changea avant la fin de la première série. Evan la sentit dans ses dents, comme un son trop grave pour devenir une note. Le témoin mécanique confirma le décalage ; les cultures s’inclinèrent d’un même côté. Les annonces partirent dans les deux directions du relais, et le gris du passage de Keryth se creusa au centre sans gagner sur son bord.",
+        "Veyr ordonna une fermeture partielle. Séraphine conserva l’origine de chaque ancrage pendant qu’on isolait les alimentations secondaires. Evan comptait les intervalles avec Neris lorsqu’un cri monta près du fossé. Le mouvement astral avait dérangé les formes qui rôdaient au-delà des bornes. Les gardes en avaient repoussé les premières, mais deux créatures atteignaient maintenant la tranchée où les dernières caisses de secours attendaient d’être déplacées.",
+        "L’une avançait bas, sur des pattes qui se repliaient en frappant ses flancs. L’autre possédait une masse de plaques dont les bords arrachaient la terre à chaque appui. Elles ne cherchaient pas le relais. Elles détruisaient les choses qui se trouvaient dans leur mouvement, puis frappaient encore lorsque ces choses avaient cessé de leur résister.",
+        "Evan n’appela pas une pensée qu’il savait ne pas trouver. Il prit le violon et choisit une mesure assez stable pour ne pas ajouter sa peur à celle de ses compagnons. Iseult indiquait aux porteurs le chemin de repli. Un montant avait cédé sur le côté, laissant un obstacle que les roues ne pourraient pas contourner assez vite.",
+        "Les Veilleurs de tête ne demandaient pas qu’un garçon arrêtât seul deux monstres. Ils avaient besoin que le couloir restât ouvert pendant qu’ils détournaient la première créature. Diva planta ses griffes dans la terre ; Tam-Tam releva la tête, déjà plus grand que les caisses. Les deux attendaient une direction qu’ils pourraient tenir avec lui, pas une colère qu’il leur ferait porter à sa place.",
+        "La déformation du relais interdisait les gestes trop larges. Une attaque qui rejetterait la créature contre un support pouvait déplacer le danger au lieu de le supprimer. Une défense dressée au mauvais endroit enfermerait les porteurs avec leur chargement. Evan regarda d’abord les espaces vides, puis les corps qu’il voulait y voir passer.",
+        "Il avait plusieurs moyens d’ouvrir ce temps. Il pouvait immobiliser, repousser, interrompre un élan ou rendre aux gardes la précision d’un mouvement épuisé. Aucun de ces choix ne dispensait de regarder ce qu’il produirait réellement. Il posa le premier son sur les cordes, et, cette fois, sa voix sortit assez fort pour nommer l’aide qu’il allait donner."
+      ],
+      "choice": {
+        "prompt": "Le couloir était encore libre, mais plus pour longtemps.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Faire entraver la créature basse par les racines de Diva",
+            "passage": "Evan transmit les appuis visibles et le côté où les gardes ne passeraient plus. Diva referma des racines autour des pattes basses, sans tirer la masse vers les supports. Le garçon soutint la prise à chaque mesure ; lorsque le sol céda sous la tension, il fit changer de point d’ancrage au lieu d’exiger davantage.",
+            "set": {
+              "combat_relais": "racines"
+            },
+            "next": "c12-suite-2"
+          },
+          {
+            "id": "b",
+            "label": "Demander à Diva un souffle pour dégager l’obstacle et détourner l’élan",
+            "passage": "Il montra à sa compagne le montant tombé et la bande de terre vide au-delà. Le souffle roula la pièce hors de l’allée, puis fit dévier la première charge. Evan dut réduire aussitôt la musique pour laisser Diva reprendre son air ; une seconde rafale n’aurait pas été gratuite.",
+            "set": {
+              "combat_relais": "souffle"
+            },
+            "next": "c12-suite-2"
+          },
+          {
+            "id": "c",
+            "label": "Faire frapper Tam-Tam dans la tranchée évacuée",
+            "passage": "Evan attendit que les deux derniers porteurs eussent quitté le bord. La foudre traversa la ligne humide devant les créatures, interrompant leur avance sans courir vers le matériel. Il maintint Tam-Tam dans ce couloir précis, malgré la force immense qui lui demandait de frapper plus loin.",
+            "set": {
+              "combat_relais": "foudre"
+            },
+            "next": "c12-suite-2"
+          },
+          {
+            "id": "d",
+            "label": "Renforcer la vitesse et la coordination des Veilleurs",
+            "passage": "Il lança une phrase vive vers les gardes qui avaient accepté son soutien. Leurs gestes gagnèrent une netteté qui leur permit d’écarter un membre et de refermer la ligne. Evan cessa avant que l’aide ne devînt une façon de leur demander de tenir malgré une blessure qu’il ne voyait pas.",
+            "set": {
+              "combat_relais": "vitesse"
+            },
+            "next": "c12-suite-2"
+          },
+          {
+            "id": "e",
+            "label": "Couper les liens qui retiennent les caisses pour ouvrir l’évacuation",
+            "passage": "Evan courut jusqu’au montant à couvert du mur, sortit les griffes du gant et trancha les sangles prises sous la poutre. Les porteurs purent faire glisser le chargement. Il revint au poste sans chercher une bravoure de plus près des mâchoires : ses mains avaient déjà ouvert le passage dont les autres avaient besoin.",
+            "set": {
+              "combat_relais": "griffes"
+            },
+            "next": "c12-suite-2"
+          }
+        ]
+      }
+    },
+    "c12-3": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Les caisses atteignirent l’abri. Les Veilleurs purent reculer derrière une ligne plus solide, et la seconde créature heurta un obstacle qu’on avait enfin eu le temps de lui donner. Darsen fit déplacer deux unités au lieu d’attendre que la première défense fût devenue une question de fidélité à une position perdue.",
+        "Evan reçut la fatigue de ses compagnons comme une chaleur trop lourde. Il réduisit sa présence dans le lien pour distinguer ce qui leur appartenait de ce qu’il voulait encore leur demander. Diva gardait une patte contre la terre, Tam-Tam soufflait par longues bouffées blanches. Ils pouvaient continuer. Pas de la même façon, pas indéfiniment.",
+        "Une balise tomba près du mur sans se briser. Evan eut le réflexe de la regarder comme si un objet perdu avait déjà coûté quelque chose qu’on ne lui rendrait pas. Il laissa un garde la ramasser. Le retour du disque dans sa main lui apprit, avec une violence ridicule, qu’il pouvait encore recevoir de l’aide pour une chose qu’il aurait pu faire lui-même.",
+        "Il le fixa de nouveau sans augmenter la portée. Le masque renvoyait sa propre respiration mêlée aux notes. Une goutte de sueur lui glissa dans l’œil et brouilla la moitié du terrain ; il dut s’arrêter un temps pour l’essuyer. Les gardes ne disparurent pas pendant ce silence. Neris continua de lire. Iseult déplaça un porteur. Diva demeura au bord du carré de terre.",
+        "Cette seconde imparfaite fit plus pour son calme que la pensée d’un morceau joué sans faute. Il n’avait pas besoin de devenir ininterrompu. Le système qu’ils essayaient de construire reposait précisément sur la possibilité que chaque personne pût avoir un bord, une fatigue ou une erreur, sans que tout le reste lui fût aussitôt arraché. Il reprit la note en sachant un peu mieux où il l’arrêtait.",
+        "Un choc frappa l’air au-dessus d’eux. Séraphine avait détaché de sa couronne d’astres un point de lumière qui suivit la créature cuirassée. Il ne la poursuivit pas jusque dans les bois. À quelques pas des supports, l’espace s’incurva, retint l’élan et le referma sur une sphère noire minuscule. La bête disparut de la ligne de tir sans que le fossé entier fût arraché avec elle.",
+        "La magie de l’Arcaniste demeurait effrayante même lorsqu’elle protégeait. Evan sentit le désir de s’en éloigner en même temps que son soulagement. Il ne pouvait pas faire entrer tous ses sentiments dans le mot merci. Séraphine avait déjà ramené la main vers les ancrages et demandait un relevé que son pouvoir ne pouvait pas lui fournir à la place de Neris.",
+        "Le problème au centre du relais grandissait plus vite que celui de la clôture. Une partie de la charge cherchait le chemin le plus facile vers l’alimentation d’Elyrion. Si les équipes la laissaient faire, elles stabiliseraient leur propre table en surchargeant les conduites qu’elles avaient justement voulu protéger. Le symptôme ressemblait à une réussite : le témoin du relais se calmait tandis que celui du quartier recevait davantage.",
+        "Evan le vit assez tôt pour demander l’arrêt de cette arrivée. Sa voix se brisa une fois. Il recommença, plus fort. Neris annonça la mesure et Borren fit fermer le raccord. Le montage perdit une partie de sa stabilité, mais la variation cessa de courir vers les rues.",
+        "Iseult ramenait un Veilleur blessé près de l’abri. Sa respiration était courte ; il tentait de regarder derrière lui à chaque pas. Evan sentait la peur passer d’un groupe à l’autre, la même qu’à la citerne, devenue assez grande pour prendre la place des consignes. Son don pouvait desserrer ce nœud si on acceptait son aide. Ses compagnons pouvaient encore fournir un effort bref. La magie de lumière rendrait un chemin visible si la poussière masquait les fanions.",
+        "Il choisit ce qu’il allait tenir pendant que les équipes rétablissaient les deux lignes indépendantes. Il n’était ni le cœur du relais ni sa réserve. Si sa musique s’arrêtait, les dispositifs devaient encore savoir fermer. Cela rendit possible la décision de jouer, au lieu de transformer chaque note en obligation de rester vivant pour les autres."
+      ],
+      "choice": {
+        "prompt": "Il regarda les personnes et les passages avant de regarder les instruments.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Aider les équipes qui l’acceptent à reprendre leur souffle",
+            "passage": "Evan annonça ce qu’il proposait, puis laissa la note atteindre ceux qui la suivaient. Il ne supprima pas le danger de leurs pensées ; il leur rendit assez d’espace pour entendre un ordre sans que la peur parlât toujours plus fort.",
+            "set": {
+              "soutien_critique": "emotions"
+            },
+            "next": "c12-4"
+          },
+          {
+            "id": "b",
+            "label": "Soutenir le blessé pendant que les soigneurs interviennent",
+            "passage": "Il s’agenouilla près d’Ysane et prit la flûte pour une phrase courte. La douleur diminua, le saignement ralentit sous le bandage. Il ne promit pas au Veilleur une jambe guérie parce que les autres avaient encore besoin de lui.",
+            "set": {
+              "soutien_critique": "soins"
+            },
+            "next": "c12-4"
+          },
+          {
+            "id": "c",
+            "label": "Faire protéger l’allée par une levée de neige compacte",
+            "passage": "Evan transmit à Tam-Tam une forme basse, qui laisserait passer les personnes sans leur cacher la sortie. L’ours tassa la neige contre le bord menacé. Le garçon conserva assez de rythme pour l’aider à se tenir, puis laissa les gardes reprendre la ligne.",
+            "set": {
+              "soutien_critique": "neige"
+            },
+            "next": "c12-4"
+          },
+          {
+            "id": "d",
+            "label": "Tracer de lumière le chemin du repli",
+            "passage": "Le son des paumes porta de petits points clairs au-dessus des bornes. Evan les garda assez faibles pour ne pas masquer les gestes d’Iseult. La lumière n’avait pas besoin d’emplir le champ : elle devait seulement empêcher un pied épuisé de choisir le mauvais côté.",
+            "set": {
+              "soutien_critique": "lumiere"
+            },
+            "next": "c12-4"
+          },
+          {
+            "id": "e",
+            "label": "Renforcer brièvement les porteurs qui isolent le raccord",
+            "passage": "Evan soutint le groupe chargé de la barre d’arrêt, en donnant le début et la fin de l’effort. Les hommes fermèrent le raccord ensemble. Il relâcha l’augmentation dès la prise du verrou, avant que la force empruntée ne leur fît oublier ce qu’ils pouvaient porter ensuite.",
+            "set": {
+              "soutien_critique": "force"
+            },
+            "next": "c12-4"
+          }
+        ]
+      }
+    },
+    "c12-4": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Le relais cessa de chercher les rues. Il ne devint pas calme. Les supports conservaient leurs différences, mais chacune demandait désormais une place que l’arrivée ne lui laissait plus spontanément. Veyr répéta les valeurs de Zerathiel ; la réponse revenait encore, datée et distincte. Les habitants de l’autre monde n’avaient pas fermé leur côté, mais ils annonçaient qu’ils le feraient si l’exposition continuait de monter.",
+        "Personne ne leur demanda de rester pour prouver l’accord. Séraphine fit dégager un second trajet de fermeture et posa autour des supports une constellation si précise qu’Evan eut l’impression d’en voir la profondeur au travers de ses propres mains. Le temps ne s’arrêta pas dans l’enceinte. Quelques gestes reçurent seulement un délai de plus, aux endroits où elle pouvait en maintenir la limite.",
+        "Le garçon avait imaginé qu’un contact avec Aelyr ferait de ce moment une rencontre. Il comprit qu’ils n’étaient toujours pas à la taille d’un dialogue. Les instruments montraient une arrivée qui répondait à une nécessité immense ; rien ne revenait comme une pensée consciente d’avoir atteint des villes et des enfants. Il n’avait pas à appeler cette absence de réponse un mépris.",
+        "La régulation n’avait pas besoin que l’être comprît Noctarion. Elle devait recevoir l’énergie mêlée sans la laisser s’accumuler dans les milieux habités, et conserver à Aelyr une stabilité qu’un arrachement brutal détruirait peut-être avec le reste. Les dispositifs répartissaient, convertissaient une part en travail contrôlé et stockaient seulement ce qu’ils savaient restituer. Ils ne possédaient pas une réserve infinie où cacher une erreur.",
+        "Les trois premières phases devaient laisser au quatrième intervalle une différence propre, pas le remplir en forçant tous les côtés à battre ensemble. Evan le sentit avant de trouver comment le dire. Il avait passé des jours à compter le silence comme une place vide ; il pouvait maintenant le suivre comme une limite qu’il fallait garder.",
+        "Il le décrivit avec ses mots. Neris le traduisit en mesure et Borren vérifia qu’une modification mécanique obtenait le même effet sans le violon. Le résultat tint. Le garçon eut une envie absurde de rire au moment le moins convenable de sa vie. Son intuition n’était pas devenue le nom secret d’un monde. Elle avait conduit à une vérification que les autres pouvaient maintenant refaire sans lui.",
+        "Il fallait transmettre cette correction aux trois équipes avant d’engager une solution plus large. Le chemin sonore risquait de se troubler ; les marques écrites et les signaux de corde demandaient du temps. Ils disposaient de plusieurs moyens, dont aucun ne pouvait être employé comme s’il rendait les autres inutiles. Evan choisit celui qu’il serait en mesure de suivre jusqu’à la confirmation, sans confondre un signe envoyé et un signe reçu."
+      ],
+      "choice": {
+        "prompt": "Il ne chercha pas le message le plus fort, mais celui dont il saurait reconnaître le retour.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Relayer le rythme par les balises synchronisées",
+            "passage": "Evan régla les trois disques sur la même phrase et réduisit leur portée pour conserver une réception distincte. Chaque équipe devait répondre à son tour. Un écho de sa propre musique ne compterait jamais pour l’accord de quelqu’un d’autre.",
+            "set": {
+              "signal_accord": "balises"
+            },
+            "next": "c12-5"
+          },
+          {
+            "id": "b",
+            "label": "Faire transmettre les valeurs et les signes par écrit",
+            "passage": "Il donna à Odrane les intervalles notés et demanda qu’on les relût avant le départ du messager. La lenteur imposait de tenir les supports plus longtemps ; elle rendait aussi la correction indépendante de sa capacité à jouer encore.",
+            "set": {
+              "signal_accord": "ecrit"
+            },
+            "next": "c12-5"
+          },
+          {
+            "id": "c",
+            "label": "Doubler les annonces par les signaux tactiles de retour",
+            "passage": "Evan reprit la corde comme à Keryth, avec une réponse attendue de chaque poste. Ce n’était pas une langue capable de tout dire. Elle pouvait confirmer assez précisément que la série écrite avait été reçue et comprise.",
+            "set": {
+              "signal_accord": "corde"
+            },
+            "next": "c12-5"
+          },
+          {
+            "id": "d",
+            "label": "Employer un signal sonore et une confirmation écrite",
+            "passage": "Il laissa la musique désigner le début de la série, puis attendit les marques qui en validaient les valeurs. Les deux moyens ne promettaient pas deux fois la même sûreté ; ils pouvaient se contredire assez tôt pour empêcher un faux accord.",
+            "set": {
+              "signal_accord": "mixte"
+            },
+            "next": "c12-5"
+          },
+          {
+            "id": "e",
+            "label": "Confier la transmission à Neris et suivre seulement le témoin",
+            "passage": "Evan reconnut qu’il perdrait la correction en essayant de tout surveiller. Il garda les yeux sur la mesure pendant que Neris distribuait les annonces. Il pouvait avoir trouvé un détail utile sans devoir posséder chaque geste qui en découlerait.",
+            "set": {
+              "signal_accord": "deleguer"
+            },
+            "next": "c12-5"
+          }
+        ]
+      }
+    },
+    "c12-5": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Les réponses revinrent distinctes. D’abord celle du poste de Keryth, où le repère demeurait inerte sans recevoir la surcharge comme un déchet. Puis celle de Zerathiel, avec un retard assez long pour qu’Evan sentît le besoin de la trouver dans tous les petits bruits qui l’entouraient. Enfin le contrôle d’Elyrion, posé près des alimentations restées isolées.",
+        "Séraphine conserva les positions pendant la dernière comparaison, puis relâcha volontairement une partie de son maintien. Les instruments devaient montrer si le système tenait par ses propres différences. Une courbe monta, s’arrêta et redescendit assez lentement pour ne pas produire le calme trompeur de la première fermeture. Borren annonça les valeurs sans les embellir.",
+        "Aelyr n’avait pas disparu du Soleil. L’arrivée conservait sa signature, mêlée d’énergie stellaire et de magie. Mais la part reçue dans les réseaux contrôlés cessait de croître à chaque passage. Le système pouvait empêcher une accumulation et donner un autre usage à une force qui n’avait jusque-là trouvé que des corps, des sols et des murs pour s’y déposer.",
+        "Il restait plusieurs manières de l’engager. Les responsables des trois côtés avaient défini leurs limites, les Arcanistes leurs critères, les équipes leurs possibilités de retrait. Evan n’allait pas décider du sort de peuples à leur place. Son poste devait fournir l’un des contrôles qui permettaient d’activer la solution retenue lorsque les observations la rendaient effectivement possible.",
+        "La première configuration maintiendrait un réseau de plusieurs ancrages indépendants, avec des charges faibles réparties et des inspections communes. La deuxième protégerait d’abord la Bande du Crépuscule, en refusant de promettre aussitôt la reconquête de toutes les terres. Une troisième privilégierait un corridor d’évacuation pour les régions qu’on ne pouvait pas maintenir, selon les places réellement offertes à Zerathiel et les droits de ses habitants.",
+        "Deux variantes complétaient ces voies : des relais adaptatifs fondés sur les cultures végétales, conservant des arrêts mécaniques indépendants ; ou un dispositif volontairement local et réversible, qu’on pourrait démonter avant de l’étendre. Les cinq formes ne constituaient pas cinq degrés de bravoure. Elles demandaient des efforts, des renoncements et des obligations différents.",
+        "Darsen recueillit les confirmations. Depuis le début, Evan avait suivi les témoins assez précisément pour savoir quelles différences il reconnaissait le mieux maintenant. Il annonça ce qu’il était capable de contrôler, puis ce qu’il voulait voir priorisé. Les adultes comparèrent cette proposition aux leurs ; les responsables de Zerathiel confirmèrent la limite convenue. Le choix ne resta pas caché dans une seule tête.",
+        "Il leva enfin l’archet, non comme une clé devant laquelle un univers attendait, mais comme le début reconnaissable d’une série de mesures. À la fin de cette série, sa musique devait pouvoir s’arrêter. Il regarda Diva, Tam-Tam, Iseult et les personnes derrière leurs propres témoins. Personne ne lui demanda de devenir plus grand qu’eux pour garder une place parmi eux."
+      ],
+      "choice": {
+        "prompt": "Il donna sa dernière proposition en nommant aussi ce qu’elle ne promettait pas.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Répartir la charge entre les ancrages indépendants",
+            "passage": "Evan privilégia le réseau commun, avec les fermetures propres à chaque monde et des inspections régulières. Les équipes confirmèrent les limites avant d’engager les trois côtés. Le relais cessa d’exiger qu’un seul lieu portât la stabilité des autres.",
+            "set": {
+              "strategie_finale": "reseau"
+            },
+            "next": "c12-fin"
+          },
+          {
+            "id": "b",
+            "label": "Stabiliser d’abord les régions habitées du Crépuscule",
+            "passage": "Il proposa de protéger les zones où vivaient les gens avant de promettre une extension. Les limites furent conservées dans la configuration. Noctarion gagnerait une marge réelle ; le reste d’Elyrion ne serait pas déclaré guéri pour rendre l’annonce plus belle.",
+            "set": {
+              "strategie_finale": "refuge"
+            },
+            "next": "c12-fin"
+          },
+          {
+            "id": "c",
+            "label": "Prioriser le corridor de secours et les déplacements acceptés",
+            "passage": "Evan demanda que les régions impossibles à maintenir disposent d’abord d’un passage organisé. Les équipes engagèrent la configuration prévue avec Zerathiel, sans ouvrir une arrivée que ses habitants n’avaient pas choisi de recevoir.",
+            "set": {
+              "strategie_finale": "exode"
+            },
+            "next": "c12-fin"
+          },
+          {
+            "id": "d",
+            "label": "Déployer les relais végétaux avec des arrêts mécaniques",
+            "passage": "Il privilégia les modules capables de suivre les petites variations du vivant, sans employer aucune personne comme réserve. Les protections mécaniques demeurèrent distinctes. Les trois équipes acceptèrent cette forme du réseau, qui leur demanderait de surveiller aussi ce qui pouvait changer en grandissant.",
+            "set": {
+              "strategie_finale": "adaptatif"
+            },
+            "next": "c12-fin"
+          },
+          {
+            "id": "e",
+            "label": "Garder un dispositif local qu’on puisse reprendre sans tout rompre",
+            "passage": "Evan proposa une stabilité limitée et démontable, à étendre seulement après des séries longues. Les équipes fixèrent ce qu’on pourrait retirer et comment. Le résultat n’aurait pas la taille d’une victoire sur le monde ; il aurait une manière vérifiable de continuer sans elle.",
+            "set": {
+              "strategie_finale": "reversible"
+            },
+            "next": "c12-fin"
+          }
+        ]
+      }
+    },
+    "c12-fin": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Le dernier intervalle ne fut pas rempli. Il garda sa différence, et les trois premières phases cessèrent de s’y heurter comme à une porte manquante. Les niveaux du relais changèrent, puis se maintinrent assez longtemps pour qu’on pût les comparer une nouvelle fois.",
+        "Séraphine retira sa main du support. Evan vit le mouvement et sentit aussitôt son propre corps réclamer une note de plus, quelque chose pour empêcher le résultat de s’en aller avec elle. Il laissa l’archet s’immobiliser. Le témoin continua de répondre.",
+        "Ce fut ce silence-là qui lui fit comprendre. Pas l’absence de créatures au-delà du fossé, ni la voix de Veyr annonçant que les limites tenaient. Sa musique s’était arrêtée, et personne ne l’avait regardé comme une pièce qu’il fallait remettre d’urgence à sa place.",
+        "Les gardes gardèrent leurs positions. Les soigneurs continuèrent de travailler. Les équipes étrangères confirmèrent leurs dernières mesures sans déclarer que leurs propres problèmes avaient disparu. La réussite ne vida pas le monde de ce qu’il restait à faire ; elle empêcha seulement la même erreur de continuer à grandir pendant qu’on s’en occupait.",
+        "Evan s’assit avant que ses jambes ne prissent la décision à sa place. Tam-Tam lui heurta le genou, redevenu une masse de fourrure bien trop satisfaite d’avoir retrouvé la taille d’un sac. Diva posa son front contre le sien. Il reçut une image de terre qui répondait sans arracher ses racines.",
+        "Iseult lui apporta de l’eau. Il voulut demander si tout le monde était revenu, puis vit la feuille ouverte sur ses genoux. Elle lui montra les marques, une par une. Il but sans compter les gorgées.",
+        "Le compte des réserves fut fait avant la première annonce. Personne ne voulut écrire que le résultat tenait sans savoir ce qu’il avait consommé pour y parvenir. Certaines charges devraient être remplacées plus tôt que prévu. Un support avait été abandonné, puis récupéré lorsque le fossé était redevenu accessible. Deux repas de réserve étaient arrivés froids, ce qui provoqua une querelle minuscule assez rassurante pour qu’Evan n’eût pas envie de la faire taire.",
+        "Il regarda les personnes manger au bord des tables. Les blessés recevaient des soins, les gardes attendaient leur relève et les spécialistes recommençaient déjà à comparer une valeur. La journée ne cherchait pas à prendre la forme d’un tableau qu’on accrocherait au Conseil. Elle continuait, avec des besoins qui ne savaient pas qu’ils étaient supposés disparaître après une victoire.",
+        "Séraphine passa près d’eux et refusa la chaise qu’on lui proposait avant de s’y asseoir tout de même. Evan eut la prudence de ne pas sourire trop visiblement. L’Arcaniste lui demanda s’il avait mangé, puis regarda le conducteur lorsqu’il répondit qu’on lui avait promis quelque chose de chaud. La casserole arriva avec une rapidité qui ne devait, pour une fois, rien à la magie temporelle.",
+        "Au-dessus de l’enceinte, le Soleil restait noir. Son halo n’avait pas pris la couleur des affiches anciennes. Evan le regarda sans y chercher immédiatement la preuve que rien n’avait changé. Sous ce ciel, quelque chose venait de tenir sans lui demander de ne plus jamais s’arrêter."
+      ],
+      "next": "c13-1"
+    },
+    "c13-1": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Au refuge, la porte de la cuisine portait un écriteau qu’Evan n’avait pas vu depuis des semaines : pain pas encore prêt. Il resta devant avec un étonnement assez profond pour faire sourire Maëlle. Elle lui demanda s’il souhaitait déposer une réclamation officielle. Il répondit qu’il attendrait, puis comprit qu’il venait de parler d’un avenir de dix minutes sans y placer immédiatement une catastrophe.",
+        "Ses mains demeuraient douloureuses. Ysane lui avait demandé de ne pas jouer longtemps avant deux jours et de ne pas confondre l’envie de vérifier ses cordes avec un examen de sa propre utilité. Il avait accepté en protestant un peu, ce qui lui avait rendu quelque chose de son âge. Tam-Tam suivait chaque regard vers le violon comme s’il soupçonnait l’instrument de retenir une partie des caresses auxquelles il avait droit.",
+        "Diva s’était installée dans la cour. Les herbes ne poussaient pas partout plus vite, les pavés ne s’étaient pas couverts de fleurs pour célébrer le relais. Evan en fut heureux. La dragonne observait les plantes réelles avec leurs différences ordinaires, au lieu de devoir devenir la preuve vivante que tout allait mieux.",
+        "Les premières annonces parlaient de limites tenues, de contrôles maintenus et de trois équipes qui disposaient encore de leurs propres fermetures. Elles contenaient aussi les réserves : les créatures demeuraient dans les Terres Noires, les expositions blanches exigeaient toujours des protections et les quartiers ne recevraient pas une énergie infinie sous prétexte qu’on avait cessé de la laisser s’accumuler de la même façon.",
+        "Evan lut la notice trois fois. Il cherchait la place où quelqu’un aurait écrit qu’il n’était plus nécessaire d’avoir peur. Il ne la trouva pas. Il y avait en revanche une heure de permanence, un lieu où signaler un problème et un tableau des alimentations qui seraient remises en service. Le résultat ressemblait moins à la fin d’une légende qu’à la possibilité de vivre une journée dont on pourrait discuter les détails.",
+        "Iseult apporta son indemnité et une feuille indiquant que son travail ne le liait à aucune mission suivante. Evan la prit avec moins d’angoisse que la première fois. Il pouvait accepter le salaire d’un effort sans devoir promettre son prochain souffle. Il rangea les pièces avant que Tam-Tam n’eût le temps de décider si elles constituaient une nouvelle sorte de nourriture.",
+        "La Veilleuse lui demanda ce qu’il voulait raconter en premier aux personnes qui n’avaient pas été là. Il était encore trop fatigué pour faire un récit complet. Les instruments, la peur, l’arrêt de la musique et les noms sur la feuille s’entremêlaient. Une seule chose pouvait ouvrir le reste sans prétendre l’expliquer toute entière.",
+        "Il regarda le bol vide, la fenêtre, ses compagnons. Pendant longtemps, il avait pensé qu’un événement assez grand lui donnerait une autre façon d’être lui-même. Il était revenu avec les mêmes oreilles trop promptes à trahir sa gêne. Cela ne l’empêchait plus de trouver une première phrase."
+      ],
+      "choice": {
+        "prompt": "Il choisit ce qu’il pouvait dire sans réciter le rapport des autres.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Raconter que la musique a pu s’arrêter",
+            "passage": "« J’ai arrêté de jouer et ça tenait encore », dit Evan. Maëlle attendit, puis lui demanda ce qu’il avait ressenti à ce moment-là. Il eut besoin d’un long silence avant de pouvoir sourire.",
+            "set": {
+              "premiere_phrase": "arret"
+            },
+            "next": "c13-suite-1"
+          },
+          {
+            "id": "b",
+            "label": "Commencer par la liste des personnes revenues",
+            "passage": "Evan demanda la feuille d’Iseult et relut les marques. Il ne les prononça pas comme un décompte de caisses. Chaque réponse entendue au retour gardait pour lui une place que les courbes ne pourraient jamais remplir.",
+            "set": {
+              "premiere_phrase": "noms"
+            },
+            "next": "c13-suite-1"
+          },
+          {
+            "id": "c",
+            "label": "Avouer qu’il n’a pas cessé d’avoir peur",
+            "passage": "Il le dit avant que quelqu’un eût le temps de le féliciter pour son courage. Iseult répondit qu’elle aussi. Le garçon ne se sentit pas plus petit en découvrant que cette peur n’avait pas été sa seule manière de traverser la journée.",
+            "set": {
+              "premiere_phrase": "peur"
+            },
+            "next": "c13-suite-1"
+          },
+          {
+            "id": "d",
+            "label": "Décrire ce que Diva et Tam-Tam ont fait",
+            "passage": "Evan leur donna une place dans le récit avec leurs efforts et leurs limites. Il ne les transforma pas en armes parfaites. Tam-Tam s’endormit au milieu de ses propres exploits, ce qui les rendit soudain moins difficiles à raconter.",
+            "set": {
+              "premiere_phrase": "compagnons"
+            },
+            "next": "c13-suite-1"
+          },
+          {
+            "id": "e",
+            "label": "Demander d’abord ce qui fonctionne de nouveau au refuge",
+            "passage": "Evan voulut voir la conduite qui ne recevait plus la surcharge. Borren lui montra un niveau ordinaire, presque décevant. Le garçon y trouva pourtant une réponse qu’aucun éclat d’étoile n’aurait pu donner à sa place.",
+            "set": {
+              "premiere_phrase": "eau"
+            },
+            "next": "c13-suite-1"
+          }
+        ]
+      }
+    },
+    "c13-2": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Les nouvelles de Zerathiel arrivèrent à la date convenue, pas au moment où Noctarion en aurait le plus désiré la confirmation. Sael avait envoyé les relevés, les corrections demandées et une petite plaque dont le dessin fit rire Evan avant qu’il comprît toutes les marques. L’enfant avait noté le passage de flûte qu’il jouait encore de travers.",
+        "Le soleil de leur monde demeurait clair. Les dernières variations n’avaient pas disparu du ciel, mais leurs effets reçus dans les zones protégées avaient cessé de croître. Les gardiens conservaient les cultures témoins et leurs propres critères d’arrêt. Ils ne prétendaient pas qu’aucun être semblable à Aelyr ne pourrait jamais approcher ; ils possédaient désormais un moyen de repérer cette approche et de ne pas la laisser devenir sans réponse la fin de leurs habitudes.",
+        "Evan suivit les explications de Veyr et finit par lui demander si c’était assez pour parler de réussite. L’Arcaniste regarda les dates. « Assez pour vivre la suite autrement que comme une erreur qu’on aurait juré ne pas avoir vue. Pas assez pour cesser de vérifier. » Le garçon trouva cette définition moins jolie que celles des affiches. Elle lui parut plus facile à habiter.",
+        "Aelyr demeurait liée à l’énergie solaire d’Elyrion. Les mesures montraient une stabilité qui ne dépendait plus d’une accumulation sans frein dans les réseaux contrôlés. La créature n’avait ni signé un accord ni demandé pardon. Rien ne permettait même d’affirmer qu’elle avait reconnu leur intervention comme l’action de personnes. Evan n’attendit plus de cette absence une preuve qu’ils n’avaient rien changé.",
+        "La Lune restait dangereuse selon les expositions. Les transformations déjà inscrites dans les êtres vivants ne s’effaçaient pas avec un meilleur réglage. L’Église ne reçut pas un monde redevenu identique à celui qu’elle espérait retrouver ; les Enfants de la Nuit ne purent pas prétendre que toute mutation constituait donc un progrès. Les vivants gardèrent la difficulté de se demander, cas par cas, ce qu’ils voulaient préserver ou modifier.",
+        "Helle participa à l’examen d’une culture dont la croissance s’était stabilisée. Ysane refusa qu’on l’installât aussitôt dans un dispensaire, puis demanda à connaître les résultats du mois suivant. Leur désaccord ne provoqua pas l’effondrement de l’atelier commun. Evan découvrit qu’une coopération pouvait continuer sans exiger de devenir l’histoire de gens qui avaient enfin compris la même chose.",
+        "Il avait envie de répondre à l’enfant de Zerathiel. Le message officiel emporterait les courbes et les dates. Sa feuille pouvait contenir autre chose : une correction musicale, le dessin du refuge, une question assez ordinaire pour survivre à la grande explication. Il choisit sans demander à ses mots de représenter toute l’humanité d’Elyrion."
+      ],
+      "choice": {
+        "prompt": "Il plaça une petite feuille près des documents techniques, bien séparée de leurs cachets.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Renvoyer la phrase de flûte avec sa faute enfin corrigée",
+            "passage": "Evan nota le passage, puis laissa une place où l’autre pourrait encore le reprendre. Une musique entièrement parfaite aurait peut-être rendu la prochaine rencontre un peu moins nécessaire, et il n’y tenait pas.",
+            "set": {
+              "reponse_enfant": "musique"
+            },
+            "next": "c13-3"
+          },
+          {
+            "id": "b",
+            "label": "Dessiner la cour, Diva et Tam-Tam",
+            "passage": "Il donna à Diva le nombre juste de pattes et échoua sur la taille de l’ourson. Il garda le dessin malgré tout : c’était un morceau de sa journée, pas une planche savante qu’il fallait défendre devant un Conseil.",
+            "set": {
+              "reponse_enfant": "refuge"
+            },
+            "next": "c13-3"
+          },
+          {
+            "id": "c",
+            "label": "Demander quel morceau on joue là-bas les jours ordinaires",
+            "passage": "Evan dessina un repas, une fenêtre et le petit instrument local. Il espérait une chanson qui n’expliquât aucune menace. S’ils devaient encore se rencontrer, ils auraient aussi besoin de savoir vivre une heure sans travailler.",
+            "set": {
+              "reponse_enfant": "question"
+            },
+            "next": "c13-3"
+          },
+          {
+            "id": "d",
+            "label": "Envoyer son nom avec la bonne manière de le prononcer",
+            "passage": "Il recommença plusieurs fois les syllabes et ajouta une petite note pour chacune. Il voulait pouvoir reconnaître le prénom de l’autre sans l’apprendre seulement au moment où il faudrait l’appeler à travers un danger.",
+            "set": {
+              "reponse_enfant": "nom"
+            },
+            "next": "c13-3"
+          },
+          {
+            "id": "e",
+            "label": "Raconter que le pain arrive toujours en retard",
+            "passage": "Evan dessina l’écriteau de la cuisine et Tam-Tam attendant devant. Il doutait que sa plaisanterie traversât tous les signes. Il l’envoya quand même, avec l’espoir qu’une incompréhension puisse être, cette fois, une chose sans gravité à reprendre.",
+            "set": {
+              "reponse_enfant": "nouvelles"
+            },
+            "next": "c13-3"
+          }
+        ]
+      }
+    },
+    "c13-3": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Les familles se retrouvèrent avant la première ouverture publique du nouvel atelier. Adèle avait demandé qu’on ne mêlât pas le retour des disparus à la célébration du relais. Les responsables avaient accepté sans transformer cette séparation en oubli de ce que les notes avaient permis.",
+        "Les noms identifiés furent lus avec ceux qui demeuraient sans réponse. La différence était écrite clairement. Certaines familles pouvaient commencer un deuil qu’elles avaient longtemps repoussé ; d’autres devaient encore vivre avec l’absence d’une certitude. Personne ne se vit offrir la promesse que les prochains relevés régleraient forcément cette attente.",
+        "Evan se tint près d’Iseult avec son masque dans les mains. Il ne devait pas jouer pour toute la cérémonie. Adèle lui avait simplement demandé s’il accepterait un morceau après, lorsque les personnes qui le souhaitaient resteraient dans la cour. Il avait dit oui en gardant le droit de choisir quelque chose qui ne prétendît pas savoir ce que chacun devait ressentir.",
+        "La relieuse apporta un carnet cousu de neuf. À l’intérieur, les copies du travail d’Ansel précédaient les résultats du relais. Les derniers feuillets restaient vides. « Pour les corrections, dit-elle. Il n’aurait pas supporté qu’on reliât ses erreurs de manière à ne plus pouvoir y revenir. » Evan eut un petit rire qui lui fit aussitôt monter les larmes.",
+        "Elle lui remit ensuite une page séparée, qu’elle avait choisi de lui donner. Ansel y avait dessiné une main tenant un outil trop grand pour elle. Il n’y avait pas de message secret. Seulement une note sur la patience nécessaire pour qu’un apprenti pût sentir la matière avant de recevoir un meilleur instrument. Le garçon passa un doigt sur le bord, sans toucher le trait.",
+        "Il pensa au village, aux choses qu’il n’en possédait plus et qu’aucune expédition ne saurait lui rendre. Adèle n’avait pas retrouvé sa vie d’avant. Elle avait reçu la vérité possible et conservé une partie du droit de dire comment le nom de son frère serait employé. Ce n’était pas peu parce que ce n’était pas tout.",
+        "Avant la musique, les personnes présentes pouvaient laisser une trace dans le carnet commun. Un nom, un souvenir, une question destinée aux archives ou rien du tout. Evan resta devant la page assez longtemps pour que personne ne pensât lui demander ce qui le retenait. Il avait appris à se servir d’un registre sans savoir toujours quoi y mettre lorsqu’il ne travaillait plus pour un relevé."
+      ],
+      "choice": {
+        "prompt": "Il choisit une trace qu’il pourrait relire plus tard sans y reconnaître une promesse faite pour les autres.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Écrire le prénom d’Ansel et ce qu’il avait aimé faire",
+            "passage": "Evan nota qu’il dessinait en écoutant et voulait rentrer finir ses propres journées. Il ne l’avait pas connu. Il pouvait au moins refuser que son nom ne désignât plus qu’une fonction dans le relais.",
+            "set": {
+              "trace_memorial": "prenom"
+            },
+            "next": "c13-4"
+          },
+          {
+            "id": "b",
+            "label": "Inscrire le nom de son village avec un souvenir ordinaire",
+            "passage": "Il choisit une fenêtre, un repas et une phrase qu’on lui avait dite avant la fuite. Il n’avait pas besoin de raconter le dernier jour pour prouver que les premiers avaient appartenu à quelqu’un.",
+            "set": {
+              "trace_memorial": "village"
+            },
+            "next": "c13-4"
+          },
+          {
+            "id": "c",
+            "label": "Décrire la correction qui avait permis un retour",
+            "passage": "Evan distingua le dessin ancien de ce qu’ils avaient vérifié ensuite. Le travail demeurait transmissible sans que l’on prétendît savoir à la place d’Ansel ce qu’il aurait choisi de faire après.",
+            "set": {
+              "trace_memorial": "travail"
+            },
+            "next": "c13-4"
+          },
+          {
+            "id": "d",
+            "label": "Garder une question ouverte pour les familles encore sans réponse",
+            "passage": "Il fit noter à qui les demandes seraient adressées, et la date où un état des recherches serait rendu. L’incertitude ne devait plus devenir une pièce vide dans laquelle personne n’était chargé de revenir.",
+            "set": {
+              "trace_memorial": "question"
+            },
+            "next": "c13-4"
+          },
+          {
+            "id": "e",
+            "label": "Ne rien écrire aujourd’hui et rester pour écouter",
+            "passage": "Evan referma doucement le crayon. Il pourrait peut-être mettre quelque chose plus tard. Pour cette fois, il n’avait pas à produire une trace assez belle pour justifier la place qu’il prenait dans la cour.",
+            "set": {
+              "trace_memorial": "rien"
+            },
+            "next": "c13-4"
+          }
+        ]
+      }
+    },
+    "c13-4": {
+      "chapter": "c13",
+      "paragraphs": [
+        "La proposition arriva quelques jours après. Elle ne portait pas le sceau d’un engagement militaire. Les ateliers, le refuge et le Conseil avaient préparé plusieurs formes d’apprentissage possibles, assez souples pour qu’Evan pût découvrir ce qu’il savait aimer lorsqu’il n’était plus payé seulement pour survivre à une sortie.",
+        "Il relut la feuille jusqu’à y trouver une clause cachée qui l’obligerait à être disponible à la prochaine alerte. Il n’y en avait pas. Iseult lui montra la différence entre un travail convenu et une demande nouvelle. Maëlle précisa que le lit ne disparaîtrait pas le jour où il se tromperait d’orientation.",
+        "Cela lui fit presque plus peur que le reste. Il pouvait accepter une mission, tenir une note, se défendre lorsque le danger lui donnait un endroit où poser ses gestes. Choisir ce qu’il voulait apprendre lui demandait de croire qu’il aurait assez de journées pour changer d’avis. Il n’en avait pas encore l’habitude.",
+        "Séraphine reçut son premier courrier d’apprenti avec un commentaire écrit en marge : les notes utiles n’exigent pas les phrases les plus longues. Evan lut la remarque plusieurs fois avant de comprendre qu’elle avait aussi répondu à chacune de ses questions. Elle ne l’invita pas à devenir son héritier, ne lui donna aucun titre dont les adultes auraient pu se servir pour exiger davantage. Elle lui confirma un accès accompagné aux ateliers et l’obligation d’y continuer les contrôles indépendants.",
+        "« Vous allez encore les inquiéter, lui dit Iseult. Tu poses des questions au moment où ils espèrent qu’on a fini. » Evan protesta qu’il ne le faisait pas exprès. La Veilleuse répondit qu’il pouvait au moins apprendre à choisir l’heure où ils avaient mangé. Il se mit à rire, et la perspective des prochains mois perdit un peu de sa taille impossible.",
+        "Diva et Tam-Tam avaient leur place dans les trajets proposés. Il faudrait encore éviter certaines salles, prévoir des réserves et distinguer leurs besoins de son envie de les garder toujours contre lui. Le garçon avait fini par aimer les voir dormir sans lui demander une présence constante dans le lien. Le silence d’un compagnon n’était plus automatiquement une disparition.",
+        "Pour connaître la valeur de son salaire, Evan retourna seul chez le boulanger. Il avait calculé le prix d’un pain frais, d’un morceau à partager et la pièce qu’il garderait ensuite. Le calcul était simple. Il le refit pourtant devant la boutique, avec une tension qui lui rappela le premier matin beaucoup plus sûrement que le goût de la soupe du refuge.",
+        "Le boulanger reconnut ses oreilles, puis le masque qu’il portait maintenant à la ceinture. Il ne lui offrit pas un produit abîmé pour trouver une manière discrète de l’aider. Il lui demanda ce qu’il voulait acheter. Evan donna son choix, paya et attendit sa monnaie. Ce geste ordinaire ne réparait pas les jours où il avait eu faim. Il lui rendait celui-ci avec une précision qu’aucun titre ne lui aurait donnée.",
+        "Il marcha jusqu’à la place en tenant le pain contre lui. Il aurait pu le garder entier, le partager ou le rapporter plus tard au refuge. Pour la première fois depuis longtemps, la décision ne contenait pas la certitude d’avoir perdu une partie de son lendemain. Il en donna un morceau à chacun de ses compagnons et conserva assez de croûte pour lui-même. Diva l’accepta avec sa délicatesse habituelle. Tam-Tam lui réclama aussitôt une seconde preuve de générosité, ce qui réduisit l’émotion du moment à une négociation beaucoup plus familière.",
+        "Il posa la feuille près du cahier, du fragment et de la flûte. Il ne choisissait ni une classe nouvelle ni une autre manière d’être né. Il restait un Dompteur, un hybride, un garçon dont les doigts trouvaient parfois mieux le monde sur un archet que dans une conversation. Il pouvait décider de ce qu’il voulait cultiver parmi les choses que sa peur n’avait pas réussi à prendre."
+      ],
+      "choice": {
+        "prompt": "Cette fois, la question n’était pas ce qu’il pouvait encore donner au prochain danger.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Donner d’abord une vraie place à l’étude de la musique",
+            "passage": "Evan demanda du temps pour travailler un morceau jusqu’à le choisir pour lui-même. Il continuerait d’aider aux relevés convenus, mais son violon n’aurait plus à devenir un instrument de secours chaque fois qu’il quittait son étui.",
+            "set": {
+              "avenir_evan": "musicien"
+            },
+            "next": "c13-5"
+          },
+          {
+            "id": "b",
+            "label": "Approfondir le lien avec les animaux et ses compagnons",
+            "passage": "Il choisit d’apprendre à reconnaître davantage de besoins sans les réduire à ses propres images. Diva n’avait pas à attendre une crise pour lui montrer quelque chose du monde qu’elle percevait.",
+            "set": {
+              "avenir_evan": "dompteur"
+            },
+            "next": "c13-5"
+          },
+          {
+            "id": "c",
+            "label": "Apprendre à réparer les dispositifs avec Borren et Neris",
+            "passage": "Evan voulut savoir remplacer ce qui tenait par un fil sans devoir aussitôt le rendre plus puissant. Il lui plaisait de comprendre qu’un objet pouvait mieux fonctionner parce qu’on lui demandait moins, mais plus précisément.",
+            "set": {
+              "avenir_evan": "artisan"
+            },
+            "next": "c13-5"
+          },
+          {
+            "id": "d",
+            "label": "Étudier les trajets, les cartes et les mondes avec Odrane",
+            "passage": "Il choisit les noms, les échelles et les questions qu’une carte devait laisser visibles. Traverser n’avait pas fait de lui quelqu’un qui connaissait les lieux. Il pouvait commencer à l’apprendre sans attendre de les perdre.",
+            "set": {
+              "avenir_evan": "cartographe"
+            },
+            "next": "c13-5"
+          },
+          {
+            "id": "e",
+            "label": "Mêler son apprentissage au travail du refuge",
+            "passage": "Evan demanda une place partagée entre les livres, la musique et les gestes d’accueil. Il savait ce qu’un repas pouvait changer avant qu’une grande explication ne trouvât enfin le chemin de votre porte.",
+            "set": {
+              "avenir_evan": "refuge"
+            },
+            "next": "c13-5"
+          }
+        ]
+      }
+    },
+    "c13-5": {
+      "chapter": "c13",
+      "paragraphs": [
+        "La première semaine sans mission passa plus vite qu’Evan ne l’aurait cru. Il avait des horaires, des choses à rendre et des erreurs dont la gravité tenait souvent dans une pièce de cuivre ou une phrase mal comprise. Un soir, il oublia de rentrer à l’heure parce que Neris lui montrait un mécanisme qu’ils n’arrivaient pas à refermer. Maëlle le reprit et lui garda de la soupe. Les deux gestes purent exister dans la même soirée.",
+        "Il n’était pas devenu un enfant sans cauchemars. Certaines nuits, le village revenait avec une odeur trop précise. Il se levait, touchait la couverture de Tam-Tam, regardait la cour et attendait de reconnaître l’endroit où il se trouvait réellement. Il savait désormais à quelle porte frapper si l’attente devenait trop longue.",
+        "Sur la première page vierge du cahier, Evan avait écrit son nom entier sans fonction ni numéro de mission. Evan Kamikony. Il l’avait longtemps donné comme une réponse à la question de savoir qui pouvait être inscrit à côté de lui. Cette fois, il l’avait simplement posé au-dessus d’un exercice qui ne serait peut-être montré à personne.",
+        "En tournant les pages, il retrouva une trace d’ourson, un schéma repris et une phrase qu’il avait rayée sans vouloir l’effacer. Les corrections n’avaient pas retiré aux premières tentatives le droit d’avoir existé. Elles rendaient seulement possible une lecture où l’on pouvait voir comment il était arrivé jusqu’à la suivante.",
+        "Il ne se sentait pas nouveau. Il reconnaissait même certaines peurs avec une facilité dont il se serait bien passé. Mais les pages n’allaient plus toutes vers la même fin : survivre assez pour acheter un repas. Il y avait désormais des rendez-vous, des noms et des choses qu’il voulait apprendre sans savoir encore à quoi elles pourraient servir. Le cahier resta ouvert sur le lit lorsqu’il descendit chercher le violon.",
+        "Noctarion n’avait pas cessé de se disputer. L’entretien du relais coûtait des matériaux, des visites et du temps. Les factions comparaient leurs responsabilités avec une application qui ressemblait parfois à une nouvelle manière de se méfier. Des habitants regrettaient des décisions, d’autres demandaient que l’on étendît plus vite ce qui avait fonctionné. Le résultat ne ressemblait pas au calme d’un monde qui n’aurait plus eu besoin de politique.",
+        "Evan passait moins de temps à vouloir que tout le monde ressentît la même chose. Ses propres émotions lui demandaient encore assez de travail. Lorsqu’il jouait, il choisissait plus souvent de laisser simplement les notes atteindre ceux qui avaient envie de les écouter. Son pouvoir demeurait possible ; il n’avait pas à devenir la politesse obligatoire de chaque rencontre.",
+        "Un matin, la cour reçut un banc de plus. Personne ne sut immédiatement qui l’avait proposé. Il était assez large pour plusieurs enfants et assez solide pour supporter Tam-Tam tant que celui-ci conservait la taille qui convenait à un banc. Diva le renifla longtemps avant de décider que l’ombre qu’il faisait n’empêchait pas les plantes de vivre.",
+        "Evan s’y assit avec le violon. Il avait appris un nouveau morceau et ne l’avait encore joué à personne. Une partie de lui voulait le garder ainsi, intact de tout regard qui pourrait lui demander de servir à quelque chose. Une autre voulait entendre ce que le monde lui rendrait lorsqu’il le laisserait sortir.",
+        "Il regarda l’étui ouvert. Il y avait quelques pièces, le papier de son apprentissage et une couture refaite qui ne cherchait pas à disparaître. Il n’avait pas tout gagné. Il avait assez de choses pour commencer à distinguer ce qu’il voulait partager de ce qu’il avait peur de perdre.",
+        "La dernière question de cette journée ne portait sur aucune fermeture de portail. Elle n’était pas moins réelle pour cela. Il devait décider à qui offrir les premières notes d’un morceau qui n’était destiné à sauver personne."
+      ],
+      "choice": {
+        "prompt": "Il releva l’archet et choisit son premier public.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Jouer d’abord pour Diva et Tam-Tam",
+            "passage": "Evan leur adressa le morceau sans lui ajouter d’ordre ni de chaleur magique. La dragonne resta attentive. L’ourson s’endormit avant la fin, et le garçon parvint à ne pas y voir un jugement sur son talent.",
+            "set": {
+              "derniere_musique": "compagnons"
+            },
+            "next": "c13-fin"
+          },
+          {
+            "id": "b",
+            "label": "Inviter les personnes qui passent dans la cour",
+            "passage": "Il commença avec assez de place entre les phrases pour que chacun pût s’arrêter ou continuer son chemin. Le banc se remplit peu à peu, sans que personne eût à devenir autre chose qu’un voisin qui écoutait.",
+            "set": {
+              "derniere_musique": "cour"
+            },
+            "next": "c13-fin"
+          },
+          {
+            "id": "c",
+            "label": "Demander à Neris et Lise de venir l’écouter",
+            "passage": "Evan dut le demander deux fois parce qu’il avait parlé trop bas la première. Il attendit ensuite avec un trac qu’aucun monstre ne lui avait jamais donné, et trouva ce mélange de peur et de joie étonnamment supportable.",
+            "set": {
+              "derniere_musique": "amis"
+            },
+            "next": "c13-fin"
+          },
+          {
+            "id": "d",
+            "label": "Réserver le morceau à Maëlle et Iseult un soir calme",
+            "passage": "Il leur proposa une heure où personne ne devrait attendre une consigne. L’une arriva avec une bassine encore à finir, l’autre avec des gants qu’elle réparait. Il joua au milieu de leur travail ordinaire, sans le trouver moins précieux.",
+            "set": {
+              "derniere_musique": "maelle_iseult"
+            },
+            "next": "c13-fin"
+          },
+          {
+            "id": "e",
+            "label": "Garder cette première exécution pour lui-même",
+            "passage": "Evan ferma un peu la fenêtre et joua sans chercher à savoir qui pourrait entendre. Il avait le droit de posséder une musique avant de l’offrir. Lorsqu’il termina, le silence ne lui demanda rien en échange.",
+            "set": {
+              "derniere_musique": "soi"
+            },
+            "next": "c13-fin"
+          }
+        ]
+      }
+    },
+    "c13-fin": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Les semaines suivantes ne donnèrent pas à chaque journée la grandeur des premières annonces. Il fallut transporter, contrôler, apprendre, recommencer. Evan découvrit que cette répétition pouvait être une chance : on recommençait parce qu’il existait encore un lendemain assez proche pour qu’on y réservât un travail.",
+        "Il conserva le morceau de papier où il avait tracé trois traits et laissé le quatrième vide. La limite qu’ils y avaient reconnue n’était plus seulement la marque de ce qui manquait. Elle leur avait appris à ne pas demander à tous les mondes, à toutes les personnes et à toutes les notes de devenir identiques pour tenir ensemble.",
+        "Le ciel n’avait pas repris la couleur d’une image ancienne. Ce qui avait changé vivait ailleurs : dans des trajets qu’on pouvait refaire, des mesures qu’on pouvait contester et des retours dont on ne gardait plus les noms dans un tiroir oublié."
+      ],
+      "routes": [
+        {
+          "when": {
+            "strategie_finale": "reseau"
+          },
+          "next": "c13-fin-reseau"
+        },
+        {
+          "when": {
+            "strategie_finale": "adaptatif"
+          },
+          "next": "c13-fin-reseau"
+        },
+        {
+          "when": {
+            "strategie_finale": "exode"
+          },
+          "next": "c13-fin-exode"
+        },
+        {
+          "next": "c13-fin-refuge"
+        }
+      ]
+    },
+    "c13-fin-reseau": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Les trois ancrages restèrent distincts. Aucun ne porta seul la stabilité du réseau, et aucun ne reçut le droit de décider que la présence des autres lui était due. Chaque monde conserva ses mesures, ses arrêts et la part de travail qu’il avait accepté de fournir.",
+        "À Noctarion, les niveaux des conduites cessèrent de monter après chaque grande variation. Des zones voisines purent être remises en culture sous surveillance ; d’autres demeurèrent fermées parce que les créatures et les transformations ne disparaissaient pas au seul bruit d’une annonce. Les Veilleurs recommencèrent leur avance lente, avec des postes dont le travail n’était plus annulé aussi vite par une exposition croissante.",
+        "L’Église ouvrit une réserve commune qu’elle n’aurait pas à nourrir seule. Les Enfants de la Nuit tinrent leurs cultures témoins à côté des amortisseurs mécaniques, assez près pour comparer et assez séparés pour qu’on pût voir lequel répondait. Les cinq Arcanistes durent encore débattre. Séraphine continua de les trouver exaspérants, ce qui rassura certaines personnes davantage qu’un sourire qu’elles ne lui connaissaient pas.",
+        "De Zerathiel arrivèrent des relevés, puis une lettre dont la partie technique occupait moins de place que la description d’un jardin. Le soleil y demeurait clair. Les signes de l’approche conservaient une réponse dans les protections établies ; les habitants ne devaient plus attendre le début d’une catastrophe pour savoir où chercher leurs propres limites.",
+        "Keryth ne fut pas rendu à ses habitants. Des équipes y revinrent pour entretenir l’ancrage, conserver les traces et chercher les noms qu’on pouvait encore établir. Le monde vidé ne devint pas leur décharge. Il garda dans les archives la place d’une histoire qu’on n’avait pas le droit de réduire à son utilité pour les vivants.",
+        "Evan traversa de nouveau vers Zerathiel plusieurs mois plus tard, dans un déplacement prévu assez longtemps à l’avance pour qu’il pût se réjouir avant d’avoir peur. Il emportait une copie de ses exercices et une phrase de flûte qu’il jouait désormais correctement. L’enfant du jardin lui montra une autre difficulté sans lui laisser le temps d’être fier.",
+        "Au retour, Noctarion avait toujours ses rues étroites, ses portes trop lourdes et son pain qui arrivait quelquefois après l’heure promise. Evan regagna le refuge avec Diva et Tam-Tam. Il savait où poser ses affaires et à qui raconter une chose qui n’avait rien changé au ciel.",
+        "Aelyr demeurait dans l’immense relation qui l’unissait au Soleil. Le garçon ne l’avait ni vaincue ni apprivoisée. Avec d’autres, il avait contribué à faire une place à ceux qu’elle ne savait peut-être même pas atteindre.",
+        "Ce soir-là, il n’eut pas besoin de vérifier le mur avant de dormir. Il entendit Tam-Tam pousser un petit soupir et la réponse tranquille de Diva dans la cour. Entre ces deux présences, il posa enfin son propre silence."
+      ],
+      "ending": "Les portes qui restent ouvertes"
+    },
+    "c13-fin-refuge": {
+      "chapter": "c13",
+      "paragraphs": [
+        "La première extension ne fut pas engagée. La Bande du Crépuscule reçut une stabilité limitée, entretenue par des relais dont les équipes connaissaient les seuils. Le réseau ne prétendait pas avoir guéri Elyrion. Il avait donné à ses régions habitées une marge qu’on pourrait vérifier avant de l’agrandir.",
+        "Cette prudence coûtait. Certaines routes demeurèrent fermées plus longtemps que les marchands ne l’auraient voulu. Les quartiers ne reçurent pas tous une alimentation accrue. Il fallut choisir les soins, les réserves et les cultures avant les ateliers que leur promesse de confort avait rendus si désirables. Le Conseil dut expliquer ces choix devant les personnes qu’ils atteignaient, au lieu de les laisser devenir des rumeurs dans les files d’attente.",
+        "Les Veilleurs conservèrent des postes difficiles. L’Église continua d’accueillir ceux dont les transformations n’avaient pas cessé avec la croissance de l’exposition. Les Enfants de la Nuit défendirent leurs recherches et durent montrer, à chaque nouvel essai, la différence entre une adaptation possible et une nécessité qu’on imposerait à quelqu’un d’autre.",
+        "Zerathiel employa ses propres protections avec les résultats partagés, sans être contraint de reproduire immédiatement toute l’installation de Noctarion. Les habitants gardèrent leur soleil clair et la possibilité de reprendre leur accord. Les lettres traversaient à des heures prévues, parfois avec du retard, jamais au point qu’une absence de nouvelles fût simplement appelée un détail sans importance.",
+        "Keryth demeura un témoin qu’on surveillait sans lui demander de porter le poids de leur prudence. Les archives d’Ansel furent conservées avec les corrections apportées par les équipes suivantes. Adèle relia la première copie du registre définitif en laissant assez de jeu dans la couture pour recevoir encore des pages.",
+        "Evan l’aida à porter le volume jusqu’au refuge. Il ne s’arrêta pas devant l’auvent de l’ancienne boutique de serrures, mais le regarda en passant. Il se souvint exactement de l’endroit où son pied dépassait de la couverture. Il savait désormais que le monde pouvait devenir un peu moins dangereux sans que cela rendît ce souvenir irréel.",
+        "Sa chambre restait petite. Les cordes du violon s’usaient, Tam-Tam choisissait toujours la place où l’on voulait poser une botte et Diva faisait pousser des fleurs dans des coins dont Maëlle ne comprenait pas l’intérêt. Le garçon avait des journées de travail et d’étude, des gestes qu’il apprenait trop lentement, des amis auprès de qui il devenait parfois impossible à faire taire.",
+        "Aelyr ne cessa pas d’exister parce qu’ils avaient choisi une limite. Le Soleil resta noir. Mais le Crépuscule ne fut plus seulement ce qui leur restait après avoir reculé. Il devint un lieu qu’on avait décidé de tenir ensemble, avec le droit de discuter encore la manière d’y vivre.",
+        "Evan joua un soir à la fenêtre. Rien ne répondit dans le mur. Une voix, en bas, lui demanda de recommencer le dernier morceau. Il sourit avant d’avoir trouvé la force de dire oui."
+      ],
+      "ending": "La mesure d’un refuge"
+    },
+    "c13-fin-exode": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Le corridor fut maintenu pour les régions qu’on ne pouvait pas protéger assez vite. Il ne s’ouvrit pas sur une promesse de place illimitée. Les habitants de Zerathiel avaient défini ce qu’ils pouvaient accueillir, où, pour combien de personnes et avec quelles ressources partagées. Les familles partantes reçurent ces informations avant de voir leur nom sur une liste.",
+        "Toutes ne partirent pas. Certaines préférèrent les zones stabilisées du Crépuscule, d’autres attendirent une place où leurs proches pourraient les rejoindre. Des villages furent déplacés vers des quartiers réaménagés de Noctarion. D’autres populations traversèrent par groupes assez petits pour que l’arrivée fût encore une rencontre, pas une foule dont on laisserait les hôtes découvrir seuls les besoins.",
+        "Le réseau assura ces trajets sans annoncer la reconquête des Terres Noires ni la fin des maladies blanches. Les Veilleurs protégèrent les routes jusqu’aux points de passage ; l’Église conserva les lieux où l’on pouvait changer d’avis sans perdre aussitôt son repas. Les Enfants de la Nuit aidèrent à reconnaître les besoins des organismes transformés sans exiger qu’on devînt semblable à eux pour mériter l’abri.",
+        "Evan accompagna une de ces arrivées avec Iseult, plusieurs semaines après la crise. Il ne conduisait pas une expédition vers une terre offerte. Il aidait des personnes à reconnaître une porte, un bassin et les premières consignes d’un endroit où elles n’avaient encore aucun souvenir. Lorsqu’un enfant lui demanda où il fallait poser ses affaires, il ressentit la taille entière de cette question avant de lui montrer une place.",
+        "Sael les reçut avec d’autres gardiens. Les gestes ne suffisaient toujours pas à tout expliquer. On répétait, on corrigeait, on découvrait qu’un plan convenable la veille ne convenait plus à l’arrivée d’une personne qui ne pouvait pas prendre l’escalier. Il fallut des repas, des outils, des excuses et beaucoup plus de temps que ne l’auraient souhaité les annonces les plus pressées.",
+        "Le soleil demeurait clair au-dessus des terrasses. Les protections et les mesures continuaient de suivre l’approche d’une présence dont ils savaient désormais reconnaître quelques signes. Zerathiel ne recevait pas le danger en échange des personnes accueillies. Il gardait le droit et les moyens de vérifier ce qu’il acceptait, avec l’aide technique de ceux qui n’auraient plus pu croire que l’attente suffisait à préserver un monde.",
+        "Evan revint souvent au refuge. Il ne devait pas choisir entre un lieu qui l’avait accueilli et les liens qu’il apprenait à garder ailleurs. Diva reconnaissait de nouvelles plantes ; Tam-Tam trouva le moyen de dormir dans des positions identiques sous deux ciels différents.",
+        "Aelyr resta liée au Soleil Noir, et Elyrion ne fut pas abandonné à son malheur. Les personnes parties conservèrent des noms, des demandes et des proches dans les registres du retour. Un déplacement n’effaçait pas la responsabilité de ceux qui avaient gardé les clés.",
+        "Un soir, Evan rangea la flûte corrigée près de son violon. Il avait appris plusieurs manières de dire maison sans connaître assez de mots pour les expliquer toutes. Lorsqu’il ferma l’étui, il n’eut plus l’impression de devoir y faire tenir à lui seul tout ce qu’il ne voulait pas perdre."
+      ],
+      "ending": "Ce qu’on emporte"
+    },
+    "c9-suite-2-0": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Diva retira ses prises une à une lorsque les gardes eurent fermé l’intervalle. Evan sentit dans leur lien la traction qui persistait au bout de ses pattes. Il ne la soigna pas en lui promettant une force qu’elle n’avait plus. Il l’aida à retrouver une respiration calme et fit dégager le carré de terre pour qu’aucune roue ne passât sur les dernières racines tendues."
+      ],
+      "next": "c9-3"
+    },
+    "c9-suite-2-1": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Le rempart de Tam-Tam tenait encore après le retrait des personnes. L’ours voulait le renforcer, comme si l’épaisseur pouvait prouver qu’il avait assez protégé. Evan lui montra l’abri rempli et le passage redevenu vide. Tam-Tam finit par reculer. La neige commença à se tasser, et personne ne lui demanda de la maintenir pour conserver un symbole de victoire."
+      ],
+      "next": "c9-3"
+    },
+    "c9-suite-2-2": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Evan attendit que l’eau du fossé eût cessé de porter les petites décharges avant de laisser Tam-Tam revenir vers les pieds des gardes. L’ours était fier, agité, trop prompt à confondre sa force encore disponible avec le besoin de la montrer. Le garçon le suivit d’une mélodie plus basse jusqu’à ce que l’électricité quittât sa fourrure."
+      ],
+      "next": "c9-3"
+    },
+    "c9-suite-2-3": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Les deux Veilleurs soutenus par Evan atteignirent le mur, puis s’assirent aussitôt. Le gain de vitesse n’avait pas retiré à leurs muscles l’effort qu’ils venaient de fournir. Le garçon les prévint avant qu’ils tentassent de repartir. Il les avait aidés à franchir une distance, pas guéris de ce qu’elle leur avait demandé."
+      ],
+      "next": "c9-3"
+    },
+    "c9-suite-2-autre": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Le repère lumineux resta visible assez longtemps pour le dernier passage. Evan réduisit ensuite la lumière en suivant les personnes du regard, sans la laisser devenir une présence aveuglante à laquelle les gardes auraient dû réhabituer leurs yeux. Quand il l’éteignit, les marques physiques demeuraient là. Il n’avait pas rendu la sortie dépendante d’une note tenue sans fin."
+      ],
+      "next": "c9-3"
+    },
+    "c9-suite-2": {
+      "chapter": "c9",
+      "paragraphs": [
+        "Le travail continuait autour d’eux, avec les conséquences du choix qu’ils venaient de tenir."
+      ],
+      "routes": [
+        {
+          "when": {
+            "combat_lisiere": "racines"
+          },
+          "next": "c9-suite-2-0"
+        },
+        {
+          "when": {
+            "combat_lisiere": "neige"
+          },
+          "next": "c9-suite-2-1"
+        },
+        {
+          "when": {
+            "combat_lisiere": "foudre"
+          },
+          "next": "c9-suite-2-2"
+        },
+        {
+          "when": {
+            "combat_lisiere": "vitesse"
+          },
+          "next": "c9-suite-2-3"
+        },
+        {
+          "next": "c9-suite-2-autre"
+        }
+      ]
+    },
+    "c12-suite-2-0": {
+      "chapter": "c12",
+      "paragraphs": [
+        "La prise de Diva n’avait pas résisté partout. Une racine arrachée avait laissé glisser la patte qu’elle retenait. Evan lui avait envoyé un autre point d’appui, non l’ordre de nier la rupture. Maintenant, il regardait la terre ouverte et sut qu’ils devraient compter cette perte dans l’espace encore défendable. Sa compagne demeurait forte. Elle n’était pas devenue inépuisable parce qu’ils avaient eu besoin d’elle."
+      ],
+      "next": "c12-3"
+    },
+    "c12-suite-2-1": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Diva reprit son air en gardant les ailes serrées. Le couloir était libre, mais Evan sentait la tension restée dans son thorax. Il lui transmit la place des gardes plutôt qu’une seconde attaque. Elle pouvait encore bouger, protéger, surveiller. Le souffle avait obtenu une chose précise ; il n’avait pas engagé sa respiration entière pour le reste du combat."
+      ],
+      "next": "c12-3"
+    },
+    "c12-suite-2-2": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Tam-Tam voulut avancer jusqu’à l’endroit frappé. Evan lui fit sentir la présence des personnes qui revenaient déjà derrière les caisses et l’aida à garder la foudre dans une distance dont ils connaissaient les limites. Le sol fumait faiblement. Ce signe ne constituait pas une raison de recommencer : il montrait ce que l’attaque venait de demander au terrain."
+      ],
+      "next": "c12-3"
+    },
+    "c12-suite-2-3": {
+      "chapter": "c12",
+      "paragraphs": [
+        "L’un des gardes remercia Evan d’un geste rapide avant de vérifier lui-même l’état de ses jambes. Le soutien s’était retiré assez tôt pour lui laisser sentir sa propre fatigue. Le garçon comprit qu’une aide vraiment utile pouvait aussi rendre à quelqu’un le droit de savoir qu’il devait céder sa place à la relève."
+      ],
+      "next": "c12-3"
+    },
+    "c12-suite-2-autre": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Evan replia les griffes avant de reprendre le violon. Un bord de sangle avait entamé le cuir du gant, sans atteindre profondément sa main. Il montra l’accroc à Iseult plutôt que de le cacher. Il avait accompli un geste risqué assez utile pour ouvrir une allée ; il n’avait aucune raison de le transformer en promesse qu’il serait toujours le plus proche du prochain obstacle."
+      ],
+      "next": "c12-3"
+    },
+    "c12-suite-2": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Le travail continuait autour d’eux, avec les conséquences du choix qu’ils venaient de tenir."
+      ],
+      "routes": [
+        {
+          "when": {
+            "combat_relais": "racines"
+          },
+          "next": "c12-suite-2-0"
+        },
+        {
+          "when": {
+            "combat_relais": "souffle"
+          },
+          "next": "c12-suite-2-1"
+        },
+        {
+          "when": {
+            "combat_relais": "foudre"
+          },
+          "next": "c12-suite-2-2"
+        },
+        {
+          "when": {
+            "combat_relais": "vitesse"
+          },
+          "next": "c12-suite-2-3"
+        },
+        {
+          "next": "c12-suite-2-autre"
+        }
+      ]
+    },
+    "c12-suite-1-0": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Iseult vérifia l’heure sur la feuille qu’ils avaient préparée ensemble. Le relais aurait une relève pour les séries d’Evan, même si le phénomène ne choisissait pas les moments où le garçon avait fini de travailler. Il reconnut sa propre demande dans cette organisation. Elle n’était pas devenue moins valable parce que les adultes avaient enfin une raison impressionnante de l’oublier."
+      ],
+      "next": "c12-2"
+    },
+    "c12-suite-1-autre": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Iseult lui montra la personne chargée de relever son poste. Les conditions écrites avant la mission avaient été reportées sur le planning, avec les copies et les signaux attendus. Evan vérifia sa demande au lieu de supposer qu’elle s’était perdue dans l’urgence. Ce contrôle lui rendit une place plus solide que l’idée qu’il faudrait rester disponible jusqu’à ce que tout le monde eût fini."
+      ],
+      "next": "c12-2"
+    },
+    "c12-suite-1": {
+      "chapter": "c12",
+      "paragraphs": [
+        "Le travail continuait autour d’eux, avec les conséquences du choix qu’ils venaient de tenir."
+      ],
+      "routes": [
+        {
+          "when": {
+            "condition_suite": "repos"
+          },
+          "next": "c12-suite-1-0"
+        },
+        {
+          "next": "c12-suite-1-autre"
+        }
+      ]
+    },
+    "c13-suite-1-0": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Dans la notice commune, Evan retrouva la mention des équipes précédentes. Le travail d’Ansel et les vérifications qui l’avaient prolongé n’avaient pas été remplacés par une légende commençant au jour où la cité avait enfin obtenu un retour. Il emporta une copie pour Adèle, sans penser que ce papier suffirait à ce qu’elle ressentirait en le lisant."
+      ],
+      "next": "c13-2"
+    },
+    "c13-suite-1-1": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Les familles avaient reçu les premières explications avant les affiches. Evan le vérifia auprès d’Iseult, non pour réclamer la preuve qu’on lui avait obéi, mais parce qu’il savait désormais combien un accord pouvait disparaître lorsqu’on le croyait évident. Le message destiné à Adèle portait une heure de remise et un nom, lisibles sans entrer au Conseil."
+      ],
+      "next": "c13-2"
+    },
+    "c13-suite-1-autre": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Evan relut l’annonce avec la demande qu’il avait faite après leur premier retour. Les faits, leurs limites et les noms pouvaient encore être retrouvés dans les documents détaillés. Il vérifia où demander ces pages. Une notice exacte ne suffisait pas si elle ne conduisait plus à rien dès qu’une personne souhaitait comprendre davantage."
+      ],
+      "next": "c13-2"
+    },
+    "c13-suite-1": {
+      "chapter": "c13",
+      "paragraphs": [
+        "Le travail continuait autour d’eux, avec les conséquences du choix qu’ils venaient de tenir."
+      ],
+      "routes": [
+        {
+          "when": {
+            "annonce_retour": "precedents"
+          },
+          "next": "c13-suite-1-0"
+        },
+        {
+          "when": {
+            "annonce_retour": "familles_avant"
+          },
+          "next": "c13-suite-1-1"
+        },
+        {
+          "next": "c13-suite-1-autre"
+        }
+      ]
     }
   }
 }
