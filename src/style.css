@@ -678,3 +678,8 @@ dialog p {
     padding: 22px 0;
   }
 }
+
+/* Headings receive focus for screen-reader navigation, without a control border. */
+.destination h1:focus {
+  outline: none;
+}
