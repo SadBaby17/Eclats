@@ -323,7 +323,7 @@ test("menu destinations preserve reading position and decisions", async ({
     .getByRole("button", { name: /Journal de personnage/ })
     .click();
   await expect(
-    page.getByRole("heading", { name: "Une page encore blanche" }),
+    page.getByRole("heading", { name: "Journal de personnage", exact: true }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Ouvrir le menu" }).click();
   await page

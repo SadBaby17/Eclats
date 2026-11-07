@@ -1,4 +1,5 @@
 import "./style.css";
+import { journalAnchors, migrateDiscoveries, retainDiscoveries, knownCharacters, sourceAnchor } from "./journal.js";
 import { chapterProgress, chapterScene, chapterPage, chapterRecap } from "./chapters.js";
 import { BOOKS, SELECTED_BOOK_KEY, findBook } from "./catalog.js";
 import { validateStory, replay, choose } from "./engine.js";
@@ -19,7 +20,10 @@ let story,
   canSave = false,
   saveTimer,
   settings = { theme: "system", size: 20 },
-  loadFailed = false;
+  loadFailed = false,
+  journalSeen = new Set(),
+  journalSources = new Set(),
+  journalObserver;
 const systemTheme = matchMedia("(prefers-color-scheme: dark)");
 history.scrollRestoration = "manual";
 try {
@@ -160,7 +164,7 @@ function mainNavigation(close = () => {}) {
     [
       "journal",
       "Journal de personnage",
-      "Une place pour vos futurs personnages",
+      "Les personnages de votre récit",
       "◇",
     ],
     ["parametres", "Paramètres", "Votre confort de lecture", "☼"],
@@ -199,6 +203,7 @@ brand.onclick = (event) => {
 function showDestination(id) {
   if (id === activeView) return;
   if (activeView === "lectures") {
+    captureJournal();
     readingPosition = position();
     save();
   }
@@ -218,6 +223,8 @@ function showDestination(id) {
       restorePosition(readingPosition);
     else window.scrollTo({ top: 0, behavior: "instant" });
     updateProgress();
+    captureJournal();
+    observeJournal();
     save();
     book.tabIndex = -1;
     book.focus({ preventScroll: true });
@@ -437,20 +444,145 @@ function showDestination(id) {
   } else if (id === "histoire") {
     renderChapterList();
   } else {
-    const empty = el("section", { class: "journal-placeholder" });
-    empty.append(
-      el("span", { class: "journal-symbol", "aria-hidden": "true" }, "◇"),
-      el("h2", {}, "Une page encore blanche"),
-      el(
-        "p",
-        {},
-        "Votre journal de personnage prendra place ici. Cette rubrique sera enrichie dans une prochaine étape.",
-      ),
-    );
-    destination.append(empty);
+    renderJournal();
   }
   window.scrollTo({ top: 0, behavior: "instant" });
   title.focus({ preventScroll: true });
+}
+function visibleJournalSource(node) {
+  if (activeView !== "lectures" || book.hidden || !node.isConnected) return false;
+  const rect = node.getBoundingClientRect();
+  return rect.width > 0 && rect.height > 0 && rect.bottom > top.offsetHeight && rect.top < innerHeight;
+}
+function captureJournal() {
+  if (activeView !== "lectures" || !story) return;
+  for (const node of book.querySelectorAll("[data-anchor]"))
+    if (journalSources.has(node.id) && visibleJournalSource(node)) journalSeen.add(node.id);
+}
+function observeJournal() {
+  journalObserver?.disconnect();
+  if (!story || !("IntersectionObserver" in window)) return;
+  journalObserver ||= new IntersectionObserver((entries) => {
+    let changed = false;
+    for (const entry of entries) {
+      if (!entry.isIntersecting || !visibleJournalSource(entry.target)) continue;
+      if (!journalSeen.has(entry.target.id)) {
+        journalSeen.add(entry.target.id);
+        changed = true;
+      }
+      journalObserver.unobserve(entry.target);
+    }
+    if (changed) save();
+  }, { rootMargin: `-${top.offsetHeight}px 0px 0px 0px` });
+  for (const node of book.querySelectorAll("[data-anchor]"))
+    if (journalSources.has(node.id) && !journalSeen.has(node.id)) journalObserver.observe(node);
+}
+function refreshJournal() {
+  if (activeView !== "journal") return;
+  activeView = null;
+  showDestination("journal");
+}
+function renderJournal() {
+  if (!story || !state) {
+    destination.append(el("p", { role: "status" }, loadFailed
+      ? "Le journal n’a pas pu être chargé. Vérifiez votre connexion puis réessayez."
+      : "Chargement du journal…"));
+    if (loadFailed) {
+      const retry = el("button", { class: "primary" }, "Réessayer");
+      retry.onclick = () => location.reload();
+      destination.append(retry);
+    }
+    return;
+  }
+  const characters = knownCharacters(story, state, journalSeen);
+  destination.append(
+    el("p", { class: "eyebrow" }, story.title),
+    el("p", { class: "destination-intro" }, "Les visages de votre voyage. Les fiches se complètent avec les passages que vous découvrez."),
+    el("p", { class: "journal-count" }, `${characters.length} fiche${characters.length > 1 ? "s" : ""} connue${characters.length > 1 ? "s" : ""}`),
+  );
+  if (!characters.length) {
+    destination.append(
+      el("h2", {}, "Vos rencontres commencent ici"),
+      el("p", {}, "Lisez l’histoire pour découvrir les premières fiches. Aucun personnage à venir n’est affiché."),
+    );
+    const read = el("button", { class: "primary" }, "Reprendre ma lecture");
+    read.onclick = () => showDestination("lectures");
+    destination.append(read);
+    return;
+  }
+  const tools = el("div", { class: "journal-tools" });
+  const label = el("label", { for: "journal-search" }, "Rechercher un personnage connu");
+  const search = el("input", { type: "search", id: "journal-search", placeholder: "Nom, métier, faction…" });
+  const filterLabel = el("label", { for: "journal-filter" }, "Afficher");
+  const filter = el("select", { id: "journal-filter" });
+  filter.append(el("option", { value: "all" }, "Toutes les fiches"));
+  for (const [kind, name] of [["person", "Personnages"], ["companion", "Compagnons"], ["animal", "Animaux rencontrés"], ["entity", "Entités"]])
+    if (characters.some((c) => c.kind === kind)) filter.append(el("option", { value: kind }, name));
+  tools.append(label, search, filterLabel, filter);
+  const list = el("div", { class: "journal-grid" });
+  const count = el("p", { class: "journal-results", role: "status" });
+  const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
+  function paint() {
+    const query = normalize(search.value.trim());
+    const found = characters.filter((c) => (filter.value === "all" || c.kind === filter.value)
+      && normalize([c.name, ...Object.values(c.fields)].join(" ")).includes(query));
+    list.replaceChildren();
+    count.textContent = found.length ? `${found.length} fiche${found.length > 1 ? "s" : ""}` : "Aucune fiche connue ne correspond à cette recherche.";
+    for (const character of found) {
+      const button = el("button", { class: "character-card", "aria-label": `Voir la fiche de ${character.name}` });
+      button.append(
+        el("span", { class: "character-initial", "aria-hidden": "true" }, character.name[0]),
+        el("strong", {}, character.name),
+        el("span", { class: "character-role" }, character.fields.occupation || character.fields.race || (character.kind === "companion" ? "Compagnon" : "Rencontre du récit")),
+      );
+      button.onclick = () => openCharacter(character);
+      list.append(button);
+    }
+  }
+  search.oninput = paint;
+  filter.onchange = paint;
+  paint();
+  destination.append(tools, count, list);
+}
+function openCharacter(character) {
+  const dialog = modal(character.name);
+  dialog.classList.add("character-sheet");
+  dialog.append(el("p", { class: "eyebrow" }, story.title));
+  const identity = el("dl", { class: "character-identity" });
+  for (const [field, label] of [["age", "Âge"], ["occupation", "Métier / rôle"], ["race", "Race / nature"], ["class", "Classe"], ["affiliation", "Affiliation"]]) {
+    if (field !== "age" && !character.fields[field]) continue;
+    identity.append(el("dt", {}, label), el("dd", {}, character.fields[field] || "Non précisé à ce stade"));
+  }
+  dialog.append(identity);
+  const groups = [
+    ["Repères", (key) => ["appearance", "equipment", "size", "personality", "status"].includes(key)],
+    ["Pouvoirs connus", (key) => key.startsWith("magic-")],
+    ["Liens connus", (key) => key === "relation" || key.startsWith("link-")],
+    ["Histoire connue", (key) => key === "history" || key.startsWith("history-")],
+  ];
+  for (const [label, includes] of groups) {
+    const facts = Object.entries(character.fields).filter(([key]) => includes(key));
+    if (!facts.length) continue;
+    const section = el("section", { class: "character-facts" });
+    section.append(el("h3", {}, label));
+    const list = el("ul");
+    for (const [, text] of facts) list.append(el("li", {}, text));
+    section.append(list);
+    dialog.append(section);
+  }
+  const chapter = story.chapters.find((c) => c.id === character.chapter);
+  dialog.append(el("p", { class: "character-source" }, `Première découverte : chapitre ${chapter.number} · ${chapter.title}`));
+  const revisit = el("button", { class: "text-button" }, "Relire la première rencontre");
+  revisit.onclick = () => {
+    dialog.close();
+    openChapter(character.chapter);
+    const node = document.getElementById(sourceAnchor(character.firstSource));
+    node?.scrollIntoView({ block: "center", behavior: "instant" });
+    node?.focus({ preventScroll: true });
+    save();
+  };
+  dialog.append(revisit);
+  dialog.showModal();
 }
 function renderChapterList() {
   const back = el("button", { class: "text-button" }, "← Bibliothèque");
@@ -630,8 +762,9 @@ function save() {
     return;
   }
   try {
+    captureJournal();
     const p = position();
-    writeSave(storage, story, state.decisions, p.anchor, p.offset, p.chapter);
+    writeSave(storage, story, state.decisions, p.anchor, p.offset, p.chapter, [...journalSeen]);
     saveState.textContent = "Progression enregistrée sur cet appareil";
   } catch {
     storageError();
@@ -836,6 +969,7 @@ function render(animate = false) {
   contents.onclick = () => showDestination("histoire");
   navigation.append(contents);
   book.append(navigation);
+  observeJournal();
   updateProgress();
 }
 function optionsField(options, name, selected) {
@@ -983,6 +1117,7 @@ function openRevision(sceneId) {
   confirm.onclick = () => {
     const selected = field.querySelector("input:checked");
     if (!selected || selected.value === current) return;
+    journalSeen = retainDiscoveries(replay(story, before), [...journalSeen]);
     state = choose(story, before, sceneId, selected.value);
     currentChapter = story.scenes[sceneId].chapter;
     dialog.close();
@@ -1092,9 +1227,12 @@ async function start() {
         "La sauvegarde est incompatible ou endommagée. Une nouvelle lecture a été ouverte.";
     }
     state = replay(story, restore?.decisions || []);
+    journalSources = journalAnchors(story);
+    journalSeen = migrateDiscoveries(story, state, restore);
     readingPosition = restore;
     currentChapter = chapterPage(story, state, restore?.chapter).chapter.id;
     refreshChapterList();
+    refreshJournal();
     if (restore && state.decisions.length !== restore.decisions.length)
       notice.textContent =
         "Les décisions incompatibles ont été retirées. Votre dernière progression valide a été conservée.";
@@ -1119,6 +1257,7 @@ async function start() {
   } catch (error) {
     loadFailed = true;
     refreshChapterList();
+    refreshJournal();
     book.replaceChildren(
       el("h1", {}, "Le livre n’a pas pu être ouvert"),
       el(

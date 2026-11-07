@@ -27,14 +27,15 @@ Les tests navigateur lancent leur propre serveur sur le port 4173. Les captures 
 
 ## Utilisation
 
-L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, même lorsqu’une lecture est en cours. Toucher le logo **Éclats** ramène à cet accueil. Le bouton **☰**, disponible dans les autres écrans, ouvre le menu principal : **Bibliothèque** présente les récits disponibles et ouvre leur fiche de chapitres, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réserve un espace pour une prochaine étape, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
+L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, même lorsqu’une lecture est en cours. Toucher le logo **Éclats** ramène à cet accueil. Le bouton **☰**, disponible dans les autres écrans, ouvre le menu principal : **Bibliothèque** présente les récits disponibles et ouvre leur fiche de chapitres, **Lectures** retrouve le lecteur et sa position, **Journal de personnage** réunit les fiches des personnages et compagnons découverts dans le récit, et **Paramètres** ouvre les réglages de lecture. Le récit et ses décisions sont conservés pendant les allers-retours.
 
 - Faire défiler le roman. Cocher un chemin ne le valide pas : appuyer ensuite sur **Confirmer ce chemin**.
 - La réponse devient un paragraphe du livre. Les nouvelles scènes sont ajoutées en dessous ; le texte déjà présent est conservé.
 - **Aa** règle la taille de 16 à 28 px et le thème jour, nuit ou système. Le texte reste aligné à gauche pour préserver les espaces sur les écrans étroits.
 - **↶** liste les décisions. Le lien après chaque passage choisi permet aussi d’y revenir. Sélectionner un autre chemin puis confirmer le remplacement. Annuler ou fermer la fenêtre conserve tout le récit. Confirmer supprime toutes les décisions suivantes, même lorsqu’un embranchement rejoint plus loin la même scène.
 - La fiche d’un roman liste tous ses chapitres. Ceux qui ne figurent pas encore dans le parcours sont grisés, désactivés et marqués **Inaccessible**. Un chapitre devient accessible lorsque le récit l’atteint après les décisions précédentes. Choisir un chapitre accessible déplace la lecture à son titre sans réinitialiser les décisions. Modifier une ancienne décision annule la suite et recalcule aussi les accès aux chapitres.
-- La sauvegarde locale contient les décisions, le chapitre et un repère de paragraphe avec un décalage de lecture. Elle est enregistrée après chaque décision, lors du défilement et à la fermeture. Les préférences sont enregistrées séparément. Chaque livre conserve sa propre progression.
+- Le **Journal de personnage** ne montre que les rencontres découvertes. Nom, âge, métier, affiliations, pouvoirs, liens et histoire se précisent à mesure que les passages correspondants sont affichés. Les âges non révélés restent « Non précisé à ce stade » ; les autres rubriques apparaissent lorsqu’elles sont connues. Recherche et filtres portent uniquement sur les connaissances acquises. Une fiche permet de relire sa première source sans modifier les décisions.
+- La sauvegarde locale contient les décisions, le chapitre et un repère de paragraphe avec un décalage de lecture, ainsi qu’un journal des passages découverts (`journalSeen`, champ facultatif compatible avec les anciennes sauvegardes). Elle est enregistrée après chaque décision, lors du défilement et à la fermeture. Les préférences sont enregistrées séparément. Chaque livre conserve sa propre progression.
 - Une sauvegarde endommagée ou d’une autre version du récit est signalée puis remplacée par une lecture neuve. Une erreur de stockage est signalée sans bloquer la lecture.
 
 ## Architecture
@@ -44,6 +45,7 @@ Pas de framework d’interface ni de backend. Vite sert et construit les modules
 - `src/engine.js` : validation structurelle, conditions et relecture déterministe des décisions. Indépendant du DOM et du stockage.
 - `src/main.js` : interface accessible, confirmations, fenêtres natives, position de lecture, installation et mises à jour.
 - `src/storage.js` : contrat des sauvegardes versionnées, isolées par livre.
+- `src/journal.js` : connaissances calculées depuis les sources réellement affichées et le parcours courant, migration des anciennes sauvegardes et retrait des découvertes incompatibles après révision.
 - `src/chapters.js` : accès aux chapitres dérivé du parcours narratif, sans compteur de déblocage indépendant.
 - `src/catalog.js` : catalogue local, livre sélectionné et métadonnées de bibliothèque.
 - `src/style.css` : mise en page mobile, thèmes et respect de `prefers-reduced-motion`.
@@ -134,3 +136,10 @@ Aucune publication n’est effectuée par les commandes locales. Pour un héberg
 ## Limites de cette V1
 
 Un roman complet de treize chapitres, pas de compte ni synchronisation. Effacer les données du navigateur supprime la progression ; le mode privé peut ne pas la conserver. Pas de fusion de modifications simultanées dans plusieurs onglets (la dernière sauvegarde gagne). Le repère de lecture résiste aux réglages usuels, mais un changement important d’écran peut modifier légèrement la position visuelle. Pas de retour automatique à une ancienne progression après confirmation d’un remplacement. Pas de création de personnage, mécanique JDR ni génération de texte. Le tableau de bord d’auteur et les notes de préparation restent en dehors des fichiers publics et du dépôt.
+
+
+## Fiches de personnages
+
+La propriété facultative `characters` du JSON contient des fiches identifiées par `id`, une catégorie `kind` et une liste `facts`. Chaque information fournit `field`, `value` et `source: { scene, paragraph }` (index de paragraphe à partir de zéro). Les fiches n’apparaissent qu’après la découverte d’une information `name`. Les champs identiques se mettent à jour selon l’ordre du récit (par exemple, un statut connu plus tard). Les champs `history-*`, `magic-*` et `link-*` ajoutent des informations aux sections correspondantes. Aucune génération pendant la lecture.
+
+L’observation des paragraphes est limitée au chapitre affiché. Le déblocage automatique du chapitre suivant ne révèle donc pas sa distribution. Pour une sauvegarde antérieure sans `journalSeen`, les décisions confirmées et le repère de lecture permettent de reconstruire un préfixe conservateur des connaissances. Toute révision retire les découvertes après le point modifié, même si une scène se rejoint ensuite, et filtre les branches abandonnées. Les âges ou le passé non écrits dans le récit ne sont pas inventés pour remplir une fiche.

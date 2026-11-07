@@ -15089,5 +15089,2143 @@
         ]
       }
     ]
-  }
+  },
+  "characters": [
+    {
+      "id": "evan",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "evan-0",
+          "field": "name",
+          "value": "Evan",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "evan-1",
+          "field": "occupation",
+          "value": "Musicien au violon ; joue pour gagner de quoi manger.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "evan-2",
+          "field": "equipment",
+          "value": "Masque canin à diffusion sonore et gants à griffes rétractables.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "evan-3",
+          "field": "link-diva",
+          "value": "Échange des pensées et des images avec Diva.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "evan-4",
+          "field": "appearance",
+          "value": "Cheveux blancs et oreilles de loup.",
+          "source": {
+            "scene": "c1-place",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "evan-5",
+          "field": "magic-emotions",
+          "value": "Sa musique peut agir sur les émotions. Il essaie de ne pas l’imposer aux passants.",
+          "source": {
+            "scene": "c1-place",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "evan-6",
+          "field": "history-street",
+          "value": "Vit d’abord sous un auvent avec ses compagnons.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "evan-7",
+          "field": "name",
+          "value": "Evan Kamikony",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "evan-8",
+          "field": "magic-light",
+          "value": "Peut produire une lumière, mais ses forces sont limitées.",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "evan-9",
+          "field": "history-refuge",
+          "value": "Accueilli au refuge des Trois Marches avec Diva et Tam-Tam.",
+          "source": {
+            "scene": "c1-nuit",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "evan-10",
+          "field": "age",
+          "value": "13 ans",
+          "source": {
+            "scene": "c1-nuit",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "evan-11",
+          "field": "class",
+          "value": "Dompteur",
+          "source": {
+            "scene": "c13-4",
+            "paragraph": 9
+          }
+        },
+        {
+          "id": "evan-12",
+          "field": "race",
+          "value": "Hybride",
+          "source": {
+            "scene": "c13-4",
+            "paragraph": 9
+          }
+        },
+        {
+          "id": "evan-13",
+          "field": "history-friends",
+          "value": "Travaille avec Mina et participe à la Maison des chemins.",
+          "source": {
+            "scene": "c33-2",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "diva",
+      "kind": "companion",
+      "facts": [
+        {
+          "id": "diva-0",
+          "field": "name",
+          "value": "Diva",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "diva-1",
+          "field": "appearance",
+          "value": "Ailes mauves, dont les membranes évoquent des pétales.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "diva-2",
+          "field": "personality",
+          "value": "Surveille les affaires du groupe, même en dormant.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "diva-3",
+          "field": "link-evan",
+          "value": "Compagne d’Evan ; lui répond par des images et des sensations.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "diva-4",
+          "field": "race",
+          "value": "Dragon",
+          "source": {
+            "scene": "c1-rue-suite",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "diva-5",
+          "field": "magic-plants",
+          "value": "Peut travailler avec ses racines pour maintenir une toile au sol.",
+          "source": {
+            "scene": "c5-4",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "diva-6",
+          "field": "magic-breath",
+          "value": "Possède un souffle capable de repousser une créature.",
+          "source": {
+            "scene": "c16-2",
+            "paragraph": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "tam-tam",
+      "kind": "companion",
+      "facts": [
+        {
+          "id": "tam-tam-0",
+          "field": "name",
+          "value": "Tam-Tam",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "tam-tam-1",
+          "field": "race",
+          "value": "Ourson blanc",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "tam-tam-2",
+          "field": "appearance",
+          "value": "De la neige fond dans sa fourrure.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "tam-tam-3",
+          "field": "link-evan",
+          "value": "Compagnon qui dort près d’Evan.",
+          "source": {
+            "scene": "c1-rue",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "tam-tam-4",
+          "field": "magic-size",
+          "value": "Peut devenir un ours beaucoup plus grand, puis retrouver sa petite taille.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 7
+          }
+        },
+        {
+          "id": "tam-tam-5",
+          "field": "magic-snow",
+          "value": "Peut dresser un bloc de glace pour arrêter une créature.",
+          "source": {
+            "scene": "c5-4",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "tam-tam-6",
+          "field": "magic-lightning",
+          "value": "Peut utiliser la foudre, avec un risque pour les personnes proches de l’eau.",
+          "source": {
+            "scene": "c16-2",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "tam-tam-7",
+          "field": "size",
+          "value": "Peut atteindre six mètres.",
+          "source": {
+            "scene": "c33-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "iseult",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "iseult-0",
+          "field": "name",
+          "value": "Iseult Vale",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "iseult-1",
+          "field": "occupation",
+          "value": "Veilleuse confirmée",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "iseult-2",
+          "field": "affiliation",
+          "value": "Veilleurs",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "iseult-3",
+          "field": "personality",
+          "value": "Garde son calme pendant l’évacuation et prend soin d’Evan.",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "iseult-4",
+          "field": "link-evan",
+          "value": "Veille à sa sécurité et lui laisse le droit de ne pas recommencer une mission.",
+          "source": {
+            "scene": "c1-nuit",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "iseult-5",
+          "field": "history-search",
+          "value": "Organise les recherches du convoi de Valbrume.",
+          "source": {
+            "scene": "c14-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "borren",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "borren-0",
+          "field": "name",
+          "value": "Borren",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "borren-1",
+          "field": "occupation",
+          "value": "Fontainier",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "borren-2",
+          "field": "appearance",
+          "value": "Porte une barbe.",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "borren-3",
+          "field": "relation",
+          "value": "Travaille avec une apprentie blessée lors de l’incident de la citerne.",
+          "source": {
+            "scene": "c1-incident",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "borren-4",
+          "field": "link-neris",
+          "value": "Neris est son apprentie et connaît ses instruments.",
+          "source": {
+            "scene": "c2-table",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "borren-5",
+          "field": "history-council",
+          "value": "Participe aux mesures et aux réparations des installations.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": "neris",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "neris-0",
+          "field": "name",
+          "value": "Neris",
+          "source": {
+            "scene": "c2-table",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "neris-1",
+          "field": "occupation",
+          "value": "Apprentie de Borren",
+          "source": {
+            "scene": "c2-table",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "neris-2",
+          "field": "equipment",
+          "value": "Manipule des tiges et des instruments de mesure.",
+          "source": {
+            "scene": "c2-table",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "neris-3",
+          "field": "history",
+          "value": "A été blessée au poignet lors de l’incident de la citerne.",
+          "source": {
+            "scene": "c2-table",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "neris-4",
+          "field": "link-evan",
+          "value": "Evan l’invite à revenir écouter son violon.",
+          "source": {
+            "scene": "c2-soir",
+            "paragraph": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "maelle",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "maelle-0",
+          "field": "name",
+          "value": "Maëlle",
+          "source": {
+            "scene": "c1-pain-donne",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "maelle-1",
+          "field": "occupation",
+          "value": "Diacre",
+          "source": {
+            "scene": "c1-pain-donne",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "maelle-2",
+          "field": "history",
+          "value": "Propose un bol à Evan après le partage du pain.",
+          "source": {
+            "scene": "c1-pain-donne",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "maelle-3",
+          "field": "name",
+          "value": "Maëlle",
+          "source": {
+            "scene": "c1-nuit",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "maelle-4",
+          "field": "occupation",
+          "value": "S’occupe de l’accueil au refuge des Trois Marches.",
+          "source": {
+            "scene": "c1-nuit",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "maelle-5",
+          "field": "history-house",
+          "value": "Participe au projet de la Maison des chemins.",
+          "source": {
+            "scene": "c30-1",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "lise-enfant",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "lise-enfant-0",
+          "field": "name",
+          "value": "Lise",
+          "source": {
+            "scene": "c1-pain-donne",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "lise-enfant-1",
+          "field": "occupation",
+          "value": "Enfant rencontrée près du dispensaire",
+          "source": {
+            "scene": "c1-pain-donne",
+            "paragraph": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "seraphine",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "seraphine-0",
+          "field": "name",
+          "value": "Séraphine Argentum",
+          "source": {
+            "scene": "c3-route",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "seraphine-1",
+          "field": "occupation",
+          "value": "L’une des cinq Arcanistes qui dirigent Noctarion.",
+          "source": {
+            "scene": "c3-route",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "seraphine-2",
+          "field": "affiliation",
+          "value": "Arcanistes",
+          "source": {
+            "scene": "c3-route",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "seraphine-3",
+          "field": "magic-stars",
+          "value": "Fait apparaître une étoile miniature et agit sur la profondeur de l’espace.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "seraphine-4",
+          "field": "magic-space",
+          "value": "Crée une sphère noire qui replie l’élan d’une créature.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "seraphine-5",
+          "field": "personality",
+          "value": "Autoritaire et sarcastique ; exige des réponses précises.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "seraphine-6",
+          "field": "history-rescue",
+          "value": "Ouvre le passage de retour en déplaçant des pans de mur.",
+          "source": {
+            "scene": "c3-astre",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "seraphine-7",
+          "field": "occupation",
+          "value": "Arcaniste Suprême",
+          "source": {
+            "scene": "c5-4",
+            "paragraph": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "ansel",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "ansel-0",
+          "field": "name",
+          "value": "Ansel Rive",
+          "source": {
+            "scene": "c4-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "ansel-1",
+          "field": "occupation",
+          "value": "Dessinateur d’un ancien croquis de l’installation.",
+          "source": {
+            "scene": "c4-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "ansel-2",
+          "field": "status",
+          "value": "Disparu avec une équipe partie par les portails.",
+          "source": {
+            "scene": "c4-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "ansel-3",
+          "field": "relation",
+          "value": "Sa sœur tient une échoppe de reliure.",
+          "source": {
+            "scene": "c4-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "ansel-4",
+          "field": "occupation",
+          "value": "Technicien de mesure",
+          "source": {
+            "scene": "c4-2",
+            "paragraph": 9
+          }
+        },
+        {
+          "id": "ansel-5",
+          "field": "link-adele",
+          "value": "Frère d’Adèle Rive.",
+          "source": {
+            "scene": "c4-2",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "ansel-6",
+          "field": "status",
+          "value": "Décès confirmé : identifié parmi les membres de l’expédition retrouvés à Keryth.",
+          "source": {
+            "scene": "c11-2",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "ansel-7",
+          "field": "history-drawing",
+          "value": "Une de ses comparaisons aide l’équipe à corriger son montage.",
+          "source": {
+            "scene": "c11-4",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "adele",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "adele-0",
+          "field": "name",
+          "value": "Adèle Rive",
+          "source": {
+            "scene": "c4-2",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "adele-1",
+          "field": "occupation",
+          "value": "Relieuse",
+          "source": {
+            "scene": "c4-2",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "adele-2",
+          "field": "link-ansel",
+          "value": "Sœur d’Ansel ; conserve son carnet et cherche des réponses sur sa disparition.",
+          "source": {
+            "scene": "c4-2",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "adele-3",
+          "field": "history-truth",
+          "value": "Apprend le sort d’Ansel et reçoit une lettre qui lui est destinée.",
+          "source": {
+            "scene": "c11-3",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "odrane",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "odrane-0",
+          "field": "name",
+          "value": "Odrane",
+          "source": {
+            "scene": "c5-1",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "odrane-1",
+          "field": "occupation",
+          "value": "Cartographe",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "odrane-2",
+          "field": "race",
+          "value": "Naine",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "odrane-3",
+          "field": "personality",
+          "value": "Prépare plusieurs repères pour ne pas dépendre d’un seul sens ou d’un seul instrument.",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "ysane",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "ysane-0",
+          "field": "name",
+          "value": "Sœur Ysane",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "ysane-1",
+          "field": "occupation",
+          "value": "Lame de l’Aube",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "ysane-2",
+          "field": "affiliation",
+          "value": "Église de l’Aube",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "ysane-3",
+          "field": "appearance",
+          "value": "Porte une ancienne brûlure au cou.",
+          "source": {
+            "scene": "c5-2",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "ysane-4",
+          "field": "history-care",
+          "value": "Prend en charge les blessures de Jorin après le combat du pont.",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "ysane-5",
+          "field": "occupation",
+          "value": "Lame de l’Aube et soigneuse",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "veyr",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "veyr-0",
+          "field": "name",
+          "value": "Veyr",
+          "source": {
+            "scene": "c5-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "veyr-1",
+          "field": "occupation",
+          "value": "Arcaniste",
+          "source": {
+            "scene": "c5-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "veyr-2",
+          "field": "affiliation",
+          "value": "Arcanistes",
+          "source": {
+            "scene": "c5-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "veyr-3",
+          "field": "appearance",
+          "value": "Cheveux courts.",
+          "source": {
+            "scene": "c5-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "veyr-4",
+          "field": "history",
+          "value": "Supervise des relevés lors des essais du portail.",
+          "source": {
+            "scene": "c5-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "sael",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "sael-0",
+          "field": "name",
+          "value": "Sael",
+          "source": {
+            "scene": "c8-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "sael-1",
+          "field": "appearance",
+          "value": "Porte des disques de céramique à la ceinture.",
+          "source": {
+            "scene": "c8-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "sael-2",
+          "field": "history-contact",
+          "value": "Participe aux premiers échanges avec l’équipe venue d’Elyrion.",
+          "source": {
+            "scene": "c8-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "sael-3",
+          "field": "history-agreement",
+          "value": "Rejoint l’équipe avec des objets confiés pour un futur échange.",
+          "source": {
+            "scene": "c8-5",
+            "paragraph": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "aelyr",
+      "kind": "entity",
+      "facts": [
+        {
+          "id": "aelyr-0",
+          "field": "name",
+          "value": "Aelyr",
+          "source": {
+            "scene": "c9-4",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "aelyr-1",
+          "field": "history-other",
+          "value": "Les traces de Keryth concernent un être semblable, pas le voyage d’un seul être entre les mondes.",
+          "source": {
+            "scene": "c9-4",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "aelyr-2",
+          "field": "magic-origin",
+          "value": "Liée au rayonnement d’Elyrion ; la Lune en renvoie une partie avec des effets différents.",
+          "source": {
+            "scene": "c9-4",
+            "paragraph": 4
+          }
+        },
+        {
+          "id": "aelyr-3",
+          "field": "history-cause",
+          "value": "Absorbe l’énergie d’une étoile pour stabiliser la magie qu’elle porte. Aucun signe ne montre qu’elle perçoive les populations touchées.",
+          "source": {
+            "scene": "c9-4",
+            "paragraph": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "darsen",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "darsen-0",
+          "field": "name",
+          "value": "Darsen",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "darsen-1",
+          "field": "occupation",
+          "value": "Commandant des Veilleurs",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "darsen-2",
+          "field": "affiliation",
+          "value": "Veilleurs",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "darsen-3",
+          "field": "appearance",
+          "value": "Femme à la voix basse, au manteau repris comme ceux de ses soldats.",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "seliane",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "seliane-0",
+          "field": "name",
+          "value": "Séliane",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "seliane-1",
+          "field": "occupation",
+          "value": "Arcaniste",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "seliane-2",
+          "field": "affiliation",
+          "value": "Arcanistes",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "orven",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "orven-0",
+          "field": "name",
+          "value": "Orven",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "orven-1",
+          "field": "occupation",
+          "value": "Arcaniste chargé des réserves et des ateliers",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "orven-2",
+          "field": "affiliation",
+          "value": "Arcanistes",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "naera",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "naera-0",
+          "field": "name",
+          "value": "Naëra",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "naera-1",
+          "field": "occupation",
+          "value": "Arcaniste chargée des quartiers habités et de leurs cultures",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "naera-2",
+          "field": "affiliation",
+          "value": "Arcanistes",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "helle",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "helle-0",
+          "field": "name",
+          "value": "Helle",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "helle-1",
+          "field": "affiliation",
+          "value": "Enfants de la Nuit",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "helle-2",
+          "field": "occupation",
+          "value": "Représentante des Enfants de la Nuit au Conseil",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "helle-3",
+          "field": "appearance",
+          "value": "Une main porte des tissus végétaux visibles sous la peau.",
+          "source": {
+            "scene": "c10-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "helle-4",
+          "field": "history-research",
+          "value": "Présente des filaments végétaux cultivés pour étudier leur réaction à l’Astralys.",
+          "source": {
+            "scene": "c10-2",
+            "paragraph": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "tessa",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "tessa-0",
+          "field": "name",
+          "value": "Tessa",
+          "source": {
+            "scene": "c14-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "tessa-1",
+          "field": "race",
+          "value": "Elfe",
+          "source": {
+            "scene": "c14-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "tessa-2",
+          "field": "history",
+          "value": "Arrive au refuge blessée, avec une charrette et les affaires de son frère.",
+          "source": {
+            "scene": "c14-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "tessa-3",
+          "field": "link-luc",
+          "value": "Sœur de Luc ; voyageait avec lui depuis Valbrume.",
+          "source": {
+            "scene": "c14-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "tessa-4",
+          "field": "history-reunion",
+          "value": "Retrouve Luc au poste des Saules.",
+          "source": {
+            "scene": "c26-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "tessa-5",
+          "field": "occupation",
+          "value": "Coursière sur des trajets réguliers entre des postes sûrs.",
+          "source": {
+            "scene": "c33-1",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "luc",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "luc-0",
+          "field": "name",
+          "value": "Luc",
+          "source": {
+            "scene": "c14-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "luc-1",
+          "field": "age",
+          "value": "10 ans",
+          "source": {
+            "scene": "c14-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "luc-2",
+          "field": "relation",
+          "value": "Frère de Tessa.",
+          "source": {
+            "scene": "c14-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "luc-3",
+          "field": "status",
+          "value": "Recherché après la séparation du convoi de Valbrume.",
+          "source": {
+            "scene": "c14-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "luc-4",
+          "field": "status",
+          "value": "Localisé vivant derrière une porte bloquée près des vannes.",
+          "source": {
+            "scene": "c23-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "luc-5",
+          "field": "status",
+          "value": "Secouru et sorti de la salle bloquée.",
+          "source": {
+            "scene": "c23-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "luc-6",
+          "field": "link-orsa",
+          "value": "Est resté auprès d’Orsa et a partagé son eau avec elle.",
+          "source": {
+            "scene": "c23-3",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "luc-7",
+          "field": "status",
+          "value": "A retrouvé Tessa au poste des Saules.",
+          "source": {
+            "scene": "c26-1",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "pell",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "pell-0",
+          "field": "name",
+          "value": "Pell",
+          "source": {
+            "scene": "c15-4",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "pell-1",
+          "field": "occupation",
+          "value": "Jeune garde",
+          "source": {
+            "scene": "c15-4",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "pell-2",
+          "field": "affiliation",
+          "value": "Veilleurs",
+          "source": {
+            "scene": "c15-4",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "pell-3",
+          "field": "occupation",
+          "value": "Veilleur confirmé, chef d’une escorte vers Valbrume.",
+          "source": {
+            "scene": "c31-2",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "mina",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "mina-0",
+          "field": "name",
+          "value": "Mina",
+          "source": {
+            "scene": "c16-5",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "mina-1",
+          "field": "age",
+          "value": "14 ans",
+          "source": {
+            "scene": "c16-5",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "mina-2",
+          "field": "appearance",
+          "value": "Adolescente portant une natte mal coupée.",
+          "source": {
+            "scene": "c16-5",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "mina-3",
+          "field": "race",
+          "value": "Naine",
+          "source": {
+            "scene": "c16-5",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "mina-4",
+          "field": "history-mill",
+          "value": "S’est cachée au moulin avec des voyageurs échappés du convoi.",
+          "source": {
+            "scene": "c16-5",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "mina-5",
+          "field": "link-leda",
+          "value": "Sœur de Leda, restée dans le convoi.",
+          "source": {
+            "scene": "c17-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "mina-6",
+          "field": "history-reunion",
+          "value": "Retrouve Leda au lavoir.",
+          "source": {
+            "scene": "c24-3",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "mina-7",
+          "field": "occupation",
+          "value": "Apprend à travailler le bois dans un atelier.",
+          "source": {
+            "scene": "c33-2",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "leda",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "leda-0",
+          "field": "name",
+          "value": "Leda",
+          "source": {
+            "scene": "c17-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "leda-1",
+          "field": "relation",
+          "value": "Sœur adulte de Mina.",
+          "source": {
+            "scene": "c17-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "leda-2",
+          "field": "status",
+          "value": "Restée avec les voyageurs du convoi.",
+          "source": {
+            "scene": "c17-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "id": "leda-3",
+          "field": "status",
+          "value": "Retrouvée avec cinq enfants dans une salle fermée.",
+          "source": {
+            "scene": "c22-4",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "leda-4",
+          "field": "history-reunion",
+          "value": "Retrouve Mina au lavoir.",
+          "source": {
+            "scene": "c24-3",
+            "paragraph": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "sora",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "sora-0",
+          "field": "name",
+          "value": "Sora",
+          "source": {
+            "scene": "c18-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "sora-1",
+          "field": "occupation",
+          "value": "Responsable des manutentionnaires de la gare",
+          "source": {
+            "scene": "c18-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "sora-2",
+          "field": "affiliation",
+          "value": "Lanternes Hautes",
+          "source": {
+            "scene": "c18-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "sora-3",
+          "field": "history-keys",
+          "value": "Révèle un accès aux salles basses et l’existence d’un double des clés.",
+          "source": {
+            "scene": "c18-5",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "sora-4",
+          "field": "history-witness",
+          "value": "Son aide est prise en compte, mais elle doit répondre des portes qu’elle a fait fermer.",
+          "source": {
+            "scene": "c30-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "voss",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "voss-0",
+          "field": "name",
+          "value": "Édran Voss",
+          "source": {
+            "scene": "c17-4-suite-b",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-1",
+          "field": "occupation",
+          "value": "Directeur des Lanternes Hautes",
+          "source": {
+            "scene": "c17-4-suite-b",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-2",
+          "field": "affiliation",
+          "value": "Lanternes Hautes",
+          "source": {
+            "scene": "c17-4-suite-b",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-3",
+          "field": "fullName",
+          "value": "Édran Voss",
+          "source": {
+            "scene": "c17-4-suite-b",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-4",
+          "field": "name",
+          "value": "Voss",
+          "source": {
+            "scene": "c18-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-5",
+          "field": "occupation",
+          "value": "Directeur des Lanternes Hautes",
+          "source": {
+            "scene": "c18-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-6",
+          "field": "affiliation",
+          "value": "Lanternes Hautes",
+          "source": {
+            "scene": "c18-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-7",
+          "field": "appearance",
+          "value": "Homme grand, aux cheveux gris coupés très court.",
+          "source": {
+            "scene": "c18-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "voss-8",
+          "field": "status",
+          "value": "Sous garde ; les documents sont mis à l’abri pour l’enquête.",
+          "source": {
+            "scene": "c27-2",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "voss-9",
+          "field": "history-findings",
+          "value": "Des décisions confirment les contraintes imposées, les biens retenus et les ordres de destruction établis par les pièces conservées.",
+          "source": {
+            "scene": "c33-1",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "rima",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "rima-0",
+          "field": "name",
+          "value": "Rima",
+          "source": {
+            "scene": "c20-1-suite-d",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "rima-1",
+          "field": "occupation",
+          "value": "Ouvrière chargée de l’eau à Verreval",
+          "source": {
+            "scene": "c20-1-suite-d",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "rima-2",
+          "field": "name",
+          "value": "Rima",
+          "source": {
+            "scene": "c20-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "rima-3",
+          "field": "occupation",
+          "value": "Ouvrière connaissant le barrage et ses pompes.",
+          "source": {
+            "scene": "c20-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "rima-4",
+          "field": "history-work",
+          "value": "Connaît le barrage depuis vingt ans. Son âge n’est pas précisé.",
+          "source": {
+            "scene": "c20-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "rima-5",
+          "field": "history-flood",
+          "value": "Confirme la fermeture manuelle qui arrête la montée de l’eau.",
+          "source": {
+            "scene": "c24-4",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "onna",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "onna-0",
+          "field": "name",
+          "value": "Onna",
+          "source": {
+            "scene": "c20-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "onna-1",
+          "field": "race",
+          "value": "Elfe",
+          "source": {
+            "scene": "c20-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "onna-2",
+          "field": "history",
+          "value": "Habite Verreval ; son fils travaille à Noctarion et ses lettres arrivent parfois ouvertes.",
+          "source": {
+            "scene": "c20-3",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "nola",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "nola-0",
+          "field": "name",
+          "value": "Nola",
+          "source": {
+            "scene": "c18-4-suite-d",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "nola-1",
+          "field": "occupation",
+          "value": "Enfant rencontrée à Verreval",
+          "source": {
+            "scene": "c18-4-suite-d",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "nola-2",
+          "field": "name",
+          "value": "Nola",
+          "source": {
+            "scene": "c28-2",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "nola-3",
+          "field": "history-light",
+          "value": "Craint les regards sur ses tempes écailleuses ; voyage avec sa mère.",
+          "source": {
+            "scene": "c28-2",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "faril",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "faril-0",
+          "field": "name",
+          "value": "Faril",
+          "source": {
+            "scene": "c22-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "faril-1",
+          "field": "occupation",
+          "value": "Soigneur d’animaux au dépôt de Verreval",
+          "source": {
+            "scene": "c22-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "faril-2",
+          "field": "history-cages",
+          "value": "Connaît les espèces de la serre, dont les conditions ne sont pas adaptées.",
+          "source": {
+            "scene": "c22-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "faril-3",
+          "field": "history-control",
+          "value": "Les transferts et les soins des animaux sont suivis par un soigneur indépendant.",
+          "source": {
+            "scene": "c27-3",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "orsa",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "orsa-0",
+          "field": "name",
+          "value": "Orsa",
+          "source": {
+            "scene": "c23-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "orsa-1",
+          "field": "history-injury",
+          "value": "Bloquée avec Luc après une chute ; sa cheville est blessée.",
+          "source": {
+            "scene": "c23-1",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "orsa-2",
+          "field": "history-care",
+          "value": "Arrive au dispensaire de Noctarion pour la suite des soins.",
+          "source": {
+            "scene": "c28-4-suite-c",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "orsa-3",
+          "field": "status",
+          "value": "Quitte le dispensaire avec une canne.",
+          "source": {
+            "scene": "c30-1",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "lise-cuisine",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "lise-cuisine-0",
+          "field": "name",
+          "value": "Lise",
+          "source": {
+            "scene": "c21-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "lise-cuisine-1",
+          "field": "occupation",
+          "value": "Employée de cuisine à Verreval",
+          "source": {
+            "scene": "c21-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "lise-cuisine-2",
+          "field": "history-accounts",
+          "value": "Remet des notes sur les heures de travail et les sommes retirées aux voyageurs.",
+          "source": {
+            "scene": "c21-1",
+            "paragraph": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "arven",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "arven-0",
+          "field": "name",
+          "value": "Arven",
+          "source": {
+            "scene": "c14-3-suite-c",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "arven-1",
+          "field": "occupation",
+          "value": "Veilleur chargé du retour en cas de besoin",
+          "source": {
+            "scene": "c14-3-suite-c",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "arven-2",
+          "field": "affiliation",
+          "value": "Veilleurs",
+          "source": {
+            "scene": "c14-3-suite-c",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "arven-3",
+          "field": "name",
+          "value": "Arven",
+          "source": {
+            "scene": "c15-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "arven-4",
+          "field": "history-mare",
+          "value": "Ramène la jument au poste avec un message.",
+          "source": {
+            "scene": "c15-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "jorin",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "jorin-0",
+          "field": "name",
+          "value": "Jorin",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "jorin-1",
+          "field": "occupation",
+          "value": "Garde blessé au combat du pont",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "jorin-2",
+          "field": "affiliation",
+          "value": "Veilleurs",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        },
+        {
+          "id": "jorin-3",
+          "field": "history",
+          "value": "Cheville blessée et plaie au mollet ; pris en charge par Ysane.",
+          "source": {
+            "scene": "c16-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "abel",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "abel-0",
+          "field": "name",
+          "value": "Abel",
+          "source": {
+            "scene": "c18-2",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "abel-1",
+          "field": "occupation",
+          "value": "Menuisier de Valbrume",
+          "source": {
+            "scene": "c18-2",
+            "paragraph": 3
+          }
+        },
+        {
+          "id": "abel-2",
+          "field": "appearance",
+          "value": "Petit homme aux lunettes rondes.",
+          "source": {
+            "scene": "c18-2",
+            "paragraph": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "meret",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "meret-0",
+          "field": "name",
+          "value": "Meret",
+          "source": {
+            "scene": "c19-4",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "meret-1",
+          "field": "occupation",
+          "value": "Employé au lavage du linge",
+          "source": {
+            "scene": "c19-4",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "meret-2",
+          "field": "history",
+          "value": "Travaille à Verreval depuis avant l’arrivée de Voss.",
+          "source": {
+            "scene": "c19-4",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "dena",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "dena-0",
+          "field": "name",
+          "value": "Dena",
+          "source": {
+            "scene": "c21-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "dena-1",
+          "field": "occupation",
+          "value": "Garde des Lanternes Hautes",
+          "source": {
+            "scene": "c21-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "dena-2",
+          "field": "affiliation",
+          "value": "Lanternes Hautes",
+          "source": {
+            "scene": "c21-3",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "dena-3",
+          "field": "history-order",
+          "value": "Reconnaît avoir empêché des sorties et présente un ordre dont elle demande la vérification.",
+          "source": {
+            "scene": "c21-3",
+            "paragraph": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "brume",
+      "kind": "animal",
+      "facts": [
+        {
+          "id": "brume-0",
+          "field": "name",
+          "value": "Brume",
+          "source": {
+            "scene": "c15-5",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "brume-1",
+          "field": "race",
+          "value": "Jument",
+          "source": {
+            "scene": "c15-5",
+            "paragraph": 0
+          }
+        },
+        {
+          "id": "brume-2",
+          "field": "history",
+          "value": "A été ramenée au poste après le secours. Tirait la voiture des enfants fatigués du convoi.",
+          "source": {
+            "scene": "c15-5",
+            "paragraph": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "enfant-jardin",
+      "kind": "person",
+      "facts": [
+        {
+          "id": "enfant-jardin-0",
+          "field": "name",
+          "value": "L’enfant du jardin",
+          "source": {
+            "scene": "c8-5",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "enfant-jardin-1",
+          "field": "occupation",
+          "value": "Enfant qui joue d’un instrument à vent",
+          "source": {
+            "scene": "c8-5",
+            "paragraph": 5
+          }
+        },
+        {
+          "id": "enfant-jardin-2",
+          "field": "link-evan",
+          "value": "Échange des notes et corrige un passage joué par Evan.",
+          "source": {
+            "scene": "c8-5",
+            "paragraph": 6
+          }
+        }
+      ]
+    }
+  ]
 }

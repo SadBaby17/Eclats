@@ -1157,3 +1157,25 @@ dialog p {
 .chapter-navigation { display: flex; flex-direction: column; align-items: stretch; gap: .8rem; margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .chapter-navigation button { min-height: 48px; }
 .chapter-break { text-align: center; color: var(--muted); font-size: .9rem; margin: .5rem 0; }
+
+.journal-tools { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; margin: 1.75rem 0 1rem; }
+.journal-tools label { font-size: .85rem; color: var(--muted); }
+.journal-tools input, .journal-tools select { width: 100%; min-width: 0; min-height: 48px; padding: .7rem .85rem; font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: .4rem; }
+.journal-tools select:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.journal-count, .journal-results { font-size: .9rem; color: var(--muted); }
+.journal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1rem; }
+.character-card { display: grid; justify-items: start; gap: .6rem; text-align: left; padding: 1.25rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--panel); overflow-wrap: anywhere; }
+.character-card:hover { border-color: var(--gold); }
+.character-initial { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--gold); border-radius: 50%; font: 1.35rem Georgia, serif; color: var(--gold); }
+.character-card strong { font: normal 1.3rem Georgia, serif; }
+.character-role { font-size: .9rem; line-height: 1.5; color: var(--muted); }
+.character-sheet { max-width: 580px; overflow-wrap: anywhere; }
+.character-sheet .dialog-top h2 { font-size: 1.65rem; }
+.character-identity { margin: 1.5rem 0; }
+.character-identity dt { color: var(--gold); font-size: .8rem; font-weight: 600; margin-top: .8rem; }
+.character-identity dd { margin: .25rem 0 0; line-height: 1.5; }
+.character-facts { padding-top: .7rem; margin-top: 1.2rem; border-top: 1px solid var(--line); }
+.character-facts h3 { font: normal 1.25rem Georgia, serif; margin: .5rem 0; }
+.character-facts ul { padding-left: 1.2rem; line-height: 1.6; }
+.character-facts li { margin: .6rem 0; }
+.character-source { color: var(--muted); line-height: 1.6; }
