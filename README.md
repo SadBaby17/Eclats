@@ -117,6 +117,8 @@ Après une première ouverture en ligne et l’installation réussie du service 
 
 Sur Android/Chrome, utiliser le bouton d’installation lorsqu’il est proposé, ou le menu du navigateur « Installer l’application » / « Ajouter à l’écran d’accueil ». L’installation native et le comportement réel sous Android doivent aussi être vérifiés sur un appareil avant une diffusion publique.
 
+Si une ancienne version installée reste affichée, ouvrir `actualiser.html` sous le chemin de l’application et appuyer sur **Actualiser Éclats**. Cette page demande la dernière édition au service worker puis l’active, sans supprimer localStorage ni les sauvegardes.
+
 ## Publier sur GitHub Pages
 
 1. Pousser les fichiers sur la branche `main` du dépôt `SadBaby17/Eclats`.

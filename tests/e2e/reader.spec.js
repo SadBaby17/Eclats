@@ -383,3 +383,46 @@ test("the application opens on its home menu, even with a reading in progress", 
   await enterReader(page);
   await expect(page.locator("#scene-jeanne")).toBeVisible();
 });
+
+test("the recovery page activates a waiting edition without clearing progress", async ({
+  page,
+}) => {
+  await openReader(page);
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller)
+      await new Promise((resolve) =>
+        navigator.serviceWorker.addEventListener("controllerchange", resolve, {
+          once: true,
+        }),
+      );
+  });
+  await decision(page, "Rejoindre Jeanne au port");
+  const original = await readFile("dist/sw.js", "utf8");
+  try {
+    await writeFile(
+      "dist/sw.js",
+      original.replace(
+        /const CACHE="eclats-[^"]+"/,
+        'const CACHE="eclats-recovery-test"',
+      ),
+    );
+    await page.goto("actualiser.html");
+    await page.getByRole("button", { name: "Actualiser Éclats" }).click();
+    await expect(
+      page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+    ).toBeVisible();
+    expect(await page.evaluate(() => caches.keys())).toEqual([
+      "eclats-recovery-test",
+    ]);
+    await enterReader(page);
+    await expect(page.locator("#scene-jeanne")).toBeVisible();
+    expect(
+      await page.evaluate(
+        () => JSON.parse(localStorage.getItem("eclats.reading.v1")).decisions,
+      ),
+    ).toEqual([{ scene: "arrivee", option: "port" }]);
+  } finally {
+    await writeFile("dist/sw.js", original);
+  }
+});
