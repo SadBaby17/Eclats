@@ -14,9 +14,9 @@ const fixtureStory = JSON.parse(
   readFileSync(new URL("./fixtures/branching-story.json", import.meta.url)),
 );
 
-test("chapter six to nine illustrations reference local optimized assets at existing paragraphs", () => {
+test("chapter six to thirteen illustrations reference local optimized assets at existing paragraphs", () => {
   validateStory(novel);
-  assert.equal(Object.values(novel.illustrations).flat().length, 7);
+  assert.equal(Object.values(novel.illustrations).flat().length, 14);
   const counts = {};
   for (const [id, pictures] of Object.entries(novel.illustrations)) {
     const chapter = novel.scenes[id].chapter;
@@ -28,7 +28,7 @@ test("chapter six to nine illustrations reference local optimized assets at exis
       assert.equal(picture.width / picture.height, 1.5);
     }
   }
-  assert.deepEqual(counts, { c6: 2, c7: 2, c8: 2, c9: 1 });
+  assert.deepEqual(counts, { c6: 2, c7: 2, c8: 2, c9: 1, c10: 2, c11: 2, c12: 2, c13: 1 });
   assert.ok(novel.illustrations["c9-1"][0].caption.includes("lors de sa découverte"));
   const invalid = structuredClone(novel);
   invalid.illustrations["c6-1"][0].src = "https://example.com/external.webp";

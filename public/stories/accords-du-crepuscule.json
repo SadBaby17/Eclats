@@ -18722,6 +18722,69 @@
         "height": 1024,
         "caption": "Le dispositif de Keryth, lors de sa découverte."
       }
+    ],
+    "c10-1": [
+      {
+        "after": 4,
+        "src": "illustrations/chapter-10/conseil.webp",
+        "alt": "La table de travail du Conseil, avec cinq sièges de même hauteur, une carte des routes et de petits poids de repérage.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c10-2": [
+      {
+        "after": 3,
+        "src": "illustrations/chapter-10/capsule.webp",
+        "alt": "Une capsule de verre contient des filaments végétaux ; un amortisseur mécanique est posé à côté.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c11-4": [
+      {
+        "after": 1,
+        "src": "illustrations/chapter-11/montage.webp",
+        "alt": "Le montage d’essai réunit des anneaux distincts, une soupape mécanique, une culture témoin et un bol d’eau.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c11-3": [
+      {
+        "after": 3,
+        "src": "illustrations/chapter-11/enveloppe.webp",
+        "alt": "Une enveloppe de toile reste fermée sur la table d’Adèle, séparée du feuillet technique qu’elle accepte de partager.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c12-1": [
+      {
+        "after": 5,
+        "src": "illustrations/chapter-12/enceinte-relais.webp",
+        "alt": "L’enceinte du relais : trois supports indépendants, des chemins dégagés, un abri et un fossé devant la palissade.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c12-4": [
+      {
+        "after": 1,
+        "src": "illustrations/chapter-12/constellation.webp",
+        "alt": "Une petite constellation maintient des positions distinctes autour des trois supports du relais.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c13-5": [
+      {
+        "after": 9,
+        "src": "illustrations/chapter-13/violon-banc.webp",
+        "alt": "Un violon et son étui à la couture réparée reposent sur un banc de la cour du refuge, près d’un cahier.",
+        "width": 1536,
+        "height": 1024
+      }
     ]
   }
 }

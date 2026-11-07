@@ -709,6 +709,10 @@ for (const { chapter, initially, choices, count } of [
   { chapter: 7, initially: 0, choices: 3, count: 2 },
   { chapter: 8, initially: 1, choices: 1, count: 2 },
   { chapter: 9, initially: 1, choices: 0, count: 1 },
+  { chapter: 10, initially: 1, choices: 1, count: 2 },
+  { chapter: 11, initially: 0, choices: 3, count: 2 },
+  { chapter: 12, initially: 1, choices: 3, count: 2 },
+  { chapter: 13, initially: 0, choices: 4, count: 1 },
 ]) {
   test(`chapter ${chapter} illustrations respect progression, fit mobile and survive offline reload`, async ({ page, context }) => {
     await seed(page, (chapter - 1) * 5);
