@@ -221,13 +221,152 @@ function showDestination(id) {
   destination.append(title);
   if (id === "accueil") {
     destination.classList.add("home-screen");
+    title.replaceChildren(
+      document.createTextNode("Bienvenue dans "),
+      el("em", {}, "Éclats"),
+    );
+    const navigation = mainNavigation();
+    const motifs = [
+      [
+        [
+          "path",
+          {
+            d: "M18 35Q58 20 98 42V126Q58 104 18 119ZM98 42Q138 20 178 35V119Q138 104 98 126Z",
+            fill: "none",
+            stroke: "currentColor",
+            "stroke-width": "1.8",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M29 49Q58 39 87 51M29 61Q58 51 87 63M29 73Q58 63 87 75M109 51Q139 39 167 49M109 63Q139 51 167 61M109 75Q139 63 167 73M98 42V126",
+            fill: "none",
+            stroke: "currentColor",
+            "stroke-width": "1",
+            opacity: ".55",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M150 10L153 18L161 21L153 24L150 32L147 24L139 21L147 18Z",
+            fill: "currentColor",
+          },
+        ],
+      ],
+      [
+        [
+          "circle",
+          {
+            cx: "100",
+            cy: "72",
+            r: "44",
+            fill: "none",
+            stroke: "currentColor",
+            "stroke-width": "1",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M113 32A43 43 0 1 0 138 99A40 40 0 0 1 113 32Z",
+            fill: "currentColor",
+            opacity: ".5",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M52 26L55 35L64 38L55 41L52 50L49 41L40 38L49 35ZM155 69L157 75L163 77L157 79L155 85L153 79L147 77L153 75Z",
+            fill: "currentColor",
+          },
+        ],
+      ],
+      [
+        [
+          "path",
+          {
+            d: "M58 115L76 70Q97 28 151 24Q146 78 104 94L58 115ZM58 115L130 44M76 70L87 87L104 94",
+            fill: "none",
+            stroke: "currentColor",
+            "stroke-width": "1.5",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M44 127H149M44 133H116",
+            stroke: "currentColor",
+            opacity: ".4",
+          },
+        ],
+      ],
+      [
+        [
+          "circle",
+          {
+            cx: "100",
+            cy: "76",
+            r: "27",
+            fill: "none",
+            stroke: "currentColor",
+            "stroke-width": "1.5",
+          },
+        ],
+        [
+          "path",
+          {
+            d: "M100 35V23M100 117V129M59 76H47M141 76H153M71 47L63 39M129 105L137 113M129 47L137 39M71 105L63 113",
+            stroke: "currentColor",
+            "stroke-width": "1.5",
+          },
+        ],
+      ],
+    ];
+    [...navigation.children].forEach((button, index) => {
+      button.dataset.section = ["library", "reading", "journal", "settings"][
+        index
+      ];
+      const label = el(
+        "span",
+        { class: "card-caption", "aria-hidden": "true" },
+        ["01 · EXPLORER", "02 · S’ÉVADER", "03 · IMAGINER", "04 · S’INSTALLER"][
+          index
+        ],
+      );
+      button.prepend(label);
+      button.querySelector(".menu-symbol").remove();
+      const artwork = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "svg",
+      );
+      artwork.setAttribute("viewBox", "0 0 196 150");
+      artwork.setAttribute("class", "card-art");
+      artwork.setAttribute("aria-hidden", "true");
+      for (const [tag, attrs] of motifs[index]) {
+        const shape = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          tag,
+        );
+        for (const [name, value] of Object.entries(attrs))
+          shape.setAttribute(name, value);
+        artwork.append(shape);
+      }
+      button.append(artwork);
+    });
     destination.append(
       el(
         "p",
         { class: "destination-intro" },
         "Des histoires à découvrir. Des chemins à choisir.",
       ),
-      mainNavigation(),
+      navigation,
+      el(
+        "p",
+        { class: "home-footnote" },
+        "✧  Chaque histoire commence par une porte entrouverte.",
+      ),
     );
   } else if (id === "bibliotheque") {
     destination.append(

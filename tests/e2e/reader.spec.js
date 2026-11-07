@@ -426,3 +426,39 @@ test("the recovery page activates a waiting edition without clearing progress", 
     await writeFile("dist/sw.js", original);
   }
 });
+
+test("decorated home fits phone and desktop in both themes", async ({
+  page,
+}) => {
+  for (const width of [320, 393, 768, 1280]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("./");
+    const nav = page.getByRole("navigation", { name: "Navigation principale" });
+    await expect(nav.getByRole("button")).toHaveCount(4);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    const reading = await page.locator("[data-section=reading]").boundingBox();
+    const journal = await page.locator("[data-section=journal]").boundingBox();
+    expect(reading.x).not.toBe(journal.x);
+    expect(reading.y).not.toBe(journal.y);
+  }
+  await page.setViewportSize({ width: 393, height: 1000 });
+  await page.screenshot({
+    path: "test-results/home-decorated-light.png",
+    fullPage: true,
+  });
+  await page
+    .getByRole("navigation", { name: "Navigation principale" })
+    .getByRole("button", { name: /Paramètres/ })
+    .click();
+  await page.getByRole("button", { name: "Nuit", exact: true }).click();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("body")).toHaveAttribute("data-theme", "night");
+  await page.screenshot({
+    path: "test-results/home-decorated-night.png",
+    fullPage: true,
+  });
+});
