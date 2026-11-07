@@ -260,3 +260,25 @@ test("combat options expose concrete powers and preserve their distinct conseque
       assert.ok(option.passage.split(/\s+/u).length >= 35);
   }
 });
+
+test("reading guides only explain unlocked scenes from chapter five onward without altering the novel", () => {
+  assert.equal(Object.keys(novel.readingGuides).length, 19);
+  const covered = new Set();
+  for (const [id, guide] of Object.entries(novel.readingGuides)) {
+    const scene = novel.scenes[id];
+    assert.ok(scene, id);
+    assert.ok(Number(scene.chapter.slice(1)) >= 5);
+    covered.add(scene.chapter);
+    assert.equal(typeof guide.title, "string");
+    assert.ok(guide.paragraphs.length >= 2);
+    assert.ok(guide.paragraphs.every((p) => typeof p === "string" && p.length > 40));
+    if (guide.steps) assert.ok(guide.steps.length >= 3);
+  }
+  assert.equal(covered.size, 9);
+  const withoutGuides = structuredClone(novel);
+  delete withoutGuides.readingGuides;
+  let current = replay(novel);
+  while (current.pending)
+    current = choose(novel, current.decisions, current.pending.scene, current.pending.options[0].id);
+  assert.deepEqual(replay(withoutGuides, current.decisions), current);
+});

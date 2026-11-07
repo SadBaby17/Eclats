@@ -5848,5 +5848,201 @@
         }
       ]
     }
+  },
+  "readingGuides": {
+    "c5-1": {
+      "title": "Qui fait quoi pendant l’expédition ?",
+      "paragraphs": [
+        "Evan accompagne une équipe d’exploration. Il aide à repérer des différences dans les sons et les rythmes. Il ne commande pas les soldats et n’ouvre pas lui-même le portail.",
+        "Iseult, une Veilleuse, s’occupe de sa sécurité. Odrane, la cartographe, prépare les marques qui permettront de retrouver le chemin. Neris relève les mesures. Borren entretient le matériel. Séraphine maintient le passage en place.",
+        "Un ancrage est un point qui sert à maintenir le passage à un endroit précis. Les repères sont les marques ou les dispositifs utilisés pour vérifier les positions. Un relevé est simplement une mesure que l’on note pour pouvoir la comparer plus tard."
+      ],
+      "steps": [
+        "Préparer le camp de retour",
+        "Tester le passage",
+        "Traverser seulement si les contrôles le permettent"
+      ]
+    },
+    "c5-3": {
+      "title": "Deux dangers autour du camp",
+      "paragraphs": [
+        "Le camp est encore du côté d’Elyrion. L’équipe teste une petite ouverture ; elle n’a pas encore commencé son exploration de l’autre côté.",
+        "À l’est, les herbes blanchissent : le trajet devient dangereux à cause de l’exposition lunaire. À l’ouest, des créatures approchent. Il faut donc déplacer les réserves et faire revenir les éclaireurs sans confondre les deux menaces.",
+        "Evan reste à l’abri, près des civils. Son choix détermine le groupe qu’il aide en premier. Les Veilleurs continuent à protéger le reste du camp."
+      ],
+      "steps": [
+        "Est : terrain contaminé",
+        "Centre : camp et abri d’Evan",
+        "Ouest : créatures et retour des éclaireurs"
+      ]
+    },
+    "c6-1": {
+      "title": "Comment retrouver le portail ?",
+      "paragraphs": [
+        "L’équipe a maintenant traversé. Elle avance dans un monde inconnu. La corde relie les explorateurs à leur trajet de retour ; les marqueurs permettent de reconnaître des points précis.",
+        "Le balancier de Borren produit un rythme régulier. C’est un outil mécanique de comparaison : si un écho change alors que le balancier garde son rythme, quelque chose a changé autour d’eux. Cela ne prouve pas qu’une personne leur répond."
+      ],
+      "steps": [
+        "Portail de retour",
+        "Premier marqueur",
+        "Corde suivie par l’équipe",
+        "Structures à explorer"
+      ]
+    },
+    "c6-5": {
+      "title": "Pourquoi le retour devient-il difficile ?",
+      "paragraphs": [
+        "Le passage existe encore, mais un élément mobile qui aide à en conserver la position ne fonctionne plus correctement. Voir le portail ne suffit donc pas à garantir qu’on peut le rejoindre et le traverser sans danger.",
+        "Evan écoute les écarts et les signale. Les spécialistes règlent la liaison ; Odrane vérifie avec le balancier. La musique n’est pas une clé magique qui répare tout.",
+        "Un témoin, ici, est un objet servant de référence pour les prochains contrôles. Le mot ne désigne pas une personne. Le laisser sur place permettra de comparer une future mesure à celle de cette visite."
+      ]
+    },
+    "c7-2": {
+      "title": "Ce que l’expédition a réellement appris",
+      "paragraphs": [
+        "L’équipe est revenue de Keryth. Elle rapporte des observations et des objets de mesure. Elle n’a pas démontré que ce monde était habitable ou que ses bâtiments pouvaient accueillir les habitants de Noctarion.",
+        "La discussion porte sur la façon de raconter ces résultats au public. Une formule trop rassurante pourrait faire croire que les dangers ont disparu. Evan veut séparer ce qui a été observé de ce que l’on espère encore."
+      ],
+      "steps": [
+        "Observation : ce qui a été vu",
+        "Hypothèse : une explication à vérifier",
+        "Promesse : ce qu’on ne peut pas encore garantir"
+      ]
+    },
+    "c7-5": {
+      "title": "Pourquoi préparer une autre mission ?",
+      "paragraphs": [
+        "Les relevés de Keryth ne suffisent pas à expliquer tout ce qui se passe. L’équipe prépare de nouvelles observations. Evan doit décider comment y participer, avec des règles de repos et de conservation de ses notes.",
+        "Un témoin passif est un support qui garde une trace sans alimenter lui-même l’installation étudiée. Une copie permet à une autre personne de vérifier le résultat. L’objectif est d’éviter de dépendre d’un seul objet, ou de la mémoire d’Evan."
+      ]
+    },
+    "c8-1": {
+      "title": "Un autre monde, une nouvelle rencontre",
+      "paragraphs": [
+        "Ce passage mène à un autre monde que Keryth. Cette fois, le lieu est vivant et habité. Sael fait partie des personnes qui accueillent les visiteurs.",
+        "Les deux groupes ne partagent pas encore une langue. Ils commencent par des gestes, des objets et des signes simples. Un échange réussi ne signifie donc pas qu’ils se comprennent déjà sur tout.",
+        "Le seuil désigne la zone proche du portail. C’est là que les visiteurs restent d’abord, avant d’obtenir l’autorisation d’aller plus loin."
+      ]
+    },
+    "c8-4": {
+      "title": "Pourquoi montrer les mesures plutôt que rassurer par la magie ?",
+      "paragraphs": [
+        "Les visiteurs expliquent à leurs hôtes ce qu’ils ont découvert. Le sujet fait peur, et plusieurs mots restent difficiles à traduire.",
+        "Evan pourrait agir sur les émotions avec sa musique. Mais rendre les gens plus calmes ne rendrait pas les explications plus vraies. Il veut que ses interlocuteurs puissent comprendre les preuves, poser leurs questions et refuser ce qu’ils ne veulent pas accepter."
+      ],
+      "steps": [
+        "Montrer les observations",
+        "Laisser les hôtes les examiner",
+        "Discuter avant de décider"
+      ]
+    },
+    "c9-1": {
+      "title": "Que compare l’équipe ?",
+      "paragraphs": [
+        "Elle rapproche les traces recueillies sur Elyrion, Keryth et Zerathiel. Elle cherche à savoir si les phénomènes observés ont quelque chose en commun.",
+        "Comparer des témoins, c’est placer côte à côte des objets ou des supports de référence et observer leurs réactions. Evan suit un résultat précis ; d’autres personnes contrôlent les autres. Il ne doit pas tout écouter en même temps."
+      ]
+    },
+    "c9-4": {
+      "title": "Le lien entre Aelyr, le Soleil et la Lune",
+      "paragraphs": [
+        "À ce stade du récit, les chercheurs ont une explication : Aelyr est un être immense fait de magie. Elle absorbe l’énergie du Soleil pour stabiliser la trop grande quantité de magie qu’elle porte.",
+        "Cette magie se mêle au rayonnement solaire et atteint Elyrion. La Lune en renvoie aussi une partie. Les effets ne sont pas identiques selon le trajet et l’exposition, mais ils ont une origine commune.",
+        "Aelyr n’est pas le nom de tous ces êtres. Les traces de Keryth et les signes de Zerathiel concernent des êtres semblables. Rien ne prouve qu’Aelyr sache ce que les habitants d’Elyrion subissent."
+      ],
+      "steps": [
+        "Aelyr absorbe l’énergie solaire",
+        "Le rayonnement se mêle à sa magie",
+        "Elyrion le reçoit directement ou par le reflet de la Lune"
+      ]
+    },
+    "c10-1": {
+      "title": "Qui prend les décisions ?",
+      "paragraphs": [
+        "Les cinq Arcanistes gouvernent Noctarion : Séraphine, Veyr, Séliane, Orven et Naëra. Séraphine a une puissance et une influence exceptionnelles, mais les décisions présentées ici sont discutées au Conseil.",
+        "Evan est consulté parce qu’il a participé aux observations. Il apporte son expérience ; il n’a pas à décider seul du sort de la cité. Les autres factions défendent aussi leurs besoins et leurs inquiétudes."
+      ]
+    },
+    "c10-2": {
+      "title": "Le projet, en termes simples",
+      "paragraphs": [
+        "Arracher Aelyr au Soleil pourrait libérer une quantité d’énergie impossible à maîtriser. L’équipe cherche donc une façon moins brutale de limiter les effets reçus par les habitants.",
+        "Elle commence par de petits essais isolés. Les plantes et les mécanismes sont deux pistes à comparer. Aucun habitant ne doit servir de réserve d’énergie ou être obligé de supporter la charge à la place des machines.",
+        "Une charge désigne ici la quantité d’énergie que reçoit un dispositif. Une limite d’arrêt indique quand il faut couper l’essai, avant qu’il ne devienne dangereux."
+      ],
+      "steps": [
+        "Petit essai isolé",
+        "Mesurer la charge reçue",
+        "Arrêter si la limite est dépassée"
+      ]
+    },
+    "c11-1": {
+      "title": "À quoi servent les relais ?",
+      "paragraphs": [
+        "Un relais est ici un ensemble de dispositifs qui reçoit et règle une circulation d’énergie. Un ancrage en maintient un point de liaison. Un témoin sert à vérifier ce qui se passe.",
+        "Le bol qui casse montre que le premier montage réagit trop tard. La soupape est censée protéger l’installation, comme un dispositif de sécurité : il faut qu’elle intervienne avant la casse.",
+        "Les trois lieux ne réagissent pas de la même façon. Les équipes doivent donc régler chaque installation séparément, plutôt que copier un réglage unique partout."
+      ]
+    },
+    "c11-4": {
+      "title": "Trois équipes, trois contrôles",
+      "paragraphs": [
+        "Les équipes d’Elyrion, de Keryth et de Zerathiel préparent un essai commun. Chacune doit garder ses propres mesures et la possibilité de couper sa liaison.",
+        "Keryth sert de point de référence indépendant. Il ne s’agit pas d’y jeter le surplus d’énergie. À Zerathiel, les habitants vérifient eux-mêmes que le système convient à leur monde.",
+        "Séraphine peut maintenir les positions pendant le test. Son pouvoir ne remplace pas les vérifications : un passage stable peut encore transmettre trop d’énergie."
+      ],
+      "steps": [
+        "Elyrion : mesurer et régler",
+        "Keryth : vérifier le repère indépendant",
+        "Zerathiel : vérifier localement et pouvoir couper"
+      ]
+    },
+    "c12-1": {
+      "title": "Où se trouve Evan pendant la crise ?",
+      "paragraphs": [
+        "Evan rejoint l’opération organisée autour du relais. Il n’est pas envoyé attaquer Aelyr dans le ciel. Les équipes essaient de contenir les effets de l’énergie reçue et de garder les passages sous contrôle.",
+        "Il choisit un poste depuis lequel il peut voir une partie du terrain et aider. Les soldats, soigneurs et techniciens occupent les autres postes. Ne pas tout voir est une limite prévue dans l’organisation, pas un échec de sa part."
+      ]
+    },
+    "c12-2": {
+      "title": "Ce qu’il faut protéger pendant le combat",
+      "paragraphs": [
+        "Les créatures menacent le terrain où travaillent les équipes. Il faut dégager les porteurs et éviter qu’une attaque ne fasse tomber un support du relais.",
+        "Immobiliser avec les racines, repousser avec un souffle, interrompre avec la foudre ou aider les alliés à bouger ne produit pas le même effet. Le bon endroit compte autant que la force employée. Evan choisit une action précise ; les autres continuent à combattre."
+      ],
+      "steps": [
+        "Écarter la menace des porteurs",
+        "Garder un chemin vers l’abri",
+        "Préserver les supports du relais"
+      ]
+    },
+    "c12-4": {
+      "title": "Les intervalles et la régulation",
+      "paragraphs": [
+        "Réguler, ici, signifie limiter et organiser l’énergie reçue pour qu’elle ne s’accumule pas dans les lieux habités. Le dispositif en utilise une partie et ne stocke que ce qu’il sait gérer. Il ne peut pas absorber une quantité infinie.",
+        "Les intervalles sont les écarts entre les étapes du cycle observé. Evan les entend comme les espaces entre des battements. Le quatrième écart n’est pas une note oubliée à rajouter : c’est une séparation à conserver, au lieu de forcer tous les éléments à réagir en même temps.",
+        "Cette comparaison musicale aide Evan à expliquer son idée. Neris et Borren doivent ensuite la vérifier avec des mesures et un mécanisme qui fonctionnera même lorsqu’il cessera de jouer."
+      ],
+      "steps": [
+        "Evan repère un écart",
+        "Neris le mesure",
+        "Borren teste sans musique",
+        "Les trois équipes vérifient la correction"
+      ]
+    },
+    "c13-1": {
+      "title": "Ce qui a changé, et ce qui reste dangereux",
+      "paragraphs": [
+        "L’opération a permis de tenir les limites annoncées dans les zones contrôlées. Cela ne veut pas dire que toute la planète est guérie.",
+        "Le Soleil Noir, les créatures et les risques des Terres Blanches n’ont pas disparu. Les équipes doivent encore surveiller les installations. Evan peut se reposer : le système ne doit pas dépendre de sa musique permanente."
+      ]
+    },
+    "c13-4": {
+      "title": "Un apprentissage, pas une nouvelle obligation",
+      "paragraphs": [
+        "Evan reçoit plusieurs propositions pour apprendre et travailler. Ce choix concerne sa vie quotidienne. Il ne change ni sa race ni sa classe de Dompteur.",
+        "Son logement ne dépend pas de sa participation à une future mission. Il peut choisir une activité, découvrir qu’elle ne lui convient pas et en reparler. L’histoire lui laisse enfin un avenir qui ne se limite pas à gagner son prochain repas."
+      ]
+    }
   }
 }

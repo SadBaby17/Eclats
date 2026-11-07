@@ -1112,3 +1112,29 @@ dialog p {
     padding-left: 17px;
   }
 }
+
+/* Optional explanations remain next to the scene they describe. */
+.reading-guide {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: .5rem;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.reading-guide summary { cursor: pointer; color: var(--gold); }
+.reading-guide summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.reading-guide h3 { font-size: 1.1rem; margin: 1rem 0; }
+.reading-guide p { margin: .8rem 0; text-align: left; }
+.guide-diagram { list-style: decimal; padding-left: 1.5rem; }
+.guide-diagram li {
+  padding: .65rem;
+  margin: .6rem 0;
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+}
+.guide-diagram li::marker { color: var(--gold); font-weight: 600; }

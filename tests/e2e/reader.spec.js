@@ -580,3 +580,27 @@ test("an existing chapter-eight save unlocks chapter nine without clearing decis
   await details(page);
   await expect(page.locator(".chapter-link:enabled")).toHaveCount(9);
 });
+
+test("scene explanations start at chapter five, work on mobile and preserve decisions", async ({ page }) => {
+  let progress = replay(story);
+  while (progress.decisions.length < 20)
+    progress = choose(story, progress.decisions, progress.pending.scene, progress.pending.options[0].id);
+  await page.goto("./");
+  await page.evaluate(({ key, decisions }) => {
+    localStorage.setItem(key, JSON.stringify({ schema: 1, story: "accords-du-crepuscule", version: 1, decisions, anchor: "c5-1-p0", offset: 0, chapter: "c5" }));
+  }, { key, decisions: progress.decisions });
+  await page.reload();
+  await page.getByRole("navigation", { name: "Navigation principale" }).getByRole("button", { name: /Lectures/ }).click();
+  const guide = page.locator("#scene-c5-1 .reading-guide");
+  await expect(guide).toHaveCount(1);
+  await expect(page.locator('[data-chapter="c4"] .reading-guide')).toHaveCount(0);
+  await expect(page.locator("#scene-c5-3")).toHaveCount(0);
+  await guide.locator("summary").click();
+  await expect(guide.getByRole("heading")).toHaveText("Qui fait quoi pendant l’expédition ?");
+  await expect(guide.locator("li")).toHaveCount(3);
+  await page.setViewportSize({ width: 320, height: 640 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await guide.locator("summary").click();
+  await decision(page);
+  expect((await saveValue(page)).decisions.length).toBe(21);
+});

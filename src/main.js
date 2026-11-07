@@ -727,6 +727,22 @@ function render(animate = false) {
         prose.append(paragraph(text, `${block.id}-p${i}`, animate, i)),
       );
       section.append(prose);
+      const guide = story.readingGuides?.[block.id];
+      if (guide) {
+        const details = el("details", { class: "reading-guide" });
+        details.append(el("summary", {}, "Comprendre la scène"));
+        details.append(el("h3", {}, guide.title));
+        for (const text of guide.paragraphs) details.append(el("p", {}, text));
+        if (guide.steps) {
+          const diagram = el("ol", {
+            class: "guide-diagram",
+            "aria-label": guide.title,
+          });
+          for (const text of guide.steps) diagram.append(el("li", {}, text));
+          details.append(diagram);
+        }
+        section.append(details);
+      }
     }
     if (insertionPoint.nextElementSibling !== section)
       book.insertBefore(section, insertionPoint.nextSibling);
