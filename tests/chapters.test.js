@@ -65,3 +65,48 @@ test("the catalogue exposes only the preserved thirty-three-chapter novel", () =
   assert.equal(findBook("le-phare-des-heures"), undefined);
   assert.equal(story.chapters.length, 33);
 });
+
+test("chapter pages isolate the selected chapter without advancing or truncating decisions", async () => {
+  const { chapterPage } = await import("../src/chapters.js");
+  const reading = advance(10), before = JSON.stringify(reading);
+  const first = chapterPage(story, reading, "c1");
+  assert.ok(first.blocks.every((b) => b.scene.chapter === "c1"));
+  assert.equal(first.next.id, "c2");
+  assert.equal(first.previous, null);
+  const locked = chapterPage(story, reading, "c4");
+  assert.equal(locked.chapter.id, "c3");
+  assert.equal(locked.next, null);
+  assert.equal(JSON.stringify(reading), before);
+});
+
+test("all chapters after the first have short recaps that cannot reveal locked content", async () => {
+  const { chapterRecap } = await import("../src/chapters.js");
+  const full = advance(165), fresh = advance(0);
+  assert.deepEqual(chapterRecap(story, full, "c1"), []);
+  assert.deepEqual(chapterRecap(story, fresh, "c2"), []);
+  for (const c of story.chapters.slice(1)) {
+    const recap = chapterRecap(story, full, c.id);
+    assert.ok(recap.length >= 1);
+    assert.ok(recap.join(" ").split(/\s/u).length <= 85, c.id);
+  }
+});
+
+test("recaps use only earlier decisions, including the first-cycle ending and the selected project", async () => {
+  const { chapterRecap } = await import("../src/chapters.js");
+  let before = advance(59);
+  const histories = before.pending.options.map((o) => {
+    let r = choose(story, before.decisions, before.pending.scene, o.id);
+    while (r.decisions.length < 65) r = choose(story, r.decisions, r.pending.scene, r.pending.options[0].id);
+    return r;
+  });
+  assert.equal(new Set(histories.map((r) => chapterRecap(story, r, "c14").join(" "))).size, 5);
+  const reading = advance(165);
+  const changedFuture = { ...reading, variables: { ...reading.variables, strategie_finale: "exode", projet_routes: "c" } };
+  assert.deepEqual(chapterRecap(story, reading, "c14"), chapterRecap(story, changedFuture, "c14"));
+  assert.match(chapterRecap(story, reading, "c31").join(" "), /places pour dormir/u);
+  const trap = { ...story, chapterRecaps: { c2: [
+    { when: { projet_routes: "a" }, paragraphs: ["Information future interdite"] },
+    { paragraphs: ["Seulement le chapitre précédent"] },
+  ] } };
+  assert.deepEqual(chapterRecap(trap, reading, "c2"), ["Seulement le chapitre précédent"]);
+});

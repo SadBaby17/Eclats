@@ -1141,3 +1141,19 @@ dialog p {
 
 .cycle-ending { margin: 3rem 0; padding: 1.5rem 0; text-align: center; border-block: 1px solid var(--line); }
 .cycle-ending h3 { font-family: Georgia, serif; font-weight: normal; color: var(--ink); }
+
+.chapter-recap {
+  text-align: left;
+  margin: 1.75rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--gold);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.chapter-recap h3 { margin: 0 0 .5rem; font: 600 .85rem system-ui, sans-serif; color: var(--gold); }
+.chapter-recap p { margin: .4rem 0; }
+.chapter-navigation { display: flex; flex-direction: column; align-items: stretch; gap: .8rem; margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.chapter-navigation button { min-height: 48px; }
+.chapter-break { text-align: center; color: var(--muted); font-size: .9rem; margin: .5rem 0; }

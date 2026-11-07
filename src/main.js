@@ -1,5 +1,5 @@
 import "./style.css";
-import { chapterProgress, chapterScene } from "./chapters.js";
+import { chapterProgress, chapterScene, chapterPage, chapterRecap } from "./chapters.js";
 import { BOOKS, SELECTED_BOOK_KEY, findBook } from "./catalog.js";
 import { validateStory, replay, choose } from "./engine.js";
 import { readSave, writeSave, SETTINGS_KEY } from "./storage.js";
@@ -129,7 +129,8 @@ const destination = el("main", { class: "destination", hidden: "" });
 book.hidden = true;
 footer.hidden = true;
 let activeView = null,
-  readingPosition;
+  readingPosition,
+  currentChapter;
 app.replaceChildren(top, notice, live, book, destination, footer);
 function openMenu() {
   const dialog = modal("Votre espace");
@@ -581,15 +582,12 @@ function openChapter(id) {
   if (!story || !state) return;
   const sceneId = chapterScene(story, state, id);
   if (!sceneId) return;
+  save();
+  currentChapter = id;
+  render();
   showDestination("lectures");
-  const heading = document
-    .getElementById(`scene-${sceneId}`)
-    ?.querySelector(".chapter-heading");
-  if (!heading) return;
-  window.scrollTo({
-    top: scrollY + heading.getBoundingClientRect().top - top.offsetHeight - 20,
-    behavior: "instant",
-  });
+  window.scrollTo({ top: 0, behavior: "instant" });
+  const heading = book.querySelector(".chapter-heading");
   heading.tabIndex = -1;
   heading.focus({ preventScroll: true });
   readingPosition = position();
@@ -693,13 +691,17 @@ function paragraph(text, id, animate, index) {
 }
 function render(animate = false) {
   // Retain existing scene DOM and paragraph nodes so unlocking text never resets scroll.
-  const wanted = new Set(state.blocks.map((b) => `scene-${b.id}`));
+  const page = chapterPage(story, state, currentChapter);
+  currentChapter = page.chapter.id;
+  book.dataset.chapter = currentChapter;
+  const wanted = new Set(page.blocks.map((b) => `scene-${b.id}`));
   for (const node of book.querySelectorAll(".scene"))
     if (!wanted.has(node.id)) node.remove();
   book.querySelector(".ending")?.remove();
+  book.querySelector(".chapter-navigation")?.remove();
   let lastChapter;
   let insertionPoint = book.querySelector(".book-heading");
-  for (const block of state.blocks) {
+  for (const block of page.blocks) {
     let section = document.getElementById(`scene-${block.id}`);
     if (!section) {
       section = el("section", {
@@ -720,6 +722,16 @@ function render(animate = false) {
           ),
           el("h2", {}, chapter.title),
         );
+        const recap = chapterRecap(story, state, currentChapter);
+        if (recap.length) {
+          const summary = el("aside", {
+            class: "chapter-recap",
+            "aria-label": "Résumé du chapitre précédent",
+          });
+          summary.append(el("h3", {}, "Précédemment"));
+          for (const text of recap) summary.append(el("p", {}, text));
+          heading.append(summary);
+        }
         section.append(heading);
       }
       const prose = el("div", { class: "prose" });
@@ -786,7 +798,7 @@ function render(animate = false) {
       section.append(interaction);
     }
   }
-  if (state.ending) {
+  if (state.ending && currentChapter === story.chapters.at(-1).id) {
     const ending = el("section", { class: "ending" });
     ending.append(
       el(
@@ -805,6 +817,25 @@ function render(animate = false) {
     );
     book.append(ending);
   }
+  const navigation = el("nav", {
+    class: "chapter-navigation",
+    "aria-label": "Navigation entre les chapitres",
+  });
+  if (page.previous) {
+    const previous = el("button", { class: "text-button" }, "← Chapitre précédent");
+    previous.onclick = () => openChapter(page.previous.id);
+    navigation.append(previous);
+  }
+  if (page.next) {
+    navigation.append(el("p", { class: "chapter-break" }, `Fin du chapitre ${page.chapter.number}`));
+    const next = el("button", { class: "primary" }, "Chapitre suivant →");
+    next.onclick = () => openChapter(page.next.id);
+    navigation.append(next);
+  }
+  const contents = el("button", { class: "text-button" }, "Les chapitres");
+  contents.onclick = () => showDestination("histoire");
+  navigation.append(contents);
+  book.append(navigation);
   updateProgress();
 }
 function optionsField(options, name, selected) {
@@ -953,6 +984,7 @@ function openRevision(sceneId) {
     const selected = field.querySelector("input:checked");
     if (!selected || selected.value === current) return;
     state = choose(story, before, sceneId, selected.value);
+    currentChapter = story.scenes[sceneId].chapter;
     dialog.close();
     render(true);
     const anchor = document.getElementById(`${sceneId}-selected`);
@@ -1061,6 +1093,7 @@ async function start() {
     }
     state = replay(story, restore?.decisions || []);
     readingPosition = restore;
+    currentChapter = chapterPage(story, state, restore?.chapter).chapter.id;
     refreshChapterList();
     if (restore && state.decisions.length !== restore.decisions.length)
       notice.textContent =

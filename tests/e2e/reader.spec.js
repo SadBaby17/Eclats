@@ -14,13 +14,15 @@ async function enterReader(page) {
     .getByRole("navigation", { name: "Navigation principale" })
     .getByRole("button", { name: /Lectures/ })
     .click();
-  await expect(page.locator("#scene-c1-rue")).toBeVisible();
+  await expect(page.locator(".chapter-heading")).toHaveCount(1);
 }
 async function openReader(page) {
   await page.goto("./");
   await enterReader(page);
 }
 async function decision(page, index = 0) {
+  if (await page.locator(".choice").count() === 0)
+    await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
   const form = page.locator(".choice");
   const prompt = await form.getAttribute("aria-label");
   await form.locator("input[type=radio]").nth(index).check();
@@ -505,10 +507,12 @@ test("all thirty-three chapters can be read and revisited after completion", asy
   test.setTimeout(180_000);
   await openReader(page);
   for (let i = 0; i < 165; i++) {
+    if (await page.locator(".choice").count() === 0)
+      await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
     if (i >= 15) await expect(page.locator(".choice input")).toHaveCount(5);
     await decision(page, i >= 15 && i !== 59 && i !== 149 ? i % 5 : 0);
   }
-  await expect(page.locator(".chapter-heading")).toHaveCount(33);
+  await expect(page.locator(".chapter-heading")).toHaveCount(1);
   await expect(
     page.getByRole("heading", {
       name: "Une porte pour la nuit",
@@ -613,7 +617,7 @@ test("a completed first-cycle save resumes at chapter fourteen and preserves its
   await expect(page.locator("[data-chapter-id=c15]")).toBeDisabled();
   await page.locator("[data-chapter-id=c14]").click();
   await expect(page.locator("#scene-c14-1 .choice input")).toHaveCount(5);
-  await expect(page.locator(".cycle-ending")).toHaveCount(1);
+  await expect(page.locator(".cycle-ending")).toHaveCount(0);
   const before = (await saveValue(page)).decisions;
   await decision(page, 2);
   await page.reload();
@@ -628,4 +632,47 @@ test("a completed first-cycle save resumes at chapter fourteen and preserves its
   expect((await saveValue(page)).decisions).toHaveLength(66);
   await details(page);
   await expect(page.locator("[data-chapter-id=c15]")).toBeDisabled();
+});
+
+test("chapter boundaries pause reading; next and previous pages preserve choices and show a short recap", async ({ page }) => {
+  await openReader(page);
+  await expect(page.locator(".chapter-recap")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Chapitre suivant →" })).toHaveCount(0);
+  for (let i = 0; i < 5; i++) await decision(page);
+  await expect(page.locator("#debut")).toHaveAttribute("data-chapter", "c1");
+  await expect(page.locator("#scene-c2-matin")).toHaveCount(0);
+  await expect(page.locator(".choice")).toHaveCount(0);
+  await expect(page.locator(".chapter-break")).toHaveText("Fin du chapitre 1");
+  const decisions = (await saveValue(page)).decisions;
+  await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
+  await expect(page.locator("#debut")).toHaveAttribute("data-chapter", "c2");
+  await expect(page.locator("#scene-c1-rue")).toHaveCount(0);
+  await expect(page.getByRole("complementary", { name: "Résumé du chapitre précédent" })).toContainText("citerne");
+  await expect(page.locator(".chapter-heading")).toHaveCount(1);
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  expect((await saveValue(page)).chapter).toBe("c2");
+  await page.reload();
+  await enterReader(page);
+  await expect(page.locator("#debut")).toHaveAttribute("data-chapter", "c2");
+  await page.getByRole("button", { name: "Chapitre précédent", exact: false }).click();
+  await expect(page.locator("#debut")).toHaveAttribute("data-chapter", "c1");
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  await expect(page.locator(".chapter-recap")).toHaveCount(0);
+});
+
+test("history can revise a decision on a different chapter page and remove incompatible future recaps", async ({ page }) => {
+  await seed(page, 15);
+  await openReader(page);
+  await details(page);
+  await page.locator("[data-chapter-id=c4]").click();
+  await expect(page.locator(".chapter-recap")).toHaveCount(1);
+  await page.getByRole("button", { name: "Mes décisions" }).click();
+  await page.getByRole("button", { name: /DÉCISION 1\b/ }).click();
+  await page.getByRole("dialog").locator("input[type=radio]").nth(1).check();
+  await page.getByRole("button", { name: "Remplacer la suite" }).click();
+  await expect(page.locator("#debut")).toHaveAttribute("data-chapter", "c1");
+  await expect(page.locator(".chapter-recap")).toHaveCount(0);
+  await expect(page.locator("#scene-c4-1")).toHaveCount(0);
+  expect((await saveValue(page)).decisions).toHaveLength(1);
+  await expect(page.getByRole("button", { name: "Chapitre suivant →" })).toHaveCount(0);
 });
