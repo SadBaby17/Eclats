@@ -676,3 +676,26 @@ test("history can revise a decision on a different chapter page and remove incom
   expect((await saveValue(page)).decisions).toHaveLength(1);
   await expect(page.getByRole("button", { name: "Chapitre suivant →" })).toHaveCount(0);
 });
+
+test("expanded chapters keep old paragraph anchors and restore bookmarks inside the added prose", async ({ page }) => {
+  await seed(page, 65);
+  await openReader(page);
+  await details(page);
+  await page.locator("[data-chapter-id=c14]").click();
+  await expect(page.locator("#c14-1-p2")).toHaveCount(1);
+  const added = page.locator("#c14-1-e0-p2");
+  await expect(added).toHaveCount(1);
+  const text = await added.textContent();
+  await added.evaluate((node) => node.scrollIntoView({ block: "start", behavior: "instant" }));
+  await page.waitForTimeout(350);
+  const before = await saveValue(page);
+  expect(before.anchor).toMatch(/c14-1-e0-p/u);
+  const y = await page.evaluate(() => scrollY);
+  await page.reload();
+  await enterReader(page);
+  await expect(added).toHaveText(text);
+  expect((await saveValue(page)).decisions).toEqual(before.decisions);
+  expect((await saveValue(page)).chapter).toBe("c14");
+  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(80);
+  await expect(page.locator(".chapter-heading")).toHaveCount(1);
+});

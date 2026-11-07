@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { audit, words } from "./helpers/story-audit.js";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { replay, validateStory, choose } from "../src/engine.js";
+import { replay, validateStory, choose, narrativeProse } from "../src/engine.js";
 import { readSave, writeSave, SAVE_KEY, saveKey } from "../src/storage.js";
 const novel = JSON.parse(
   readFileSync(
@@ -22,11 +22,11 @@ test("all reachable narrative states have valid continuations and chapter length
     assert.equal(result.minChoices[i], 5);
     assert.equal(result.maxChoices[i], 5);
     assert.ok(
-      result.minWords[i] >= (i < 13 ? 3300 : 1000),
+      result.minWords[i] >= 3300,
       `chapter ${i + 1}: minimum ${result.minWords[i]}`,
     );
     assert.ok(
-      result.maxWords[i] <= (i < 13 ? 4400 : 1500),
+      result.maxWords[i] <= 4400,
       `chapter ${i + 1}: maximum ${result.maxWords[i]}`,
     );
     console.log(
@@ -86,7 +86,7 @@ const passageLengths = new Map();
 function beforeNextChoice(id) {
   if (passageLengths.has(id)) return passageLengths.get(id);
   const node = novel.scenes[id];
-  let total = words(node.paragraphs.join(" "));
+  let total = words(narrativeProse(node).map((p) => p.text).join(" "));
   if (!node.choice && !node.ending) {
     const targets = node.routes
       ? node.routes.map((route) => route.next)
@@ -175,7 +175,7 @@ test("the complete thirty-three-chapter novel has three reachable conclusions", 
   assert.equal(novel.publication.status, "complete");
   assert.equal(novel.publication.availableChapters, 33);
   const content = Object.values(novel.scenes)
-    .flatMap((s) => s.paragraphs)
+    .flatMap((s) => narrativeProse(s).map((p) => p.text))
     .join(" ");
   assert.doesNotMatch(content, /Diablo|TODO|selon votre choix/iu);
 });
@@ -323,4 +323,22 @@ test("the second cycle has twenty chapters, one hundred decisions and three dist
   const revised = choose(novel, before.decisions, before.pending.scene, before.pending.options[2].id);
   assert.equal(revised.pending.scene, "c31-1");
   assert.equal(revised.variables.projet_routes, "c");
+});
+
+
+test("expanding the second cycle preserves all original scenes, paragraph anchors, choices and journal sources", () => {
+  const baseline = JSON.parse(readFileSync(new URL("./fixtures/novel-before-expansion.json", import.meta.url)));
+  const canonical = (x) => JSON.stringify(x, (_, v) => v && typeof v === "object" && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => a.localeCompare(b))) : v);
+  const digest = (x) => createHash("sha256").update(canonical(x)).digest("hex");
+  assert.deepEqual(Object.keys(novel.scenes), Object.keys(baseline.scenes));
+  for (const [id, hash] of Object.entries(baseline.scenes)) {
+    const node = structuredClone(novel.scenes[id]);
+    if (Number(node.chapter.slice(1)) < 14) assert.equal(node.insertions, undefined);
+    delete node.insertions;
+    assert.equal(digest(node), hash, id);
+  }
+  for (const [key, hash] of Object.entries(baseline.metadata)) assert.equal(digest(novel[key]), hash, key);
+  const added = Object.values(novel.scenes).flatMap((scene) => (scene.insertions || []).flatMap((part) => part.paragraphs));
+  assert.equal(new Set(added).size, added.length, "no duplicated paragraphs used to pad the manuscript");
+  assert.ok(words(added.join(" ")) > 40000);
 });

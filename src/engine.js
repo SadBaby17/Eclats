@@ -32,6 +32,11 @@ export function validateStory(story) {
       !scene.paragraphs.every((p) => typeof p === "string")
     )
       throw Error(`Scène invalide : ${id}`);
+    if (scene.insertions !== undefined && (
+      !Array.isArray(scene.insertions) || scene.insertions.some((part) =>
+        !Number.isInteger(part.before) || part.before < 0 || part.before > scene.paragraphs.length
+        || !Array.isArray(part.paragraphs) || !part.paragraphs.every((p) => typeof p === "string"))
+    )) throw Error(`Passage ajouté invalide : ${id}`);
     if (
       [!!scene.choice, !!scene.next, !!scene.routes, !!scene.ending].filter(
         Boolean,
@@ -120,4 +125,17 @@ export function choose(story, decisions, scene, option) {
   )
     throw Error("Choix indisponible.");
   return replay(story, [...current.decisions, { scene, option }]);
+}
+
+// Original paragraph keys remain stable when a published scene is expanded.
+// The same ordered prose powers rendering, bookmarks and reading-length audits.
+export function narrativeProse(scene) {
+  const result = [];
+  for (let i = 0; i <= scene.paragraphs.length; i++) {
+    (scene.insertions || []).forEach((part, slot) => {
+      if (part.before === i) part.paragraphs.forEach((text, n) => result.push({ key: `e${slot}-p${n}`, text }));
+    });
+    if (i < scene.paragraphs.length) result.push({ key: `p${i}`, text: scene.paragraphs[i] });
+  }
+  return result;
 }

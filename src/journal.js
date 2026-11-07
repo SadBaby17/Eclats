@@ -1,3 +1,4 @@
+import { narrativeProse } from "./engine.js";
 // Character knowledge is authored in the story JSON. Only encountered sources
 // on the current narrative path contribute; publication order is irrelevant.
 export function sourceAnchor(source) {
@@ -7,7 +8,7 @@ export function sourceAnchor(source) {
 export function reachedAnchors(reading) {
   const anchors = new Set();
   for (const block of reading.blocks) {
-    block.scene.paragraphs.forEach((_, i) => anchors.add(`${block.id}-p${i}`));
+    narrativeProse(block.scene).forEach(({ key }) => anchors.add(`${block.id}-${key}`));
     if (block.selected) anchors.add(`${block.id}-selected`);
   }
   return anchors;
@@ -34,7 +35,7 @@ export function migrateDiscoveries(story, reading, saved) {
   let bookmarkFound = false;
   for (let i = 0; i < reading.blocks.length; i++) {
     const block = reading.blocks[i];
-    const anchors = block.scene.paragraphs.map((_, p) => `${block.id}-p${p}`);
+    const anchors = narrativeProse(block.scene).map(({ key }) => `${block.id}-${key}`);
     if (block.selected) anchors.push(`${block.id}-selected`);
     for (const anchor of anchors) {
       if (i <= lastConfirmed && sources.has(anchor)) seen.add(anchor);
@@ -43,7 +44,7 @@ export function migrateDiscoveries(story, reading, saved) {
   }
   if (bookmarkFound) {
     outer: for (const block of reading.blocks) {
-      const anchors = block.scene.paragraphs.map((_, i) => `${block.id}-p${i}`);
+      const anchors = narrativeProse(block.scene).map(({ key }) => `${block.id}-${key}`);
       if (block.selected) anchors.push(`${block.id}-selected`);
       for (const anchor of anchors) {
         if (sources.has(anchor)) seen.add(anchor);

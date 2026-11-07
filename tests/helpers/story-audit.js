@@ -1,6 +1,6 @@
 // Exact DAG analysis. States differing only in variables never read again are
 // equivalent; merging them avoids enumerating trillions of complete histories.
-import { matches } from "../../src/engine.js";
+import { matches, narrativeProse } from "../../src/engine.js";
 export const words = (text) => text.trim().split(/\s+/u).filter(Boolean).length;
 export function audit(story) {
   const liveMemo = new Map(),
@@ -78,7 +78,7 @@ export function audit(story) {
       result.paths += r.paths;
       story.chapters.forEach((_, i) => {
         const current = index.get(s.chapter) === i;
-        const w = current ? words([...s.paragraphs, passage].join(" ")) : 0;
+        const w = current ? words([...narrativeProse(s).map((p) => p.text), passage].join(" ")) : 0;
         const c = current && s.choice ? 1 : 0;
         result.minWords[i] = Math.min(result.minWords[i], r.minWords[i] + w);
         result.maxWords[i] = Math.max(result.maxWords[i], r.maxWords[i] + w);

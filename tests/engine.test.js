@@ -161,3 +161,15 @@ test("scene links can continue across chapters without resetting the decisions",
   assert.equal(r.blocks.find((b) => b.id === "table").scene.chapter, "ch2");
   assert.equal(r.decisions.length, 2);
 });
+
+test("expanded prose keeps original paragraph keys and rejects invalid insertion positions", async () => {
+  const { narrativeProse } = await import("../src/engine.js");
+  const scene = { paragraphs: ["Avant", "Choisir"], insertions: [
+    { before: 1, paragraphs: ["Une vraie scène ajoutée.", "La suite."] },
+    { before: 2, paragraphs: ["Après."] },
+  ] };
+  assert.deepEqual(narrativeProse(scene).map((p) => p.text), ["Avant", "Une vraie scène ajoutée.", "La suite.", "Choisir", "Après."]);
+  assert.deepEqual(narrativeProse(scene).map((p) => p.key), ["p0", "e0-p0", "e0-p1", "p1", "e1-p0"]);
+  const story = { format: 1, id: "test", version: 1, chapters: [{ id: "c", start: "s" }], scenes: { s: { chapter: "c", paragraphs: [], ending: "Fin", insertions: [{ before: 1, paragraphs: ["Invalid"] }] } } };
+  assert.throws(() => validateStory(story), /Passage ajouté invalide/u);
+});

@@ -2,7 +2,7 @@ import "./style.css";
 import { journalAnchors, migrateDiscoveries, retainDiscoveries, knownCharacters, sourceAnchor } from "./journal.js";
 import { chapterProgress, chapterScene, chapterPage, chapterRecap } from "./chapters.js";
 import { BOOKS, SELECTED_BOOK_KEY, findBook } from "./catalog.js";
-import { validateStory, replay, choose } from "./engine.js";
+import { validateStory, replay, choose, narrativeProse } from "./engine.js";
 import { readSave, writeSave, SETTINGS_KEY } from "./storage.js";
 
 const app = document.querySelector("#app");
@@ -868,8 +868,8 @@ function render(animate = false) {
         section.append(heading);
       }
       const prose = el("div", { class: "prose" });
-      block.scene.paragraphs.forEach((text, i) =>
-        prose.append(paragraph(text, `${block.id}-p${i}`, animate, i)),
+      narrativeProse(block.scene).forEach(({ text, key }, i) =>
+        prose.append(paragraph(text, `${block.id}-${key}`, animate, i)),
       );
       section.append(prose);
       if (block.scene.cycleEnding) {
