@@ -125,6 +125,7 @@
           button.disabled = false;
         }
       };
+      if (new URLSearchParams(location.search).get("auto") === "1") button.click();
     </script>
   </body>
 </html>

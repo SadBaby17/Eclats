@@ -1005,6 +1005,12 @@ function openSettings() {
       "Votre progression et vos préférences sont conservées sur cet appareil. Pour lire hors connexion, ouvrez une première fois le livre en ligne.",
     ),
   );
+  const update = el("button", { class: "primary" }, "Mettre à jour Éclats");
+  update.onclick = () => {
+    save();
+    location.assign(`${import.meta.env.BASE_URL}actualiser.html?auto=1`);
+  };
+  dialog.append(update);
   dialog.showModal();
 }
 function persistSettings() {
