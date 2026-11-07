@@ -931,4 +931,5 @@ window.addEventListener("beforeinstallprompt", (event) => {
   actions.append(button);
 });
 showDestination("accueil");
+document.getElementById("boot-fallback")?.remove();
 start();

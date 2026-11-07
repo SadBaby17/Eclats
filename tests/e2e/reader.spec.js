@@ -384,7 +384,7 @@ test("the application opens on its home menu, even with a reading in progress", 
   await expect(page.locator("#scene-jeanne")).toBeVisible();
 });
 
-test("the recovery page activates a waiting edition without clearing progress", async ({
+test("the update page reloads a coherent edition without clearing progress", async ({
   page,
 }) => {
   await openReader(page);
@@ -412,9 +412,9 @@ test("the recovery page activates a waiting edition without clearing progress", 
     await expect(
       page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
     ).toBeVisible();
-    expect(await page.evaluate(() => caches.keys())).toEqual([
-      "eclats-recovery-test",
-    ]);
+    await expect
+      .poll(() => page.evaluate(() => caches.keys()))
+      .toEqual(["eclats-recovery-test"]);
     await enterReader(page);
     await expect(page.locator("#scene-jeanne")).toBeVisible();
     expect(
@@ -461,4 +461,73 @@ test("decorated home fits phone and desktop in both themes", async ({
     path: "test-results/home-decorated-night.png",
     fullPage: true,
   });
+});
+
+test("a broken cached script has a visible fallback and repair retains the save", async ({
+  page,
+}) => {
+  await openReader(page);
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller)
+      await new Promise((resolve) =>
+        navigator.serviceWorker.addEventListener("controllerchange", resolve, {
+          once: true,
+        }),
+      );
+  });
+  await decision(page, "Rejoindre Jeanne au port");
+  await page.evaluate(async () => {
+    for (const name of await caches.keys()) {
+      const cache = await caches.open(name);
+      for (const request of await cache.keys()) {
+        if (new URL(request.url).pathname.endsWith(".js"))
+          await cache.put(
+            request,
+            new Response('throw new Error("broken cached edition");', {
+              headers: { "Content-Type": "application/javascript" },
+            }),
+          );
+      }
+    }
+  });
+  await page.reload();
+  await expect(page.locator("#boot-fallback")).toBeVisible();
+  await page
+    .getByRole("link", { name: "Réparer et ouvrir Éclats", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Réparer et ouvrir Éclats", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Bienvenue dans Éclats" }),
+  ).toBeVisible();
+  await expect(page.locator("#boot-fallback")).toHaveCount(0);
+  await enterReader(page);
+  await expect(page.locator("#scene-jeanne")).toBeVisible();
+});
+
+test("repair stays visible offline and never clears reading data", async ({
+  page,
+  context,
+}) => {
+  await openReader(page);
+  await decision(page, "Rejoindre Jeanne au port");
+  await page.goto("reparer.html");
+  const before = await page.evaluate(() =>
+    localStorage.getItem("eclats.reading.v1"),
+  );
+  await context.setOffline(true);
+  await page
+    .getByRole("button", { name: "Réparer et ouvrir Éclats", exact: true })
+    .click();
+  await expect(page.getByRole("status")).toContainText(
+    "La réparation n’a pas abouti",
+  );
+  await expect(
+    page.getByRole("button", { name: "Réparer et ouvrir Éclats", exact: true }),
+  ).toBeEnabled();
+  expect(
+    await page.evaluate(() => localStorage.getItem("eclats.reading.v1")),
+  ).toBe(before);
 });

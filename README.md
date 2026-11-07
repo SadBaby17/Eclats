@@ -117,7 +117,7 @@ Après une première ouverture en ligne et l’installation réussie du service 
 
 Sur Android/Chrome, utiliser le bouton d’installation lorsqu’il est proposé, ou le menu du navigateur « Installer l’application » / « Ajouter à l’écran d’accueil ». L’installation native et le comportement réel sous Android doivent aussi être vérifiés sur un appareil avant une diffusion publique.
 
-Si une ancienne version installée reste affichée, ouvrir `actualiser.html` sous le chemin de l’application et appuyer sur **Actualiser Éclats**. Cette page demande la dernière édition au service worker puis l’active, sans supprimer localStorage ni les sauvegardes.
+Si une ancienne version installée reste affichée, ouvrir `actualiser.html` sous le chemin de l’application et appuyer sur **Actualiser Éclats**. Cette page vérifie les fichiers en ligne, retire uniquement le service worker d’Éclats et recharge une page neuve, sans supprimer localStorage ni les sauvegardes. En cas d’écran blanc, le même parcours est disponible directement dans `reparer.html`. Un écran de secours reste affiché si le code du lecteur ne peut pas démarrer.
 
 ## Publier sur GitHub Pages
 

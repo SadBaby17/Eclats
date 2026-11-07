@@ -16,7 +16,39 @@
     <title>Éclats — Romans interactifs</title>
   </head>
   <body>
-    <div id="app"><p>Ouverture d’Éclats…</p></div>
+    <div id="app"></div>
+    <section
+      id="boot-fallback"
+      style="
+        max-width: 420px;
+        margin: 12vh auto;
+        padding: 28px;
+        font:
+          17px/1.7 system-ui,
+          sans-serif;
+      "
+    >
+      <h1
+        style="
+          font:
+            normal 34px Georgia,
+            serif;
+        "
+      >
+        Éclats
+      </h1>
+      <p>Ouverture de votre espace…</p>
+      <p>
+        Si l’accueil ne s’affiche pas, vous pouvez réparer le chargement sans
+        effacer votre progression.
+      </p>
+      <a href="%BASE_URL%reparer.html">Réparer et ouvrir Éclats</a>
+      <noscript
+        ><p>
+          Activez JavaScript dans votre navigateur pour ouvrir l’application.
+        </p></noscript
+      >
+    </section>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

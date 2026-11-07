@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f8f5ef" />
+    <title>Réparer et ouvrir Éclats</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+        background: #f8f5ef;
+        color: #302e29;
+      }
+      body {
+        max-width: 420px;
+        margin: 12vh auto;
+        padding: 28px;
+        line-height: 1.7;
+      }
+      h1 {
+        font:
+          normal 34px Georgia,
+          serif;
+      }
+      .mark {
+        color: #92713e;
+        font-size: 28px;
+      }
+      button {
+        font: inherit;
+        border: 0;
+        border-radius: 3px;
+        padding: 14px 20px;
+        background: #302e29;
+        color: #f8f5ef;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:disabled {
+        opacity: 0.6;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 2px solid #92713e;
+        outline-offset: 4px;
+      }
+      #status {
+        min-height: 4em;
+        font-size: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background: #1b1d1d;
+          color: #e2dfd6;
+        }
+        button {
+          background: #e2dfd6;
+          color: #1b1d1d;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mark" aria-hidden="true">✧</div>
+    <h1>Rouvrir votre espace</h1>
+    <p>
+      Réparez le chargement de l’application depuis le réseau. Votre progression
+      et vos préférences restent conservées sur cet appareil.
+    </p>
+    <button id="update">Réparer et ouvrir Éclats</button>
+    <p id="status" role="status">Une connexion Internet est nécessaire.</p>
+    <a href="./">Retour sans réparation</a>
+    <script>
+      const button = document.getElementById("update");
+      const message = document.getElementById("status");
+      button.onclick = async () => {
+        button.disabled = true;
+        message.textContent = "Vérification de la connexion…";
+        try {
+          const base = new URL("./", location.href);
+          const target = new URL("index.html", base);
+          target.searchParams.set("recovery", Date.now().toString());
+          const response = await fetch(target, { cache: "no-store" });
+          if (!response.ok) throw Error("network");
+          const html = new DOMParser().parseFromString(
+            await response.text(),
+            "text/html",
+          );
+          const module = html.querySelector('script[type="module"][src]');
+          if (!module) throw Error("entry");
+          const source = new URL(module.getAttribute("src"), target);
+          if (
+            source.origin !== base.origin ||
+            !source.pathname.startsWith(base.pathname)
+          )
+            throw Error("scope");
+          source.searchParams.set("recovery", Date.now().toString());
+          const script = await fetch(source, { cache: "no-store" });
+          if (
+            !script.ok ||
+            !/javascript/.test(script.headers.get("content-type") || "")
+          )
+            throw Error("asset");
+          message.textContent =
+            "Réouverture de l’accueil… Votre progression est conservée.";
+          if ("serviceWorker" in navigator) {
+            const registration = await navigator.serviceWorker.getRegistration(
+              base.href,
+            );
+            if (registration?.scope === base.href) {
+              const removed = await registration.unregister();
+              if (!removed) throw Error("unregister");
+            }
+          }
+          // A new navigation after unregistering starts without the stale controller.
+          // No caches, localStorage entries, or reading saves are deleted.
+          location.replace(target.href);
+        } catch {
+          message.textContent =
+            "La réparation n’a pas abouti. Vérifiez votre connexion puis réessayez. Aucune sauvegarde n’a été supprimée.";
+          button.disabled = false;
+        }
+      };
+    </script>
+  </body>
+</html>

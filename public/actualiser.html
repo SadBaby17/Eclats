@@ -72,60 +72,56 @@
     </p>
     <button id="update">Actualiser Éclats</button>
     <p id="status" role="status">Une connexion Internet est nécessaire.</p>
+    <a href="reparer.html">Écran blanc ? Réparer le chargement</a><br />
     <a href="./">Revenir à l’application</a>
     <script>
       const button = document.getElementById("update");
-      const status = document.getElementById("status");
-      function waitFor(worker, states) {
-        if (states.includes(worker.state)) return Promise.resolve();
-        return new Promise((resolve, reject) => {
-          const timer = setTimeout(() => finish(Error("timeout")), 20000);
-          function finish(error) {
-            clearTimeout(timer);
-            worker.removeEventListener("statechange", changed);
-            error ? reject(error) : resolve();
-          }
-          function changed() {
-            if (states.includes(worker.state)) finish();
-            else if (worker.state === "redundant")
-              finish(Error("installation"));
-          }
-          worker.addEventListener("statechange", changed);
-          changed();
-        });
-      }
+      const message = document.getElementById("status");
       button.onclick = async () => {
         button.disabled = true;
-        status.textContent =
-          "Vérification et téléchargement de la mise à jour…";
+        message.textContent = "Vérification de la connexion…";
         try {
-          if (!("serviceWorker" in navigator)) {
-            location.replace("./");
-            return;
+          const base = new URL("./", location.href);
+          const target = new URL("index.html", base);
+          target.searchParams.set("recovery", Date.now().toString());
+          const response = await fetch(target, { cache: "no-store" });
+          if (!response.ok) throw Error("network");
+          const html = new DOMParser().parseFromString(
+            await response.text(),
+            "text/html",
+          );
+          const module = html.querySelector('script[type="module"][src]');
+          if (!module) throw Error("entry");
+          const source = new URL(module.getAttribute("src"), target);
+          if (
+            source.origin !== base.origin ||
+            !source.pathname.startsWith(base.pathname)
+          )
+            throw Error("scope");
+          source.searchParams.set("recovery", Date.now().toString());
+          const script = await fetch(source, { cache: "no-store" });
+          if (
+            !script.ok ||
+            !/javascript/.test(script.headers.get("content-type") || "")
+          )
+            throw Error("asset");
+          message.textContent =
+            "Réouverture de l’accueil… Votre progression est conservée.";
+          if ("serviceWorker" in navigator) {
+            const registration = await navigator.serviceWorker.getRegistration(
+              base.href,
+            );
+            if (registration?.scope === base.href) {
+              const removed = await registration.unregister();
+              if (!removed) throw Error("unregister");
+            }
           }
-          const registration =
-            await navigator.serviceWorker.getRegistration("./");
-          if (!registration) {
-            location.replace("./");
-            return;
-          }
-          await registration.update();
-          if (registration.installing)
-            await waitFor(registration.installing, [
-              "installed",
-              "activating",
-              "activated",
-            ]);
-          const worker = registration.waiting;
-          if (worker) {
-            status.textContent = "Ouverture de la nouvelle version…";
-            worker.postMessage({ type: "ACTIVATE" });
-            await waitFor(worker, ["activated"]);
-          }
-          location.replace("./");
+          // A new navigation after unregistering starts without the stale controller.
+          // No caches, localStorage entries, or reading saves are deleted.
+          location.replace(target.href);
         } catch {
-          status.textContent =
-            "La mise à jour n’a pas abouti. Vérifiez votre connexion et réessayez. Votre progression n’a pas été effacée.";
+          message.textContent =
+            "La réparation n’a pas abouti. Vérifiez votre connexion puis réessayez. Aucune sauvegarde n’a été supprimée.";
           button.disabled = false;
         }
       };
