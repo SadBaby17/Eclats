@@ -13,6 +13,25 @@ const novel = JSON.parse(
 const fixtureStory = JSON.parse(
   readFileSync(new URL("./fixtures/branching-story.json", import.meta.url)),
 );
+
+test("chapter six illustrations reference local optimized assets and no other chapter is illustrated", () => {
+  validateStory(novel);
+  assert.equal(Object.values(novel.illustrations).flat().length, 2);
+  for (const [id, pictures] of Object.entries(novel.illustrations)) {
+    assert.equal(novel.scenes[id].chapter, "c6");
+    for (const picture of pictures) {
+      const bytes = readFileSync(new URL(`../public/${picture.src}`, import.meta.url));
+      assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
+      assert.ok(bytes.length < 250000);
+      assert.equal(picture.width / picture.height, 1.5);
+    }
+  }
+  const invalid = structuredClone(novel);
+  invalid.illustrations["c6-1"][0].src = "https://example.com/external.webp";
+  assert.throws(() => validateStory(invalid), /Illustration invalide/u);
+  invalid.illustrations["c6-1"][0] = { ...novel.illustrations["c6-1"][0], after: 999 };
+  assert.throws(() => validateStory(invalid), /Illustration invalide/u);
+});
 test("all reachable narrative states have valid continuations and chapter lengths", () => {
   validateStory(novel);
   const result = audit(novel);

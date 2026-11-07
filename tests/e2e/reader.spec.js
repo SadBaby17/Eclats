@@ -677,6 +677,34 @@ test("history can revise a decision on a different chapter page and remove incom
   await expect(page.getByRole("button", { name: "Chapitre suivant →" })).toHaveCount(0);
 });
 
+test("chapter six illustrations follow the unlocked prose and remain available offline on a narrow phone", async ({ page, context }) => {
+  await seed(page, 25);
+  await openReader(page);
+  await details(page);
+  await page.locator("[data-chapter-id=c6]").click();
+  await expect(page.locator(".story-illustration")).toHaveCount(1);
+  const first = page.locator(".story-illustration img").first();
+  await first.scrollIntoViewIfNeeded();
+  await expect.poll(() => first.evaluate((img) => img.complete && img.naturalWidth > 0)).toBe(true);
+  expect(await first.getAttribute("src")).toMatch(/^\/Eclats\/illustrations\//u);
+  expect(await first.evaluate((img) => img.getBoundingClientRect().right <= innerWidth)).toBe(true);
+  expect(await page.locator("#c6-1-p7").evaluate((p) => p.nextElementSibling.classList.contains("story-illustration"))).toBe(true);
+  await decision(page);
+  await expect(page.locator(".story-illustration")).toHaveCount(2);
+  await ready(page);
+  const decisions = (await saveValue(page)).decisions;
+  await context.setOffline(true);
+  await page.reload();
+  await enterReader(page);
+  for (const img of await page.locator(".story-illustration img").all()) {
+    await img.scrollIntoViewIfNeeded();
+    await expect.poll(() => img.evaluate((node) => node.complete && node.naturalWidth === 1536)).toBe(true);
+  }
+  expect((await saveValue(page)).decisions).toEqual(decisions);
+  await expect(page.locator("#c6-2-p3")).toHaveCount(1);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
 test("expanded chapters keep old paragraph anchors and restore bookmarks inside the added prose", async ({ page }) => {
   await seed(page, 65);
   await openReader(page);

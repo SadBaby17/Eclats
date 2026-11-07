@@ -160,6 +160,25 @@ a {
 .prose p {
   margin: 0 0 1.25em;
 }
+.story-illustration {
+  margin: 1.8em 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  aspect-ratio: 3 / 2;
+}
+.story-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  font: 14px/1.5 Georgia, serif;
+  color: var(--ink);
+}
+.story-illustration.image-unavailable {
+  background: var(--paper);
+}
 .scene:first-of-type > .prose > p:first-child:first-letter {
   float: left;
   font-size: 3.1em;

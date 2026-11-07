@@ -69,6 +69,20 @@ export function validateStory(story) {
       }
     }
   }
+  if (story.illustrations !== undefined) {
+    if (!story.illustrations || typeof story.illustrations !== "object" || Array.isArray(story.illustrations))
+      throw Error("Illustrations invalides.");
+    for (const [id, pictures] of Object.entries(story.illustrations)) {
+      const scene = story.scenes[id];
+      if (!scene || !Array.isArray(pictures) || pictures.some((picture) =>
+        !picture || !Number.isInteger(picture.after) || picture.after < 0 || picture.after >= scene.paragraphs.length
+        || typeof picture.src !== "string" || !/^illustrations\/[a-zA-Z0-9_/-]+\.webp$/.test(picture.src)
+        || picture.src.includes("..") || typeof picture.alt !== "string" || !picture.alt.trim()
+        || !Number.isInteger(picture.width) || picture.width <= 0
+        || !Number.isInteger(picture.height) || picture.height <= 0
+      )) throw Error(`Illustration invalide : ${id}`);
+    }
+  }
   return story;
 }
 export function replay(story, decisions = []) {

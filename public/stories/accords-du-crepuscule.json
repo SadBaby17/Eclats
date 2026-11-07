@@ -18657,5 +18657,25 @@
         }
       ]
     }
-  ]
+  ],
+  "illustrations": {
+    "c6-1": [
+      {
+        "after": 7,
+        "src": "illustrations/chapter-06/avenue.webp",
+        "alt": "Une avenue déserte aux façades de pierre grise, bordée d’un canal à sec. Une corde et une lampe balisent le chemin.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "c6-2": [
+      {
+        "after": 3,
+        "src": "illustrations/chapter-06/lamelles.webp",
+        "alt": "Dans une alcôve, de fines lamelles métalliques sont maintenues sous une enveloppe de verre, près de sièges de tailles différentes.",
+        "width": 1536,
+        "height": 1024
+      }
+    ]
+  }
 }

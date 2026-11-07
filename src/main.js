@@ -868,9 +868,25 @@ function render(animate = false) {
         section.append(heading);
       }
       const prose = el("div", { class: "prose" });
-      narrativeProse(block.scene).forEach(({ text, key }, i) =>
-        prose.append(paragraph(text, `${block.id}-${key}`, animate, i)),
-      );
+      narrativeProse(block.scene).forEach(({ text, key }, i) => {
+        prose.append(paragraph(text, `${block.id}-${key}`, animate, i));
+        for (const illustration of story.illustrations?.[block.id] || []) {
+          if (key !== `p${illustration.after}`) continue;
+          const figure = el("figure", { class: "story-illustration" });
+          const picture = el("img", {
+            src: `${import.meta.env.BASE_URL}${illustration.src}`,
+            alt: illustration.alt,
+            width: illustration.width,
+            height: illustration.height,
+            loading: "lazy",
+            decoding: "async",
+          });
+          // Keep the reserved space and readable alternative if an asset fails.
+          picture.addEventListener("error", () => figure.classList.add("image-unavailable"));
+          figure.append(picture);
+          prose.append(figure);
+        }
+      });
       section.append(prose);
       if (block.scene.cycleEnding) {
         const milestone = el("div", { class: "cycle-ending" });
