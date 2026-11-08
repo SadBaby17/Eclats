@@ -13,9 +13,9 @@ export const BOOKS = [
     file: "evan-deuxieme-version.json",
     title: "Evan — Deuxième version",
     cover: "Evan\nDeuxième version",
-    label: "Nouvelle histoire · 3 premiers chapitres",
+    label: "Aventure complète · 13 chapitres",
     description:
-      "Une nouvelle aventure d'Evan, Diva et Tam-Tam dans l'univers d'Elyrion. Trois premiers chapitres à découvrir.",
+      "Une nouvelle aventure d'Evan, Diva et Tam-Tam dans l'univers d'Elyrion. Treize chapitres, une aventure complète à découvrir.",
   },
 ];
 export const SELECTED_BOOK_KEY = "eclats.selected-book.v1";

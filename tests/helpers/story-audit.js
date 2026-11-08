@@ -2,7 +2,7 @@
 // equivalent; merging them avoids enumerating trillions of complete histories.
 import { matches, narrativeProse } from "../../src/engine.js";
 export const words = (text) => text.trim().split(/\s+/u).filter(Boolean).length;
-export function audit(story) {
+export function audit(story, inspect = () => {}) {
   const liveMemo = new Map(),
     visiting = new Set(),
     memo = new Map(),
@@ -44,6 +44,7 @@ export function audit(story) {
     if (memo.has(key)) return memo.get(key);
     const s = story.scenes[id];
     let exits;
+    inspect(id, s, variables);
     if (s.choice)
       exits = s.choice.options.filter((o) => matches(o.when, variables));
     else if (s.routes)

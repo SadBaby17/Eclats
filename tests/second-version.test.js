@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { validateStory, replay, choose, matches } from "../src/engine.js";
 import { chapterProgress, chapterRecap } from "../src/chapters.js";
@@ -14,11 +15,11 @@ const original = load("accords-du-crepuscule.json");
 
 test("every second-version path keeps the reading minimum and five decisions per chapter", () => {
   validateStory(story);
-  assert.equal(story.chapters.length, 3);
+  assert.equal(story.chapters.length, 13);
   const result = audit(story);
   assert.equal(result.reached.size, Object.keys(story.scenes).length);
   assert.ok(result.paths > 30000n);
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 13; i++) {
     assert.ok(result.minWords[i] >= 3300, `Chapter ${i + 1} is too short`);
     assert.ok(result.maxWords[i] <= 4400, `Chapter ${i + 1} is too long`);
     assert.equal(result.minChoices[i], 5);
@@ -27,45 +28,33 @@ test("every second-version path keeps the reading minimum and five decisions per
 });
 
 test("each interaction offers at least five available, distinct answers in every reachable state", () => {
-  const conditionKeys = new Set();
-  for (const scene of Object.values(story.scenes)) {
-    for (const edge of [...(scene.routes || []), ...(scene.choice?.options || [])]) {
-      Object.keys(edge.when || {}).forEach((key) => conditionKeys.add(key));
-    }
-  }
-  const visited = new Set();
-  function visit(id, variables) {
-    const key = JSON.stringify([id, [...conditionKeys].sort().map((k) => [k, variables[k]])]);
-    if (visited.has(key)) return;
-    visited.add(key);
-    const scene = story.scenes[id];
-    let edges = [];
-    if (scene.choice) {
-      edges = scene.choice.options.filter((option) => matches(option.when, variables));
-      assert.ok(edges.length >= 5, `${id}: fewer than five available choices`);
-      assert.equal(new Set(edges.map((o) => o.label)).size, edges.length);
-      assert.equal(new Set(edges.map((o) => o.passage)).size, edges.length);
-      assert.equal(new Set(edges.map((o) => story.scenes[o.next].paragraphs.join(" "))).size, edges.length);
-    } else if (scene.routes) edges = [scene.routes.find((route) => matches(route.when, variables))];
-    else if (scene.next) edges = [{ next: scene.next }];
-    for (const edge of edges) visit(edge.next, { ...variables, ...edge.set });
-  }
-  visit(story.chapters[0].start, { ...story.variables });
-  assert.ok(visited.size >= Object.keys(story.scenes).length);
+  let checked = 0;
+  audit(story, (id, scene, variables) => {
+    if (!scene.choice) return;
+    const edges = scene.choice.options.filter((option) => matches(option.when, variables));
+    assert.ok(edges.length >= 5, `${id}: fewer than five available choices`);
+    assert.equal(new Set(edges.map((o) => o.label)).size, edges.length);
+    assert.equal(new Set(edges.map((o) => o.passage)).size, edges.length);
+    assert.equal(new Set(edges.map((o) => story.scenes[o.next].paragraphs.join(" "))).size, edges.length);
+    checked++;
+  });
+  assert.ok(checked >= 65);
 });
 
-test("the first published fifteen-decision save still reaches its ending without a reset", () => {
+test("the first published fifteen-decision save now opens chapter four without a reset", () => {
   const options = ["tam", "briser", "diva", "musique", "peur", "haut", "calme", "glace", "signal", "lassitude", "porte", "renforts", "diva", "peur", "mara"];
   const scenes = ["v2-1-1", "v2-1-2", "v2-1-3", "v2-1-5", "v2-1-6", "v2-2-1", "v2-2-2", "v2-2-3", "v2-2-5", "v2-2-6", "v2-3-1", "v2-3-2", "v2-3-3", "v2-3-5", "v2-3-6"];
   const decisions = scenes.map((scene, i) => ({ scene, option: options[i] }));
   const reading = replay(story, decisions);
   assert.equal(story.version, 1);
   assert.deepEqual(reading.decisions, decisions);
-  assert.ok(reading.ending);
+  assert.equal(reading.pending.scene, "v2-4-1");
+  assert.equal(reading.ending, undefined);
+  assert.deepEqual(chapterProgress(story, reading).filter((c) => c.unlocked).map((c) => c.number), [1, 2, 3, 4]);
 });
 
-test("three optimized chapter illustrations reference existing paragraphs and local WebP files", () => {
-  assert.equal(Object.keys(story.illustrations).length, 3);
+test("twenty-one optimized chapter illustrations reference existing paragraphs and local WebP files", () => {
+  assert.equal(Object.values(story.illustrations).flat().length, 21);
   let totalBytes = 0;
   for (const [id, pictures] of Object.entries(story.illustrations)) {
     for (const picture of pictures) {
@@ -73,13 +62,13 @@ test("three optimized chapter illustrations reference existing paragraphs and lo
       const bytes = readFileSync(new URL(`../public/${picture.src}`, import.meta.url));
       assert.equal(bytes.toString("ascii", 0, 4), "RIFF");
       assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
-      assert.equal(picture.width, 1536);
-      assert.equal(picture.height, 1024);
+      assert.ok(picture.width >= 1024);
+      assert.ok(picture.height >= 768);
       assert.ok(bytes.length < 600000);
       totalBytes += bytes.length;
     }
   }
-  assert.ok(totalBytes < 1500000);
+  assert.ok(totalBytes < 11000000);
 });
 
 test("published catalogue entries are loadable and each has an independent save", () => {
@@ -106,7 +95,7 @@ test("conditional routes, chapter access and a revision use only the accepted ch
       const pending = reading.pending;
       reading = choose(story, reading.decisions, pending.scene, pending.options[index % pending.options.length].id);
     }
-    assert.equal(reading.decisions.length, 15);
+    assert.equal(reading.decisions.length, 65);
     assert.ok(reading.ending);
     assert.ok(chapterProgress(story, reading).every((c) => c.unlocked));
     const signalScene = reading.variables.fusee ? "v2-renforts-piste" : "v2-renforts-prevenus";
@@ -139,4 +128,89 @@ test("the new character journal reveals only authored, encountered sources and s
   const seen = retainDiscoveries(fresh, [...journalAnchors(story)]);
   assert.deepEqual(knownCharacters(story, fresh, seen).map((c) => c.id), ["evan", "diva", "tam-tam"]);
   assert.ok(!knownCharacters(story, fresh, seen).some((c) => c.id === "mara" || c.id === "lio"));
+});
+
+test("published paragraphs, option identifiers, bookmark keys and imported chapters stay intact", () => {
+  const published = JSON.parse(readFileSync(new URL("./fixtures/second-version-first-release.json", import.meta.url)));
+  for (const [id, scene] of Object.entries(published.scenes)) {
+    const before = structuredClone(scene), after = structuredClone(story.scenes[id]);
+    if (id === "v2-3-7") {
+      delete before.ending; delete after.next;
+      assert.equal(story.scenes[id].next, "v2-4-1");
+    }
+    assert.deepEqual(after, before, id);
+  }
+  assert.deepEqual(story.chapters.slice(0, 3), published.chapters);
+  for (const [id, images] of Object.entries(published.illustrations)) assert.deepEqual(story.illustrations[id], images);
+  for (const character of published.characters) assert.deepEqual(story.characters.find((c) => c.id === character.id), character);
+  const hashes = JSON.parse(readFileSync(new URL("./fixtures/second-version-imported-hashes.json", import.meta.url)));
+  const canonical = (v) => Array.isArray(v) ? v.map(canonical) : v && typeof v === "object"
+    ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, canonical(v[k])])) : v;
+  for (let n = 4; n <= 7; n++) {
+    const scenes = structuredClone(Object.fromEntries(Object.entries(story.scenes).filter(([, s]) => s.chapter === `v2c${n}`)));
+    if (n === 7) delete scenes["v2-7-7"].next;
+    assert.equal(createHash("sha256").update(JSON.stringify(canonical(scenes))).digest("hex"), hashes[n], `Imported chapter ${n}`);
+  }
+});
+
+function follow(overrides = {}, count = 65) {
+  let reading = replay(story);
+  while (reading.pending && reading.decisions.length < count) {
+    const p = reading.pending, key = overrides[p.scene] || p.options[0].id;
+    reading = choose(story, reading.decisions, p.scene, key);
+  }
+  return reading;
+}
+
+test("delayed choices change the actual path two to four chapters later", () => {
+  const pairs = [
+    ["v2-4-1", "cordage", "linge", "v2-6-2-echo"],
+    ["v2-5-3", "franchise", "humour", "v2-9-nina"],
+    ["v2-6-6", "trajet", "treuil", "v2-8-echo"],
+    ["v2-7-6", "lanternes", "linge", "v2-10-berthe"],
+    ["v2-8-5", "bache", "chariot", "v2-9-sortie"],
+    ["v2-10-5", "concert", "outils", "v2-11-entree"],
+    ["v2-11-5", "cales", "animaux", "v2-12-secours"],
+    ["v2-12-5", "registre", "selie", "v2-13-preuve"],
+  ];
+  for (const [scene, a, b, echo] of pairs) {
+    const left = follow({ [scene]: a }), right = follow({ [scene]: b });
+    for (const r of [left, right]) { assert.equal(r.decisions.length, 65); assert.ok(r.ending); }
+    const tail = (r) => r.blocks.filter((x) => x.id.startsWith(echo + "-")).map((x) => x.scene.paragraphs).flat();
+    assert.ok(tail(left).length, echo);
+    assert.ok(tail(right).length, echo);
+    assert.notDeepEqual(tail(left), tail(right), echo);
+    const changed = left.decisions.findIndex((d) => d.scene === scene);
+    assert.ok(changed >= 0);
+    assert.deepEqual(left.decisions.slice(0, changed), right.decisions.slice(0, changed));
+  }
+});
+
+test("all five personal conclusions resolve the arc and survive a version-one save round trip", () => {
+  const storage = new Map(), adapter = { getItem: (k) => storage.get(k), setItem: (k, v) => storage.set(k, v) };
+  for (const option of story.scenes["v2-13-5"].choice.options) {
+    const reading = follow({ "v2-13-5": option.id });
+    assert.equal(reading.decisions.length, 65);
+    assert.ok(reading.blocks.some((b) => b.id === option.next));
+    assert.equal(reading.ending, "Un morceau pour rentrer — fin de cet arc");
+    const anchor = `${option.next}-p0`;
+    writeSave(adapter, story, reading.decisions, anchor, 17, "v2c13", [anchor]);
+    const saved = readSave(adapter, story);
+    assert.deepEqual(saved.decisions, reading.decisions);
+    assert.equal(saved.anchor, anchor);
+    assert.equal(replay(story, saved.decisions).ending, reading.ending);
+  }
+});
+
+test("a rewind removes future chapters and their journal revelations", () => {
+  const complete = follow();
+  const seen = retainDiscoveries(complete, [...journalAnchors(story)]);
+  const known = knownCharacters(story, complete, seen);
+  for (const name of ["Nina", "Berthe", "Oren", "Veyre", "Sélie", "Luan"]) assert.ok(known.some((c) => c.fields.name === name), name);
+  const revised = replay(story, complete.decisions.slice(0, 20));
+  const retained = retainDiscoveries(revised, [...seen]);
+  const after = knownCharacters(story, revised, retained);
+  assert.ok(!after.some((c) => ["nina", "berthe", "oren", "veyre", "selie", "luan"].includes(c.id)));
+  assert.ok(!chapterProgress(story, revised).find((c) => c.number === 6).unlocked);
+  assert.deepEqual(chapterRecap(story, revised, "v2c13"), []);
 });
