@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { validateStory, replay, choose } from "../src/engine.js";
+import { validateStory, replay, choose, matches } from "../src/engine.js";
 import { chapterProgress, chapterRecap } from "../src/chapters.js";
 import { saveKey, writeSave, readSave } from "../src/storage.js";
 import { knownCharacters, journalAnchors, retainDiscoveries } from "../src/journal.js";
@@ -24,6 +24,62 @@ test("every second-version path keeps the reading minimum and five decisions per
     assert.equal(result.minChoices[i], 5);
     assert.equal(result.maxChoices[i], 5);
   }
+});
+
+test("each interaction offers at least five available, distinct answers in every reachable state", () => {
+  const conditionKeys = new Set();
+  for (const scene of Object.values(story.scenes)) {
+    for (const edge of [...(scene.routes || []), ...(scene.choice?.options || [])]) {
+      Object.keys(edge.when || {}).forEach((key) => conditionKeys.add(key));
+    }
+  }
+  const visited = new Set();
+  function visit(id, variables) {
+    const key = JSON.stringify([id, [...conditionKeys].sort().map((k) => [k, variables[k]])]);
+    if (visited.has(key)) return;
+    visited.add(key);
+    const scene = story.scenes[id];
+    let edges = [];
+    if (scene.choice) {
+      edges = scene.choice.options.filter((option) => matches(option.when, variables));
+      assert.ok(edges.length >= 5, `${id}: fewer than five available choices`);
+      assert.equal(new Set(edges.map((o) => o.label)).size, edges.length);
+      assert.equal(new Set(edges.map((o) => o.passage)).size, edges.length);
+      assert.equal(new Set(edges.map((o) => story.scenes[o.next].paragraphs.join(" "))).size, edges.length);
+    } else if (scene.routes) edges = [scene.routes.find((route) => matches(route.when, variables))];
+    else if (scene.next) edges = [{ next: scene.next }];
+    for (const edge of edges) visit(edge.next, { ...variables, ...edge.set });
+  }
+  visit(story.chapters[0].start, { ...story.variables });
+  assert.ok(visited.size >= Object.keys(story.scenes).length);
+});
+
+test("the first published fifteen-decision save still reaches its ending without a reset", () => {
+  const options = ["tam", "briser", "diva", "musique", "peur", "haut", "calme", "glace", "signal", "lassitude", "porte", "renforts", "diva", "peur", "mara"];
+  const scenes = ["v2-1-1", "v2-1-2", "v2-1-3", "v2-1-5", "v2-1-6", "v2-2-1", "v2-2-2", "v2-2-3", "v2-2-5", "v2-2-6", "v2-3-1", "v2-3-2", "v2-3-3", "v2-3-5", "v2-3-6"];
+  const decisions = scenes.map((scene, i) => ({ scene, option: options[i] }));
+  const reading = replay(story, decisions);
+  assert.equal(story.version, 1);
+  assert.deepEqual(reading.decisions, decisions);
+  assert.ok(reading.ending);
+});
+
+test("three optimized chapter illustrations reference existing paragraphs and local WebP files", () => {
+  assert.equal(Object.keys(story.illustrations).length, 3);
+  let totalBytes = 0;
+  for (const [id, pictures] of Object.entries(story.illustrations)) {
+    for (const picture of pictures) {
+      assert.ok(story.scenes[id].paragraphs[picture.after]);
+      const bytes = readFileSync(new URL(`../public/${picture.src}`, import.meta.url));
+      assert.equal(bytes.toString("ascii", 0, 4), "RIFF");
+      assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
+      assert.equal(picture.width, 1536);
+      assert.equal(picture.height, 1024);
+      assert.ok(bytes.length < 600000);
+      totalBytes += bytes.length;
+    }
+  }
+  assert.ok(totalBytes < 1500000);
 });
 
 test("published catalogue entries are loadable and each has an independent save", () => {

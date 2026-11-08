@@ -55,12 +55,12 @@
       "chapter": "v2c1",
       "paragraphs": [
         "Tam-Tam avait mangé la recette.",
-        "Evan regarda l'ardoise posée dans son étui, puis les trois pièces qui auraient dû l'accompagner. Deux brillaient encore sur le velours. La troisième se trouvait sous la patte blanche de l'ourson, dans une flaque de miel.",
+        "Evan regarda l'ardoise posée dans son étui, puis les trois pièces qui auraient dû l'accompagner. Deux brillaient encore sur le velours. La troisième se trouvait sous la patte blanche de l'ourson, dans une flaque de miel. Quelques petits cristaux de glace dépassaient de sa fourrure blanche, avec de faibles reflets violets.",
         "« Ce n'est pas un biscuit. »",
         "Tam-Tam lécha la pièce pour vérifier. Evan la récupéra avec deux doigts.",
         "À Noctarion, le marché des Trois Marches battait son plein. Les marchands criaient sous les verrières, les charrettes grinçaient et quelqu'un vendait des chaussettes qui, d'après lui, résistaient même aux dragons. Diva avait longuement regardé l'homme. Il avait aussitôt précisé : aux petits dragons.",
-        "Installée près de l'étui, la petite dragonne replia ses ailes mauves avec une dignité blessée. Une image traversa l'esprit d'Evan : le marchand, assis dans son propre panier de chaussettes. Il retint un rire et remit son violon sous son menton. Ses oreilles blanches dépassaient de ses cheveux blancs en désordre ; l'une se redressa pour suivre la note qu'un musicien jouait à l'autre bout de la place.",
-        "Il avait treize ans, deux compagnons, un masque de loup beaucoup trop cabossé et un seul véritable projet pour cette matinée : gagner leur déjeuner. S'il restait une pièce, il ferait changer la mèche de son archet. Elle commençait à ressembler à la queue d'un animal mal réveillé.",
+        "Installée près de l'étui, la petite dragonne replia ses ailes mauves avec une dignité blessée. Une image traversa l'esprit d'Evan : le marchand, assis dans son propre panier de chaussettes. Il retint un rire et remit son violon sous son menton. Ses oreilles blanches dépassaient de ses cheveux blancs en désordre ; l'une se redressa pour suivre la note qu'un musicien jouait à l'autre bout de la place. Son corps lavande tacheté de violet tenait peu de place près de l'étui : Diva était encore un bébé dragon. Les ailes roses et mauves accrochaient des reflets bleus sous la verrière. Evan ramena sa grande queue blanche contre lui pour laisser passer une marchande.",
+        "Il avait treize ans, deux compagnons, un masque de loup beaucoup trop cabossé et un seul véritable projet pour cette matinée : gagner leur déjeuner. S'il restait une pièce, il ferait changer la mèche de son archet. Elle commençait à ressembler à la queue d'un animal mal réveillé. Tout frêle, avec son mètre quarante-huit et ses trente-cinq kilos, il avait appris à compter sur son adresse plutôt que sur ses bras. Sa flûte, ses trois disques de résonance et ses gants étaient rangés à portée de main.",
         "Il lança une danse rapide. Son pied trouva le rythme ; bientôt ceux des passants le suivirent. Une petite fille tourna entre deux paniers, son père la rattrapa par les mains. Evan sourit. Il aimait ce moment où une mélodie cessait d'être seulement la sienne.",
         "Il gardait sa magie tranquille. Sa musique pouvait éveiller la joie, apaiser la peur, donner du courage. Pour un morceau de rue, quelques notes bien jouées lui suffisaient. Il préférait savoir que les gens souriaient parce qu'ils en avaient envie.",
         "Diva leva brusquement la tête.",
@@ -84,6 +84,24 @@
             "label": "Envoyer Diva soulever la roue avec ses racines",
             "passage": "Evan montra la roue à Diva par la pensée, puis joua une phrase courte pour l'aider à garder son élan au milieu des cris.",
             "next": "v2-1-1-diva"
+          },
+          {
+            "id": "percussions",
+            "label": "Attirer la bête avec un rythme frappé dans ses paumes",
+            "passage": "Evan remit ses gants et frappa les plaques de ses paumes l'une contre l'autre. Il chercha un battement assez net pour détourner l'animal.",
+            "next": "v2-1-1-percussions"
+          },
+          {
+            "id": "balise",
+            "label": "Déporter le son vers une balise loin des deux habitants",
+            "passage": "Evan posa une balise sur les pavés, à l'écart, et fit porter vers elle une courte phrase de violon.",
+            "next": "v2-1-1-balise"
+          },
+          {
+            "id": "sangfroid",
+            "label": "Aider le père à garder son sang-froid pour dégager le passage",
+            "passage": "Evan joua une phrase calme vers le père, lui offrant un appui au milieu des cris sans quitter la bête des yeux.",
+            "next": "v2-1-1-sangfroid"
           }
         ]
       }
@@ -151,6 +169,33 @@
             "set": {
               "collier": true
             }
+          },
+          {
+            "id": "flute",
+            "label": "Approcher avec une mélodie de flûte pendant qu'Iseult coupe la sangle",
+            "passage": "Evan rangea un instant le violon et prit sa flûte. Il pouvait jouer ce petit air même en gardant les yeux sur les dents.",
+            "next": "v2-1-2-flute",
+            "set": {
+              "collier": false
+            }
+          },
+          {
+            "id": "distraction",
+            "label": "Laisser Tam-Tam détourner les crocs pendant que Diva ouvre la boucle",
+            "passage": "Evan reprit le violon pour soutenir l'audace de ses compagnons. Il leur montra la nuque, puis le bassin où ils pourraient reculer.",
+            "next": "v2-1-2-distraction",
+            "set": {
+              "collier": true
+            }
+          },
+          {
+            "id": "epuisement",
+            "label": "Contenir la panique pendant qu'Iseult attire la bête contre le bassin",
+            "passage": "Evan chercha un calme patient plutôt qu'un arrêt immédiat. Il fit signe à Iseult d'utiliser le bord du bassin pour limiter les mouvements de la créature.",
+            "next": "v2-1-2-epuisement",
+            "set": {
+              "collier": false
+            }
           }
         ]
       }
@@ -158,7 +203,7 @@
     "v2-1-3-diva": {
       "chapter": "v2c1",
       "paragraphs": [
-        "Diva saisit la veste de l'apprenti et amortit sa chute contre un auvent. Il atterrit dans le linge, terrifié mais entier.",
+        "Diva accrocha la corde avec une racine et la tendit vers l'auvent pour ralentir la chute de l'apprenti. Il atterrit dans le linge, terrifié mais entier.",
         "Evan déboucha sur la terrasse. Trop tard. Le fuyard sauta de l'autre côté et disparut derrière un toit. La sangle céda contre le clou ; la sacoche resta là.",
         "Le garçon sauvé cria depuis la cour : « Je l'ai vu hier ! Il loue le hangar à la porte nord ! »",
         "Evan ramassa la sacoche. Ils avaient perdu l'homme, mais gagné quelqu'un qui pouvait le reconnaître. Il remercia l'apprenti d'un signe, encore trop essoufflé pour parler."
@@ -200,7 +245,7 @@
         "Le garçon regarda ses doigts, et le bois craqua encore."
       ],
       "choice": {
-        "prompt": "À qui Evan demande-t-il d'aller vers l'apprenti ?",
+        "prompt": "Comment secourir l'apprenti sans perdre la piste ?",
         "options": [
           {
             "id": "diva",
@@ -216,6 +261,33 @@
             "label": "Faire grandir Tam-Tam sous l'apprenti et envoyer Diva vers la sacoche",
             "passage": "Evan appela Tam-Tam d'un claquement de langue et lui montra le garçon. Diva piqua vers la terrasse.",
             "next": "v2-1-3-tam",
+            "set": {
+              "temoin": false
+            }
+          },
+          {
+            "id": "rythme",
+            "label": "Aider l'apprenti à descendre lui-même en gardant son calme",
+            "passage": "Evan posa son violon contre une caisse et joua un battement sur les paumes de ses gants. Il demanda au garçon de suivre sa voix.",
+            "next": "v2-1-3-rythme",
+            "set": {
+              "temoin": true
+            }
+          },
+          {
+            "id": "iseult",
+            "label": "Appeler Iseult pour rattraper l'apprenti et envoyer Diva vers le toit",
+            "passage": "Evan cria le nom d'Iseult. Il l'entendait arriver dans la rue et leva le bras pour lui montrer la corde.",
+            "next": "v2-1-3-iseult",
+            "set": {
+              "temoin": true
+            }
+          },
+          {
+            "id": "ensemble",
+            "label": "Faire former un appui à Tam-Tam et laisser Diva stabiliser la corde",
+            "passage": "Evan envoya la même image à ses deux compagnons : un appui sous les pieds, une corde qui ne glisse plus. Il prit lui-même l'escalier de service.",
+            "next": "v2-1-3-ensemble",
             "set": {
               "temoin": false
             }
@@ -308,6 +380,24 @@
             "label": "Faire ouvrir la porte arrière par les racines de Diva",
             "passage": "Diva étendit ses racines sous les planches. Evan se plaça derrière elle tandis qu'Iseult attendait devant la grande porte.",
             "next": "v2-1-5-racines"
+          },
+          {
+            "id": "voix",
+            "label": "Se faire passer pour un musicien venu demander son chemin",
+            "passage": "Evan rabattit son masque et appela d'une voix légère, amplifiée par les enceintes de ses joues. Iseult attendait contre le battant.",
+            "next": "v2-1-5-voix"
+          },
+          {
+            "id": "fenetre",
+            "label": "Passer Tam-Tam par la fenêtre pour soulever le loquet",
+            "passage": "Evan aida Tam-Tam à atteindre la petite fenêtre. Il lui envoya l'image du loquet, puis celle d'un repas pour rendre la consigne un peu plus intéressante.",
+            "next": "v2-1-5-fenetre"
+          },
+          {
+            "id": "detour",
+            "label": "Faire diversion à la fenêtre pendant qu'Iseult force l'entrée",
+            "passage": "Evan posa une balise sous la fenêtre opposée et y déporta quelques notes rapides. Diva ajouta un coup de griffe sur le volet.",
+            "next": "v2-1-5-detour"
           }
         ]
       }
@@ -369,6 +459,24 @@
             "label": "Renforcer le courage de Tam-Tam pour lui ouvrir un passage",
             "passage": "Evan reprit leur rythme de poursuite, vif et bondissant. Il pensa aux énormes pattes blanches qui pouvaient faire voler cette mauvaise pile de bois.",
             "next": "v2-1-6-courage"
+          },
+          {
+            "id": "doute",
+            "label": "Faire hésiter le siffleur assez longtemps pour qu'Iseult le désarme",
+            "passage": "Evan glissa une inquiétude sourde dans sa mélodie, celle qui fait vérifier derrière soi avant de poursuivre une mauvaise idée.",
+            "next": "v2-1-6-doute"
+          },
+          {
+            "id": "balise",
+            "label": "Attirer l'attention de la bête à l'opposé du pilier avec une balise",
+            "passage": "Evan fit glisser une balise près de la cage vide. Il y déporta sa mélodie et lui donna la chaleur d'un endroit où reprendre souffle.",
+            "next": "v2-1-6-balise"
+          },
+          {
+            "id": "masque",
+            "label": "Couvrir le sifflet avec sa voix amplifiée et donner un signal à Diva",
+            "passage": "Evan rabattit son masque, poussa le volume de ses enceintes et cria le nom de Diva sur un battement net de ses paumes.",
+            "next": "v2-1-6-masque"
           }
         ]
       }
@@ -434,7 +542,7 @@
         "L'ourson regarda ailleurs.",
         "« Tu as compris qu'on partait en promenade ? »",
         "Tam-Tam lui envoya une image de panier parfaitement organisé. La chaussette y occupait la place d'honneur.",
-        "Au poste de la porte nord, on avait bandé les doigts d'Evan et réparé sa mèche d'archet avec quelques crins neufs. Il avait eu le temps de manger un vrai bol de soupe, assis entre Diva et un poêle qui fumait. Il se sentait presque reposé. Jusqu'au moment où il essayait de se lever.",
+        "Au poste de la porte nord, on avait bandé les doigts d'Evan et réparé sa mèche d'archet avec quelques crins neufs. Il avait eu le temps de manger un vrai bol de soupe, assis entre Diva et un poêle qui fumait. Il se sentait presque reposé. Jusqu'au moment où il essayait de se lever. Il avait quitté ses vêtements blancs pour sa tenue de combat noire, marquée de violet. Les plaques à percussion étaient fixées dans les paumes de ses gants ; le mini-clavier reposait sur son avant-bras droit. Il vérifia les trois disques, sa flûte et les enceintes placées aux joues de son masque. Rien ne lui donnait de muscles supplémentaires, mais tout lui permettait de trouver de la musique même quand il ne pouvait pas tenir son violon.",
         "Iseult vérifia son sac. Elle portait désormais une veste plus courte, une lame à la hanche et un manteau roulé sur l'épaule. Deux gardes partiraient par la grande route pour surveiller la sortie du moulin. Un autre les rejoindrait depuis un poste voisin. Elle et Evan suivraient le vieux chemin d'eau, plus direct.",
         "« On regarde avant d'entrer », lui rappela-t-elle. « Si on peut ouvrir les portes sans se battre, je prendrai volontiers cette option. »",
         "Evan acquiesça. Il n'avait pas particulièrement envie de recevoir un autre coup de griffe. Mais chaque minute passée devant le poste lui faisait imaginer une charrette qui s'éloignait avec Mara.",
@@ -443,7 +551,7 @@
         "Il la rangea dans la poche intérieure de sa veste. Puis il vérifia trois fois qu'il ne risquait pas de tirer la ficelle en sortant son mouchoir.",
         "Ils franchirent les remparts dans la lumière pâle du soleil noir. Evan s'arrêta une seconde sous la porte. Au-delà, la route descendait entre des champs délaissés et des murets couverts de mousse. Il avait passé tant de temps à chercher une ville où rester qu'il n'avait pas pensé à ce que cela lui ferait d'en sortir volontairement.",
         "Diva lui effleura la main de son museau. Elle n'avait aucune envie de le voir rester planté là.",
-        "Il reprit la marche.",
+        "Il reprit la marche. Tam-Tam tenta encore d'emporter la chaussette. Evan la lui reprit en riant avant de suivre le canal.",
         "Au bout d'une heure, le vieux chemin se divisait. Une passerelle longeait le sommet d'un canal vide. En contrebas, un sentier suivait les roseaux. La carte indiquait que les deux passages rejoignaient le même pont.",
         "Iseult examina la boue. Des bottes étaient passées récemment sur les deux chemins. Ils ne savaient pas lesquelles appartenaient aux bandits."
       ],
@@ -466,6 +574,33 @@
             "next": "v2-2-1-bas",
             "set": {
               "approche": "bas"
+            }
+          },
+          {
+            "id": "verger",
+            "label": "Contourner par le vieux verger pour éviter les deux passages",
+            "passage": "Evan montra les arbres au-delà du canal. Iseult vérifia le bord du champ avant de les entraîner entre les troncs.",
+            "next": "v2-2-1-verger",
+            "set": {
+              "approche": "verger"
+            }
+          },
+          {
+            "id": "canal",
+            "label": "Suivre le fond du canal vide en se couvrant avec le parapet",
+            "passage": "Evan désigna les marches de service. Le canal semblait suffisamment sec pour avancer sans rester visible depuis les champs.",
+            "next": "v2-2-1-canal",
+            "set": {
+              "approche": "canal"
+            }
+          },
+          {
+            "id": "reconnaissance",
+            "label": "Faire repérer le coude par Diva avant de choisir un passage",
+            "passage": "Evan demanda une courte reconnaissance à Diva. Il lui montra le coude du canal et l'endroit où elle devait revenir.",
+            "next": "v2-2-1-reconnaissance",
+            "set": {
+              "approche": "reconnaissance"
             }
           }
         ]
@@ -528,6 +663,24 @@
             "label": "Faire hésiter le tireur pour ouvrir un passage à Diva",
             "passage": "Evan accrocha une note haute, la laissa trembler et y glissa l'inquiétude qui l'avait saisi en découvrant les pièges.",
             "next": "v2-2-2-doute"
+          },
+          {
+            "id": "confiance",
+            "label": "Renforcer la confiance de Diva pour qu'elle revienne par le bon angle",
+            "passage": "Evan joua une phrase qu'il utilisait pendant leurs petits exercices. Il montra à Diva un passage derrière les saules, loin de la fumée.",
+            "next": "v2-2-2-confiance"
+          },
+          {
+            "id": "impatience",
+            "label": "Rendre le lancier impatient pour qu'il attaque trop vite",
+            "passage": "Evan raccourcit ses phrases au violon. Il chercha l'agacement de l'homme à la lance et l'accentua juste assez pour lui faire perdre sa prudence.",
+            "next": "v2-2-2-impatience"
+          },
+          {
+            "id": "cran",
+            "label": "Donner à Tam-Tam le cran nécessaire pour séparer les deux hommes",
+            "passage": "Evan frappa un rythme sur les plaques de ses paumes et y plaça un élan de courage pour Tam-Tam, en lui montrant l'espace entre les deux adversaires.",
+            "next": "v2-2-2-cran"
           }
         ]
       }
@@ -608,6 +761,24 @@
             "label": "Faire retenir l'animal par Diva et l'apaiser assez pour couper sa sangle",
             "passage": "Diva enroula ses racines autour du pieu arraché. Evan s'accroupit à distance et joua quelques notes très basses.",
             "next": "v2-2-3-racines"
+          },
+          {
+            "id": "clavier",
+            "label": "Apaiser l'animal au clavier pendant qu'Iseult détache sa sangle",
+            "passage": "Evan tourna son avant-bras droit et retrouva les petites touches de sa tenue. Il joua une phrase lente du bout des doigts, gardant l'autre main libre pour s'équilibrer.",
+            "next": "v2-2-3-clavier"
+          },
+          {
+            "id": "chaine",
+            "label": "Faire tenir la chaîne par Tam-Tam pour laisser Diva arracher le collier",
+            "passage": "Evan montra la chaîne à Tam-Tam et le cuir à Diva. Il reprit son violon pour soutenir leur calme pendant qu'ils se rapprochaient.",
+            "next": "v2-2-3-chaine"
+          },
+          {
+            "id": "rive",
+            "label": "Attirer l'animal vers la berge avant de s'occuper de la fermeture",
+            "passage": "Evan posa une balise dans l'herbe, loin du bord. Il y déporta une mélodie apaisante tandis qu'Iseult reculait pour ouvrir un passage.",
+            "next": "v2-2-3-rive"
           }
         ]
       }
@@ -689,7 +860,7 @@
         "Au-dessus d'eux, une ombre passa devant la fenêtre. Quelqu'un attendait le retour des seaux."
       ],
       "choice": {
-        "prompt": "Faut-il appeler les renforts maintenant ?",
+        "prompt": "Comment approcher le moulin et prévenir les renforts ?",
         "options": [
           {
             "id": "signal",
@@ -707,6 +878,33 @@
             "next": "v2-2-5-discret",
             "set": {
               "fusee": true
+            }
+          },
+          {
+            "id": "messagere",
+            "label": "Envoyer Diva chercher les gardes pendant qu'ils entrent par la conduite",
+            "passage": "Evan conserva la fusée et montra à Diva le chemin de la grande route. Elle devait trouver les gardes, les mener au moulin et revenir sans se faire remarquer.",
+            "next": "v2-2-5-messagere",
+            "set": {
+              "fusee": true
+            }
+          },
+          {
+            "id": "pretexte",
+            "label": "Laisser Lio détourner le garde avec un prétexte avant de se glisser dessous",
+            "passage": "Evan garda le signal en réserve. Il demanda à Lio s'il pouvait faire regarder le garde du côté opposé à la roue.",
+            "next": "v2-2-5-pretexte",
+            "set": {
+              "fusee": true
+            }
+          },
+          {
+            "id": "signal-lointain",
+            "label": "Faire porter la fusée plus loin par Diva pour attirer les regards hors du moulin",
+            "passage": "Evan montra à Diva une petite butte derrière eux. Elle y déposa le tube ; il la rejoignit quelques pas pour lancer le signal hors de la vue du garde.",
+            "next": "v2-2-5-signal-lointain",
+            "set": {
+              "fusee": false
             }
           }
         ]
@@ -739,7 +937,7 @@
         "Evan s'était imaginé qu'un passage secret pouvait avoir un certain charme.",
         "Il révisa son avis après le troisième mètre.",
         "L'eau lui arrivait aux coudes et le plafond cherchait manifestement à lui prendre ses cheveux. Son étui avançait devant lui, enveloppé dans le manteau d'Iseult. Il le poussait avec une attention que Tam-Tam aurait volontiers vue consacrée à leur sac de nourriture.",
-        "Diva avait dû rester près de la roue. Trop large pour entrer, elle surveillait la cour depuis l'ombre. Evan sentait sa présence comme une main posée dans son dos.",
+        "Diva était restée près de la roue pour surveiller la cour depuis l'ombre. La conduite était humide, et ses ailes fragiles n'auraient pas apprécié les angles de pierre. Evan sentait sa présence comme une main posée dans son dos.",
         "Iseult attendait à la sortie du conduit, derrière une grille de bois. À travers, on apercevait une pièce où des sacs vides séchaient sur une corde.",
         "Lio les rejoignit par une porte intérieure.",
         "« Il faut soulever, pas pousser », murmura-t-il.",
@@ -773,6 +971,24 @@
             "label": "Faire bondir Tam-Tam vers l'escalier pour détourner le garde",
             "passage": "Evan montra l'escalier à Tam-Tam et joua une phrase vive. Il donna à l'ourson l'élan joyeux d'une course plutôt que la fureur d'un combat.",
             "next": "v2-2-6-leurre"
+          },
+          {
+            "id": "flute",
+            "label": "Calmer le petit animal à la flûte pour permettre à Iseult de passer",
+            "passage": "Evan sortit sa flûte et joua un air très doux, en se concentrant sur la peur de la petite bête plutôt que sur le garde.",
+            "next": "v2-2-6-flute"
+          },
+          {
+            "id": "balise",
+            "label": "Déporter un bruit de pas vers la conduite pour éloigner le garde",
+            "passage": "Evan utilisa une balise pour faire entendre trois petits coups près de la grille. Il attendit que le garde tourne la tête avant de la faire rouler plus loin.",
+            "next": "v2-2-6-balise"
+          },
+          {
+            "id": "clavier",
+            "label": "Atténuer la méfiance du garde avec une courte mélodie au clavier",
+            "passage": "Evan trouva les touches sur son avant-bras droit. Il joua très bas, cherchant la lassitude du garde au lieu d'imposer une émotion trop forte à toute la pièce.",
+            "next": "v2-2-6-clavier"
           }
         ]
       }
@@ -870,6 +1086,24 @@
             "label": "Protéger les personnes près du mur",
             "passage": "Evan appela Diva vers l'auvent. Iseult partit vers la roue pendant qu'il soutenait le courage des personnes à évacuer.",
             "next": "v2-3-1-proteger"
+          },
+          {
+            "id": "diversion",
+            "label": "Faire détourner les bêtes par Diva pendant qu'Iseult bloque la porte",
+            "passage": "Evan demanda à Diva de voler au ras des sacs. Il soutint sa confiance avec une phrase vive pendant qu'Iseult courait vers le mécanisme.",
+            "next": "v2-3-1-diversion"
+          },
+          {
+            "id": "racines",
+            "label": "Faire ouvrir par Diva un passage latéral dans les sacs",
+            "passage": "Evan montra à Diva le petit portail derrière les sacs. Des racines pouvaient déplacer ce qui le bouchait pendant qu'Iseult contenait les bêtes.",
+            "next": "v2-3-1-racines"
+          },
+          {
+            "id": "couverture",
+            "label": "Demander à Diva de garder l'escalier pendant qu'Evan détourne la peur",
+            "passage": "Evan envoya Diva au pied des marches. Il fit porter sa musique vers la partie vide de la cour pour y attirer les bêtes plutôt que vers les habitants.",
+            "next": "v2-3-1-couverture"
           }
         ]
       }
@@ -928,6 +1162,24 @@
             "label": "Lancer Tam-Tam contre le tonneau",
             "passage": "Evan envoya un grand élan de courage à Tam-Tam, soutenu par un rythme rapide. L'ourson grandit en pleine course.",
             "next": "v2-3-2-tam"
+          },
+          {
+            "id": "diva",
+            "label": "Faire arracher la manivelle par les racines de Diva",
+            "passage": "Evan donna un rythme aux paumes de ses gants et montra à Diva le pied du tonneau. Elle pouvait atteindre la boîte depuis le sol.",
+            "next": "v2-3-2-diva"
+          },
+          {
+            "id": "balise",
+            "label": "Attirer le bandit avec une balise pour permettre à Iseult d'atteindre la boîte",
+            "passage": "Evan fit glisser un disque de résonance derrière les sacs et y déporta sa voix. Un appel bref détournerait peut-être l'homme à la fourche.",
+            "next": "v2-3-2-balise"
+          },
+          {
+            "id": "coordination",
+            "label": "Soutenir le calme d'Iseult au mini-clavier pour qu'elle agisse au bon instant",
+            "passage": "Evan effleura les touches de son avant-bras droit. Une mélodie régulière lui permettrait de soutenir Iseult tout en surveillant les deux bêtes.",
+            "next": "v2-3-2-coordination"
           }
         ]
       }
@@ -996,6 +1248,24 @@
             "label": "Monter sur Tam-Tam pour gagner l'écluse par la berge",
             "passage": "Evan se hissa sur le dos de Tam-Tam et serra les jambes. L'ours partit avec l'enthousiasme d'un animal qui n'avait jamais eu de leçon d'équitation.",
             "next": "v2-3-3-ours"
+          },
+          {
+            "id": "relais",
+            "label": "Utiliser une balise pour porter sa voix jusqu'à Diva, déjà au-dessus du chemin",
+            "passage": "Evan demanda à Diva de porter un disque près de l'écluse. Il appela ensuite depuis son masque, la voix relayée plus loin pour faire ralentir le cheval.",
+            "next": "v2-3-3-relais"
+          },
+          {
+            "id": "piste",
+            "label": "Prendre le raccourci de l'atelier pendant que Tam-Tam bloque la charrette",
+            "passage": "Evan montra la roue arrière à Tam-Tam et demanda à Mara de lui indiquer un passage plus court. Elle désigna un petit portillon derrière l'atelier.",
+            "next": "v2-3-3-piste"
+          },
+          {
+            "id": "entraide",
+            "label": "Rejoindre Iseult en gardant ses compagnons calmes pour une approche coordonnée",
+            "passage": "Evan reprit une courte phrase de flûte avant de partir, juste assez pour transmettre à ses compagnons la même image : atteindre l'écluse sans se précipiter seuls.",
+            "next": "v2-3-3-entraide"
           }
         ]
       }
@@ -1061,7 +1331,7 @@
         "Ronce sauta sur la partie intacte, du côté de Diva. Il frappa l'air de son couteau pour la faire reculer. La dragonne bondit sur le parapet et lui barra toujours le passage, mais elle n'osait plus poser tout son poids sur les planches.",
         "Tam-Tam grandit dans la rivière. Son dos dépassa du courant, couvert d'écume. Il planta ses griffes contre une pierre et tint bon.",
         "Evan était à genoux sur la dernière traverse. Son violon pendait à une main. L'archet avait roulé à quelques doigts de l'eau.",
-        "Il le rattrapa.",
+        "Il le rattrapa. Il se hissa contre l'appui de pierre, hors des planches qui cédaient. Diva vint se poser sur le parapet voisin ; devant eux, les cristaux de glace sur le dos immense de Tam-Tam accrochaient les dernières lumières.",
         "Sur l'autre rive, Ronce essaya de faire un pas. La passerelle pencha, le sac glissa de son épaule et resta suspendu à son poignet. Une liasse de feuilles tomba et disparut dans le courant.",
         "Le garçon sentit une colère si brutale qu'il faillit casser une corde en posant l'archet.",
         "Cet homme avait décidé de ce que les autres devaient perdre. Le marché, les prisonniers, les bêtes qu'il faisait souffrir. Il était encore prêt à détruire ce qu'il ne pouvait pas emporter.",
@@ -1086,6 +1356,24 @@
             "label": "Garder le groupe calme et laisser Iseult atteindre le levier",
             "passage": "Evan reprit la mélodie qui l'avait aidé au marché. Il suivit le souffle de ses compagnons, puis celui d'Iseult, une mesure après l'autre.",
             "next": "v2-3-5-calme"
+          },
+          {
+            "id": "confiance",
+            "label": "Rendre assez de confiance à Diva pour qu'elle saisisse la sacoche",
+            "passage": "Evan joua une phrase claire vers Diva. Il lui montra la sangle et le morceau de rive sèche où elle pourrait déposer le sac.",
+            "next": "v2-3-5-confiance"
+          },
+          {
+            "id": "hesitation",
+            "label": "Faire hésiter Ronce en lui transmettant la crainte de perdre l'équilibre",
+            "passage": "Evan concentra sa musique sur cette seconde de doute qui précède un mauvais pas. Il voulait retenir un geste, pas pousser l'homme vers le vide.",
+            "next": "v2-3-5-hesitation"
+          },
+          {
+            "id": "rythme",
+            "label": "Donner un rythme commun à Iseult et aux compagnons pour une action simultanée",
+            "passage": "Evan joua trois battements nets sur les plaques de ses paumes, puis reprit le violon. Il envoya à chacun une image simple de son rôle.",
+            "next": "v2-3-5-rythme"
           }
         ]
       }
@@ -1134,7 +1422,7 @@
         "Pour une fois, il avait deux pistes réelles devant lui."
       ],
       "choice": {
-        "prompt": "Par quoi Evan commence-t-il ?",
+        "prompt": "Par quelle piste Evan commence-t-il ses recherches ?",
         "options": [
           {
             "id": "mara",
@@ -1152,6 +1440,33 @@
             "next": "v2-3-6-carte",
             "set": {
               "piste": "carte"
+            }
+          },
+          {
+            "id": "preuves",
+            "label": "Demander à Iseult de comparer les dates pour retrouver le prochain départ",
+            "passage": "Evan demanda quelles feuilles avaient été écrites le plus récemment. Il préférait commencer par une question à laquelle les papiers pouvaient répondre.",
+            "next": "v2-3-6-preuves",
+            "set": {
+              "piste": "preuves"
+            }
+          },
+          {
+            "id": "discussion",
+            "label": "Laisser Mara reconnaître les lieux sur la carte en l'aidant à se rassurer",
+            "passage": "Evan demanda à Mara si quelques notes l'aideraient à raconter. Elle accepta ; il joua doucement pour lui laisser retrouver son souffle, sans choisir ses souvenirs.",
+            "next": "v2-3-6-discussion",
+            "set": {
+              "piste": "discussion"
+            }
+          },
+          {
+            "id": "documents",
+            "label": "Chercher dans les documents une trace des autres habitants du village",
+            "passage": "Evan demanda la liste des personnes déplacées. Il la posa entre lui et Mara pour qu'ils puissent lire les noms ensemble.",
+            "next": "v2-3-6-documents",
+            "set": {
+              "piste": "documents"
             }
           }
         ]
@@ -1216,6 +1531,457 @@
         "Evan toucha la fusée dans sa veste. Il pouvait la garder : leurs alliés les avaient repérés. Leur approche discrète avait permis de libérer les prisonniers avant que Ronce comprenne ce qui se passait. En revanche, les gardes devaient encore rejoindre la porte. Iseult fit signe au garçon de tenir sa position quelques mesures de plus."
       ],
       "next": "v2-3-2"
+    },
+    "v2-1-1-percussions": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "La créature tourna la tête. Evan accentua le rythme et recula vers le bassin, laissant le père dégager la roue.",
+        "Le métal de ses gants claquait dans toute la place. Il y glissa un peu d'assurance, juste assez pour ne pas se mettre à courir lui-même. Diva attendait près de sa hanche ; Tam-Tam se plaça entre ses bottes et les crocs.",
+        "La fillette passa derrière la borne. Son père la suivit, trébucha, se releva. Quand Evan les vit atteindre une porte ouverte, il récupéra son archet. La bête avait changé de cible. Il fallait maintenant s'occuper de cette partie du plan."
+      ],
+      "next": "v2-1-2"
+    },
+    "v2-1-1-balise": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Le son sembla venir du côté opposé à la charrette. L'animal pivota, cherchant ce qu'il entendait. Evan retint son envie d'accélérer : un rythme trop rapide aurait réveillé davantage sa panique.",
+        "Diva saisit le timon avec ses petites pattes et le souleva de quelques doigts. Tam-Tam poussa la roue. Ensemble, ils dégagèrent assez d'espace pour laisser passer le père et sa fille.",
+        "Evan envoya un remerciement aux deux compagnons, puis coupa la balise avant que la bête ne l'écrase. Elle revint en glissant sur les pavés, poussée par une racine de Diva. Un premier obstacle venait de disparaître."
+      ],
+      "next": "v2-1-2"
+    },
+    "v2-1-1-sangfroid": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "L'homme cessa de tirer au hasard sur la roue. Il regarda le coin qui la bloquait, le repoussa du pied et fit reculer sa fille.",
+        "Tam-Tam agrippa le bord de la charrette. Sa petite taille ne lui permettait pas de la porter ; il put néanmoins l'empêcher de retomber pendant les deux secondes nécessaires.",
+        "Diva surgit devant le museau de la créature et battit des ailes. L'animal hésita, surpris par cette chose mauve si décidée à lui gâcher la matinée.",
+        "Le père tira enfin sa fille à l'abri. Evan changea de note : ils étaient sortis, et sa musique pouvait maintenant se tourner entièrement vers leur poursuivante."
+      ],
+      "next": "v2-1-2"
+    },
+    "v2-1-2-flute": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Il avança d'un pas, puis s'arrêta. La bête baissa légèrement le museau. Ses narines frémirent au rythme de la phrase.",
+        "Iseult glissa son couteau derrière la nuque. Diva détourna les yeux de l'animal vers un mouvement d'aile ; la lame trouva le cuir et le trancha.",
+        "Le collier tomba sur le pavé. Une partie du mécanisme se fendit sous son propre poids. Evan poursuivit jusqu'à ce que la créature replie les pattes.",
+        "Il recula seulement alors, les joues brûlantes. La flûte n'avait rien rendu facile, mais elle lui avait laissé les mains assez stables pour tenir son souffle."
+      ],
+      "next": "v2-1-3"
+    },
+    "v2-1-2-distraction": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Tam-Tam roula devant les pattes de la bête. Celle-ci tendit le cou pour le suivre, exposant la fermeture.",
+        "Diva bondit depuis le bord du bassin. Ses petites griffes accrochèrent la sangle tandis qu'une racine soulevait la boucle. Le métal se détacha avec un claquement.",
+        "L'animal pivota. Evan ralentit aussitôt la mélodie ; Iseult écarta Diva d'un mouvement de bras. Tam-Tam revint près du garçon, très satisfait de sa glissade.",
+        "Le collier était intact. Iseult le ramassa au bout de sa lame, puis le posa loin des pattes. Evan attendit que le souffle de la bête redevienne régulier avant de baisser son archet."
+      ],
+      "next": "v2-1-3"
+    },
+    "v2-1-2-epuisement": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "La Veilleuse recula lentement, manteau déployé. Tam-Tam ferma l'autre côté. La bête finit par se trouver entre la pierre et l'ours, sans espace pour reprendre sa charge.",
+        "Diva maintint la chaîne contre une borne avec ses racines. Iseult put alors frapper la boucle de biais. Le métal céda ; le collier roula dans le bassin et se brisa.",
+        "Evan termina la mélodie sur une note douce. Il avait les épaules raides d'avoir retenu si longtemps son envie de partir.",
+        "La créature replia les pattes. Tam-Tam l'imita aussitôt, comme s'ils venaient simplement de décider ensemble que le marché manquait de sièges."
+      ],
+      "next": "v2-1-3"
+    },
+    "v2-1-3-rythme": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "« Le pied contre le mur. Maintenant l'autre. »",
+        "Le rythme portait un peu de calme jusqu'à l'apprenti. Il trouva une prise, descendit d'un mètre et put se laisser glisser sur l'auvent. Tam-Tam l'aida à atterrir dans le linge.",
+        "Diva avait gagné la terrasse. Le fuyard sauta derrière une cheminée avant qu'elle l'atteigne, laissant sa sacoche accrochée au clou.",
+        "L'apprenti reprit son souffle contre le mur. « C'est le locataire du hangar six », dit-il en voyant l'homme disparaître.",
+        "Evan retint le numéro. Ses jambes tremblaient encore, mais ils avaient une direction et personne à ramasser au pied de l'escalier."
+      ],
+      "next": "v2-1-4"
+    },
+    "v2-1-3-iseult": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "La Veilleuse traversa la cour en courant. Elle accrocha la veste du garçon avec le manche d'une perche et le ramena vers l'auvent, Tam-Tam prêt à amortir sa chute.",
+        "Diva atteignit le toit. Le bonnet brun abandonna sa sacoche pour s'enfuir de l'autre côté. Elle rapporta le sac, l'air contrarié de n'avoir obtenu que du cuir.",
+        "« Hangar six », souffla l'apprenti à Iseult. « Il m'a fait porter des caisses hier. »",
+        "Evan remercia le garçon, puis sa sauveuse. Iseult le regarda avec une expression qui annonçait qu'ils discuteraient aussi de la course à travers les rues."
+      ],
+      "next": "v2-1-4"
+    },
+    "v2-1-3-ensemble": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Tam-Tam grandit sous l'apprenti. Diva accrocha la corde au montant de la fenêtre avec une racine, assez longtemps pour que le garçon descende sur le dos blanc.",
+        "Evan atteignit la terrasse. L'homme venait de disparaître, mais la sacoche retenue par le clou était encore là. Le musicien la décrocha avec un soin furieux.",
+        "Quand il revint dans la cour, l'apprenti courait déjà vers la maison pour chercher sa mère. Diva surveillait Tam-Tam, qui semblait trouver agréable d'avoir servi d'escalier.",
+        "Sur le cuir du sac, une étiquette indiquait le hangar six. Ils avaient perdu des secondes précieuses ; la fuite leur avait néanmoins laissé une adresse."
+      ],
+      "next": "v2-1-4"
+    },
+    "v2-1-5-voix": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "« Pardon ! C'est ici qu'on cherche un musicien ? »",
+        "À l'intérieur, les pas s'arrêtèrent. Quelqu'un grogna que ce n'était vraiment pas le moment. Evan demanda s'il fallait revenir avec un tambour. La chaîne bougea.",
+        "L'homme entrouvrit juste assez pour recevoir la botte d'Iseult contre le battant. Elle le désarma avant qu'il puisse saisir sa barre.",
+        "Evan entra derrière Diva. Au fond, une femme était attachée au pilier. Le bonnet brun porta son sifflet à ses lèvres en voyant la Veilleuse.",
+        "La plaisanterie avait ouvert la porte. Elle ne réglerait manifestement pas ce qui attendait derrière. Evan reprit son violon."
+      ],
+      "next": "v2-1-6"
+    },
+    "v2-1-5-fenetre": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "L'ourson se laissa tomber dans une botte de paille. Evan entendit un éternuement, un grattement, puis le bruit d'un tabouret renversé.",
+        "Le loquet se souleva enfin. Iseult poussa la porte, Evan juste derrière elle. Tam-Tam était assis sur le tabouret couché, une patte encore en l'air.",
+        "Le second homme tenta de le saisir. Diva lui barra le passage. Au fond du hangar, la femme attachée cria quelque chose à propos d'un sifflet.",
+        "Evan tourna la tête. Le bonnet brun venait de porter un petit instrument à sa bouche. Il avait l'air beaucoup moins surpris que son compagnon."
+      ],
+      "next": "v2-1-6"
+    },
+    "v2-1-5-detour": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "L'homme à la barre se précipita vers la fenêtre. Iseult planta son épaule contre la porte principale. La chaîne céda au deuxième choc.",
+        "Evan récupéra sa balise au passage et entra. Le hangar sentait la paille humide. Une femme attachée à un pilier leur montra aussitôt la grande cage bâchée.",
+        "Le bonnet brun avait reculé jusque-là. Iseult ne pouvait l'atteindre sans contourner une pile de caisses. Tam-Tam glissa entre ses pieds, mais l'homme avait déjà levé son sifflet.",
+        "Evan releva l'archet. Ils avaient gagné une entrée et quelques pas ; il fallait maintenant empêcher que cela tourne au désastre."
+      ],
+      "next": "v2-1-6"
+    },
+    "v2-1-6-doute": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Le bonnet brun interrompit son souffle et tourna la tête vers la porte. Iseult saisit l'occasion. Elle frappa son poignet ; le sifflet vola sous le pilier.",
+        "Diva le récupéra et le broya entre ses dents. Evan ramena aussitôt sa musique vers l'animal, qui cherchait encore à passer la lame.",
+        "Tam-Tam dégagea les caisses d'un coup de dos et le repoussa vers la cage ouverte. La femme attachée put enfin se plaquer contre le côté opposé du pilier.",
+        "Le bandit leva les mains. Il les baissa presque aussitôt pour protéger sa tête : une dernière planche venait de tomber du tas de Tam-Tam."
+      ],
+      "next": "v2-1-7"
+    },
+    "v2-1-6-balise": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "La créature tourna brièvement le museau vers le son. Cette hésitation libéra Iseult : elle passa entre les caisses et frappa la main du siffleur.",
+        "Le métal tomba. Diva l'écrasa avant qu'il touche le sol une seconde fois. Evan coupa la balise et poursuivit directement au violon pour accompagner la bête vers sa cage.",
+        "Tam-Tam sortit enfin des planches. Il souffla de la paille par le nez, puis barra le chemin du second homme.",
+        "La femme attachée ouvrit de grands yeux devant l'ours. « Il est avec vous ? »",
+        "Evan hocha la tête sans interrompre le morceau. Tam-Tam parut apprécier qu'on remarque enfin son rôle."
+      ],
+      "next": "v2-1-7"
+    },
+    "v2-1-6-masque": {
+      "chapter": "v2c1",
+      "paragraphs": [
+        "Sa voix emplit le hangar. Le bandit sursauta, coupa son souffle et recula contre la cage.",
+        "Diva plongea aussitôt. Elle lui saisit la manche, tirant son poignet vers Iseult. La Veilleuse frappa la main ouverte ; le sifflet roula à ses pieds. Elle l'écrasa du talon.",
+        "Evan baissa le volume avant de reprendre le violon. Ses oreilles sifflaient presque autant que le mauvais instrument. Il espéra que ses compagnons lui pardonneraient cette méthode bruyante.",
+        "Tam-Tam sortit des caisses et canalisa la bête vers la cage. Le bonnet brun, lui, avait perdu toute envie de jouer de la musique."
+      ],
+      "next": "v2-1-7"
+    },
+    "v2-2-1-verger": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Le détour ajouta quelques minutes à leur marche. Sous les arbres, Diva avançait sans bruit tandis que Tam-Tam tentait de goûter les pommes de l'année précédente.",
+        "Evan aperçut bientôt une marque de botte fraîche contre un mur. Quelqu'un avait coupé par là avant eux.",
+        "Iseult leva le poing. Ils se glissèrent derrière un saule, à l'endroit où le verger rejoignait le canal. La passerelle apparaissait de nouveau au-dessus des branches.",
+        "Une pierre roula sur le parapet. Le détour avait évité les pièges du sentier, mais pas ceux qui les surveillaient. Evan resserra les sangles de son étui."
+      ],
+      "next": "v2-2-2"
+    },
+    "v2-2-1-canal": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Ils descendirent entre les murs. Tam-Tam s'amusa immédiatement à sauter par-dessus les petites flaques. Diva replia ses ailes pour ne pas les frotter contre la pierre.",
+        "Iseult s'arrêta devant une échelle. Elle remontait près d'un saule, juste avant un coude du canal. Au sommet, des voix parlaient bas.",
+        "Evan récupéra l'ourson avant qu'il ne découvre le plaisir d'éclabousser tout le groupe. Ils gagnèrent le haut des marches en silence.",
+        "Une ombre traversa le parapet. Le couvert les avait protégés pendant l'approche ; ils devaient maintenant sortir à quelques pas de ceux qui gardaient le passage."
+      ],
+      "next": "v2-2-2"
+    },
+    "v2-2-1-reconnaissance": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "La petite dragonne s'éleva derrière les branches. Evan reçut des images brèves : une passerelle, deux saules et une silhouette qui rangeait quelque chose contre son poignet.",
+        "Diva revint aussitôt. Elle n'avait pas vu tout le terrain, mais ils savaient qu'une personne attendait près du virage.",
+        "Iseult choisit le bord de la passerelle pour avancer avec un couvert. Evan marcha derrière elle, Tam-Tam contre sa botte. L'ourson avait compris que la promenade devenait sérieuse, ce qui ne l'empêchait pas de surveiller leur sac.",
+        "Ils atteignirent le premier parapet effondré sans quitter le saule des yeux."
+      ],
+      "next": "v2-2-2"
+    },
+    "v2-2-2-confiance": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "La dragonne contourna les arbres au lieu de redescendre droit sur le tireur. Elle avait retrouvé assez d'assurance pour regarder où elle allait.",
+        "Evan continua de jouer pendant qu'Iseult retenait la lance. Tam-Tam posa une patte sur le bois au moment où la Veilleuse l'écartait. Le manche resta coincé.",
+        "Diva surgit derrière le tireur et accrocha sa manche. La fronde tomba dans les herbes. Iseult désarma alors le lancier d'un mouvement sec.",
+        "Les deux hommes se retrouvèrent sans arme. Diva revint près d'Evan, les yeux encore humides, et lui poussa le menton comme pour réclamer le crédit de sa belle manœuvre."
+      ],
+      "next": "v2-2-3"
+    },
+    "v2-2-2-impatience": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Le lancier lança une attaque trop large. Iseult l'évita, coinça le bois sous son bras et le tira en avant.",
+        "Tam-Tam lui dressa une petite marche de glace sous les bottes. L'homme trébucha ; sa lance lui échappa. Evan coupa aussitôt l'effet pour ne pas transformer l'erreur en fureur.",
+        "Le tireur jeta un regard vers son compagnon tombé. Diva choisit cet instant pour redescendre par le côté, loin de la fumée. La fronde vola entre les saules.",
+        "Iseult immobilisa le premier homme. Le second regarda les ailes mauves déployées devant son nez et s'assit sans qu'on ait besoin de lui trouver une chaise."
+      ],
+      "next": "v2-2-3"
+    },
+    "v2-2-2-cran": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "L'ours avança avec un grondement. Il ne chercha pas à renverser les hommes : il planta ses pattes entre eux et les obligea à s'écarter.",
+        "Iseult put alors concentrer son attention sur la lance. Elle dévia la pointe et frappa le poignet. De l'autre côté, Diva passa derrière le saule pour atteindre la fronde.",
+        "Evan ralentit ses percussions dès que les armes tombèrent. Ses paumes picotaient à force de frapper les plaques.",
+        "Tam-Tam souffla vers le lancier assis. Un peu de givre se déposa sur sa moustache. L'homme resta parfaitement immobile pendant qu'Iseult sortait une corde."
+      ],
+      "next": "v2-2-3"
+    },
+    "v2-2-3-clavier": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Le son était plus discret que celui du violon. Evan utilisa les enceintes de son masque pour le porter jusqu'à la bête sans élever la voix.",
+        "Tam-Tam se tint immobile devant elle. Iseult passa par le côté et coupa le cuir près de la fermeture. Le collier glissa entre les poutres.",
+        "Evan sentit la peur refluer. La créature remonta sur la berge et s'enfuit, débarrassée de sa chaîne.",
+        "Il s'appuya enfin contre le parapet. Jouer sur son bras dans un endroit pareil lui avait donné l'impression d'exécuter un morceau pendant qu'on déplaçait la scène. Il était heureux que personne ne demande un rappel."
+      ],
+      "next": "v2-2-4"
+    },
+    "v2-2-3-chaine": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Tam-Tam plaqua la chaîne contre le chemin, juste au-dessus de la poutre. L'animal tenta de tirer, mais ne put plus entraîner l'appui avec lui.",
+        "Diva se glissa près de la nuque. Ses griffes trouvèrent le cuir ; une racine tira de l'autre côté. La sangle céda avant le bois.",
+        "Le collier tomba dans la rivière. Evan poursuivit la musique jusqu'à ce que la bête distingue enfin un passage vers la berge.",
+        "Elle le prit sans demander son reste. Tam-Tam relâcha la chaîne avec beaucoup de prudence, puis observa ses pattes. Elles étaient couvertes de vase. Il les essuya très discrètement sur la botte d'Evan."
+      ],
+      "next": "v2-2-4"
+    },
+    "v2-2-3-rive": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "La bête hésita entre la poutre et le son venu de la terre ferme. Diva maintint le pieu avec ses racines afin que la chaîne ne la tire pas vers l'eau.",
+        "Elle posa une patte sur la berge, puis la seconde. Tam-Tam referma derrière elle un petit rempart de glace, juste assez haut pour la tenir à l'écart du pont.",
+        "Iseult put atteindre la sangle sans risquer de tomber dans la rivière. Le collier se détacha enfin.",
+        "Evan récupéra la balise quand l'animal s'éloigna entre les roseaux. Le pont restait abîmé, mais il n'avait plus à supporter une créature qui se débattait sur ses dernières planches."
+      ],
+      "next": "v2-2-4"
+    },
+    "v2-2-5-messagere": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "La petite dragonne disparut derrière les saules. Evan sentit leur lien s'étirer ; il se concentra sur l'image du retour pour ne pas lui transmettre sa propre inquiétude.",
+        "Lio remonta avec les seaux et attendit que le garde se détourne. Iseult aida ensuite le garçon à descendre près de la roue.",
+        "Diva revint quelques minutes plus tard. Elle avait aperçu les insignes et montré le moulin du museau. Les gardes s'approchaient par les berges.",
+        "Evan put enfin entrer dans la conduite. Sa compagne resterait dehors pour surveiller la cour. Le tube rouge était toujours dans sa veste, au cas où leur discrétion ne durerait pas."
+      ],
+      "next": "v2-2-6"
+    },
+    "v2-2-5-pretexte": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "Le garçon remonta ses seaux et annonça qu'un cheval avait pris peur dans le champ. Le garde se leva en maugréant pour aller vérifier le portail.",
+        "Iseult fit signe à Evan. Ils descendirent aussitôt vers la conduite, Diva glissant au ras du mur pour rester invisible depuis la cour.",
+        "Lio attendit le retour du garde, puis rentra avec ses seaux. Il les rejoindrait par la porte intérieure.",
+        "Evan rangea le tube rouge plus profondément dans sa veste pour ne pas le mouiller. Le prétexte leur avait ouvert quelques minutes ; il espérait que le fameux cheval imaginaire ne serait pas appelé à témoigner."
+      ],
+      "next": "v2-2-6"
+    },
+    "v2-2-5-signal-lointain": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "L'étoile rouge éclata au-dessus des arbres. Dans la cour, les bandits levèrent la tête vers la butte, cherchant d'où viendrait l'attaque.",
+        "Deux coups de sifflet répondirent depuis la grande route. Les gardes avaient compris. Iseult profita de la diversion pour guider Lio et Evan vers le bord de la roue.",
+        "Diva reprit sa place dans l'ombre du mur. Evan glissa le tube vide dans son sac avant de descendre.",
+        "Le signal avait alerté Ronce, mais il regardait maintenant dans la mauvaise direction. Ils devaient utiliser cette erreur avant qu'il pense à vérifier les passages au niveau de l'eau."
+      ],
+      "next": "v2-2-6"
+    },
+    "v2-2-6-flute": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "L'animal leva la tête vers le son. Il cessa de tirer sur sa chaîne et fit un pas dans le couloir.",
+        "Le garde se pencha pour le ramener. Iseult lui immobilisa aussitôt le poignet. Tam-Tam poussa doucement la lanterne du museau pour la mettre hors de portée des pieds.",
+        "Evan continua de jouer pendant que la Veilleuse attachait l'homme et récupérait ses clés. Elle coupa ensuite la sangle du collier.",
+        "La petite bête renifla la couverture posée par Lio, puis s'y coucha. Evan baissa sa flûte. Il aurait volontiers fait de même, mais la porte des prisonniers était enfin devant eux."
+      ],
+      "next": "v2-2-7"
+    },
+    "v2-2-6-balise": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "L'homme s'approcha du conduit, persuadé d'avoir surpris quelqu'un. Sa lanterne éclaira le mur au moment où Iseult sortait derrière lui.",
+        "Elle lui saisit le bras et l'empêcha de porter le sifflet à sa bouche. Tam-Tam posa une patte sur la chaîne de la bête pour qu'elle ne rejoigne pas les jambes des deux adultes.",
+        "Evan récupéra la balise et prit son violon. Quelques notes patientes aidèrent l'animal à se calmer pendant qu'Iseult coupait son collier.",
+        "Les clés passèrent enfin à la bonne ceinture. Lio indiqua la porte du menton, impatient de ne plus être le seul à attendre dehors."
+      ],
+      "next": "v2-2-7"
+    },
+    "v2-2-6-clavier": {
+      "chapter": "v2c2",
+      "paragraphs": [
+        "L'homme relâcha un peu ses épaules. Il ne s'endormit pas ; il oublia seulement de surveiller le fond du couloir pendant quelques secondes.",
+        "Iseult s'approcha sans bruit et lui bloqua la main. Lio ramassa les clés tombées pendant la lutte. Tam-Tam renifla la petite bête, qui le trouva apparemment plus intéressant que l'escalier.",
+        "Evan poursuivit le morceau jusqu'à ce que la corde soit nouée autour des poignets du garde. Iseult coupa ensuite la sangle du collier.",
+        "La musique s'arrêta. De l'autre côté de la porte, quelqu'un demanda si tout allait bien. Lio brandit le trousseau avec un sourire qui répondait suffisamment."
+      ],
+      "next": "v2-2-7"
+    },
+    "v2-3-1-diversion": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "La petite dragonne battit des ailes devant les museaux, assez près pour attirer leurs regards, assez loin pour éviter les mâchoires. Les deux bêtes quittèrent l'escalier.",
+        "Iseult coinça une barre de fer dans la chaîne du battant. Le bois s'arrêta avec un choc qui fit trembler toute la porte.",
+        "Evan ralentit sa musique pour que Diva puisse reprendre de la hauteur sans les affoler davantage. Mara fit passer les premières personnes sous l'ouverture.",
+        "La dragonne revint sur le mur, les ailes couvertes de farine. Elle adressa à Evan une image très nette de bain. Il lui promit mentalement de commencer par de l'eau chaude."
+      ],
+      "next": "v2-renforts"
+    },
+    "v2-3-1-racines": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Diva s'accroupit près du mur. Ses racines poussèrent deux sacs, soulevèrent une traverse et dégagèrent le battant du petit portail.",
+        "Mara y conduisit le groupe. Tam-Tam passa de profil pour ne pas accrocher son passager ; l'homme protesta néanmoins contre ce véhicule dépourvu de poignée.",
+        "Iseult put enfin quitter les cages quelques secondes. Elle bloqua la grande porte avec une barre prise sous l'auvent.",
+        "Evan resta au violon pour garder les animaux loin du portail ouvert. Diva revint près de sa botte, essoufflée mais satisfaite. Deux sorties valaient mieux qu'une, même si la nouvelle sentait beaucoup trop le grain humide."
+      ],
+      "next": "v2-renforts"
+    },
+    "v2-3-1-couverture": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Diva déploya ses petites ailes devant l'escalier. Quelques racines soulevèrent une couverture entre deux poteaux, donnant aux personnes un abri contre les mouvements brusques.",
+        "Evan ne cherchait pas à rendre les bêtes heureuses. Il leur offrait un endroit moins chargé de peur, assez loin des marches pour qu'elles s'y tournent.",
+        "Iseult gagna la chaîne du battant et la coinça avec une barre. La porte s'immobilisa à mi-course.",
+        "Mara sortit la première avec deux personnes. Diva les accompagna jusqu'au seuil, puis revint vers Evan. Le garçon lui envoya l'image d'un grand merci ; elle répondit avec celle d'une couverture plus propre, pour plus tard."
+      ],
+      "next": "v2-renforts"
+    },
+    "v2-3-2-diva": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Une racine glissa sous les planches et remonta le long du tonneau. Le bandit à la fourche suivit sa progression, trop surpris pour penser à frapper tout de suite.",
+        "La racine s'enroula autour de la manivelle. Diva tira. Le premier effort ne suffit pas ; Evan reprit le rythme, lui donnant l'assurance nécessaire pour essayer une seconde fois.",
+        "Le métal céda. Le battement s'arrêta net.",
+        "Iseult détourna la fourche pendant que la dragonne se repliait. Evan récupéra son violon pour calmer les bêtes, dont les colliers venaient enfin de cesser de pulser. Derrière l'atelier, le cheval de Ronce hennit au même instant."
+      ],
+      "next": "v2-3-3"
+    },
+    "v2-3-2-balise": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Le bandit regarda vers l'appel. Iseult passa de l'autre côté du tonneau et planta son couteau dans l'axe de la manivelle.",
+        "Le battement ralentit, accrocha, puis s'arrêta. Evan coupa sa balise et continua au violon sans chercher à couvrir ce silence précieux.",
+        "Diva ramena le disque jusqu'à sa botte. Tam-Tam se plaça entre Iseult et les bêtes, le temps que leur panique diminue.",
+        "L'homme à la fourche comprit enfin qu'on l'avait trompé. Il vit les gardes qui entraient et posa son arme. Evan aurait apprécié la même facilité avec toutes les mauvaises idées de cette journée, mais le cheval de Ronce repartait déjà derrière l'atelier."
+      ],
+      "next": "v2-3-3"
+    },
+    "v2-3-2-coordination": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Il augmenta légèrement le volume du masque pour que le son passe au-dessus du martèlement. Iseult trouva sa mesure et attendit que l'animal près d'elle tourne le museau.",
+        "Elle se glissa contre le tonneau, saisit la manivelle et la força dans l'autre sens. Le mécanisme résista avant de casser dans un claquement sec.",
+        "Evan diminua aussitôt le volume. Le calme avait maintenant une chance de durer.",
+        "Tam-Tam bloqua un passage pendant que Diva détournait la fourche. Les gardes atteignirent enfin la cour. Derrière l'atelier, un cheval frappa le sol : Ronce préférait visiblement quitter les lieux avant de saluer les nouveaux arrivants."
+      ],
+      "next": "v2-3-3"
+    },
+    "v2-3-3-relais": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Le cocher improvisé tourna la tête vers le son. Son cheval hésita devant la silhouette mauve qui se posait à l'entrée de l'écluse.",
+        "Iseult gagna plusieurs pas. Evan courut derrière elle, en récupérant son souffle entre deux appels. Le volume du masque n'allait pas courir à sa place.",
+        "Diva coucha une traverse sur le chemin avec ses racines. La charrette s'arrêta. Ronce sauta sur la passerelle avec sa sacoche et un couteau.",
+        "La dragonne récupéra le disque avant de rejoindre le parapet. Evan arriva du côté d'Iseult, essoufflé mais à temps. Pour repartir, Ronce devait maintenant passer entre eux et les ailes mauves."
+      ],
+      "next": "v2-3-4"
+    },
+    "v2-3-3-piste": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Evan s'y glissa, violon serré contre lui. Ses épaules frêles passèrent sans déplacer les outils qui pendaient au mur ; pour une fois, ce petit avantage lui épargna du bruit.",
+        "Tam-Tam posa une patte sur le bord de la charrette. Le cheval s'arrêta devant ce nouvel obstacle. Ronce sauta sur la passerelle de l'écluse.",
+        "Iseult le rejoignit par le chemin. Diva se posa en face, sur le parapet. Evan déboucha près de la Veilleuse, heureux de retrouver un espace où il pouvait respirer sans sentir une scie contre son dos.",
+        "Ronce regarda les deux rives. Sa sacoche pendait toujours à son épaule ; le couteau était sorti."
+      ],
+      "next": "v2-3-4"
+    },
+    "v2-3-3-entraide": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Diva longea la rivière pendant que Tam-Tam suivait la charrette. Evan rejoignit Iseult à pied. Il avait rangé la flûte et tenait son violon près du corps pour ne pas heurter le mur.",
+        "À l'entrée de l'écluse, les racines de Diva se nouèrent autour d'un poteau et barrèrent le passage. Tam-Tam vint se placer contre la roue arrière.",
+        "Le cheval s'arrêta. Ronce abandonna les rênes et sauta sur la passerelle, couteau à la main.",
+        "Evan arriva près d'Iseult en reprenant difficilement son souffle. Personne n'avait chargé seul. Ils étaient encore tous là, répartis autour d'un fuyard qui venait de manquer sa dernière sortie facile."
+      ],
+      "next": "v2-3-4"
+    },
+    "v2-3-5-confiance": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Diva regarda la distance, puis les doigts crispés de Ronce. Evan continua sans accélérer. Elle n'avait pas besoin de devenir téméraire ; elle devait seulement retrouver l'assurance de son propre mouvement.",
+        "La petite dragonne bondit, accrocha la sangle et tira au moment où Iseult détournait le couteau avec sa corde.",
+        "La sacoche tomba sur la rive. Tam-Tam put soutenir les planches assez longtemps pour que la Veilleuse immobilise Ronce.",
+        "Evan termina sa phrase avant de s'asseoir. La force de Diva n'avait pas remplacé la bonne coordination ; elle avait eu une ouverture assez précise pour employer ses petites pattes au bon endroit."
+      ],
+      "next": "v2-3-6"
+    },
+    "v2-3-5-hesitation": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Ronce s'immobilisa. Son bras au couteau resta suspendu tandis qu'il cherchait une prise plus sûre.",
+        "Iseult passa sa corde autour du poignet et tira vers la pierre. Le couteau tomba. Diva saisit la sacoche et l'entraîna de l'autre côté du parapet.",
+        "Evan coupa l'effet dès que la lame fut hors de portée. Il ne voulait pas que la peur fasse lâcher la main encore accrochée au bois.",
+        "Tam-Tam stabilisa la dernière traverse. Iseult ramena Ronce vers la rive et lui lia les poignets. Evan resta silencieux quelques secondes, les doigts toujours posés sur les cordes. Son intention avait tenu jusqu'au bout du morceau."
+      ],
+      "next": "v2-3-6"
+    },
+    "v2-3-5-rythme": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Au premier temps, Tam-Tam pesa contre la pierre pour réduire le mouvement des planches. Au deuxième, Diva attrapa la sangle du sac.",
+        "Iseult agit sur le troisième. Elle passa sa corde au-dessus du bras de Ronce et le tira vers le parapet. Le couteau frappa la pierre, loin des pieds d'Evan.",
+        "La sacoche resta sur la rive. Diva se posa à côté, les ailes ouvertes pour ne pas glisser. Tam-Tam attendit que tout le monde ait quitté le bois avant de relâcher son appui.",
+        "Evan laissa finir la note. Ils avaient réussi sans qu'il donne de force nouvelle à personne : la confiance et le bon moment avaient suffi."
+      ],
+      "next": "v2-3-6"
+    },
+    "v2-3-6-preuves": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Iseult sépara trois reçus encore pliés de la même façon. Leurs dates encadraient le passage du convoi au moulin.",
+        "Mara reconnut les marques dans la marge : elles correspondaient aux cages qu'on lui avait demandé de préparer. Au bout du trajet, la carte indiquait la carrière des Pins.",
+        "Une livraison devait s'y présenter dans trois jours. Evan suivit la ligne jusqu'à ce nom, puis demanda à Mara si elle connaissait l'endroit.",
+        "Elle se souvenait d'une tour sans toit. Ce détail suffisait pour vérifier la piste avec les gardes, au lieu de partir après le premier bruit de route venu."
+      ],
+      "next": "v2-3-7"
+    },
+    "v2-3-6-discussion": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Mara reprit depuis le premier voyage. Elle regardait les lignes de la carte en parlant, s'arrêtait parfois, puis retrouvait un détail : des pins, une tour ouverte au ciel, un portail grinçant.",
+        "Iseult posa un doigt sur un cercle à l'est. La carrière des Pins.",
+        "Mara hocha la tête. C'était le lieu où on les regroupait avant de les déplacer. Une date sur le reçu indiquait qu'un nouveau convoi devait y arriver bientôt.",
+        "Evan baissa son instrument. Il avait seulement aidé son amie à parler plus tranquillement. Les réponses étaient venues d'elle, et il voulait garder cette différence aussi claire que la route sur le papier."
+      ],
+      "next": "v2-3-7"
+    },
+    "v2-3-6-documents": {
+      "chapter": "v2c3",
+      "paragraphs": [
+        "Ils n'y trouvèrent pas tous ceux qu'ils cherchaient. Plusieurs lignes ne portaient qu'un métier ou une description, ce qui fit serrer les dents à Evan.",
+        "Une colonne indiquait pourtant une destination répétée : la carrière des Pins. Mara reconnut ce nom et la tour sans toit dessinée près du symbole.",
+        "Iseult compara la feuille aux reçus. Un nouveau convoi devait y passer dans trois jours. Elle nota la date avant de ranger les preuves à l'abri de l'eau.",
+        "Evan garda les yeux sur la ligne encore un moment. Ils n'avaient pas retrouvé les absents, mais ils savaient désormais où commencer une recherche qui pourrait vraiment les mener à eux."
+      ],
+      "next": "v2-3-7"
     }
   },
   "chapterRecaps": {
@@ -1292,6 +2058,33 @@
             "scene": "v2-1-1",
             "paragraph": 6
           }
+        },
+        {
+          "id": "evan-mensurations",
+          "field": "size",
+          "value": "1,48 m ; 35 kg. Silhouette très frêle.",
+          "source": {
+            "scene": "v2-1-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "evan-queue",
+          "field": "appearance",
+          "value": "Cheveux, oreilles de loup et grande queue blancs ; silhouette frêle.",
+          "source": {
+            "scene": "v2-1-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "id": "evan-equipement-complet",
+          "field": "equipment",
+          "value": "Violon et archet ; flûte ; trois disques ou balises de résonance ; gants à griffes et plaques de percussion dans les paumes ; mini-clavier sur l'avant-bras droit de la tenue de combat ; masque aux enceintes dans les joues pour amplifier musique et voix.",
+          "source": {
+            "scene": "v2-2-1",
+            "paragraph": 5
+          }
         }
       ]
     },
@@ -1334,6 +2127,15 @@
             "scene": "v2-1-1",
             "paragraph": 5
           }
+        },
+        {
+          "id": "diva-canon",
+          "field": "appearance",
+          "value": "Bébé dragon de petite taille, corps lavande, taches violettes et ailes translucides roses/mauves aux reflets bleus.",
+          "source": {
+            "scene": "v2-1-1",
+            "paragraph": 5
+          }
         }
       ]
     },
@@ -1366,6 +2168,15 @@
           "source": {
             "scene": "v2-1-1",
             "paragraph": 3
+          }
+        },
+        {
+          "id": "tam-tam-glace",
+          "field": "appearance",
+          "value": "Fourrure blanche et petits cristaux de glace aux reflets violets.",
+          "source": {
+            "scene": "v2-1-1",
+            "paragraph": 1
           }
         }
       ]
@@ -1499,5 +2310,34 @@
         }
       ]
     }
-  ]
+  ],
+  "illustrations": {
+    "v2-1-1": [
+      {
+        "after": 8,
+        "src": "illustrations/evan-v2/chapter-01.webp",
+        "alt": "Evan, jeune garçon frêle aux cheveux, oreilles et queue blancs, joue du violon au marché ; la petite Diva mauve et Tam-Tam sous sa forme d'ourson glacé sont près de son étui.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "v2-2-1": [
+      {
+        "after": 14,
+        "src": "illustrations/evan-v2/chapter-02.webp",
+        "alt": "Evan en tenue de combat noire et violette marche le long du canal, avec son clavier à l'avant-bras droit, son masque relevé et ses deux petits compagnons près de lui.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "v2-3-5": [
+      {
+        "after": 5,
+        "src": "illustrations/evan-v2/chapter-03.webp",
+        "alt": "Au bord de l'écluse, Evan tient son violon contre lui près de la petite Diva ; Tam-Tam sous sa grande forme d'ours blanc aux cristaux de glace se tient dans la rivière.",
+        "width": 1536,
+        "height": 1024
+      }
+    ]
+  }
 }

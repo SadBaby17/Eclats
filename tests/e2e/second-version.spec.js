@@ -9,9 +9,9 @@ async function library(page) {
   await page.getByRole("button", { name: "Ouvrir le menu" }).click();
   await page.getByRole("navigation", { name: "Navigation principale" }).getByRole("button", { name: /Bibliothèque/ }).click();
 }
-async function decide(page) {
+async function decide(page, index = 0) {
   const form = page.locator(".choice");
-  await form.locator("input[type=radio]").first().check();
+  await form.locator("input[type=radio]").nth(index).check();
   await form.getByRole("button", { name: "Confirmer ce chemin", exact: true }).click();
 }
 
@@ -62,4 +62,36 @@ test("both library books switch correctly, preserve separate progress and the ne
   await page.getByRole("link", { name: original, exact: true }).click();
   await expect(page.locator(".chapter-link")).toHaveCount(33);
   expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions, oldKey)).toEqual(oldSave.decisions);
+});
+
+test("five available answers and all three illustrations fit mobile, preserve choices and load offline", async ({ page, context }) => {
+  await page.goto("./?story=evan-deuxieme-version&read=1");
+  for (let i = 0; i < 15; i++) {
+    if (i === 5 || i === 10) await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
+    const choices = page.locator(".choice input[type=radio]");
+    expect(await choices.count()).toBeGreaterThanOrEqual(5);
+    if (i === 0 || i === 5 || i === 13) {
+      const picture = page.locator(".story-illustration img");
+      await picture.scrollIntoViewIfNeeded();
+      await expect(picture).toBeVisible();
+      await expect.poll(() => picture.evaluate((img) => img.naturalWidth)).toBe(1536);
+      expect(await picture.evaluate((img) => img.getBoundingClientRect().right <= innerWidth)).toBe(true);
+      await page.screenshot({ path: `test-results/evan-v2-chapter-${Math.floor(i / 5) + 1}.png` });
+    }
+    await decide(page, 4);
+  }
+  expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions.length, newKey)).toBe(15);
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller) await new Promise((resolve) => navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true }));
+  });
+  await context.setOffline(true);
+  await page.reload();
+  for (let chapter = 3; chapter >= 1; chapter--) {
+    const picture = page.locator(".story-illustration img");
+    await picture.scrollIntoViewIfNeeded();
+    await expect.poll(() => picture.evaluate((img) => img.complete && img.naturalWidth === 1536)).toBe(true);
+    if (chapter > 1) await page.getByRole("button", { name: "← Chapitre précédent", exact: true }).click();
+  }
+  expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions.length, newKey)).toBe(15);
 });
