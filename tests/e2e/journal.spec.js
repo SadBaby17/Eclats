@@ -69,7 +69,7 @@ test("an unlocked or opened chapter does not reveal people below the reading pos
   await seed(page, 65); await page.goto("./"); await journal(page);
   await expect(page.locator(".destination")).not.toContainText("Tessa");
   await destination(page, "Bibliothèque");
-  await page.getByRole("button", { name: /Voir les chapitres/ }).click();
+  await page.getByRole("button", { name: "Voir les chapitres : Les Accords du Crépuscule", exact: true }).click();
   await page.locator("[data-chapter-id=c14]").click();
   await journal(page); await expect(page.locator(".destination")).not.toContainText("Tessa");
   await destination(page, "Lectures"); await page.locator("#c14-1-p2").scrollIntoViewIfNeeded();

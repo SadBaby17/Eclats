@@ -58,9 +58,10 @@ test("old three-chapter saves unlock the fourth; replacing an early decision rel
   );
   assert.equal(chapterScene(story, revised, "c8"), null);
 });
-test("the catalogue exposes only the preserved thirty-three-chapter novel", () => {
-  assert.equal(BOOKS.length, 1);
+test("the catalogue keeps the original novel and offers the separate second version", () => {
+  assert.equal(BOOKS.length, 2);
   assert.equal(BOOKS[0].id, story.id);
+  assert.equal(findBook("evan-deuxieme-version").file, "evan-deuxieme-version.json");
   assert.equal(findBook("demo"), undefined);
   assert.equal(findBook("le-phare-des-heures"), undefined);
   assert.equal(story.chapters.length, 33);

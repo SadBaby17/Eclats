@@ -420,15 +420,26 @@ function showDestination(id) {
         },
         "Voir les chapitres",
       );
-      resume.onclick = () => showDestination("histoire");
+      const bookUrl = new URL(location.href);
+      bookUrl.searchParams.set("story", entry.id);
+      bookUrl.searchParams.delete("read");
+      bookUrl.hash = "chapitres";
+      const openBook = () => {
+        if (entry.id === selectedBook.id) showDestination("histoire");
+        else {
+          save();
+          location.assign(bookUrl.href);
+        }
+      };
+      resume.onclick = openBook;
       const titleLink = el(
         "a",
-        { href: "#chapitres", class: "book-title-link" },
+        { href: bookUrl.href, class: "book-title-link" },
         entry.title,
       );
       titleLink.onclick = (event) => {
         event.preventDefault();
-        showDestination("histoire");
+        openBook();
       };
       const bookTitle = el("h2");
       bookTitle.append(titleLink);
@@ -1265,6 +1276,7 @@ async function start() {
     await document.fonts.ready;
     requestAnimationFrame(() => {
       if (query.get("read") === "1") showDestination("lectures");
+      else if (location.hash === "#chapitres") showDestination("histoire");
       restorePosition(restore);
       canSave = true;
       updateProgress();

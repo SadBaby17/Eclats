@@ -40,6 +40,8 @@ L’application s’ouvre sur son écran d’accueil et ses quatre rubriques, m�
 
 ## Architecture
 
+La bibliothèque propose également **Evan — Deuxième version**, une aventure distincte située dans le même univers avec Evan, Diva et Tam-Tam. Ses trois premiers chapitres sont dans `public/stories/evan-deuxieme-version.json`, avec cinq interactions et au moins 3 300 mots par parcours de chaque chapitre. Ils forment un premier arc et se terminent sur une suite ouverte. Le récit, les décisions et le journal possèdent leur propre identifiant de sauvegarde. Le premier roman reste disponible avec sa progression existante. La sélection d'un livre depuis la bibliothèque charge le récit correspondant ; les deux sont inclus dans l'édition hors connexion.
+
 Pas de framework d’interface ni de backend. Vite sert et construit les modules JavaScript ; les dépendances sont utilisées uniquement pendant le développement.
 
 - `src/engine.js` : validation structurelle, conditions et relecture déterministe des décisions. Indépendant du DOM et du stockage.
