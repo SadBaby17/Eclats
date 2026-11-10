@@ -1,0 +1,2164 @@
+{
+  "format": 1,
+  "id": "helio-a-mains-nues",
+  "version": 1,
+  "title": "Hélio — À mains nues",
+  "subtitle": "Une ville pleine de magie. Des choix qui laissent des traces.",
+  "variables": {
+    "contact": "livreur",
+    "relation": "franc",
+    "perte": "salon",
+    "yara": "attendre",
+    "effort": "mesure",
+    "annonce": "ensemble",
+    "avenir": "appel",
+    "salon_intact": true
+  },
+  "chapters": [
+    {
+      "id": "hc1",
+      "number": 1,
+      "title": "Les choses qui tiennent",
+      "start": "h-1-1"
+    },
+    {
+      "id": "hc2",
+      "number": 2,
+      "title": "Le prix de la nuit",
+      "start": "h-2-arrivee"
+    },
+    {
+      "id": "hc3",
+      "number": 3,
+      "title": "Ce qui reste au matin",
+      "start": "h-3-1"
+    }
+  ],
+  "chapterRecaps": {
+    "hc2": [
+      {
+        "paragraphs": [
+          "Une défaillance du soutien magique a menacé La Traverse et la rue. Hélio a choisi où reporter la charge, avec une perte qui demeure. Lui et Maël, son ancien compagnon, cherchent maintenant une plaque retirée du cercle. Yara les a dirigés vers les anciens bains utilisés par Rusk."
+        ]
+      }
+    ],
+    "hc3": [
+      {
+        "paragraphs": [
+          "Aux bains, Hélio et Maël ont récupéré la plaque et découvert comment leurs marques avaient été utilisées. Yara a vendu la pièce pour prolonger son bail, puis posé une copie. Le retour à l’ancien montage laisserait Rusk garder une prise sur le bâtiment. Il faut reprendre le cercle à l’écluse avant la marée haute."
+        ]
+      }
+    ]
+  },
+  "scenes": {
+    "h-1-1": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Hélio avait un homme dans son lit et un problème de café.",
+        "L'homme, lui, dormait très bien. Le café refusait de traverser le filtre. Hélio posa un doigt sur la cafetière, dessina une minuscule rune de chaleur et attendit trois secondes. La quatrième produisit un bruit peu rassurant. Il retira son doigt juste avant que le couvercle saute. Un jet brun atteignit le plafond.",
+        "« Impressionnant », dit l'homme depuis la porte. « Je fais aussi les anniversaires », répondit Hélio. Son invité récupéra sa chemise sur une chaise. Ils ne s'étaient rien promis la veille, ce qui rendait leurs sourires du matin assez faciles. Hélio lui trouva une tasse propre. Ils burent le café qui avait bien voulu rester dans la cuisine, puis s'embrassèrent avant de se quitter. Son invité avait un rendez-vous ; Hélio n'avait pas demandé lequel.",
+        "Il ouvrit ensuite les fenêtres du salon. Brévane brillait sous un ciel bleu, toute en façades claires, en canaux étroits et en terrasses qui se disputaient le soleil. Une femme secouait un drap ; les plis se rangeaient seuls autour de ses doigts. Au-dessous, un livreur guidait trois caisses flottantes en jurant parce que la quatrième préférait les géraniums. Le pain du boulanger gardait sa chaleur dans les paniers. La ville se mettait au travail avec sa magie, ses mauvaises habitudes et ses gens qui avaient oublié de dormir.",
+        "Hélio enfila un pantalon sombre, un crop top jaune à manches courtes et ses bracelets noirs. Le tissu s'arrêtait au-dessus de son nombril ; il regarda la tache au plafond, puis son ventre découvert. Il avait au moins sauvé sa tenue. Ses cheveux blonds refusaient tout arrangement. Il posa ses lunettes de soleil dessus et considéra le désordre comme terminé.",
+        "Son salon lui servait aussi de réserve. Une rune discrète, près de la plinthe, définissait l'endroit d'où il pouvait appeler de petits objets. Il y laissait ses cartes de rechange, un carnet, des coussins et des affaires dont il aurait probablement besoin au mauvais moment. Il tendit la main. Un paquet de cartes quitta la table basse pour apparaître entre ses doigts. La bourse posée dans la chambre ne bougea pas. « Tu ne pourrais pas choisir une pièce et t'y tenir ? » demanda-t-il à son propre portefeuille avant d'aller le chercher.",
+        "Une enveloppe l'attendait sous la porte. La clé glissée dedans lui fit perdre un peu de son sourire. Maël rendait enfin son double. Pas de longue lettre : seulement deux lignes, une adresse de rendez-vous à La Traverse et une précision qui ressemblait trop à sa voix. Cette fois, essaie d'arriver avant la catastrophe.",
+        "La Traverse occupait les étages bas de sa maison, de l'autre côté d'une petite cour. On y mangeait, on y dormait, on y jouait trop tard. Yara, sa propriétaire, lui devait deux semaines de travail et trois bons dîners. Hélio préférait penser aux dîners. Il rangea la clé dans sa poche, choisit son bâton et descendit en comptant les cartes. Il avait encore la journée devant lui. Il comptait bien qu'elle soit agréable."
+      ],
+      "choice": {
+        "prompt": "Quel petit confort Hélio emporte-t-il pour sa journée ?",
+        "options": [
+          {
+            "id": "carnet",
+            "label": "Laisser son carnet dans le salon pour pouvoir l'appeler",
+            "passage": "Hélio vérifia que le carnet restait bien sur la table basse, dans la zone marquée pour sa téléportation, avant de fermer la porte.",
+            "next": "h-1-1-carnet"
+          },
+          {
+            "id": "coussin",
+            "label": "Prévoir un coussin pour les pauses improvisées",
+            "passage": "Hélio choisit le coussin le moins encombrant et le laissa dans la partie du salon depuis laquelle il pourrait le faire venir jusque près de lui.",
+            "next": "h-1-1-coussin"
+          },
+          {
+            "id": "cartes",
+            "label": "Mettre un jeu de rechange dans la poche du pantalon",
+            "passage": "Hélio ajouta directement un deuxième paquet de cartes à ses affaires pour ne pas dépendre uniquement des objets qu'il laisserait dans son salon pendant sa journée.",
+            "next": "h-1-1-cartes"
+          },
+          {
+            "id": "fruit",
+            "label": "Glisser une poire dans son petit sac",
+            "passage": "Hélio choisit une poire mûre, l'enveloppa dans un tissu et la rangea loin des cartes pour ne pas transformer son matériel en dessert avant midi.",
+            "next": "h-1-1-fruit"
+          },
+          {
+            "id": "echarpe",
+            "label": "Prendre une écharpe légère pour la fin de soirée",
+            "passage": "Hélio choisit une longue écharpe jaune clair et la plia dans son sac, assez loin de son cou pour ne pas avoir chaud en descendant au soleil.",
+            "next": "h-1-1-echarpe"
+          }
+        ]
+      }
+    },
+    "h-1-2": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Yara avait toujours su accueillir quelqu'un comme si elle ne l'avait pas attendu avec une liste de choses à lui demander. Elle poussa une assiette vers Hélio, l'embrassa sur les deux joues et observa la clé qu'il venait de poser. « Il est passé tôt. » Le jeune homme mordit dans une poire. « Je vois que tout le quartier suit ma vie sentimentale. » « Tu vis au-dessus d'une auberge. Il faut choisir ses erreurs. »",
+        "Elle portait une veste couleur rouille et ses tresses noires attachées haut, avec un crayon oublié derrière une oreille. D'un geste, elle réchauffa le fond du plat sans toucher à l'assiette. Son affinité pour la chaleur était excellente. Elle l'utilisait moins bien lorsqu'elle parlait avec colère : plusieurs clients avaient déjà reçu un œuf capable de rebondir. Aujourd'hui, le plat restait parfait. Ses mains, en revanche, ne tenaient pas en place.",
+        "Maël attendait près de la fenêtre. Une chemise vert sombre, des manches retroussées, des cheveux bruns bouclés retenus à la nuque. Il avait gardé la petite cicatrice sous le menton et ce regard qui donnait à Hélio envie de sourire avant de se rappeler qu'il lui en voulait. Ils s'étaient aimés assez longtemps pour connaître la place de chacun dans une cuisine. Leur séparation avait été beaucoup moins élégante que leurs premières nuits.",
+        "« Je ne suis pas venu pour la clé », dit Maël. « Dommage. J'avais préparé une réponse très mature. » Il n'en avait préparé aucune. Il s'assit quand même. Maël travaillait à vérifier les ponts et les maisons dont les sorts portaient une partie du poids. Il posa un dessin entre eux. Sous La Traverse, un ancien cercle de soutien avait été modifié. On avait ajouté des marques dans une pièce fermée, puis recouvert le tout d'un plancher neuf.",
+        "Yara croisa les bras. Selon elle, on cherchait surtout un motif pour fermer l'auberge avant l'ouverture des terrasses d'été. Les propriétaires des bâtiments voisins voulaient agrandir le quai. Maël la laissa finir. Il ne parlait pas encore d'expulsion. Il voulait retirer les planches, regarder les signes et savoir qui les avait changés. Hélio posa la poire. Un trait du dessin ressemblait à sa propre manière de fermer une rune.",
+        "Il avait préparé des plaques pour Yara six mois plus tôt : des lumières, des protections de portes, quelques effets pratiques destinés aux chambres. Elle avait ensuite acheté du matériel d'occasion à un certain Rusk. Elle avait parlé de restaurer l'auberge. Hélio n'avait pas demandé tous les détails. Il regarda son amie. « Mes plaques sont toujours là où je les ai posées ? » Elle ouvrit la bouche.",
+        "La fenêtre se fendit avant qu'elle réponde. Dehors, les caisses du livreur tombèrent d'un coup. Le drap de la voisine devint lourd comme un tapis trempé. Le sol de l'auberge pencha, puis revint avec une secousse qui renversa leurs verres. Une cloche sonna au-dessus du quai, trop vite. Maël se leva. Hélio avait déjà pris son jeu de cartes. Au travers de la vitre, il vit la passerelle qui reliait les deux rives commencer à se détacher du mur."
+      ],
+      "choice": {
+        "prompt": "Qui Hélio aide-t-il en premier quand la rue bascule ?",
+        "options": [
+          {
+            "id": "livreur",
+            "label": "Dégager le livreur sous ses caisses",
+            "passage": "Hélio passa une carte résistante sous l'une des caisses et força le coin avec son bâton pour permettre au livreur de retirer sa jambe coincée contre la roue.",
+            "next": "h-1-2-livreur",
+            "set": {
+              "contact": "livreur"
+            }
+          },
+          {
+            "id": "cuistot",
+            "label": "Retenir le fourneau du comptoir voisin",
+            "passage": "Hélio posa sa main nue contre le côté froid du support et traça une adhérence pour empêcher le petit fourneau de glisser vers l'allée où les clients tentaient encore de sortir.",
+            "next": "h-1-2-cuistot",
+            "set": {
+              "contact": "cuistot"
+            }
+          },
+          {
+            "id": "voisine",
+            "label": "Ouvrir une issue à la voisine chargée de linge",
+            "passage": "Hélio coupa le lien qui bloquait la porte du petit immeuble et retint le battant avec une carte pour laisser passer les personnes encore coincées dans l'entrée derrière la voisine.",
+            "next": "h-1-2-voisine",
+            "set": {
+              "contact": "voisine"
+            }
+          },
+          {
+            "id": "batelier",
+            "label": "Immobiliser la barque qui heurte les marches",
+            "passage": "Hélio lança une carte adhésive contre le poteau et fit passer une corde autour avant que la barque ne frappe les personnes qui descendaient vers le bas de l'escalier au bord du canal.",
+            "next": "h-1-2-batelier",
+            "set": {
+              "contact": "batelier"
+            }
+          },
+          {
+            "id": "peintre",
+            "label": "Rattraper l'échelle qui ferme le passage",
+            "passage": "Hélio plaqua le bout du bâton sous une traverse et posa du pied une rune sur le pavé pour ralentir la chute de l'échelle vers les gens massés devant la boutique.",
+            "next": "h-1-2-peintre",
+            "set": {
+              "contact": "peintre"
+            }
+          }
+        ]
+      }
+    },
+    "h-1-3": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La rue avait perdu son équilibre. Une table glissait vers le canal, deux caisses heurtaient le parapet et un homme retenait un étal en hurlant qu'on arrête de pousser. Personne ne poussait. La magie qui allégeait les marches et soutenait la passerelle se déformait par vagues. À chaque retour, les choses retrouvaient tout leur poids d'un coup. Hélio sauta la dernière marche et sentit le pavé monter trop vite sous son pied.",
+        "Il posa la paume sur une carte. Une rune d'adhérence prit forme sur la première face, une rune de résistance sur l'autre. Il la plaqua contre le pied de la table. Le bois s'immobilisa à deux doigts du bord. Pas besoin de sauver tous les meubles : il avait seulement besoin qu'ils cessent de traverser le chemin des gens. Maël entra dans la rue derrière lui en donnant des directions courtes. Yara ouvrait déjà les portes de l'auberge pour faire sortir ses clients.",
+        "La première personne qu'Hélio aida lui rendit un signe qu'il reconnut entre deux secousses. Il gardait des amis dans presque chaque commerce de cette rue, parfois pour une réparation, parfois pour avoir partagé une bouteille. Il ne pouvait pas commencer par tout le monde. Il choisit une main, un appui, et se força à finir ce geste avant de chercher le suivant.",
+        "Au bout de la passerelle, une vieille femme attendait avec son panier. Le battant de fer s'était refermé devant elle. De l'autre côté, les marches flottaient à quelques doigts de leur support, puis retombaient en grinçant. Hélio lança une carte tranchante sur la corde du volet qui bloquait le passage. Elle coupa net. Il en retint une seconde entre ses doigts pour écarter un lien de cuir, puis la rangea contre sa paume. La lame n'avait pas besoin de devenir un spectacle pour être dangereuse.",
+        "Un cri vint de la cour. Un homme en manteau gris frappait Yara contre le mur pour entrer dans la pièce du dessous. Hélio n'eut pas le temps de demander ce qu'il voulait. Il traversa la rue, bâton bas, et plaça son bois entre la main de l'homme et le col de son amie. Le choc remonta jusqu'à son épaule. L'autre pivota avec une lame courte. Ce n'était pas un voisin venu comprendre pourquoi son linge tombait.",
+        "Hélio recula d'un pas, presque vexé. « Vous pouviez demander une chambre. » L'homme lui répondit par un coup à hauteur du ventre. Le jeune homme fit tourner son bâton, écarta le poignet et toucha du talon le pavé nu. D'un contact sur le cuir, il fit s'ouvrir sa botte et la chassa du talon. La peau de son pied rencontra la pierre et une rune y prit aussitôt. Le sol devint lourd autour des bottes grises. L'homme plia les genoux, surpris, mais ne tomba pas.",
+        "Maël arrivait par le côté. Hélio pouvait terminer l'échange sans lui faire traverser une lame. Il avait ses cartes, son bâton, le mur et l'effet qu'il venait de poser. L'inconnu gardait la main sur une petite plaque pendue à sa ceinture. Il n'essayait plus de défendre la porte : il cherchait quelque chose au travers du tissu. Hélio avait appris à ne pas laisser ce genre de geste devenir une phrase complète."
+      ],
+      "choice": {
+        "prompt": "Comment Hélio neutralise-t-il l'homme devant la cave ?",
+        "options": [
+          {
+            "id": "baton",
+            "label": "Désarmer au bâton en gardant la lame loin de Yara",
+            "passage": "Hélio feinta le visage puis fit glisser le bois contre le poignet armé, avec un mouvement court qui ne demandait pas de quitter son appui sur le pavé.",
+            "next": "h-1-3-baton"
+          },
+          {
+            "id": "cartes",
+            "label": "Coller la main armée au mur",
+            "passage": "Hélio rendit une carte adhésive d'un côté et résistante de l'autre, puis la plaqua contre le poignet au moment où l'inconnu revenait vers lui avec sa lame courte.",
+            "next": "h-1-3-cartes"
+          },
+          {
+            "id": "sol",
+            "label": "Augmenter le poids autour des bottes",
+            "passage": "Hélio garda son pied nu sur le pavé et renforça juste assez la gravité de la petite zone pour empêcher l'homme de poursuivre son pas vers l'ouverture de la cave.",
+            "next": "h-1-3-sol"
+          },
+          {
+            "id": "ceinture",
+            "label": "Trancher les attaches plutôt que le corps",
+            "passage": "Hélio fit passer le bord d'une carte marquée sur la courroie qui retenait le fourreau, sans pousser la lame de papier vers la peau exposée sous le manteau gris.",
+            "next": "h-1-3-ceinture"
+          },
+          {
+            "id": "ecran",
+            "label": "Fermer la portée de la lame avec un écran de cartes",
+            "passage": "Hélio assembla trois cartes renforcées dans sa paume, assez larges pour interposer une surface solide entre le couteau et le passage où Yara essayait encore de reprendre son souffle.",
+            "next": "h-1-3-ecran"
+          }
+        ]
+      }
+    },
+    "h-1-4": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "L'homme finit à genoux, le poignet tenu loin de sa lame. Maël l'attacha au montant de la cour avec sa propre ceinture. Yara avait une coupure à la lèvre et assez de colère pour en oublier le sang. Hélio lui tendit un linge ; elle le pressa contre sa bouche sans le remercier. Elle regardait la plaque à la ceinture du prisonnier. Une moitié de cercle était gravée dessus. L'autre semblait avoir été arrachée.",
+        "« Rusk veut son matériel », dit l'homme. Maël récupéra la plaque avec un tissu. « Quel matériel ? » Le prisonnier choisit de fermer les yeux. La maison répondit à sa place. Un choc traversa le mur, du bas jusqu'au toit, et la petite cour perdit soudain plusieurs pouces de profondeur. Hélio se rattrapa à l'épaule de Maël. Il avait encore l'habitude d'y trouver un appui. Ils se regardèrent trop vite, puis s'écartèrent.",
+        "Sous l'auberge, le cercle ne soutenait plus seulement les murs. On l'avait relié aux marches du quai, à la passerelle et à un entrepôt construit contre le canal. Maël le vit dès qu'ils arrachèrent les premières planches. Une charge retirée ici se reportait ailleurs. Le changement de poids dans la rue n'était pas une attaque en train de recommencer ; c'était la structure entière qui cherchait où tomber.",
+        "Hélio descendit dans la salle basse. Au sol, plusieurs cercles se recoupaient. Certains signes étaient grossiers, d'autres trop familiers. Il trouva une de ses plaques de chambre fixée à l'envers sur une poutre. Sa protection de porte, prévue pour une petite surface, était devenue un élément d'une construction qu'il n'avait jamais dessinée. Il la toucha du pouce. Elle tentait toujours d'accomplir sa tâche, avec une obstination presque triste.",
+        "« Tu savais ? » demanda-t-il à Yara. Son amie attendait en haut des marches. « Pas que ça allait faire ça. » Ce n'était pas la réponse. Maël posa un doigt près du cercle central sans le toucher. Il fallait isoler les parties qui bougeaient et donner aux gens le temps de sortir. Hélio le savait aussi. Il aurait préféré que comprendre un danger empêche la colère d'y entrer. Ses mains restaient parfaitement capables de dessiner.",
+        "Au-dessus, un client appelait depuis une chambre dont la porte s'était coincée. Le toit grinçait. Une barrière qui coupe la magie calmerait le cercle, mais ferait aussi tomber les choses qui reposaient encore sur lui. Une barrière de gravité pouvait soutenir une partie du bâtiment ; elle déplacerait la charge ailleurs. Un effet durable demanderait plusieurs runes correctement placées, pas un grand geste brillant au milieu de la pièce.",
+        "Maël lui tendit une craie pour préparer le tracé. Leurs doigts se frôlèrent. Hélio reconnut la manière qu'il avait de regarder sa bouche lorsqu'il retenait une question. Rien n'aurait été plus facile que de trouver une plaisanterie tendre et de prétendre que leur ancien monde était intact. La colère contre Yara, la peur des cris au-dessus et les nuits qu'ils avaient laissées derrière eux occupaient pourtant le même escalier. Hélio devait lui répondre avant de pouvoir travailler près de lui sans penser à tout cela à la fois."
+      ],
+      "choice": {
+        "prompt": "Comment Hélio répond-il à la proximité retrouvée avec Maël ?",
+        "options": [
+          {
+            "id": "franc",
+            "label": "Lui dire qu'il a peur, sans plaisanter",
+            "passage": "Hélio leva les yeux vers Maël et lui dit qu'il avait peur pour les gens au-dessus, pour Yara et pour ce qu'il trouverait sous les planches de la cave.",
+            "next": "h-1-4-franc",
+            "set": {
+              "relation": "franc"
+            }
+          },
+          {
+            "id": "taquin",
+            "label": "Retrouver leur humour, en reconnaissant le danger",
+            "passage": "Hélio lui dit que leurs rendez-vous avaient déjà manqué de tenue, mais rarement de plafond, puis ajouta qu'il comptait vraiment sur lui pour sortir les derniers clients de la maison.",
+            "next": "h-1-4-taquin",
+            "set": {
+              "relation": "taquin"
+            }
+          },
+          {
+            "id": "distant",
+            "label": "Garder une distance claire pendant le travail",
+            "passage": "Hélio recula d'un demi-pas et demanda qu'ils s'en tiennent au cercle pour l'instant, sans chercher dans l'urgence une intimité qu'ils n'avaient pas encore remise d'accord entre eux.",
+            "next": "h-1-4-distant",
+            "set": {
+              "relation": "distant"
+            }
+          },
+          {
+            "id": "tendre",
+            "label": "Lui prendre brièvement la main",
+            "passage": "Hélio demanda d'un regard, puis posa ses doigts sur ceux de Maël lorsqu'il vit sa main rester ouverte près de la craie et de la marche où ils s'étaient arrêtés.",
+            "next": "h-1-4-tendre",
+            "set": {
+              "relation": "tendre"
+            }
+          },
+          {
+            "id": "pro",
+            "label": "Poser des règles simples pour travailler ensemble",
+            "passage": "Hélio demanda à Maël de vérifier chaque point avant qu'il le charge, et promit de dire tout de suite si une rune lui paraissait trop faible ou si sa réserve commençait à baisser.",
+            "next": "h-1-4-pro",
+            "set": {
+              "relation": "pro"
+            }
+          }
+        ]
+      }
+    },
+    "h-1-5": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Ils séparèrent le premier cercle avec trois cartes fixées à des endroits différents. Maël souleva une planche, Hélio posa les runes par contact, puis tous deux reculèrent pendant que les signes se répondaient. Le mur s'immobilisa. Au-dessus, les cris changèrent de ton : on pouvait de nouveau ouvrir deux portes. Hélio expira. La maison ne tenait pas pour toujours. Elle tenait pour une minute, et cette minute valait plusieurs personnes dehors.",
+        "Yara fit descendre les derniers clients. L'homme en manteau gris n'avait pas quitté son montant. Il observa les trois cartes avec un intérêt neuf. « Vous avez une sacrée réserve. » Hélio ramassa son bâton. « Et une patience beaucoup plus petite. » Il n'avait pas encore épuisé sa magie, loin de là. Le problème était ailleurs : on ne transforme pas une table bancale en terrasse en insistant simplement plus fort sur le même pied.",
+        "Un garçon du quartier revint avec deux agents. Ils emmenèrent le prisonnier et firent reculer les curieux. La rue se vidait enfin. Hélio aperçut la voisine sur le quai opposé, les cheveux défaits et les bras chargés de linge. Elle lui fit un signe qui voulait dire merci et je te tuerai si tu recommences, deux sentiments assez compatibles à Brévane.",
+        "Maël trouva la rupture dans le tracé principal. Il manquait une plaque de métal rectangulaire, retirée quelques minutes plus tôt. Elle liait les différentes charges ; sans elle, le cercle allait finir par choisir le chemin le plus court. L'homme de Rusk l'avait peut-être emportée, ou un autre avait réussi à sortir par la cave. Il faudrait la retrouver. Pas avant d'avoir empêché le quartier de s'arracher du bord.",
+        "Hélio fit courir les doigts sur les murs et les colonnes accessibles. Il pouvait distribuer des runes, faire des cartes un ensemble de supports et fermer un cercle à partir de ces points. Son corps suivait une géométrie qu'il connaissait mieux que le nom des rues. Mais aucune magie ne lui offrirait un endroit vide où jeter la charge. La maison voulait tomber. Il pouvait lui choisir une direction et retenir le reste.",
+        "Son salon occupait la partie haute la moins habitée à cette heure. La cuisine de Yara était vide mais pleine de ce qui faisait vivre l'auberge. La vieille passerelle n'avait plus personne dessus, au prix de couper le quartier en deux. L'entrepôt voisin appartenait à Rusk : le faire prendre la charge reviendrait à détruire des marchandises qu'il réclamerait. Rester lui-même à l'intérieur du cercle laisserait davantage de temps aux autres pour fixer les appuis, mais son bras se trouvait dans l'angle où les poutres allaient se refermer.",
+        "Maël comprit ce dernier calcul et le saisit à l'épaule. « N'en fais pas une bonne idée simplement parce que c'est toi qui paies. » Hélio le regarda, surpris de la dureté dans sa voix. Yara n'essaya pas de proposer sa propre cuisine. Ce silence pesa plus que les grincements du toit. Le jeune homme sentit enfin la taille réelle de la décision. Il n'allait pas trouver la bonne combinaison qui sauverait tout le monde et toutes les choses. Il allait choisir ce qu'ils perdraient."
+      ],
+      "choice": {
+        "prompt": "Où Hélio accepte-t-il de reporter la charge ?",
+        "options": [
+          {
+            "id": "salon",
+            "label": "Sacrifier son salon vide pour retenir le reste du bâtiment",
+            "passage": "Hélio ferma le cercle vers l'étage de son appartement, après avoir vérifié que personne n'y était resté et que les appuis protégeraient les portes voisines de la maison.",
+            "next": "h-1-5-salon",
+            "set": {
+              "perte": "salon",
+              "salon_intact": false
+            }
+          },
+          {
+            "id": "cuisine",
+            "label": "Faire prendre la charge à la cuisine vide de Yara",
+            "passage": "Hélio choisit le volume du fourneau et de la réserve basse pour recevoir la poussée, en faisant reculer Yara avant de relier les murs du dessous à ses runes.",
+            "next": "h-1-5-cuisine",
+            "set": {
+              "perte": "cuisine"
+            }
+          },
+          {
+            "id": "pont",
+            "label": "Abattre la passerelle évacuée pour libérer les maisons",
+            "passage": "Hélio vérifia le quai d'un regard avec Maël et détacha le lien qui retenait la vieille passerelle, vide de ses passants mais encore prise dans les appuis de la rue.",
+            "next": "h-1-5-pont",
+            "set": {
+              "perte": "pont"
+            }
+          },
+          {
+            "id": "entrepot",
+            "label": "Reporter la poussée sur l'entrepôt de Rusk, vide à cette heure",
+            "passage": "Hélio demanda à Maël de vérifier les accès de l'entrepôt puis orienta les derniers signes vers ce bâtiment inoccupé, en sachant très bien à qui appartenaient les choses à l'intérieur.",
+            "next": "h-1-5-entrepot",
+            "set": {
+              "perte": "entrepot"
+            }
+          },
+          {
+            "id": "bras",
+            "label": "Tenir l'appui une dernière seconde, au risque d'y laisser son bras droit",
+            "passage": "Hélio annonça le risque à Maël, lui demanda de tirer dès que le dernier appui serait fixé et maintint de sa peau le signe qui retenait encore la poutre contre le mur.",
+            "next": "h-1-5-bras",
+            "set": {
+              "perte": "bras"
+            }
+          }
+        ]
+      }
+    },
+    "h-1-6": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le bruit dura moins longtemps que prévu. Hélio le sut après, parce que dans sa tête il n'avait pas encore fini de tomber. Une rue changeait de forme avec des sons très ordinaires : du bois qui casse, du verre, une table qui bascule. Le cri de Maël coupa le reste. Puis les runes se stabilisèrent, et le silence qui suivit eut quelque chose d'insultant.",
+        "Yara se retrouva assise dans la cour, les genoux poussiéreux. Elle comptait les fenêtres, les passages et les gens revenus sur le quai. Tous les clients étaient sortis. Les voisins aussi. Les agents criaient des noms et recevaient des réponses. Ce compte-là était bon. Le reste ne se résumait pas à un chiffre. Hélio fixa l'endroit où sa décision venait de laisser une absence. Il aurait voulu éprouver un soulagement pur. Il n'en eut pas.",
+        "Maël revint près de lui avec de l'eau. Il lui parla, le regarda répondre, puis resta à la même hauteur. Leur ancienne façon de prendre soin l'un de l'autre se rappelait trop vite comment fonctionner. Hélio aurait pu trouver cela réconfortant si la clé dans sa poche ne lui frappait pas la cuisse chaque fois qu'il bougeait. Il la sortit et la déposa dans la main de Maël. « On réglera ça après. » L'autre referma les doigts. Il n'avait pas l'air de vouloir un deuxième départ ce matin-là.",
+        "Ils interrogèrent Yara à l'écart. Elle finit par nommer le lieu où le matériel de Rusk devait être rendu : une ancienne maison de bains, fermée depuis l'hiver, au bout du canal. Le marchand y achetait des objets enchantés d'occasion, des portes, des enseignes, de tout. Des gens vendaient ce qu'ils avaient quand leur magie ne suffisait plus à payer leur vie. D'autres ne posaient pas de questions sur les propriétaires. Yara avait trouvé le moyen d'y emprunter une réparation qu'elle ne pouvait pas acheter.",
+        "« Tu m'as laissé travailler dessus sans me le dire », dit Hélio. Elle ne répondit pas. Les explications viendraient peut-être. Il n'avait aucune envie de lui offrir la première. Maël regarda la rue détruite puis les marques au sol. Il pourrait demander une fermeture complète du bâtiment. Avec une équipe du matin, on retirerait le reste. La Traverse ne rouvrirait pas. Si Hélio voulait conserver ce qui pouvait encore tenir, ils devaient rapporter la plaque manquante avant la marée haute de la nuit.",
+        "Il vérifia ses cartes. Plusieurs étaient restées prises dans les appuis et il n'allait pas les reprendre pour se donner meilleure allure. Il avait encore un jeu, de l'énergie et un homme près de lui dont le départ avait laissé plus de dégâts qu'une fenêtre. Le matériel manquant ne se trouvait qu'à une heure de marche. Hélio releva la tête. Son sourire revint, plus petit et sans permission. « Bon. On va donc passer une mauvaise journée dans un endroit intéressant. » Maël soupira. Il le connaissait assez pour prendre cette phrase très au sérieux."
+      ],
+      "next": "h-2-arrivee"
+    },
+    "h-2-1": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Maël marcha près de lui sans chercher à remplir tout le silence. La chute les suivait. On ne se remettait pas de cela en tournant au coin de la rue. Hélio s'arrêta devant une fontaine, passa de l'eau sur son visage et attendit que le bruit cesse de revenir dès qu'il fermait les yeux.",
+        "« Tu peux rentrer », dit-il enfin. Maël leva un sourcil. « Tu viens de passer dix minutes à expliquer qu'il ne faut pas te laisser seul avec une idée. » « C'était une description, pas une demande d'aide. » L'autre lui tendit un morceau de pain acheté en chemin. Hélio le prit. Ils avaient gardé ce genre de conversation après s'être quittés, comme on conserve une tasse qu'on n'arrive pas à jeter.",
+        "Ils mangèrent assis sur le bord d'un quai. Plus loin, un cordonnier séchait une botte entre ses paumes tandis que son client essayait de ne pas tomber sur un pied. Une fille faisait changer la couleur de ses cheveux dans un reflet, incapable de choisir la bonne nuance. Une grande partie de Brévane ignorait encore ce qui s'était passé à La Traverse. Hélio trouva cela injuste pendant quelques secondes, puis agréable. Quelque part, des gens pouvaient continuer à rater des choses sans que cela leur coûte un toit.",
+        "Maël expliqua le problème de la plaque avec des pierres et une croûte de pain. Hélio lui fit remarquer qu'il connaissait les cercles runiques. « Oui. Moi, j'ai faim et je réfléchis avec ce qu'il reste. » La pièce manquante conduisait le poids vers un vieux support sous le canal. Sans son dessin, ils ne sauraient pas où reprendre la charge lorsque la marée pousserait contre les murs de la cave. Même les pertes de l'après-midi n'avaient été qu'un arrêt provisoire du mouvement.",
+        "Rusk avait choisi une ancienne maison de bains pour ranger ses marchandises. Des salles humides, des passages bas et des portes assez épaisses pour ne pas entendre les voisins. Il n'était pas seul à vendre de l'occasion. Il se distinguait surtout par sa façon d'envoyer des gens armés récupérer ce qu'il jugeait encore à lui. Hélio regarda la carte dont le coin portait une trace de sang. L'homme du matin aurait pu tuer Yara pour un morceau de métal. Ce n'était pas un tarif acceptable.",
+        "Au bout du canal, les bains apparurent entre deux saules. Des vitres bleu-vert retenaient le jour qui baissait, une porte de service donnait sur un petit débarcadère, le lierre courait sur la pierre claire. Rien n'annonçait une forteresse. Une personne que Hélio avait aidée dans la rue les rejoignit avant la dernière arche. Elle connaissait un détail des bains qu'ils n'auraient pas trouvé en regardant simplement les fenêtres. Leur premier geste de la journée venait de les rattraper."
+      ],
+      "choice": {
+        "prompt": "Quel avantage préparer avant d'approcher la porte des bains ?",
+        "options": [
+          {
+            "id": "regarder",
+            "label": "Observer les objets qui entrent et sortent",
+            "passage": "Hélio proposa de regarder une minute les livraisons pour distinguer les employés des clients et trouver où une plaque de soutien aurait pu être déposée dans les bains après son arrivée.",
+            "next": "h-2-1-regarder"
+          },
+          {
+            "id": "reposer",
+            "label": "Prendre une courte pause avant d'entrer",
+            "passage": "Hélio demanda quelques minutes sans magie, le temps de laisser sa réserve remonter encore et de vérifier ses cartes après l'effort de la rue et de la cave de La Traverse.",
+            "next": "h-2-1-reposer"
+          },
+          {
+            "id": "retour",
+            "label": "Repérer d'abord le chemin du retour",
+            "passage": "Hélio préféra regarder les marches qui rejoignaient le quai avant de s'approcher d'une porte derrière laquelle quelqu'un risquait de vouloir les garder plus longtemps que prévu.",
+            "next": "h-2-1-retour"
+          },
+          {
+            "id": "parler",
+            "label": "Mettre Maël et lui d'accord sur leur objectif",
+            "passage": "Hélio demanda à Maël de nommer ce qu'ils venaient chercher, puis répéta qu'ils repartiraient avec la plaque sans transformer les bains en terrain de règlement de tous les comptes de la journée.",
+            "next": "h-2-1-parler"
+          },
+          {
+            "id": "cartes",
+            "label": "Préparer quelques cartes utilisables en urgence",
+            "passage": "Hélio choisit les surfaces les moins abîmées et répartit les cartes entre sa poche et sa main pour pouvoir les marquer sans chercher tout son paquet dans un passage trop étroit.",
+            "next": "h-2-1-cartes"
+          }
+        ]
+      }
+    },
+    "h-2-2": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils gagnèrent le côté de la maison sans frapper à la grande porte. Hélio n'aurait pas refusé une vraie négociation si Maël n'avait pas remarqué le petit trait brillant à hauteur de cheville : un fil tendu entre deux plaques. Le genre de dispositif qui ne sonne pas forcément une cloche lorsqu'on le touche. Le jeune homme se baissa pour l'examiner. Il n'avait pas envie d'apprendre son effet par l'expérience.",
+        "Une femme gardait l'entrée avec une tasse et un livre. Elle ne portait pas d'arme visible. Lorsque Hélio s'arrêta de l'autre côté du fil, elle leva les yeux et sourit. « Vous venez vendre ou racheter ? » Il montra son jeu. « J'hésite. Les deux ont l'air mauvais pour moi. » Elle regarda les cartes, puis le visage de Maël. Le sourire disparut. Elle connaissait l'homme qui inspectait les bâtiments. Ce n'était pas nécessairement une bonne chose.",
+        "« Une plaque manque à La Traverse », dit Hélio. « On vient la reprendre avant que le canal choisisse une chambre. » Elle ferma le livre sur son doigt pour garder la page. La pièce avait été livrée une heure plus tôt. Rusk serait de retour dans la soirée. Il voulait la voir lui-même avant qu'on la revende. Aucun de ces mots ne ressemblait à un refus absolu, mais aucun n'ouvrait non plus le battant.",
+        "Maël demanda si elle savait que des maisons risquaient de céder. Elle baissa les yeux vers le fil. « Je sais ce que coûte une bonne nuit. » Hélio comprit qu'elle payait probablement une chambre ici avec ses heures de garde. Cela ne la rendait pas innocente de tout. Cela changeait simplement le poids de la porte qu'on lui demandait de tenir. Il n'avait aucune envie de la jeter dans le canal pour gagner trois minutes.",
+        "Derrière elle, un cliquetis se fit entendre. Un homme transportait des lanternes dont la lumière restait blanche malgré l'absence de flamme. Une autre personne portait un volet qui remuait comme s'il essayait encore de se fermer. Les objets avaient gardé une partie de l'énergie qu'on leur avait donnée. On les vendait avec leurs habitudes, leurs défauts et parfois leurs colères. Hélio reconnut une poignée qu'il avait réparée deux ans plus tôt. Sa cliente avait déménagé après une hausse de loyer.",
+        "La gardienne suivit son regard. « Tout n'est pas volé. » Il la crut. Il crut aussi qu'elle avait besoin de le dire. Sa clé pendait près de la tasse. Maël resta sur le côté, assez loin pour ne pas transformer la conversation en menace. Hélio pouvait payer une visite, proposer un échange provisoire, expliquer franchement le danger ou obtenir qu'on appelle un autre employé. Il pouvait encore neutraliser le fil et entrer sans son accord. Chaque méthode donnerait un ton différent à la suite.",
+        "Il glissa un pouce sur le dos d'une carte, sans la marquer. Les signes n'étaient pas une réponse à toutes les phrases difficiles. Ils étaient une réponse formidable aux serrures. Le problème, ici, portait encore une tasse chaude et regardait la porte comme quelqu'un qui ne pouvait pas se permettre de la perdre. Hélio releva les yeux et choisit la première chose qu'il allait lui offrir : une vérité, un prix, une distraction ou une raison de détourner son regard."
+      ],
+      "choice": {
+        "prompt": "Comment obtenir le passage devant la gardienne ?",
+        "options": [
+          {
+            "id": "franchise",
+            "label": "Expliquer franchement le danger pour les maisons",
+            "passage": "Hélio donna l'adresse de La Traverse et les noms des voisins, sans prétendre que la gardienne serait innocente de tout si elle se contentait maintenant de les laisser franchir la porte des bains.",
+            "next": "h-2-2-franchise"
+          },
+          {
+            "id": "payer",
+            "label": "Payer une visite et garder la preuve de l'achat",
+            "passage": "Hélio demanda le prix d'une entrée pour acheter du matériel, puis posa les pièces sur le rebord à côté de la tasse avant de nommer la plaque qu'il souhaitait examiner dans les salles.",
+            "next": "h-2-2-payer"
+          },
+          {
+            "id": "echange",
+            "label": "Proposer une réparation comme droit de visite",
+            "passage": "Hélio montra le battant qui frottait sur la pierre et proposa une petite rune de glissement à durée courte, assez pour la laisser ouvrir sans tirer tout le poids de la porte.",
+            "next": "h-2-2-echange"
+          },
+          {
+            "id": "relais",
+            "label": "Demander qu'un employé les accompagne",
+            "passage": "Hélio proposa d'attendre une personne qui pourrait leur montrer la plaque sans les laisser seuls près des autres marchandises, en gardant Maël assez loin pour ne pas transformer la demande en inspection officielle.",
+            "next": "h-2-2-relais"
+          },
+          {
+            "id": "fil",
+            "label": "Neutraliser le fil et imposer le passage",
+            "passage": "Hélio avertit la gardienne de reculer, posa une carte contre la plaque du seuil et isola le fil pendant que Maël ouvrait le battant du côté qui ne la mettait pas en danger.",
+            "next": "h-2-2-fil"
+          }
+        ]
+      }
+    },
+    "h-2-3": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La porte les laissa passer. Hélio longea la tasse posée sur le rebord et fit attention à ne pas renverser ce petit bout de matin resté dans l'après-midi. À l'intérieur, les bains sentaient la pierre mouillée, le métal et les herbes sèches qu'on brûlait pour chasser l'humidité. Les anciennes baignoires avaient été vidées. Des étagères occupaient les alcôves. On aurait pu s'y promener une heure en oubliant pourquoi on était venu.",
+        "Hélio trouva une cuillère capable de remuer seule, trois chaises qui avaient reçu le même enchantement de confort et un miroir dont le reflet arrivait avec un léger retard. Il lui tira la langue. Son double le fit après lui, visiblement déçu par la qualité du spectacle. Maël passa devant sans sourire. Il s'arrêta néanmoins pour empêcher une chaise de suivre Hélio. Le charme avait reconnu quelqu'un qui désirait beaucoup s'asseoir.",
+        "La pièce de métal reposait dans une salle basse, sur un banc de pierre. Deux plaques plus petites portaient une moitié de cercle, une tasse fendue gardait un fond de thé à côté. Hélio posa son jeu à distance et examina les traces. L'ancien cercle de La Traverse avait été coupé proprement. Quelqu'un avait retiré cette partie en sachant qu'elle empêchait les charges de se rejoindre n'importe où. Il pouvait comprendre le travail. Il ne comprenait pas encore pourquoi Yara l'avait laissé faire.",
+        "Maël rapprocha la lampe. Sur le revers, une de ses anciennes marques de contrôle avait été grattée. Il ferma les yeux un instant. Il était venu inspecter la pièce un mois plus tôt. On lui avait montré le cercle d'origine, le bon, dégagé du plancher. On avait installé la copie par-dessus après son départ. Sa signature n'avait pas été falsifiée ; on l'avait simplement gardée visible sur une réparation qu'il n'avait jamais vue.",
+        "« Elle savait », dit-il. Hélio regarda le dessin, puis la marque de sa propre rune. Leurs deux noms avaient servi à rendre la maison rassurante. Ils avaient cru chacun que l'autre avait regardé la partie qui lui échappait. Yara n'avait pas eu besoin de les tromper avec un sort immense. Elle avait utilisé leur confiance et leurs habitudes. Hélio sentit la déception l'atteindre avec un retard presque comique. Il pensa au miroir et n'eut plus du tout envie de lui faire une grimace.",
+        "Un tiroir ouvert contenait des reçus, quelques dessins et une enveloppe au nom de Yara. Elle avait pris l'argent de la vente de la plaque pour payer le renouvellement du bail. La somme suffirait à garder l'auberge trois mois de plus. Rusk lui vendait en même temps la copie destinée à remplacer ce qu'il rachetait. Deux façons de gagner sur la même peur. Hélio resta immobile devant les chiffres. Trois mois. Son amie avait joué leur rue pour acheter une saison.",
+        "La porte du fond grinça. Un homme entra avec deux sacs, vit la lampe de Maël et les reposa lentement. Il avait des cheveux très courts, une chemise pâle impeccable et un calme qui ne ressemblait pas à celui d'un client surpris. Rusk regarda la plaque, puis les mains d'Hélio. « Tu es meilleur que ce qu'elle disait. » Le jeune homme récupéra ses cartes. « Elle dit beaucoup de choses, aujourd'hui. » Derrière le marchand, un second homme tira le verrou."
+      ],
+      "choice": {
+        "prompt": "Comment Hélio accueille-t-il Rusk devant la plaque ?",
+        "options": [
+          {
+            "id": "prix",
+            "label": "Lui demander le prix réel de sa réparation",
+            "passage": "Hélio posa une carte ordinaire contre sa paume et demanda à Rusk de dire combien de fois Yara aurait dû le payer avant de garder réellement une maison stable pour son auberge.",
+            "next": "h-2-3-prix"
+          },
+          {
+            "id": "vole",
+            "label": "Lui dire qu'il reprend ce qui met la rue en danger",
+            "passage": "Hélio refusa le mot vol avant qu'il soit prononcé et indiqua la plaque sur le banc, en précisant que les maisons n'attendraient pas l'ouverture d'un commerce pour cesser de tomber.",
+            "next": "h-2-3-vole"
+          },
+          {
+            "id": "temps",
+            "label": "Garder Rusk occupé pendant que Maël regarde l'issue",
+            "passage": "Hélio fit mine de s'intéresser à la marque grattée et demanda une explication assez précise pour obliger le marchand à suivre son regard au lieu de surveiller immédiatement toutes leurs mains.",
+            "next": "h-2-3-temps"
+          },
+          {
+            "id": "colere",
+            "label": "Lui montrer clairement sa colère",
+            "passage": "Hélio demanda au marchand s'il connaissait les noms des gens qui dormaient au-dessus de ses bonnes affaires, sans prendre cette fois la peine d'enrober la question dans une plaisanterie.",
+            "next": "h-2-3-colere"
+          },
+          {
+            "id": "marche",
+            "label": "Proposer de rapporter la plaque après la nuit",
+            "passage": "Hélio offrit au marchand une solution assez simple pour voir s'il voulait vraiment son objet ou surtout conserver une prise sur les réparations et les gens qui dépendaient de ses plaques dans le quartier.",
+            "next": "h-2-3-marche"
+          }
+        ]
+      }
+    },
+    "h-2-4": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Rusk ne voulait pas se battre près de ses marchandises. Il le précisa en posant une petite pièce noire sur le banc. Les runes d'Hélio perdirent leur lumière. La lampe de Maël s'éteignit, la chaise qui suivait encore le jeune homme retomba sur ses quatre pieds et la tasse cessa de maintenir son thé tiède. La barrière coupait les usages de magie autour du banc, y compris ceux qui auraient arrangé le propriétaire. C'était au moins honnête dans sa brutalité.",
+        "Hélio fit passer le bâton devant lui. Il aimait ses cartes, mais le bois n'avait pas besoin de croire en lui pour rester solide. Le premier homme attaqua avec une lame courte. Hélio écarta le coup, frappa le genou et reçut un coude dans les côtes. L'air sortit sans lui demander son avis. Il recula vers l'ancien bassin pendant que Maël empêchait le second de rejoindre la porte.",
+        "Rusk bougea la pièce noire d'un pied. L'effet le suivit sur une courte distance. Il ne pouvait pas garder toute la salle fermée à la magie. Hélio vit la ligne sur le sol avant de trouver le temps de l'atteindre. Une petite plaque de lumière, posée trop loin, brillait encore sous une étagère. Il lança une carte ordinaire pour distraire l'homme à la lame, plongea derrière un pilier et posa deux doigts nus contre une seconde carte. Le signe apparut. Trois pas pouvaient faire une différence énorme.",
+        "La carte trancha une sangle au-dessus du bassin. Une grille d'étagère bascula et sépara les combattants sans toucher Maël. Des objets tombèrent dans la baignoire vide. Une cuillère se mit à remuer avec rage. Hélio eut le temps de penser qu'il faudrait beaucoup de soupe pour l'arrêter. Puis une vague de froid le frappa au visage. L'adversaire possédait sa propre affinité et savait encore s'en servir quand il quittait la zone de Rusk.",
+        "Le jeune homme marqua quatre cartes, deux faces chacune : adhérence et résistance. Il les joignit d'un geste pour faire un petit écran, pas assez large pour se cacher entièrement. Le froid éclata contre leurs bords. Le papier raidit, une jointure céda, Hélio renforça le point d'un doigt nu. Il dépensait vite. La réserve qui lui permettait tant d'improvisations n'était pas vide, mais elle commençait à perdre sa facilité. Une rune trop pressée deviendrait une excellente façon de se blesser lui-même.",
+        "Maël lança une corde par-dessus la rampe. Elle se raidit entre ses doigts ; son affinité lui permettait de donner de la tenue à ce qu'il tirait, pas de créer un pont à partir de rien. Il accrocha le second homme à un montant et le repoussa hors du passage. Rusk, pendant ce temps, rangeait la plaque manquante dans son sac. Il n'avait aucune intention d'attendre que ses employés gagnent.",
+        "Hélio avait de nouveau de la magie dès qu'il gardait la distance. Il pouvait ouvrir une issue, arracher le sac, fermer le chemin du marchand ou rejoindre Maël pour en finir avec les hommes qui les retenaient. Il avait aussi le bâton dans la paume et une balustrade assez basse pour la passer d'un saut. La prochaine décision devait lui donner la plaque sans laisser son ancien amant payer le détour avec une lame dans le dos."
+      ],
+      "choice": {
+        "prompt": "Comment reprendre la plaque sans laisser Maël derrière ?",
+        "options": [
+          {
+            "id": "sac",
+            "label": "Attirer le sac avec une carte adhésive",
+            "passage": "Hélio se plaça hors de la zone noire, marqua une carte d'adhérence et la lança contre la lanière du sac pendant que Rusk essayait de rejoindre la porte de service derrière le bassin.",
+            "next": "h-2-4-sac"
+          },
+          {
+            "id": "baton",
+            "label": "Fermer la sortie de Rusk au bâton",
+            "passage": "Hélio traversa la petite bande où la magie cessait et se servit du bois pour barrer le genou du marchand au moment où celui-ci voulait passer le coin du banc avec son sac.",
+            "next": "h-2-4-baton"
+          },
+          {
+            "id": "sol",
+            "label": "Alléger le passage entre Maël et l'issue",
+            "passage": "Hélio posa de son pied une rune sur la pierre sèche, assez loin de la pièce noire pour que le signe rende leur prochaine traversée plus rapide sans emporter tout le poids du bassin.",
+            "next": "h-2-4-sol"
+          },
+          {
+            "id": "ecran",
+            "label": "Protéger Maël pendant qu'il prend le sac",
+            "passage": "Hélio renforça l'écran de cartes et se plaça entre la lame et la corde, en demandant clairement à Maël d'aller chercher le sac au lieu de garder les yeux sur ses propres mouvements.",
+            "next": "h-2-4-ecran"
+          },
+          {
+            "id": "noire",
+            "label": "Écarter la pièce qui annule la magie",
+            "passage": "Hélio utilisa son bâton pour pousser l'objet noir derrière une étagère vide, loin des pieds et des mains qui pouvaient le ramener au centre du combat dans les anciennes salles de bains.",
+            "next": "h-2-4-noire"
+          },
+          {
+            "id": "salon",
+            "label": "Rappeler un jeu de cartes depuis le salon encore intact",
+            "passage": "Hélio appela le paquet laissé dans son salon et sentit les cartes neuves apparaître dans sa main, une réserve matérielle qu'il n'avait pas besoin d'aller chercher au milieu des hommes de Rusk.",
+            "next": "h-2-4-salon",
+            "when": {
+              "salon_intact": true
+            }
+          }
+        ]
+      }
+    },
+    "h-2-5": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils gagnèrent la porte du fond avec la plaque serrée dans un linge. Rusk avait reculé de l'autre côté du bassin ; ses hommes relevaient l'étagère en jurant. Hélio plaça une carte contre le verrou, rune d'adhérence vers le métal et rune de résistance au revers, puis tira Maël dans le passage. Un premier choc fit vibrer le battant derrière eux. Cela tiendrait quelques instants, pas une éternité. C'était exactement ce qu'il avait demandé.",
+        "L'escalier de service remontait jusqu'à une terrasse étroite. Maël posa la plaque à plat et se pencha sur le souffle d'Hélio. « Tu es blessé où ? » Le jeune homme hésita entre une réponse sérieuse et quelque chose qui les aiderait à supporter le reste. Maël avait du sang sur la manche ; rien de profond, une coupure prise contre une ferrure. Hélio le vit le premier et sortit le tissu qu'il gardait dans sa poche.",
+        "Le silence de cet endroit leur tomba dessus comme une intimité retrouvée sans rendez-vous. Ils avaient une porte à tenir, une marée à devancer et beaucoup trop de choses à se dire pour le faire correctement entre deux bassins. Hélio voulut toucher la cicatrice sous le menton de Maël. Il s'arrêta avant. Le geste lui appartenait encore dans sa mémoire, pas nécessairement dans la vie de l'autre.",
+        "« Je ne savais pas que tu avais contrôlé ce cercle », dit-il. Maël regarda la rue par la lucarne. « Tu n'appelais plus. » « Tu répondais comme un compte rendu. » Le reproche avait attendu plusieurs semaines et sortit avec toute sa fraîcheur. L'autre posa le linge sur sa manche, puis releva les yeux. « Parce que si je te demandais si tu allais bien, tu me raconterais une bonne histoire. Tu sais très bien faire ça. »",
+        "Hélio reçut la phrase plus durement que le coup aux côtes. Il avait mis de la bonne humeur partout où il ne savait pas quoi déposer d'autre. Il n'avait jamais voulu en faire une porte fermée. Pourtant, Maël s'était retrouvé dehors un certain nombre de fois avant de choisir de partir pour de bon. Le reconnaître n'effaçait pas les manières dont Maël avait aussi blessé leur relation. Cela empêchait seulement leur séparation d'appartenir à un seul coupable.",
+        "Un bruit de pas les rappela au palier. Ils durent avancer jusqu'à la lucarne donnant sur le débarcadère. La plaque pesait trop pour qu'Hélio la fasse simplement disparaître vers son salon ; sa magie de téléportation ramenait de petits objets depuis la zone qu'il avait définie, pas des inconnus depuis n'importe quelle pièce. Il fallait porter ce métal. Il fallait aussi descendre sans le jeter dans le canal.",
+        "Sous eux, un petit bateau de service attendait, attaché à un poteau. De l'autre côté de la cour, la gardienne avait quitté sa chaise et regardait le chemin par lequel ils étaient entrés. Elle pouvait les voir s'ils appelaient. Hélio avait de quoi fabriquer une échelle de cartes renforcées, réduire le poids de la plaque ou demander un secours moins élégant. Maël lui laissa le temps de finir sa respiration. Ce simple délai lui donna envie de ne pas plaisanter pour une fois."
+      ],
+      "choice": {
+        "prompt": "Comment rejoindre le quai depuis la terrasse ?",
+        "options": [
+          {
+            "id": "echelle",
+            "label": "Assembler une courte échelle de cartes renforcées",
+            "passage": "Hélio disposa les cartes sur les attaches de la terrasse, ajouta résistance et adhérence par contact puis testa la première prise avant de demander à Maël de lui confier une partie de la descente.",
+            "next": "h-2-5-echelle"
+          },
+          {
+            "id": "poids",
+            "label": "Alléger le métal pendant que Maël le descend",
+            "passage": "Hélio posa la main nue contre la plaque puis installa une petite zone de gravité plus faible autour d'elle, juste le temps de permettre à Maël de guider la charge le long du mur.",
+            "next": "h-2-5-poids"
+          },
+          {
+            "id": "bateau",
+            "label": "Faire approcher la barque de service",
+            "passage": "Hélio fixa une carte adhésive au bout du lien lancé vers le bateau, puis demanda à Maël de ramener le bois sous la terrasse plutôt que de sauter vers lui depuis la lucarne.",
+            "next": "h-2-5-bateau"
+          },
+          {
+            "id": "gardienne",
+            "label": "Demander de l'aide à la gardienne",
+            "passage": "Hélio appela depuis la terrasse et annonça clairement qu'ils avaient le métal, que Rusk les poursuivait et qu'ils voulaient seulement rejoindre la rue sans entraîner quelqu'un d'autre dans une nouvelle bagarre.",
+            "next": "h-2-5-gardienne"
+          },
+          {
+            "id": "corde",
+            "label": "Descendre avec la corde tenue par Maël",
+            "passage": "Hélio choisit le trajet le plus direct et demanda à Maël de vérifier les points d'attache pendant qu'il préparait le passage du métal sans laisser la plaque glisser dans leurs propres pieds.",
+            "next": "h-2-5-corde"
+          }
+        ]
+      }
+    },
+    "h-2-6": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils touchèrent le quai quand le soleil finissait de quitter les vitres. Hélio s'assit sur la pierre avec la délicatesse d'un sac qu'on dépose trop tard. Maël gardait la plaque contre sa cuisse. Les bruits des bains leur arrivaient assourdis par le mur et l'eau. Rusk ne déboucha pas immédiatement derrière eux. Cela ne voulait pas dire qu'il leur souhaitait une bonne soirée.",
+        "Hélio laissa les dernières petites runes s'éteindre dans ses cartes. Il n'avait plus besoin de maintenir l'échelle, le lien ou le passage qui leur avait servi. Sa réserve commença lentement à remonter. Il connaissait cette sensation sans la confondre avec le fait d'être remis de tout. Ses côtes protestaient encore, la fatigue restait dans ses gestes et les nouvelles concernant Yara n'avaient trouvé aucun coin confortable où s'installer.",
+        "Une vendeuse de soupe les regarda approcher, jugea leurs manches et posa deux bols avant de parler du prix. Maël paya avec des pièces. Elle avait une affinité pour les goûts : un petit geste au-dessus du bouillon corrigea l'amertume du fond. Hélio trouva le résultat délicieux. « Vous ne pourriez pas faire ça avec les conversations ? » Elle lui répondit que celles-là demandaient des tarifs qu'il n'avait probablement pas les moyens de payer.",
+        "Ils mangèrent près du rideau fermé d'une boutique. Le dessin de la plaque devenait enfin lisible sous une lumière stable. Maël le suivit avec un doigt. Hélio compléta le cercle dans son carnet, sans donner d'énergie aux traits. Le support ancien se trouvait bien sous la passerelle, mais un second passage rejoignait les bains par une écluse oubliée. Rusk avait fait courir la charge jusqu'à ses propres réserves avant d'en retirer le contrôle. Les acheteurs de réparations revenaient forcément le voir.",
+        "Cela changeait leur objectif pour la nuit. Reposer la plaque comme avant rendrait au marchand une prise sur La Traverse. Ils devaient reprendre le cercle depuis l'écluse, le fermer sur la pierre du canal et retirer le lien qui le ramenait aux bains. Il faudrait l'accord de Maël pour le support et la main d'Hélio pour les runes. Ce n'était pas une façon détournée de recoller leur couple. C'était un travail à deux dont ils pouvaient au moins choisir les règles.",
+        "Hélio envoya un message à Yara par le comptoir de la vendeuse. Une petite feuille enchantée porterait l'écriture jusqu'au relais de La Traverse ; elle paierait son prochain transport en mettant elle-même un peu d'énergie dans la réserve de l'objet. La réponse tarda. Puis quelques mots apparurent : J'attends à l'écluse. Je vous dois la vérité. Le jeune homme fixa la feuille, partagé entre l'envie de la froisser et celle de la garder.",
+        "Ils avaient encore une demi-heure de marche et le temps de laisser leur magie revenir un peu. Hélio remit ses lunettes sur ses cheveux. Maël récupéra le métal, puis lui tendit la main pour l'aider à se relever. Il la prit. La ville changeait de lumière autour d'eux. Cette fois, ils connaissaient l'endroit où le danger attendait. Ils ne connaissaient pas encore tout ce qu'ils accepteraient de perdre pour le laisser derrière."
+      ],
+      "next": "h-3-1"
+    },
+    "h-3-1": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Yara avait posé une lanterne au ras des marches de l'écluse. Sa lumière faisait ressortir les anciennes marques sur la pierre, sous les reflets plus hauts du quai. Le canal montait lentement. Chaque clapot contre les degrés semblait essayer une hauteur différente avant de choisir celle où l'eau finirait par rester.",
+        "De larges degrés menaient au mécanisme de bois. Une roue de laiton permettait de fermer la porte du bassin ; un passage voûté suivait le mur sous les maisons. On ne pouvait pas tout voir depuis le quai. Maël descendit de deux marches pour examiner le support. Hélio resta devant Yara. Son amie avait la lèvre gonflée et les yeux très rouges, ce qui ne rendait aucune réponse plus simple.",
+        "« J'ai vendu la plaque », dit-elle. Cette fois, elle ne commença pas par le propriétaire, les loyers ou les chambres vides. Elle avait voulu payer trois mois de plus. Rusk lui avait fourni une copie et demandé des plaques d'Hélio pour la renforcer. Elle les avait prises dans les chambres. L'effet avait tenu quelques jours. Puis le marchand avait exigé une nouvelle somme pour venir regarder les défauts. Elle avait refusé. L'homme du matin était venu enlever le morceau qui permettait à la copie de tenir.",
+        "Hélio l'écouta jusqu'au bout. Sa colère ne brûlait plus aussi vite. Elle avait trouvé de quoi s'asseoir. « Tu pouvais me demander. » « Tu aurais dit oui. » « Oui. » Yara baissa les yeux. « C'est justement ce que je ne supportais plus. » La phrase lui fit mal d'une manière qu'il n'avait pas prévue. Elle ne voulait pas être sauvée encore une fois par quelqu'un de plus jeune, de plus doué et toujours capable de sourire devant la facture. Elle avait voulu réussir une chose sans lui.",
+        "Il pouvait comprendre la honte sans lui offrir les clés du pardon. Une fenêtre claqua plus haut dans la ville. Hélio pensa aux personnes qui n'avaient pas participé à cette conversation et vivaient pourtant maintenant dans ses conséquences. Yara regarda l'endroit abîmé de son ami, son manteau, la rue derrière lui. Ce qu'il avait choisi de payer dans la salle basse existait encore entre eux, impossible à transformer en belle preuve d'amitié.",
+        "Maël les rejoignit. Le passage ancien tenait, mais il faudrait reprendre trois appuis dans la galerie et fermer le cercle au milieu de la salle de l'écluse. Les agents prévenus par Yara arrivaient avec une équipe pour l'auberge. Leur chef ne laisserait personne entrer dans le bâtiment au lever du jour sans avoir compris ce qu'on avait fait. Rusk avait lui aussi entendu parler de la marée. Il ne tarderait pas à découvrir qu'on ne lui rapportait pas sa prise sur les maisons.",
+        "Yara posa sa lanterne au centre d'une marche et attendit. Elle avait terminé l'histoire qu'elle était capable de raconter. Hélio devait décider ce qu'il acceptait d'elle cette nuit : un travail, une dette, une présence silencieuse ou un témoignage qu'on ne pourrait plus reprendre. Il pouvait aussi lui demander de partir, même si cela rendait les trois appuis plus difficiles à tenir. L'aimer comme une amie ne l'obligeait pas à lui donner immédiatement la place qu'elle avait perdue."
+      ],
+      "choice": {
+        "prompt": "Quelle place Hélio laisse-t-il à Yara cette nuit ?",
+        "options": [
+          {
+            "id": "attendre",
+            "label": "Remettre le pardon à plus tard et lui demander de travailler",
+            "passage": "Hélio dit à Yara qu'il pouvait encore lui confier une lanterne et une tâche, mais pas une réponse sur leur amitié avant d'avoir passé la nuit et regardé les pertes de la rue.",
+            "next": "h-3-1-attendre",
+            "set": {
+              "yara": "attendre"
+            }
+          },
+          {
+            "id": "dette",
+            "label": "Lui demander de s'engager à réparer les dégâts",
+            "passage": "Hélio demanda que Yara nomme devant Maël ce qu'elle avait fait et les réparations auxquelles elle contribuerait, sans utiliser leurs liens pour laisser les voisins payer tout ce qu'ils venaient de perdre.",
+            "next": "h-3-1-dette",
+            "set": {
+              "yara": "dette"
+            }
+          },
+          {
+            "id": "rupture",
+            "label": "Lui demander de partir de son espace de travail",
+            "passage": "Hélio dit à Yara qu'il n'était pas capable de travailler près d'elle sans revivre le sous-sol et préférait la savoir au poste pour raconter les faits plutôt qu'au bord de son prochain cercle.",
+            "next": "h-3-1-rupture",
+            "set": {
+              "yara": "rupture"
+            }
+          },
+          {
+            "id": "temoin",
+            "label": "Lui demander de tout raconter aux agents dès maintenant",
+            "passage": "Hélio demanda à Yara de porter la vérité au poste avant d'entamer une nouvelle réparation, avec ses noms et les gestes qu'elle avait cachés, pour que le quartier ne découvre pas tout par une rumeur.",
+            "next": "h-3-1-temoin",
+            "set": {
+              "yara": "temoin"
+            }
+          },
+          {
+            "id": "pardon",
+            "label": "Lui laisser une chance, sans effacer sa responsabilité",
+            "passage": "Hélio dit à Yara qu'il ne voulait pas la perdre, puis ajouta qu'elle n'aurait plus le droit de choisir ce qu'il pouvait savoir sous prétexte de lui éviter une nouvelle facture ou une peine.",
+            "next": "h-3-1-pardon",
+            "set": {
+              "yara": "pardon"
+            }
+          }
+        ]
+      }
+    },
+    "h-3-2": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Ils préparèrent le tracé dans la salle de l'écluse. Hélio posa ses cartes une par une sur le sol sec, sans encore les charger. Un effet assez long pour soutenir la marée avait besoin de points stables, d'un cercle complet et d'une réserve qu'il faudrait surveiller. Une rune isolée sur une porte ne deviendrait pas toute une architecture simplement parce qu'il lui demandait gentiment. Il retira une première carte qui se trouvait trop près d'une fissure et recommença.",
+        "Maël testa la roue de laiton, puis le battant du canal. Il donnait de la tenue à la corde qui retenait le bois pendant qu'il en examinait le pied. Son pouvoir l'aidait à reconnaître ce qui tirait contre lui. Il ne lui offrait pas le nom des choses cachées dans le mur. Il se mouilla jusqu'au genou, ressortit avec des algues sur la manche et reçut d'Hélio un regard très admiratif. « Pour le travail ou pour la chemise ? » demanda-t-il. « Je peux reconnaître deux qualités à la fois. »",
+        "Ils fixèrent la plaque manquante sur un socle, au centre. Les vieux signes rejoignaient enfin les nouveaux sans se battre. Hélio sentit le circuit possible comme on sent un escalier sous son pied dans le noir. Il lui manquait encore les trois points de la galerie, trop éloignés pour les atteindre depuis la salle. Les cartes permettraient de porter une partie de l'effet jusque-là, à condition de les poser sur de vrais appuis et de ne pas demander au papier de devenir une colonne.",
+        "Son énergie était revenue avec le repos sur le quai. Pas tout à fait au niveau du matin, mais assez pour que la première ligne apparaisse sans hésiter. Il la coupa aussitôt. Le cercle devait s'activer ensemble. Il serait tentant de laisser un morceau fonctionner pendant qu'on préparait la suite ; les charges se mettraient alors à chercher leur route avant qu'elle soit terminée. Maël vérifia le dernier angle. Hélio le laissa vérifier. La confiance, ici, pouvait être une chose plus précise qu'un joli mot.",
+        "Un marchand traversa le quai au-dessus d'eux. Son panier flottait bas, fatigué par la journée. Il le posa pour le porter de ses deux mains et continua en pestant. Le simple geste rassura Hélio : un manque de magie n'était pas un verdict sur la personne qui l'utilisait. Lui aurait dû y penser avant de forcer sur le filtre à café. Il imagina la tache au plafond puis cessa d'y trouver quoi que ce soit de drôle. Certaines choses attendraient son retour. D'autres n'existaient déjà plus.",
+        "Le premier appui se trouvait dans un renfoncement accessible depuis le quai. Le deuxième longeait un passage où l'eau s'infiltrait. Le troisième était derrière un battant de service fermé de l'intérieur. On pouvait se répartir les gestes de plusieurs façons : donner à Maël le support le plus délicat, employer des cartes portées à distance, ouvrir le passage par le haut ou commencer par la galerie humide. Hélio avait assez de puissance pour toutes ces méthodes, pas assez de bras pour les mener en même temps.",
+        "Au-dessus, des pas s'arrêtèrent près de la lanterne. Un homme demanda si le propriétaire des objets récupérés avait le droit de les revoir. Rusk savait se donner une voix presque raisonnable quand il arrivait après les coups. Hélio soupira et ramassa son bâton. « Je vais finir par regretter le café. » Il regarda les trois supports. Leur ordre de travail déterminerait surtout l'endroit où ils se trouveraient quand le marchand comprendrait qu'il avait perdu leur politesse."
+      ],
+      "choice": {
+        "prompt": "Comment préparer les trois appuis avant l'arrivée de Rusk ?",
+        "options": [
+          {
+            "id": "mael",
+            "label": "Confier l'appui humide à Maël et garder les signes proches",
+            "passage": "Hélio demanda à Maël de tenir le passage qui tirait sur l'eau pendant qu'il posait ses cartes sur la pierre sèche, afin de pouvoir vérifier la fermeture du cercle sans quitter la salle de l'écluse.",
+            "next": "h-3-2-mael"
+          },
+          {
+            "id": "cartes",
+            "label": "Porter les marques avec des cartes fixées à distance",
+            "passage": "Hélio utilisa de petites adhérences sur les faces arrière pour lancer les cartes jusqu'aux appuis, en réservant leurs faces avant au soutien qui ne serait activé qu'après la vérification de tout le tracé.",
+            "next": "h-3-2-cartes"
+          },
+          {
+            "id": "haut",
+            "label": "Ouvrir d'abord le passage de service par le haut",
+            "passage": "Hélio préféra dégager une voie sèche et plaça une carte contre le verrou du battant, accessible depuis une marche où il pouvait toucher le métal sans se pencher au-dessus du courant du bassin.",
+            "next": "h-3-2-haut"
+          },
+          {
+            "id": "eau",
+            "label": "Commencer par les pierres déjà menacées par l'eau",
+            "passage": "Hélio posa ses pieds nus sur le bord le plus bas et fit tenir les premiers signes sur la pierre humide, pendant que Maël gardait la corde prête pour une remontée rapide dans la salle.",
+            "next": "h-3-2-eau"
+          },
+          {
+            "id": "ensemble",
+            "label": "Vérifier chaque appui l'un après l'autre, ensemble",
+            "passage": "Hélio proposa de perdre un peu de vitesse pour ne pas travailler séparément dans les anciens passages, en laissant Maël toucher la pierre avant qu'il y pose chaque petite marque de préparation du cercle.",
+            "next": "h-3-2-ensemble"
+          }
+        ]
+      }
+    },
+    "h-3-3": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Rusk descendit sans courir, accompagné d'un seul homme. Il avait changé de chemise. Hélio trouva ce détail si agaçant qu'il faillit le saluer uniquement pour cela. Le marchand regarda le cercle au sol, la plaque sur le socle et les pieds nus du jeune homme sur la pierre. Son calme se fendit. Le plan n'était plus de remettre son matériel dans La Traverse. On était en train de rendre ce matériel inutile à son petit commerce de réparations.",
+        "« Vous avez volé chez moi », dit-il. Maël se redressa près du canal. « Et vous avez vendu un support qui mettait des gens en danger. » Rusk haussa une épaule. « Les gens demandent d'abord un prix qu'ils peuvent payer. Ils posent les bonnes questions ensuite. » Hélio pensa à la gardienne des bains, aux trois mois du bail et à la poignée de sa cliente dans une étagère humide. Le marchand avait probablement expliqué chaque affaire comme une petite nécessité. Il n'avait jamais eu à vivre dans la somme.",
+        "Il posa de nouveau la pièce noire sur la pierre. Les signes les plus proches s'éteignirent. Hélio ne tenta pas de lutter avec sa réserve contre une règle qu'il venait de voir fonctionner. Il ramena son bâton devant lui, pivota et frappa la pièce avant qu'elle roule dans l'eau. L'objet sauta sous le banc, hors de la première zone. Les runes revinrent avec un éclat trop vif. Le marchand tira aussitôt un couteau.",
+        "Le premier coup prit Hélio au bord de sa manche. Il sentit le tissu se déchirer avant la chaleur du trait sur son bras. Pas assez profond pour l'arrêter, assez pour enlever le jeu de sa respiration. Il repoussa le poignet avec le bois, crocheta la cheville et entendit l'autre homme entrer derrière lui. Maël tira sa corde entre deux montants. Elle devint raide dans ses mains ; l'adversaire la heurta et dut perdre un temps pour passer dessous.",
+        "Hélio posa un pied nu contre le montant, la main nue sur une carte. La rune de gravité prit sur la pierre, celle de résistance sur le papier. Il allégea son propre saut pour franchir la petite rambarde sans lâcher le bâton. Il n'avait pas offert au corps de Rusk la même faveur. Le marchand resta de l'autre côté, couteau haut et souffle moins propre. Maël avait rejoint le garde-corps derrière Hélio. Tous deux voyaient la sortie et la partie du cercle encore à protéger.",
+        "Le niveau du bassin monta d'un cran. Le bruit fit tourner la tête du second homme. Rusk en profita pour frapper le socle du pied. Le métal glissa et un morceau du cercle s'alluma trop tôt. Hélio sentit sa magie partir dans une direction qu'il n'avait pas choisie. Il coupa le signe d'un geste, mais la réserve dépensée ne revint pas dans ses mains. Deux cartes se collèrent l'une à l'autre avec un décalage gênant. Il les sépara avant qu'elles s'attachent à sa peau.",
+        "« Encore un coup comme ça et le passage du dessous prend l'eau », dit Maël. Rusk regarda le bassin puis son couteau. Hélio reconnut ce petit moment où un homme choisit s'il veut encore avoir raison devant ses propres dégâts. Il n'allait pas lui laisser toute la scène. Il pouvait fixer la lame, couvrir Maël, fermer le trajet de fuite, isoler la pièce noire ou repousser le marchand au bâton. Chacun de ces gestes donnerait aux autres la seconde nécessaire pour terminer le cercle."
+      ],
+      "choice": {
+        "prompt": "Quel geste donne à l'équipe la seconde qui manque ?",
+        "options": [
+          {
+            "id": "lame",
+            "label": "Coller le poignet armé loin du cercle",
+            "passage": "Hélio marqua la carte sous ses doigts et la plaqua contre la manche de Rusk au moment où le couteau cherchait de nouveau le passage vers le socle posé sur les marches de pierre.",
+            "next": "h-3-3-lame"
+          },
+          {
+            "id": "mael",
+            "label": "Protéger le trajet de Maël avec des cartes assemblées",
+            "passage": "Hélio réunit trois cartes dans une protection compacte et la plaça dans l'angle où Rusk pouvait encore frapper Maël pendant qu'il maintenait la corde et le passage ouvert derrière eux au bord du bassin.",
+            "next": "h-3-3-mael"
+          },
+          {
+            "id": "fuite",
+            "label": "Fermer la marche par une gravité plus forte",
+            "passage": "Hélio toucha le sol du pied et ralentit le seul chemin par lequel Rusk pouvait quitter la salle sans traverser leur cercle, en gardant l'effet assez petit pour ne pas prendre les jambes de Maël.",
+            "next": "h-3-3-fuite"
+          },
+          {
+            "id": "noire",
+            "label": "Empêcher le retour de la pièce qui coupe la magie",
+            "passage": "Hélio fit glisser une carte adhésive sous le banc pour tenir l'objet noir loin des mains, en renonçant à un geste plus brillant vers Rusk pour garder leurs appuis réellement actifs dans toute la salle.",
+            "next": "h-3-3-noire"
+          },
+          {
+            "id": "baton",
+            "label": "Désarmer Rusk au corps à corps",
+            "passage": "Hélio avança au bâton sans charger une nouvelle carte et choisit le poignet plutôt que la tête, en se donnant l'espace nécessaire pour ne pas reculer lui-même dans le cercle encore ouvert sur la pierre.",
+            "next": "h-3-3-baton"
+          }
+        ]
+      }
+    },
+    "h-3-4": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Ils purent ensuite choisir comment porter le dernier effort. Hélio était capable de fermer le cercle d'un seul élan. Il pouvait aussi répartir le travail dans davantage de petites runes, demander aux présents de tenir les appuis sans magie pendant qu'il rechargeait ou laisser Maël porter plus longtemps la traction. Une autre voie consistait à isoler d'abord les bâtiments des bains, au prix d'une secousse dans leur stock. La solution la plus rapide n'aurait pas nécessairement la suite la plus facile.",
+        "Il regarda les visages autour de lui. Personne ne lui demandait d'être joyeux. Personne n'essayait de le rendre tragique. Il avait simplement une décision à prendre avec des gens qui pouvaient en entendre le prix. Cela lui sembla différent du sous-sol de La Traverse, et assez important pour ne pas répondre immédiatement. Il testa une rune courte du bout de l'index. Le trait était revenu droit. Hélio releva la tête et annonça ce qu'il voulait faire."
+      ],
+      "choice": {
+        "prompt": "Comment porter le dernier effort sans cacher son prix ?",
+        "options": [
+          {
+            "id": "mesure",
+            "label": "Ralentir et répartir le travail dans plusieurs petites runes",
+            "passage": "Hélio annonça qu'il lui fallait plus de points et moins de puissance à chaque endroit, puis demanda aux autres de tenir les lampes et de ne plus déplacer les cartes jusqu'à son dernier signe.",
+            "next": "h-3-4-mesure",
+            "set": {
+              "effort": "mesure"
+            }
+          },
+          {
+            "id": "repos",
+            "label": "Laisser les présents tenir les appuis pendant une vraie pause",
+            "passage": "Hélio demanda aux agents et à Maël de garder la charge par les cordes et les étais quelques minutes, le temps de cesser toute magie avant de reprendre les trois derniers traits qui manquaient au cercle.",
+            "next": "h-3-4-repos",
+            "set": {
+              "effort": "repos"
+            }
+          },
+          {
+            "id": "mael",
+            "label": "Demander à Maël de garder la traction plus longtemps",
+            "passage": "Hélio regarda Maël et lui demanda s'il avait encore assez de réserve pour tenir la corde pendant qu'il finissait, en lui laissant réellement la possibilité de refuser ce morceau supplémentaire de leur travail.",
+            "next": "h-3-4-mael",
+            "set": {
+              "effort": "mael"
+            }
+          },
+          {
+            "id": "bains",
+            "label": "Isoler d'abord le lien qui retourne vers les bains",
+            "passage": "Hélio annonça que cette voie couperait plus vite la prise de Rusk, mais ferait retomber des objets dans ses réserves, puis demanda aux agents de vérifier que les salles concernées étaient désormais dégagées.",
+            "next": "h-3-4-bains",
+            "set": {
+              "effort": "bains"
+            }
+          },
+          {
+            "id": "elan",
+            "label": "Fermer d'un seul élan en acceptant d'épuiser sa réserve",
+            "passage": "Hélio annonça clairement qu'il pouvait finir vite, mais n'aurait presque plus de magie ensuite, et demanda que Maël surveille la dernière marque au lieu de le laisser croire que tout irait bien parce qu'il souriait.",
+            "next": "h-3-4-elan",
+            "set": {
+              "effort": "elan"
+            }
+          }
+        ]
+      }
+    },
+    "h-3-5": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "« Et nous ? » demanda Hélio quand ils eurent un moment seuls. Maël posa sa tasse. « Je veux que tu m'appelles aussi les jours où tu ne sais pas quoi faire. » Le jeune homme sentit ses propres défenses chercher une dernière blague. Il les laissa passer sans la dire. Il pouvait désirer cet homme et ne pas être prêt à reprendre une vie avec lui. Il pouvait aussi essayer autrement, sans faire comme si le premier départ ne comptait pas.",
+        "Le bruit du quartier les rejoignit avant qu'ils aient fini. Une fenêtre s'ouvrit, quelqu'un demanda des nouvelles à la ronde et la réponse passa de porte en porte. Hélio regarda Yara, la lanterne, la clé que Maël avait gardée. La nuit n'allait pas lui offrir un monde neuf où déposer les mauvaises décisions des autres. Elle lui laissait celui-ci, abîmé et encore habitable, avec quelques choix qui lui appartenaient vraiment."
+      ],
+      "choice": {
+        "prompt": "Quelle suite Hélio choisit-il pour ses liens et pour la vérité ?",
+        "options": [
+          {
+            "id": "ensemble",
+            "label": "Parler avec Maël, puis lui proposer de recommencer doucement",
+            "passage": "Hélio demanda que les faits soient racontés ensemble aux agents, sans couvrir Yara, puis proposa à Maël un café un autre matin, où aucun mur ne serait censé tomber pour les obliger à se parler.",
+            "next": "h-3-5-ensemble",
+            "set": {
+              "annonce": "ensemble"
+            }
+          },
+          {
+            "id": "distance",
+            "label": "Garder Maël comme allié sans reprendre leur relation",
+            "passage": "Hélio dit à Maël qu'il avait aimé travailler avec lui, mais ne voulait pas transformer cette nuit en promesse de couple, puis demanda qu'ils confirment ensemble les faits au poste pour que personne ne porte seul les noms utilisés.",
+            "next": "h-3-5-distance",
+            "set": {
+              "annonce": "distance"
+            }
+          },
+          {
+            "id": "yara",
+            "label": "Accompagner Yara pour qu'elle assume publiquement les faits",
+            "passage": "Hélio proposa à Yara d'aller avec elle parler aux voisins, à condition qu'elle commence par ses propres gestes et les réparations qu'elle s'engageait à fournir, sans présenter son ami comme la raison de son silence.",
+            "next": "h-3-5-yara",
+            "set": {
+              "annonce": "yara"
+            }
+          },
+          {
+            "id": "public",
+            "label": "Rendre les faits accessibles au quartier avant les rumeurs",
+            "passage": "Hélio demanda au chef de préparer un récit court avec les gestes de Rusk, ceux de Yara et les pertes choisies dans la cave, puis promit d'y mettre aussi son nom et ce qu'il avait réellement fait.",
+            "next": "h-3-5-public",
+            "set": {
+              "annonce": "public"
+            }
+          },
+          {
+            "id": "discret",
+            "label": "Réserver les accusations au poste et protéger les personnes de la foule",
+            "passage": "Hélio promit de donner tous les faits aux agents, mais refusa de régler leur amitié et leurs fautes au milieu des voisins encore effrayés, en demandant seulement qu'on leur annonce la sécurité du bâtiment et les prochaines réparations.",
+            "next": "h-3-5-discret",
+            "set": {
+              "annonce": "discret"
+            }
+          }
+        ]
+      }
+    },
+    "h-3-6": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La confiance ne s'était pas réparée avec le retour du jour. Hélio n'essaya pas d'obtenir des proches une phrase qui ferait disparaître la fatigue et les désaccords. Même Maël ne remettrait pas ses affaires dans un tiroir par la seule force d'une nuit passée côte à côte. Ces choses restaient ouvertes. Hélio aimait assez les débuts pour savoir qu'il fallait parfois choisir de ne pas leur mentir.",
+        "Il reprit une carte et la fit rouler entre ses doigts. Sa réserve remontait. Une petite rune apparut sans trembler, nette, familière. Il la laissa s'éteindre aussitôt et sourit, pour lui-même cette fois. Le monde ne lui avait pas retiré sa joie. Il allait seulement devoir lui trouver une manière plus honnête de tenir près du reste.",
+        "Sur le rebord de la fenêtre, un message attendait. Le poste avait trouvé d'autres objets marqués de ses signes, vendus bien avant l'affaire de La Traverse. Certains avaient quitté Brévane. Ce n'était pas encore un ordre de partir, mais c'était une route possible et une question qu'il n'aimait pas laisser dans la main d'un autre. Hélio posa le papier près des deux tasses. Avant de choisir cette route, il avait une journée, des proches et un corps à remettre d'accord. Pour la première fois depuis la veille, il n'essaya pas de tout faire dans le même sourire."
+      ],
+      "ending": "Fin des trois premiers chapitres — à suivre"
+    },
+    "h-1-1-carnet": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Il aimait avoir une place où noter ce qui lui traversait la tête. Le carnet ne voyageait pas sur son dos : il attendrait sa main. Il en glissa néanmoins un morceau de papier dans sa poche, pour le cas où une belle idée arriverait sous la pluie."
+      ],
+      "next": "h-1-2"
+    },
+    "h-1-1-coussin": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Il le tapota avec un sourire avant de sortir. Il avait déjà terminé trois travaux assis sur une marche très dure cette semaine. Avoir une réserve de magie élevée n'empêchait pas de posséder un dos, ni de trouver certaines aventures bien meilleures avec un coussin."
+      ],
+      "next": "h-1-2"
+    },
+    "h-1-1-cartes": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Il vérifia leurs faces une à une et retira celle qui portait encore une trace d'adhérence. La préparation lui prit une minute. Il savait qu'un paquet propre pouvait lui offrir beaucoup de solutions ; il savait aussi qu'il finirait probablement par y dessiner quelque chose pour faire rire un voisin."
+      ],
+      "next": "h-1-2"
+    },
+    "h-1-1-fruit": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Il avait tendance à accepter les détours et à oublier le déjeuner. La poire ne résoudrait pas tous ses problèmes, mais elle en réglerait un à l'heure exacte où il commencerait à devenir moins aimable. Il descendit avec le plaisir d'avoir prévu une chose simple."
+      ],
+      "next": "h-1-2"
+    },
+    "h-1-1-echarpe": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Il n'avait aucune intention de rentrer tôt. L'écharpe pourrait servir de tissu, de lien ou simplement d'écharpe, ce qui lui paraissait une possibilité injustement oubliée. Il en laissa dépasser un coin, salua son propre reflet et passa dans l'escalier avec son bâton."
+      ],
+      "next": "h-1-2"
+    },
+    "h-1-2-livreur": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "L'homme se traîna jusqu'au mur, puis releva Hélio par le coude lorsqu'une seconde secousse les surprit. Il s'appelait Nils et travaillait souvent le long du canal. Il promit de faire porter les nouvelles. Hélio lui demanda surtout d'éloigner les passants du bord."
+      ],
+      "next": "h-1-3"
+    },
+    "h-1-2-cuistot": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La cuisinière ferma l'arrivée de chaleur et tira son apprenti hors du passage. Elle connaissait Hélio depuis ses premiers travaux. « Tu me dois toujours une assiette », lui cria-t-elle. Il lui répondit qu'il essayait justement de lui conserver une table pour la poser."
+      ],
+      "next": "h-1-3"
+    },
+    "h-1-2-voisine": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Elle glissa sa main contre son bras pour reprendre l'équilibre puis repartit en donnant des ordres beaucoup plus efficaces que ses remerciements. Hélio la regarda dégager deux voisins avant de courir de nouveau. Aider cette femme revenait souvent à gagner une équipe entière dans la minute suivante."
+      ],
+      "next": "h-1-3"
+    },
+    "h-1-2-batelier": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le batelier tendit l'autre bout. Ensemble, ils ramenèrent le bois contre son appui. L'homme nomma les courants et montra où ne pas poser le pied. Hélio garda ce détail avant de repartir, heureux de recevoir une indication qui ne commençait pas par une nouvelle catastrophe."
+      ],
+      "next": "h-1-3"
+    },
+    "h-1-2-peintre": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La peintre descendit les derniers barreaux avec une vigueur inattendue. Elle tira ensuite son échelle hors du chemin et remercia Hélio en lui mettant un peu de bleu sur la joue. « Pour qu'on te reconnaisse. » Il estima que son haut jaune rendait déjà la précaution discutable."
+      ],
+      "next": "h-1-3"
+    },
+    "h-1-3-baton": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le couteau heurta la pierre. Hélio plaça le bâton derrière le coude et força l'homme à plier le genou. Maël arriva de côté pour prendre le bras libre. Le jeune homme conserva le verrou jusqu'à ce que la lame soit hors d'atteinte de tout le monde."
+      ],
+      "next": "h-1-4"
+    },
+    "h-1-3-cartes": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La carte fixa la manche à la pierre. L'homme tira dessus, trop tard pour garder son équilibre. Hélio lui retira le couteau avec le bout du bâton tandis que Maël saisissait le second bras. Une couture craqua, mais le mur resta le plus têtu des deux."
+      ],
+      "next": "h-1-4"
+    },
+    "h-1-3-sol": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Les genoux touchèrent la pierre. L'inconnu pouvait encore lever la lame, mais il ne pouvait plus la porter vers Yara. Hélio écarta son poignet au bâton et attendit Maël avant de relâcher la rune. Il préférait que l'homme retrouve son poids après avoir perdu son arme."
+      ],
+      "next": "h-1-4"
+    },
+    "h-1-3-ceinture": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le fourreau tomba entre les bottes. L'homme regarda en bas par réflexe et reçut le bâton derrière le genou. Maël eut le temps d'attraper le bras armé. Hélio repoussa le couteau sur le côté, puis reprit la carte avant qu'elle n'aille couper quelque chose qu'il voulait garder."
+      ],
+      "next": "h-1-4"
+    },
+    "h-1-3-ecran": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La lame glissa sur le petit panneau. Hélio avança derrière lui, bâton de l'autre côté, et plaqua l'homme au montant. Maël prit le poignet découvert. Le papier vibra sous le dernier effort avant de redevenir simplement trois cartes, un peu froissées et très utiles."
+      ],
+      "next": "h-1-4"
+    },
+    "h-1-4-franc": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Maël ne lui demanda pas d'être plus courageux. Il lui montra le prochain point du tracé et attendit qu'il ait fini de respirer. Ce petit silence changea la place entre eux. Hélio pouvait y poser quelque chose de vrai sans qu'on le lui reprenne aussitôt pour le réparer."
+      ],
+      "next": "h-1-5"
+    },
+    "h-1-4-taquin": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Maël rit malgré lui. Ce n'était pas l'oubli de tout ce qui s'était passé entre eux. C'était une porte entrouverte dans un moment trop serré. Il répondit qu'il garderait le plafond à condition qu'Hélio fasse un effort sur l'heure du prochain rendez-vous."
+      ],
+      "next": "h-1-5"
+    },
+    "h-1-4-distant": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Maël acquiesça et posa la craie sur la marche au lieu de la lui donner directement. Le geste eut une douceur inattendue. Il respectait la distance demandée sans la transformer en départ. Hélio se concentra sur les signes, soulagé de ne pas devoir tout décider dans le même regard."
+      ],
+      "next": "h-1-5"
+    },
+    "h-1-4-tendre": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "L'autre referma doucement les doigts avant de les laisser repartir. Personne ne parla de recommencer leur vie commune. Hélio conserva seulement cette seconde de chaleur dans un endroit qui en manquait. Le prochain signe lui vint plus facilement, sans que la peur ait besoin de disparaître."
+      ],
+      "next": "h-1-5"
+    },
+    "h-1-4-pro": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Maël lui répondit oui sans ajouter de remarque sur leurs anciennes habitudes. Ils partagèrent le tracé en petites tâches. La confiance retrouvait une forme concrète, assez modeste pour ne pas leur demander une grande promesse au fond d'une cave dont les murs bougeaient encore."
+      ],
+      "next": "h-1-5"
+    },
+    "h-1-5-salon": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le plafond du salon descendit dans un fracas de bois. La table, les coussins et ce qui attendait dans sa zone de téléportation disparurent sous la pierre. Hélio garda le signe jusqu'au bout. Il sauva le reste de la maison en regardant l'endroit qui lui appartenait cesser d'être une pièce."
+      ],
+      "next": "h-1-consequence"
+    },
+    "h-1-5-cuisine": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Les supports de la cuisine cédèrent ensemble. Le grand four, les tables et plusieurs semaines de réserves s'écrasèrent dans le vide prévu pour la charge. L'auberge gardait ses chambres mais perdait le travail qui les faisait vivre. Yara regarda le trou sans réussir à appeler cela une réussite."
+      ],
+      "next": "h-1-consequence"
+    },
+    "h-1-5-pont": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le fer plia puis disparut en partie dans le canal. Les murs cessèrent de tirer les uns contre les autres. Sur l'autre rive, des voisins se mirent à crier en découvrant que leur chemin avait disparu. Hélio connaissait ces voix. Il savait qu'elles devraient vivre avec son choix après la fin des applaudissements."
+      ],
+      "next": "h-1-consequence"
+    },
+    "h-1-5-entrepot": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Le mur de réserve s'ouvrit et les marchandises descendirent dans la poussière. Des enchantements éclatèrent sous les charges. La maison tint. Hélio venait de détruire assez de biens de Rusk pour que le marchand ne puisse plus voir leur rencontre comme une simple affaire de récupération."
+      ],
+      "next": "h-1-consequence"
+    },
+    "h-1-5-bras": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "La charge passa lorsque Maël le tira, mais pas assez tôt pour son avant-bras droit. Le craquement lui coupa le souffle. Le bâtiment trouva ses nouveaux appuis pendant qu'il découvrait une douleur impossible à plaisanter. Sa magie fonctionnait encore. Son bras, lui, ne lui obéirait plus de la même façon avant longtemps."
+      ],
+      "next": "h-1-consequence"
+    },
+    "h-2-1-regarder": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Un porteur descendit avec un chariot vide, puis ressortit par la porte du débarcadère. Maël nota le trajet. Ils n'avaient pas gagné de clé, mais savaient quelle partie des salles restait occupée et comment revenir au canal sans traverser tout le bâtiment."
+      ],
+      "next": "h-2-contact"
+    },
+    "h-2-1-reposer": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Maël l'attendit près d'un arbre. Hélio sépara deux cartes collées et récupéra un angle propre pour ses prochains signes. La pause ne rendit pas sa colère plus légère. Elle lui permit au moins de ne pas la confondre avec le besoin pressé de dépenser davantage."
+      ],
+      "next": "h-2-contact"
+    },
+    "h-2-1-retour": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils trouvèrent un palier, une lucarne et un petit bateau de service. Maël vérifia les attaches depuis la berge. Hélio garda ces repères dans sa tête, sans les appeler déjà un plan de fuite. Il aimait mieux les connaître avant d'en avoir besoin."
+      ],
+      "next": "h-2-contact"
+    },
+    "h-2-1-parler": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "L'autre accepta, même si Rusk leur donnerait probablement de bonnes raisons d'élargir la liste. Ils convinrent d'un mot simple pour repartir. Hélio trouva un certain plaisir à préparer une aventure avec quelqu'un qui connaissait déjà les détours qu'il avait tendance à prendre."
+      ],
+      "next": "h-2-contact"
+    },
+    "h-2-1-cartes": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Il ne chargea pas les signes à l'avance. Il voulait garder de l'énergie et choisir l'effet au bon moment. Maël le regarda répéter le geste avec son pouce nu. L'habitude avait quelque chose de calme qui leur fit du bien avant de rejoindre la porte."
+      ],
+      "next": "h-2-contact"
+    },
+    "h-2-2-franchise": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Elle écouta jusqu'au bout puis souleva le fil avec son bâton. « Vous regardez. Vous ne fouillez pas les poches des gens. » Hélio accepta cette frontière-là. Elle pouvait aider une fois sans devoir se raconter immédiatement qu'elle avait choisi toute la suite de leur histoire."
+      ],
+      "next": "h-2-3"
+    },
+    "h-2-2-payer": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La gardienne ouvrit après lui avoir donné un petit jeton de visite. Maël n'aimait pas financer cet endroit, même pour passer. Hélio non plus. Ils gagnèrent pourtant une porte sans violence et un témoin capable de dire pourquoi ils se trouvaient là cette après-midi."
+      ],
+      "next": "h-2-3"
+    },
+    "h-2-2-echange": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La gardienne le laissa toucher le bois du côté extérieur. Le battant se déplaça mieux. Elle lui accorda quelques minutes dans les salles en échange, sans lui promettre Rusk ni ses bons sentiments. Hélio retint que même une mauvaise adresse contenait des gestes utiles à quelqu'un."
+      ],
+      "next": "h-2-3"
+    },
+    "h-2-2-relais": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La gardienne appela un porteur. L'homme confirma où le métal avait été posé, puis les mena jusqu'au premier couloir. Hélio le remercia par son nom. Le porteur ne s'engageait pas à les défendre, mais leur présence avait désormais une explication moins facile à effacer."
+      ],
+      "next": "h-2-3"
+    },
+    "h-2-2-fil": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Elle ne tenta pas de les arrêter avec son corps. Son regard changea, ce qui compta davantage que le bruit de la porte. Hélio avait gagné le passage et perdu une possibilité de confiance. Il ne fit pas semblant de lui avoir rendu service en entrant contre sa volonté."
+      ],
+      "next": "h-2-3"
+    },
+    "h-2-3-prix": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le marchand parla de risques, de frais et de gens qui exigeaient toujours trop. Il ne donna aucun total. Maël regarda la plaque dans son sac, puis la sortie. Hélio avait sa réponse sur l'affaire, même s'il n'avait pas encore celle qui leur permettrait de repartir."
+      ],
+      "next": "h-2-4"
+    },
+    "h-2-3-vole": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Rusk le laissa finir avec un calme travaillé. Puis il demanda si Hélio comptait aussi rendre les biens que ses réparations avaient abîmés. Le jeune homme comprit que l'argent ne servirait pas seulement à discuter. Il servirait à lui donner une raison de se taire."
+      ],
+      "next": "h-2-4"
+    },
+    "h-2-3-temps": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Maël se déplaça près de l'ancien bassin et repéra le passage derrière la rampe. Rusk finit par voir ce mouvement. Son sourire disparut juste avant qu'il sorte la petite pièce noire. Hélio avait au moins gagné la forme de la salle avant qu'elle devienne un combat."
+      ],
+      "next": "h-2-4"
+    },
+    "h-2-3-colere": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Rusk le regarda autrement, moins amusé par son haut jaune et son sourire. Il n'eut pas l'air coupable pour autant. Maël se plaça à portée du bassin. Hélio garda le bâton près de sa cuisse, suffisamment calme pour ne pas confondre la colère et le premier coup."
+      ],
+      "next": "h-2-4"
+    },
+    "h-2-3-marche": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Rusk refusa avant de demander une garantie. Ce refus trop rapide acheva la petite chance qu'Hélio laissait encore à une négociation. Maël ramena la lampe vers le mur. Le marchand posa alors sa pièce noire sur le banc, avec le soulagement de quitter enfin les mots."
+      ],
+      "next": "h-2-4"
+    },
+    "h-2-4-sac": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le papier accrocha le cuir. Hélio tira avec son bâton plutôt qu'avec une nouvelle grande dépense de magie. Maël intercepta le sac au pied de la marche et retint son adversaire assez longtemps pour rejoindre l'issue avec lui. Le métal n'avait pas touché l'eau."
+      ],
+      "next": "h-2-5"
+    },
+    "h-2-4-baton": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Rusk tomba assis, le sac ouvert. Hélio fit glisser la plaque vers Maël et reçut un coup de chaussure dans la cuisse avant de se relever. La douleur resterait. Leur passage, lui, s'ouvrit lorsque le second homme dut éviter le bâton revenu à hauteur de ses mains."
+      ],
+      "next": "h-2-5"
+    },
+    "h-2-4-sol": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Maël lança la corde au bon moment. Rusk, surpris par leur saut plus léger, lâcha le sac lorsque le bâton écarta son bras. Hélio revint sur la pierre ordinaire avec un choc dans les genoux. Ils reprirent le métal et gagnèrent la porte avant le prochain assaut."
+      ],
+      "next": "h-2-5"
+    },
+    "h-2-4-ecran": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le papier reçut un coup, puis un autre. Une rune faiblit et Hélio remplaça la carte du pouce sans quitter le passage. Maël revint avec le métal. Le jeune homme suivit, à court de souffle et satisfait d'avoir laissé l'autre accomplir sa partie sans tout reprendre."
+      ],
+      "next": "h-2-5"
+    },
+    "h-2-4-noire": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le passage de Maël retrouva sa force. Sa corde se raidit et barra le bras de Rusk. Le marchand dut lâcher le sac pour ne pas tomber dans le bassin. Hélio récupéra la plaque et rejoignit l'issue, après avoir vérifié qu'aucun morceau du petit effet noir ne les suivait."
+      ],
+      "next": "h-2-5"
+    },
+    "h-2-5-echelle": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils descendirent lentement, le métal tenu séparément dans le linge. Le papier n'aurait pas porté longtemps sans ses signes. Une fois les pieds au quai, Hélio coupa l'effet inutile et récupéra les cartes qu'il pouvait atteindre. Il n'allait pas entretenir une échelle pour leurs poursuivants."
+      ],
+      "next": "h-2-6"
+    },
+    "h-2-5-poids": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La corde glissa régulièrement entre les mains. Hélio ne demanda pas au métal de disparaître dans un salon lointain : il lui demanda de peser moins ici. Lorsque la plaque toucha le quai, il arrêta la rune et laissa Maël l'aider à descendre à son tour."
+      ],
+      "next": "h-2-6"
+    },
+    "h-2-5-bateau": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La barque heurta doucement son appui. Ils y descendirent l'un après l'autre avec la plaque. Maël garda la corde raide jusqu'aux marches du quai. Hélio s'assit seulement lorsque le métal fut posé, heureux de ne pas avoir testé la flottabilité de leur travail dans le canal."
+      ],
+      "next": "h-2-6"
+    },
+    "h-2-5-gardienne": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La femme hésita puis leur montra un escalier dissimulé derrière un volet. Elle garda ses distances lorsqu'ils passèrent. Hélio la remercia sans prétendre que cela réglait leur entrée aux bains. La porte se referma sur eux avant que Rusk atteigne le palier, leur offrant quelques minutes de quai libre."
+      ],
+      "next": "h-2-6"
+    },
+    "h-2-5-corde": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils prirent leur temps malgré les coups derrière la porte. Maël retint le lien et Hélio utilisa de petites runes d'adhérence pour guider les appuis contre la pierre. Ce fut une descente moins élégante qu'un saut et beaucoup plus agréable à finir avec toutes leurs affaires au sec."
+      ],
+      "next": "h-2-6"
+    },
+    "h-3-1-attendre": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle accepta cette place étroite sans demander davantage. Maël lui montra l'entrée du passage et les endroits où ne pas poser la lumière. Hélio la regarda faire, capable de vouloir sa présence sans prétendre que sa confiance avait retrouvé la forme du matin."
+      ],
+      "next": "h-3-2"
+    },
+    "h-3-1-dette": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle répondit avec des montants qu'elle ne pouvait pas encore trouver et des jours de travail qu'elle pouvait donner. Hélio n'en fit pas une absolution. Il accepta une première tâche à l'écluse. Leur amitié aurait désormais ce compte visible, au lieu de le laisser grossir dans les silences."
+      ],
+      "next": "h-3-2"
+    },
+    "h-3-1-rupture": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle reçut la phrase sans protester. Elle posa sa lanterne puis remonta les marches. Maël ne tenta pas de la retenir au nom du travail plus difficile. Hélio attendit d'avoir fini de trembler avant de prendre la lumière. Il venait de perdre une présence en choisissant sa propre limite."
+      ],
+      "next": "h-3-2"
+    },
+    "h-3-1-temoin": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle prit le chemin des agents et promit de revenir seulement si on avait besoin d'elle. Hélio ne put savoir si elle tiendrait chaque mot. Il avait néanmoins cessé de partager son secret à sa place. Maël reprit le métal, laissant au jeune homme un instant pour accepter cette conséquence."
+      ],
+      "next": "h-3-2"
+    },
+    "h-3-1-pardon": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle pleura sans chercher à l'embrasser pour clore la conversation. Hélio resta près d'elle une seconde, puis lui confia la lampe. Ce pardon n'allait ni reconstruire les biens ni parler à leur place devant les voisins. Il leur donnait seulement une raison honnête de commencer ensemble la tâche suivante."
+      ],
+      "next": "h-3-2"
+    },
+    "h-3-2-mael": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La corde trouva son ancrage, tendue par la magie de Maël. Hélio compléta deux angles du pied puis reprit sa place près de la roue. Quand les pas s'arrêtèrent au-dessus d'eux, ils voyaient le même passage et savaient quel appui chacun ne devait pas abandonner."
+      ],
+      "next": "h-3-3"
+    },
+    "h-3-2-cartes": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël suivit les cartes depuis le quai et corrigea celle qui s'était posée trop près d'une jointure. Hélio coupa le petit effet provisoire puis vérifia l'ensemble. Les supports étaient atteints sans qu'il ait dû dépenser sa réserve pour faire tenir un cercle encore incomplet."
+      ],
+      "next": "h-3-3"
+    },
+    "h-3-2-haut": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le passage s'ouvrit. Maël y porta une lanterne puis testa la pierre qui devait recevoir l'appui. Ils revinrent vers le centre sans courir. Hélio avait gardé assez de cartes propres pour la suite et une issue supplémentaire si Rusk décidait de fermer celle du quai."
+      ],
+      "next": "h-3-3"
+    },
+    "h-3-2-eau": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Il ne maintint que les marques courtes nécessaires au placement. Le reste attendrait la fermeture complète. Quand ils rejoignirent le socle, l'eau avait déjà gagné un peu sur leurs empreintes. Hélio retrouva sa respiration avant de faire apparaître le prochain signe au bord de sa paume."
+      ],
+      "next": "h-3-3"
+    },
+    "h-3-2-ensemble": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Ils rencontrèrent une fissure que le plan ne montrait pas et déplacèrent un point d'une largeur de main. Cela ne rendait pas la nuit plus longue, seulement le travail moins fragile. Hélio revint au centre avec moins de gestes inutiles à reprendre lorsque les pas approchèrent sur le quai."
+      ],
+      "next": "h-3-3"
+    },
+    "h-3-3-lame": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le papier résistant prit sur le bois du garde-corps. Rusk tira, déchira sa manche et perdit sa lame. Hélio écarta l'arme au bâton. Maël ferma le second trajet avec sa corde, laissant aux agents qui arrivaient assez de place pour finir la prise sans rouler dans l'eau."
+      ],
+      "next": "h-3-reprise"
+    },
+    "h-3-3-mael": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le coup heurta la surface renforcée. Le papier vibra, mais le temps gagné suffit. Maël ramena sa corde contre le montant, Rusk dut reculer et les agents saisirent le bras resté libre. Hélio coupa la résistance seulement lorsque personne ne pouvait plus chercher le couteau sous le panneau."
+      ],
+      "next": "h-3-reprise"
+    },
+    "h-3-3-fuite": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le marchand voulut reculer et trouva sa botte soudain trop lourde. Son élan se brisa. Hélio écarta le couteau au bâton, Maël le rejoignit par le côté et la garde finit la prise. Le jeune homme retira aussitôt la rune pour ne pas faire trébucher les renforts."
+      ],
+      "next": "h-3-reprise"
+    },
+    "h-3-3-noire": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le second homme se pencha trop tard pour la reprendre. Maël profita de son mouvement pour le fixer au montant avec sa corde. Hélio repoussa la lame de Rusk d'un coup sec et recula jusqu'à l'arrivée des agents. Le cercle n'avait perdu aucune autre partie de son tracé."
+      ],
+      "next": "h-3-reprise"
+    },
+    "h-3-3-baton": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le bois frappa, la lame tomba. Rusk agrippa sa manche et Hélio sentit le tissu céder en tournant. Il le poussa contre la marche où Maël put l'arrêter. Lorsque les agents saisirent ses bras, le jeune homme retrouva son souffle avec une colère assez calme pour lâcher enfin le bâton."
+      ],
+      "next": "h-3-reprise"
+    },
+    "h-3-4-mesure": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le cercle se ferma par petites reprises. La méthode laissa davantage de traces sur la pierre et demanderait du travail aux réparateurs, mais les signes restèrent nets. Hélio conserva assez de réserve pour vérifier son propre ouvrage, au lieu d'espérer qu'un grand élan avait tout correctement fait."
+      ],
+      "next": "h-3-constat"
+    },
+    "h-3-4-repos": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Les bras travaillèrent pendant qu'il resta assis, sans s'excuser à chaque souffle. Sa réserve remonta assez pour produire les signes correctement. Il remercia chacun au moment de reprendre. La fermeture ne serait pas son miracle personnel : plusieurs personnes auraient très concrètement mal aux épaules le lendemain."
+      ],
+      "next": "h-3-constat"
+    },
+    "h-3-4-mael": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël vérifia son souffle puis accepta une durée précise. Hélio termina dans ce temps, sans lui voler une reprise de plus. Ils sortirent tous deux fatigués, capables de nommer ce qu'ils avaient demandé et donné. Cette confiance-là ne ressemblait plus tout à fait à leurs vieilles habitudes."
+      ],
+      "next": "h-3-constat"
+    },
+    "h-3-4-bains": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le signal revint. Hélio coupa le lien, entendit un choc lointain et ferma le reste avec une réserve moins pressée. Rusk ajouterait ces pertes à ses réclamations. Le jeune homme n'en fit pas une victoire comique. Il préféra garder une maison stable et des signes dont il connaissait l'effet."
+      ],
+      "next": "h-3-constat"
+    },
+    "h-3-4-elan": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La lumière traversa le cercle puis s'arrêta. La dernière rune vacilla ; Maël posa la pierre d'appui comme convenu et la charge trouva sa place. Hélio dut s'asseoir aussitôt. Il ne pourrait plus compter sur une carte improvisée pour le reste de la nuit, et cette fois chacun le savait."
+      ],
+      "next": "h-3-constat"
+    },
+    "h-3-5-ensemble": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël sourit et demanda s'il s'agissait du café ou de lui. Hélio répondit cette fois sans détour. Il lui prit la main après avoir vu l'autre la tendre. Le baiser fut bref, désiré des deux côtés, et ne remit aucune affaire dans les tiroirs. Ils avaient seulement décidé de se revoir pour de vrai."
+      ],
+      "next": "h-3-aube"
+    },
+    "h-3-5-distance": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël baissa un instant les yeux et accepta. Il n'essaya pas de faire payer cette réponse par son aide. Hélio sentit à la fois un manque et un soulagement. Ils pouvaient garder une place dans leur vie sans la remettre exactement à la forme qu'elle avait avant la clé rendue."
+      ],
+      "next": "h-3-aube"
+    },
+    "h-3-5-yara": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Elle accepta sans chercher un sourire de pardon. Maël leur laissa la place tout en confirmant ce qu'il savait. Hélio n'allait pas réparer seul la parole de son amie. Il pouvait pourtant rester à côté d'elle lorsqu'elle renoncerait enfin à l'arranger pour qu'on l'aime plus facilement."
+      ],
+      "next": "h-3-aube"
+    },
+    "h-3-5-public": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Les voisins auraient des questions auxquelles il n'aurait pas envie de répondre. Il préféra cela à une belle version qu'on lui demanderait ensuite de défendre. Maël resta près de lui sans parler à sa place. Leur relation attendrait un autre moment ; la vérité, elle, venait de trouver une adresse commune."
+      ],
+      "next": "h-3-aube"
+    },
+    "h-3-5-discret": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le chef accepta de distinguer l'information utile de la scène publique. Yara serait entendue au poste, Rusk aussi. Hélio prit de l'air près du canal avec Maël. Il n'avait rien effacé. Il avait choisi l'endroit où certaines paroles pourraient enfin être prononcées sans être immédiatement volées par une foule."
+      ],
+      "next": "h-3-aube"
+    },
+    "h-2-arrivee": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Ils quittèrent La Traverse quand les agents eurent fini de compter les habitants. Yara resta pour répondre aux questions. Elle voulut donner à Hélio une bourse qu'il refusa avant de savoir combien elle contenait. Ce geste le mit plus en colère que l'argent lui-même. Il avait déjà commencé à faire quelque chose de leur amitié un compte qu'on pouvait refuser de régler."
+      ],
+      "next": "h-2-perte"
+    },
+    "h-2-perte-salon": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le salon d'Hélio n'était plus une réserve où tendre la main. Les petits objets qui avaient attendu là étaient détruits, écrasés ou coincés sous des tonnes de débris. Il testa une fois le lien et s'arrêta avant d'y perdre de l'énergie. Maël lui prêterait une pièce pour la nuit. Le jeune homme accepta cette aide pratique sans l'appeler déjà un retour dans leur ancien lit."
+      ],
+      "next": "h-2-1"
+    },
+    "h-2-perte-cuisine": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Yara venait de perdre la cuisine qui faisait vivre La Traverse. Sans les repas, les chambres ne paieraient pas seules les dettes. Hélio entendait encore le bruit du four qui tombait. Il avait sauvé des murs en détruisant un travail. Maël lui demanda s'il regrettait. Il répondit qu'il ne savait pas encore comment mettre la fierté et le regret dans la même phrase."
+      ],
+      "next": "h-2-1"
+    },
+    "h-2-perte-pont": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La passerelle coupée obligeait déjà les livreurs à contourner le canal. Hélio vit deux personnes rebrousser chemin avec leurs charges et sentit leur colère avant qu'elles reconnaissent son visage. Il avait évité des maisons écrasées. Il avait aussi choisi un prix que beaucoup de voisins paieraient chaque matin. Maël prit note d'un passage provisoire possible, sans lui promettre qu'il apparaîtrait dès demain."
+      ],
+      "next": "h-2-1"
+    },
+    "h-2-perte-entrepot": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le stock de Rusk avait pris la poussée. Hélio ignorait encore ce qui avait été détruit dans l'entrepôt, mais il savait qu'un homme capable de menacer Yara réclamerait davantage qu'un merci pour la maison sauvée. Maël lui conseilla de ne pas descendre seul jusqu'aux bains. Le jeune homme n'avait pas besoin d'insister pour une fois. Sa décision leur avait donné un ennemi très personnel."
+      ],
+      "next": "h-2-1"
+    },
+    "h-2-perte-bras": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Un soigneur avait examiné le bras droit d'Hélio avant leur départ. Les deux os étaient fendus ; il avait nettoyé la peau, immobilisé l'avant-bras dans une attelle puis l'avait mis en écharpe. Sa magie restait utilisable, mais la guérison demanderait des semaines. Hélio maniait désormais cartes et bâton de la main gauche, en posant davantage de runes du pied. Aucun repos ne lui rendrait son bras au matin."
+      ],
+      "next": "h-2-1"
+    },
+    "h-2-perte": {
+      "chapter": "hc2",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "perte": "salon"
+          },
+          "next": "h-2-perte-salon"
+        },
+        {
+          "when": {
+            "perte": "cuisine"
+          },
+          "next": "h-2-perte-cuisine"
+        },
+        {
+          "when": {
+            "perte": "pont"
+          },
+          "next": "h-2-perte-pont"
+        },
+        {
+          "when": {
+            "perte": "entrepot"
+          },
+          "next": "h-2-perte-entrepot"
+        },
+        {
+          "next": "h-2-perte-bras"
+        }
+      ]
+    },
+    "h-2-contact-livreur": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Nils avait vu porter la plaque vers le débarcadère des bains. Il montra une seconde porte, utilisée pour les caisses trop lourdes, et expliqua où l'on posait les pièces arrivées de La Traverse. Hélio le remercia d'être venu malgré sa jambe douloureuse. Le livreur avait fait le détour par choix ; ce petit retour rendait le quai moins solitaire."
+      ],
+      "next": "h-2-2"
+    },
+    "h-2-contact-cuistot": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La cuisinière du comptoir livrait parfois des bols aux gardiens des bains. Elle connaissait l'heure où le porteur changeait de salle et la femme qui tenait le fil de l'entrée. Elle conseilla de lui parler avant de toucher aux plaques. Hélio reçut aussi deux morceaux de pain, donnés sans discussion. Son geste du matin revenait avec un nom et un repas."
+      ],
+      "next": "h-2-2"
+    },
+    "h-2-contact-voisine": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La voisine avait loué autrefois une chambre au-dessus des bains. Elle montra le volet qui cachait un escalier de service et décrivit la cour intérieure. Hélio l'écouta sans interrompre. Elle lui rappela qu'une porte n'était discrète que si personne ne la claquait, puis repartit porter les nouvelles au quartier. Leur aide du matin leur avait rendu une issue avant même d'entrer."
+      ],
+      "next": "h-2-2"
+    },
+    "h-2-contact-batelier": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Le batelier indiqua le petit bateau de service attaché au quai des bains. La clef de la barrière ne serait pas nécessaire depuis l'eau, mais le courant interdisait de se laisser simplement dériver. Il montra les remous, puis un appui sous la lucarne. Hélio suivit chaque point du regard, certain qu'il aurait besoin de ce trajet moins élégant que les fenêtres de façade."
+      ],
+      "next": "h-2-2"
+    },
+    "h-2-contact-peintre": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "La peintre avait travaillé aux vitres des bains et reconnut la salle où l'on gardait les objets de pierre. Elle décrivit un bassin vide, une rampe et une porte de fond ouvrant sur une terrasse. Hélio conserva ces repères. Elle lui donna aussi un petit chiffon pour le bleu resté sur sa joue, comme si la journée pouvait encore se ranger avec un tissu propre."
+      ],
+      "next": "h-2-2"
+    },
+    "h-2-contact": {
+      "chapter": "hc2",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "contact": "livreur"
+          },
+          "next": "h-2-contact-livreur"
+        },
+        {
+          "when": {
+            "contact": "cuistot"
+          },
+          "next": "h-2-contact-cuistot"
+        },
+        {
+          "when": {
+            "contact": "voisine"
+          },
+          "next": "h-2-contact-voisine"
+        },
+        {
+          "when": {
+            "contact": "batelier"
+          },
+          "next": "h-2-contact-batelier"
+        },
+        {
+          "next": "h-2-contact-peintre"
+        }
+      ]
+    },
+    "h-2-4-salon": {
+      "chapter": "hc2",
+      "paragraphs": [
+        "Il marqua les faces fraîches, les assembla en un panneau puis le lança contre l'ouverture. Les hommes durent contourner cette surface collée aux montants. Maël eut le temps de reprendre le sac et de rejoindre l'issue. Le salon n'était pas une promesse de magie sans limite ; cette fois, c'était simplement un endroit encore debout où Hélio avait laissé du bon papier."
+      ],
+      "next": "h-2-5"
+    },
+    "h-1-consequence-salon": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Une étagère apparut dans les débris en haut de la façade, penchée dans le vide. Hélio reconnut son carnet sous un morceau de plafond. Il ne pourrait pas le rappeler comme on retrouve un objet égaré : la zone elle-même avait disparu dans la chute. Maël le retint avant qu'il cherche un chemin pour remonter. Le jeune homme accepta de partir sans ses affaires."
+      ],
+      "next": "h-1-6"
+    },
+    "h-1-consequence-cuisine": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Yara demanda qu'on vérifie deux fois la réserve basse avant de pouvoir croire qu'aucun employé n'y était resté. Tout le monde répondit à l'appel. Elle se mit ensuite à ramasser machinalement des morceaux de vaisselle. Hélio lui prit une assiette brisée des mains. L'auberge avait perdu ses repas, ses outils, ses commandes du lendemain ; elle ne retrouverait pas tout cela au prochain lever du soleil."
+      ],
+      "next": "h-1-6"
+    },
+    "h-1-consequence-pont": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Un agent ferma les deux entrées de la passerelle. Le seul chemin facile vers les ateliers se trouvait désormais sous l'eau. Hélio aida un homme à faire le tour des débris avec une caisse qu'il ne pouvait plus porter loin. Il reçut un merci puis un regard de colère. Les deux avaient raison d'exister, et il n'essaierait pas de retenir seulement le premier."
+      ],
+      "next": "h-1-6"
+    },
+    "h-1-consequence-entrepot": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "L'entrepôt de Rusk craquait encore de l'autre côté de la cour. Maël fit reculer deux curieux avant qu'un volet tombe. Hélio vit une enseigne brisée, des chaises et un grand miroir perdus sous la poussière. Tous ces objets ne devaient pas appartenir au marchand depuis toujours. Sa décision avait aussi détruit ce que d'autres auraient peut-être voulu reprendre un jour."
+      ],
+      "next": "h-1-6"
+    },
+    "h-1-consequence-bras": {
+      "chapter": "hc1",
+      "paragraphs": [
+        "Maël immobilisa le bras droit d'Hélio avec des planchettes et du tissu avant d'appeler un soigneur. Le jeune homme ne perdit pas connaissance. Il découvrit simplement à quel point respirer pouvait demander de l'attention. Il ne pourrait pas prendre appui sur cette main pour sortir de la cour. Maël attendit son signe avant de l'aider et conserva toute plaisanterie pour plus tard."
+      ],
+      "next": "h-1-6"
+    },
+    "h-1-consequence": {
+      "chapter": "hc1",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "perte": "salon"
+          },
+          "next": "h-1-consequence-salon"
+        },
+        {
+          "when": {
+            "perte": "cuisine"
+          },
+          "next": "h-1-consequence-cuisine"
+        },
+        {
+          "when": {
+            "perte": "pont"
+          },
+          "next": "h-1-consequence-pont"
+        },
+        {
+          "when": {
+            "perte": "entrepot"
+          },
+          "next": "h-1-consequence-entrepot"
+        },
+        {
+          "next": "h-1-consequence-bras"
+        }
+      ]
+    },
+    "h-3-constat": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le cercle tenait désormais sur la pierre du canal. Une lumière basse passa sous les cartes, rejoignit les trois appuis et s'immobilisa autour de la plaque. Rien ne s'éleva dans le ciel. La grande magie, parfois, produisait seulement le bon silence au fond d'un mur. Maël posa la paume contre la rambarde. Le bois ne tirait plus vers l'auberge. Le chef de l'équipe attendit une seconde mesure avant de laisser son visage changer.",
+        "La marée atteignit les marches hautes puis s'arrêta. Les agents entrèrent dans la galerie pour vérifier les portes. Hélio voulut les suivre, se leva trop vite et dut retrouver le banc. Il accepta la tasse que Maël lui apportait. Leur première victoire n'avait pas le goût d'un grand discours. Elle avait celui d'une boisson trop chaude, d'une lèvre un peu coupée et d'une porte qui restait au même endroit quand on la regardait de nouveau.",
+        "Depuis le quai, Yara écoutait les nouvelles sans chercher à entrer dans le petit groupe. Hélio entendit enfin ce que leur succès ne réparerait pas : les biens perdus dans la chute, les jours sans salaire, les travaux, les blessures. La Traverse ne pouvait pas rouvrir demain. Une partie du bâtiment tiendrait, les chambres hautes aussi, mais les agents exigeaient une vraie remise en état. Des gens allaient de nouveau dormir là un jour.",
+        "Le chef leur demanda ce qui serait annoncé au quartier. On avait arrêté Rusk et ses manœuvres seraient examinées. Yara avait aussi vendu la plaque en cachant ses modifications. Hélio pouvait la protéger de la foule sans cacher les faits, lui laisser raconter elle-même ou se retirer de cette histoire dont sa propre signature avait été utilisée. L'ordre des vérités changerait ce qui resterait de leur relation. Le jeune homme ne trouva pas cette idée agréable simplement parce qu'elle était juste."
+      ],
+      "next": "h-3-lien"
+    },
+    "h-3-lien-franc": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël s'assit près d'Hélio et lui demanda comment il allait, vraiment. La réponse franche dans le sous-sol lui avait montré qu'il pouvait encore poser la question sans recevoir seulement une bonne histoire. Hélio avoua sa colère et le besoin de dormir. L'autre resta à cette hauteur, sans essayer de choisir à sa place ce qui ferait moins mal au réveil."
+      ],
+      "next": "h-3-5"
+    },
+    "h-3-lien-taquin": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël essaya leur vieille plaisanterie sur les rendez-vous sans plafond. Hélio rit puis secoua la tête : il ne voulait pas que le rire soit toute la réponse cette fois. L'autre le comprit et reposa sa tasse. Leur humour avait rouvert une porte dans la cave ; ils pouvaient maintenant décider s'ils voulaient aussi se parler de l'autre côté."
+      ],
+      "next": "h-3-5"
+    },
+    "h-3-lien-distant": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël resta à une petite distance, comme dans le sous-sol lorsqu'Hélio le lui avait demandé. Il n'avait pas transformé cette frontière en punition. Le jeune homme le remarqua, et cela lui donna envie de parler sans avoir à défendre d'abord son espace. Il désigna la place voisine. Maël attendit encore un signe avant de s'y asseoir avec sa tasse."
+      ],
+      "next": "h-3-5"
+    },
+    "h-3-lien-tendre": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël tourna la paume vers lui, sans la tendre tout à fait. Il se rappelait les doigts posés dans la cave, mais ne les prenait pas pour une permission éternelle. Hélio passa le pouce près de ses phalanges et leva les yeux. Il avait envie de sa présence. Il restait à savoir ce qu'ils pouvaient reconstruire sans se raconter qu'une nuit suffisait."
+      ],
+      "next": "h-3-5"
+    },
+    "h-3-lien-pro": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Maël lui donna d'abord les nouvelles du cercle, comme il avait promis de le faire lorsque Hélio avait fixé leurs règles dans la cave. Puis il s'arrêta avant de transformer tout leur retour en compte rendu. « Maintenant, on peut parler de nous, si tu veux. » La précision du travail leur avait rendu assez de confiance pour poser aussi cette question sans urgence."
+      ],
+      "next": "h-3-5"
+    },
+    "h-3-lien": {
+      "chapter": "hc3",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "relation": "franc"
+          },
+          "next": "h-3-lien-franc"
+        },
+        {
+          "when": {
+            "relation": "taquin"
+          },
+          "next": "h-3-lien-taquin"
+        },
+        {
+          "when": {
+            "relation": "distant"
+          },
+          "next": "h-3-lien-distant"
+        },
+        {
+          "when": {
+            "relation": "tendre"
+          },
+          "next": "h-3-lien-tendre"
+        },
+        {
+          "next": "h-3-lien-pro"
+        }
+      ]
+    },
+    "h-3-reprise": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le combat s'acheva sans belle pose. Rusk tomba contre une marche, son couteau hors de portée. L'autre homme se retrouva tenu dans la corde de Maël et choisit de ne pas tester combien elle resterait raide. Les agents arrivèrent au bruit, après avoir été guidés depuis l'auberge. Hélio leur montra la pièce noire sous le banc et demanda qu'on n'active rien en la ramassant. Il aurait été ridicule de perdre leurs runes devant quelqu'un venu aider.",
+        "Le chef de l'équipe fit emporter les deux hommes, puis resta. Il connaissait la taille de la marée et n'avait aucune envie d'arrêter le seul travail qui pouvait encore garder les murs debout. Maël lui expliqua les trois appuis avec une clarté qui rendit Hélio presque jaloux. Quand lui parlait de magie, ses mains allaient souvent plus vite que les phrases. Il laissa l'autre finir et replaça la plaque au centre.",
+        "Une carte venait de se fendre sur un bord mouillé. Il en prit une autre, traça une résistance, puis la vit luire de travers. Il s'arrêta. Forcer plus vite aggraverait les choses. Sa réserve avait beaucoup donné dans les bains et la fuite, puis dans le début du cercle. Elle était élevée, pas sans fond. Les sorts devenaient moins nets ; bientôt, une adhérence pourrait coller ce qu'il voulait libérer ou une surface s'alléger au mauvais moment.",
+        "Il demanda deux minutes. Le chef regarda le bassin. Maël répondit à sa place : ils les avaient encore. Hélio posa sa main libre à plat sur son genou et laissa les signes inutiles s'éteindre. La magie recommençait à se rassembler dès qu'il cessait d'en dépenser. Il n'en avait pas honte. Il détestait seulement le faire sous des yeux qui attendaient que la maison cesse de trembler."
+      ],
+      "next": "h-3-contact"
+    },
+    "h-3-contact-livreur": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Nils revint avec une corde de charge et deux collègues. Ils se placèrent près du montant sur l'indication de Maël. Leur force n'allait pas remplacer tout le cercle, mais elle pouvait tenir une partie de la traction pendant quelques minutes. Le livreur qu'Hélio avait dégagé le matin lui rendait maintenant assez de temps pour reprendre son énergie sans cacher sa faiblesse."
+      ],
+      "next": "h-3-4"
+    },
+    "h-3-contact-cuistot": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La cuisinière arriva avec une boisson salée, du pain et deux employés dont la journée venait de se finir. Elle posa la tasse près d'Hélio et leur demanda où leurs bras seraient utiles. Le jeune homme n'eut pas à choisir entre manger et garder sa place. Le fourneau retenu dans la rue avait fini par lui ramener un repas et une relève."
+      ],
+      "next": "h-3-4"
+    },
+    "h-3-contact-voisine": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La voisine avait rassemblé deux artisans pour tenir les appuis. Elle n'avait aucune intention de leur laisser discuter dix minutes de leur rôle. Elle fit asseoir Hélio, demanda à Maël de montrer les cordes et distribua les places. La porte qu'il avait dégagée dans la matinée lui rendait une petite équipe dont les mains savaient attendre son signal sans le regarder comme un miracle."
+      ],
+      "next": "h-3-4"
+    },
+    "h-3-contact-batelier": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le batelier rejoignit les marches avec un palan de service et une corde qu'il savait manier même dans le courant de marée. Maël lui montra le pied du battant. Il installa la prise, souleva une partie du poids et laissa Hélio souffler. Aucune grande magie nouvelle n'était apparue ; une bonne amarre et quelqu'un qui la connaissait suffisaient à changer la nuit."
+      ],
+      "next": "h-3-4"
+    },
+    "h-3-contact-peintre": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "La peintre arriva avec son échelle et deux aides. Ils purent atteindre le point haut que Maël devait jusque-là retenir à la corde. Hélio la reconnut au bleu sur la manche avant de voir son sourire. Son geste du matin avait gagné une fenêtre de travail et quelques minutes sans dépense magique, juste assez pour retrouver des signes qui ne tremblaient plus."
+      ],
+      "next": "h-3-4"
+    },
+    "h-3-contact": {
+      "chapter": "hc3",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "contact": "livreur"
+          },
+          "next": "h-3-contact-livreur"
+        },
+        {
+          "when": {
+            "contact": "cuistot"
+          },
+          "next": "h-3-contact-cuistot"
+        },
+        {
+          "when": {
+            "contact": "voisine"
+          },
+          "next": "h-3-contact-voisine"
+        },
+        {
+          "when": {
+            "contact": "batelier"
+          },
+          "next": "h-3-contact-batelier"
+        },
+        {
+          "next": "h-3-contact-peintre"
+        }
+      ]
+    },
+    "h-3-aube": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le jour les trouva dans une pièce prêtée près du quai. Une table basse portait des cartes dont les runes s'étaient éteintes, les lunettes noires d'Hélio, un bandage propre et deux tasses. Son bâton reposait contre le mur. Le carnet restait ouvert sur un cercle qu'il n'avait pas l'intention d'activer. Pendant quelques heures au moins, les dessins pouvaient rester des dessins.",
+        "Il avait lavé le sang de sa manche sans réussir à enlever toute la poussière. Son crop top jaune avait connu de meilleurs débuts de semaine. Maël l'avait regardé et proposé une chemise de rechange. Hélio avait refusé, par affection pour le vêtement et par une vanité qu'il était assez fatigué pour reconnaître. « Tu te bats très bien pour quelqu'un qui a froid au ventre », avait dit l'autre. Il n'avait pas froid. Il avait simplement enfin cessé de bouger.",
+        "Au poste, Rusk attendait qu'on examine ses ventes et les signes trouvés dans les bains. Les anciens clients de ses réparations seraient prévenus. Il n'y aurait pas de remboursement universel avant le déjeuner ni de promesse de justice assez rapide pour payer tous les artisans. Hélio avait obtenu que la plaque reste sur place jusqu'à la réparation du cercle. Les agents savaient désormais qui avait travaillé dessus, qui avait menti et qui s'était présenté quand les murs avaient commencé à tomber."
+      ],
+      "next": "h-3-perte"
+    },
+    "h-3-perte-salon": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Au matin, Hélio revit son appartement depuis la cour. L'endroit où il avait laissé son carnet n'avait plus de fenêtre ni de plafond. Il faudrait trouver une nouvelle pièce, déplacer son quotidien et redéfinir une zone de téléportation ailleurs. Maël lui proposa un toit provisoire sans lui rendre la clé comme un contrat amoureux. Il accepta un lit, pas une promesse qu'il n'aurait pas encore choisie."
+      ],
+      "next": "h-3-suite"
+    },
+    "h-3-perte-cuisine": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Les premières commandes de La Traverse furent annulées au matin. Yara regarda les réserves perdues et les noms des gens qu'elle ne pourrait pas payer cette semaine. Hélio l'entendit le dire aux employés, enfin sans enjoliver. Il avait sauvé le bâtiment, mais le travail de son amie ne rouvrirait pas avec un sourire. Il faudrait de l'argent, des mains et des repas pris ailleurs pendant longtemps."
+      ],
+      "next": "h-3-suite"
+    },
+    "h-3-perte-pont": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Les voisins mirent en place un détour au lever du jour. Il ajoutait une longue marche pour rejoindre les ateliers. Hélio s'arrêta devant le vide laissé par la passerelle et accepta d'entendre les reproches sans les recouvrir par la liste des maisons sauvées. Il aiderait à bâtir un passage provisoire. En attendant, le quartier garderait dans ses pieds la distance que son choix venait de lui imposer."
+      ],
+      "next": "h-3-suite"
+    },
+    "h-3-perte-entrepot": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Un agent revint avec la liste provisoire du stock détruit dans l'entrepôt. Certains biens avaient été déposés par des gens du quartier, d'autres appartenaient à Rusk. L'arrestation du marchand n'effaçait pas ces pertes. Hélio devrait expliquer son choix et participer aux retours possibles. Il prit la liste au lieu de la repousser : sauver une maison ne lui donnait pas tous les droits sur celle d'à côté."
+      ],
+      "next": "h-3-suite"
+    },
+    "h-3-perte-bras": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le soigneur revint regarder l'attelle d'Hélio. Le bras droit guérirait, avec de la patience et des semaines pendant lesquelles il ne faudrait pas faire semblant. Le jeune homme posa une rune de la main gauche sur sa tasse, puis la laissa refroidir. Il pouvait rester puissant et demander qu'on lui coupe le pain. Maël le fit sans commentaire. Cette aide-là avait le poids d'un avenir très concret."
+      ],
+      "next": "h-3-suite"
+    },
+    "h-3-perte": {
+      "chapter": "hc3",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "perte": "salon"
+          },
+          "next": "h-3-perte-salon"
+        },
+        {
+          "when": {
+            "perte": "cuisine"
+          },
+          "next": "h-3-perte-cuisine"
+        },
+        {
+          "when": {
+            "perte": "pont"
+          },
+          "next": "h-3-perte-pont"
+        },
+        {
+          "when": {
+            "perte": "entrepot"
+          },
+          "next": "h-3-perte-entrepot"
+        },
+        {
+          "next": "h-3-perte-bras"
+        }
+      ]
+    },
+    "h-3-suite-attendre": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Yara respecta le délai qu'il lui avait demandé. Elle déposa les nouvelles au poste et n'envoya pas cinq messages pour obtenir une réponse plus douce. Hélio put découvrir ce que lui faisait le silence d'une amie qui attendait vraiment. Il n'avait pas encore choisi le prochain café avec elle."
+      ],
+      "next": "h-3-6"
+    },
+    "h-3-suite-dette": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Yara apporta une première liste de réparations et de jours de travail qu'elle pouvait offrir. Hélio y ajouta les voisins à consulter avant toute décision. Leur amitié ne serait plus un endroit où les comptes disparaissaient. Il ne savait pas encore si cette franchise les rapprocherait ou les éloignerait."
+      ],
+      "next": "h-3-6"
+    },
+    "h-3-suite-rupture": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Yara ne revint pas frapper à sa porte. Elle passa par le poste pour transmettre les informations utiles, comme il l'avait demandé. L'absence fit mal. Elle ne rendit pourtant pas sa limite moins nécessaire. Hélio conserva la place vide sans chercher immédiatement quelqu'un pour la remplir à sa place."
+      ],
+      "next": "h-3-6"
+    },
+    "h-3-suite-temoin": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Le témoignage de Yara fut pris avant le lever complet du jour. Ses gestes avaient désormais une place dans les faits, pas seulement dans la conversation de deux amis. Hélio la verrait peut-être autrement après le sommeil. Il n'avait plus à garder son secret pour mériter son affection."
+      ],
+      "next": "h-3-6"
+    },
+    "h-3-suite-pardon": {
+      "chapter": "hc3",
+      "paragraphs": [
+        "Yara remercia Hélio une fois, sans lui demander de répéter qu'il lui pardonnait. Elle alla ensuite parler aux voisins et aux employés. Il la regarda commencer ce travail pénible. Leur amitié avait encore une chance, mais elle ne dépendrait plus seulement de tout ce qu'il pouvait supporter avec le sourire."
+      ],
+      "next": "h-3-6"
+    },
+    "h-3-suite": {
+      "chapter": "hc3",
+      "paragraphs": [],
+      "routes": [
+        {
+          "when": {
+            "yara": "attendre"
+          },
+          "next": "h-3-suite-attendre"
+        },
+        {
+          "when": {
+            "yara": "dette"
+          },
+          "next": "h-3-suite-dette"
+        },
+        {
+          "when": {
+            "yara": "rupture"
+          },
+          "next": "h-3-suite-rupture"
+        },
+        {
+          "when": {
+            "yara": "temoin"
+          },
+          "next": "h-3-suite-temoin"
+        },
+        {
+          "next": "h-3-suite-pardon"
+        }
+      ]
+    }
+  },
+  "illustrations": {
+    "h-1-1": [
+      {
+        "after": 5,
+        "src": "illustrations/helio/01-helio.webp",
+        "alt": "Hélio, cheveux blonds et haut jaune court, rappelle ses cartes dans son salon ensoleillé.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-1-2": [
+      {
+        "after": 2,
+        "src": "illustrations/helio/01-mael.webp",
+        "alt": "Maël, cheveux bruns bouclés attachés et chemise vert sombre, près de la fenêtre de La Traverse.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-1-3": [
+      {
+        "after": 1,
+        "src": "illustrations/helio/01-rue.webp",
+        "alt": "Hélio pose une rune sur une carte pour retenir une table près du canal.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-2-1": [
+      {
+        "after": 5,
+        "src": "illustrations/helio/02-bains.webp",
+        "alt": "Les anciens bains et leur débarcadère, derrière les vitres bleu-vert au crépuscule.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-2-3": [
+      {
+        "after": 2,
+        "src": "illustrations/helio/02-table.webp",
+        "alt": "Plaques gravées et cartes runiques sur un banc de pierre des anciens bains.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-3-1": [
+      {
+        "after": 1,
+        "src": "illustrations/helio/03-ecluse.webp",
+        "alt": "L’écluse de pierre, ses marches, sa roue de laiton et les marques près du bassin.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-3-3": [
+      {
+        "after": 4,
+        "src": "illustrations/helio/03-duo.webp",
+        "alt": "Hélio applique une rune sur une carte pendant que Maël maintient une corde à l’écluse.",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "h-3-aube": [
+      {
+        "after": 0,
+        "src": "illustrations/helio/03-retour.webp",
+        "alt": "Cartes éteintes, lunettes et deux tasses de thé dans la pièce prêtée au matin.",
+        "width": 1536,
+        "height": 1024
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "helio",
+      "kind": "person",
+      "facts": [
+        {
+          "field": "name",
+          "value": "Hélio",
+          "source": {
+            "scene": "h-1-1",
+            "paragraph": 0
+          }
+        },
+        {
+          "field": "age",
+          "value": "Jeune adulte",
+          "source": {
+            "scene": "h-1-1",
+            "paragraph": 2
+          }
+        },
+        {
+          "field": "class",
+          "value": "Magie runique",
+          "source": {
+            "scene": "h-1-1",
+            "paragraph": 1
+          }
+        },
+        {
+          "field": "magic-contact",
+          "value": "Pose ses runes par contact direct de sa peau avec une surface.",
+          "source": {
+            "scene": "h-1-3",
+            "paragraph": 5
+          }
+        },
+        {
+          "field": "magic-salon",
+          "value": "Rappelle de petits objets depuis la zone préparée dans son salon.",
+          "source": {
+            "scene": "h-1-1",
+            "paragraph": 5
+          }
+        },
+        {
+          "field": "magic-energie",
+          "value": "Une réserve élevée ; les effets perdent en fiabilité lorsqu’elle baisse. Le repos permet de la recharger.",
+          "source": {
+            "scene": "h-2-4",
+            "paragraph": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "yara",
+      "kind": "person",
+      "facts": [
+        {
+          "field": "name",
+          "value": "Yara",
+          "source": {
+            "scene": "h-1-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "field": "occupation",
+          "value": "Propriétaire de La Traverse",
+          "source": {
+            "scene": "h-1-2",
+            "paragraph": 0
+          }
+        },
+        {
+          "field": "magic-chaleur",
+          "value": "Affinité pour la chaleur.",
+          "source": {
+            "scene": "h-1-2",
+            "paragraph": 1
+          }
+        },
+        {
+          "field": "history-verite",
+          "value": "A vendu une plaque de soutien puis utilisé une copie dangereuse pour prolonger le bail de l’auberge.",
+          "source": {
+            "scene": "h-3-1",
+            "paragraph": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "mael",
+      "kind": "person",
+      "facts": [
+        {
+          "field": "name",
+          "value": "Maël",
+          "source": {
+            "scene": "h-1-1",
+            "paragraph": 6
+          }
+        },
+        {
+          "field": "occupation",
+          "value": "Vérifie les ponts et les bâtiments soutenus par magie.",
+          "source": {
+            "scene": "h-1-2",
+            "paragraph": 3
+          }
+        },
+        {
+          "field": "link-helio",
+          "value": "Ancien compagnon d’Hélio.",
+          "source": {
+            "scene": "h-1-2",
+            "paragraph": 2
+          }
+        },
+        {
+          "field": "magic-tenue",
+          "value": "Donne de la tenue à ce qu’il tire, notamment une corde.",
+          "source": {
+            "scene": "h-2-4",
+            "paragraph": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "rusk",
+      "kind": "person",
+      "facts": [
+        {
+          "field": "name",
+          "value": "Rusk",
+          "source": {
+            "scene": "h-2-3",
+            "paragraph": 6
+          }
+        },
+        {
+          "field": "occupation",
+          "value": "Marchand d’objets enchantés d’occasion.",
+          "source": {
+            "scene": "h-2-1",
+            "paragraph": 4
+          }
+        },
+        {
+          "field": "history-prise",
+          "value": "Garde une prise sur certaines réparations vendues par les bains.",
+          "source": {
+            "scene": "h-2-6",
+            "paragraph": 3
+          }
+        }
+      ]
+    }
+  ]
+}

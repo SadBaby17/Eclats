@@ -22,7 +22,7 @@ test("both library books switch correctly, preserve separate progress and the ne
   await decide(page);
   const oldSave = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), oldKey);
   await library(page);
-  await expect(page.locator(".book-card")).toHaveCount(2);
+  await expect(page.locator(".book-card")).toHaveCount(3);
   await page.getByRole("button", { name: `Voir les chapitres : ${sequel}`, exact: true }).click();
   await expect(page).toHaveURL(/story=evan-deuxieme-version/);
   await expect(page.locator(".chapter-link")).toHaveCount(13);
@@ -59,7 +59,7 @@ test("both library books switch correctly, preserve separate progress and the ne
   await page.getByRole("button", { name: "Reprendre ma lecture", exact: true }).click();
   await expect(page.getByText("Un morceau pour rentrer — fin de cet arc", { exact: true })).toBeVisible();
   await library(page);
-  await expect(page.locator(".book-card")).toHaveCount(2);
+  await expect(page.locator(".book-card")).toHaveCount(3);
   await page.getByRole("link", { name: original, exact: true }).click();
   await expect(page.locator(".chapter-link")).toHaveCount(33);
   expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions, oldKey)).toEqual(oldSave.decisions);

@@ -94,7 +94,7 @@ test("library opens chapter details, locks future chapters and contains no demo"
     .getByRole("navigation", { name: "Navigation principale" })
     .getByRole("button", { name: /Bibliothèque/ })
     .click();
-  await expect(page.locator(".book-card")).toHaveCount(2);
+  await expect(page.locator(".book-card")).toHaveCount(3);
   await expect(
     page.getByText("Le phare des heures", { exact: true }),
   ).toHaveCount(0);
