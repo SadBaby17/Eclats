@@ -22,7 +22,7 @@ export const BOOKS = [
     file: "helio-a-mains-nues.json",
     title: "Hélio — À mains nues",
     cover: "Hélio\nÀ mains nues",
-    label: "Univers inédit · 3 premiers chapitres",
+    label: "Univers inédit · 8 chapitres",
     description:
       "À Brévane, la magie accompagne chaque geste du quotidien. Hélio, graveur de runes aussi solaire qu'inventif, découvre que certains choix laissent des traces bien après l'aventure.",
   },
