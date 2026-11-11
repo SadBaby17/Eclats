@@ -11,7 +11,7 @@ export function audit(story, inspect = () => {}) {
   const index = new Map(story.chapters.map((c, i) => [c.id, i]));
   function edges(s) {
     if (s.choice)
-      return s.choice.options.map((o) => ({
+      return s.choice.options.filter((o) => !o.retired).map((o) => ({
         next: o.next,
         set: o.set || {},
         when: o.when,
@@ -46,7 +46,7 @@ export function audit(story, inspect = () => {}) {
     let exits;
     inspect(id, s, variables);
     if (s.choice)
-      exits = s.choice.options.filter((o) => matches(o.when, variables));
+      exits = s.choice.options.filter((o) => !o.retired && matches(o.when, variables));
     else if (s.routes)
       exits = [s.routes.find((r) => matches(r.when, variables))].filter(
         Boolean,

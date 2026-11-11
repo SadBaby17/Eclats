@@ -912,6 +912,7 @@ function render(animate = false) {
           ),
           el("h2", {}, chapter.title),
         );
+        if (chapter.contentWarning) heading.append(el("p", { class: "content-warning" }, `Public adulte · ${chapter.contentWarning}`));
         const recap = chapterRecap(story, state, currentChapter);
         if (recap.length) {
           const summary = el("aside", {
@@ -1046,7 +1047,7 @@ function render(animate = false) {
   observeJournal();
   updateProgress();
 }
-function optionsField(options, name, selected) {
+function optionsField(options, name, selected, unavailable = []) {
   const field = el("fieldset", { class: "options" });
   field.append(
     el(
@@ -1055,11 +1056,20 @@ function optionsField(options, name, selected) {
       "Choisissez une direction pour le récit",
     ),
   );
-  options.forEach((option) => {
+  [...options, ...unavailable].forEach((option) => {
     const label = el("label", { class: "option" });
     const input = el("input", { type: "radio", name, value: option.id });
-    input.checked = selected === option.id;
-    label.append(input, document.createTextNode(option.label));
+    const locked = unavailable.includes(option);
+    input.checked = !locked && selected === option.id;
+    input.disabled = locked;
+    const text = el("span", { class: "option-text" }, option.label);
+    label.append(input, text);
+    if (locked) {
+      label.classList.add("option-unavailable");
+      const reason = el("small", { class: "option-reason", id: `${name}-${option.id}-reason` }, `Indisponible : ${option.disabledReason}`);
+      input.setAttribute("aria-describedby", reason.id);
+      label.append(reason);
+    }
     field.append(label);
   });
   return field;
@@ -1071,7 +1081,7 @@ function choiceForm(pending) {
     { class: "choice-prompt", id: `prompt-${pending.scene}` },
     pending.prompt,
   );
-  const field = optionsField(pending.options, "decision");
+  const field = optionsField(pending.options, "decision", undefined, pending.unavailableOptions);
   field.setAttribute("aria-labelledby", title.id);
   const confirm = el(
     "button",
@@ -1177,7 +1187,11 @@ function openRevision(sceneId) {
       "Confirmer un nouveau choix remplacera tous les passages et toutes les décisions qui suivent cet endroit. Cette action ne peut pas être annulée.",
     ),
   );
-  const field = optionsField(pending.options, "revision", current);
+  if (!pending.options.some((o) => o.id === current)) {
+    const archived = story.scenes[sceneId].choice.options.find((o) => o.id === current);
+    dialog.append(el("p", {}, `Votre réponse enregistrée reste conservée : « ${archived.label} ». Vous pouvez la garder ou choisir une nouvelle direction.`));
+  }
+  const field = optionsField(pending.options, "revision", current, pending.unavailableOptions);
   const confirm = el(
     "button",
     { class: "primary", disabled: "" },

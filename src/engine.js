@@ -64,6 +64,9 @@ export function validateStory(story) {
       for (const o of scene.choice.options) {
         if (!o.id || options.has(o.id) || !o.label || !o.passage)
           throw Error("Option invalide.");
+        if (o.retired !== undefined && typeof o.retired !== "boolean") throw Error("Option archivée invalide.");
+        if (o.disabledReason !== undefined && (typeof o.disabledReason !== "string" || !o.disabledReason.trim() || !o.when))
+          throw Error("Motif d’indisponibilité invalide.");
         options.add(o.id);
         target(o.next);
       }
@@ -107,19 +110,21 @@ export function replay(story, decisions = []) {
         pending: null,
       };
     if (scene.choice) {
-      const options = scene.choice.options.filter((o) =>
-        matches(o.when, variables),
-      );
+      // Archived answers remain replayable for published saves, but cannot be
+      // selected in a new reading. Locked answers are displayed separately.
+      const eligible = scene.choice.options.filter((o) => matches(o.when, variables));
+      const options = eligible.filter((o) => !o.retired);
+      const unavailableOptions = scene.choice.options.filter((o) => !o.retired && o.disabledReason && !matches(o.when, variables));
       if (!options.length) throw Error("Aucun choix disponible.");
       const decision = decisions[accepted.length];
       const option =
-        decision?.scene === id && options.find((o) => o.id === decision.option);
+        decision?.scene === id && eligible.find((o) => o.id === decision.option);
       if (!option)
         return {
           blocks,
           decisions: accepted,
           variables,
-          pending: { scene: id, ...scene.choice, options },
+          pending: { scene: id, ...scene.choice, options, unavailableOptions },
         };
       blocks.at(-1).selected = option;
       accepted.push({ scene: id, option: option.id });

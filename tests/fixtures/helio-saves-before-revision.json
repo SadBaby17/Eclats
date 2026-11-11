@@ -1,0 +1,1218 @@
+{
+  "saves": [
+    {
+      "schema": 1,
+      "story": "helio-a-mains-nues",
+      "version": 1,
+      "decisions": [
+        {
+          "scene": "h-1-1",
+          "option": "carnet"
+        },
+        {
+          "scene": "h-1-2",
+          "option": "livreur"
+        },
+        {
+          "scene": "h-1-3",
+          "option": "baton"
+        },
+        {
+          "scene": "h-1-4",
+          "option": "franc"
+        },
+        {
+          "scene": "h-1-5",
+          "option": "salon"
+        },
+        {
+          "scene": "h-2-1",
+          "option": "regarder"
+        },
+        {
+          "scene": "h-2-2",
+          "option": "franchise"
+        },
+        {
+          "scene": "h-2-3",
+          "option": "prix"
+        },
+        {
+          "scene": "h-2-4",
+          "option": "sac"
+        },
+        {
+          "scene": "h-2-5",
+          "option": "echelle"
+        },
+        {
+          "scene": "h-3-1",
+          "option": "attendre"
+        },
+        {
+          "scene": "h-3-2",
+          "option": "mael"
+        },
+        {
+          "scene": "h-3-3",
+          "option": "lame"
+        },
+        {
+          "scene": "h-3-4",
+          "option": "mesure"
+        },
+        {
+          "scene": "h-3-5",
+          "option": "ensemble"
+        },
+        {
+          "scene": "h-4-1",
+          "option": "quartier"
+        },
+        {
+          "scene": "h-4-2",
+          "option": "support"
+        },
+        {
+          "scene": "h-4-3",
+          "option": "proche"
+        },
+        {
+          "scene": "h-4-4",
+          "option": "main"
+        },
+        {
+          "scene": "h-4-5",
+          "option": "metier"
+        },
+        {
+          "scene": "h-5-1",
+          "option": "objet"
+        },
+        {
+          "scene": "h-5-2",
+          "option": "temoin"
+        },
+        {
+          "scene": "h-5-3",
+          "option": "porte"
+        },
+        {
+          "scene": "h-5-4",
+          "option": "temoins"
+        },
+        {
+          "scene": "h-5-5",
+          "option": "travail"
+        },
+        {
+          "scene": "h-6-1",
+          "option": "protections"
+        },
+        {
+          "scene": "h-6-2",
+          "option": "limites"
+        },
+        {
+          "scene": "h-6-3",
+          "option": "zone"
+        },
+        {
+          "scene": "h-6-4",
+          "option": "objets"
+        },
+        {
+          "scene": "h-6-5",
+          "option": "joueurs"
+        },
+        {
+          "scene": "h-7-1",
+          "option": "blesse"
+        },
+        {
+          "scene": "h-7-2",
+          "option": "baton"
+        },
+        {
+          "scene": "h-7-3",
+          "option": "cercle"
+        },
+        {
+          "scene": "h-7-4",
+          "option": "compte"
+        },
+        {
+          "scene": "h-7-5",
+          "option": "proche"
+        },
+        {
+          "scene": "h-8-1",
+          "option": "objets"
+        },
+        {
+          "scene": "h-8-2",
+          "option": "emplois"
+        },
+        {
+          "scene": "h-8-3",
+          "option": "protection"
+        },
+        {
+          "scene": "h-8-4",
+          "option": "marche"
+        },
+        {
+          "scene": "h-8-5",
+          "option": "atelier"
+        }
+      ],
+      "anchor": "h-8-6-p1",
+      "offset": 19,
+      "chapter": "hc8"
+    },
+    {
+      "schema": 1,
+      "story": "helio-a-mains-nues",
+      "version": 1,
+      "decisions": [
+        {
+          "scene": "h-1-1",
+          "option": "coussin"
+        },
+        {
+          "scene": "h-1-2",
+          "option": "cuistot"
+        },
+        {
+          "scene": "h-1-3",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-1-4",
+          "option": "taquin"
+        },
+        {
+          "scene": "h-1-5",
+          "option": "cuisine"
+        },
+        {
+          "scene": "h-2-1",
+          "option": "reposer"
+        },
+        {
+          "scene": "h-2-2",
+          "option": "payer"
+        },
+        {
+          "scene": "h-2-3",
+          "option": "vole"
+        },
+        {
+          "scene": "h-2-4",
+          "option": "baton"
+        },
+        {
+          "scene": "h-2-5",
+          "option": "poids"
+        },
+        {
+          "scene": "h-3-1",
+          "option": "dette"
+        },
+        {
+          "scene": "h-3-2",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-3-3",
+          "option": "mael"
+        },
+        {
+          "scene": "h-3-4",
+          "option": "repos"
+        },
+        {
+          "scene": "h-3-5",
+          "option": "distance"
+        },
+        {
+          "scene": "h-4-1",
+          "option": "poste"
+        },
+        {
+          "scene": "h-4-2",
+          "option": "vente"
+        },
+        {
+          "scene": "h-4-3",
+          "option": "ami"
+        },
+        {
+          "scene": "h-4-4",
+          "option": "repas"
+        },
+        {
+          "scene": "h-4-5",
+          "option": "visite"
+        },
+        {
+          "scene": "h-5-1",
+          "option": "parole"
+        },
+        {
+          "scene": "h-5-2",
+          "option": "copie"
+        },
+        {
+          "scene": "h-5-3",
+          "option": "zone"
+        },
+        {
+          "scene": "h-5-4",
+          "option": "mer"
+        },
+        {
+          "scene": "h-5-5",
+          "option": "argent"
+        },
+        {
+          "scene": "h-6-1",
+          "option": "boite"
+        },
+        {
+          "scene": "h-6-2",
+          "option": "cooperation"
+        },
+        {
+          "scene": "h-6-3",
+          "option": "fixation"
+        },
+        {
+          "scene": "h-6-4",
+          "option": "romy"
+        },
+        {
+          "scene": "h-6-5",
+          "option": "port"
+        },
+        {
+          "scene": "h-7-1",
+          "option": "porte"
+        },
+        {
+          "scene": "h-7-2",
+          "option": "sol"
+        },
+        {
+          "scene": "h-7-3",
+          "option": "main"
+        },
+        {
+          "scene": "h-7-4",
+          "option": "soins"
+        },
+        {
+          "scene": "h-7-5",
+          "option": "ami"
+        },
+        {
+          "scene": "h-8-1",
+          "option": "signes"
+        },
+        {
+          "scene": "h-8-2",
+          "option": "salaires"
+        },
+        {
+          "scene": "h-8-3",
+          "option": "partage"
+        },
+        {
+          "scene": "h-8-4",
+          "option": "repas"
+        },
+        {
+          "scene": "h-8-5",
+          "option": "romy"
+        }
+      ],
+      "anchor": "h-8-6-p1",
+      "offset": 19,
+      "chapter": "hc8"
+    },
+    {
+      "schema": 1,
+      "story": "helio-a-mains-nues",
+      "version": 1,
+      "decisions": [
+        {
+          "scene": "h-1-1",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-1-2",
+          "option": "voisine"
+        },
+        {
+          "scene": "h-1-3",
+          "option": "sol"
+        },
+        {
+          "scene": "h-1-4",
+          "option": "distant"
+        },
+        {
+          "scene": "h-1-5",
+          "option": "pont"
+        },
+        {
+          "scene": "h-2-1",
+          "option": "retour"
+        },
+        {
+          "scene": "h-2-2",
+          "option": "echange"
+        },
+        {
+          "scene": "h-2-3",
+          "option": "temps"
+        },
+        {
+          "scene": "h-2-4",
+          "option": "sol"
+        },
+        {
+          "scene": "h-2-5",
+          "option": "bateau"
+        },
+        {
+          "scene": "h-3-1",
+          "option": "rupture"
+        },
+        {
+          "scene": "h-3-2",
+          "option": "haut"
+        },
+        {
+          "scene": "h-3-3",
+          "option": "fuite"
+        },
+        {
+          "scene": "h-3-4",
+          "option": "mael"
+        },
+        {
+          "scene": "h-3-5",
+          "option": "yara"
+        },
+        {
+          "scene": "h-4-1",
+          "option": "messages"
+        },
+        {
+          "scene": "h-4-2",
+          "option": "exemple"
+        },
+        {
+          "scene": "h-4-3",
+          "option": "distant"
+        },
+        {
+          "scene": "h-4-4",
+          "option": "ouvriers"
+        },
+        {
+          "scene": "h-4-5",
+          "option": "controle"
+        },
+        {
+          "scene": "h-5-1",
+          "option": "romy"
+        },
+        {
+          "scene": "h-5-2",
+          "option": "porte"
+        },
+        {
+          "scene": "h-5-3",
+          "option": "chariot"
+        },
+        {
+          "scene": "h-5-4",
+          "option": "matériel"
+        },
+        {
+          "scene": "h-5-5",
+          "option": "temoin"
+        },
+        {
+          "scene": "h-6-1",
+          "option": "visiteurs"
+        },
+        {
+          "scene": "h-6-2",
+          "option": "arret"
+        },
+        {
+          "scene": "h-6-3",
+          "option": "poids"
+        },
+        {
+          "scene": "h-6-4",
+          "option": "equipe"
+        },
+        {
+          "scene": "h-6-5",
+          "option": "equipe"
+        },
+        {
+          "scene": "h-7-1",
+          "option": "travailleurs"
+        },
+        {
+          "scene": "h-7-2",
+          "option": "romy"
+        },
+        {
+          "scene": "h-7-3",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-7-4",
+          "option": "signes"
+        },
+        {
+          "scene": "h-7-5",
+          "option": "distant"
+        },
+        {
+          "scene": "h-8-1",
+          "option": "voix"
+        },
+        {
+          "scene": "h-8-2",
+          "option": "essais"
+        },
+        {
+          "scene": "h-8-3",
+          "option": "retour"
+        },
+        {
+          "scene": "h-8-4",
+          "option": "mots"
+        },
+        {
+          "scene": "h-8-5",
+          "option": "spectacle"
+        }
+      ],
+      "anchor": "h-8-6-p1",
+      "offset": 19,
+      "chapter": "hc8"
+    },
+    {
+      "schema": 1,
+      "story": "helio-a-mains-nues",
+      "version": 1,
+      "decisions": [
+        {
+          "scene": "h-1-1",
+          "option": "fruit"
+        },
+        {
+          "scene": "h-1-2",
+          "option": "batelier"
+        },
+        {
+          "scene": "h-1-3",
+          "option": "ceinture"
+        },
+        {
+          "scene": "h-1-4",
+          "option": "tendre"
+        },
+        {
+          "scene": "h-1-5",
+          "option": "entrepot"
+        },
+        {
+          "scene": "h-2-1",
+          "option": "parler"
+        },
+        {
+          "scene": "h-2-2",
+          "option": "relais"
+        },
+        {
+          "scene": "h-2-3",
+          "option": "colere"
+        },
+        {
+          "scene": "h-2-4",
+          "option": "ecran"
+        },
+        {
+          "scene": "h-2-5",
+          "option": "gardienne"
+        },
+        {
+          "scene": "h-3-1",
+          "option": "temoin"
+        },
+        {
+          "scene": "h-3-2",
+          "option": "eau"
+        },
+        {
+          "scene": "h-3-3",
+          "option": "noire"
+        },
+        {
+          "scene": "h-3-4",
+          "option": "bains"
+        },
+        {
+          "scene": "h-3-5",
+          "option": "public"
+        },
+        {
+          "scene": "h-4-1",
+          "option": "affaires"
+        },
+        {
+          "scene": "h-4-2",
+          "option": "clients"
+        },
+        {
+          "scene": "h-4-3",
+          "option": "travail"
+        },
+        {
+          "scene": "h-4-4",
+          "option": "paquets"
+        },
+        {
+          "scene": "h-4-5",
+          "option": "scene"
+        },
+        {
+          "scene": "h-5-1",
+          "option": "prix"
+        },
+        {
+          "scene": "h-5-2",
+          "option": "proprietaire"
+        },
+        {
+          "scene": "h-5-3",
+          "option": "baton"
+        },
+        {
+          "scene": "h-5-4",
+          "option": "romy"
+        },
+        {
+          "scene": "h-5-5",
+          "option": "objet"
+        },
+        {
+          "scene": "h-6-1",
+          "option": "livraison"
+        },
+        {
+          "scene": "h-6-2",
+          "option": "retard"
+        },
+        {
+          "scene": "h-6-3",
+          "option": "frottement"
+        },
+        {
+          "scene": "h-6-4",
+          "option": "papier"
+        },
+        {
+          "scene": "h-6-5",
+          "option": "reparer"
+        },
+        {
+          "scene": "h-7-1",
+          "option": "cuivre"
+        },
+        {
+          "scene": "h-7-2",
+          "option": "zone"
+        },
+        {
+          "scene": "h-7-3",
+          "option": "romy"
+        },
+        {
+          "scene": "h-7-4",
+          "option": "parole"
+        },
+        {
+          "scene": "h-7-5",
+          "option": "travail"
+        },
+        {
+          "scene": "h-8-1",
+          "option": "nadir"
+        },
+        {
+          "scene": "h-8-2",
+          "option": "demontage"
+        },
+        {
+          "scene": "h-8-3",
+          "option": "plaisir"
+        },
+        {
+          "scene": "h-8-4",
+          "option": "travail"
+        },
+        {
+          "scene": "h-8-5",
+          "option": "repos"
+        }
+      ],
+      "anchor": "h-8-6-p1",
+      "offset": 19,
+      "chapter": "hc8"
+    },
+    {
+      "schema": 1,
+      "story": "helio-a-mains-nues",
+      "version": 1,
+      "decisions": [
+        {
+          "scene": "h-1-1",
+          "option": "echarpe"
+        },
+        {
+          "scene": "h-1-2",
+          "option": "peintre"
+        },
+        {
+          "scene": "h-1-3",
+          "option": "ecran"
+        },
+        {
+          "scene": "h-1-4",
+          "option": "pro"
+        },
+        {
+          "scene": "h-1-5",
+          "option": "bras"
+        },
+        {
+          "scene": "h-2-1",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-2-2",
+          "option": "fil"
+        },
+        {
+          "scene": "h-2-3",
+          "option": "marche"
+        },
+        {
+          "scene": "h-2-4",
+          "option": "noire"
+        },
+        {
+          "scene": "h-2-5",
+          "option": "corde"
+        },
+        {
+          "scene": "h-3-1",
+          "option": "pardon"
+        },
+        {
+          "scene": "h-3-2",
+          "option": "ensemble"
+        },
+        {
+          "scene": "h-3-3",
+          "option": "baton"
+        },
+        {
+          "scene": "h-3-4",
+          "option": "elan"
+        },
+        {
+          "scene": "h-3-5",
+          "option": "discret"
+        },
+        {
+          "scene": "h-4-1",
+          "option": "repos"
+        },
+        {
+          "scene": "h-4-2",
+          "option": "usage"
+        },
+        {
+          "scene": "h-4-3",
+          "option": "leger"
+        },
+        {
+          "scene": "h-4-4",
+          "option": "calme"
+        },
+        {
+          "scene": "h-4-5",
+          "option": "tout"
+        },
+        {
+          "scene": "h-5-1",
+          "option": "temps"
+        },
+        {
+          "scene": "h-5-2",
+          "option": "limite"
+        },
+        {
+          "scene": "h-5-3",
+          "option": "enseigne"
+        },
+        {
+          "scene": "h-5-4",
+          "option": "mael"
+        },
+        {
+          "scene": "h-5-5",
+          "option": "limite"
+        },
+        {
+          "scene": "h-6-1",
+          "option": "cartes"
+        },
+        {
+          "scene": "h-6-2",
+          "option": "plaisir"
+        },
+        {
+          "scene": "h-6-3",
+          "option": "ordre"
+        },
+        {
+          "scene": "h-6-4",
+          "option": "repos"
+        },
+        {
+          "scene": "h-6-5",
+          "option": "refus"
+        },
+        {
+          "scene": "h-7-1",
+          "option": "objets"
+        },
+        {
+          "scene": "h-7-2",
+          "option": "porte"
+        },
+        {
+          "scene": "h-7-3",
+          "option": "voie"
+        },
+        {
+          "scene": "h-7-4",
+          "option": "calme"
+        },
+        {
+          "scene": "h-7-5",
+          "option": "leger"
+        },
+        {
+          "scene": "h-8-1",
+          "option": "explications"
+        },
+        {
+          "scene": "h-8-2",
+          "option": "constat"
+        },
+        {
+          "scene": "h-8-3",
+          "option": "outil"
+        },
+        {
+          "scene": "h-8-4",
+          "option": "silence"
+        },
+        {
+          "scene": "h-8-5",
+          "option": "route"
+        }
+      ],
+      "anchor": "h-8-6-p1",
+      "offset": 19,
+      "chapter": "hc8"
+    }
+  ],
+  "anchors": {
+    "h-1-1": 8,
+    "h-1-2": 7,
+    "h-1-3": 7,
+    "h-1-4": 7,
+    "h-1-5": 7,
+    "h-1-6": 6,
+    "h-2-1": 6,
+    "h-2-2": 7,
+    "h-2-3": 7,
+    "h-2-4": 7,
+    "h-2-5": 7,
+    "h-2-6": 7,
+    "h-3-1": 7,
+    "h-3-2": 7,
+    "h-3-3": 7,
+    "h-3-4": 2,
+    "h-3-5": 2,
+    "h-3-6": 3,
+    "h-1-1-carnet": 1,
+    "h-1-1-coussin": 1,
+    "h-1-1-cartes": 1,
+    "h-1-1-fruit": 1,
+    "h-1-1-echarpe": 1,
+    "h-1-2-livreur": 1,
+    "h-1-2-cuistot": 1,
+    "h-1-2-voisine": 1,
+    "h-1-2-batelier": 1,
+    "h-1-2-peintre": 1,
+    "h-1-3-baton": 1,
+    "h-1-3-cartes": 1,
+    "h-1-3-sol": 1,
+    "h-1-3-ceinture": 1,
+    "h-1-3-ecran": 1,
+    "h-1-4-franc": 1,
+    "h-1-4-taquin": 1,
+    "h-1-4-distant": 1,
+    "h-1-4-tendre": 1,
+    "h-1-4-pro": 1,
+    "h-1-5-salon": 1,
+    "h-1-5-cuisine": 1,
+    "h-1-5-pont": 1,
+    "h-1-5-entrepot": 1,
+    "h-1-5-bras": 1,
+    "h-2-1-regarder": 1,
+    "h-2-1-reposer": 1,
+    "h-2-1-retour": 1,
+    "h-2-1-parler": 1,
+    "h-2-1-cartes": 1,
+    "h-2-2-franchise": 1,
+    "h-2-2-payer": 1,
+    "h-2-2-echange": 1,
+    "h-2-2-relais": 1,
+    "h-2-2-fil": 1,
+    "h-2-3-prix": 1,
+    "h-2-3-vole": 1,
+    "h-2-3-temps": 1,
+    "h-2-3-colere": 1,
+    "h-2-3-marche": 1,
+    "h-2-4-sac": 1,
+    "h-2-4-baton": 1,
+    "h-2-4-sol": 1,
+    "h-2-4-ecran": 1,
+    "h-2-4-noire": 1,
+    "h-2-5-echelle": 1,
+    "h-2-5-poids": 1,
+    "h-2-5-bateau": 1,
+    "h-2-5-gardienne": 1,
+    "h-2-5-corde": 1,
+    "h-3-1-attendre": 1,
+    "h-3-1-dette": 1,
+    "h-3-1-rupture": 1,
+    "h-3-1-temoin": 1,
+    "h-3-1-pardon": 1,
+    "h-3-2-mael": 1,
+    "h-3-2-cartes": 1,
+    "h-3-2-haut": 1,
+    "h-3-2-eau": 1,
+    "h-3-2-ensemble": 1,
+    "h-3-3-lame": 1,
+    "h-3-3-mael": 1,
+    "h-3-3-fuite": 1,
+    "h-3-3-noire": 1,
+    "h-3-3-baton": 1,
+    "h-3-4-mesure": 1,
+    "h-3-4-repos": 1,
+    "h-3-4-mael": 1,
+    "h-3-4-bains": 1,
+    "h-3-4-elan": 1,
+    "h-3-5-ensemble": 1,
+    "h-3-5-distance": 1,
+    "h-3-5-yara": 1,
+    "h-3-5-public": 1,
+    "h-3-5-discret": 1,
+    "h-2-arrivee": 1,
+    "h-2-perte-salon": 1,
+    "h-2-perte-cuisine": 1,
+    "h-2-perte-pont": 1,
+    "h-2-perte-entrepot": 1,
+    "h-2-perte-bras": 1,
+    "h-2-perte": 0,
+    "h-2-contact-livreur": 1,
+    "h-2-contact-cuistot": 1,
+    "h-2-contact-voisine": 1,
+    "h-2-contact-batelier": 1,
+    "h-2-contact-peintre": 1,
+    "h-2-contact": 0,
+    "h-2-4-salon": 1,
+    "h-1-consequence-salon": 1,
+    "h-1-consequence-cuisine": 1,
+    "h-1-consequence-pont": 1,
+    "h-1-consequence-entrepot": 1,
+    "h-1-consequence-bras": 1,
+    "h-1-consequence": 0,
+    "h-3-constat": 4,
+    "h-3-lien-franc": 1,
+    "h-3-lien-taquin": 1,
+    "h-3-lien-distant": 1,
+    "h-3-lien-tendre": 1,
+    "h-3-lien-pro": 1,
+    "h-3-lien": 0,
+    "h-3-reprise": 4,
+    "h-3-contact-livreur": 1,
+    "h-3-contact-cuistot": 1,
+    "h-3-contact-voisine": 1,
+    "h-3-contact-batelier": 1,
+    "h-3-contact-peintre": 1,
+    "h-3-contact": 0,
+    "h-3-aube": 3,
+    "h-3-perte-salon": 1,
+    "h-3-perte-cuisine": 1,
+    "h-3-perte-pont": 1,
+    "h-3-perte-entrepot": 1,
+    "h-3-perte-bras": 1,
+    "h-3-perte": 0,
+    "h-3-suite-attendre": 1,
+    "h-3-suite-dette": 1,
+    "h-3-suite-rupture": 1,
+    "h-3-suite-temoin": 1,
+    "h-3-suite-pardon": 1,
+    "h-3-suite": 0,
+    "h-4-1": 4,
+    "h-4-2": 7,
+    "h-4-3": 7,
+    "h-4-4": 5,
+    "h-4-5": 7,
+    "h-4-6": 6,
+    "h-5-1": 7,
+    "h-5-2": 7,
+    "h-5-3": 7,
+    "h-5-4": 7,
+    "h-5-5": 7,
+    "h-5-6": 6,
+    "h-6-1": 7,
+    "h-6-2": 7,
+    "h-6-3": 7,
+    "h-6-4": 7,
+    "h-6-5": 10,
+    "h-6-6": 6,
+    "h-7-1": 7,
+    "h-7-2": 7,
+    "h-7-3": 7,
+    "h-7-4": 8,
+    "h-7-5": 2,
+    "h-7-6": 6,
+    "h-8-1": 3,
+    "h-8-2": 7,
+    "h-8-3": 5,
+    "h-8-4": 3,
+    "h-8-5": 8,
+    "h-8-6": 2,
+    "h-4-1-quartier": 1,
+    "h-4-1-poste": 1,
+    "h-4-1-messages": 1,
+    "h-4-1-affaires": 1,
+    "h-4-1-repos": 1,
+    "h-4-2-support": 1,
+    "h-4-2-vente": 1,
+    "h-4-2-exemple": 1,
+    "h-4-2-clients": 1,
+    "h-4-2-usage": 1,
+    "h-4-3-proche": 1,
+    "h-4-3-ami": 1,
+    "h-4-3-distant": 1,
+    "h-4-3-travail": 1,
+    "h-4-3-leger": 1,
+    "h-4-4-main": 1,
+    "h-4-4-repas": 1,
+    "h-4-4-ouvriers": 1,
+    "h-4-4-paquets": 1,
+    "h-4-4-calme": 1,
+    "h-4-5-metier": 1,
+    "h-4-5-visite": 1,
+    "h-4-5-controle": 1,
+    "h-4-5-scene": 1,
+    "h-4-5-tout": 1,
+    "h-5-1-objet": 1,
+    "h-5-1-parole": 1,
+    "h-5-1-romy": 1,
+    "h-5-1-prix": 1,
+    "h-5-1-temps": 1,
+    "h-5-2-temoin": 1,
+    "h-5-2-copie": 1,
+    "h-5-2-porte": 1,
+    "h-5-2-proprietaire": 1,
+    "h-5-2-limite": 1,
+    "h-5-3-porte": 1,
+    "h-5-3-zone": 1,
+    "h-5-3-chariot": 1,
+    "h-5-3-baton": 1,
+    "h-5-3-enseigne": 1,
+    "h-5-4-temoins": 1,
+    "h-5-4-mer": 1,
+    "h-5-4-matériel": 1,
+    "h-5-4-romy": 1,
+    "h-5-4-mael": 1,
+    "h-5-5-travail": 1,
+    "h-5-5-argent": 1,
+    "h-5-5-temoin": 1,
+    "h-5-5-objet": 1,
+    "h-5-5-limite": 1,
+    "h-6-1-protections": 1,
+    "h-6-1-boite": 1,
+    "h-6-1-visiteurs": 1,
+    "h-6-1-livraison": 1,
+    "h-6-1-cartes": 1,
+    "h-6-2-limites": 1,
+    "h-6-2-cooperation": 1,
+    "h-6-2-arret": 1,
+    "h-6-2-retard": 1,
+    "h-6-2-plaisir": 1,
+    "h-6-3-zone": 1,
+    "h-6-3-fixation": 1,
+    "h-6-3-poids": 1,
+    "h-6-3-frottement": 1,
+    "h-6-3-ordre": 1,
+    "h-6-4-objets": 1,
+    "h-6-4-romy": 1,
+    "h-6-4-equipe": 1,
+    "h-6-4-papier": 1,
+    "h-6-4-repos": 1,
+    "h-6-5-joueurs": 1,
+    "h-6-5-port": 1,
+    "h-6-5-equipe": 1,
+    "h-6-5-reparer": 1,
+    "h-6-5-refus": 1,
+    "h-7-1-blesse": 1,
+    "h-7-1-porte": 1,
+    "h-7-1-travailleurs": 1,
+    "h-7-1-cuivre": 1,
+    "h-7-1-objets": 1,
+    "h-7-2-baton": 1,
+    "h-7-2-sol": 1,
+    "h-7-2-romy": 1,
+    "h-7-2-zone": 1,
+    "h-7-2-porte": 1,
+    "h-7-3-cercle": 1,
+    "h-7-3-main": 1,
+    "h-7-3-cartes": 1,
+    "h-7-3-romy": 1,
+    "h-7-3-voie": 1,
+    "h-7-4-compte": 1,
+    "h-7-4-soins": 1,
+    "h-7-4-signes": 1,
+    "h-7-4-parole": 1,
+    "h-7-4-calme": 1,
+    "h-7-5-proche": 1,
+    "h-7-5-ami": 1,
+    "h-7-5-distant": 1,
+    "h-7-5-travail": 1,
+    "h-7-5-leger": 1,
+    "h-8-1-objets": 1,
+    "h-8-1-signes": 1,
+    "h-8-1-voix": 1,
+    "h-8-1-nadir": 1,
+    "h-8-1-explications": 1,
+    "h-8-2-emplois": 1,
+    "h-8-2-salaires": 1,
+    "h-8-2-essais": 1,
+    "h-8-2-demontage": 1,
+    "h-8-2-constat": 1,
+    "h-8-3-protection": 1,
+    "h-8-3-partage": 1,
+    "h-8-3-retour": 1,
+    "h-8-3-plaisir": 1,
+    "h-8-3-outil": 1,
+    "h-8-4-marche": 1,
+    "h-8-4-repas": 1,
+    "h-8-4-mots": 1,
+    "h-8-4-travail": 1,
+    "h-8-4-silence": 1,
+    "h-8-5-atelier": 1,
+    "h-8-5-romy": 1,
+    "h-8-5-spectacle": 1,
+    "h-8-5-repos": 1,
+    "h-8-5-route": 1,
+    "h-4-reprise": 4,
+    "h-4-perte-salon": 1,
+    "h-4-perte-cuisine": 1,
+    "h-4-perte-pont": 1,
+    "h-4-perte-entrepot": 1,
+    "h-4-perte-bras": 1,
+    "h-4-perte": 0,
+    "h-4-annonce-ensemble": 1,
+    "h-4-annonce-distance": 1,
+    "h-4-annonce-yara": 1,
+    "h-4-annonce-public": 1,
+    "h-4-annonce-discret": 1,
+    "h-4-annonce": 0,
+    "h-4-quartier": 2,
+    "h-4-yara-attendre": 1,
+    "h-4-yara-dette": 1,
+    "h-4-yara-rupture": 1,
+    "h-4-yara-temoin": 1,
+    "h-4-yara-pardon": 1,
+    "h-4-yara": 0,
+    "h-5-perte-salon": 1,
+    "h-5-perte-cuisine": 1,
+    "h-5-perte-pont": 1,
+    "h-5-perte-entrepot": 1,
+    "h-5-perte-bras": 1,
+    "h-5-perte": 0,
+    "h-6-accord-metier": 1,
+    "h-6-accord-visite": 1,
+    "h-6-accord-controle": 1,
+    "h-6-accord-scene": 1,
+    "h-6-accord-tout": 1,
+    "h-6-accord": 0,
+    "h-7-jetee": 4,
+    "h-7-lien-proche": 1,
+    "h-7-lien-ami": 1,
+    "h-7-lien-distant": 1,
+    "h-7-lien-travail": 1,
+    "h-7-lien-leger": 1,
+    "h-7-lien": 0,
+    "h-8-cour": 4,
+    "h-8-priorite-travail": 1,
+    "h-8-priorite-argent": 1,
+    "h-8-priorite-temoin": 1,
+    "h-8-priorite-objet": 1,
+    "h-8-priorite-limite": 1,
+    "h-8-priorite": 0,
+    "h-8-poste": 1,
+    "h-8-engagement-joueurs": 1,
+    "h-8-engagement-port": 1,
+    "h-8-engagement-equipe": 1,
+    "h-8-engagement-reparer": 1,
+    "h-8-engagement-refus": 1,
+    "h-8-engagement": 0,
+    "h-8-repos": 3,
+    "h-8-perte-salon": 1,
+    "h-8-perte-cuisine": 1,
+    "h-8-perte-pont": 1,
+    "h-8-perte-entrepot": 1,
+    "h-8-perte-bras": 1,
+    "h-8-perte": 0,
+    "h-8-soir": 3,
+    "h-8-lien-proche": 1,
+    "h-8-lien-ami": 1,
+    "h-8-lien-distant": 1,
+    "h-8-lien-travail": 1,
+    "h-8-lien-leger": 1,
+    "h-8-lien": 0
+  }
+}

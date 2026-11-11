@@ -1215,3 +1215,9 @@ dialog p {
 .journal-book[open] summary { border-bottom: 1px solid var(--line); }
 .journal-book > .journal-grid { padding: 1rem; }
 .journal-story + .journal-story { margin-top: 1rem; }
+
+.option-unavailable { display: grid; grid-template-columns: 1rem minmax(0, 1fr); align-items: start; cursor: not-allowed; border-style: dashed; color: var(--muted); }
+.option-text { min-width: 0; overflow-wrap: anywhere; }
+.option-reason { display: block; grid-column: 2; font-size: .85rem; line-height: 1.5; margin-top: .35rem; }
+.option-unavailable:has(input:disabled) { background: var(--panel); }
+.content-warning { font-size: .9rem; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--gold); padding-left: 1rem; }

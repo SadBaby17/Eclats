@@ -24,15 +24,18 @@ test("Hélio has eight complete chapters, every path reaches the reading minimum
   let states = 0;
   const result = audit(story, (id, scene, variables) => {
     if (!scene.choice) return;
-    const options = scene.choice.options.filter((o) => matches(o.when, variables));
-    assert.ok(options.length >= 5, id);
+    const options = scene.choice.options.filter((o) => !o.retired && matches(o.when, variables));
+    assert.ok(options.length >= (Number(scene.chapter.slice(2)) <= 3 ? 5 : 2), id);
+    if (Number(scene.chapter.slice(2)) >= 4) assert.ok(options.length <= 5, id);
     for (const field of ["id", "label", "passage", "next"]) assert.equal(new Set(options.map((o) => o[field])).size, options.length, `${id}: ${field}`);
     assert.equal(new Set(options.map((o) => story.scenes[o.next].paragraphs.join(" "))).size, options.length, id);
     states++;
   });
-  assert.equal(result.reached.size, Object.keys(story.scenes).length);
+  const legacy = JSON.parse(readFileSync(new URL("./fixtures/helio-saves-before-revision.json", import.meta.url)));
+  const reached = new Set([...result.reached, ...legacy.saves.flatMap((save) => replay(story, save.decisions).blocks.map((b) => b.id))]);
+  assert.equal(reached.size, Object.keys(story.scenes).length);
   assert.ok(states >= 40);
-  assert.ok(result.paths > 5n ** 39n);
+  assert.ok(result.paths > 2n ** 39n);
   for (let n = 0; n < 8; n++) {
     assert.ok(result.minWords[n] >= 3300, `chapter ${n + 1}: ${result.minWords[n]}`);
     assert.ok(result.maxWords[n] <= 4400);
@@ -62,7 +65,7 @@ test("the five losses last across two chapters and constrain the actual availabl
 test("early relationships and rescue choices change scenes in chapter three", () => {
   for (const [scene, prefix] of [["h-1-2", "h-3-contact"], ["h-1-4", "h-3-lien"], ["h-3-1", "h-3-suite"]]) {
     const echoes = new Set();
-    for (const option of story.scenes[scene].choice.options) {
+    for (const option of story.scenes[scene].choice.options.filter((o) => !o.retired)) {
       const r = follow({ [scene]: option.id });
       const echo = r.blocks.find((b) => b.id === `${prefix}-${option.id}`);
       assert.ok(echo, option.id);
@@ -154,7 +157,7 @@ test("published first three chapters, anchors, images and existing facts are pre
 test("new promises and relationship choices produce distinct consequences several chapters later", () => {
   for (const [scene, prefix] of [["h-4-5", "h-6-accord"], ["h-4-3", "h-7-lien"], ["h-5-5", "h-8-priorite"], ["h-6-5", "h-8-engagement"], ["h-7-5", "h-8-lien"]]) {
     const prose = new Set();
-    for (const option of story.scenes[scene].choice.options) {
+    for (const option of story.scenes[scene].choice.options.filter((o) => !o.retired)) {
       const r = follow({ [scene]: option.id });
       assert.equal(r.decisions.length, 40);
       assert.ok(r.ending);
@@ -162,7 +165,7 @@ test("new promises and relationship choices produce distinct consequences severa
       assert.ok(echo, `${scene}: ${option.id}`);
       prose.add(echo.scene.paragraphs.join(" "));
     }
-    assert.equal(prose.size, 5);
+    assert.equal(prose.size, story.scenes[scene].choice.options.filter((o) => !o.retired).length);
   }
 });
 
@@ -179,4 +182,69 @@ test("later journal knowledge and the final relationship disappear after a rewin
   assert.ok(!knownCharacters(story, early, reduced).some((c) => ["romy", "nadir", "senn"].includes(c.id)));
   assert.deepEqual(chapterRecap(story, early, "hc8"), []);
   assert.ok(!chapterProgress(story, early).find((c) => c.number === 5).unlocked);
+});
+
+test("the revision keeps every published save and paragraph anchor, including archived answers", () => {
+  const published = JSON.parse(readFileSync(new URL("./fixtures/helio-saves-before-revision.json", import.meta.url)));
+  for (const [id, count] of Object.entries(published.anchors)) assert.ok(story.scenes[id].paragraphs.length >= count, id);
+  for (const saved of published.saves) {
+    const values = new Map([[saveKey(story), JSON.stringify(saved)]]);
+    const storage = { getItem: (k) => values.get(k), setItem: (k,v) => values.set(k,v) };
+    const restored = readSave(storage, story), r = replay(story, restored.decisions);
+    assert.deepEqual(r.decisions, saved.decisions);
+    assert.equal(r.decisions.length, 40);
+    assert.ok(r.ending);
+    assert.equal(restored.anchor, saved.anchor);
+    assert.equal(restored.offset, saved.offset);
+  }
+  const includingPublished = structuredClone(story);
+  for (const scene of Object.values(includingPublished.scenes))
+    for (const option of scene.choice?.options || []) delete option.retired;
+  const allPaths = audit(includingPublished);
+  assert.equal(allPaths.reached.size, Object.keys(story.scenes).length);
+  for (const count of allPaths.minWords) assert.ok(count >= 3300);
+  const archived = story.scenes["h-4-1"].choice.options.find((o) => o.retired);
+  const early = follow({}, 15);
+  assert.ok(!early.pending.options.some((o) => o.id === archived.id));
+  assert.throws(() => choose(story, early.decisions, early.pending.scene, archived.id), /indisponible/);
+});
+
+test("occasional locked answers explain actual earlier choices and cannot be selected", () => {
+  const early = follow({ "h-1-5": "salon" }, 15);
+  assert.ok(early.pending.unavailableOptions.some((o) => o.id === "salon" && o.disabledReason));
+  assert.throws(() => choose(story, early.decisions, early.pending.scene, "salon"), /indisponible/);
+  const intact = follow({ "h-1-5": "cuisine" }, 15);
+  assert.ok(intact.pending.options.some((o) => o.id === "salon"));
+  const noArrival = follow({ "h-4-4": "main", "h-5-4": "temoins" }, 30);
+  assert.ok(noArrival.pending.unavailableOptions.some((o) => o.id === "passage"));
+  assert.throws(() => choose(story, noArrival.decisions, noArrival.pending.scene, "passage"), /indisponible/);
+  const arrival = follow({ "h-5-4": "matériel", "h-7-1": "passage" });
+  assert.ok(arrival.blocks.some((b) => b.id === "h-7-1-passage"));
+  assert.ok(follow({ "h-5-4": "temoins" }).blocks.some((b) => b.id === "h-7-soiree-temoins"));
+  assert.ok(follow({ "h-5-4": "mael" }).blocks.some((b) => b.id === "h-7-soiree-port"));
+  const rehearsed = follow({ "h-6-2": "cooperation", "h-7-3": "ombre" });
+  assert.ok(rehearsed.blocks.some((b) => b.id === "h-7-3-ombre"));
+  const unrehearsed = follow({ "h-6-2": "plaisir" }, 32);
+  assert.ok(unrehearsed.pending.unavailableOptions.some((o) => o.id === "ombre"));
+  const revised = replay(story, [...unrehearsed.decisions, { scene: unrehearsed.pending.scene, option: "ombre" }]);
+  assert.deepEqual(revised.decisions, unrehearsed.decisions);
+  assert.equal(Object.values(story.scenes).filter((n) => n.choice?.options.some((o) => o.disabledReason)).length, 3);
+});
+
+test("early investigation has distinct later outcomes and intimacy respects the chosen relationship", () => {
+  for (const [option, echo] of [["quartier","voisins"],["poste","porteur"],["repos","sans"]]) {
+    assert.ok(follow({ "h-4-1": option }).blocks.some((b) => b.id === `h-6-origine-${echo}`));
+  }
+  assert.ok(follow({ "h-1-5":"cuisine", "h-4-1":"salon" }).blocks.some((b) => b.id === "h-6-origine-carnet"));
+  for (const relation of ["proche", "leger", "ami", "distant"]) {
+    const r = follow({ "h-7-5": relation });
+    assert.ok(r.blocks.some((b) => b.id === `h-7-nuit-${["proche","leger"].includes(relation) ? relation : "calme"}`));
+    const seen = retainDiscoveries(r, [...journalAnchors(story)]);
+    const known = knownCharacters(story,r,seen);
+    assert.equal(known.find((c) => c.id === "helio").fields.age,"22 ans.");
+    assert.match(known.find((c) => c.id === "mael").fields["magic-ombres"], /ombres/);
+    const prefix = follow({}, 14), earlier = knownCharacters(story,prefix,retainDiscoveries(prefix,[...seen]));
+    assert.notEqual(earlier.find((c) => c.id === "helio").fields.age,"22 ans.");
+    assert.ok(!earlier.find((c) => c.id === "mael").fields["magic-ombres"]);
+  }
 });

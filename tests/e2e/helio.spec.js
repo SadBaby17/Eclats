@@ -2,8 +2,9 @@ import { test, expect } from "@playwright/test";
 const key = "eclats.reading.v1:helio-a-mains-nues";
 const oldKey = "eclats.reading.v1:accords-du-crepuscule";
 async function decide(page, index = 0) {
-  await expect.poll(() => page.locator(".choice input[type=radio]").count()).toBeGreaterThanOrEqual(5);
-  await page.locator(".choice input[type=radio]").nth(index).check();
+  await expect.poll(() => page.locator(".choice input[type=radio]").count()).toBeGreaterThanOrEqual(2);
+  const available = page.locator(".choice input[type=radio]:enabled");
+  await available.nth(Math.min(index, await available.count() - 1)).check();
   await page.getByRole("button", { name: "Confirmer ce chemin", exact: true }).click();
 }
 async function pictures(page, count) {
@@ -109,4 +110,75 @@ test("a version-one fifteen-decision save continues at chapter four without losi
   await page.reload();
   await expect(page.locator(".choice")).toHaveCount(1);
   expect(await page.evaluate((k) => JSON.parse(localStorage.getItem(k)).decisions.length, key)).toBe(16);
+});
+
+async function seedHelio(page, overrides, count, chapter, anchor) {
+  const { readFileSync } = await import("node:fs");
+  const { replay, choose } = await import("../../src/engine.js");
+  const story = JSON.parse(readFileSync("public/stories/helio-a-mains-nues.json", "utf8"));
+  let r = replay(story);
+  while (r.pending && r.decisions.length < count) {
+    const p = r.pending;
+    r = choose(story, r.decisions, p.scene, overrides[p.scene] || p.options[0].id);
+  }
+  await page.addInitScript(({ key, save }) => {
+    if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
+  }, { key, save: { schema: 1, story: story.id, version: story.version, decisions: r.decisions, anchor, chapter, offset: 0 } });
+}
+
+test("locked choices explain earlier preparations, survive offline and unlock after a revision", async ({ page, context }) => {
+  await seedHelio(page, { "h-4-4": "main", "h-5-4": "temoins", "h-6-2": "plaisir" }, 30, "hc7", "h-7-1-p0");
+  await page.goto("./?story=helio-a-mains-nues&read=1");
+  await expect(page.locator(".content-warning")).toContainText("Public adulte");
+  const portal = page.locator('.choice input[value="passage"]');
+  await expect(portal).toBeDisabled();
+  await expect(page.locator(".option-unavailable")).toContainText("point d’arrivée");
+  expect(await page.locator(".choice input:enabled").count()).toBeGreaterThanOrEqual(2);
+  await page.setViewportSize({ width: 320, height: 640 });
+  await portal.scrollIntoViewIfNeeded();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+  await page.screenshot({ path: "test-results/helio-revised-locked-mobile.png" });
+  await decide(page); await decide(page);
+  await expect(page.locator('.choice input[value="ombre"]')).toBeDisabled();
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller) await new Promise((resolve) => navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true }));
+  });
+  await context.setOffline(true); await page.reload();
+  await expect(page.locator('.choice input[value="ombre"]')).toBeDisabled();
+  await page.getByRole("button", { name: "Mes décisions" }).click();
+  await page.getByRole("button", { name: /DÉCISION 24\b/ }).click();
+  await page.getByRole("dialog").locator('input[value="matériel"]').check();
+  await page.getByRole("button", { name: "Remplacer la suite", exact: true }).click();
+  await decide(page);
+  await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
+  for (let i = 0; i < 5; i++) await decide(page);
+  await page.getByRole("button", { name: "Chapitre suivant →", exact: true }).click();
+  await expect(page.locator('.choice input[value="passage"]')).toBeEnabled();
+  await page.locator('.choice input[value="passage"]').check();
+  await page.getByRole("button", { name: "Confirmer ce chemin", exact: true }).click();
+  await expect(page.locator("#scene-h-7-1-passage")).toContainText("traversa");
+  await decide(page);
+  await expect(page.locator('.choice input[value="ombre"]')).toBeEnabled();
+  await page.locator('.choice input[value="ombre"]').check();
+  await page.getByRole("button", { name: "Confirmer ce chemin", exact: true }).click();
+  await expect(page.locator("#scene-h-7-3-ombre")).toContainText("filet");
+});
+
+test("published archived answers remain readable and are kept until an explicit revision", async ({ page }) => {
+  const { readFileSync } = await import("node:fs");
+  const fixture = JSON.parse(readFileSync("tests/fixtures/helio-saves-before-revision.json", "utf8"));
+  const save = { ...fixture.saves[2], chapter: "hc4", anchor: "h-4-1-messages-p0" };
+  await page.addInitScript(({ key, save }) => {
+    if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
+  }, { key, save });
+  await page.goto("./?story=helio-a-mains-nues&read=1");
+  await expect(page.locator("#h-4-1-messages-p0")).toBeVisible();
+  expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions, key)).toEqual(save.decisions);
+  await page.getByRole("button", { name: "Mes décisions" }).click();
+  await page.getByRole("button", { name: /DÉCISION 16\b/ }).click();
+  await expect(page.getByRole("dialog")).toContainText("Votre réponse enregistrée reste conservée");
+  await expect(page.getByRole("dialog").locator('input[value="messages"]')).toHaveCount(0);
+  await page.getByRole("button", { name: "Conserver mon récit", exact: true }).click();
+  expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).decisions, key)).toEqual(save.decisions);
 });
