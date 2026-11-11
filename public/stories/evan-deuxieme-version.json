@@ -7419,6 +7419,7 @@
       }
     ]
   },
+  "characterPortraits": {"evan": {"src": "illustrations/evan-v2/chapter-01.webp", "alt": "Evan, Diva et Tam-Tam — illustration existante du trio", "source": {"scene": "v2-1-1", "paragraph": 1}}, "diva": {"src": "illustrations/evan-v2/chapter-01.webp", "alt": "Evan, Diva et Tam-Tam — illustration existante du trio", "source": {"scene": "v2-1-1", "paragraph": 4}}, "tam-tam": {"src": "illustrations/evan-v2/chapter-01.webp", "alt": "Evan, Diva et Tam-Tam — illustration existante du trio", "source": {"scene": "v2-1-1", "paragraph": 0}}},
   "characters": [
     {
       "id": "evan",

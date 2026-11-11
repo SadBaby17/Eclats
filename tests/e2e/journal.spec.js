@@ -17,6 +17,8 @@ async function destination(page, label) {
 async function journal(page) {
   await destination(page, "Journal de personnage");
   await expect(page.getByRole("heading", { name: "Journal de personnage", exact: true })).toBeVisible();
+  await expect(page.locator(".journal-book")).toHaveCount(3);
+  for (const summary of await page.locator(".journal-book > summary").all()) await summary.click();
 }
 async function sheet(page, name) { await page.getByRole("button", { name: `Voir la fiche de ${name}`, exact: true }).click(); return page.getByRole("dialog"); }
 
@@ -146,4 +148,27 @@ test("journal groups independent books and reveals only discovered existing port
   await expect(portrait).toHaveCount(1);
   await expect.poll(() => portrait.evaluate((img) => img.complete && img.naturalWidth > 0)).toBe(true);
   expect((await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), key)).decisions).toHaveLength(4);
+});
+
+
+test("book titles start collapsed, expand by keyboard and show existing illustrations", async ({ page }) => {
+  await seed(page, 20); await page.goto("./");
+  await destination(page, "Journal de personnage");
+  await expect(page.locator(".journal-book")).toHaveCount(3);
+  await expect(page.locator(".journal-book[open]")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Voir la fiche de Evan Kamikony", exact: true })).toBeHidden();
+  const book = page.getByRole("region", { name: story.title, exact: true });
+  await book.locator("summary").focus(); await page.keyboard.press("Enter");
+  await expect(book.locator("details")).toHaveAttribute("open", "");
+  const portrait = book.locator(".character-portrait").first();
+  await expect(portrait).toBeVisible();
+  await expect.poll(() => portrait.evaluate((img) => img.complete && img.naturalWidth > 0)).toBe(true);
+  await sheet(page, "Evan Kamikony");
+  await expect(page.locator(".character-sheet-portrait")).toBeVisible();
+  await expect.poll(() => page.locator(".character-sheet-portrait").evaluate((img) => img.complete && img.naturalWidth > 0)).toBe(true);
+  await page.keyboard.press("Escape");
+  await book.locator("summary").click();
+  await expect(book.locator(".character-card").first()).toBeHidden();
+  await page.getByRole("searchbox").fill("Evan");
+  await expect(book.getByRole("button", { name: "Voir la fiche de Evan Kamikony", exact: true })).toBeVisible();
 });

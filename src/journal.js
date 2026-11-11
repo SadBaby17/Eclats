@@ -20,7 +20,7 @@ export function retainDiscoveries(reading, seen = []) {
 }
 
 export function journalAnchors(story) {
-  return new Set((story.characters || []).flatMap((c) => [...c.facts.map((f) => sourceAnchor(f.source)), ...(c.portrait ? [sourceAnchor(c.portrait.source)] : [])]));
+  return new Set((story.characters || []).flatMap((c) => [...c.facts.map((f) => sourceAnchor(f.source)), ...((c.portrait || story.characterPortraits?.[c.id]) ? [sourceAnchor((c.portrait || story.characterPortraits[c.id]).source)] : [])]));
 }
 
 // Old saves have no exposure log. Confirmed decisions establish a conservative
@@ -55,6 +55,23 @@ export function migrateDiscoveries(story, reading, saved) {
   return seen;
 }
 
+// Existing saves can predate portrait anchors. A later discovered source on the
+// same path establishes that the introductory illustration has been passed.
+function portraitDiscovered(portrait, reading, seen) {
+  if (!portrait) return false;
+  const target = sourceAnchor(portrait.source);
+  let reached = false;
+  for (const block of reading.blocks) {
+    const anchors = narrativeProse(block.scene).map(({ key }) => `${block.id}-${key}`);
+    if (block.selected) anchors.push(`${block.id}-selected`);
+    for (const anchor of anchors) {
+      if (anchor === target) reached = true;
+      if (reached && seen.has(anchor)) return true;
+    }
+  }
+  return false;
+}
+
 export function knownCharacters(story, reading, seen) {
   const order = new Map(reading.blocks.map((b, i) => [b.id, { block: b, index: i }]));
   return (story.characters || []).flatMap((character) => {
@@ -67,7 +84,8 @@ export function knownCharacters(story, reading, seen) {
     const fields = {};
     for (const fact of facts) fields[fact.field] = fact.value;
     if (!fields.name) return [];
-    return [{ portrait: character.portrait && order.has(character.portrait.source.scene) && seen.has(sourceAnchor(character.portrait.source)) ? character.portrait : null, id: character.id, kind: character.kind, name: fields.fullName || fields.name, fields, facts,
+    const portrait = character.portrait || story.characterPortraits?.[character.id];
+    return [{ portrait: portraitDiscovered(portrait, reading, seen) ? portrait : null, id: character.id, kind: character.kind, name: fields.fullName || fields.name, fields, facts,
       firstSource: facts[0].source, chapter: story.scenes[facts[0].source.scene].chapter }];
   });
 }

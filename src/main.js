@@ -511,7 +511,7 @@ async function renderJournal() {
   const groups = await Promise.all(BOOKS.map(async (entry) => {
     if (entry.id === currentStory.id) return { story: currentStory, characters: knownCharacters(story, state, journalSeen) };
     try {
-      if (!storage?.getItem(`eclats.reading.v1:${entry.id}`)) return null;
+      if (!storage?.getItem(`eclats.reading.v1:${entry.id}`)) return { story: entry, characters: [] };
       const response = await fetch(`${import.meta.env.BASE_URL}stories/${entry.file}`);
       if (!response.ok) throw Error();
       const other = validateStory(await response.json());
@@ -535,7 +535,6 @@ async function renderJournal() {
     const read = el("button", { class: "primary" }, "Reprendre ma lecture");
     read.onclick = () => showDestination("lectures");
     destination.append(read);
-    return;
   }
   const tools = el("div", { class: "journal-tools" });
   const label = el("label", { for: "journal-search" }, "Rechercher un personnage connu");
@@ -549,6 +548,7 @@ async function renderJournal() {
   const list = el("div", { class: "journal-stories" });
   const count = el("p", { class: "journal-results", role: "status" });
   const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
+  const expanded = new Set();
   function paint() {
     const query = normalize(search.value.trim());
     const found = characters.filter((c) => (filter.value === "all" || c.kind === filter.value)
@@ -557,17 +557,27 @@ async function renderJournal() {
     count.textContent = found.length ? `${found.length} fiche${found.length > 1 ? "s" : ""}` : "Aucune fiche connue ne correspond à cette recherche.";
     for (const group of groups.filter(Boolean)) {
       const matches = found.filter((c) => c.book.id === group.story.id);
-      if (!matches.length) continue;
+      if (!matches.length && (query || filter.value !== "all")) continue;
       const section = el("section", { class: "journal-story", "aria-label": group.story.title });
-      section.append(el("h2", {}, group.story.title));
+      const details = el("details", { class: "journal-book" });
+      const summary = el("summary");
+      summary.append(el("h2", {}, group.story.title));
+      details.append(summary);
+      details.open = expanded.has(group.story.id) || Boolean(query) || filter.value !== "all";
+      details.ontoggle = () => {
+        if (details.open) expanded.add(group.story.id);
+        else expanded.delete(group.story.id);
+      };
+      section.append(details);
       const grid = el("div", { class: "journal-grid" });
-      section.append(grid);
+      details.append(grid);
+      if (!matches.length) grid.append(el("p", {}, "Aucun personnage découvert dans cette histoire pour le moment."));
       list.append(section);
       for (const character of matches) {
         const button = el("button", { class: "character-card", "aria-label": `Voir la fiche de ${character.name}` });
         button.append(
           character.portrait
-            ? el("img", { class: "character-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: "", loading: "lazy" })
+            ? el("img", { class: "character-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: character.portrait.alt || `Illustration de ${character.name}`, loading: "lazy" })
             : el("span", { class: "character-initial", "aria-hidden": "true" }, character.name[0]),
           el("strong", {}, character.name),
           el("span", { class: "character-role" }, character.fields.occupation || character.fields.race || (character.kind === "companion" ? "Compagnon" : "Rencontre du récit")),
@@ -586,7 +596,7 @@ function openCharacter(character) {
   const dialog = modal(character.name);
   dialog.classList.add("character-sheet");
   dialog.append(el("p", { class: "eyebrow" }, character.book.title));
-  if (character.portrait) dialog.append(el("img", { class: "character-sheet-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: `Portrait de ${character.name}` }));
+  if (character.portrait) dialog.append(el("img", { class: "character-sheet-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: character.portrait.alt || `Portrait de ${character.name}` }));
   const identity = el("dl", { class: "character-identity" });
   for (const [field, label] of [["age", "Âge"], ["occupation", "Métier / rôle"], ["race", "Race / nature"], ["class", "Classe"], ["affiliation", "Affiliation"]]) {
     if (field !== "age" && !character.fields[field]) continue;

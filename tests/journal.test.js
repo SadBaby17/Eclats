@@ -98,6 +98,9 @@ test("existing portraits require their own discovered source and disappear after
   const seen = new Set(["h-1-1-p0"]);
   assert.equal(knownCharacters(helio, reading, seen)[0].portrait, null);
   assert.ok(journalAnchors(helio).has("h-1-1-p4"));
+  seen.add("h-1-1-p6");
+  assert.equal(knownCharacters(helio, reading, seen)[0].portrait.src, "illustrations/helio/01-helio.webp");
+  seen.delete("h-1-1-p6");
   seen.add("h-1-1-p4");
   assert.equal(knownCharacters(helio, reading, seen)[0].portrait.src, "illustrations/helio/01-helio.webp");
   seen.add("h-6-1-p2");
