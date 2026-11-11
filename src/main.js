@@ -493,7 +493,9 @@ function refreshJournal() {
   activeView = null;
   showDestination("journal");
 }
-function renderJournal() {
+let journalRenderVersion = 0;
+async function renderJournal() {
+  const version = ++journalRenderVersion;
   if (!story || !state) {
     destination.append(el("p", { role: "status" }, loadFailed
       ? "Le journal n’a pas pu être chargé. Vérifiez votre connexion puis réessayez."
@@ -505,9 +507,23 @@ function renderJournal() {
     }
     return;
   }
-  const characters = knownCharacters(story, state, journalSeen);
+  const currentStory = story;
+  const groups = await Promise.all(BOOKS.map(async (entry) => {
+    if (entry.id === currentStory.id) return { story: currentStory, characters: knownCharacters(story, state, journalSeen) };
+    try {
+      if (!storage?.getItem(`eclats.reading.v1:${entry.id}`)) return null;
+      const response = await fetch(`${import.meta.env.BASE_URL}stories/${entry.file}`);
+      if (!response.ok) throw Error();
+      const other = validateStory(await response.json());
+      const saved = readSave(storage, other);
+      const reading = replay(other, saved?.decisions || []);
+      return { story: other, characters: knownCharacters(other, reading, migrateDiscoveries(other, reading, saved)) };
+    } catch { return null; }
+  }));
+  if (activeView !== "journal" || story !== currentStory || version !== journalRenderVersion) return;
+  const characters = groups.filter(Boolean).flatMap((group) => group.characters.map((c) => ({ ...c, book: group.story })));
+
   destination.append(
-    el("p", { class: "eyebrow" }, story.title),
     el("p", { class: "destination-intro" }, "Les visages de votre voyage. Les fiches se complètent avec les passages que vous découvrez."),
     el("p", { class: "journal-count" }, `${characters.length} fiche${characters.length > 1 ? "s" : ""} connue${characters.length > 1 ? "s" : ""}`),
   );
@@ -530,7 +546,7 @@ function renderJournal() {
   for (const [kind, name] of [["person", "Personnages"], ["companion", "Compagnons"], ["animal", "Animaux rencontrés"], ["entity", "Entités"]])
     if (characters.some((c) => c.kind === kind)) filter.append(el("option", { value: kind }, name));
   tools.append(label, search, filterLabel, filter);
-  const list = el("div", { class: "journal-grid" });
+  const list = el("div", { class: "journal-stories" });
   const count = el("p", { class: "journal-results", role: "status" });
   const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
   function paint() {
@@ -539,15 +555,26 @@ function renderJournal() {
       && normalize([c.name, ...Object.values(c.fields)].join(" ")).includes(query));
     list.replaceChildren();
     count.textContent = found.length ? `${found.length} fiche${found.length > 1 ? "s" : ""}` : "Aucune fiche connue ne correspond à cette recherche.";
-    for (const character of found) {
-      const button = el("button", { class: "character-card", "aria-label": `Voir la fiche de ${character.name}` });
-      button.append(
-        el("span", { class: "character-initial", "aria-hidden": "true" }, character.name[0]),
-        el("strong", {}, character.name),
-        el("span", { class: "character-role" }, character.fields.occupation || character.fields.race || (character.kind === "companion" ? "Compagnon" : "Rencontre du récit")),
-      );
-      button.onclick = () => openCharacter(character);
-      list.append(button);
+    for (const group of groups.filter(Boolean)) {
+      const matches = found.filter((c) => c.book.id === group.story.id);
+      if (!matches.length) continue;
+      const section = el("section", { class: "journal-story", "aria-label": group.story.title });
+      section.append(el("h2", {}, group.story.title));
+      const grid = el("div", { class: "journal-grid" });
+      section.append(grid);
+      list.append(section);
+      for (const character of matches) {
+        const button = el("button", { class: "character-card", "aria-label": `Voir la fiche de ${character.name}` });
+        button.append(
+          character.portrait
+            ? el("img", { class: "character-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: "", loading: "lazy" })
+            : el("span", { class: "character-initial", "aria-hidden": "true" }, character.name[0]),
+          el("strong", {}, character.name),
+          el("span", { class: "character-role" }, character.fields.occupation || character.fields.race || (character.kind === "companion" ? "Compagnon" : "Rencontre du récit")),
+        );
+        button.onclick = () => openCharacter(character);
+        grid.append(button);
+      }
     }
   }
   search.oninput = paint;
@@ -558,7 +585,8 @@ function renderJournal() {
 function openCharacter(character) {
   const dialog = modal(character.name);
   dialog.classList.add("character-sheet");
-  dialog.append(el("p", { class: "eyebrow" }, story.title));
+  dialog.append(el("p", { class: "eyebrow" }, character.book.title));
+  if (character.portrait) dialog.append(el("img", { class: "character-sheet-portrait", src: `${import.meta.env.BASE_URL}${character.portrait.src}`, alt: `Portrait de ${character.name}` }));
   const identity = el("dl", { class: "character-identity" });
   for (const [field, label] of [["age", "Âge"], ["occupation", "Métier / rôle"], ["race", "Race / nature"], ["class", "Classe"], ["affiliation", "Affiliation"]]) {
     if (field !== "age" && !character.fields[field]) continue;
@@ -581,11 +609,19 @@ function openCharacter(character) {
     section.append(list);
     dialog.append(section);
   }
-  const chapter = story.chapters.find((c) => c.id === character.chapter);
+  const chapter = character.book.chapters.find((c) => c.id === character.chapter);
   dialog.append(el("p", { class: "character-source" }, `Première découverte : chapitre ${chapter.number} · ${chapter.title}`));
   const revisit = el("button", { class: "text-button" }, "Relire la première rencontre");
   revisit.onclick = () => {
     dialog.close();
+    if (character.book.id !== story.id) {
+      save();
+      const url = new URL(location.href);
+      url.search = new URLSearchParams({ story: character.book.id, read: "1", encounter: character.id });
+      url.hash = "";
+      location.assign(url.href);
+      return;
+    }
     openChapter(character.chapter);
     const node = document.getElementById(sourceAnchor(character.firstSource));
     node?.scrollIntoView({ block: "center", behavior: "instant" });
@@ -1278,6 +1314,11 @@ async function start() {
       if (query.get("read") === "1") showDestination("lectures");
       else if (location.hash === "#chapitres") showDestination("histoire");
       restorePosition(restore);
+      const encounter = knownCharacters(story, state, journalSeen).find((c) => c.id === query.get("encounter"));
+      if (encounter) {
+        openChapter(encounter.chapter);
+        document.getElementById(sourceAnchor(encounter.firstSource))?.scrollIntoView({ block: "center", behavior: "instant" });
+      }
       canSave = true;
       updateProgress();
       save();

@@ -1203,3 +1203,7 @@ dialog p {
 .character-facts ul { padding-left: 1.2rem; line-height: 1.6; }
 .character-facts li { margin: .6rem 0; }
 .character-source { color: var(--muted); line-height: 1.6; }
+
+.journal-story + .journal-story { margin-top: 2.5rem; }
+.character-portrait { width: 100%; height: 180px; object-fit: cover; object-position: center 25%; border-radius: .4rem; }
+.character-sheet-portrait { display: block; width: 100%; max-height: 420px; object-fit: contain; border-radius: .5rem; margin: 1rem auto; }

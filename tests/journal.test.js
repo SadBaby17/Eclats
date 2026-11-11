@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { replay, choose } from "../src/engine.js";
+import { replay, choose, narrativeProse } from "../src/engine.js";
 import { sourceAnchor, journalAnchors, migrateDiscoveries, knownCharacters, retainDiscoveries } from "../src/journal.js";
 import { readSave, writeSave } from "../src/storage.js";
 const story = JSON.parse(readFileSync(new URL("../public/stories/accords-du-crepuscule.json", import.meta.url)));
@@ -90,4 +90,20 @@ test("new saves persist discoveries; old or damaged optional logs preserve readi
   assert.deepEqual([...migrateDiscoveries(story, reading, saved)], ["c1-rue-p0"]);
   assert.ok(migrateDiscoveries(story, reading, { ...saved, journalSeen: "broken" }).has("c1-nuit-p4"));
   assert.deepEqual([...migrateDiscoveries(story, reading, { ...saved, journalSeen: ["missing"] })], []);
+});
+
+test("existing portraits require their own discovered source and disappear after a rewind", () => {
+  const helio = JSON.parse(readFileSync(new URL("../public/stories/helio-a-mains-nues.json", import.meta.url)));
+  const reading = replay(helio);
+  const seen = new Set(["h-1-1-p0"]);
+  assert.equal(knownCharacters(helio, reading, seen)[0].portrait, null);
+  assert.ok(journalAnchors(helio).has("h-1-1-p4"));
+  seen.add("h-1-1-p4");
+  assert.equal(knownCharacters(helio, reading, seen)[0].portrait.src, "illustrations/helio/01-helio.webp");
+  seen.add("h-6-1-p2");
+  assert.ok(!knownCharacters(helio, reading, seen).some((c) => c.id === "senn"));
+  for (const c of helio.characters.filter((c) => c.portrait)) {
+    assert.ok(readFileSync(new URL(`../public/${c.portrait.src}`, import.meta.url)).length > 0);
+    assert.ok(narrativeProse(helio.scenes[c.portrait.source.scene]).some((p) => p.key === `p${c.portrait.source.paragraph}`));
+  }
 });

@@ -20,7 +20,7 @@ export function retainDiscoveries(reading, seen = []) {
 }
 
 export function journalAnchors(story) {
-  return new Set((story.characters || []).flatMap((c) => c.facts.map((f) => sourceAnchor(f.source))));
+  return new Set((story.characters || []).flatMap((c) => [...c.facts.map((f) => sourceAnchor(f.source)), ...(c.portrait ? [sourceAnchor(c.portrait.source)] : [])]));
 }
 
 // Old saves have no exposure log. Confirmed decisions establish a conservative
@@ -67,7 +67,7 @@ export function knownCharacters(story, reading, seen) {
     const fields = {};
     for (const fact of facts) fields[fact.field] = fact.value;
     if (!fields.name) return [];
-    return [{ id: character.id, kind: character.kind, name: fields.fullName || fields.name, fields, facts,
+    return [{ portrait: character.portrait && order.has(character.portrait.source.scene) && seen.has(sourceAnchor(character.portrait.source)) ? character.portrait : null, id: character.id, kind: character.kind, name: fields.fullName || fields.name, fields, facts,
       firstSource: facts[0].source, chapter: story.scenes[facts[0].source.scene].chapter }];
   });
 }

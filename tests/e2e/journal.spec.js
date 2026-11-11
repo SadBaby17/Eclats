@@ -121,3 +121,29 @@ test("the journal and its saved discoveries remain usable offline", async ({ pag
   await expect(profile).not.toContainText("Décès");
   expect((await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), key)).decisions).toHaveLength(20);
 });
+
+test("journal groups independent books and reveals only discovered existing portraits", async ({ page }) => {
+  const helio = JSON.parse(await readFile("public/stories/helio-a-mains-nues.json", "utf8"));
+  await seed(page, 4);
+  const helioKey = `eclats.reading.v1:${helio.id}`;
+  const saved = { schema: 1, story: helio.id, version: helio.version, decisions: [], anchor: "h-1-1-p0", offset: 0, chapter: helio.chapters[0].id, journalSeen: ["h-1-1-p0"] };
+  await page.addInitScript(({ key, saved }) => localStorage.setItem(key, JSON.stringify(saved)), { key: helioKey, saved });
+  await page.goto("./"); await journal(page);
+  const group = page.getByRole("region", { name: helio.title, exact: true });
+  await expect(group.getByRole("heading", { name: helio.title })).toBeVisible();
+  await expect(page.getByRole("region", { name: story.title, exact: true })).toBeVisible();
+  await expect(group.locator(".character-portrait")).toHaveCount(0);
+  await expect(group).not.toContainText("Maël");
+  await group.getByRole("button", { name: "Voir la fiche de Hélio", exact: true }).click();
+  await expect(page.getByRole("dialog")).toContainText(helio.title);
+  await page.getByRole("button", { name: "Relire la première rencontre" }).click();
+  await expect(page).toHaveURL(/story=helio-a-mains-nues/);
+  await expect(page.locator("#h-1-1-p0")).toBeInViewport();
+  await page.locator("#h-1-1-p4").scrollIntoViewIfNeeded();
+  await expect.poll(() => page.evaluate((key) => JSON.parse(localStorage.getItem(key)).journalSeen, helioKey)).toContain("h-1-1-p4");
+  await journal(page);
+  const portrait = page.getByRole("region", { name: helio.title, exact: true }).locator(".character-portrait");
+  await expect(portrait).toHaveCount(1);
+  await expect.poll(() => portrait.evaluate((img) => img.complete && img.naturalWidth > 0)).toBe(true);
+  expect((await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), key)).decisions).toHaveLength(4);
+});

@@ -5111,6 +5111,7 @@
     {
       "id": "helio",
       "kind": "person",
+      "portrait": {"src": "illustrations/helio/01-helio.webp", "source": {"scene": "h-1-1", "paragraph": 4}},
       "facts": [
         {
           "field": "name",
@@ -5211,6 +5212,7 @@
     {
       "id": "mael",
       "kind": "person",
+      "portrait": {"src": "illustrations/helio/01-mael.webp", "source": {"scene": "h-1-2", "paragraph": 2}},
       "facts": [
         {
           "field": "name",
@@ -5359,6 +5361,7 @@
     {
       "id": "romy",
       "kind": "person",
+      "portrait": {"src": "illustrations/helio-suite/04-romy.webp", "source": {"scene": "h-4-2", "paragraph": 1}},
       "facts": [
         {
           "field": "name",
@@ -5419,6 +5422,7 @@
     {
       "id": "senn",
       "kind": "person",
+      "portrait": {"src": "illustrations/helio-suite/06-senn.webp", "source": {"scene": "h-6-1", "paragraph": 2}},
       "facts": [
         {
           "field": "name",
