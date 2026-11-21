@@ -21,7 +21,7 @@ export function readSave(storage, story) {
     throw Error("Sauvegarde incompatible ou endommagée.");
   return s;
 }
-export function writeSave(storage, story, decisions, anchor, offset, chapter, journalSeen) {
+export function writeSave(storage, story, decisions, anchor, offset, chapter, journalSeen, readChapters) {
   storage.setItem(
     saveKey(story),
     JSON.stringify({
@@ -33,6 +33,7 @@ export function writeSave(storage, story, decisions, anchor, offset, chapter, jo
       offset,
       chapter,
       ...(Array.isArray(journalSeen) ? { journalSeen } : {}),
+      ...(Array.isArray(readChapters) ? { readChapters } : {}),
     }),
   );
 }

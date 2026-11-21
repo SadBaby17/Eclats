@@ -24,6 +24,10 @@ let story,
   journalSeen = new Set(),
   journalSources = new Set(),
   journalObserver;
+const readChapters = new Set();
+const sceneDate = new Intl.DateTimeFormat("fr-FR", {
+  weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+});
 const systemTheme = matchMedia("(prefers-color-scheme: dark)");
 history.scrollRestoration = "manual";
 try {
@@ -706,17 +710,22 @@ function renderChapterList() {
   });
   for (const chapter of chapters) {
     const row = el("li");
-    const status = chapter.unlocked
+    let status = chapter.unlocked
       ? chapter.id === current
         ? "En cours"
         : "Accessible"
       : "Inaccessible";
+    if (selectedBook.linear) {
+      status = readChapters.has(chapter.id) ? "Lu"
+        : chapter.id === current && (readingPosition?.anchor || restore?.anchor) ? "En cours"
+        : "À lire";
+    }
     const button = el("button", {
       class: "chapter-link",
       "data-chapter-id": chapter.id,
       ...(chapter.unlocked
         ? {
-            "aria-label": `Lire le chapitre ${chapter.number} : ${chapter.title}`,
+            "aria-label": `Lire le chapitre ${chapter.number} : ${chapter.title}${selectedBook.linear ? ` · ${status}` : ""}`,
           }
         : {
             disabled: "",
@@ -728,6 +737,9 @@ function renderChapterList() {
       el("span", { class: "chapter-name" }, chapter.title),
       el("span", { class: "chapter-status" }, status),
     );
+    if (selectedBook.linear && status === "À lire") {
+      copy.lastElementChild.classList.add("chapter-unread");
+    }
     const indicator = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "svg",
@@ -819,6 +831,10 @@ function position() {
 }
 function save() {
   if (!canSave || !story || book.hidden) return;
+  const end = book.querySelector("[data-chapter-end]");
+  if (end && end.getBoundingClientRect().bottom <= window.innerHeight) {
+    readChapters.add(currentChapter);
+  }
   if (!storage) {
     storageError();
     return;
@@ -826,7 +842,8 @@ function save() {
   try {
     captureJournal();
     const p = position();
-    writeSave(storage, story, state.decisions, p.anchor, p.offset, p.chapter, [...journalSeen]);
+    writeSave(storage, story, state.decisions, p.anchor, p.offset, p.chapter,
+      [...journalSeen], selectedBook.linear ? [...readChapters] : undefined);
     saveState.textContent = "Progression enregistrée sur cet appareil";
   } catch {
     storageError();
@@ -935,6 +952,13 @@ function render(animate = false) {
       }
       const prose = el("div", { class: "prose" });
       narrativeProse(block.scene).forEach(({ text, key }, i) => {
+        const dateTime = block.scene.times?.[key];
+        if (dateTime) {
+          const [hours, minutes] = dateTime.slice(11).split(":");
+          const date = sceneDate.format(new Date(`${dateTime}Z`));
+          prose.append(el("time", { class: "scene-time", datetime: dateTime },
+            `${date} · ${Number(hours)} h ${minutes}`));
+        }
         prose.append(paragraph(text, `${block.id}-${key}`, animate, i));
         for (const illustration of story.illustrations?.[block.id] || []) {
           if (key !== `p${illustration.after}`) continue;
@@ -1019,7 +1043,7 @@ function render(animate = false) {
     ending.append(
       el(
         "div",
-        { class: "eyebrow" },
+        { class: "eyebrow", ...(selectedBook.linear ? { "data-chapter-end": "" } : {}) },
         selectedBook.linear
           ? `Fin du chapitre ${page.chapter.number}`
           : story.publication?.status === "ongoing"
@@ -1047,7 +1071,10 @@ function render(animate = false) {
     navigation.append(previous);
   }
   if (page.next) {
-    navigation.append(el("p", { class: "chapter-break" }, `Fin du chapitre ${page.chapter.number}`));
+    navigation.append(el("p", {
+      class: "chapter-break",
+      ...(selectedBook.linear ? { "data-chapter-end": "" } : {}),
+    }, `Fin du chapitre ${page.chapter.number}`));
     const next = el("button", { class: "primary" }, "Chapitre suivant →");
     next.onclick = () => openChapter(page.next.id);
     navigation.append(next);
@@ -1330,6 +1357,11 @@ async function start() {
     journalSources = journalAnchors(story);
     journalSeen = migrateDiscoveries(story, state, restore);
     readingPosition = restore;
+    if (selectedBook.linear && Array.isArray(restore?.readChapters)) {
+      for (const chapter of story.chapters) {
+        if (restore.readChapters.includes(chapter.id)) readChapters.add(chapter.id);
+      }
+    }
     const savedChapter = restore?.chapter;
     const startingChapter = selectedBook.linear &&
       !story.chapters.some((chapter) => chapter.id === savedChapter)

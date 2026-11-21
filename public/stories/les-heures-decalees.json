@@ -76,7 +76,12 @@
         "À onze heures, il prit le pain, les abricots et le plus petit des sandwichs au poulet. En sortant, il envoya enfin un message. « Je passe. Mais c’est géographiquement un service. »",
         "Léandre répondit avec le prix exact du sandwich, qu’il connaissait par cœur, et un dessin de pouce qui ressemblait à une chaussette. Noé fit demi-tour au coin de la rue pour revenir chercher son carnet."
       ],
-      "next": "alix"
+      "next": "alix",
+      "times": {
+        "p0": "2026-05-29T05:12",
+        "p19": "2026-05-29T07:00",
+        "p29": "2026-05-29T11:00"
+      }
     },
     "alix": {
       "chapter": "la-premiere-fournee",
@@ -113,7 +118,11 @@
         "— Mireille. Vous m’appellerez par mon prénom si vous revenez. Je bosse à deux portes, le matin. Et gardez un tirage pour ma mère, si vous en faites un. Elle aimait bien le vert du rideau.",
         "Elle repartit avec la caisse. Alix refit la photo un peu plus loin du sol, cette fois en laissant entrer tout le seuil dans le cadre. En rentrant, elle monterait les courses avec son père. Elle essaierait aussi de lui montrer cette photo avant qu’il lui demande si elle était contente de son orientation. Ça lui donnerait au moins quelque chose de précis à lui dire."
       ],
-      "next": "leandre"
+      "next": "leandre",
+      "times": {
+        "p0": "2026-05-29T09:15",
+        "p12": "2026-05-29T10:30"
+      }
     },
     "leandre": {
       "chapter": "la-premiere-fournee",
@@ -148,7 +157,10 @@
         "— Tu peux lui demander de te redire le montant. Comme ça t’as au moins une phrase pour le début.",
         "Il annonça qu’il allait rentrer avant que sa mère soit obligée d’acheter du pain à un autre boulanger. Léandre attendit de le voir au bout du trottoir pour ouvrir le sandwich. La première bouchée était presque toute en croûte. En s’essuyant les doigts, il trouva la carte du propriétaire coincée sous la base de la lampe. Il avait même oublié qu’il l’avait apportée à l’atelier."
       ],
-      "next": "adriel"
+      "next": "adriel",
+      "times": {
+        "p0": "2026-05-29T11:05"
+      }
     },
     "adriel": {
       "chapter": "la-premiere-fournee",
@@ -171,7 +183,12 @@
         "Sa sœur répondit par un cœur, puis par « T’as mangé ? »",
         "Il écrivit « oui », posa son téléphone et le reprit. « On a mangé ensemble après le service. » Il aurait pu ajouter le nom des deux autres. Il se les répéta à mi-voix en passant la chemise sur un des cintres, pour être sûr de s’en souvenir en arrivant le lendemain."
       ],
-      "next": "ch-02-adriel"
+      "next": "ch-02-adriel",
+      "times": {
+        "p0": "2026-05-29T17:00",
+        "p5": "2026-05-29T23:00",
+        "p12": "2026-05-30T00:10"
+      }
     },
     "ch-02-adriel": {
       "chapter": "ch-02",
@@ -224,7 +241,12 @@
         "Quand il se releva, il demanda si la porte était toujours ouverte le mardi à cette heure-là. Adriel ne savait pas encore. Il lui dit de sonner, qu’il verrait à ce moment-là. Il regarda Noé partir vers la rue principale avec son carton plié sous le bras. Sur le bord de la marche, il restait un bout de mie. Adriel alla chercher le balai. Il avait toujours besoin de lessive, et il se rappela qu’il avait oublié de goûter le pain.",
         ""
       ],
-      "next": "ch-02-noe"
+      "next": "ch-02-noe",
+      "times": {
+        "p0": "2026-05-30T09:00",
+        "p18": "2026-05-30T10:55",
+        "p32": "2026-05-30T11:30"
+      }
     },
     "ch-02-noe": {
       "chapter": "ch-02",
@@ -260,7 +282,11 @@
         "Il n’en avait aucune idée. Il essaya le câble qui pendait du pied du clavier. Il n’était branché à rien et avait sans doute servi à la vendeuse pour attacher les deux barres. Il le remit en boule sur la table. Imitant sa mère dans le tram, il coinça le pied de l’instrument avec sa cheville pour vérifier que le liège tenait. Ça ne bougea pas.",
         "Il n’envoya pas de candidature pour Lyon ce soir-là. Il écrivit à l’adresse au bas de l’annonce d’Alix. Il demanda la taille de la salle, qui fournissait le clavier et si on pouvait jouer quatre minutes sans chanter. À la fin du message, là où il avait prévu d’écrire « c’est pour un ami », il mit son prénom."
       ],
-      "next": "ch-03-alix"
+      "next": "ch-03-alix",
+      "times": {
+        "p0": "2026-06-02T20:00",
+        "p5": "2026-06-02T20:45"
+      }
     },
     "ch-03-alix": {
       "chapter": "ch-03",
@@ -347,7 +373,12 @@
         "Jeanne avait précisément accepté de porter quinze chaises avec elle samedi. Elle fit deux moulinets avec le bras pour vérifier la prise et rendit l’eau à Alix, qui s’aperçut qu’elle avait gardé la bouteille depuis tout à l’heure. Jeanne la lui laissa. Elles partirent de deux côtés du bassin, chacune avec un objet de l’autre qu’elle aurait pu remettre au moment de dire au revoir.",
         "Elle rentra à pied, avec la clé orange dans la poche qui contenait déjà celles de chez son père et de Marseille. Elle appela Rosa en traversant Riquier. Le premier coup de fil tomba sur la messagerie. Alix laissa son prénom, la date de samedi, puis se rendit compte qu’elle n’avait préparé aucune des phrases suivantes. Elle avait juste envie de demander à Rosa si elle voulait venir raconter d’où venait la poussière. Elle le demanda presque comme ça. En raccrochant, elle chercha à se rappeler ce qu’elle avait dit mot pour mot. C’était la première fois depuis son retour qu’elle espérait que quelqu’un réécouterait un message qu’elle avait laissé."
       ],
-      "next": "ch-04-leandre"
+      "next": "ch-04-leandre",
+      "times": {
+        "p0": "2026-06-03T09:30",
+        "p24": "2026-06-03T11:15",
+        "p55": "2026-06-03T18:15"
+      }
     },
     "ch-04-leandre": {
       "chapter": "ch-04",
@@ -425,7 +456,14 @@
         "Noé avait quelque chose à lui demander lui aussi. Il devait jouer quatre minutes samedi, à la soirée d’Alix, et il avait besoin de quelqu’un qui viendrait suffisamment tôt pour l’aider à déplacer un clavier. Léandre allait dire oui avant de savoir à quelle heure. Il sentit ce oui lui arriver jusqu’aux dents. Il le retint juste assez pour demander l’heure de la balance. Puis il expliqua qu’il était de fermeture et que, s’il pouvait venir, ce serait pour écouter les quatre minutes. Noé acquiesça. Il dit qu’il demanderait de l’aide à une autre personne pour le clavier.",
         "Le tram entra en station. Léandre resta à côté de lui jusqu’à ce que Noé ait fini son gobelet et qu’il leur faille tous les deux se lever pour le jeter. Dans sa poche, il sentit le dossier toucher ses clés. Il ne savait pas encore si quelqu’un lui prendrait le local. Dimanche, il irait chercher des abricots. D’ici là, il avait une addition à faire et personne à convaincre tout de suite."
       ],
-      "next": "ch-05-noe"
+      "next": "ch-05-noe",
+      "times": {
+        "p0": "2026-06-05T11:45",
+        "p21": "2026-06-05T13:20",
+        "p36": "2026-06-05T14:00",
+        "p47": "2026-06-05T15:00",
+        "p53": "2026-06-05T18:45"
+      }
     },
     "ch-05-noe": {
       "chapter": "ch-05",
@@ -450,7 +488,10 @@
         "Son téléphone vibra. Léandre ne pourrait pas arriver pour le début. Un parent venait de demander s’il pouvait contrôler deux patins le jour même et il avait déjà les chaussures devant lui. Noé écrivit « t’inquiète », effaça, puis écrivit « j’aurais aimé que t’entendes, mais viens quand même si t’as le temps ». Il remit le téléphone dans sa poche avant la réponse. Tout le monde n’arriverait pas. Il fit une place sur le rebord de la fenêtre pour un deuxième verre d’eau.",
         ""
       ],
-      "next": "ch-05-adriel"
+      "next": "ch-05-adriel",
+      "times": {
+        "p0": "2026-06-06T19:40"
+      }
     },
     "ch-05-adriel": {
       "chapter": "ch-05",
@@ -491,7 +532,13 @@
         "Dans la rue, Adriel laissa passer un couple et leur chien, qui s’arrêta pour renifler bruyamment la boîte. Il demanda au chien s’il voulait voir l’état de la cuisine après le service. Les deux personnes rirent. Quand il releva les yeux, Noé tenait la porte à Alix qui portait les chaises une à une. Il aurait pu rester pour aider à en sortir deux. À la place, il indiqua clairement qu’il revenait chercher la boîte le lendemain s’ils avaient besoin de transporter les pinces, et la reposa sur la table. Alix leva le pouce. Adriel partit avec les mains libres.",
         "Il restait du monde sur la place Garibaldi. En attendant au passage piéton, il ouvrit la note de ses heures. Il ajouta l’heure à laquelle il allait arriver et laissa vide celle de son départ. Plus bas, sans fermer la note, il écrivit le jour où il avait promis d’appeler sa sœur. Au moment où le feu passa au vert, il essaya de retrouver le bout de mélodie qui lui était resté. On aurait dit trois notes. Il les reprit une deuxième fois, assez bas pour qu’on ne puisse rien en entendre depuis le trottoir d’en face."
       ],
-      "ending": "À suivre"
+      "ending": "À suivre",
+      "times": {
+        "p0": "2026-06-06T17:30",
+        "p5": "2026-06-06T20:05",
+        "p12": "2026-06-06T20:30",
+        "p32": "2026-06-06T21:25"
+      }
     }
   },
   "illustrations": {
@@ -763,5 +810,35 @@
         }
       ]
     }
-  ]
+  ],
+  "chapterRecaps": {
+    "ch-02": [
+      {
+        "paragraphs": [
+          "À Libération, Noé travaille au fournil et laisse traîner son dossier pour une formation musicale à Lyon. Alix rentre chez son père et photographie une ancienne boutique à Riquier. Léandre hésite encore à louer son propre atelier, tandis qu’Adriel prend ses marques dans un restaurant du Vieux-Nice."
+        ]
+      }
+    ],
+    "ch-03": [
+      {
+        "paragraphs": [
+          "Adriel reprend la boxe et rencontre Noé lors d’une livraison de pain mouvementée. Noé installe son clavier dans la cuisine avec l’aide de sa mère. Quand Alix lui transmet un appel aux musiciens du quartier, il se décide à écrire aux organisateurs."
+        ]
+      }
+    ],
+    "ch-04": [
+      {
+        "paragraphs": [
+          "Alix apporte ses tirages à Rosa, l’ancienne encadreuse, et découvre avec elle l’histoire des détails qu’elle a photographiés. Avec Jeanne, elle prépare la soirée de quartier où ses photos seront montrées et où Noé doit jouer."
+        ]
+      }
+    ],
+    "ch-05": [
+      {
+        "paragraphs": [
+          "Léandre retourne sur la glace à Jean-Bouin, puis revisite le local qu’il aimerait louer. Il préfère refaire ses comptes avant de s’engager. Sur le quai du tram, il s’excuse auprès de Noé, qui lui annonce qu’il jouera quatre minutes à la soirée d’Alix."
+        ]
+      }
+    ]
+  }
 }

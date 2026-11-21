@@ -184,7 +184,7 @@ a {
 .story-illustration.image-unavailable {
   background: var(--paper);
 }
-.scene:first-of-type > .prose > p:first-child:first-letter {
+.scene:first-of-type > .prose > p:first-of-type:first-letter {
   float: left;
   font-size: 3.1em;
   line-height: 0.85;
@@ -1226,4 +1226,23 @@ dialog p {
   margin: 34px 0 18px;
   color: var(--gold);
   font: normal 24px Georgia, serif;
+}
+
+.scene-time {
+  display: block;
+  margin: 1.75rem 0 .75rem;
+  color: var(--muted);
+  font: 600 0.875rem/1.5 system-ui, sans-serif;
+}
+.scene-time:first-letter {
+  text-transform: uppercase;
+}
+.chapter-unread::before {
+  display: inline-block;
+  width: .48rem;
+  height: .48rem;
+  margin-inline-end: .45rem;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
 }
