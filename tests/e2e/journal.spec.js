@@ -17,7 +17,7 @@ async function destination(page, label) {
 async function journal(page) {
   await destination(page, "Journal de personnage");
   await expect(page.getByRole("heading", { name: "Journal de personnage", exact: true })).toBeVisible();
-  await expect(page.locator(".journal-book")).toHaveCount(3);
+  await expect(page.locator(".journal-book")).toHaveCount(4);
   for (const summary of await page.locator(".journal-book > summary").all()) await summary.click();
 }
 async function sheet(page, name) { await page.getByRole("button", { name: `Voir la fiche de ${name}`, exact: true }).click(); return page.getByRole("dialog"); }
@@ -154,7 +154,7 @@ test("journal groups independent books and reveals only discovered existing port
 test("book titles start collapsed, expand by keyboard and show existing illustrations", async ({ page }) => {
   await seed(page, 20); await page.goto("./");
   await destination(page, "Journal de personnage");
-  await expect(page.locator(".journal-book")).toHaveCount(3);
+  await expect(page.locator(".journal-book")).toHaveCount(4);
   await expect(page.locator(".journal-book[open]")).toHaveCount(0);
   await expect(page.getByRole("button", { name: "Voir la fiche de Evan Kamikony", exact: true })).toBeHidden();
   const book = page.getByRole("region", { name: story.title, exact: true });

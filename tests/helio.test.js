@@ -97,12 +97,12 @@ test("twenty-one local WebP illustrations follow actual descriptions, with varie
   assert.ok(bytes < 12000000);
 });
 
-test("the three books have independent saves and Hélio resumes and rewinds without revealing later journal facts", () => {
+test("the catalogue books have independent saves and Hélio resumes and rewinds without revealing later journal facts", () => {
   const values = new Map(), storage = { getItem: (k) => values.get(k), setItem: (k, v) => values.set(k, v) };
-  assert.equal(new Set(BOOKS.map((b) => saveKey(load(b.file)))).size, 3);
+  assert.equal(new Set(BOOKS.map((b) => saveKey(load(b.file)))).size, BOOKS.length);
   for (const book of BOOKS.filter((b) => b.id !== story.id)) {
     const s = load(book.file), r = replay(s);
-    const one = choose(s, [], r.pending.scene, r.pending.options[0].id);
+    const one = r.pending ? choose(s, [], r.pending.scene, r.pending.options[0].id) : r;
     writeSave(storage, s, one.decisions, null, 0, s.chapters[0].id);
   }
   const others = [...values];

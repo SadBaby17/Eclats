@@ -26,6 +26,16 @@ export const BOOKS = [
     description:
       "À Brévane, la magie accompagne chaque geste du quotidien. Hélio, graveur de runes aussi solaire qu'inventif, découvre que certains choix laissent des traces bien après l'aventure.",
   },
+  {
+    id: "les-heures-decalees",
+    file: "les-heures-decalees.json",
+    title: "Les Heures décalées",
+    cover: "Les Heures\ndécalées",
+    label: "Roman illustré · En cours",
+    linear: true,
+    description:
+      "À Nice, Noé, Alix, Léandre et Adriel essaient de faire une place à ce qu’ils aiment dans des journées qui débordent déjà.",
+  },
 ];
 export const SELECTED_BOOK_KEY = "eclats.selected-book.v1";
 export function findBook(id) {

@@ -59,7 +59,8 @@ test("old three-chapter saves unlock the fourth; replacing an early decision rel
   assert.equal(chapterScene(story, revised, "c8"), null);
 });
 test("the catalogue keeps the original novel and offers the separate second version", () => {
-  assert.equal(BOOKS.length, 3);
+  assert.equal(BOOKS.length, 4);
+  assert.equal(findBook("les-heures-decalees").linear, true);
   assert.equal(BOOKS[0].id, story.id);
   assert.equal(findBook("evan-deuxieme-version").file, "evan-deuxieme-version.json");
   assert.equal(findBook("demo"), undefined);

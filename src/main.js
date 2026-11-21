@@ -212,7 +212,8 @@ function showDestination(id) {
   book.hidden = id !== "lectures";
   footer.hidden = book.hidden;
   destination.hidden = !book.hidden;
-  actions.querySelector('[aria-label="Mes décisions"]').hidden = book.hidden;
+  actions.querySelector('[aria-label="Mes décisions"]').hidden =
+    book.hidden || selectedBook.linear;
   actions.querySelector('[aria-label="Paramètres de lecture"]').hidden =
     book.hidden;
   if (id === "lectures") {
@@ -387,11 +388,6 @@ function showDestination(id) {
         "p",
         { class: "destination-intro" },
         "Des histoires à découvrir. Des chemins à choisir.",
-      ),
-      el(
-        "a",
-        { class: "primary home-preview-link", href: `${import.meta.env.BASE_URL}apercu-nice.html` },
-        "Découvrir les nouveaux personnages",
       ),
       navigation,
       el(
@@ -609,7 +605,7 @@ function openCharacter(character) {
   }
   dialog.append(identity);
   const groups = [
-    ["Repères", (key) => ["appearance", "equipment", "size", "personality", "status"].includes(key)],
+    ["Repères", (key) => ["appearance", "equipment", "size", "personality", "status", "activity"].includes(key)],
     ["Pouvoirs connus", (key) => key.startsWith("magic-")],
     ["Liens connus", (key) => key === "relation" || key.startsWith("link-")],
     ["Histoire connue", (key) => key === "history" || key.startsWith("history-")],
@@ -678,7 +674,9 @@ function renderChapterList() {
     el(
       "span",
       { class: "eyebrow" },
-      `${chapters.length} chapitres · ${chapters.filter((c) => c.unlocked).length} accessible${chapters.filter((c) => c.unlocked).length > 1 ? "s" : ""}`,
+      selectedBook.linear
+        ? `${chapters.length} chapitre${chapters.length === 1 ? "" : "s"} en ligne`
+        : `${chapters.length} chapitres · ${chapters.filter((c) => c.unlocked).length} accessible${chapters.filter((c) => c.unlocked).length > 1 ? "s" : ""}`,
     ),
     el("p", {}, selectedBook.description),
   );
@@ -694,6 +692,8 @@ function renderChapterList() {
   destination.append(
     introduction,
     el("h2", { class: "contents-title", id: "chapitres" }, "Les chapitres"),
+  );
+  if (!selectedBook.linear) destination.append(
     el(
       "p",
       { class: "contents-note" },
@@ -930,6 +930,9 @@ function render(animate = false) {
         }
         section.append(heading);
       }
+      if (selectedBook.linear && block.scene.viewpoint) {
+        section.append(el("h3", { class: "scene-viewpoint" }, block.scene.viewpoint));
+      }
       const prose = el("div", { class: "prose" });
       narrativeProse(block.scene).forEach(({ text, key }, i) => {
         prose.append(paragraph(text, `${block.id}-${key}`, animate, i));
@@ -1017,11 +1020,15 @@ function render(animate = false) {
       el(
         "div",
         { class: "eyebrow" },
-        story.publication?.status === "ongoing"
-          ? "Fin des chapitres disponibles · À suivre"
-          : "Fin du récit",
+        selectedBook.linear
+          ? `Fin du chapitre ${page.chapter.number}`
+          : story.publication?.status === "ongoing"
+            ? "Fin des chapitres disponibles · À suivre"
+            : "Fin du récit",
       ),
       el("h2", {}, state.ending),
+    );
+    if (!selectedBook.linear) ending.append(
       el(
         "p",
         {},

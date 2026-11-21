@@ -28,7 +28,7 @@ test("Hélio appears as a third book; forty decisions, twenty-one images and sep
   const old = await page.evaluate((k) => JSON.parse(localStorage.getItem(k)).decisions, oldKey);
   await page.getByRole("button", { name: "Ouvrir le menu" }).click();
   await page.getByRole("navigation", { name: "Navigation principale" }).getByRole("button", { name: /Bibliothèque/ }).click();
-  await expect(page.locator(".book-card")).toHaveCount(3);
+  await expect(page.locator(".book-card")).toHaveCount(4);
   await page.getByRole("button", { name: "Voir les chapitres : Hélio — À mains nues", exact: true }).click();
   await expect(page.locator(".chapter-link")).toHaveCount(8);
   await expect(page.locator(".chapter-link:enabled")).toHaveCount(1);
