@@ -388,6 +388,11 @@ function showDestination(id) {
         { class: "destination-intro" },
         "Des histoires à découvrir. Des chemins à choisir.",
       ),
+      el(
+        "a",
+        { class: "primary home-preview-link", href: `${import.meta.env.BASE_URL}apercu-nice.html` },
+        "Découvrir les nouveaux personnages",
+      ),
       navigation,
       el(
         "p",

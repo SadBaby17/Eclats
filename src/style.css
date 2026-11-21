@@ -1221,3 +1221,11 @@ dialog p {
 .option-reason { display: block; grid-column: 2; font-size: .85rem; line-height: 1.5; margin-top: .35rem; }
 .option-unavailable:has(input:disabled) { background: var(--panel); }
 .content-warning { font-size: .9rem; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--gold); padding-left: 1rem; }
+
+.home-preview-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  text-decoration: none;
+}

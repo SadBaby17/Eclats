@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5ef" />
+    <title>Les nouveaux personnages · Éclats</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font: 16px/1.5 system-ui, sans-serif;
+        color: #302e29;
+        background: #f8f5ef;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 1120px;
+        padding: 16px clamp(12px, 4vw, 36px) 40px;
+      }
+      h1 {
+        margin: 12px 0 20px;
+        font: normal clamp(28px, 5vw, 42px)/1.15 Georgia, serif;
+      }
+      figure {
+        margin: 0;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+      figcaption {
+        margin-top: 12px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        margin-top: 12px;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color: #e2dfd6;
+          background: #1b1d1d;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="./">← Retour à l’accueil</a>
+    </header>
+    <main>
+      <h1>Les nouveaux personnages</h1>
+      <figure>
+        <img
+          src="./illustrations/apercu-nice.webp"
+          alt="Quatre jeunes adultes sur la Promenade des Anglais, devant la baie des Anges."
+          width="1536"
+          height="1024"
+        />
+        <figcaption>De gauche à droite : Noé, Adriel, Alix et Léandre.</figcaption>
+      </figure>
+      <nav aria-label="Illustration">
+        <a href="./illustrations/apercu-nice.webp">Ouvrir l’image en grand</a>
+        <a href="./illustrations/apercu-nice.webp" download>Télécharger l’image</a>
+      </nav>
+    </main>
+  </body>
+</html>
