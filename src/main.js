@@ -1330,7 +1330,12 @@ async function start() {
     journalSources = journalAnchors(story);
     journalSeen = migrateDiscoveries(story, state, restore);
     readingPosition = restore;
-    currentChapter = chapterPage(story, state, restore?.chapter).chapter.id;
+    const savedChapter = restore?.chapter;
+    const startingChapter = selectedBook.linear &&
+      !story.chapters.some((chapter) => chapter.id === savedChapter)
+      ? story.chapters[0].id
+      : savedChapter;
+    currentChapter = chapterPage(story, state, startingChapter).chapter.id;
     refreshChapterList();
     refreshJournal();
     if (restore && state.decisions.length !== restore.decisions.length)
