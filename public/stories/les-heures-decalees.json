@@ -37,6 +37,36 @@
       "number": 5,
       "title": "Quatre minutes",
       "start": "ch-05-noe"
+    },
+    {
+      "id": "ch-06",
+      "number": 6,
+      "title": "Ce qu’on garde",
+      "start": "ch-06-alix"
+    },
+    {
+      "id": "ch-07",
+      "number": 7,
+      "title": "La troisième prise",
+      "start": "ch-07-noe"
+    },
+    {
+      "id": "ch-08",
+      "number": 8,
+      "title": "Près des barrières",
+      "start": "ch-08-leandre"
+    },
+    {
+      "id": "ch-09",
+      "number": 9,
+      "title": "La place du galet",
+      "start": "ch-09-adriel"
+    },
+    {
+      "id": "ch-10",
+      "number": 10,
+      "title": "L’adresse actuelle",
+      "start": "ch-10-alix"
     }
   ],
   "scenes": {
@@ -532,13 +562,312 @@
         "Dans la rue, Adriel laissa passer un couple et leur chien, qui s’arrêta pour renifler bruyamment la boîte. Il demanda au chien s’il voulait voir l’état de la cuisine après le service. Les deux personnes rirent. Quand il releva les yeux, Noé tenait la porte à Alix qui portait les chaises une à une. Il aurait pu rester pour aider à en sortir deux. À la place, il indiqua clairement qu’il revenait chercher la boîte le lendemain s’ils avaient besoin de transporter les pinces, et la reposa sur la table. Alix leva le pouce. Adriel partit avec les mains libres.",
         "Il restait du monde sur la place Garibaldi. En attendant au passage piéton, il ouvrit la note de ses heures. Il ajouta l’heure à laquelle il allait arriver et laissa vide celle de son départ. Plus bas, sans fermer la note, il écrivit le jour où il avait promis d’appeler sa sœur. Au moment où le feu passa au vert, il essaya de retrouver le bout de mélodie qui lui était resté. On aurait dit trois notes. Il les reprit une deuxième fois, assez bas pour qu’on ne puisse rien en entendre depuis le trottoir d’en face."
       ],
-      "ending": "À suivre",
       "times": {
         "p0": "2026-06-06T17:30",
         "p5": "2026-06-06T20:05",
         "p12": "2026-06-06T20:30",
         "p32": "2026-06-06T21:25"
-      }
+      },
+      "next": "ch-06-alix"
+    },
+    "ch-06-alix": {
+      "chapter": "ch-06",
+      "viewpoint": "Alix",
+      "paragraphs": [
+        "Il restait dans la salle un gobelet avec un canard au fond, la caisse des rallonges et trois chaises que personne n’avait reconnues. Alix fit deux piles, les chaises qu’elle pouvait plier et celles qu’il faudrait porter ouvertes. Puis elle s’agenouilla pour monter une boîte en carton et s’aperçut qu’elle avait plié le fond à l’envers. Elle passa les doigts sous le rabat. La salle vide renvoyait jusqu’au bruit de ses ongles contre le carton.",
+        "Le soir précédent, elle avait tenu une lampe assez longtemps pour se découvrir un muscle sous l’omoplate dont elle ignorait l’existence. En se levant, elle avait surtout pensé à la photo de la poignée. C’était celle qui avait suscité le plus de conversations. Quelqu’un avait voulu savoir si le tiroir pouvait encore s’ouvrir, puis demandé si la boutique était à vendre. Une autre personne avait dit qu’elle aimerait que sa fille voie l’image, parce qu’elle avait perdu la clé d’un tiroir presque identique après avoir vidé l’appartement de sa mère. Alix avait écouté jusqu’au bout. Elle avait appris plus tard que la dame n’avait parlé que de la clé à Mireille, qui avait pourtant passé un quart d’heure avec elle.",
+        "Jeanne arriva avec deux sangles et une chemise assez grande pour cacher le tablier qu’elle devait mettre au magasin. Elle avait vingt minutes avant de prendre le tram. Alix lui tendit le gobelet à canard comme si c’était à elle de décider où il irait.",
+        "— Tu peux le jeter, dit Jeanne.",
+        "— Il a une tête à appartenir à quelqu’un.",
+        "Jeanne retourna le gobelet. La veille, un garçon avait dessiné des chaussures au canard avec un stylo qui ne tenait pas sur le carton. Il n’en restait que deux petits traits noirs. Elle appuya sur le bord du gobelet et le jeta. Sans attendre, elle demanda combien de personnes Alix avait comptées. Alix n’en savait rien. De la place qu’elle occupait près du mur, elle avait cru qu’il manquait du monde. De la chaise de Rosa, avait dit Mireille, on avait l’impression que tout le quartier était passé, parce que les mêmes personnes se levaient puis se rassoyaient chaque fois qu’on déplaçait une lampe.",
+        "— Tu le referais ?",
+        "Alix reposa le rouleau de scotch avant de répondre. Elle aurait voulu refaire le début avec huit litres d’eau et une heure supplémentaire. À elle seule, avec les lampes éteintes et les chaises rangées, il lui était difficile de retrouver la sensation qu’elle avait éprouvée lorsque Noé avait avancé sa chaise au milieu de la pièce. Elle avait passé l’après-midi à chercher combien il fallait serrer la ficelle pour que les photos tiennent à la bonne hauteur. Puis les gens avaient pris les lampes et choisi eux-mêmes ce qu’ils voulaient regarder.",
+        "— Je voudrais d’abord rendre les photos à Rosa. J’ai encore les grands tirages.",
+        "— Elle en veut combien ?",
+        "— J’ai supposé qu’elle les voulait toutes.",
+        "Jeanne passa une sangle entre les jambes des chaises et tira dessus. Les pieds se rapprochèrent avec un bruit sec. Elle attendit qu’Alix l’aide à soulever la pile avant de demander si Rosa avait réellement dit ça. Alix répondit qu’elle lui avait demandé de garder un tirage pour elle. Un. Elles réussirent à coucher les chaises sur le flanc sans en abîmer aucune. Jeanne relâcha la sangle pour qu’Alix libère un doigt qu’elle avait coincé entre deux dossiers. Elle n’ajouta rien. Sa façon de ne pas en rajouter pouvait être ce qu’Alix préférait chez elle et ce qui l’agaçait le plus, à quelques secondes d’intervalle.",
+        "En revenant vers la table, Alix trouva la boîte en fer. Elle l’ouvrit. Adriel avait laissé un morceau de papier propre entre le métal et le couvercle, sans doute pour éviter de le rayer. Elle y mit les pinces, rangea la boîte dans son sac et lui envoya un message à l’aide du numéro que Noé lui avait donné. « Je te la garde jusqu’à ce soir. Dis-moi où tu veux la récupérer. » Elle trouva que ça sonnait comme si elle exigeait une rançon. Il répondit qu’il pourrait passer à l’ancienne boutique si quelqu’un lui donnait le numéro de la rue. Elle le lui donna. Il demanda s’il fallait apporter une autre boîte. Elle s’aperçut qu’elle riait seule.",
+        "Il fallut trois trajets jusqu’à la réserve pour ramener les chaises. Jeanne voulait prendre celles qui étaient les plus lourdes. Alix lui proposa de porter les deux ensemble, une main de chaque côté. Elles ratèrent le premier virage, puis la troisième chaise leur échappa à moitié. Quand elles s’arrêtèrent sur le trottoir pour se remettre d’accord sur la façon de tenir, elles avaient les bras à la même hauteur et les doigts presque côte à côte sur le bois. Jeanne changea de prise pour empêcher un accoudoir de heurter la porte. Alix voulut lui dire qu’elle avait une tache orange sur le poignet, laissée par une des pinces. Elle n’en trouva pas le moment avant qu’elles déposent la chaise.",
+        "— Je sors à dix-huit heures, dit Jeanne. Si tu as besoin de transporter le reste des tirages.",
+        "Alix se prépara à dire qu’elle aurait terminé. Jeanne rentra la sangle en boule dans son sac.",
+        "— Je voulais aussi te voir, ajouta-t-elle.",
+        "L’air n’avait pas changé de température. Alix retira néanmoins sa veste, embarrassée de rester une demi-seconde sans parler.",
+        "— Dix-huit heures, ça me va.",
+        "Jeanne remonta vers son arrêt. Alix mit sa veste sur la pile de cartons, ferma la porte et resta là jusqu’à ce qu’une voisine lui demande à quoi servait l’endroit. Elle lui répondit que c’était une petite salle prêtée pour des choses du quartier. La voisine venait d’emménager. Elle avait entendu chanter la veille depuis sa cuisine et pensé que le son venait d’un étage plus haut. Alix lui expliqua où se trouvait l’entrée. En disant que c’était la petite porte à côté du rideau, elle se rendit compte qu’elle n’avait pas précisé depuis quelle rue il fallait regarder. Elle sortit avec la voisine jusqu’au coin pour lui montrer.",
+        "La voisine s’appelait Mme Veran. Elle avait habité onze ans de l’autre côté de la voie ferrée et n’avait jamais eu besoin de venir dans cette rue avant qu’on lui propose l’appartement. Sa fille savait mieux qu’elle comment se rendre à l’épicerie. Elle lui avait envoyé un plan sur lequel il suffisait de suivre un point bleu. Le point bleu refusait de comprendre qu’en rentrant avec les courses Mme Veran voulait faire le trajet qui descendait. Alix lui indiqua une rue où le dénivelé serait moins pénible. Mme Veran lui demanda de le lui noter le temps qu’elle trouve ses lunettes. Elle sortit son ticket de caisse et le retourna.",
+        "Sur le ticket, Alix dessina trois lignes et marqua d’un trait l’endroit où il fallait changer de côté pour éviter des travaux. Elle n’avait plus fait de plan de mémoire depuis le collège. Quand elle redonna le papier, Mme Veran suivit le trajet du doigt. À la fin, elle demanda ce que c’était, la croix. Alix avait dessiné une croix à côté de la salle, là où elles se trouvaient, sans écrire le nom de la rue. Elle ajouta les lettres manquantes en appuyant sur le ticket. Au dos, on lisait par transparence « poires, filets de sardines, sel gros ». Mme Veran replia le papier pour pouvoir remettre les courses face à elle. Elle la remercia à la fois pour le trajet et pour le rappel qu’elle avait acheté des sardines. Elle en avait oublié la moitié en passant devant l’étal des fleurs.",
+        "Alix la regarda repartir. Elle s’assura en revenant que les chaises ne bloquaient plus le placard des lampes. On lui avait demandé hier de compter celles qu’on récupérerait. Elle le fit sans se presser et inscrivit derrière la clé orange, sur le papier qui accompagnait le prêt, le nom de deux personnes d’accord pour aider une prochaine fois. Elle écrivit aussi le nom de la voisine, qui ne s’était engagée à rien, puis le raya. Elle la préviendrait le jour où elles sauraient si elles refaisaient quelque chose.",
+        "À l’ancienne boutique, le rideau vert était levé suffisamment haut pour laisser sortir une commode. Une camionnette stationnait devant. Rosa expliquait à un homme qu’il pouvait enlever les tiroirs s’il voulait gagner du poids, mais qu’il faudrait trouver une façon de ne pas les échanger au remontage. Il lui répondit qu’ils avaient tous la même taille. Ils en essayèrent deux et constatèrent que Rosa avait raison. Celui du bas avait été raboté à l’arrière. Il marqua le dessous d’un trait. Rosa lui indiqua le deuxième tiroir qu’il aurait intérêt à distinguer du reste.",
+        "Dans l’espace libéré, Alix posa son carton plein de tirages. Sur le petit paquet bleu, les chiffres du numéro de téléphone avaient pâli. Rosa avait appelé la fille d’une ancienne cliente, qui connaissait la personne dont le nom apparaissait sur le paquet. Elle avait très gentiment rappelé pour dire que la personne s’était séparée depuis, ne savait plus très bien de quelle photo il s’agissait et demandait ce que Rosa en ferait si elle ne venait pas.",
+        "— Je lui ai dit que je pouvais la jeter. Après j’ai pas voulu l’ouvrir.",
+        "Il aurait été plus simple pour Alix de regarder à l’intérieur, constater que c’était un paysage ou un anniversaire et donner un avis. Elle se souvint que Rosa avait emballé ce paquet pour que son contenu arrive sans poussière chez quelqu’un qui l’attendait. Elle posa la main à côté du papier.",
+        "— Gardez-le encore un peu, si vous pouvez.",
+        "— Si ça tient dans la boîte à chaussures, oui.",
+        "Elles mirent de côté quelques commandes avec un numéro à vérifier. D’autres paquets étaient clairement des échantillons, parce que les noms sur les étiquettes étaient ceux de couleurs, « noyer », « miel », « laiton ». Rosa hésita devant une photo de tournesols qu’elle avait montée pour donner une idée du format. Elle ôta le verre, nettoya le dernier coin avec son mouchoir et tendit le cadre à Alix en lui demandant si quelqu’un en aurait l’usage. Alix pensa aussitôt à son père, qui laissait toujours sa liste de courses entre le frigo et le mur au lieu de la poser sur la table. Elle pourrait mettre la liste dans le cadre et lui offrir pour lui faire peur. Elle le prit.",
+        "Il restait à Rosa une dernière étiquette à faire pour la commode. Elle employait un feutre bleu qu’elle refusa de laisser dans le pot avec les crayons à donner. Elle s’assit au bord de l’établi à côté du paquet brun et enleva le capuchon. Alix connaissait le mouvement de ses doigts maintenant. Rosa dégageait d’abord le pouce, puis retenait le capuchon dans sa paume pendant qu’elle écrivait. Elle ne posait jamais rien de petit sur la table quand il y avait d’autres choses dessus.",
+        "Alix lui montra les tirages. Elle commença par les étaler à l’endroit où le jour arrivait le mieux. Rosa aimait la photo du seuil et celle des cartons de couleur. Sur celle du tiroir, elle trouvait l’image juste et ne voulait pas la garder. « J’ai assez ouvert celui-là », dit-elle. Elle mit le doigt sur une image où l’on voyait un morceau de son bras dépassant de sa manche derrière le bout du comptoir. Alix n’avait pas pensé l’imprimer en grand. Rosa demanda si elle pouvait en faire deux, un pour sa fille et un pour son frère. Elle savait qu’ils se disputeraient si elle ne leur disait pas qui avait eu l’autre.",
+        "— Et celles que vous ne choisissez pas ?",
+        "— Tu peux en faire quelque chose ?",
+        "— J’aimerais garder une série complète. Peut-être la montrer ici un jour, dans une autre salle. Il y a des gens qui veulent laisser un mot avec les photos.",
+        "Rosa pencha la tête. Elle n’aimait pas l’idée que les gens puissent laisser leur histoire à côté de ses affaires sans avoir à lui parler. Alix expliqua qu’elle pouvait lui montrer les textes d’abord, et qu’elles décideraient ensemble de ce qu’elles voudraient afficher. Rosa remonta une des manches de son gilet. Dans la lumière du matin, elle n’avait l’air ni flattée ni fâchée. Elle essayait d’obtenir une réponse précise.",
+        "— Si je te dis non au mois d’août ?",
+        "— Je l’enlève au mois d’août.",
+        "Rosa eut l’air de compter les mois dans sa tête. Elle demanda si Alix partirait à la fin de l’été. Alix répondit qu’elle s’y attendait, puis corrigea « normalement ». Elle n’avait jamais imaginé qu’on pourrait lui demander de garder une place ici à condition qu’elle réponde quand on l’appellerait. Rosa mit les deux tirages choisis dans un sac à plat, de part et d’autre du paquet bleu. Elle dit qu’elle les regarderait encore chez elle avant d’autoriser quoi que ce soit. Alix sortit son téléphone pour écrire leurs décisions. Rosa lui demanda si elle pouvait simplement l’écrire derrière le tirage. Elle sortit le feutre bleu une deuxième fois et lui laissa l’utiliser.",
+        "L’homme revint chercher deux cales, des morceaux de bois assez petits pour qu’Alix les ait glissés dans un carton de chutes. Il fallut vider le carton sur l’établi. Le premier objet qui tomba fut une petite plaque de cuivre où figurait un numéro de bâtiment. Rosa la reconnut. Quelqu’un avait demandé de la monter en cadre, puis avait déménagé en la laissant à la boutique. Alix lui demanda si elle se souvenait de la rue. Rosa en cita deux possibles. Alix les nota. Elle n’avait aucune intention d’aller vérifier ce jour-là. Après la discussion sur les photos, elle trouvait agréable de savoir qu’une question pouvait rester telle quelle jusqu’au lendemain.",
+        "Jeanne avait apporté une deuxième paire de chaussures, parce que celles du magasin lui faisaient mal au pied droit. Alix l’attendait sur un banc près de la boutique, avec deux boîtes plates empilées sur ses genoux. La camionnette était partie. De la commode, il restait un morceau de ficelle sur le sol et un rectangle sans poussière. Rosa avait baissé le rideau. Alix ne prit aucune photo du rideau fermé. Elle se leva, passa une boîte à Jeanne et elles se mirent à marcher par les petites rues de Riquier, assez lentement pour ne pas devoir changer de main en même temps. Entre les balcons, on voyait de minuscules morceaux de ciel.",
+        "— T’as trouvé où les mettre ? demanda Jeanne.",
+        "— À la maison pour l’instant. Je vais devoir expliquer à mon père qu’on a récupéré un cadre avec des tournesols. Je lui avais annoncé des photos du quartier.",
+        "— Il en a peut-être marre du quartier.",
+        "Alix eut un rire qui lui fit perdre un peu de prise. Elles posèrent les boîtes au bout d’un muret pour les reprendre à l’horizontale. Jeanne avait glissé son téléphone sous l’anse de son sac. L’écran s’alluma pendant qu’elle soulevait le carton. Alix vit un rappel pour un rendez-vous chez le dentiste et, juste en dessous, un message rédigé trois jours avant. « Tu veux boire un café vendredi ? » À côté figurait le prénom d’une personne qu’elle ne connaissait pas. Elle détourna les yeux, mécontente de l’avoir vu, encore plus mécontente de s’en être aussitôt souvenue.",
+        "Elles reprirent la route. À un passage piéton, Jeanne lui demanda si elle repartait à Marseille pendant l’été. Alix parla d’un rendez-vous avec Manon, qu’elle avait proposé pour la semaine suivante, au sujet du plan qu’elles devaient rendre. Elle avait écrit deux phrases à Manon comme promis. La première tenait sur une ligne. Sur la deuxième elle avait eu besoin d’une parenthèse, puis de rayer la parenthèse pour ne pas s’excuser d’avoir une idée. Manon lui avait indiqué une heure et demandé d’amener le plan original. Alix expliqua tout ça. À la fin, elle n’avait toujours pas répondu à la question.",
+        "— Je veux passer l’été ici. J’ai juste des choses à régler là-bas.",
+        "Jeanne acquiesça. Elle fit deux pas puis lui indiqua un endroit où poser les boîtes si elles voulaient aller chercher quelque chose à manger. Alix regarda l’heure. Son père attendait qu’elle rentre avec une baguette, et elle avait dans son sac un reçu qui prouvait qu’elle avait acheté à la place des feuilles de papier sans acide. Elle regrettait déjà de ne pas pouvoir rester. Elle demanda si Jeanne pouvait dîner avec elle chez son père, en précisant qu’il y aurait de quoi manger même sans pain. Elle fut surprise d’entendre sa proposition entière avant d’avoir eu le temps de décider de la retenir. Jeanne secoua la tête. Elle devait passer chez quelqu’un, à une heure qu’elle avait déjà fait déplacer une fois. Après un silence, elle demanda si Alix avait envie de petit déjeuner dehors mardi. Elle commencerait tard.",
+        "Alix craignit pendant une seconde d’avoir invité quelqu’un à dîner pour obtenir un rendez-vous un autre jour. Elle savait que c’était absurde. Elle dit oui quand même et prononça l’heure elle-même, neuf heures, en regardant Jeanne qui remettait les deux mains sous sa boîte. Le carton bougea un peu avant qu’elles trouvent le bon équilibre. Elles avaient encore une rue à parcourir côte à côte, sans avoir à remplir le silence."
+      ],
+      "times": {
+        "p0": "2026-06-07T09:10",
+        "p23": "2026-06-07T11:25",
+        "p40": "2026-06-07T18:15"
+      },
+      "next": "ch-07-noe"
+    },
+    "ch-07-noe": {
+      "chapter": "ch-07",
+      "viewpoint": "Noé",
+      "paragraphs": [
+        "Le premier enregistrement de Noé commençait par un camion de livraison, continuait avec cinquante secondes de piano et se terminait sur sa voix qui demandait à Hélène si le camion lui paraissait bientôt reparti. Le deuxième contenait une porte, un marteau ou un ustensile qu’on jetait volontairement par terre. Le troisième était impeccable jusqu’au moment où Noé s’était entendu respirer. Après ça, il n’arrivait plus à écouter le reste sans se demander comment il avait pu faire rentrer autant d’air dans si peu d’espace.",
+        "Il posa les feuilles sur le rebord de la fenêtre pour les empêcher de rebiquer. Dans l’immeuble d’en face, un voisin secouait des chaussettes avant de les étendre. Il les secouait toutes deux fois, même quand elles étaient déjà droites. Noé attendit le dernier claquement. Il avait un rendez-vous à dix-huit heures, un morceau qu’il avait pu faire tenir en quatre minutes et un bout d’après-midi à faire passer sans changer encore le début.",
+        "Sa mère rentra avec un filet de citrons et un paquet de biscuits dont il savait qu’elle lui ferait manger la moitié avant de lui demander ce qu’il en pensait. Elle posa le tout sur la table. Avec les deux mains libres, elle lui montra un geste de victoire assez bref.",
+        "— J’ai trouvé quelqu’un pour rester à l’accueil une demi-heure de plus. On m’a dit que le dossier pour les aides au logement se faisait après l’admission.",
+        "— Je suis pas admis.",
+        "— J’avais compris. J’ai posé la question pour toi sans t’inscrire à autre chose, promis.",
+        "Il n’eut aucune envie de plaisanter. Hélène défit le filet avec les dents et choisit le citron le plus petit. Elle le posa à côté de la pochette sur le frigo. Noé remarqua qu’elle n’arrivait plus à atteindre la pochette sans lever le bras très haut. D’habitude, elle prenait un tabouret. Il la descendit.",
+        "— Tu vas regarder les prix avec moi ou tu as déjà fait la moitié des calculs ? demanda-t-il.",
+        "— Je connais quelqu’un qui a loué une chambre pour sa fille. C’est possible que je lui aie envoyé un message.",
+        "Elle déplaça le citron sur le haut de la feuille, par prudence, bien que la fenêtre ne laissât passer aucun courant d’air. Noé sortit son téléphone. Une chambre en colocation prenait le tiers de ce qu’il gagnait quand il travaillait à plein temps, davantage si on ajoutait un mois à avancer et le premier trajet. Il n’avait jamais vu écrit à côté du mot Lyon le nombre de jours qu’il lui faudrait pour le payer. Il fit la division dans sa tête et se trompa, ce qui était ordinaire, sauf que son erreur l’arrangeait et qu’il eut envie de la laisser.",
+        "Hélène lui montra le coût d’un abonnement sur place. Elle avait trouvé aussi un témoignage de quelqu’un qui payait plus pour habiter près de l’école afin d’éviter les correspondances. Noé s’attendit à ce qu’elle lui conseille de prendre la chambre la moins chère. Elle lui demanda combien de temps il lui faudrait entre la chambre et le premier cours s’il ne dormait pas bien. Il resta un peu bête devant la question. Il vivait ici depuis toujours et n’avait jamais demandé à sa mère combien de temps elle passait à rentrer de son travail quand elle n’en pouvait plus.",
+        "— T’avais une pièce à toi, quand t’as quitté chez tes parents ?",
+        "— Pas tout de suite. J’avais un bout d’étagère. Je mettais les choses que je perdais toujours au même endroit pour avoir l’impression qu’on pouvait pas me les prendre.",
+        "— On te les prenait ?",
+        "— Non. Mais j’ai oublié une année de suite le code du portail.",
+        "Il sourit. Elle parlait de cette année comme d’une chose qu’elle avait réellement vécue, avec un code à retenir et quelqu’un chez qui elle rentrait. Il se demanda combien de fois elle avait été trop fatiguée pour lui raconter un endroit parce qu’il avait trouvé une façon de lui parler du sien à la place.",
+        "Il rangea les tarifs avec le formulaire, puis reprit sa partition. Il n’avait plus de page blanche au dos : les essais de la veille occupaient chaque centimètre. Hélène le regarda piocher dans une pile de papiers. Elle lui demanda si le morceau qu’il allait enregistrer ressemblait à ce qu’il avait chanté samedi. Il dit qu’il y avait au milieu deux passages impossibles à chanter et qu’il lui présenterait quelqu’un capable de le suivre à la voix si jamais il en trouvait un. Elle replia le sachet de biscuits.",
+        "— Au début, ajouta-t-il, oui. C’est exactement le même début.",
+        "Dans l’escalier, il retrouva le voisin du dessus qui descendait avec une passoire couverte d’une assiette. Il avait mis trop de cerises dans le bol du dessous. À chaque marche, une queue se coinçait. Noé écarta l’assiette et maintint la passoire jusqu’à ce que l’homme ait pu rejoindre le palier. Il se rendit compte que c’était la première fois qu’ils faisaient autre chose ensemble qu’appuyer sur le bouton de la lumière pour le suivant.",
+        "— C’est vous qui jouez, des fois ? demanda l’homme.",
+        "— Ça dépend du bruit que vous avez entendu.",
+        "Le voisin se mit à rire. Il lui dit que son petit-fils avait un clavier depuis deux ans. Quand il arrivait chez lui, la première chose qu’il voulait savoir était si quelqu’un avait touché à la molette depuis son dernier passage. Il reconnaissait les sons, mais il ne reconnaissait jamais la mélodie. Il lui demanda s’il avait une recommandation pour quelqu’un qui s’ennuyait aux cours. Noé ne savait pas s’il avait la compétence de recommander quoi que ce soit. Il lui conseilla de demander au garçon ce qu’il écoutait quand il était tout seul. Le voisin prit le temps d’y réfléchir avant de lui dire qu’il lui poserait la question.",
+        "En sortant, Noé trouva deux cerises dans la main qu’il avait utilisée pour tenir l’assiette. Il ne savait pas quand l’homme les y avait mises. Il les mangea au premier feu, sans cracher les noyaux près des chaussures du monsieur devant lui. À l’arrêt suivant il trouva enfin une poubelle. Il arriva au rendez-vous avec six minutes d’avance et deux marques rouges dans la paume. Quand Simon lui ouvrit, il était encore en train de vérifier qu’il n’avait rien taché.",
+        "Simon avait obtenu une heure dans une petite salle de répétition. Pour y entrer il fallait emprunter un couloir qui servait aussi de réserve de papier. Un rouleau occupait la moitié du passage. Noé le poussa du genou et passa en tenant les feuilles à deux mains contre sa poitrine. La salle contenait un clavier, deux chaises et un micro sur un pied auquel il manquait une vis de réglage. Simon le fit tenir en enroulant du tissu autour de la tige. Quand Noé demanda d’où venait le tissu, il lui montra un sac rempli de chaussettes propres et lui dit qu’il valait mieux ignorer certaines étapes de la préparation professionnelle.",
+        "Il voulait vérifier la hauteur de l’instrument. Noé souleva ses poignets, modifia la position de la chaise et posa les deux pieds à plat. À travers la cloison, un aspirateur s’arrêta. Le plafond avait une marque près du coin de la porte. Si Noé regardait la marque au lieu du micro, Simon lui dit qu’il pourrait s’imaginer que personne n’écoutait.",
+        "— Et toi ?",
+        "— Je m’efforce de te donner des raisons de m’oublier.",
+        "La première prise était bonne jusqu’au milieu. Noé se dépêcha au deuxième passage et la fin ressemblait à trois portes fermées dans le mauvais ordre. Dans la deuxième, il retint chaque mouvement à tel point que Simon leva les yeux au bout d’une minute pour vérifier s’il jouait toujours. Ils écoutèrent seulement les vingt dernières secondes. Noé entendit un léger frottement sur le tabouret. Il reconnut ensuite l’endroit où ses doigts avaient trouvé tout seuls un accord qu’il avait raturé sur la feuille. La note qui l’intéressait n’était pas celle sur laquelle il avait porté toute son attention.",
+        "— C’est où qu’on peut couper ? demanda-t-il.",
+        "— On peut couper à plein d’endroits. Tu peux aussi jouer une troisième fois, maintenant que tu sais jouer celle-là.",
+        "Ils attendirent qu’une personne sorte de la pièce voisine. Il n’eut pas besoin de savoir qui c’était. Il essaya de passer de la première note à la deuxième en écoutant ce qui arrivait entre les deux. Quand il retrouva l’accord du milieu, il avait à peine réfléchi à la façon de l’aborder. La fin fut plus lente que la veille. La dernière note n’avait pas beaucoup de volume. Il retira les mains et entendit jusqu’au bout ce que produisait le clavier après qu’il avait cessé d’y toucher. Simon attendit encore deux secondes avant de bouger.",
+        "En revenant vers les chaises, Noé découvrit qu’il avait coincé un coin de sa partition sous sa chaussure. Il se baissa pour le remettre à sa place et resta penché une seconde, à regarder l’empreinte très claire de la semelle. Il aurait voulu être capable de dire à quelqu’un, immédiatement, ce que ça lui avait fait de jouer jusqu’au bout sans que sa mère couvre le bruit en lavant des fourchettes, ou que Samira lui dise qu’une note marchait mieux qu’une autre. Il n’avait jamais éprouvé aussi fortement le besoin d’avoir quelqu’un à qui le raconter en sortant.",
+        "Simon lui envoya les prises. Il lui dit qu’il pouvait choisir lui-même, puis il demanda s’il pouvait en garder une pour les archives de la salle. Noé était tenté d’accepter pour avoir la preuve que c’était arrivé. Il lui demanda ce qu’on faisait de ces archives. Rien de public, répondit Simon, à moins que quelqu’un propose son morceau aux écoutes de fin d’année. Il y avait toujours une clé qu’on retrouvait deux étés après, et un jour on écoutait ce qu’on avait fait. Cette définition des archives plut à Noé. Il demanda à Simon de garder la troisième. Puis il nota son vrai titre dans un message, à côté de son prénom, pour que le fichier ne s’appelle pas simplement « piano 3 ».",
+        "— Tu l’appelles comment ? demanda Simon.",
+        "— Avant les premières livraisons.",
+        "Il ne savait pas que c’était le titre avant de l’avoir écrit. Simon le lut sans commentaire et replia le pied du micro. Il resta sur le sol deux petites fibres grises qui provenaient de la chaussette. Noé passa la main dans ses cheveux et ouvrit la porte pour qu’ils puissent sortir les chaises.",
+        "Adriel lui avait dit de ne pas l’attendre devant le restaurant. Il avait une soirée libre et ne voulait pas qu’on lui demande s’il était là pour faire quelque chose parce qu’il avait franchi la porte. Ils choisirent une petite boutique où l’on vendait à emporter des choses qu’on pouvait manger avec des doigts propres ou avec une fourchette fournie. Noé demanda s’ils avaient deux fourchettes. Adriel lui fit remarquer qu’il avait l’air de s’être engagé à partager un repas avant de savoir ce qui se trouvait dans les barquettes. Une femme rangeait les deux contenants sur le comptoir avec des précautions qui rendaient l’affaire soudain beaucoup plus solennelle.",
+        "Adriel avait posé de l’argent pour les deux. Noé calcula sa part et la lui tendit. Il n’avait pas envie de prétendre que dix euros étaient trop peu pour avoir une conversation.",
+        "Ils trouvèrent une marche à l’écart et posèrent les boîtes de chaque côté de leurs pieds. Adriel avait récupéré sa boîte en fer le dimanche. Il raconta qu’Alix lui avait rendu aussi toutes les pinces qu’elle avait trouvées dedans, parce qu’elle avait compté quatorze pinces et supposé qu’il avait ses raisons d’en vouloir quatorze. Noé dit que c’était sa façon d’avoir confiance en lui, et qu’il ne fallait plus rien lui dire s’il en perdait une.",
+        "Il raconta l’enregistrement. Au moment d’arriver à l’accord du milieu, il crut qu’il faisait depuis longtemps une description incompréhensible de quatre secondes dont personne d’autre ne se souciait. Adriel lui demanda ce qui l’avait poussé à rayer l’accord la première fois. Noé n’en avait aucun souvenir. Il essaya une réponse, puis une autre, et finit par dire que ça lui semblait possible qu’il l’ait rayé parce que la première fois il l’avait reconnu comme le bon. Il se méfiait des choses qui allaient vite. Il avait toujours peur d’avoir raté le moment où on leur demandait de taper leur code avant de se rendre compte qu’on les avait suivis jusqu’à la caisse.",
+        "Adriel tourna sa fourchette. Il semblait avoir une blague prête. Il ne la fit pas.",
+        "— J’aimerais bien l’entendre, dit-il.",
+        "Noé avait les trois fichiers. Il pressa le troisième, puis desserra tout de suite les doigts autour du téléphone. Ils étaient dans une rue où quelqu’un installait des caisses vides les unes au-dessus des autres. Écouter de la musique dans la rue ne lui avait jamais semblé absurde quand les autres le faisaient. À présent il pensait qu’ils allaient l’entendre de partout, depuis le vieux monsieur qui promenait son chien jusqu’au livreur qui s’arrêtait toutes les trois secondes pour remonter sur sa selle. Adriel lui proposa de garder le fichier pour plus tard, ou d’écouter juste le début avec une oreillette. Il sortit les siennes. Noé en prit une.",
+        "Ils écoutèrent deux minutes. Le livreur réussit enfin à partir. Un homme vint éteindre la lumière du porche à côté de leur marche et, en les voyant, la ralluma. Noé avait entendu le début avec une oreille, de travers, en tenant toujours une fourchette dans l’autre main. À la fin du passage, il la regarda et comprit qu’il l’avait pliée sans le vouloir.",
+        "— Ça t’arrive souvent, quand tu manges ? demanda Adriel.",
+        "— Seulement quand je fais écouter mon travail à un jury hostile.",
+        "— Je siège à titre bénévole et j’ai payé mes pommes de terre.",
+        "Noé lui envoya l’enregistrement. Adriel attendit de recevoir le fichier avant de sortir l’oreillette. Le premier message qu’il écrivit dessous fut « je peux le réécouter combien de fois ? ». Il l’envoya alors qu’ils étaient assis l’un à côté de l’autre. Noé le lut, leva les yeux et vit qu’Adriel faisait mine de s’intéresser à sa barquette. Il répondit « t’es obligé d’arrêter si t’entends une porte ».",
+        "Ils terminèrent de manger en parlant d’un problème d’horaires qu’Adriel avait au travail. Noé avait été sur le point de lui demander pourquoi il acceptait encore de travailler pour quelqu’un qui faisait ça. Il se souvint de la division qu’il avait faite avec sa mère. Il lui demanda combien il voudrait travailler, en heures, sur une semaine normale. Adriel dit qu’il avait besoin de temps pour faire le calcul. Ils plièrent les barquettes. Au moment de prendre deux directions différentes, Noé lui demanda s’il voudrait se retrouver un matin, quand il ne ferait pas la livraison. Adriel ne proposa pas encore de jour. Il dit qu’il montrerait à Noé son planning quand il l’aurait. Il avait un reste de sourire qu’il ne chercha pas à retenir. Noé se dit qu’il pourrait attendre de voir le planning.",
+        "Sur le chemin du retour, Noé se trompa de rue. L’îlot avait deux passages, et il avait suivi celui où la boulangerie d’à côté laissait d’ordinaire des caisses contre le rideau. Il s’arrêta au milieu de la rue vide. Sur la messagerie d’Adriel, la photo de l’enregistrement avait remplacé le petit symbole qui indiquait qu’il était en cours de téléchargement. Noé eut envie de lui envoyer une version mieux coupée. Il aurait pu prendre le fichier, déplacer le curseur et enlever le souffle au début. Il ne fit rien de tout ça. Au lieu de ça, il envoya l’enregistrement à Samira aussi, en gardant le titre qu’il venait de lui donner.",
+        "Samira fut plus rapide qu’Adriel. Elle répondit qu’elle écouterait le matin pendant la première fournée et lui demanda s’il voulait un avis ou seulement être écouté. Il tapa « les deux » puis « d’abord écouté ». Il n’avait pas osé dire pareil à Simon. Il rentra avec à peu près une heure de ce qu’il aurait dit aux trois personnes s’il avait pu les réunir au moment exact où le dernier son s’était éteint. Le plus important tenait pourtant dans la réponse qu’il venait d’envoyer à Samira.",
+        "En rentrant, il ouvrit le formulaire et remplit la deuxième case. Pour l’adresse, il eut besoin de relire l’intitulé. Il croyait savoir répondre. Il avait seulement oublié qu’on lui demandait l’endroit où il vivait à présent, celui où une personne pouvait encore lui écrire pendant qu’il réfléchissait à partir."
+      ],
+      "times": {
+        "p0": "2026-06-09T17:20",
+        "p23": "2026-06-09T18:05",
+        "p36": "2026-06-09T20:05"
+      },
+      "next": "ch-08-leandre"
+    },
+    "ch-08-leandre": {
+      "chapter": "ch-08",
+      "viewpoint": "Léandre",
+      "paragraphs": [
+        "Au-dessus de l’évier du local, quelqu’un avait pendu une veste jaune. Léandre reconnut d’abord la veste. L’une des deux femmes qu’il avait vues pendant la visite la portait roulée autour de la taille. Il s’arrêta de l’autre côté de la rue. Un pot blanc tenait le rideau à mi-hauteur. Les deux femmes avaient posé du papier au sol pour pouvoir peindre les plinthes sans éclabousser le carrelage. La plus grande étendit la main et reçut de l’autre un pinceau, sans avoir eu à quitter le mur des yeux.",
+        "Le propriétaire l’avait appelé le lundi. Il avait laissé un message pour lui dire qu’il s’était engagé avec quelqu’un d’autre, puis répété presque mot pour mot le message en lui écrivant. Les deux choses avaient paru si identiques à Léandre qu’il avait mis l’une derrière l’autre pour être certain de ne pas avoir manqué un détail. Il regardait maintenant deux personnes recouvrir de peinture une plinthe où il aurait pu poser le pied trente fois par jour. Le seul détail qu’il avait manqué, c’était la couleur. Elles avaient choisi un bleu foncé. Il aurait laissé le blanc.",
+        "Il sentit un vélo lui frôler le bras. Le trottoir rétrécissait derrière lui, et il s’était arrêté à l’endroit où quelqu’un avait laissé une poubelle. Il s’excusa. Le cycliste lui fit un signe en repartant. Léandre déplaça la poubelle d’une main, comme si elle lui appartenait, puis la remit à son emplacement quand il se rendit compte que le camion devrait passer la chercher. Son téléphone vibra au moment où il arrivait au coin. Il espéra qu’on lui demandait de venir aider avec quelque chose qui prendrait toute son attention durant les quinze prochaines minutes. C’était sa mère. Elle lui avait notamment demandé le dimanche de lui rendre sa perceuse, et il la lui avait rapportée avec une boîte d’abricots dont elle avait laissé les quatre plus beaux pour lui. Maintenant elle voulait savoir s’il se rappelait où il avait mis le chargeur.",
+        "La première fois qu’il s’était intéressé à la réparation des patins, il avait retiré une vis de sa lame pour la montrer à sa mère. Il n’avait pas remis la vis correctement. Elle l’avait vu essayer de la redresser avec un couteau à tartiner et avait sorti un tournevis du tiroir à outils. En voyant qu’il continuait à l’enfoncer de biais, elle lui avait demandé de l’enlever une deuxième fois, de poser les deux pieds par terre et de dire ce qu’il voyait. Il avait vu le téléphone de sa mère vibrer et s’était senti autorisé à lui demander de le laisser faire seul. Sur la glace le lendemain, il avait toujours sa vis, mais la semelle s’était ouverte un peu autour. Il était rentré du cours en colère contre l’outil, et sa mère l’avait accompagné chez un cordonnier qui lui avait montré exactement ce qu’il avait abîmé. Sa mère s’en souvenait chaque fois qu’il prenait un outil à elle sans le lui dire.",
+        "Il écrivit « deuxième tiroir du meuble de l’entrée ». Pour une fois il avait été capable de tout remettre en place. Sa mère envoya une photo où le chargeur apparaissait sous un chiffon. Elle lui demanda si elle pouvait acheter le billet pour le gala du club le soir. Il lui avait dit jeudi qu’il ne patinerait probablement pas. Une patineuse du petit groupe avait une entorse. L’entraîneuse avait réduit leur passage à deux personnes et supprimé une transition du programme. Léandre avait fait la première répétition avec elle pour éviter que le groupe n’attende, puis pensé que sa présence compliquait trop les choses et proposé de se retirer. Son entraîneuse, ce matin, lui avait écrit trois mots. « J’ai remis l’entrée. »",
+        "Il regarda deux personnes se croiser autour de la poubelle. La femme qui voulait entrer dans l’immeuble retenait la porte pendant qu’un homme arrangeait les roues. Léandre écrivit à sa mère qu’elle pouvait prendre un billet si elle en avait envie. Il reprit le message parce qu’il avait oublié de lui dire qu’il allait effectivement patiner. Elle demanda combien de temps durerait son passage. Quand il se rendit compte qu’elle voulait savoir si elle aurait le temps de filmer dès qu’il serait là, il l’appela pour lui demander de garder le téléphone dans son sac. Il n’avait aucune envie d’avoir une vidéo. Il fut pourtant incapable de dire tout de suite pourquoi.",
+        "— On verra ton visage depuis les gradins ? demanda-t-elle.",
+        "— Quand je passe près des barrières, peut-être.",
+        "— Alors je regarderai près des barrières.",
+        "Il avait quatre heures à occuper avant de se changer. Il alla d’abord à l’atelier. Bernard avait laissé le registre dans le tiroir qu’ils avaient ouvert ensemble pour refaire l’addition, un mois plus tôt aurait dit Léandre si on lui avait demandé combien de temps avait passé. Il n’y travailla pas. À la place, il accepta d’aider une dame qui avait traversé Nice pour une pièce dont elle ne connaissait pas le nom. Elle l’avait enveloppée dans du papier comme un jeu de clés trouvé dans la rue. Une fois déplié, on voyait un crochet de bottine qui tenait dans le pli de l’enveloppe. La bottine, elle, était encore à la maison.",
+        "Léandre lui expliqua qu’il pouvait lui montrer deux modèles et qu’il aurait besoin de voir le cuir. Il nota les jours où elle pourrait revenir, avec le temps que ça prendrait selon ce qu’elle lui apporterait. Elle demanda combien coûterait la réparation et dit qu’elle s’attendait à davantage. Il se demanda combien de personnes lui avaient dit exactement la même chose, sans que lui en tire jamais la conséquence que parfois les gens arrivaient à l’atelier prêts à payer son travail. Il regarda le double du ticket après son départ. Le montant était si petit qu’il n’aurait presque rien changé à son budget. Il lui donna une ligne quand même.",
+        "Dans le tiroir, il retrouva aussi le plan du local qu’il avait dessiné sur le dos d’une photocopie. Il pouvait le mettre à la poubelle maintenant. Il l’ouvrit. Le trait noir qui indiquait où laisser un passage venait d’une mesure qu’il avait réussi à prendre seul et dont il se souvenait très bien. Il déchira le bout de papier où il avait écrit le prix du loyer, laissa le dessin entier et le rangea dans son casier. Il était assez sûr que le prochain endroit aurait des dimensions différentes. Il garda le plan parce que c’était la première fois qu’il avait lui-même décidé de la place à donner aux gens qui viendraient, avant de choisir où il travaillerait.",
+        "Bernard le trouva en train de refermer le casier. Il lui demanda s’il allait au gala pour donner un coup de main. Léandre lui dit qu’il y allait pour patiner. Bernard se contenta de rappeler qu’il fallait penser à manger avant. Au bout du comptoir, sur une petite assiette, deux biscuits attendaient. Léandre en prit un. Bernard ne lui fit pas remarquer que la recommandation aurait peut-être porté plus loin que ça.",
+        "À Jean-Bouin, il fit deux allers-retours en chaussures de ville pour trouver le banc qui était encore libre. L’entrée des vestiaires était encombrée de sacs dont personne ne semblait savoir à qui ils appartenaient. Un homme vérifiait le contenu des sacs de son groupe en ouvrant les fermetures une à une et en demandant à la cantonade qui avait apporté un citron. Au troisième sac, un enfant répondit que c’était un pamplemousse. Léandre s’assit où il put, presque à la hauteur de la porte. Il avait apporté deux longueurs de lacets neufs. Il posa l’une près de sa housse, enfila le patin gauche et, avec l’autre, refit son laçage à l’endroit qu’il avait décidé de garder un peu souple.",
+        "Son partenaire de passage, Malo, arriva avec une fermeture de veste ouverte jusqu’en bas et un sac qui contenait les vêtements de sa sœur. Il dit qu’il avait réussi à ne pas oublier les patins cette fois. Léandre lui demanda combien de fois il pensait pouvoir employer le mot « cette fois » avant que ça devienne une habitude. Malo dit qu’il était prêt à faire un essai sur trois galas. Il posa le sac de sa sœur et vérifia soigneusement sa poche intérieure. La carte où figurait l’ordre des passages était toujours là. Il la relut comme s’il s’agissait d’une lettre et qu’on aurait pu y ajouter des choses depuis le dernier quart d’heure.",
+        "— Si je manque le virage, je passe derrière toi, dit Malo.",
+        "— Si tu manques le virage, tu refais le virage sur le pas d’après. Je te verrai.",
+        "Malo hocha la tête sans relever les yeux. On entendait des basses dans le couloir. À travers la porte des vestiaires, la lumière de la piste paraissait d’un blanc à peine supportable, moins à cause de son intensité que du nombre de personnes qui entreraient dedans.",
+        "À l’atelier, on lui avait demandé s’il pouvait revenir juste après le gala pour vérifier la paire d’une mère de famille qui devait prendre le train le lendemain. Il avait demandé au parent d’arriver avant la répétition, expliqué où mettre le patin si la personne venait pendant qu’il mangeait, puis réussi à refuser de rester après l’heure. Bernard s’était proposé de s’en charger le matin suivant. Le parent avait accepté en répétant deux fois qu’on lui rendait service. Depuis, Léandre ne s’était souvenu ni de la veste ni du ton de la personne. Il avait pensé à deux ballons qu’il avait vus dans le hall en arrivant et qui portaient le même prénom. Il n’avait pas eu besoin de se dire qu’il méritait la soirée.",
+        "Noé n’avait pas promis de venir. Il travaillait jusqu’à quinze heures et lui avait envoyé une photo d’une facture de boulangerie dont il croyait qu’elle comportait un dessin de baleine. À dix-sept heures, Léandre reçut un message sous la photo. « J’y suis, j’ai trouvé ta mère en demandant au monsieur de l’entrée laquelle c’était. » Il avait presque réussi à faire croire à Léandre qu’il était capable de demander ça à un inconnu. Une deuxième photo montrait deux mains sur la rambarde, l’une avec un bracelet que Léandre connaissait depuis qu’il était enfant, l’autre tenant un petit paquet de bonbons fermé. Il rangea le téléphone. Il se souvint d’avoir amené Noé regarder une séance quand ils s’étaient connus, de l’avoir laissé attendre trois quarts d’heure près du distributeur et de l’avoir trouvé en train de lui écrire qu’il ne fallait pas qu’il se dépêche. La première chose que Noé lui avait dite en le voyant, c’était qu’il avait eu le temps de comprendre comment sonnaient les carres dans les virages.",
+        "Au dernier échauffement, Malo réussit tellement bien leur passage d’un bord à l’autre que Léandre fut obligé de décider s’il allait lui faire confiance pour de bon. Ils recommencèrent sans musique. Il entendit les lames se rapprocher, puis s’écarter, et le souffle de Malo changer dès qu’il avait besoin de pencher le corps autrement. L’entraîneuse leur fit signe que leur temps était écoulé. Léandre pensa au local pour la première fois depuis qu’il était entré dans le bâtiment. Pendant quelques secondes, il essaya d’imaginer quel bruit ferait la fermeture une fois qu’elles auraient changé le mécanisme. Malo lui demanda s’il avait besoin de glace pour son genou. Léandre comprit qu’il s’était gratté sans s’en rendre compte au travers du pantalon. Il répondit que ça allait. Puis il demanda à Malo de lui redire ce qu’ils feraient si l’un des deux manquait le virage. Malo le lui redit.",
+        "Avant le salut, tout se joua dans un écart assez petit pour que personne dans les gradins ne le remarque. Malo partit un peu tôt. Léandre entendit le frottement de la lame et sut exactement où il se trouverait. Il ralentit son propre pas, laissa revenir le battement suivant et vit Malo réapparaître dans le coin gauche de son regard. Ils sortirent du virage avec moins d’élan qu’à la répétition. La musique leur laissait la place. Il crut entendre un enfant leur crier allez, sans pouvoir dire lequel des deux l’enfant encourageait.",
+        "La suite lui revint par morceaux précis. Une mesure avant la fin, son pied droit trouva l’appui qu’il avait raté trois fois à l’échauffement. Il expira de surprise. Derrière lui, Malo eut le temps de rire. Ils s’arrêtèrent presque ensemble. Léandre ne se pencha qu’un instant pour saluer, de peur qu’à force de rester immobile il regarde vers les barrières et se mette à pleurer. Quand il se redressa, il les vit pourtant. Sa mère avait les mains vides. Noé applaudissait au-dessus de sa tête parce qu’il était trop petit pour que Léandre le remarque autrement.",
+        "Il voulut retrouver Malo tout de suite. Ils sortirent de la glace l’un derrière l’autre et attendirent à côté d’un chariot jusqu’à ce que la personne en charge de la musique libère le passage. Malo lui demanda s’il s’était trompé dans le virage. Léandre répondit oui. Malo se mit à rire comme sur la glace, seulement cette fois il avait assez d’air pour reprendre une deuxième fois. Ils n’avaient rien d’autre à se dire avant d’enlever leurs patins. Léandre resta avec lui jusqu’à ce que les deux côtés du banc soient libres et lui donna le lacet neuf qu’il avait finalement gardé. Malo le rangea sans s’excuser de ne pas en avoir pris. C’était un bon signe. Il saurait à quoi il servait.",
+        "Plus tard, devant le bâtiment, sa mère lui montra comment sa main s’était mise dans celle de Noé pendant le virage, en les alignant de la même façon, le pouce dessus. Elle dit qu’elle avait serré beaucoup trop fort. Noé confirma sans mouvement du visage, puis lui tendit le paquet de bonbons. Il était ouvert. Sa mère en prit deux en les regardant, comme si Noé avait passé une partie de la soirée à lui apprendre à perdre une bataille contre son enfant sans en faire une histoire.",
+        "— Tu l’as fait comme tu voulais ? demanda-t-elle à Léandre.",
+        "Il se rappela le moment où il avait entendu le pied de Malo partir trop tôt, le rire derrière lui, l’appui qui s’était placé juste. Il lui dit qu’il l’avait fait comme ils avaient pu et que ça lui plaisait. Pendant que Noé ramassait le sac au sol, sa mère se pencha en avant et posa la bouche contre le front de Léandre. Il était trop grand pour elle depuis huit ans. Elle avait toujours l’air d’oublier avant d’arriver à la moitié du geste. Il se baissa.",
+        "Ils descendirent ensemble jusque dans le hall. À côté de la porte, une petite fille en collants de patinage ne voulait pas remettre ses chaussures. Sa mère tenait une de ses baskets et lui expliquait que ses pieds auraient froid dehors. La petite répondait qu’elle avait déjà tenu sur de la glace et que le dehors ne lui faisait pas peur. Léandre crut d’abord entendre sa mère lui dire d’arrêter de traîner. Elle avait ouvert son sac, trouvé une paire de chaussettes et les offrit à la mère de la petite, qui était en train de vérifier le fond du sien. Léandre reconnut celles qu’il avait emportées chaque fois qu’il appréhendait de passer devant du monde. Sa mère en gardait peut-être deux paires. Il décida de ne pas lui demander.",
+        "Noé le raccompagna jusqu’au tram. Il voulut savoir s’ils plaisantaient vraiment sur la glace ou si les mouvements de Malo avaient donné cette impression à cause de la distance. Léandre lui raconta le virage en faisant le trajet des deux lames sur le dos du paquet de bonbons. Il s’aperçut qu’il ne lui était plus nécessaire de montrer l’endroit où ils s’étaient trompés. L’erreur avait eu un effet et l’effet faisait partie de ce qu’il avait envie de raconter. Quand ils entendirent le tram, Noé partagea les derniers bonbons sans recompter ceux qu’il mettait dans chaque main.",
+        "Sur le trajet, il écrivit à Bernard qu’il voulait parler lundi de deux séances de réparation sur rendez-vous, séparées du comptoir, pour voir s’il serait capable de gérer lui-même les commandes. Il n’avait pas encore calculé le prix. Il ajouta qu’il viendrait avec un chiffre et qu’il attendait de savoir si l’idée lui semblait possible. Bernard répondit bien plus tard, quand Léandre avait déjà rangé ses patins. « Juste deux pour commencer ? » Léandre avait peur que ce soit trop peu. Il écrivit oui. C’était la quantité qu’il avait choisie pour pouvoir constater, la prochaine fois, qu’il lui en fallait davantage."
+      ],
+      "times": {
+        "p0": "2026-06-12T12:45",
+        "p13": "2026-06-12T16:30",
+        "p21": "2026-06-12T19:35"
+      },
+      "next": "ch-09-adriel"
+    },
+    "ch-09-adriel": {
+      "chapter": "ch-09",
+      "viewpoint": "Adriel",
+      "paragraphs": [
+        "La deuxième chose que Lina dit dans la chambre d’Adriel fut qu’il avait les rideaux les plus courts de toute la Méditerranée. La première avait été de lui demander s’il voulait descendre rattraper le livreur qui venait de passer avec deux sacs de croissants, comme si un livreur pouvait toujours être convaincu d’en garder un pour vous. Il lui expliqua qu’il y avait une boulangerie deux rues plus loin. Lina enleva ses chaussures. Elle avait passé quatre heures dans un train et n’avait pas l’intention d’aller acheter elle-même les croissants qu’elle venait de manquer.",
+        "Il avait essayé de ranger avant qu’elle arrive. Dans la chambre, il n’y avait rien à ranger qui ne se voie deux fois plus quand on le déplaçait d’un côté à l’autre. Il avait finalement enlevé le ticket de lessive posé sur la table et fermé la porte du placard. Sur le lit, il avait oublié de mettre l’oreiller dans la taie que Fatou lui avait donnée. Lina ramassa le tissu rose et le tint à bout de bras.",
+        "— Ça, on garde.",
+        "Il posa l’oreiller sur la chaise. À deux, ils firent entrer les quatre coins sans coincer le tissu autour. La tête de Lina disparaissait derrière les fleurs quand elle se penchait. En se redressant, elle replia le bord du tissu et le tapa du plat des mains, exactement comme leur grand-mère.",
+        "— C’est une copine du restaurant qui me l’a donnée, expliqua-t-il.",
+        "— T’as dit merci ?",
+        "— J’ai failli mentir sur le fait que j’en avais une.",
+        "Lina le regarda. Il ne lui était pas venu à l’esprit qu’il aurait pu choisir une autre réponse, ou simplement lui montrer où était le verre à dents. Elle demanda s’il avait fini par la prendre. Il lui désigna la chaise avec les deux mains. Lina rit en reculant assez pour devoir se rattraper à la porte.",
+        "Ils trouvèrent une place aux vêtements de Lina en sortant deux cintres et en suspendant son écharpe au même crochet que le sac de boxe. Lina ne passait qu’une nuit chez lui. Le lendemain, elle avait un rendez-vous à Nice et repartirait ensuite. Il lui avait proposé le lit et s’était procuré un matelas mince pour dormir par terre. Elle s’assit sur le bord du lit, regarda le sol et demanda de quel côté il comptait pouvoir encore ouvrir la porte. Il repoussa le matelas roulé. Il était réellement préférable d’y penser avant de préparer un deuxième couchage.",
+        "Lina lui demanda de lui montrer ce qu’il voyait de sa fenêtre. Il lui montra le volet d’en face, un bac de plantes dont il ne savait pas si les gens l’arrosaient, et le bout de rue où le camion de collecte avait passé plus longtemps que d’habitude le matin. Derrière eux, une alarme de minuterie se mit à sonner, de l’autre côté d’une cloison. Ils attendirent que quelqu’un l’éteigne. Lina dit que la première fois qu’elle s’était installée seule, elle ne supportait pas les bruits qu’elle ne connaissait pas. Il se rappela ses appels à cette époque. Elle avait parlé de traverser toute la ville pour acheter une fourchette, et d’un placard dont le fond s’effondrait. Il lui demanda si elle avait acheté la fourchette au moins. Elle ouvrit la bouche avec une gravité soudaine. Il apprit que c’était bien la même fourchette qui manquait, depuis deux ans, dans leur tiroir à la maison.",
+        "Sur la table, le téléphone d’Adriel affichait son planning pour la semaine suivante. Le chef lui avait rendu une heure. Il lui avait accordé la deuxième en précisant que le restaurant s’engageait sur une moyenne, qu’il avait l’habitude de le faire et que ça demanderait parfois de la souplesse à tout le monde. Adriel avait noté la réponse aussitôt, puis demandé à Fatou de lui montrer où elle inscrivait les changements. Il montra les deux lignes à Lina. Elle les lut sans lui suggérer de revenir vivre plus près.",
+        "— Ça suffit ?",
+        "— Si ça reste comme ça, oui.",
+        "Elle pouvait lui demander ce qui arriverait si ça ne restait pas comme ça. Elle replaça son écharpe sur l’accoudoir. L’écharpe glissa par terre. Elle la ramassa et la lui tendit.",
+        "— Si un soir t’as besoin de râler, tu peux m’appeler pour ça aussi.",
+        "Il replia encore l’écharpe, même si elle l’avait déjà fait. Le jeudi, à l’heure convenue, il l’avait appelée et ils avaient parlé douze minutes. Il avait raconté la boxe et demandé si les tomates étaient bonnes. Il s’était très consciencieusement assuré qu’ils ne parlent de rien qu’elle ait besoin de reprendre après avoir raccroché. Elle avait peut-être fait le trajet pour pouvoir finir une conversation dont il s’arrangeait toujours pour qu’elle reste courte.",
+        "— Tu veux sortir ? demanda-t-il.",
+        "— Je veux manger à l’endroit où on est vraiment à Nice, dit-elle.",
+        "— Tu veux des sandwicheurs niçois ou tu veux la mer ?",
+        "— Je veux que tu me montres où t’irais si personne te demandait de marcher vite.",
+        "Avant de sortir, ils essayèrent de réparer le rideau. Il y avait un troisième anneau coincé entre le tissu et le mur. Pour le déplacer on devait soulever légèrement la barre, ce qui révélait que la barre ne tenait vraiment que d’un côté. Lina demanda s’il avait un tournevis. Adriel ouvrit l’unique tiroir et lui présenta le manche d’un couteau qu’il avait utilisé pour dévisser une étagère. Elle le prit, le regarda, puis lui demanda où il gardait le couteau avec lequel il coupait ses tomates. C’était le même. Elle le reposa et arrêta le rideau avec une pince. Il descendit de toute la longueur du tissu. La pièce devint un peu plus sombre, assez pour que le sol paraisse soudain plus propre.",
+        "Lina s’assit sur la chaise et appuya le dos contre l’oreiller fleuri. Elle lui laissa le silence pendant qu’il cherchait sa clé. Adriel la trouva dans la poche où il l’avait mise, du premier coup, et continua de chercher parce qu’il devait choisir s’il lui disait quelque chose avant de fermer derrière eux.",
+        "— Le premier soir, j’ai pas défait mon sac, dit-il. J’ai attendu de rentrer du restaurant.",
+        "— Tu le défaisais chez nous ?",
+        "— Je le sortais même pas.",
+        "Il y eut un moment où elle aurait pu rire. Elle décroisa les jambes. Elle dit qu’elle avait repéré, dans le train du matin, le moment où elle pourrait appeler leur père sans qu’il l’accuse de s’ennuyer. Elle n’avait pas appelé. Elle était occupée à regarder la mer pour la première fois depuis des mois. Ça faisait un bout de temps qu’elle voulait passer une journée dans une ville où il ne lui demanderait pas de rentrer avant que quelque chose ferme. Adriel avait cru qu’elle venait pour vérifier s’il avait assez à manger. Il ne s’était pas demandé si elle avait eu, elle aussi, besoin de s’arrêter ailleurs. Il prit les deux petites bouteilles qui restaient sur la table, lui tendit celle qui n’avait pas encore été ouverte et demanda si elle voulait emmener son écharpe. Elle secoua la tête et la laissa à son crochet.",
+        "Ils achetèrent deux sandwichs, descendirent vers le Vieux-Nice, puis s’arrêtèrent sur la plage sous les Ponchettes. Lina descendit jusqu’à un endroit où les galets restaient à peu près en place entre ses pieds. Adriel avait oublié qu’elle portait des semelles lisses. Il tint les sandwichs pendant qu’elle calait une chaussure contre un galet plus gros. Puis il lui tendit celui qui avait été enveloppé avec deux couches de papier. Il avait choisi pour elle celui qui risquait le plus de couler. La lumière sur l’eau obligeait à plisser les yeux.",
+        "Lina mangea une moitié de sandwich avant de lui demander s’il avait parlé à leur père depuis son arrivée. Il avait envoyé un message à la personne qui revenait toujours chercher la voiture de livraison le jeudi, parce qu’elle avait oublié une veste. Il avait appelé sa sœur et la propriétaire de la chambre, puis trois fois le restaurant. Son père avait réagi avec un pouce à la photo que Lina avait envoyée depuis la gare. Il n’existait aucun endroit dans le téléphone où Adriel aurait pu trouver la dernière fois qu’ils s’étaient parlé sans que quelqu’un soit dans la pièce avec eux.",
+        "— Il m’a pas écrit, dit-il.",
+        "— Je sais. Il dit que tu sais où il est.",
+        "— C’est vrai, du coup, moi aussi j’ai une bonne excuse.",
+        "Lina poussa du pied un galet qui avait roulé sous sa chaussure. Elle leur avait servi d’intermédiaire à tous les deux depuis assez longtemps pour savoir lesquels de leurs mots éviter de répéter. Elle lui dit qu’elle ne voulait plus rentrer avec un compte rendu. Elle avait préparé cette phrase en venant et la dit d’une voix presque parfaitement calme. Ça lui coûta au dernier mot.",
+        "Adriel posa son sandwich. Il avait pensé qu’en partant il retirait à Lina un travail dont elle avait assez. À la place, il avait fait en sorte qu’elle fasse le trajet avec le numéro d’un restaurant sur son téléphone et une question à poser au sujet de leur père. Il regarda les vagues aplatir la rangée de cailloux mouillés. Au-dessus, des gens parlaient fort sur le passage qui longeait la plage. Il aurait pu marcher quelques mètres avec sa sœur et faire semblant qu’il n’avait pas entendu exactement ce qu’elle venait de dire. Il resta assis.",
+        "— D’accord, dit-il. Quand on me demandera de ses nouvelles, je dirai que j’en ai pas. Je lui dirai aussi que tu m’as demandé de me débrouiller.",
+        "— Laisse-moi en dehors de la deuxième phrase.",
+        "Il hocha la tête. Ce n’était pas une demande difficile. Il ne comprenait pas pourquoi il avait eu envie d’en faire un message supplémentaire à transmettre.",
+        "Après un temps, Lina lui demanda qui jouait dans le fichier de la veille. Elle avait reçu par erreur une capture d’écran du morceau, ouverte à la place de son billet de train. Adriel lui dit le prénom de Noé et décrivit assez mal la soirée. Le passage qu’il avait le plus de mal à raconter était celui où il avait entendu la note revenir. Il lui expliqua la coupure et les lampes, puis son oreillette sur la marche et la fourchette pliée. Il ne lui fit pas écouter le fichier. Il faudrait d’abord le demander à Noé.",
+        "— Je l’aime bien quand il dit ton prénom, dit Lina.",
+        "— Tu l’as jamais entendu dire mon prénom.",
+        "— Non. Je viens de t’entendre dire le sien.",
+        "Il ne répondit pas. Lina ramassa le papier qui menaçait de rouler jusqu’à l’eau. Elle avait mangé la deuxième moitié avec un morceau qui lui restait au coin de la bouche. Adriel la prévint. Elle s’essuya de la mauvaise main et ils réussirent à rire, après un instant dont aucun des deux n’aurait su quoi faire autrement.",
+        "Lina eut envie d’entrer dans l’eau jusqu’aux chevilles. Elle ne semblait plus se soucier de ses chaussures. Elle les enleva et les passa à Adriel, qui les mit à côté des siennes. Un galet très plat était coincé contre son talon. Il le poussa vers elle en le faisant glisser. À Nîmes, quand ils étaient enfants, elle rapportait des cailloux de chaque sortie qu’ils faisaient avec leur grand-mère. Elle les organisait dans des boîtes par taille et prêtait beaucoup d’attention à des différences qu’Adriel avait longtemps été incapable de voir. Il lui demanda si elle avait encore les boîtes. Elle répondit que oui, mais que dans l’une d’elles une seule pierre était restée. Elle n’était jamais arrivée à s’en débarrasser parce qu’il la lui avait rapportée d’un voyage scolaire. Ils ne se rappelaient ni l’un ni l’autre où.",
+        "L’eau lui atteignit le bout des pieds. Elle recula et s’assit tout de suite. Elle avait froid. Adriel éclata de rire parce qu’elle avait mis moins de temps à renoncer qu’il ne lui en fallait pour expliquer qu’elle ne renoncerait pas. Il lui redonna ses chaussures. Elle remarqua qu’il avait glissé le galet dans celle de gauche. Il s’attendait à ce qu’elle le remette par terre avant de se chausser. Elle le prit, le retourna et lui demanda s’il pouvait mettre autre chose dans la chambre que des affaires de travail. Il lui demanda si elle lui offrait maintenant quelque chose qu’il venait de lui offrir. Elle approuva. Il mit le galet dans la poche qui contenait d’habitude ses clés. Il savait qu’il faudrait lui trouver une place en rentrant.",
+        "Ils longèrent l’eau jusqu’à trouver un endroit où remonter. Adriel devait travailler à dix-huit heures. Il lui donna sa clé après lui avoir rappelé qu’il fallait ramener le battant vers soi pour l’ouvrir. Elle allait pouvoir s’endormir avant lui, si le voisin à la minuterie n’avait rien décidé. Avant qu’ils se séparent, il lui demanda les horaires de son rendez-vous du lendemain. Elle lui dit onze heures et ajouta qu’il pouvait l’attendre à midi s’il voulait déjeuner. Il dit oui sur-le-champ. Il avait assez de temps pour aller au marché avant.",
+        "À la fermeture, les chaises avaient déjà été retournées sur les tables et les deux dernières assiettes séchaient ensemble derrière le passe. Fatou était partie après avoir montré du doigt le basilic, qui avait de nouvelles feuilles. Elle leur avait demandé de le laisser tranquille. Adriel entrouvrit la porte de service pour laisser sortir la chaleur puis, quand la rue fut redevenue silencieuse, la ramena vers lui et abaissa le loquet. L’ampoule au-dessus restait allumée parce que Minh avait oublié d’éteindre en sortant. Il la laissa encore le temps de retrouver son sac.",
+        "Il prit son téléphone pour vérifier si Lina était rentrée. Elle lui avait envoyé une photo de son écharpe sur le dossier de la chaise et « garde la porte droite quand tu tournes ». Il fit défiler l’écran jusqu’au numéro de son père. En bas de leur conversation il y avait une vieille question sur l’endroit où se trouvait un double de clé. Adriel essaya d’imaginer combien de temps le message suivant resterait en bas avant que l’un d’eux le recouvre. Il tapa « je suis à Nice jusqu’à la fin de la saison » puis s’arrêta. C’était une phrase qui n’exigeait rien et qui associait déjà son séjour à un retour.",
+        "Il effaça la date qu’il avait commencé à ajouter. À la place, il écrivit qu’il était libre jeudi matin un quart d’heure après la boxe. S’il voulait s’appeler, ça lui irait. Il posa le téléphone, éteignit l’ampoule et sortit. Il n’attendit pas que le message s’affiche comme lu pour se remettre à marcher.",
+        "Le soir, il ne s’était pas seulement occupé de ses propres heures. Juste avant que le chef s’en aille, il lui avait demandé de lui envoyer les horaires définitifs de la semaine. Minh voulait savoir quel jour il pourrait passer chercher son fils. Le chef avait regardé Minh et proposé de régler ça en disant à chacun quand commencer au moment venu. Fatou, entrée pour prendre sa veste, lui avait demandé s’il disait ça aussi pour ses propres rendez-vous. Le chef avait soupiré et ouvert son carnet. Adriel s’attendait à se sentir coupable en voyant les trois têtes tournées vers la même page. Il avait eu faim. Il avait surtout pensé que si on pouvait arriver au bout de la soirée en sachant quand la suivante commençait, il aurait quelque chose de moins à défendre en rentrant.",
+        "Il vérifia une dernière fois la photo du carnet. Le chiffre de jeudi avait un trait dessus, mais on voyait lequel avait été ajouté à côté. Il l’envoya à Minh, qui répondit presque aussitôt « je sais ce que j’ai à faire, maintenant ». Adriel garda la conversation ouverte le temps de traverser.",
+        "Au bout de la rue, il appela Noé. Il l’appela parce qu’il venait de recevoir le planning de la semaine et qu’il avait réellement un matin libre. Noé décrocha au deuxième signal. Il murmura que la cloison de sa cuisine était en papier et qu’à cette heure-là sur le palier, il pourrait parler plus fort sans réveiller sa mère. Adriel lui dit de rester où il était. Il parla doucement lui aussi. Ils convinrent de mercredi, puis de huit heures quinze, puis d’un endroit où, si l’un était trop tôt, il pourrait s’asseoir sans commander pour l’autre. Quand il raccrocha, l’heure était encore affichée sur l’écran. Il avait enfin une heure à noter pour une raison qui n’avait rien à voir avec le moment où il commencerait à travailler."
+      ],
+      "times": {
+        "p0": "2026-06-14T14:15",
+        "p26": "2026-06-14T16:40",
+        "p44": "2026-06-14T23:35"
+      },
+      "next": "ch-10-alix"
+    },
+    "ch-10-alix": {
+      "chapter": "ch-10",
+      "viewpoint": "Alix",
+      "paragraphs": [
+        "Alix avait déplié le plan du rez-de-chaussée sur la table de la cuisine. Il la dépassait de peu. À l’endroit où se trouvait le garage, elle avait posé une photographie prise un an plus tôt sans aucune intention de s’en servir. Deux personnes y attendaient dans l’ombre, en dehors de l’alignement des façades. On voyait à peine leur visage. Elle aurait pu les effacer de l’image sans perdre d’information utile sur la largeur de la rue. Ce matin, elle avait précisément besoin du temps qu’elles passaient là.",
+        "Elle dessina une ouverture et recula la ligne de trois millimètres. À l’échelle, c’était assez pour maintenir un endroit où on pouvait s’arrêter sans bloquer une porte. Son café refroidissait à côté de la prise. Elle le déplaça sans le boire. Sur le mur, son père avait accroché les tournesols avec la liste de courses sous le verre. Une ligne écrite au feutre disait qu’il y avait du café dans le placard du haut. Il avait décidé que le cadre serait à la fois un objet inutile et le seul moyen de transmettre une information urgente dans l’appartement.",
+        "Son père entra avec sa chemise déboutonnée, une main cherchant dans sa poche quelque chose qu’il tenait visiblement dans l’autre. Il la vit regarder.",
+        "— Mes clés, dit-il. J’ai déjà réglé l’affaire.",
+        "Il les posa pour trouver sa tasse. Alix replia la photo au niveau de la marge et en chercha une deuxième. Elle en avait plusieurs où les gens traversaient cette rue. Après les avoir regardées pendant une semaine, elle s’était aperçue que la personne qui restait le plus longtemps à l’ombre ne traversait jamais. Elle avait vu le même pantalon sur trois clichés distincts. Un soir, dans le groupe du projet, elle avait demandé pourquoi ils ne pouvaient pas dessiner l’arrêt du bus. Quelqu’un lui avait répondu que la zone étudiée finissait avant. La personne en pantalon se trouvait exactement là où le fichier se terminait.",
+        "Le père d’Alix se pencha sur le plan. Il suivit des yeux le trait du nouveau passage jusqu’au côté de sa tasse.",
+        "— Si je peux passer ici, demanda-t-il, où je mets mon vélo pendant que j’attends ?",
+        "— Pourquoi tu serais à vélo ?",
+        "— C’est plus rapide. J’ai mal au pied.",
+        "Il n’essayait pas de trouver une faute. Il s’y mettait réellement, avec ses cinq pièces de monnaie au fond de la poche, sa chemise qui s’ouvrait et une ampoule qui n’avait pas complètement cicatrisé. Alix lui montra un endroit où le vélo pourrait tenir. Il la suivit du doigt. Elle comprit que ce qui changeait n’était pas seulement la largeur. Si elle gardait un appui près de l’entrée, il n’aurait pas besoin de surveiller sans arrêt le vélo depuis le banc. Elle marqua un point.",
+        "— T’es un cobaye très pénible, dit-elle.",
+        "— Je peux encore acheter un chien si tu as besoin d’un problème.",
+        "Il vérifia l’heure. Il avait de quoi l’emmener à la gare si elle se dépêchait. Alix préférait marcher. Son père attrapa deux morceaux de ficelle pour tenir le rouleau et les posa devant elle. Elle avait depuis le réveil envie de lui demander ce qu’il pensait qu’elle devait faire si elle n’avait pas la place de modifier le projet. Elle lui avait reproché de vouloir des réponses, et elle lui en voulait parfois de respecter maintenant ce qu’elle lui avait demandé. Elle enroula le calque.",
+        "— J’ai rendez-vous avec la responsable de l’atelier à quatorze heures, dit-elle. Je lui demande si on peut changer de façon de travailler.",
+        "Son père lui tendit une des ficelles.",
+        "— Tu veux que je te demande ce qu’elle a dit quand tu rentres ?",
+        "— Oui. Mais attends que j’aie retiré mes chaussures.",
+        "À Nice-Ville, elle renonça à la file du café en voyant l’heure. Elle portait le plan dans un tube, plus une veste qu’elle avait prise pour le train et qui la faisait déjà transpirer. Dans le hall, des voyageurs passaient devant elle avec des valises d’une taille qu’elle n’aurait jamais accepté de déplacer pour une journée. Un enfant montrait les trains à sa grand-mère depuis le bout d’un ruban qui reliait son cartable à un sac. Elle s’arrêta pour le laisser finir, puis traversa vers les quais.",
+        "Jeanne lui avait écrit « bonne route » avec une photo de la pince métallique retrouvée près d’un bouton de sa chemise. Depuis le petit déjeuner de la semaine précédente, elles avaient parlé trois fois au téléphone, dont une parce que Jeanne essayait de mettre un vélo dans un local et ne voyait pas comment reculer assez sans le lâcher. Alix lui avait dit de poser le téléphone. Elle avait écouté pendant une minute les efforts de Jeanne, avec la satisfaction calme de se réveiller dans sa chambre et de pouvoir être présente quand même.",
+        "Elle répondit qu’elle avait besoin de penser à autre chose pendant le trajet. Jeanne lui conseilla de compter les tunnels, puis s’excusa de lui avoir proposé quelque chose d’aussi ennuyeux que de compter les tunnels. Alix commença dès que le train s’ébranla. Elle en perdit un près de Cannes. Dans la marge de son carnet, elle écrivit depuis son siège qu’elle aurait préféré prendre un café avec Jeanne avant de partir. Jeanne répondit plus tard qu’elle lui en devrait un. Alix décida qu’elles pourraient trouver un jour toutes les deux, sans que personne ait effectivement une dette.",
+        "Manon avait aidé Alix à tenir le rouleau pour traverser le bâtiment. Elles s’étaient arrêtées sur un banc en béton à midi et avaient passé assez de temps à dessiner leurs deux versions de l’entrée pour s’apercevoir qu’elles voulaient conserver la même chose. Alix ne s’était pas attendue à cette facilité. Elle avait quitté Nice prête à défendre l’idée entièrement seule.",
+        "Sur le banc du midi, Manon avait commencé par demander si Alix voulait qu’elle garde la main sur le rouleau ou sur le feutre. Elle avait laissé le choix parce qu’Alix lui avait déjà sorti un crayon des doigts une fois en plein travail, avec la certitude qu’il fallait reprendre le trait tout de suite. Alix lui demanda le rouleau. Le vent ne semblait pas venir dans la même direction d’un bout à l’autre du banc. Elle plaqua les deux poignets contre le papier pour laisser Manon dessiner. Au moment où elle aurait commencé à dire où faire passer le deuxième trait, elle vit au coin de la bouche de Manon le mouvement que faisait son père quand il essayait d’imaginer où il poserait son vélo.",
+        "— Je peux t’expliquer si tu me laisses aller jusqu’au bout, dit Manon.",
+        "Elle voulait que l’ouverture soit visible depuis l’arrêt du bus. En arrivant par là un soir, elle avait attendu contre la bonne façade en croyant qu’elle se trouvait sur la rue parallèle. Elle avait été en retard de vingt minutes à la première réunion et avait évité d’en parler parce qu’Alix lui avait dit, la veille, qu’elle ne pouvait pas repasser un endroit sur le plan si tout le monde arrivait à des heures différentes. Alix se souvenait mot pour mot de sa propre phrase, parce qu’elle avait eu la satisfaction de la trouver précise. Elle découvrit qu’on pouvait avoir été claire et n’avoir donné à personne de bonne raison de lui répondre.",
+        "En retravaillant le plan, elles ne trouvèrent pas tout de suite le même passage. Manon mit un trait de couleur à une extrémité, Alix un trait plus court à l’autre. Elles se servirent d’une de leurs deux bouteilles comme d’un poids pour garder les bords à plat. Une fois la feuille tournée dans le sens d’où elles venaient, les deux traits dessinaient presque la même entrée. Alix refit le sien en gardant son crayon moins serré. Manon demanda si elle pouvait venir en juillet au rendez-vous pour le projet, parce qu’elle n’avait pas du tout envie de changer d’atelier, mais aimerait pouvoir défendre leur proposition quand même. Alix tourna la tête pour l’entendre jusqu’au bout.",
+        "L’entretien commença avec quinze minutes de retard et une cruche d’eau dans un bureau trop chaud. La responsable regarda d’abord le plan comme elle regardait d’habitude les maquettes, debout, en tournant autour. Alix lui indiqua la photographie où l’homme attendait à l’ombre. Elle expliqua le garage qu’elle avait retiré, puis l’endroit où elle voulait qu’on puisse rester. Elle s’attendait à ce qu’on lui demande de prouver que l’homme reviendrait un deuxième jour. La responsable lui demanda comment on pourrait vérifier que quelqu’un avait le droit de tenir une porte à cet endroit. C’était une objection qu’Alix n’avait pas prévue. En la regardant remettre la photo à la bonne hauteur, elle fut obligée d’admettre que ce serait un travail intéressant d’y répondre.",
+        "Elles discutèrent ensuite de son orientation. La responsable lui dit que les autres groupes avaient aussi leurs exercices et que chacun avait tendance à idéaliser celui dans lequel il ne travaillait pas. Alix se surprit à la croire. Elle lui demanda malgré tout de lui montrer les dates pour demander un changement à la rentrée. Il était possible de déposer une demande en juillet. On précisait qu’elle pouvait être refusée et qu’il fallait avoir travaillé sur un projet que l’autre atelier serait en mesure d’accueillir. Manon avait rappelé à Alix, avant de la laisser entrer, qu’elle pouvait aussi demander de revoir leur dessin ensemble, quelle que soit sa décision pour la suite. Alix demanda ces deux choses dans cet ordre. Quand elle sortit, elle avait une date à noter et la permission d’apporter leur plan à la prochaine séance dans la version qu’elles choisiraient ensemble. Sur la porte, la personne suivante avait posé sa veste pour entrer les mains libres. Alix la lui tendit et entendit « merci » alors qu’elle était déjà dans l’escalier.",
+        "Dans le train du retour, elle envoya à son père une photo du trait revu à midi. Il répondit par une question sur les chaussures, à savoir si elle les avait déjà retirées. Elle lui dit qu’elle les avait enlevées juste dans le train. C’était faux. Elle avait déchaussé seulement le pied droit pour le poser sur la sangle du sac, comme il faisait lui-même quand ses orteils lui faisaient mal. Elle finit par lui raconter le reste, avec la date de juillet, avant que le signal disparaisse dans un tunnel.",
+        ""
+      ],
+      "times": {
+        "p0": "2026-06-17T06:35",
+        "p17": "2026-06-17T07:35",
+        "p20": "2026-06-17T12:15",
+        "p25": "2026-06-17T14:15"
+      },
+      "next": "ch-10-noe"
+    },
+    "ch-10-noe": {
+      "chapter": "ch-10",
+      "viewpoint": "Noé",
+      "paragraphs": [
+        "Quand Noé arriva, Adriel venait de poser deux verres d’eau. Il lui annonça qu’il avait attendu trois minutes sans rien prendre et que la soif l’avait gagné à la quatrième. Noé le crut volontiers. Il avait tout aussi soif, alors qu’il n’avait dû attendre personne. La boulangerie lui avait laissé la matinée pour une démarche qu’il avait eu le soin de ne pas désigner comme un rendez-vous. Sur son poignet, il lui restait une trace de crayon de la veille.",
+        "Ils s’assirent. Adriel lui dit qu’il se demandait depuis deux jours s’il fallait lui renvoyer son propre morceau quand Noé prétendait n’avoir rien à lui faire écouter. Noé répondit qu’il pouvait éventuellement lui renvoyer une seule des deux notes qu’il avait aimées. Adriel releva le mot « aimées ». Noé fit semblant de chercher le serveur pour ne pas avoir à regarder la table au moment où il se rendait compte qu’il attendait la réponse.",
+        "Il n’en eut pas. Adriel raconta qu’il avait prêté sa chambre à sa sœur dimanche et qu’il avait dormi sur un matelas qui couinait quand il tendait la jambe. Noé lui demanda quelles chaussures elle portait et l’écouta décrire la plage de galets par les semelles de Lina. Il imagina quelqu’un qui avait assez d’assurance pour demander ce qu’on attendait réellement d’elle. Il aurait voulu savoir comment on faisait, à commencer par cette table.",
+        "— J’aimerais bien te revoir quand j’ai fini avec mon dossier, dit-il.",
+        "— Il se termine quand, ton dossier ?",
+        "Noé pouvait remettre la date au lendemain. Le dépôt fermait le vendredi. Il était certain d’avoir encore une raison raisonnable de se mettre au travail jeudi soir. Adriel attendit. Il poussait la condensation du verre avec un doigt. Elle revenait doucement du côté où il la chassait.",
+        "— Ce soir, si je l’envoie.",
+        "— Tu peux me proposer quelque chose même si tu l’envoies pas.",
+        "Ils se donnèrent rendez-vous dimanche, sans rien faire dépendre du formulaire. Adriel devait trouver un endroit où ils pourraient marcher assez lentement pour ne pas passer leur temps à s’écarter quand quelqu’un arrivait. Noé lui dit que toute la ville serait en droit de les trouver pénibles.",
+        "Avant de partir, ils prirent chacun la moitié d’une brioche qu’Adriel n’avait reconnue qu’au moment de la couper. Il l’avait achetée dans la boulangerie de Noé sans savoir qu’il achetait précisément les brioches dont Noé vérifiait la cuisson le mercredi. Noé mordit dans la partie qu’il ne choisissait jamais quand il préparait les parts pour les autres. Elle avait plus de croûte. Il trouva qu’Adriel la lui avait probablement donnée parce qu’il avait compris qu’il la voulait. En réalité, Adriel demanda laquelle il lui avait laissée et dit qu’il avait cru prendre la moins cuite. Noé lui raconta comment on savait, sans la défaire à la main, à quel point une brioche avait pris autour du moule. Adriel voulut vérifier la sienne. Ils ramassèrent ensemble les quelques miettes qu’il avait réussi à faire tomber dans les rainures de la table.",
+        "Noé sortit son téléphone. Il voulait garder le dimanche, avec l’heure, sans avoir à compter combien de fois ils avaient essayé de le fixer auparavant. Il vit en même temps un message de Léandre qui lui demandait s’il aurait encore besoin d’aide pour son dossier. Il lui répondit qu’il pourrait lui rappeler vers neuf heures du soir que le formulaire n’était pas une porte d’aéroport, qu’il avait le droit de le fermer lui-même. Léandre renvoya « dix minutes plus tard je te le demanderai en français ». Noé montra le message à Adriel. Il découvrit que lui raconter une blague de Léandre lui faisait autant plaisir que de réussir à le faire rire sans aide.",
+        "Sur l’écran, les trois dernières questions étaient à choix multiples. Aucune ne demandait depuis quand il composait. Noé en avait fait tout un paragraphe sur une feuille entière, dans le cas où on lui demanderait précisément ça. Il posa la feuille sur la machine à laver pour ne pas être tenté de l’ajouter ailleurs. Il remplit les cases, gratta son ongle contre le dessous de la table et regarda la durée du fichier lorsqu’il eut fini de le joindre. C’était la troisième prise. Durant une seconde, il envisagea encore de remplacer le morceau par le plus impeccable des trois essais. Il en reconnut le titre sous le nom d’origine et ferma la fenêtre où il l’avait ouvert.",
+        "Sa mère lui avait laissé un verre d’eau sur le piano. Il déplaça sa partition pour s’asseoir. Il joua quelques mesures sans essayer de rejoindre la fin. Dehors, le jour entrait par les côtés du store. Dans l’immeuble d’en face, quelqu’un alluma la première lumière. Noé la vit apparaître dans le coin de ses lunettes. Il garda un doigt sur l’une des touches jusqu’à la disparition complète du son.",
+        "Il pressa le bouton. Le site lui redemanda s’il voulait confirmer. Il avait passé plus d’un mois à se préparer à une seule seconde et il y en avait une autre. Il se leva pour aller boire le verre d’eau, revint et cliqua.",
+        "Le reçu disait qu’il serait averti quand la commission aurait examiné sa candidature. Il l’imprima par habitude, puis dut aller voir dans le bac de l’imprimante pourquoi la première ligne s’était mise au mauvais endroit. La feuille avait imprimé par-dessus une liste pour la boulangerie. Entre la date et son nom, il y avait « six sacs papier moyen ». Noé la garda. Il envoya un message à sa mère pour lui dire que c’était fait. Elle rentra une demi-heure plus tard et demanda à voir le reçu comme si elle voulait connaître la taille des sacs. Elle le lut longtemps. Il finit par lui montrer où le ranger dans la pochette.",
+        "— T’es content ? demanda-t-elle.",
+        "Il attendait surtout de savoir comment on dormait après ça. Il regarda sa mère passer un doigt sur le bord de la pochette pour vérifier si elle était fermée. Il savait déjà qu’au matin il y aurait le camion, la première plaque, les portes que les commerçants ouvraient sans y penser. Il ne se sentait pas plus près de laisser ces bruits derrière lui. Il avait juste envie de les entendre une fois, sans se demander s’ils lui donneraient envie de rentrer. Il répondit que oui. Sa mère laissa la pochette sur la table et vint s’asseoir à côté de lui dans la cuisine."
+      ],
+      "times": {
+        "p0": "2026-06-17T08:15",
+        "p11": "2026-06-17T20:45"
+      },
+      "ending": "À suivre"
     }
   },
   "illustrations": {
@@ -670,6 +999,123 @@
         "width": 1280,
         "height": 853,
         "alt": "Adriel referme sa boîte à l’entrée de la salle de quartier."
+      }
+    ],
+    "ch-06-alix": [
+      {
+        "after": 0,
+        "src": "illustrations/les-heures-decalees/06-boite.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Alix replie le fond d’une boîte en carton dans la salle d’exposition vide."
+      },
+      {
+        "after": 30,
+        "src": "illustrations/les-heures-decalees/06-feutre.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Rosa ouvre un feutre bleu à côté d’Alix et de ses derniers paquets."
+      },
+      {
+        "after": 40,
+        "src": "illustrations/les-heures-decalees/06-quai.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Alix et Jeanne transportent des boîtes plates à travers les rues de Riquier."
+      }
+    ],
+    "ch-07-noe": [
+      {
+        "after": 1,
+        "src": "illustrations/les-heures-decalees/07-balcon.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Noé, sa partition à la main, écoute les bruits de la rue depuis la fenêtre."
+      },
+      {
+        "after": 24,
+        "src": "illustrations/les-heures-decalees/07-studio.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Noé s’installe au clavier pendant que Simon prépare le micro."
+      },
+      {
+        "after": 36,
+        "src": "illustrations/les-heures-decalees/07-barquette.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Noé et Adriel récupèrent deux barquettes en carton au comptoir."
+      }
+    ],
+    "ch-08-leandre": [
+      {
+        "after": 0,
+        "src": "illustrations/les-heures-decalees/08-cadenas.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Léandre regarde les nouvelles locataires préparer la devanture du local."
+      },
+      {
+        "after": 13,
+        "src": "illustrations/les-heures-decalees/08-banc.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Assis sur le banc des vestiaires, Léandre refait le laçage d’un patin."
+      },
+      {
+        "after": 22,
+        "src": "illustrations/les-heures-decalees/08-lumiere.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Léandre salue sur la glace sous la lumière du gala."
+      }
+    ],
+    "ch-09-adriel": [
+      {
+        "after": 3,
+        "src": "illustrations/les-heures-decalees/09-taie.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Adriel et sa sœur Lina glissent un oreiller dans la taie à grandes fleurs roses."
+      },
+      {
+        "after": 26,
+        "src": "illustrations/les-heures-decalees/09-galets.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Lina et Adriel mangent leurs sandwichs sur les galets des Ponchettes."
+      },
+      {
+        "after": 44,
+        "src": "illustrations/les-heures-decalees/09-porte.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Adriel referme la porte de service du restaurant après le dernier service."
+      }
+    ],
+    "ch-10-alix": [
+      {
+        "after": 1,
+        "src": "illustrations/les-heures-decalees/10-plan.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Alix reprend son plan d’architecture sur la table de la cuisine."
+      },
+      {
+        "after": 17,
+        "src": "illustrations/les-heures-decalees/10-gare.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Alix traverse le hall de Nice-Ville avec son tube à dessin."
+      }
+    ],
+    "ch-10-noe": [
+      {
+        "after": 12,
+        "src": "illustrations/les-heures-decalees/10-fenetre.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "Noé garde un doigt sur le clavier tandis que le soir tombe."
       }
     ]
   },
@@ -837,6 +1283,41 @@
       {
         "paragraphs": [
           "Léandre retourne sur la glace à Jean-Bouin, puis revisite le local qu’il aimerait louer. Il préfère refaire ses comptes avant de s’engager. Sur le quai du tram, il s’excuse auprès de Noé, qui lui annonce qu’il jouera quatre minutes à la soirée d’Alix."
+        ]
+      }
+    ],
+    "ch-06": [
+      {
+        "paragraphs": [
+          "La soirée de quartier commence avec les photos d’Alix et une panne de courant. Noé fait entendre sa mélodie sans clavier, devant les visiteurs. Adriel est venu avec une tortilla à partager et repart au restaurant en emportant quelques notes."
+        ]
+      }
+    ],
+    "ch-07": [
+      {
+        "paragraphs": [
+          "Alix range la salle avec Jeanne et rapporte les tirages à Rosa. Elles conviennent que Rosa pourra choisir les images à montrer et revenir sur sa décision. En rentrant à pied avec les cartons, Alix accepte de retrouver Jeanne pour un petit déjeuner."
+        ]
+      }
+    ],
+    "ch-08": [
+      {
+        "paragraphs": [
+          "Avec l’aide de Simon, Noé enregistre enfin son morceau pour le dossier de Lyon. Il choisit la troisième prise et la fait écouter à Adriel. En rentrant, il rouvre le formulaire et commence à le remplir."
+        ]
+      }
+    ],
+    "ch-09": [
+      {
+        "paragraphs": [
+          "Le local que Léandre voulait louer a trouvé preneur. Au gala de Jean-Bouin, il patine avec Malo sous les yeux de sa mère et de Noé. Après la représentation, il propose à Bernard d’essayer deux créneaux de réparation sur rendez-vous."
+        ]
+      }
+    ],
+    "ch-10": [
+      {
+        "paragraphs": [
+          "Lina vient passer une nuit chez Adriel à Nice. Sur la plage, elle lui demande de cesser de la laisser servir d’intermédiaire avec leur père. Après le service, Adriel prend lui-même contact avec lui, puis fixe un rendez-vous avec Noé."
         ]
       }
     ]

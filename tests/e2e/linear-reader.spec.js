@@ -56,7 +56,13 @@ test("new chapters follow in order offline and save the current chapter", async 
     { title: "Le blanc sous le vert", viewpoints: ["Alix"], pictures: 3 },
     { title: "Jusqu’à la ligne", viewpoints: ["Léandre"], pictures: 3 },
     { title: "Quatre minutes", viewpoints: ["Noé", "Adriel"], pictures: 4 },
+    { title: "Ce qu’on garde", viewpoints: ["Alix"], pictures: 3 },
+    { title: "La troisième prise", viewpoints: ["Noé"], pictures: 3 },
+    { title: "Près des barrières", viewpoints: ["Léandre"], pictures: 3 },
+    { title: "La place du galet", viewpoints: ["Adriel"], pictures: 3 },
+    { title: "L’adresse actuelle", viewpoints: ["Alix", "Noé"], pictures: 3 },
   ];
+  test.setTimeout(50000);
   await page.goto("?story=les-heures-decalees&read=1");
   await expect(page.getByRole("heading", { name: chapters[0].title })).toBeVisible();
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
@@ -66,6 +72,8 @@ test("new chapters follow in order offline and save the current chapter", async 
     await expect(page.getByRole("heading", { name: chapter.title })).toBeVisible();
     await expect(page.locator(".scene-viewpoint")).toHaveText(chapter.viewpoints);
     await expect(page.locator(".interaction")).toHaveCount(0);
+    await expect(page.locator(".chapter-recap p")).toHaveCount(index === 0 ? 0 : 1);
+    await expect(page.locator(".scene-time").first()).toHaveAttribute("datetime", /^2026-/);
     const pictures = page.locator(".story-illustration img");
     await expect(pictures).toHaveCount(chapter.pictures);
     for (const picture of await pictures.all()) {
@@ -84,14 +92,14 @@ test("new chapters follow in order offline and save the current chapter", async 
   await page.getByRole("button", { name: "← Chapitre précédent" }).click();
   await expect(page.getByRole("heading", { name: chapters.at(-2).title })).toBeVisible();
   await page.getByRole("button", { name: "Les chapitres" }).click();
-  await expect(page.locator(".chapter-link:enabled")).toHaveCount(5);
+  await expect(page.locator(".chapter-link:enabled")).toHaveCount(10);
 });
 
 test("scene dates and recaps orient readers and finished chapters stay marked offline", async ({ page, context }) => {
   await page.goto("?story=les-heures-decalees#chapitres");
   const statuses = page.locator(".chapter-status");
-  await expect(statuses).toHaveText(Array(5).fill("À lire"));
-  await expect(page.locator(".chapter-unread")).toHaveCount(5);
+  await expect(statuses).toHaveText(Array(10).fill("À lire"));
+  await expect(page.locator(".chapter-unread")).toHaveCount(10);
   await page.getByRole("button", { name: "Commencer la lecture" }).click();
   await expect(page.locator(".scene-time").first()).toHaveAttribute("datetime", "2026-05-29T05:12");
   await expect(page.locator(".chapter-recap")).toHaveCount(0);
@@ -106,17 +114,17 @@ test("scene dates and recaps orient readers and finished chapters stay marked of
   await page.getByRole("link", { name: "Éclats, accueil" }).click();
   await page.getByRole("button", { name: /Bibliothèque/ }).click();
   await page.getByRole("button", { name: "Voir les chapitres : Les Heures décalées" }).click();
-  await expect(statuses).toHaveText(["Lu", "En cours", "À lire", "À lire", "À lire"]);
+  await expect(statuses).toHaveText(["Lu", "En cours", ...Array(8).fill("À lire")]);
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
   await context.setOffline(true);
   await page.reload();
-  await expect(statuses).toHaveText(["Lu", "En cours", "À lire", "À lire", "À lire"]);
+  await expect(statuses).toHaveText(["Lu", "En cours", ...Array(8).fill("À lire")]);
 
-  await page.getByRole("button", { name: /Lire le chapitre 5/ }).click();
+  await page.getByRole("button", { name: /Lire le chapitre 10/ }).click();
   await page.locator("[data-chapter-end]").scrollIntoViewIfNeeded();
   await expect.poll(() => page.evaluate(() =>
     JSON.parse(localStorage.getItem("eclats.reading.v1:les-heures-decalees")).readChapters,
-  )).toEqual(["la-premiere-fournee", "ch-05"]);
+  )).toEqual(["la-premiere-fournee", "ch-10"]);
   await page.getByRole("button", { name: "Les chapitres" }).click();
-  await expect(statuses).toHaveText(["Lu", "À lire", "À lire", "À lire", "Lu"]);
+  await expect(statuses).toHaveText(["Lu", ...Array(8).fill("À lire"), "Lu"]);
 });
